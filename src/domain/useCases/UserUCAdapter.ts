@@ -1,7 +1,6 @@
 import { User, UserUCIntPort } from "../../application/input/UserUCIntPort";
 import { UserGatewayIntPort } from "../../application/output/UserGatewayIntPort";
-import { ErrorFormatterIntPort } from "../../application/output/errorFormaterIntPort";
-import { ExistByEmail } from "../../application/output/ExistByEmail";
+import { ErrorFormatterIntPort } from "../../application/output/ErrorFormaterIntPort";
 import { promise } from "zod";
 
 export class UserUCAdapter implements UserUCIntPort {
