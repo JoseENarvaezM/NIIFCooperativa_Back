@@ -25,16 +25,9 @@ export class UserUCAdapter implements UserUCIntPort {
         this.errorFormatter.errorExistsEntity(`Invalid password or user with id ${id} does not exist.`);
         return Promise.reject(new Error(`Invalid password or user with id ${id} does not exist.`));
     }
-    existByEmail(email: string): Promise<boolean> {
-        if (email && email.includes('@')) {
-            return this.existByEmail(email);
-        }
-        this.errorFormatter.errorExistsEntity(`Invalid email format: ${email}`);
-        return Promise.reject(new Error(`Invalid email format: ${email}`));
-    }
 
     async createUser(user: User): Promise<User> {
-        const exists = await this.existByEmail(user.email);
+        const exists = await this.userGateway.existByEmail(user.email);
         if (exists === true) {
             return this.userGateway.createUser(user);
         }
@@ -42,7 +35,7 @@ export class UserUCAdapter implements UserUCIntPort {
         return Promise.reject(new Error(`User with email ${user.email} dont exists.`));
     }
     async updateUser(id: string, user: User): Promise<User> {
-        const exist = await this.existByEmail(user.email);
+        const exist = await this.userGateway.existByEmail(user.email);
         if (this.updateUser(id, user) != null && exist === true) {
             return this.userGateway.updateUser(id, user);
         }
