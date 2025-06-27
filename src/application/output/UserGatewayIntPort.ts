@@ -2,6 +2,7 @@ import { User } from "../input/UserUCIntPort";
 
 export interface UserGatewayIntPort {
     //for all users
+    getUserById(id: string): Promise<User | null>;
     existByEmail(email: string): Promise<boolean>; 
     deleteUserById(id: string): Promise<void>;
     changeUserPassword(id: string, newPassword: string): Promise<void>;

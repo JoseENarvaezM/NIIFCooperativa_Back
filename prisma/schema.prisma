@@ -4,7 +4,7 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mysql"
   url      = env("DATABASE_URL")
 }
 
@@ -130,7 +130,7 @@ model student {
 }
 
 model user {
-  usuID       String       @id @db.VarChar(255)
+  usuID       String   @id @default(cuid())
   usuName     String       @db.VarChar(128)
   usuEmail    String       @unique @db.VarChar(128)
   usuPassword String       @db.VarChar(255)

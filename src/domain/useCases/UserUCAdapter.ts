@@ -1,7 +1,7 @@
-import { User, UserUCIntPort } from "../../application/input/UserUCIntPort";
+import { UserUCIntPort } from "../../application/input/UserUCIntPort";
 import { UserGatewayIntPort } from "../../application/output/UserGatewayIntPort";
 import { ErrorFormatterIntPort } from "../../application/output/ErrorFormaterIntPort";
-import { promise } from "zod";
+import { User } from "../../domain/models/UserModel";
 
 export class UserUCAdapter implements UserUCIntPort {
     constructor(
@@ -10,6 +10,14 @@ export class UserUCAdapter implements UserUCIntPort {
 
     ) { }
     //for all users    
+    getUserById(id: string): Promise<User | null> {
+        const user = this.userGateway.getUserById(id);
+        if (user != null) {
+            return user;
+        }
+        this.errorFormatter.errorExistsEntity(`User with id ${id} does not exist.`);
+        return Promise.reject(new Error(`User with id ${id} does not exist.`));
+    }
     deleteUserById(id: string): Promise<void> {
         if (this.deleteUserById(id) != null) {
             return this.userGateway.deleteUserById(id);
@@ -27,20 +35,20 @@ export class UserUCAdapter implements UserUCIntPort {
     }
 
     async createUser(user: User): Promise<User> {
-        const exists = await this.userGateway.existByEmail(user.email);
+        const exists = await this.userGateway.existByEmail(user.usuEmail);
         if (exists === true) {
             return this.userGateway.createUser(user);
         }
-        this.errorFormatter.errorExistsEntity(`User with email ${user.email} dont exists.`);
-        return Promise.reject(new Error(`User with email ${user.email} dont exists.`));
+        this.errorFormatter.errorExistsEntity(`User with email ${user.usuEmail} dont exists.`);
+        return Promise.reject(new Error(`User with email ${user.usuEmail} dont exists.`));
     }
     async updateUser(id: string, user: User): Promise<User> {
-        const exist = await this.userGateway.existByEmail(user.email);
+        const exist = await this.userGateway.existByEmail(user.usuEmail);
         if (this.updateUser(id, user) != null && exist === true) {
             return this.userGateway.updateUser(id, user);
         }
-        this.errorFormatter.errorExistsEntity(`User with id ${user.email} does not exist.`);
-        return Promise.reject(new Error(`User with id ${user.email} does not exist.`));
+        this.errorFormatter.errorExistsEntity(`User with id ${user.usuEmail} does not exist.`);
+        return Promise.reject(new Error(`User with id ${user.usuEmail} does not exist.`));
     }
     //admin only
     listAdminUsers(role: string): Promise<User[]> {
@@ -52,7 +60,7 @@ export class UserUCAdapter implements UserUCIntPort {
 
     //professor only
     listProfessorUsers(role: string): Promise<User[]> {
-        if (role === 'professor') {
+        if (role === 'profesor') {
             return this.userGateway.listProfessorUsers(role);
         }
         throw new Error(`User with role ${role} is not a professor.`);

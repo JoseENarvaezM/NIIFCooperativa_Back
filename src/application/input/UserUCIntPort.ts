@@ -1,12 +1,8 @@
-export interface User {
-    id: string;
-    name: string;
-    email: string;
-    password: string;
-    rol: string; // e.g., 'admin', 'professor', 'user', etc. 
-}
+import { User } from '../../domain/models/UserModel';
+
 export interface UserUCIntPort {
     //for all users 
+    getUserById(id: string): Promise<User | null>;
     deleteUserById(id: string): Promise<void>;
     changeUserPassword(id: string, newPassword: string): Promise<void>;
     createUser(user: User): Promise<User>;
