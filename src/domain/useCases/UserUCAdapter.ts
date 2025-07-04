@@ -9,46 +9,50 @@ export class UserUCAdapter implements UserUCIntPort {
         private errorFormatter: ErrorFormatterIntPort
 
     ) { }
-    //for all users    
-    getUserById(id: string): Promise<User | null> {
+ 
+    async getUserById(id: string): Promise<User | null> {
         const user = this.userGateway.getUserById(id);
         if (user != null) {
             return user;
         }
-        this.errorFormatter.errorExistsEntity(`User with id ${id} does not exist.`);
-        return Promise.reject(new Error(`User with id ${id} does not exist.`));
-    }
-    deleteUserById(id: string): Promise<void> {
-        if (this.deleteUserById(id) != null) {
-            return this.userGateway.deleteUserById(id);
-        }
-        this.errorFormatter.errorExistsEntity(`User with id ${id} does not exist.`);
-        return Promise.reject(new Error(`User with id ${id} does not exist.`));
+        this.errorFormatter.errorNotFound(`User with id ${id} does not exist.`);
+        return null;
     }
 
-    changeUserPassword(id: string, newPassword: string): Promise<void> {
-        if (this.changeUserPassword(id, newPassword) != null && newPassword.length >= 6) {
-            return this.userGateway.changeUserPassword(id, newPassword);
-        }
-        this.errorFormatter.errorExistsEntity(`Invalid password or user with id ${id} does not exist.`);
-        return Promise.reject(new Error(`Invalid password or user with id ${id} does not exist.`));
-    }
+    async deleteUserById(id: string): Promise<void> {
+    const user = await this.userGateway.getUserById(id);
 
-    async createUser(user: User): Promise<User> {
+    if (user != null) {
+        await this.userGateway.deleteUserById(id);
+        return;
+    }
+    this.errorFormatter.errorNotFound(`User with id ${id} does not exist.`);
+}
+
+    async changeUserPassword(id: string, newPassword: string): Promise<void> {
+        const user = await this.userGateway.getUserById(id);
+        if (user != null) {
+            await this.userGateway.changeUserPassword(id, newPassword);
+            return;
+        }
+        this.errorFormatter.errorNotFound(`Invalid password or user with id ${id} does not exist.`);
+    }   
+
+    async createUser(user: User): Promise<User| null> {
         const exists = await this.userGateway.existByEmail(user.usuEmail);
-        if (exists === true) {
+        if (exists === false) {
             return this.userGateway.createUser(user);
         }
-        this.errorFormatter.errorExistsEntity(`User with email ${user.usuEmail} dont exists.`);
-        return Promise.reject(new Error(`User with email ${user.usuEmail} dont exists.`));
+        this.errorFormatter.errorExistsEntity(`User with email ${user.usuEmail} already exists.`);
+        return null;
     }
-    async updateUser(id: string, user: User): Promise<User> {
+    async updateUser(id: string, user: User): Promise<User| null> {
         const exist = await this.userGateway.existByEmail(user.usuEmail);
-        if (this.updateUser(id, user) != null && exist === true) {
+        if (this.updateUser(id, user) != null && exist === false) {
             return this.userGateway.updateUser(id, user);
         }
-        this.errorFormatter.errorExistsEntity(`User with id ${user.usuEmail} does not exist.`);
-        return Promise.reject(new Error(`User with id ${user.usuEmail} does not exist.`));
+        this.errorFormatter.errorExistsEntity(`User with id ${user.usuEmail} already exist.`);
+        return null;
     }
     //admin only
     listAdminUsers(role: string): Promise<User[]> {

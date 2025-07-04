@@ -6,4 +6,7 @@ export class CustumError extends Error {
     static notFound(message: string) {
         return new CustumError(404, message);
     }
+    static existsEntity(message: string) {
+        return new CustumError(500, message);
+    }
 }
