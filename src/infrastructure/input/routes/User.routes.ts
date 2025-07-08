@@ -12,14 +12,12 @@ export class UserRoutes {
     static get routes(): Router {
         const router = Router();
 
-        const userGateway: UserGatewayIntPort = new UserGatewayAdapter(
-        );
+        const userGateway: UserGatewayIntPort = new UserGatewayAdapter();
         const exceptionHandler: ErrorFormatterIntPort = new ExceptionHandler();
         const userUseCases = new UserUCAdapter(userGateway, exceptionHandler);
-        const userController: UserController = new UserController(
-            userUseCases
-        );
+        const userController: UserController = new UserController(userUseCases);
         const validatorMiddleware = new ValidatorMiddleware(userSchema);
+
         router.post("/admin",validatorMiddleware.validate,userController.postAdmin);
         router.post("/professor", validatorMiddleware.validate,userController.postProfessor);
         router.get("/admin", userController.getAdmins);

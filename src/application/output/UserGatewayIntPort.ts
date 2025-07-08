@@ -1,4 +1,4 @@
-import { User } from "../input/UserUCIntPort";
+import { User } from "../../domain/models/UserModel";
 
 export interface UserGatewayIntPort {
     //for all users

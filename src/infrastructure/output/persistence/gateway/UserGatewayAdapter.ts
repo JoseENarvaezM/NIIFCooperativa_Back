@@ -46,7 +46,7 @@ export class UserGatewayAdapter implements UserGatewayIntPort {
                 usuName: user.usuName,
                 usuEmail: user.usuEmail,
                 usuPassword: user.usuPassword,
-                usuRole:  user.usuRole
+                usuRole: user.usuRole
             }
         }).then(userData => new User(
             userData.usuID,
@@ -57,7 +57,7 @@ export class UserGatewayAdapter implements UserGatewayIntPort {
             [] // or fetch and map rooms if needed
         ));
     }
-                
+
 
     updateUser(id: string, user: User): Promise<User> {
         return prisma.user.update({
@@ -78,37 +78,37 @@ export class UserGatewayAdapter implements UserGatewayIntPort {
         ));
     }
 
-        listAdminUsers(role: 'admin' | 'profesor'): Promise<User[]> {
-            return prisma.user.findMany({
-                where: { usuRole:  role }
-            }).then(users =>
-                users.map(userData =>
-                    new User(
-                        userData.usuID,
-                        userData.usuName,
-                        userData.usuEmail,
-                        userData.usuPassword,
-                        userData.usuRole,
-                        [] // or fetch and map rooms if needed
-                    )
+    listAdminUsers(role: 'admin' | 'profesor'): Promise<User[]> {
+        return prisma.user.findMany({
+            where: { usuRole: role }
+        }).then(users =>
+            users.map(userData =>
+                new User(
+                    userData.usuID,
+                    userData.usuName,
+                    userData.usuEmail,
+                    userData.usuPassword,
+                    userData.usuRole,
+                    [] // or fetch and map rooms if needed
                 )
-            );
-        }
-    
-        listProfessorUsers(role: 'admin' | 'profesor'): Promise<User[]> {
-            return prisma.user.findMany({
-                where: { usuRole: role }
-            }).then(users =>
-                users.map(userData =>
-                    new User(
-                        userData.usuID,
-                        userData.usuName,
-                        userData.usuEmail,
-                        userData.usuPassword,
-                        userData.usuRole,
-                        [] // or fetch and map rooms if needed
-                    )
-                )
-            );
-        }
+            )
+        );
     }
+
+    listProfessorUsers(role: 'admin' | 'profesor'): Promise<User[]> {
+        return prisma.user.findMany({
+            where: { usuRole: role }
+        }).then(users =>
+            users.map(userData =>
+                new User(
+                    userData.usuID,
+                    userData.usuName,
+                    userData.usuEmail,
+                    userData.usuPassword,
+                    userData.usuRole,
+                    [] // or fetch and map rooms if needed
+                )
+            )
+        );
+    }
+}
