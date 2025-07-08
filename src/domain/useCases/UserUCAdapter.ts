@@ -2,6 +2,7 @@ import { UserUCIntPort } from "../../application/input/UserUCIntPort";
 import { UserGatewayIntPort } from "../../application/output/UserGatewayIntPort";
 import { ErrorFormatterIntPort } from "../../application/output/ErrorFormaterIntPort";
 import { User } from "../../domain/models/UserModel";
+import { Encrypt } from "./SecurityUtils/Encrypt";
 
 export class UserUCAdapter implements UserUCIntPort {
     constructor(
@@ -9,7 +10,7 @@ export class UserUCAdapter implements UserUCIntPort {
         private errorFormatter: ErrorFormatterIntPort
 
     ) { }
- 
+    
     async getUserById(id: string): Promise<User | null> {
         const user = this.userGateway.getUserById(id);
         if (user != null) {
@@ -41,6 +42,7 @@ export class UserUCAdapter implements UserUCIntPort {
     async createUser(user: User): Promise<User| null> {
         const exists = await this.userGateway.existByEmail(user.usuEmail);
         if (exists === false) {
+            user.usuPassword = await Encrypt.hashPassword(user.usuPassword);
             return this.userGateway.createUser(user);
         }
         this.errorFormatter.errorExistsEntity(`User with email ${user.usuEmail} already exists.`);
@@ -49,6 +51,7 @@ export class UserUCAdapter implements UserUCIntPort {
     async updateUser(id: string, user: User): Promise<User| null> {
         const exist = await this.userGateway.existByEmail(user.usuEmail);
         if (this.updateUser(id, user) != null && exist === false) {
+            user.usuPassword = await Encrypt.hashPassword(user.usuPassword);
             return this.userGateway.updateUser(id, user);
         }
         this.errorFormatter.errorExistsEntity(`User with id ${user.usuEmail} already exist.`);

@@ -9,14 +9,13 @@ export class UserGatewayAdapter implements UserGatewayIntPort {
             where: { usuID: id }
         });
         if (!userData) return null;
-        // Assuming you want to fetch rooms as well, otherwise pass empty array
         return new User(
             userData.usuID,
             userData.usuName,
             userData.usuEmail,
             userData.usuPassword,
             userData.usuRole,
-            [] // or fetch and map rooms if needed
+            [] 
         );
     }
 
@@ -27,40 +26,68 @@ export class UserGatewayAdapter implements UserGatewayIntPort {
         return user !== null;
     }
 
-    deleteUserById(id: string): Promise<void> {
-        return prisma.user.delete({
-            where: { usuID: id }
-        }).then(() => { });
+    async getUserByEmail(email: string): Promise<User | null> {
+        const userData = await prisma.user.findUnique({
+            where: { usuEmail: email }
+        });
+        if (!userData) return null;
+        return new User(
+            userData.usuID,
+            userData.usuName,
+            userData.usuEmail,
+            userData.usuPassword,
+            userData.usuRole,
+            [] 
+        );
     }
 
-    changeUserPassword(id: string, newPassword: string): Promise<void> {
-        return prisma.user.update({
+    async deleteUserById(id: string): Promise<void> {
+        const user = await prisma.user.findUnique({
+            where: { usuID: id }
+        });
+        if (!user) {
+            throw new Error(`User with ID ${id} does not exist.`);
+        }
+        await prisma.user.delete({
+            where: { usuID: id }
+        });
+    }
+
+    async changeUserPassword(id: string, newPassword: string): Promise<void> {
+        const user = await prisma.user.findUnique({
+            where: { usuID: id }
+        });
+        if (!user) {
+            throw new Error(`User with ID ${id} does not exist.`);
+        }
+        await prisma.user.update({
             where: { usuID: id },
             data: { usuPassword: newPassword }
-        }).then(() => { });
+        });
     }
 
-    createUser(user: User): Promise<User> {
-        return prisma.user.create({
+    async createUser(user: User): Promise<User> {
+        const newUserData = await prisma.user.create({
             data: {
                 usuName: user.usuName,
                 usuEmail: user.usuEmail,
                 usuPassword: user.usuPassword,
                 usuRole: user.usuRole
             }
-        }).then(userData => new User(
-            userData.usuID,
-            userData.usuName,
-            userData.usuEmail,
-            userData.usuPassword,
-            userData.usuRole,
-            [] // or fetch and map rooms if needed
-        ));
+        });
+        return new User(
+            newUserData.usuID,
+            newUserData.usuName,
+            newUserData.usuEmail,
+            newUserData.usuPassword,
+            newUserData.usuRole,
+            [] 
+        );
     }
 
 
-    updateUser(id: string, user: User): Promise<User> {
-        return prisma.user.update({
+    async updateUser(id: string, user: User): Promise<User> {
+        const updatedUserData = await prisma.user.update({
             where: { usuID: id },
             data: {
                 usuName: user.usuName,
@@ -68,47 +95,42 @@ export class UserGatewayAdapter implements UserGatewayIntPort {
                 usuPassword: user.usuPassword,
                 usuRole: user.usuRole
             }
-        }).then(userData => new User(
+        });
+        return new User(
+            updatedUserData.usuID,
+            updatedUserData.usuName,
+            updatedUserData.usuEmail,
+            updatedUserData.usuPassword,
+            updatedUserData.usuRole,
+            [] 
+        );
+    }
+
+    async listAdminUsers(role: 'admin' | 'profesor'): Promise<User[]> {
+        const usersData = await prisma.user.findMany({
+            where: { usuRole: role }
+        });
+        return usersData.map(userData => new User(
             userData.usuID,
             userData.usuName,
             userData.usuEmail,
             userData.usuPassword,
             userData.usuRole,
-            [] // or fetch and map rooms if needed
+            [] 
         ));
     }
 
-    listAdminUsers(role: 'admin' | 'profesor'): Promise<User[]> {
-        return prisma.user.findMany({
+    async listProfessorUsers(role: 'admin' | 'profesor'): Promise<User[]> {
+        const usersData = await prisma.user.findMany({
             where: { usuRole: role }
-        }).then(users =>
-            users.map(userData =>
-                new User(
-                    userData.usuID,
-                    userData.usuName,
-                    userData.usuEmail,
-                    userData.usuPassword,
-                    userData.usuRole,
-                    [] // or fetch and map rooms if needed
-                )
-            )
-        );
-    }
-
-    listProfessorUsers(role: 'admin' | 'profesor'): Promise<User[]> {
-        return prisma.user.findMany({
-            where: { usuRole: role }
-        }).then(users =>
-            users.map(userData =>
-                new User(
-                    userData.usuID,
-                    userData.usuName,
-                    userData.usuEmail,
-                    userData.usuPassword,
-                    userData.usuRole,
-                    [] // or fetch and map rooms if needed
-                )
-            )
-        );
+        });
+        return usersData.map(userData => new User(
+            userData.usuID,
+            userData.usuName,
+            userData.usuEmail,
+            userData.usuPassword,
+            userData.usuRole,
+            [] 
+        ));
     }
 }

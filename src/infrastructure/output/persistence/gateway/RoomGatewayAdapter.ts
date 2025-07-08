@@ -4,12 +4,6 @@ import { Room } from "../../../../domain/models/RoomModel";
 
 export class RoomGatewayAdapter implements RoomGatewayIntPort {
     async createRoom(room: Room): Promise<Room | null> {
-        const existingRoom = await prisma.room.findUnique({
-            where: { roomID: room.roomID }
-        });
-        if (existingRoom) {
-            return null; // Room already exists
-        }
         const newRoomData = await prisma.room.create({
             data: {
                 roomID: room.roomID,
@@ -20,14 +14,14 @@ export class RoomGatewayAdapter implements RoomGatewayIntPort {
                 roomAnswer: room.roomAnswer,
                 usuID: room.usuID
             }
-        });
+        })
         return new Room(
             newRoomData.roomID,
             newRoomData.roomName,
             newRoomData.roomPassword,
             new Date(newRoomData.roomDate),
             newRoomData.roomStatus,
-            null, // Assuming no answer is set initially
+            null,
             newRoomData.usuID
         );
     }
@@ -42,7 +36,7 @@ export class RoomGatewayAdapter implements RoomGatewayIntPort {
             roomData.roomPassword,
             new Date(roomData.roomDate),
             roomData.roomStatus,
-            null, // Assuming no answer is set initially
+            null, 
             roomData.usuID
         );
     }
@@ -56,7 +50,7 @@ export class RoomGatewayAdapter implements RoomGatewayIntPort {
             roomData.roomPassword,
             new Date(roomData.roomDate),
             roomData.roomStatus,
-            null, // Assuming no answer is set initially
+            null, 
             roomData.usuID
         ));
     }
@@ -70,7 +64,7 @@ export class RoomGatewayAdapter implements RoomGatewayIntPort {
             roomData.roomPassword,
             new Date(roomData.roomDate),
             roomData.roomStatus,
-            null, // Assuming no answer is set initially
+            null, 
             roomData.usuID
         ));
     }
@@ -90,7 +84,7 @@ export class RoomGatewayAdapter implements RoomGatewayIntPort {
             updatedRoomData.roomPassword,
             new Date(updatedRoomData.roomDate),
             updatedRoomData.roomStatus,
-            null, // Assuming no answer is set initially
+            null, 
             updatedRoomData.usuID
         );
     }
@@ -105,18 +99,13 @@ export class RoomGatewayAdapter implements RoomGatewayIntPort {
             updatedRoomData.roomPassword,
             new Date(updatedRoomData.roomDate),
             updatedRoomData.roomStatus,
-            null, // Assuming no answer is set initially
+            null, 
             updatedRoomData.usuID
         );
     }
     async deleteRoomByID(roomID: string): Promise<void> {
         await prisma.room.delete({
             where: { roomID }
-        });
-    }
-    async deleteRoomByDate(roomDate: Date): Promise<void> {
-        await prisma.room.deleteMany({
-            where: { roomDate }
         });
     }
     async validateRoomPassword(roomID: string, roomPassword: string): Promise<boolean> {

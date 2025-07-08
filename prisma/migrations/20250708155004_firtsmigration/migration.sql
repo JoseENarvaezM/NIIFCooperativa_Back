@@ -1,6 +1,6 @@
 -- CreateTable
 CREATE TABLE `formactivosfijos` (
-    `actID` VARCHAR(255) NOT NULL,
+    `actID` VARCHAR(191) NOT NULL,
     `actContent` JSON NOT NULL,
 
     PRIMARY KEY (`actID`)
@@ -8,7 +8,7 @@ CREATE TABLE `formactivosfijos` (
 
 -- CreateTable
 CREATE TABLE `formcaratula` (
-    `carID` VARCHAR(255) NOT NULL,
+    `carID` VARCHAR(191) NOT NULL,
     `carContent` JSON NOT NULL,
 
     PRIMARY KEY (`carID`)
@@ -16,7 +16,7 @@ CREATE TABLE `formcaratula` (
 
 -- CreateTable
 CREATE TABLE `formdetallerenglones` (
-    `detID` VARCHAR(255) NOT NULL,
+    `detID` VARCHAR(191) NOT NULL,
     `detContent` JSON NOT NULL,
 
     PRIMARY KEY (`detID`)
@@ -24,7 +24,7 @@ CREATE TABLE `formdetallerenglones` (
 
 -- CreateTable
 CREATE TABLE `formesfpatrimonio` (
-    `esfID` VARCHAR(255) NOT NULL,
+    `esfID` VARCHAR(191) NOT NULL,
     `esfContent` JSON NOT NULL,
 
     PRIMARY KEY (`esfID`)
@@ -32,7 +32,7 @@ CREATE TABLE `formesfpatrimonio` (
 
 -- CreateTable
 CREATE TABLE `formimpuestodiferido` (
-    `impID` VARCHAR(255) NOT NULL,
+    `impID` VARCHAR(191) NOT NULL,
     `impContent` JSON NOT NULL,
 
     PRIMARY KEY (`impID`)
@@ -40,7 +40,7 @@ CREATE TABLE `formimpuestodiferido` (
 
 -- CreateTable
 CREATE TABLE `formingresosfancturacion` (
-    `ingID` VARCHAR(255) NOT NULL,
+    `ingID` VARCHAR(191) NOT NULL,
     `ingContent` JSON NOT NULL,
 
     PRIMARY KEY (`ingID`)
@@ -48,7 +48,7 @@ CREATE TABLE `formingresosfancturacion` (
 
 -- CreateTable
 CREATE TABLE `formr110` (
-    `r110ID` VARCHAR(255) NOT NULL,
+    `r110ID` VARCHAR(191) NOT NULL,
     `r110Content` JSON NOT NULL,
 
     PRIMARY KEY (`r110ID`)
@@ -56,7 +56,7 @@ CREATE TABLE `formr110` (
 
 -- CreateTable
 CREATE TABLE `formrentaliquida` (
-    `renID` VARCHAR(255) NOT NULL,
+    `renID` VARCHAR(191) NOT NULL,
     `renContent` JSON NOT NULL,
 
     PRIMARY KEY (`renID`)
@@ -64,7 +64,7 @@ CREATE TABLE `formrentaliquida` (
 
 -- CreateTable
 CREATE TABLE `formresumenesferi` (
-    `resID` VARCHAR(255) NOT NULL,
+    `resID` VARCHAR(191) NOT NULL,
     `resContent` JSON NOT NULL,
 
     PRIMARY KEY (`resID`)
@@ -72,7 +72,7 @@ CREATE TABLE `formresumenesferi` (
 
 -- CreateTable
 CREATE TABLE `report` (
-    `repID` VARCHAR(255) NOT NULL,
+    `repID` VARCHAR(191) NOT NULL,
     `stuID` VARCHAR(255) NOT NULL,
     `roomID` VARCHAR(255) NOT NULL,
     `carID` VARCHAR(255) NOT NULL,
@@ -101,7 +101,7 @@ CREATE TABLE `report` (
 
 -- CreateTable
 CREATE TABLE `room` (
-    `roomID` VARCHAR(255) NOT NULL,
+    `roomID` VARCHAR(191) NOT NULL,
     `roomName` VARCHAR(255) NOT NULL,
     `roomPassword` VARCHAR(255) NOT NULL,
     `roomDate` DATE NOT NULL,
@@ -116,7 +116,7 @@ CREATE TABLE `room` (
 
 -- CreateTable
 CREATE TABLE `student` (
-    `stuID` VARCHAR(255) NOT NULL,
+    `stuID` VARCHAR(191) NOT NULL,
     `stuCedula` VARCHAR(255) NOT NULL,
     `roomID` VARCHAR(191) NOT NULL,
 

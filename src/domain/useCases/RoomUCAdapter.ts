@@ -3,18 +3,19 @@ import { RoomGatewayIntPort } from "../../application/output/RoomGatewayIntPort"
 import { ErrorFormatterIntPort } from "../../application/output/ErrorFormaterIntPort";
 import { RoomUCIntPort } from "../../application/input/RoomUCIntPort";
 
+
 export class RoomUCAdapter implements RoomUCIntPort {
     constructor(
         private roomGateway: RoomGatewayIntPort,
         private errorFormatter: ErrorFormatterIntPort
     ) { }
     async createRoom(room: Room): Promise<Room | null> {
-        const exists = await this.roomGateway.obtainRoomByID(room.roomID);
-        if (exists === null) {
-            return this.roomGateway.createRoom(room);
-        }
-        this.errorFormatter.errorExistsEntity(`Room with ID ${room.roomID} already exists.`);
-        return null;
+        room.roomDate = new Date();
+        room.roomStatus = "closed";
+        room.roomAnswer = {}
+
+        return this.roomGateway.createRoom(room);
+        //this.errorFormatter.errorExistsEntity(`Room with ID ${room.roomID} already exists.`);
     }
     async obtainRoomByID(roomID: string): Promise<Room | null> {
         const room = await this.roomGateway.obtainRoomByID(roomID);
@@ -31,12 +32,8 @@ export class RoomUCAdapter implements RoomUCIntPort {
         return this.roomGateway.obtainRoomsByUser(usuID);
     }
     async uptdateRoom(roomID: string, room: Room): Promise<Room | null> {
-        const exists = await this.roomGateway.obtainRoomByID(roomID);
-        if (exists != null) {
-            return this.roomGateway.uptdateRoom(roomID, room);
-        }
-        this.errorFormatter.errorNotFound(`Room with ID ${roomID} does not exist.`);
-        return null;
+        return this.roomGateway.uptdateRoom(roomID, room);
+        //this.errorFormatter.errorNotFound(`Room with ID ${roomID} does not exist.`);
     }
     async updateRoomName (roomID: string, roomName: string): Promise<Room | null> {
         const room = await this.roomGateway.obtainRoomByID(roomID); 
@@ -54,9 +51,6 @@ export class RoomUCAdapter implements RoomUCIntPort {
             return;
         }
         this.errorFormatter.errorNotFound(`Room with ID ${roomID} does not exist.`);
-    }
-    async deleteRoomByDate(roomDate: Date): Promise<void> {
-        await this.roomGateway.deleteRoomByDate(roomDate);
     }
     async validateRoomPassword(roomID: string, roomPassword: string): Promise<boolean> {
         const room = await this.roomGateway.obtainRoomByID(roomID);

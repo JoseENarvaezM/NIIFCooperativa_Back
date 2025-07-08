@@ -9,61 +9,61 @@ datasource db {
 }
 
 model formactivosfijos {
-  actID  String   @id @db.VarChar(255)
+  actID  String   @id @default(cuid())
   actContent Json
   report report[]
 }
 
 model formcaratula {
-  carID  String   @id @db.VarChar(255)
+  carID  String   @id @default(cuid())
   carContent Json
   report report[]
 }
 
 model formdetallerenglones {
-  detID  String   @id @db.VarChar(255)
+  detID  String   @id @default(cuid())
   detContent Json
   report report[]
 }
 
 model formesfpatrimonio {
-  esfID  String   @id @db.VarChar(255)
+  esfID  String   @id @default(cuid())
   esfContent Json
   report report[]
 }
 
 model formimpuestodiferido {
-  impID  String   @id @db.VarChar(255)
+  impID  String   @id @default(cuid())
   impContent Json
   report report[]
 }
 
 model formingresosfancturacion {
-  ingID  String   @id @db.VarChar(255)
+  ingID  String   @id @default(cuid())
   ingContent Json
   report report[]
 }
 
 model formr110 {
-  r110ID  String   @id @db.VarChar(255)
+  r110ID  String   @id @default(cuid())
   r110Content Json
   report report[]
 }
 
 model formrentaliquida {
-  renID  String   @id @db.VarChar(255)
+  renID  String   @id @default(cuid())
   renContent Json
   report report[]
 }
 
 model formresumenesferi {
-  resID  String   @id @db.VarChar(255)
+  resID  String   @id @default(cuid())
   resContent Json
   report report[]
 }
 
 model report {
-  repID  String   @id @db.VarChar(255)
+  repID  String   @id @default(cuid())
 
   stuID  String   @db.VarChar(255)
   roomID String   @db.VarChar(255)
@@ -103,7 +103,7 @@ model report {
 }
 
 model room {
-  roomID       String          @id @db.VarChar(255)
+  roomID        String   @id @default(cuid())
   roomName     String          @db.VarChar(255)
   roomPassword String          @unique @db.VarChar(255)
   roomDate     DateTime        @db.Date
@@ -119,7 +119,7 @@ model room {
 }
 
 model student {
-  stuID     String   @id @db.VarChar(255)
+  stuID     String   @id @default(cuid())
   stuCedula String   @db.VarChar(255)
   roomID    String
 
