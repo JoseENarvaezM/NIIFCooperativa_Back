@@ -1,15 +1,7 @@
-export interface ActivosFijos {
-    id: string;
-    nombre: string;
-    descripcion: string;
-    fechaAdquisicion: Date;
-    valorAdquisicion: number;
-    vidaUtil: number;
-    ubicacion: string;
-}
+import { FormActivosFijos } from "../../domain/models/FormActivosFijosModel";
 export interface ActivosFijosUCIntPort {
-    listActivosFijos(): Promise<ActivosFijos[]>;
-    getIDActivosFijos(id:string): Promise<ActivosFijos>;
-    createActivoFijo(activo: ActivosFijos): Promise<ActivosFijos>;
-    updateActivoFijo(id: string, activo: ActivosFijos): Promise<ActivosFijos>;
+    listActivosFijos(): Promise<FormActivosFijos[]>;
+    getIDActivosFijos(id:string): Promise<FormActivosFijos>;
+    createActivoFijo(activo: FormActivosFijos): Promise<FormActivosFijos>;
+    updateActivoFijo(id: string, activo: FormActivosFijos): Promise<FormActivosFijos>;
 };
