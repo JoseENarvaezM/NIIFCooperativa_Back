@@ -60,12 +60,17 @@ export class StudentGatewayAdapter implements StudentGatewayIntPort {
             where: { stuID: id }
         });
     }
-    //todo implement search by name
-    async searchStudentsByName(name: string): Promise<Student[]> {
-        //todo implement search by name
-        return this.getStudents(); // Placeholder, as the search by name is not implemented
+    async searchStudentsByCedula(cedula: string): Promise<Student[]> {
+        const studentsData = await prisma.student.findMany({
+            where: { stuCedula: cedula }
+        });
+        return studentsData.map(studentData => new Student(
+            studentData.stuID,
+            studentData.stuCedula,
+            studentData.roomID
+        ));
     }
-
+    
     async searchStudentsByRoom(roomID: string): Promise<Student[]> {
         const studentsData = await prisma.student.findMany({
             where: { roomID }

@@ -1,6 +1,5 @@
 import { Request, Response, NextFunction } from "express";
 import { RoomUCIntPort } from "../../../application/input/RoomUCIntPort";
-import { Room } from "../../../domain/models/RoomModel";
 
 export class RoomController {
     constructor(private readonly roomUseCases: RoomUCIntPort) { }

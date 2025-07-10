@@ -23,7 +23,7 @@ export class StudentRoutes {
         router.get("/:stuID", studentController.getStudentById);
         router.put("/:stuID", validatorMiddleware.validate, studentController.putStudent);
         router.delete("/:stuID", studentController.deleteStudent);
-        router.get("/search/name", studentController.searchStudentsByName);
+        router.get("/search/name", studentController.searchStudentsByCedula);
         router.get("/search/room/:roomID", studentController.searchStudentsByRoom);
 
         return router;

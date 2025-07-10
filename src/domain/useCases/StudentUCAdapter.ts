@@ -44,8 +44,8 @@ export class StudentUCAdapter implements StudentUCIntPort {
         this.errorFormatter.errorNotFound(`Student with id ${id} does not exist.`);
     }
 
-    async searchStudentsByName(name: string): Promise<Student[]> {
-        return this.studentGateway.searchStudentsByName(name);
+    async searchStudentsByCedula(cedula: string): Promise<Student[]> {
+        return this.studentGateway.searchStudentsByCedula(cedula);
     }
 
     async searchStudentsByRoom(roomID: string): Promise<Student[]> {
