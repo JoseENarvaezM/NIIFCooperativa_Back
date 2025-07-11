@@ -1,38 +1,28 @@
 import prisma from "../../../../config/database";
 import { FormCaratula } from "../../../../domain/models/FormCaratulaModel";
-import { CaratulaGatewayIntPort } from "../../../../application/output/CaratulaGatewayIntPort";
+import { FormsGatewayIntPort } from "../../../../application/output/FormsGatewayIntPort";
 
-export class CaratulaGatewayAdapter implements CaratulaGatewayIntPort {
-    async listCaratulas(): Promise<FormCaratula[]> {
-        const caratulasData = await prisma.formcaratula.findMany();
-        return caratulasData.map(caratula => new FormCaratula(caratula.carID, caratula.carContent, caratula.report));
+export class CaratulaGatewayAdapter implements FormsGatewayIntPort<FormCaratula> {
+    async listForms(): Promise<FormCaratula[]> {
+        return prisma.formcaratula.findMany();
     }
 
-    async getIDCaratula(id: string): Promise<FormCaratula> {
-        const caratulaData = await prisma.formcaratula.findUnique({ where: { carID: id } });
-        if (!caratulaData) throw new Error(`Caratula with id ${id} not found.`);
-        return new FormCaratula(caratulaData.carID, caratulaData.carContent, caratulaData.report);
-    }
-
-    async createCaratula(caratula: FormCaratula): Promise<FormCaratula> {
-        const newCaratula = await prisma.formcaratula.create({
-            data: {
-                carID: caratula.carID,
-                carContent: caratula.carContent,
-                report: caratula.report,
-            }
+    async getIDForm(id: string): Promise<FormCaratula | null> {
+        return prisma.formcaratula.findUnique({
+            where: { carID: id }
         });
-        return new FormCaratula(newCaratula.carID, newCaratula.carContent, newCaratula.report);
     }
 
-    async updateCaratula(id: string, caratula: FormCaratula): Promise<FormCaratula> {
-        const updatedCaratula = await prisma.formcaratula.update({
+    async createForm(caratula: FormCaratula): Promise<FormCaratula> {
+        return prisma.formcaratula.create({
+            data: caratula
+        });
+    }
+
+    async updateForm(id: string, caratula: FormCaratula): Promise<FormCaratula> {
+        return prisma.formcaratula.update({
             where: { carID: id },
-            data: {
-                carContent: caratula.carContent,
-                report: caratula.report,
-            }
+            data: caratula
         });
-        return new FormCaratula(updatedCaratula.carID, updatedCaratula.carContent, updatedCaratula.report);
     }
 }

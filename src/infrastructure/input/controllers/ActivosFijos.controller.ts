@@ -1,13 +1,14 @@
 import { Request, Response, NextFunction } from "express";
-import { ActivosFijosUCIntPort } from "../../../application/input/ActivosFijosUCIntPort";
+import { FormsUCIntPort } from "../../../application/input/FormsUCIntPort";
+import { FormActivosFijos } from "../../../domain/models/FormActivosFijosModel";
 
 export class ActivosFijosController {
-    constructor(private readonly activosFijosUseCases: ActivosFijosUCIntPort) { }
+    constructor(private readonly activosFijosUseCases: FormsUCIntPort<FormActivosFijos>) { }
 
     postActivoFijo = async (req: Request, res: Response, next: NextFunction) => {
         try {
             const newActivoFijo = req.body;
-            const result = await this.activosFijosUseCases.createActivoFijo(newActivoFijo);
+            const result = await this.activosFijosUseCases.createForm(newActivoFijo);
             res.status(201).json(result);
         } catch (error) {
             next(error);
@@ -16,7 +17,7 @@ export class ActivosFijosController {
 
     getActivosFijos = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const result = await this.activosFijosUseCases.listActivosFijos();
+            const result = await this.activosFijosUseCases.listForms();
             res.status(200).json(result);
         } catch (error) {
             next(error);
@@ -25,8 +26,8 @@ export class ActivosFijosController {
 
     getIDActivoFijo = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const { id } = req.params;
-            const result = await this.activosFijosUseCases.getIDActivosFijos(id);
+            const { id} = req.params;
+            const result = await this.activosFijosUseCases.getIDForm(id);
             res.status(200).json(result);
         } catch (error) {
             next(error);
@@ -37,7 +38,7 @@ export class ActivosFijosController {
         try {
             const { id } = req.params;
             const updatedActivoFijo = req.body;
-            const result = await this.activosFijosUseCases.updateActivoFijo(id, updatedActivoFijo);
+            const result = await this.activosFijosUseCases.updateForm(id, updatedActivoFijo);
             res.status(200).json(result);
         } catch (error) {
             next(error);

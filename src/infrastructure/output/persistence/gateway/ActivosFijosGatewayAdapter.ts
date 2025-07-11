@@ -1,40 +1,28 @@
 import prisma from "../../../../config/database";
 import { FormActivosFijos } from "../../../../domain/models/FormActivosFijosModel";
-import { ActivosFijosGatewayIntPort } from "../../../../application/output/ActivosFijosGatewayIntPort";
+import { FormsGatewayIntPort } from "../../../../application/output/FormsGatewayIntPort";
 
-export class ActivosFijosGatewayAdapter implements ActivosFijosGatewayIntPort {
-    async listActivosFijos(): Promise<FormActivosFijos[]> {
-        const activosFijosData = await prisma.formactivosfijos.findMany();
-        return activosFijosData.map(activo => new FormActivosFijos(activo.actID, activo.actContent));
+export class ActivosFijosGatewayAdapter implements FormsGatewayIntPort<FormActivosFijos> {
+    async listForms(): Promise<FormActivosFijos[]> {
+        return prisma.formactivosfijos.findMany();
     }
 
-    async getIDActivosFijos(id: string): Promise<FormActivosFijos> {
-        const activoData = await prisma.formactivosfijos.findUnique({ where: { actID: id } });
-        if (!activoData) throw new Error(`Activo Fijo with id ${id} not found.`);
-        return new FormActivosFijos(activoData.actID, activoData.actContent);
-    }
-
-    async createActivoFijo(activo: FormActivosFijos): Promise<FormActivosFijos> {
-        const newActivo = await prisma.formactivosfijos.create({
-            data: {
-                actID: activo.actID,
-                actContent: activo.actContent,
-            }
+    async getIDForm(id: string): Promise<FormActivosFijos | null> {
+        return prisma.formactivosfijos.findUnique({
+            where: { actID: id }
         });
-        return new FormActivosFijos(newActivo.actID, newActivo.actContent);
     }
 
-    async updateActivoFijo(id: string, activo: FormActivosFijos): Promise<FormActivosFijos> {
-        const updatedActivo = await prisma.formactivosfijos.update({
+    async createForm(activo: FormActivosFijos): Promise<FormActivosFijos> {
+        return prisma.formactivosfijos.create({
+            data: activo
+        });
+    }
+
+    async updateForm(id: string, activo: FormActivosFijos): Promise<FormActivosFijos> {
+        return prisma.formactivosfijos.update({
             where: { actID: id },
-            data: {
-                actContent: activo.actContent,
-            }
+            data: activo
         });
-        return new FormActivosFijos(updatedActivo.actID, updatedActivo.actContent);
-    }
-
-    async deleteActivoFijo(id: string): Promise<void> {
-        await prisma.formactivosfijos.delete({ where: { actID: id } });
     }
 }

@@ -1,28 +1,21 @@
 import { FormCaratula } from "../models/FormCaratulaModel";
-import { CaratulaUCIntPort } from "../../application/input/CaratulaUCIntPort";
-import { CaratulaGatewayIntPort } from "../../application/output/CaratulaGatewayIntPort";
+import { FormsUCIntPort } from "../../application/input/FormsUCIntPort";
+import { FormsGatewayIntPort } from "../../application/output/FormsGatewayIntPort";
  
-export class CaratulaUCAdapter implements CaratulaUCIntPort {
+export class CaratulaUCAdapter implements FormsUCIntPort<FormCaratula> {
     constructor(
-        private caratulaGateway: CaratulaGatewayIntPort
+        private caratulaGateway: FormsGatewayIntPort<FormCaratula>
     ) {}
-
-    listCaratulas(): Promise<FormCaratula[]> {
-        return this.caratulaGateway.listCaratulas();
+    async listForms(): Promise<FormCaratula[]> {
+        return this.caratulaGateway.listForms();
     }
-
-    getIDCaratula(id: string): Promise<FormCaratula> {
-        return this.caratulaGateway.getIDCaratula(id);
+    async getIDForm(id: string): Promise<FormCaratula | null> {
+        return this.caratulaGateway.getIDForm(id);
     }
-
-    createCaratula(caratula: FormCaratula): Promise<FormCaratula> {
-        return this.caratulaGateway.createCaratula(caratula);
+    async createForm(caratula: FormCaratula): Promise<FormCaratula> {
+        return this.caratulaGateway.createForm(caratula);
     }
-
-    updateCaratula(id: string, caratula: FormCaratula): Promise<FormCaratula> {
-        if (this.getIDCaratula(id) != null) {
-            return this.caratulaGateway.updateCaratula(id, caratula);
-        }
-        throw new Error(`Caratula with id ${id} does not exist.`);
+    async updateForm(id: string, caratula: FormCaratula): Promise<FormCaratula> {
+        return this.caratulaGateway.updateForm(id, caratula);
     }
 }

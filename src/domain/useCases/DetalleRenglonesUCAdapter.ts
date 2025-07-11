@@ -1,28 +1,22 @@
 import { FormDetalleRenglones } from "../models/FormDetallerEnglonesModel";
-import { DetalleRenglonesUCIntPort } from "../../application/input/DetalleRenglonesUCIntPort";
-import { DetalleRenglonesGatewayIntPort } from "../../application/output/DetalleRenglonesGatewayIntPort";
+import { FormsUCIntPort } from "../../application/input/FormsUCIntPort";
+import { FormsGatewayIntPort } from "../../application/output/FormsGatewayIntPort";
 
-export class DetalleRenglonesUCAdapter implements DetalleRenglonesUCIntPort {
+export class DetalleRenglonesUCAdapter implements FormsUCIntPort<FormDetalleRenglones> {
     constructor(
-        private detalleRenglonesGateway: DetalleRenglonesGatewayIntPort
+        private detalleRenglonesGateway: FormsGatewayIntPort<FormDetalleRenglones>
     ) {}
 
-    listDetalleRenglones(): Promise<FormDetalleRenglones[]> {
-        return this.detalleRenglonesGateway.listDetalleRenglones();
+    async listForms(): Promise<FormDetalleRenglones[]> {
+        return this.detalleRenglonesGateway.listForms();
     }
-
-    getIDDetalleRenglones(id: string): Promise<FormDetalleRenglones> {
-        return this.detalleRenglonesGateway.getIDDetalleRenglones(id);
+    async getIDForm(id: string): Promise<FormDetalleRenglones | null> {
+        return this.detalleRenglonesGateway.getIDForm(id);
     }
-
-    createDetalleRenglones(detalleRenglones: FormDetalleRenglones): Promise<FormDetalleRenglones> {
-        return this.detalleRenglonesGateway.createDetalleRenglones(detalleRenglones);
+    async createForm(detalleRenglones: FormDetalleRenglones): Promise<FormDetalleRenglones> {
+        return this.detalleRenglonesGateway.createForm(detalleRenglones);
     }
-
-    updateDetalleRenglones(id: string, detalleRenglones: FormDetalleRenglones): Promise<FormDetalleRenglones> {
-        if (this.getIDDetalleRenglones(id) != null) {
-            return this.detalleRenglonesGateway.updateDetalleRenglones(id, detalleRenglones);
-        }
-        throw new Error(`Detalle Renglones with id ${id} does not exist.`);
+    async updateForm(id: string, detalleRenglones: FormDetalleRenglones): Promise<FormDetalleRenglones> {
+        return this.detalleRenglonesGateway.updateForm(id, detalleRenglones);
     }
 }

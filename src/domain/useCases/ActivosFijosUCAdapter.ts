@@ -1,25 +1,21 @@
-import { ActivosFijosUCIntPort } from "../../application/input/ActivosFijosUCIntPort";
-import { ActivosFijosGatewayIntPort } from "../../application/output/ActivosFijosGatewayIntPort";
+import { FormsUCIntPort } from "../../application/input/FormsUCIntPort";
+import { FormsGatewayIntPort } from "../../application/output/FormsGatewayIntPort";
 import { FormActivosFijos } from "../models/FormActivosFijosModel";
 
-export class ActivosFijosUCAdapter implements ActivosFijosUCIntPort {
+export class ActivosFijosUCAdapter implements FormsUCIntPort <FormActivosFijos> {
     constructor(
-        private activosFijosGateway: ActivosFijosGatewayIntPort
+        private activosFijosGateway: FormsGatewayIntPort<FormActivosFijos>
     ) {}
-    listActivosFijos(): Promise<FormActivosFijos[]> {
-        return this.activosFijosGateway.listActivosFijos();
+    async listForms(): Promise<FormActivosFijos[]> {
+        return this.activosFijosGateway.listForms();
     }
-    getIDActivosFijos(id:string): Promise<FormActivosFijos> {
-        return this.activosFijosGateway.getIDActivosFijos(id);
+    async getIDForm(id: string): Promise<FormActivosFijos | null> {
+        return this.activosFijosGateway.getIDForm(id);
     }
-    createActivoFijo(activo: FormActivosFijos): Promise<FormActivosFijos> {
-        return this.activosFijosGateway.createActivoFijo(activo);
+    async createForm(activo: FormActivosFijos): Promise<FormActivosFijos> {
+        return this.activosFijosGateway.createForm(activo);
     }
-    updateActivoFijo(id: string, activo: FormActivosFijos): Promise<FormActivosFijos> {
-        if (this.getIDActivosFijos(id) != null) {
-            return this.activosFijosGateway.updateActivoFijo(id, activo);
-        }
-        throw new Error(`Activo Fijo with id ${id} does not exist.`);
+    async updateForm(id: string, activo: FormActivosFijos): Promise<FormActivosFijos> {
+        return this.activosFijosGateway.updateForm(id, activo);
     }
-   
 }

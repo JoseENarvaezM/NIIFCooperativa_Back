@@ -1,13 +1,14 @@
 import { Request, Response, NextFunction } from "express";
-import { Form110UCIntPort } from "../../../application/input/Form110UCIntPort";
+import { FormsUCIntPort } from "../../../application/input/FormsUCIntPort";
+import { FormR110 } from "../../../domain/models/FormR110Model";
 
 export class Form110Controller {
-    constructor(private readonly form110UseCases: Form110UCIntPort) { }
+    constructor(private readonly form110UseCases: FormsUCIntPort<FormR110>) { }
 
     postForm110 = async (req: Request, res: Response, next: NextFunction) => {
         try {
             const newForm110 = req.body;
-            const result = await this.form110UseCases.createForm110(newForm110);
+            const result = await this.form110UseCases.createForm(newForm110);
             res.status(201).json(result);
         } catch (error) {
             next(error);
@@ -16,7 +17,7 @@ export class Form110Controller {
 
     getForm110 = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const result = await this.form110UseCases.listForm110();
+            const result = await this.form110UseCases.listForms();
             res.status(200).json(result);
         } catch (error) {
             next(error);
@@ -26,7 +27,7 @@ export class Form110Controller {
     getIDForm110 = async (req: Request, res: Response, next: NextFunction) => {
         try {
             const { id } = req.params;
-            const result = await this.form110UseCases.getIDForm110(id);
+            const result = await this.form110UseCases.getIDForm(id);
             res.status(200).json(result);
         } catch (error) {
             next(error);
@@ -37,7 +38,7 @@ export class Form110Controller {
         try {
             const { id } = req.params;
             const updatedForm110 = req.body;
-            const result = await this.form110UseCases.updateForm110(id, updatedForm110);
+            const result = await this.form110UseCases.updateForm(id, updatedForm110);
             res.status(200).json(result);
         } catch (error) {
             next(error);

@@ -1,29 +1,22 @@
 import { FormEsfPatrimonio } from "../models/FormEsfPatrimonioModel";
-import { EsfPatrimonioUCIntPort } from "../../application/input/EsfPatrimonioUCIntPort";
-import { EsfPatrimonioGatewayIntPort } from "../../application/output/EsfPatrimonioGatewayIntPort";
-import e from "express";
+import { FormsUCIntPort } from "../../application/input/FormsUCIntPort";
+import { FormsGatewayIntPort } from "../../application/output/FormsGatewayIntPort";
 
-export class EsfPatrimonioUCAdapter implements EsfPatrimonioUCIntPort {
+export class EsfPatrimonioUCAdapter implements FormsUCIntPort<FormEsfPatrimonio> {
     constructor(
-        private esfPatrimonioGateway: EsfPatrimonioGatewayIntPort
+        private esfPatrimonioGateway: FormsGatewayIntPort<FormEsfPatrimonio>
     ) {}
 
-    listEsfPatrimonio(): Promise<FormEsfPatrimonio[]> {
-        return this.esfPatrimonioGateway.listEsfPatrimonio();
+    async listForms(): Promise<FormEsfPatrimonio[]> {
+        return this.esfPatrimonioGateway.listForms();
     }
-
-    getIDEsfPatrimonio(id: string): Promise<FormEsfPatrimonio> {
-        return this.esfPatrimonioGateway.getIDEsfPatrimonio(id);
+    async getIDForm(id: string): Promise<FormEsfPatrimonio | null> {
+        return this.esfPatrimonioGateway.getIDForm(id);
     }
-
-    createEsfPatrimonio(esfPatrimonio: FormEsfPatrimonio): Promise<FormEsfPatrimonio> {
-        return this.esfPatrimonioGateway.createEsfPatrimonio(esfPatrimonio);
+    async createForm(esfPatrimonio: FormEsfPatrimonio): Promise<FormEsfPatrimonio> {
+        return this.esfPatrimonioGateway.createForm(esfPatrimonio);
     }
-
-    updateEsfPatrimonio(id: string, esfPatrimonio: FormEsfPatrimonio): Promise<FormEsfPatrimonio> {
-        if (this.getIDEsfPatrimonio(id) != null) {
-            return this.esfPatrimonioGateway.updateEsfPatrimonio(id, esfPatrimonio);
-        }
-        throw new Error(`ESF Patrimonio with id ${id} does not exist.`);
+    async updateForm(id: string, esfPatrimonio: FormEsfPatrimonio): Promise<FormEsfPatrimonio> {
+        return this.esfPatrimonioGateway.updateForm(id, esfPatrimonio);
     }
 }

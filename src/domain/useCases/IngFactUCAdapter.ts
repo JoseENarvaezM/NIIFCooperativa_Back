@@ -1,28 +1,22 @@
 import { FormIngresosFancturacion } from "../models/FormIngresosFancturacionModel";
-import { IngFactUCIntPort } from "../../application/input/IngFactUCIntPort";
-import { IngFactGatewayIntPort } from "../../application/output/IngFactGatewayIntPort";
+import { FormsUCIntPort } from "../../application/input/FormsUCIntPort";
+import { FormsGatewayIntPort } from "../../application/output/FormsGatewayIntPort";
 
-export class IngFactUCAdapter implements IngFactUCIntPort {
+export class IngFactUCAdapter implements FormsUCIntPort<FormIngresosFancturacion> {
     constructor(
-        private ingFactGateway: IngFactGatewayIntPort
+        private ingFactGateway: FormsGatewayIntPort<FormIngresosFancturacion>
     ) {}
 
-    listIngresosFacturacion(): Promise<FormIngresosFancturacion[]> {
-        return this.ingFactGateway.listIngresosFacturacion();
+    async listForms(): Promise<FormIngresosFancturacion[]> {
+        return this.ingFactGateway.listForms();
     }
-
-    getIDIngresosFacturacion(id: string): Promise<FormIngresosFancturacion> {
-        return this.ingFactGateway.getIDIngresosFacturacion(id);
+    async getIDForm(id: string): Promise<FormIngresosFancturacion | null> {
+        return this.ingFactGateway.getIDForm(id);
     }
-
-    createIngresosFacturacion(ingresosFacturacion: FormIngresosFancturacion): Promise<FormIngresosFancturacion> {
-        return this.ingFactGateway.createIngresosFacturacion(ingresosFacturacion);
+    async createForm(ingFact: FormIngresosFancturacion): Promise<FormIngresosFancturacion> {
+        return this.ingFactGateway.createForm(ingFact);
     }
-
-    updateIngresosFacturacion(id: string, ingresosFacturacion: FormIngresosFancturacion): Promise<FormIngresosFancturacion> {
-        if (this.getIDIngresosFacturacion(id) != null) {
-            return this.ingFactGateway.updateIngresosFacturacion(id, ingresosFacturacion);
-        }
-        throw new Error(`Ingresos Facturacion with id ${id} does not exist.`);
+    async updateForm(id: string, ingFact: FormIngresosFancturacion): Promise<FormIngresosFancturacion> {
+        return this.ingFactGateway.updateForm(id, ingFact);
     }
 }
