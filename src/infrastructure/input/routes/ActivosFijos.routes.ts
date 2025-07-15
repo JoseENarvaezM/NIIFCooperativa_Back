@@ -17,7 +17,7 @@ export class ActivosFijosRoutes{
 
         const activosFijosGateway: FormsGatewayIntPort<FormActivosFijos> = new ActivosFijosGatewayAdapter();
         const exceptionHandler: ErrorFormatterIntPort = new ExceptionHandler();
-        const activosFijosUseCases = new ActivosFijosUCAdapter(activosFijosGateway);
+        const activosFijosUseCases = new ActivosFijosUCAdapter(activosFijosGateway,exceptionHandler);
         const activosFijosController: ActivosFijosController = new ActivosFijosController(activosFijosUseCases);
         const validatorMiddleware = new ValidatorMiddleware(ActivosFijosSchema);
 

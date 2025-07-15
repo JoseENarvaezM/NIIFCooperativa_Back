@@ -17,7 +17,7 @@ export class RentaLiquidaRoutes {
 
         const rentaLiquidaGateway: FormsGatewayIntPort<FormRentaLiquida> = new RentaLiquidaGatewayAdapter();
         const exceptionHandler: ErrorFormatterIntPort = new ExceptionHandler();
-        const rentaLiquidaUseCases = new RentaLiquidaUCAdapter(rentaLiquidaGateway);
+        const rentaLiquidaUseCases = new RentaLiquidaUCAdapter(rentaLiquidaGateway,exceptionHandler);
         const rentaLiquidaController: RentaLiquidaController = new RentaLiquidaController(rentaLiquidaUseCases);
         const validatorMiddleware = new ValidatorMiddleware(RentaLiquidaSchema);
 

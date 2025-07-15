@@ -8,13 +8,37 @@ import { ErrorFormatterIntPort } from "../../../application/output/ErrorFormater
 import { ValidatorMiddleware } from "../middlewares/ValidatorMiddleware";
 import { getStudentSchema } from "../schemas/StudentSchema";
 
+import { ActivosFijosGatewayAdapter } from "../../output/persistence/gateway/ActivosFijosGatewayAdapter";
+import { CaratulaGatewayAdapter } from "../../output/persistence/gateway/CaratulaGatewayAdapter";
+import { DetalleRenglonesGatewayAdapter } from "../../output/persistence/gateway/DetalleRenglonesGatewayAdapter";
+import { EsfPatrimonioGatewayAdapter } from "../../output/persistence/gateway/EsfPatrimonioGatewayAdapter";
+import { Form110GatewayAdapter } from "../../output/persistence/gateway/Form110GatewayAdapter";
+import { IngFactGatewayAdapter } from "../../output/persistence/gateway/IngFactGatewayAdapter";
+import { ImpuestoDiferidoGatewayAdapter } from "../../output/persistence/gateway/ImpuestoDiferidoGatewayAdapter";
+import { RentaLiquidaGatewayAdapter } from "../../output/persistence/gateway/RentaLiquidaGatewayAdapter";
+import { ResumenEsfGatewayAdapter } from "../../output/persistence/gateway/ResumenEsfGatewayAdapter";
+import { ReportGatewayAdapter } from "../../output/persistence/gateway/ReportGatewayAdapter";
+
 export class StudentRoutes {
     static get routes(): Router {
         const router = Router();
 
         const studentGateway: StudentGatewayIntPort = new StudentGatewayAdapter();
         const exceptionHandler: ErrorFormatterIntPort = new ExceptionHandler();
-        const studentUseCases = new StudentUCAdapter(studentGateway, exceptionHandler);
+        const studentUseCases = new StudentUCAdapter(
+            studentGateway, 
+            new ReportGatewayAdapter(),
+            new ActivosFijosGatewayAdapter(),
+            new CaratulaGatewayAdapter(),
+            new DetalleRenglonesGatewayAdapter(),
+            new EsfPatrimonioGatewayAdapter(),
+            new Form110GatewayAdapter(),
+            new ImpuestoDiferidoGatewayAdapter(),
+            new IngFactGatewayAdapter(),
+            new RentaLiquidaGatewayAdapter(),
+            new ResumenEsfGatewayAdapter(),
+            exceptionHandler);
+
         const studentController: StudentController = new StudentController(studentUseCases);
         const validatorMiddleware = new ValidatorMiddleware(getStudentSchema());
 

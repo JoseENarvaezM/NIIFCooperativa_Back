@@ -17,7 +17,7 @@ export class ImpuestoDiferidoRoutes {
 
         const impuestoDiferidoGateway: FormsGatewayIntPort<FormImpuestoDiferido> = new ImpuestoDiferidoGatewayAdapter();
         const exceptionHandler: ErrorFormatterIntPort = new ExceptionHandler();
-        const impuestoDiferidoUseCases = new ImpuestoDiferidoUCAdapter(impuestoDiferidoGateway);
+        const impuestoDiferidoUseCases = new ImpuestoDiferidoUCAdapter(impuestoDiferidoGateway,exceptionHandler);
         const impuestoDiferidoController: ImpuestoDiferidoController = new ImpuestoDiferidoController(impuestoDiferidoUseCases);
         const validatorMiddleware = new ValidatorMiddleware(ImpuestoDiferidoSchema);
 

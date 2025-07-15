@@ -17,7 +17,7 @@ export class Form110Routes {
 
         const form110Gateway: FormsGatewayIntPort<FormR110> = new Form110GatewayAdapter();
         const exceptionHandler: ErrorFormatterIntPort = new ExceptionHandler();
-        const form110UseCases = new Form110UCAdapter(form110Gateway);
+        const form110UseCases = new Form110UCAdapter(form110Gateway,exceptionHandler);
         const form110Controller: Form110Controller = new Form110Controller(form110UseCases);
         const validatorMiddleware = new ValidatorMiddleware(Formulario110Schema);
 

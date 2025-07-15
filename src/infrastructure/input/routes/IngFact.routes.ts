@@ -17,7 +17,7 @@ export class CaratulaRoutes {
 
         const caratulaGateway: FormsGatewayIntPort<FormCaratula> = new CaratulaGatewayAdapter();
         const exceptionHandler: ErrorFormatterIntPort = new ExceptionHandler();
-        const caratulaUseCases = new CaratulaUCAdapter(caratulaGateway);
+        const caratulaUseCases = new CaratulaUCAdapter(caratulaGateway,exceptionHandler);
         const caratulaController: CaratulaController = new CaratulaController(caratulaUseCases);
         const validatorMiddleware = new ValidatorMiddleware(CaratulaSchema);
 

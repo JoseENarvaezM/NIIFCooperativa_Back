@@ -17,7 +17,7 @@ export class ResumenEsfRoutes {
 
         const resumenEsfGateway: FormsGatewayIntPort<FormResumenEsferi> = new ResumenEsfGatewayAdapter();
         const exceptionHandler: ErrorFormatterIntPort = new ExceptionHandler();
-        const resumenEsfUseCases = new ResumenEsfUCAdapter(resumenEsfGateway);
+        const resumenEsfUseCases = new ResumenEsfUCAdapter(resumenEsfGateway,exceptionHandler);
         const resumenEsfController: ResumenEsfController = new ResumenEsfController(resumenEsfUseCases);
         const validatorMiddleware = new ValidatorMiddleware(ResumenESFSchema);
 

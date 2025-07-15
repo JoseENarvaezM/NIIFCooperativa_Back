@@ -17,7 +17,7 @@ export class DetalleRenglonesRoutes {
 
         const detalleRenglonesGateway: FormsGatewayIntPort<FormDetalleRenglones> = new DetalleRenglonesGatewayAdapter();
         const exceptionHandler: ErrorFormatterIntPort = new ExceptionHandler();
-        const detalleRenglonesUseCases = new DetalleRenglonesUCAdapter(detalleRenglonesGateway);
+        const detalleRenglonesUseCases = new DetalleRenglonesUCAdapter(detalleRenglonesGateway,exceptionHandler);
         const detalleRenglonesController: DetalleRenglonesController = new DetalleRenglonesController(detalleRenglonesUseCases);
         const validatorMiddleware = new ValidatorMiddleware(DetalleRenglonesSchema);
 

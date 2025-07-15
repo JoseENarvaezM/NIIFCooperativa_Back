@@ -17,7 +17,7 @@ export class EsfPatrimonioRoutes {
 
         const esfPatrimonioGateway: FormsGatewayIntPort<FormEsfPatrimonio> = new EsfPatrimonioGatewayAdapter();
         const exceptionHandler: ErrorFormatterIntPort = new ExceptionHandler();
-        const esfPatrimonioUseCases = new EsfPatrimonioUCAdapter(esfPatrimonioGateway);
+        const esfPatrimonioUseCases = new EsfPatrimonioUCAdapter(esfPatrimonioGateway,exceptionHandler);
         const esfPatrimonioController: EsfPatrimonioController = new EsfPatrimonioController(esfPatrimonioUseCases);
         const validatorMiddleware = new ValidatorMiddleware(ESFPatrimonioSchema);
 
