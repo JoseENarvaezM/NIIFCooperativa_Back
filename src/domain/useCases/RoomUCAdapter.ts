@@ -15,7 +15,6 @@ export class RoomUCAdapter implements RoomUCIntPort {
         room.roomAnswer = {}
 
         return this.roomGateway.createRoom(room);
-        //this.errorFormatter.errorExistsEntity(`Room with ID ${room.roomID} already exists.`);
     }
     async obtainRoomByID(roomID: string): Promise<Room | null> {
         const room = await this.roomGateway.obtainRoomByID(roomID);

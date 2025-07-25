@@ -8,6 +8,8 @@ export class RoomController {
         try {
             const newRoom = req.body;
 
+            newRoom.usuID = req.user.usuID;
+
             const result = await this.roomUseCases.createRoom(newRoom);
             res.status(201).json(result);
         } catch (error) {
