@@ -6,11 +6,11 @@ export class AuthController {
 
     login = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            console.log("Login request received:", req.body);
             const { email, password } = req.body;
             const token = await this.authUseCases.login(email, password);
             if (token) {
-                res.status(200).json({ token });
+                res.cookie("token", token, { httpOnly: true, secure: true });
+                res.status(204).send();
             } else {
                 res.status(401).json({ message: "Invalid credentials" });
             }
@@ -22,8 +22,9 @@ export class AuthController {
 
     logout = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const token = req.headers.authorization?.split(" ")[1];
-            await this.authUseCases.logout(token!);
+            const token = req.cookies.token;
+            await this.authUseCases.logout(token);
+            res.clearCookie("token");
             res.status(204).send();
         } catch (error) {
             next(error);

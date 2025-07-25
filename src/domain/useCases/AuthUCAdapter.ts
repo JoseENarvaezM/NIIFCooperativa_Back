@@ -29,4 +29,7 @@ export class AuthUCAdapter implements AuthUCIntPort {
     async logout(token: string): Promise<void> {
         console.log(`Token ${token} logged out (no action needed in stateless JWT).`);
     }
+    async verifyToken(token: string): Promise<any | null> {
+        return TokenService.verifyAccessToken(token);
+    }
 }

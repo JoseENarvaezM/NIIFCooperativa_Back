@@ -26,7 +26,9 @@ export class RoomController {
     };
     getRoomsByTeacher = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const { teaID } = req.params;
+            console.log("Authenticated user:");
+            const teaID = req.user.usuID;
+            console.log(req.user);
             const result = await this.roomUseCases.obtainRoomsByTeacher(teaID);
             res.status(200).json(result);
         } catch (error) {

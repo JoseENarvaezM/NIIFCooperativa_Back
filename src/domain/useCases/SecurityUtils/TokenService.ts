@@ -12,4 +12,14 @@ export class TokenService {
       });
     });
   }
+  static verifyAccessToken(token: string): Promise<any | null> {
+    return new Promise((resolve, reject) => {
+      jwt.verify(token, env.jwtSecret, (err, decoded) => {
+        if (err) {
+          return resolve(null);
+        }
+        resolve(decoded);
+      });
+    });
+  }
 }
