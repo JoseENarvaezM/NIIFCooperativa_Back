@@ -7,9 +7,9 @@ RUN npm install && npm audit fix
 
 COPY . .
 
+EXPOSE 3000
 
 RUN npx prisma generate
 
-EXPOSE 3000
 
 CMD ["sh", "-c", "npx prisma migrate deploy && npm run dev"]
