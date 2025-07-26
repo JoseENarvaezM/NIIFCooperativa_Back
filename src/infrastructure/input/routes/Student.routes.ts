@@ -23,13 +23,18 @@ import { AuthMiddleware } from "../middlewares/AuthMiddleware";
 import { AuthUCAdapter } from "../../../domain/useCases/AuthUCAdapter";
 import { UserGatewayAdapter } from "../../output/persistence/gateway/UserGatewayAdapter";
 
+import { RoomGatewayIntPort } from "../../../application/output/RoomGatewayIntPort";
+import { RoomGatewayAdapter } from "../../output/persistence/gateway/RoomGatewayAdapter";
+
 export class StudentRoutes {
     static get routes(): Router {
         const router = Router();
 
         const studentGateway: StudentGatewayIntPort = new StudentGatewayAdapter();
         const exceptionHandler: ErrorFormatterIntPort = new ExceptionHandler();
+        const roomGateway: RoomGatewayIntPort = new RoomGatewayAdapter();
         const studentUseCases = new StudentUCAdapter(
+            roomGateway,
             studentGateway, 
             new ReportGatewayAdapter(),
             new ActivosFijosGatewayAdapter(),

@@ -15,10 +15,12 @@ import { FormRentaLiquida } from "../models/FormRentaLiquidaModel";
 import { FormResumenEsferi } from "../models/FormResumenEsferiModel";
 import { Report } from "../models/ReportModel";
 import { TokenService } from "./SecurityUtils/TokenService";
+import { RoomGatewayIntPort } from "../../application/output/RoomGatewayIntPort";
 
 
 export class StudentUCAdapter implements StudentUCIntPort {
     constructor(
+        private roomGateway: RoomGatewayIntPort,
         private studentGateway: StudentGatewayIntPort,
         private reportGateway: ReportGatewayIntPort,
         private formsActivosFijosGateway: FormsGatewayIntPort<FormActivosFijos>,
@@ -33,16 +35,22 @@ export class StudentUCAdapter implements StudentUCIntPort {
         private errorFormatter: ErrorFormatterIntPort
     ) { }
 
-    async createStudent(student: Student): Promise<Student & { token: string }> {
-        const activosfijos = await this.formsActivosFijosGateway.createForm(new FormActivosFijos("", {}));
-        const caratula = await this.formsCaratulaGateway.createForm(new FormCaratula("", {}));
-        const detalleRenglones = await this.formsDetalleRenglonesGateway.createForm(new FormDetalleRenglones("", {}));
-        const esfPatrimonio = await this.formsEsfPatrimonioGateway.createForm(new FormEsfPatrimonio("", {}));
-        const r110 = await this.formsR110Gateway.createForm(new FormR110("", {}));
-        const impuestoDiferido = await this.formsImpuestoDiferidoGateway.createForm(new FormImpuestoDiferido("", {}));  
-        const ingresosFancturacion = await this.formsIngresosFancturacionGateway.createForm(new FormIngresosFancturacion("", {}));
-        const rentaLiquida = await this.formsRentaLiquidaGateway.createForm(new FormRentaLiquida("", {}));
-        const resumenEsferi = await this.formsResumenEsferiGateway.createForm(new FormResumenEsferi("", {}));
+    async createStudent(student: Student): Promise<Student & { token: string } | null> {
+
+        const room = await this.roomGateway.obtainRoomByID(student.roomID);
+        if (!room) {
+            this.errorFormatter.errorNotFound(`Room with id ${student.roomID} does not exist.`);
+            return null;
+        }
+        const activosfijos = await this.formsActivosFijosGateway.createForm(new FormActivosFijos( {}));
+        const caratula = await this.formsCaratulaGateway.createForm(new FormCaratula({}));
+        const detalleRenglones = await this.formsDetalleRenglonesGateway.createForm(new FormDetalleRenglones( {}));
+        const esfPatrimonio = await this.formsEsfPatrimonioGateway.createForm(new FormEsfPatrimonio( {}));
+        const r110 = await this.formsR110Gateway.createForm(new FormR110( {}));
+        const impuestoDiferido = await this.formsImpuestoDiferidoGateway.createForm(new FormImpuestoDiferido( {}));
+        const ingresosFancturacion = await this.formsIngresosFancturacionGateway.createForm(new FormIngresosFancturacion( {}));
+        const rentaLiquida = await this.formsRentaLiquidaGateway.createForm(new FormRentaLiquida( {}));
+        const resumenEsferi = await this.formsResumenEsferiGateway.createForm(new FormResumenEsferi( {}));
 
         const studentCrated = await this.studentGateway.createStudent(student); 
 
@@ -50,15 +58,15 @@ export class StudentUCAdapter implements StudentUCIntPort {
             "",
             studentCrated.stuID,
             studentCrated.roomID,
-            caratula.carID,
-            detalleRenglones.detID,
-            esfPatrimonio.esfID,
-            rentaLiquida.renID,
-            impuestoDiferido.impID,
-            ingresosFancturacion.ingID,
-            activosfijos.actID,
-            resumenEsferi.resID,
-            r110.r110ID))
+            caratula.carID!,
+            detalleRenglones.detID!,
+            esfPatrimonio.esfID!,
+            rentaLiquida.renID!,
+            impuestoDiferido.impID!,
+            ingresosFancturacion.ingID!,
+            activosfijos.actID!,
+            resumenEsferi.resID!,
+            r110.r110ID!))
 
         const token = await TokenService.createAccessToken({stuID: studentCrated.stuID, roomID: studentCrated.roomID, usuRol: "student"});
         return {

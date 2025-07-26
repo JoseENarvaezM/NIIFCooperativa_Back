@@ -6,7 +6,6 @@ export class StudentGatewayAdapter implements StudentGatewayIntPort {
     async createStudent(student: Student): Promise<Student> {
         const newStudentData = await prisma.student.create({
             data: {
-                stuID: student.stuID,
                 stuCedula: student.stuCedula,
                 roomID: student.roomID
             }

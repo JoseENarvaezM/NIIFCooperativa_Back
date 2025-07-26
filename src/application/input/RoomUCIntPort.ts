@@ -9,4 +9,5 @@ export interface RoomUCIntPort {
     updateRoomName(roomID: string, roomName: string): Promise<Room | null>;
     deleteRoomByID(roomID: string): Promise<void>;
     validateRoomPassword(roomPassword: string): Promise<string | null>;
+    changeRoomState(roomID: string, roomState: 'open' | 'closed'): Promise<Room | null>;
 }

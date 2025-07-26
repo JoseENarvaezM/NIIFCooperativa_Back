@@ -33,6 +33,7 @@ export class RoomRoutes {
         router.put("/name/:roomID", authMiddleware.authenticate("profesor"), validatorMiddleware.validate, roomController.putRoomName);
         router.delete("/:roomID", authMiddleware.authenticate("profesor"), roomController.deleteRoom);
         router.post("/validate-password", roomController.validateRoomPassword);
+        router.put("/change-state/:roomID", authMiddleware.authenticate("profesor"), roomController.changeRoomState);
 
         return router;
     }

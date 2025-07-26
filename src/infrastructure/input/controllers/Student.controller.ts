@@ -10,11 +10,11 @@ export class StudentController {
         try {
             const newStudent: Student = req.body;
             const result = await this.studentUseCases.createStudent(newStudent);
-            res.cookie("token", result.token, {httpOnly: true, secure: true});
+            res.cookie("token", result!.token, {httpOnly: true, secure: true});
             res.status(201).json({
-                stuID: result.stuID,
-                roomID: result.roomID
-                });
+                stuID: result!.stuID,
+                roomID: result!.roomID
+            });
         } catch (error) {
             console.error(error);
             next(error);

@@ -34,9 +34,6 @@ export class Server {
 
     this.app.listen(this.port, () => {
       console.log(`Server is running on port ${this.port}`);
-      console.log(
-        `API documentation available at http://localhost:${this.port}/api-docs`
-      );
     });
   }
 }

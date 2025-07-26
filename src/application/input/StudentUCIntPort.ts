@@ -1,7 +1,7 @@
 import { Student } from "../../domain/models/StudentModel";
 
 export interface StudentUCIntPort {
-  createStudent(student: Student): Promise<Student & { token: string }>;
+  createStudent(student: Student): Promise<Student & { token: string } | null>;
   getStudents(): Promise<Student[]>;
   getStudentById(id: string): Promise<Student | null>;
   updateStudent(id: string, student: Student): Promise<Student | null>;

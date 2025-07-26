@@ -63,4 +63,13 @@ export class RoomUCAdapter implements RoomUCIntPort {
         }
         return result.roomID;
     }
-} 
+    async changeRoomState(roomID: string, roomState: 'open' | 'closed'): Promise<Room | null> {
+        const room = await this.roomGateway.obtainRoomByID(roomID);
+        if (room) {
+            room.roomStatus = roomState;
+            return this.roomGateway.uptdateRoom(roomID, room);
+        }
+        this.errorFormatter.errorNotFound(`Room with ID ${roomID} does not exist.`);
+        return null;
+    }
+}
