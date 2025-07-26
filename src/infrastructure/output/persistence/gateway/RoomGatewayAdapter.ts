@@ -108,11 +108,10 @@ export class RoomGatewayAdapter implements RoomGatewayIntPort {
             where: { roomID }
         });
     }
-    async validateRoomPassword(roomID: string, roomPassword: string): Promise<boolean> {
-        const roomData = await prisma.room.findUnique({
-            where: { roomID }
+    async validateRoomPassword(roomPassword: string): Promise<Pick<Room, "roomID" | "roomStatus"> | null> {
+        const room = await prisma.room.findFirst({
+            where: { roomPassword }
         });
-        if (!roomData) return false;
-        return roomData.roomPassword === roomPassword;
+        return room ? { roomID: room.roomID, roomStatus: room.roomStatus } : null;
     }
 }

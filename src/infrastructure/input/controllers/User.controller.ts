@@ -37,15 +37,6 @@ export class UserController {
     }
   };
 
-  getAdmins = async (req: Request, res: Response, next: NextFunction) => {
-    try {
-      const result = await this.userUseCases.listAdminUsers("admin");
-      res.status(200).json(result);
-    }
-    catch (error) {
-      next(error);
-    }
-  }
 
   putProfessor = async (req: Request, res: Response, next: NextFunction) => {
     try {

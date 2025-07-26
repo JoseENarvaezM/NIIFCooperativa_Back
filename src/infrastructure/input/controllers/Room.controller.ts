@@ -78,9 +78,9 @@ export class RoomController {
     };
     validateRoomPassword = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const { roomID, roomPassword } = req.body;
-            const isValid = await this.roomUseCases.validateRoomPassword(roomID, roomPassword);
-            res.status(200).json({ isValid });
+            const { roomPassword } = req.body;
+            const roomID = await this.roomUseCases.validateRoomPassword(roomPassword);
+            res.status(200).json({ roomID });
         } catch (error) {
             next(error);
         }

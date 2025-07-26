@@ -7,6 +7,9 @@ export class CustumError extends Error {
         return new CustumError(404, message);
     }
     static existsEntity(message: string) {
-        return new CustumError(500, message);
+        return new CustumError(400, message);
+    }
+    static genericError(message: string) {
+        return new CustumError(400, message);
     }
 }

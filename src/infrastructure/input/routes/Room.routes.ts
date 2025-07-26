@@ -25,13 +25,13 @@ export class RoomRoutes {
         const validatorMiddleware = new ValidatorMiddleware(RoomSchema);
         const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler));
 
-        router.post("/", authMiddleware.authenticateProfesor,validatorMiddleware.validate, roomController.postRoom);
-        router.get("/:roomID", authMiddleware.authenticateProfesor, roomController.getRoom);
-        router.get("/", authMiddleware.authenticateProfesor, roomController.getRoomsByTeacher);
-        router.get("/user/:usuID", authMiddleware.authenticateProfesor, roomController.getRoomsByUser);
-        router.put("/:roomID", authMiddleware.authenticateProfesor, validatorMiddleware.validate, roomController.putRoom);
-        router.put("/name/:roomID", authMiddleware.authenticateProfesor, validatorMiddleware.validate, roomController.putRoomName);
-        router.delete("/:roomID", authMiddleware.authenticateProfesor, roomController.deleteRoom);
+        router.post("/", authMiddleware.authenticate("profesor"),validatorMiddleware.validate, roomController.postRoom);
+        router.get("/:roomID", authMiddleware.authenticate("profesor"), roomController.getRoom);
+        router.get("/", authMiddleware.authenticate("profesor"), roomController.getRoomsByTeacher);
+        router.get("/user/:usuID", authMiddleware.authenticate("profesor"), roomController.getRoomsByUser);
+        router.put("/:roomID", authMiddleware.authenticate("profesor"), validatorMiddleware.validate, roomController.putRoom);
+        router.put("/name/:roomID", authMiddleware.authenticate("profesor"), validatorMiddleware.validate, roomController.putRoomName);
+        router.delete("/:roomID", authMiddleware.authenticate("profesor"), roomController.deleteRoom);
         router.post("/validate-password", roomController.validateRoomPassword);
 
         return router;

@@ -6,7 +6,9 @@ import { UserController } from "../controllers/User.controller";
 import { ExceptionHandler } from "../../output/exeptionHandler/exeptionHandler";
 import { ErrorFormatterIntPort } from "../../../application/output/ErrorFormaterIntPort";
 import { ValidatorMiddleware } from "../middlewares/ValidatorMiddleware";
-import { userSchema } from "../schemas/UserSchema";
+import { userSchema, UserEditSchema } from "../schemas/UserSchema";
+import { AuthMiddleware } from "../middlewares/AuthMiddleware";
+import { AuthUCAdapter } from "../../../domain/useCases/AuthUCAdapter";
 
 export class UserRoutes {
     static get routes(): Router {
@@ -17,15 +19,16 @@ export class UserRoutes {
         const userUseCases = new UserUCAdapter(userGateway, exceptionHandler);
         const userController: UserController = new UserController(userUseCases);
         const validatorMiddleware = new ValidatorMiddleware(userSchema);
+        const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler));
+        const userEditValidatorMiddleware = new ValidatorMiddleware(UserEditSchema);
 
-        router.post("/admin",validatorMiddleware.validate,userController.postAdmin);
-        router.post("/professor", validatorMiddleware.validate,userController.postProfessor);
-        router.get("/admin", userController.getAdmins);
-        router.get("/professor", userController.getProfessors);
-        router.get("/:usuID", userController.getUser);
-        router.delete("/:usuID",userController.deleteUser);
-        router.put("/admin/:usuID",validatorMiddleware.validate,userController.putAdmin);
-        router.put("/professor/:usuID",validatorMiddleware.validate,userController.putProfessor);
+        router.post("/admin",authMiddleware.authenticate("admin"),validatorMiddleware.validate,userController.postAdmin);
+        router.post("/professor", authMiddleware.authenticate("admin"),validatorMiddleware.validate,userController.postProfessor);
+        router.get("/professor", authMiddleware.authenticate("admin"),userController.getProfessors);
+        router.get("/:usuID", authMiddleware.authenticate("admin"),userController.getUser);
+        router.delete("/:usuID",authMiddleware.authenticate("admin"),userController.deleteUser);
+        router.put("/admin/:usuID",authMiddleware.authenticate("admin"),userEditValidatorMiddleware.validate,userController.putAdmin);
+        router.put("/professor/:usuID",authMiddleware.authenticate("admin"),userEditValidatorMiddleware.validate,userController.putProfessor);
         router.put("/password",userController.changeUserPassword);
 
         return router;

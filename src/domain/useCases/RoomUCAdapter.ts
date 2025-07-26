@@ -51,12 +51,16 @@ export class RoomUCAdapter implements RoomUCIntPort {
         }
         this.errorFormatter.errorNotFound(`Room with ID ${roomID} does not exist.`);
     }
-    async validateRoomPassword(roomID: string, roomPassword: string): Promise<boolean> {
-        const room = await this.roomGateway.obtainRoomByID(roomID);
-        if (room != null) {
-            return room.roomPassword === roomPassword;
+    async validateRoomPassword(roomPassword: string): Promise<string | null> {
+        const result = await this.roomGateway.validateRoomPassword(roomPassword);
+        if (!result) {
+            this.errorFormatter.genericError(`Room with password ${roomPassword} does not exist.`);
+            return null;
         }
-        this.errorFormatter.errorNotFound(`Room with ID ${roomID} does not exist.`);
-        return false;
+        if (result.roomStatus === "closed") {
+            this.errorFormatter.genericError(`Room with password ${roomPassword} is closed.`);
+            return null;
+        }
+        return result.roomID;
     }
 } 

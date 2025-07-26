@@ -25,8 +25,6 @@ export class AuthController {
 
     logout = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const token = req.cookies.token;
-            await this.authUseCases.logout(token);
             res.clearCookie("token");
             res.status(204).send();
         } catch (error) {

@@ -14,6 +14,8 @@ import { FormIngresosFancturacion } from "../models/FormIngresosFancturacionMode
 import { FormRentaLiquida } from "../models/FormRentaLiquidaModel";
 import { FormResumenEsferi } from "../models/FormResumenEsferiModel";
 import { Report } from "../models/ReportModel";
+import { TokenService } from "./SecurityUtils/TokenService";
+
 
 export class StudentUCAdapter implements StudentUCIntPort {
     constructor(
@@ -31,7 +33,7 @@ export class StudentUCAdapter implements StudentUCIntPort {
         private errorFormatter: ErrorFormatterIntPort
     ) { }
 
-    async createStudent(student: Student): Promise<Student> {
+    async createStudent(student: Student): Promise<Student & { token: string }> {
         const activosfijos = await this.formsActivosFijosGateway.createForm(new FormActivosFijos("", {}));
         const caratula = await this.formsCaratulaGateway.createForm(new FormCaratula("", {}));
         const detalleRenglones = await this.formsDetalleRenglonesGateway.createForm(new FormDetalleRenglones("", {}));
@@ -58,7 +60,11 @@ export class StudentUCAdapter implements StudentUCIntPort {
             resumenEsferi.resID,
             r110.r110ID))
 
-        return studentCrated;
+        const token = await TokenService.createAccessToken({stuID: studentCrated.stuID, roomID: studentCrated.roomID, usuRol: "student"});
+        return {
+            ...studentCrated,
+            token: token
+        };
     }
 
     async getStudents(): Promise<Student[]> {

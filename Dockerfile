@@ -9,6 +9,6 @@ COPY . .
 
 EXPOSE 3000
 
-RUN npx prisma migrate deploy
+RUN npx prisma generate
 
 CMD ["npm", "run", "dev"]

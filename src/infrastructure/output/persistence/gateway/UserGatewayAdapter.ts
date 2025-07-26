@@ -13,7 +13,7 @@ export class UserGatewayAdapter implements UserGatewayIntPort {
             userData.usuID,
             userData.usuName,
             userData.usuEmail,
-            userData.usuPassword,
+            "",
             userData.usuRole,
             [] 
         );
@@ -79,7 +79,7 @@ export class UserGatewayAdapter implements UserGatewayIntPort {
             newUserData.usuID,
             newUserData.usuName,
             newUserData.usuEmail,
-            newUserData.usuPassword,
+            "",
             newUserData.usuRole,
             [] 
         );
@@ -100,25 +100,12 @@ export class UserGatewayAdapter implements UserGatewayIntPort {
             updatedUserData.usuID,
             updatedUserData.usuName,
             updatedUserData.usuEmail,
-            updatedUserData.usuPassword,
+            "",
             updatedUserData.usuRole,
             [] 
         );
     }
 
-    async listAdminUsers(role: 'admin' | 'profesor'): Promise<User[]> {
-        const usersData = await prisma.user.findMany({
-            where: { usuRole: role }
-        });
-        return usersData.map(userData => new User(
-            userData.usuID,
-            userData.usuName,
-            userData.usuEmail,
-            userData.usuPassword,
-            userData.usuRole,
-            [] 
-        ));
-    }
 
     async listProfessorUsers(role: 'admin' | 'profesor'): Promise<User[]> {
         const usersData = await prisma.user.findMany({
@@ -128,7 +115,7 @@ export class UserGatewayAdapter implements UserGatewayIntPort {
             userData.usuID,
             userData.usuName,
             userData.usuEmail,
-            userData.usuPassword,
+            "",
             userData.usuRole,
             [] 
         ));

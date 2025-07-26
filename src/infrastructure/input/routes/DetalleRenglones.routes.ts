@@ -11,6 +11,10 @@ import { DetalleRenglonesGatewayAdapter } from "../../output/persistence/gateway
 
 import { FormDetalleRenglones } from "../../../domain/models/FormDetallerEnglonesModel";
 
+import { AuthMiddleware } from "../middlewares/AuthMiddleware";
+import { UserGatewayAdapter } from "../../output/persistence/gateway/UserGatewayAdapter";
+import { AuthUCAdapter } from "../../../domain/useCases/AuthUCAdapter";
+
 export class DetalleRenglonesRoutes {
     static get routes(): Router {
         const router = Router();
@@ -20,11 +24,12 @@ export class DetalleRenglonesRoutes {
         const detalleRenglonesUseCases = new DetalleRenglonesUCAdapter(detalleRenglonesGateway,exceptionHandler);
         const detalleRenglonesController: DetalleRenglonesController = new DetalleRenglonesController(detalleRenglonesUseCases);
         const validatorMiddleware = new ValidatorMiddleware(DetalleRenglonesSchema);
+        const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler));
 
-        router.post("/", validatorMiddleware.validate, detalleRenglonesController.postDetalleRenglones);
-        router.get("/", detalleRenglonesController.getDetalleRenglones);
-        router.get("/:id", detalleRenglonesController.getIDDetalleRenglones);
-        router.put("/:id", validatorMiddleware.validate, detalleRenglonesController.putDetalleRenglones);
+        router.post("/", validatorMiddleware.validate, authMiddleware.authenticate("student"), detalleRenglonesController.postDetalleRenglones);
+        router.get("/", authMiddleware.authenticate("student"), detalleRenglonesController.getDetalleRenglones);
+        router.get("/:id", authMiddleware.authenticate("student"), detalleRenglonesController.getIDDetalleRenglones);
+        router.put("/:id", validatorMiddleware.validate, authMiddleware.authenticate("student"), detalleRenglonesController.putDetalleRenglones);
 
         return router;
     }

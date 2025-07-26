@@ -8,4 +8,7 @@ export class ExceptionHandler implements ErrorFormatterIntPort {
     errorNotFound(message: string): never {
         throw CustumError.notFound(message);
     }
+    genericError(message: string): never {
+        throw CustumError.genericError(message);
+    }
 }

@@ -19,6 +19,10 @@ import { RentaLiquidaGatewayAdapter } from "../../output/persistence/gateway/Ren
 import { ResumenEsfGatewayAdapter } from "../../output/persistence/gateway/ResumenEsfGatewayAdapter";
 import { ReportGatewayAdapter } from "../../output/persistence/gateway/ReportGatewayAdapter";
 
+import { AuthMiddleware } from "../middlewares/AuthMiddleware";
+import { AuthUCAdapter } from "../../../domain/useCases/AuthUCAdapter";
+import { UserGatewayAdapter } from "../../output/persistence/gateway/UserGatewayAdapter";
+
 export class StudentRoutes {
     static get routes(): Router {
         const router = Router();
@@ -41,14 +45,15 @@ export class StudentRoutes {
 
         const studentController: StudentController = new StudentController(studentUseCases);
         const validatorMiddleware = new ValidatorMiddleware(getStudentSchema());
+        const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler));
 
         router.post("/", validatorMiddleware.validate, studentController.postStudent);
-        router.get("/", studentController.getStudents);
-        router.get("/:stuID", studentController.getStudentById);
+        router.get("/", authMiddleware.authenticate("profesor"),studentController.getStudents);
+        router.get("/:stuID", authMiddleware.authenticate("profesor"),studentController.getStudentById);
         router.put("/:stuID", validatorMiddleware.validate, studentController.putStudent);
         router.delete("/:stuID", studentController.deleteStudent);
-        router.get("/search/name", studentController.searchStudentsByCedula);
-        router.get("/search/room/:roomID", studentController.searchStudentsByRoom);
+        router.get("/search/:cedula" ,authMiddleware.authenticate("profesor"), studentController.searchStudentsByCedula);
+        router.get("/search/room/:roomID", authMiddleware.authenticate("profesor"), studentController.searchStudentsByRoom);
 
         return router;
     }

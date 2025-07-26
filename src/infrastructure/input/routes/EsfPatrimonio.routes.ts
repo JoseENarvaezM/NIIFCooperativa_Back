@@ -11,6 +11,10 @@ import { EsfPatrimonioGatewayAdapter } from "../../output/persistence/gateway/Es
 
 import { FormEsfPatrimonio } from "../../../domain/models/FormEsfPatrimonioModel";
 
+import { AuthMiddleware } from "../middlewares/AuthMiddleware";
+import { UserGatewayAdapter } from "../../output/persistence/gateway/UserGatewayAdapter";
+import { AuthUCAdapter } from "../../../domain/useCases/AuthUCAdapter";
+
 export class EsfPatrimonioRoutes {
     static get routes(): Router {
         const router = Router();
@@ -20,11 +24,12 @@ export class EsfPatrimonioRoutes {
         const esfPatrimonioUseCases = new EsfPatrimonioUCAdapter(esfPatrimonioGateway,exceptionHandler);
         const esfPatrimonioController: EsfPatrimonioController = new EsfPatrimonioController(esfPatrimonioUseCases);
         const validatorMiddleware = new ValidatorMiddleware(ESFPatrimonioSchema);
+        const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler));
 
-        router.post("/", validatorMiddleware.validate, esfPatrimonioController.postEsfPatrimonio);
-        router.get("/", esfPatrimonioController.getEsfPatrimonio);
-        router.get("/:id", esfPatrimonioController.getIDEsfPatrimonio);
-        router.put("/:id", validatorMiddleware.validate, esfPatrimonioController.putEsfPatrimonio);
+        router.post("/", validatorMiddleware.validate, authMiddleware.authenticate("student"), esfPatrimonioController.postEsfPatrimonio);
+        router.get("/", authMiddleware.authenticate("student"), esfPatrimonioController.getEsfPatrimonio);
+        router.get("/:id", authMiddleware.authenticate("student"), esfPatrimonioController.getIDEsfPatrimonio);
+        router.put("/:id", validatorMiddleware.validate, authMiddleware.authenticate("student"), esfPatrimonioController.putEsfPatrimonio);
 
         return router;
     }

@@ -2,6 +2,7 @@ import { Request, Response, NextFunction } from "express";
 import { StudentUCIntPort } from "../../../application/input/StudentUCIntPort";
 import { Student } from "../../../domain/models/StudentModel";
 
+
 export class StudentController {
     constructor(private readonly studentUseCases: StudentUCIntPort) { }
 
@@ -9,7 +10,11 @@ export class StudentController {
         try {
             const newStudent: Student = req.body;
             const result = await this.studentUseCases.createStudent(newStudent);
-            res.status(201).json(result);
+            res.cookie("token", result.token, {httpOnly: true, secure: true});
+            res.status(201).json({
+                stuID: result.stuID,
+                roomID: result.roomID
+                });
         } catch (error) {
             console.error(error);
             next(error);

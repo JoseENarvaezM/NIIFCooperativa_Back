@@ -15,12 +15,12 @@ export class AuthUCAdapter implements AuthUCIntPort {
     async login(email: string, password: string): Promise<(Pick<User, "usuID" | "usuRole"> & { token: string }) | null> {
         const user = await this.userGateway.getUserByEmail(email);
         if (!user) {
-            this.errorFormatter.errorNotFound(`User with email ${email} does not exist.`);
+            this.errorFormatter.genericError(`Credenciales incorrectas`);
             return null;
         }
 
         if (await Encrypt.comparePassword(password, user.usuPassword) === false) {
-            this.errorFormatter.errorExistsEntity("Invalid password.");
+            this.errorFormatter.genericError("Credenciales incorrectas");
             return null;
         }
 
@@ -33,9 +33,6 @@ export class AuthUCAdapter implements AuthUCIntPort {
         };
     }
 
-    async logout(token: string): Promise<void> {
-        console.log(`Token ${token} logged out (no action needed in stateless JWT).`);
-    }
     async verifyToken(token: string): Promise<any | null> {
         return TokenService.verifyAccessToken(token);
     }

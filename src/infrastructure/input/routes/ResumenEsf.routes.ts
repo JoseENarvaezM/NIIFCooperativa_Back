@@ -11,6 +11,10 @@ import { ResumenEsfGatewayAdapter } from "../../output/persistence/gateway/Resum
 
 import { FormResumenEsferi } from "../../../domain/models/FormResumenEsferiModel";
 
+import { AuthMiddleware } from "../middlewares/AuthMiddleware";
+import { UserGatewayAdapter } from "../../output/persistence/gateway/UserGatewayAdapter";
+import { AuthUCAdapter } from "../../../domain/useCases/AuthUCAdapter";
+
 export class ResumenEsfRoutes {
     static get routes(): Router {
         const router = Router();
@@ -20,11 +24,12 @@ export class ResumenEsfRoutes {
         const resumenEsfUseCases = new ResumenEsfUCAdapter(resumenEsfGateway,exceptionHandler);
         const resumenEsfController: ResumenEsfController = new ResumenEsfController(resumenEsfUseCases);
         const validatorMiddleware = new ValidatorMiddleware(ResumenESFSchema);
+        const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler));
 
-        router.post("/", validatorMiddleware.validate, resumenEsfController.createResumenEsferi);
-        router.get("/", resumenEsfController.listResumenEsferi);
-        router.get("/:id", resumenEsfController.getIDResumenEsferi);
-        router.put("/:id", validatorMiddleware.validate, resumenEsfController.updateResumenEsferi);
+        router.post("/", validatorMiddleware.validate, authMiddleware.authenticate("student"), resumenEsfController.createResumenEsferi);
+        router.get("/", authMiddleware.authenticate("student"), resumenEsfController.listResumenEsferi);
+        router.get("/:id", authMiddleware.authenticate("student"), resumenEsfController.getIDResumenEsferi);
+        router.put("/:id", validatorMiddleware.validate, authMiddleware.authenticate("student"), resumenEsfController.updateResumenEsferi);
 
         return router;
     }

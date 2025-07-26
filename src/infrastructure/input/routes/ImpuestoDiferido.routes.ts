@@ -11,6 +11,10 @@ import { ImpuestoDiferidoGatewayAdapter } from "../../output/persistence/gateway
 
 import { FormImpuestoDiferido } from "../../../domain/models/FormImpuestoDiferidoModel";
 
+import { AuthMiddleware } from "../middlewares/AuthMiddleware";
+import { UserGatewayAdapter } from "../../output/persistence/gateway/UserGatewayAdapter";
+import { AuthUCAdapter } from "../../../domain/useCases/AuthUCAdapter";
+
 export class ImpuestoDiferidoRoutes {
     static get routes(): Router {
         const router = Router();
@@ -20,11 +24,12 @@ export class ImpuestoDiferidoRoutes {
         const impuestoDiferidoUseCases = new ImpuestoDiferidoUCAdapter(impuestoDiferidoGateway,exceptionHandler);
         const impuestoDiferidoController: ImpuestoDiferidoController = new ImpuestoDiferidoController(impuestoDiferidoUseCases);
         const validatorMiddleware = new ValidatorMiddleware(ImpuestoDiferidoSchema);
+        const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler));
 
-        router.post("/", validatorMiddleware.validate, impuestoDiferidoController.createImpuestoDiferido);
-        router.get("/", impuestoDiferidoController.listImpuestoDiferido);
-        router.get("/:id", impuestoDiferidoController.getIDImpuestoDiferido);
-        router.put("/:id", validatorMiddleware.validate, impuestoDiferidoController.updateImpuestoDiferido);
+        router.post("/", validatorMiddleware.validate, authMiddleware.authenticate("student"), impuestoDiferidoController.createImpuestoDiferido);
+        router.get("/", authMiddleware.authenticate("student"), impuestoDiferidoController.listImpuestoDiferido);
+        router.get("/:id", authMiddleware.authenticate("student"), impuestoDiferidoController.getIDImpuestoDiferido);
+        router.put("/:id", validatorMiddleware.validate, authMiddleware.authenticate("student"), impuestoDiferidoController.updateImpuestoDiferido);
 
         return router;
     }

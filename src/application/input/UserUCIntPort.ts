@@ -7,8 +7,6 @@ export interface UserUCIntPort {
     changeUserPassword(id: string, newPassword: string): Promise<void>;
     createUser(user: User): Promise<User | null>;
     updateUser(id: string, user: User): Promise<User | null>;
-    //admin only
-    listAdminUsers(role: string): Promise<User[] >;
     //professor only
     listProfessorUsers(role: string): Promise<User[]>;
 }

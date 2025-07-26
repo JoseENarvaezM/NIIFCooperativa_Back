@@ -8,5 +8,5 @@ export interface RoomGatewayIntPort {
     uptdateRoom(roomID: string, room: Room): Promise<Room | null>;
     updateRoomName(roomID: string, roomName: string): Promise<Room | null>;
     deleteRoomByID(roomID: string): Promise<void>;
-    validateRoomPassword(roomID: string, roomPassword: string): Promise<boolean>;
+    validateRoomPassword(roomPassword: string): Promise<Pick<Room, "roomID" | "roomStatus"> | null>;
 }

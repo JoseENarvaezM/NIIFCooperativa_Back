@@ -11,6 +11,10 @@ import { Form110GatewayAdapter } from "../../output/persistence/gateway/Form110G
 
 import { FormR110 } from "../../../domain/models/FormR110Model";
 
+import { AuthMiddleware } from "../middlewares/AuthMiddleware";
+import { UserGatewayAdapter } from "../../output/persistence/gateway/UserGatewayAdapter";
+import { AuthUCAdapter } from "../../../domain/useCases/AuthUCAdapter";
+
 export class Form110Routes {
     static get routes(): Router {
         const router = Router();
@@ -20,11 +24,12 @@ export class Form110Routes {
         const form110UseCases = new Form110UCAdapter(form110Gateway,exceptionHandler);
         const form110Controller: Form110Controller = new Form110Controller(form110UseCases);
         const validatorMiddleware = new ValidatorMiddleware(Formulario110Schema);
+        const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler));
 
-        router.post("/", validatorMiddleware.validate, form110Controller.postForm110);
-        router.get("/", form110Controller.getForm110);
-        router.get("/:id", form110Controller.getIDForm110);
-        router.put("/:id", validatorMiddleware.validate, form110Controller.putForm110);
+        router.post("/", validatorMiddleware.validate, authMiddleware.authenticate("student"), form110Controller.postForm110);
+        router.get("/", authMiddleware.authenticate("student"), form110Controller.getForm110);
+        router.get("/:id", authMiddleware.authenticate("student"), form110Controller.getIDForm110);
+        router.put("/:id", validatorMiddleware.validate, authMiddleware.authenticate("student"), form110Controller.putForm110);
 
         return router;
     }

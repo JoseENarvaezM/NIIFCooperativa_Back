@@ -9,6 +9,9 @@ import { AuthUCAdapter } from "../../../domain/useCases/AuthUCAdapter";
 import { AuthController } from "../controllers/Auth.controller";
 import { AuthSchema } from "../schemas/AuthSchema";
 
+import { AuthMiddleware } from "../middlewares/AuthMiddleware";
+
+
 export class AuthRoutes {
     static get routes(): Router {
         const router = Router();
@@ -18,9 +21,10 @@ export class AuthRoutes {
         const authUseCases = new AuthUCAdapter(userGateway, exceptionHandler);
         const authController: AuthController = new AuthController(authUseCases);
         const validatorMiddleware = new ValidatorMiddleware(AuthSchema);
+        const authMiddleware = new AuthMiddleware(new AuthUCAdapter(userGateway, exceptionHandler));
 
         router.post("/login", validatorMiddleware.validate, authController.login);
-        router.post("/logout", authController.logout);
+        router.post("/logout", authMiddleware.authenticate("profesor", "admin"), authController.logout);
 
         return router;
     }

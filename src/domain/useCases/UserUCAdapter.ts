@@ -57,13 +57,6 @@ export class UserUCAdapter implements UserUCIntPort {
         this.errorFormatter.errorExistsEntity(`User with id ${user.usuEmail} already exist.`);
         return null;
     }
-    //admin only
-    listAdminUsers(role: string): Promise<User[]> {
-        if (role === 'admin') {
-            return this.userGateway.listAdminUsers(role);
-        }
-        throw new Error(`User with role ${role} is not an admin.`);
-    }
 
     //professor only
     listProfessorUsers(role: string): Promise<User[]> {
