@@ -7,10 +7,13 @@ export class AuthController {
     login = async (req: Request, res: Response, next: NextFunction) => {
         try {
             const { email, password } = req.body;
-            const token = await this.authUseCases.login(email, password);
-            if (token) {
-                res.cookie("token", token, { httpOnly: true, secure: true });
-                res.status(204).send();
+            const user = await this.authUseCases.login(email, password);
+            if (user) {
+                res.cookie("token", user.token, { httpOnly: true, secure: true });
+                res.status(200).json({
+                    usuID: user.usuID,
+                    usuRole: user.usuRole
+                });
             } else {
                 res.status(401).json({ message: "Invalid credentials" });
             }
