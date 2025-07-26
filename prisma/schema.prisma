@@ -120,7 +120,7 @@ model room {
 
 model student {
   stuID     String   @id @default(cuid())
-  stuCedula String   @db.VarChar(255)
+  stuCedula String   @db.VarChar(255) @unique
   roomID    String
 
   report    report[]

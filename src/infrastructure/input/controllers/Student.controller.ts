@@ -63,8 +63,8 @@ export class StudentController {
 
     searchStudentsByCedula = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const { cedula } = req.params;
-            const result = await this.studentUseCases.searchStudentsByCedula(cedula);
+            const { cedula, roomID } = req.params;
+            const result = await this.studentUseCases.getStudentByCedulaRoom(cedula, roomID);
             res.status(200).json(result);
         } catch (error) {
             next(error);

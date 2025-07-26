@@ -57,7 +57,7 @@ export class StudentRoutes {
         router.get("/:stuID", authMiddleware.authenticate("profesor"),studentController.getStudentById);
         router.put("/:stuID", validatorMiddleware.validate, studentController.putStudent);
         router.delete("/:stuID", studentController.deleteStudent);
-        router.get("/search/:cedula" ,authMiddleware.authenticate("profesor"), studentController.searchStudentsByCedula);
+        router.get("/search/:cedula/:roomID", studentController.searchStudentsByCedula);
         router.get("/search/room/:roomID", authMiddleware.authenticate("profesor"), studentController.searchStudentsByRoom);
 
         return router;

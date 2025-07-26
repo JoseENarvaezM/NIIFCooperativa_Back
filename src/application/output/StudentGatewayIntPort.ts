@@ -6,6 +6,6 @@ export interface StudentGatewayIntPort {
   getStudentById(id: string): Promise<Student | null>;
   updateStudent(id: string, student: Student): Promise<Student | null>;
   deleteStudent(id: string): Promise<void>;
-  searchStudentsByCedula(cedula: string): Promise<Student[]>;
+  searchStudentByCedulaRoom(cedula: string, roomID: string): Promise<Student | null>;
   searchStudentsByRoom(roomID: string): Promise<Student[]>;
 }

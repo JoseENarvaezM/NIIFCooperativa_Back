@@ -6,6 +6,6 @@ export interface StudentUCIntPort {
   getStudentById(id: string): Promise<Student | null>;
   updateStudent(id: string, student: Student): Promise<Student | null>;
   deleteStudent(id: string): Promise<void>;
-  searchStudentsByCedula(cedula: string): Promise<Student[]>;
+  getStudentByCedulaRoom(cedula: string, roomID: string): Promise<Student & { token: string } | null>;
   searchStudentsByRoom(roomID: string): Promise<Student[]>;
 }

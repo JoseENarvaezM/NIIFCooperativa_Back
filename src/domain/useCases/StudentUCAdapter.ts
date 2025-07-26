@@ -38,10 +38,12 @@ export class StudentUCAdapter implements StudentUCIntPort {
     async createStudent(student: Student): Promise<Student & { token: string } | null> {
 
         const room = await this.roomGateway.obtainRoomByID(student.roomID);
+
         if (!room) {
             this.errorFormatter.errorNotFound(`Room with id ${student.roomID} does not exist.`);
             return null;
         }
+
         const activosfijos = await this.formsActivosFijosGateway.createForm(new FormActivosFijos( {}));
         const caratula = await this.formsCaratulaGateway.createForm(new FormCaratula({}));
         const detalleRenglones = await this.formsDetalleRenglonesGateway.createForm(new FormDetalleRenglones( {}));
@@ -52,12 +54,19 @@ export class StudentUCAdapter implements StudentUCIntPort {
         const rentaLiquida = await this.formsRentaLiquidaGateway.createForm(new FormRentaLiquida( {}));
         const resumenEsferi = await this.formsResumenEsferiGateway.createForm(new FormResumenEsferi( {}));
 
-        const studentCrated = await this.studentGateway.createStudent(student); 
+        const studentExists = await this.studentGateway.searchStudentByCedulaRoom(student.stuCedula, student.roomID);
 
-        const report = this.reportGateway.createReport(new Report(
+        if (studentExists) {
+            this.errorFormatter.genericError(`Student with cedula ${student.stuCedula} already exists in room ${room.roomName}.`);
+            return null;
+        }
+
+        const studentCreated = await this.studentGateway.createStudent(student); 
+
+        this.reportGateway.createReport(new Report(
             "",
-            studentCrated.stuID,
-            studentCrated.roomID,
+            studentCreated.stuID,
+            studentCreated.roomID,
             caratula.carID!,
             detalleRenglones.detID!,
             esfPatrimonio.esfID!,
@@ -68,9 +77,10 @@ export class StudentUCAdapter implements StudentUCIntPort {
             resumenEsferi.resID!,
             r110.r110ID!))
 
-        const token = await TokenService.createAccessToken({stuID: studentCrated.stuID, roomID: studentCrated.roomID, usuRol: "student"});
+        const token = await TokenService.createAccessToken({stuID: studentCreated.stuID, roomID: studentCreated.roomID, usuRol: "student"});
+
         return {
-            ...studentCrated,
+            ...studentCreated,
             token: token
         };
     }
@@ -106,8 +116,28 @@ export class StudentUCAdapter implements StudentUCIntPort {
         this.errorFormatter.errorNotFound(`Student with id ${id} does not exist.`);
     }
 
-    async searchStudentsByCedula(cedula: string): Promise<Student[]> {
-        return this.studentGateway.searchStudentsByCedula(cedula);
+    async getStudentByCedulaRoom(cedula: string, roomID: string): Promise<Student & { token: string } | null> {
+
+        const room = await this.roomGateway.obtainRoomByID(roomID);
+
+        if (!room) {
+            this.errorFormatter.errorNotFound(`Room with id ${roomID} does not exist.`);
+            return null;
+        }
+
+        const student = await this.studentGateway.searchStudentByCedulaRoom(cedula, roomID);
+        
+        if (!student) {
+            this.errorFormatter.errorNotFound(`Student with cedula ${cedula} in room ${room.roomName} does not exist.`);
+            return null;
+        }
+
+        const token = await TokenService.createAccessToken({stuID: student.stuID, roomID: student.roomID, usuRol: "student"});
+
+        return {
+            ...student,
+            token: token
+        };
     }
 
     async searchStudentsByRoom(roomID: string): Promise<Student[]> {
