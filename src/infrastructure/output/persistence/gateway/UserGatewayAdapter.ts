@@ -13,7 +13,7 @@ export class UserGatewayAdapter implements UserGatewayIntPort {
             userData.usuID,
             userData.usuName,
             userData.usuEmail,
-            "",
+            userData.usuPassword,
             userData.usuRole,
             [] 
         );

@@ -28,9 +28,7 @@ export class RoomRoutes {
         router.post("/", authMiddleware.authenticate("profesor"),validatorMiddleware.validate, roomController.postRoom);
         router.get("/:roomID", authMiddleware.authenticate("profesor"), roomController.getRoom);
         router.get("/", authMiddleware.authenticate("profesor"), roomController.getRoomsByTeacher);
-        router.get("/user/:usuID", authMiddleware.authenticate("profesor"), roomController.getRoomsByUser);
         router.put("/:roomID", authMiddleware.authenticate("profesor"), validatorMiddleware.validate, roomController.putRoom);
-        router.put("/name/:roomID", authMiddleware.authenticate("profesor"), validatorMiddleware.validate, roomController.putRoomName);
         router.delete("/:roomID", authMiddleware.authenticate("profesor"), roomController.deleteRoom);
         router.post("/validate-password", roomController.validateRoomPassword);
         router.put("/change-state/:roomID", authMiddleware.authenticate("profesor"), roomController.changeRoomState);

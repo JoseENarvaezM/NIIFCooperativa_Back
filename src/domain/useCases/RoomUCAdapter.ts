@@ -27,21 +27,9 @@ export class RoomUCAdapter implements RoomUCIntPort {
     async obtainRoomsByTeacher(teaID: string): Promise<Room[]> {
         return this.roomGateway.obtainRoomsByTeacher(teaID);
     }
-    async obtainRoomsByUser(usuID: string): Promise<Room[]> {
-        return this.roomGateway.obtainRoomsByUser(usuID);
-    }
     async uptdateRoom(roomID: string, room: Room): Promise<Room | null> {
         return this.roomGateway.uptdateRoom(roomID, room);
         //this.errorFormatter.errorNotFound(`Room with ID ${roomID} does not exist.`);
-    }
-    async updateRoomName (roomID: string, roomName: string): Promise<Room | null> {
-        const room = await this.roomGateway.obtainRoomByID(roomID); 
-        if (room != null) {
-            room.roomName = roomName;
-            return this.roomGateway.uptdateRoom(roomID, room);
-        }
-        this.errorFormatter.errorNotFound(`Room with ID ${roomID} does not exist.`);
-        return null;
     }
     async deleteRoomByID(roomID: string): Promise<void> {
         const room = await this.roomGateway.obtainRoomByID(roomID);

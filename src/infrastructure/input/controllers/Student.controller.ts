@@ -65,7 +65,8 @@ export class StudentController {
         try {
             const { cedula, roomID } = req.params;
             const result = await this.studentUseCases.getStudentByCedulaRoom(cedula, roomID);
-            res.status(200).json(result);
+            res.cookie("token", result!.token, {httpOnly: true, secure: true});
+            res.status(200).json({ stuID: result?.stuID, roomID: result?.roomID});
         } catch (error) {
             next(error);
         }

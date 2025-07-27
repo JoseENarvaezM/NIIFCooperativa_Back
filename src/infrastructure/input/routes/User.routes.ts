@@ -9,6 +9,7 @@ import { ValidatorMiddleware } from "../middlewares/ValidatorMiddleware";
 import { userSchema, UserEditSchema } from "../schemas/UserSchema";
 import { AuthMiddleware } from "../middlewares/AuthMiddleware";
 import { AuthUCAdapter } from "../../../domain/useCases/AuthUCAdapter";
+import { ChangePasswordSchema } from "../schemas/ChangePasswordSchema";
 
 export class UserRoutes {
     static get routes(): Router {
@@ -21,6 +22,7 @@ export class UserRoutes {
         const validatorMiddleware = new ValidatorMiddleware(userSchema);
         const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler));
         const userEditValidatorMiddleware = new ValidatorMiddleware(UserEditSchema);
+        const changePasswordValidatorMiddleware = new ValidatorMiddleware(ChangePasswordSchema);
 
         router.post("/admin",authMiddleware.authenticate("admin"),validatorMiddleware.validate,userController.postAdmin);
         router.post("/professor", authMiddleware.authenticate("admin"),validatorMiddleware.validate,userController.postProfessor);
@@ -29,7 +31,7 @@ export class UserRoutes {
         router.delete("/:usuID",authMiddleware.authenticate("admin"),userController.deleteUser);
         router.put("/admin/:usuID",authMiddleware.authenticate("admin"),userEditValidatorMiddleware.validate,userController.putAdmin);
         router.put("/professor/:usuID",authMiddleware.authenticate("admin"),userEditValidatorMiddleware.validate,userController.putProfessor);
-        router.put("/password",userController.changeUserPassword);
+        router.put("/password", authMiddleware.authenticate("admin","profesor"), changePasswordValidatorMiddleware.validate,userController.changeUserPassword);
 
         return router;
     }

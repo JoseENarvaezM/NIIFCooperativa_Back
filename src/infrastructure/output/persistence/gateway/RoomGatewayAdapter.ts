@@ -54,20 +54,6 @@ export class RoomGatewayAdapter implements RoomGatewayIntPort {
             roomData.usuID
         ));
     }
-    async obtainRoomsByUser(usuID: string): Promise<Room[]> {
-        const roomsData = await prisma.room.findMany({
-            where: { usuID }
-        });
-        return roomsData.map(roomData => new Room(
-            roomData.roomID,
-            roomData.roomName,
-            roomData.roomPassword,
-            new Date(roomData.roomDate),
-            roomData.roomStatus,
-            null, 
-            roomData.usuID
-        ));
-    }
     async uptdateRoom(roomID: string, room: Room): Promise<Room | null> {
         const updatedRoomData = await prisma.room.update({
             where: { roomID },
@@ -77,21 +63,6 @@ export class RoomGatewayAdapter implements RoomGatewayIntPort {
                 roomDate: room.roomDate,
                 roomStatus: room.roomStatus
             }
-        });
-        return new Room(
-            updatedRoomData.roomID,
-            updatedRoomData.roomName,
-            updatedRoomData.roomPassword,
-            new Date(updatedRoomData.roomDate),
-            updatedRoomData.roomStatus,
-            null, 
-            updatedRoomData.usuID
-        );
-    }
-    async updateRoomName(roomID: string, roomName: string): Promise<Room | null> {
-        const updatedRoomData = await prisma.room.update({
-            where: { roomID },
-            data: { roomName }
         });
         return new Room(
             updatedRoomData.roomID,

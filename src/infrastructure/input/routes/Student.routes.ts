@@ -6,7 +6,7 @@ import { StudentController } from "../controllers/Student.controller";
 import { ExceptionHandler } from "../../output/exeptionHandler/exeptionHandler";
 import { ErrorFormatterIntPort } from "../../../application/output/ErrorFormaterIntPort";
 import { ValidatorMiddleware } from "../middlewares/ValidatorMiddleware";
-import { getStudentSchema } from "../schemas/StudentSchema";
+import { StudentSchema } from "../schemas/StudentSchema";
 
 import { ActivosFijosGatewayAdapter } from "../../output/persistence/gateway/ActivosFijosGatewayAdapter";
 import { CaratulaGatewayAdapter } from "../../output/persistence/gateway/CaratulaGatewayAdapter";
@@ -49,7 +49,7 @@ export class StudentRoutes {
             exceptionHandler);
 
         const studentController: StudentController = new StudentController(studentUseCases);
-        const validatorMiddleware = new ValidatorMiddleware(getStudentSchema());
+        const validatorMiddleware = new ValidatorMiddleware(StudentSchema);
         const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler));
 
         router.post("/", validatorMiddleware.validate, studentController.postStudent);
@@ -58,7 +58,7 @@ export class StudentRoutes {
         router.put("/:stuID", validatorMiddleware.validate, studentController.putStudent);
         router.delete("/:stuID", studentController.deleteStudent);
         router.get("/search/:cedula/:roomID", studentController.searchStudentsByCedula);
-        router.get("/search/room/:roomID", authMiddleware.authenticate("profesor"), studentController.searchStudentsByRoom);
+        router.get("/room/:roomID", authMiddleware.authenticate("profesor"), studentController.searchStudentsByRoom);
 
         return router;
     }

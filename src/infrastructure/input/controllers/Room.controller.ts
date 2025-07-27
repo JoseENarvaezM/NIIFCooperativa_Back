@@ -34,15 +34,6 @@ export class RoomController {
             next(error);
         }
     };
-    getRoomsByUser = async (req: Request, res: Response, next: NextFunction) => {
-        try {
-            const { usuID } = req.params;
-            const result = await this.roomUseCases.obtainRoomsByUser(usuID);
-            res.status(200).json(result);
-        } catch (error) {
-            next(error);
-        }
-    };
     putRoom = async (req: Request, res: Response, next: NextFunction) => {
         try {
             const { roomID } = req.params;
@@ -50,17 +41,6 @@ export class RoomController {
             const result = await this.roomUseCases.uptdateRoom(roomID, updatedRoom);
             res.status(200).json(result);
         } catch (error) {
-            next(error);
-        }
-    };
-    putRoomName = async (req: Request, res: Response, next: NextFunction) => {
-        try {
-            const { roomID } = req.params;
-            const { roomName } = req.body;
-            const result = await this.roomUseCases.updateRoomName(roomID, roomName);
-            res.status(200).json(result);
-        }
-        catch (error) {
             next(error);
         }
     };

@@ -12,8 +12,10 @@ export class UserUCAdapter implements UserUCIntPort {
     ) { }
     
     async getUserById(id: string): Promise<User | null> {
-        const user = this.userGateway.getUserById(id);
+        const user = await this.userGateway.getUserById(id);
+
         if (user != null) {
+            user.usuPassword = "";
             return user;
         }
         this.errorFormatter.errorNotFound(`User with id ${id} does not exist.`);
@@ -30,13 +32,18 @@ export class UserUCAdapter implements UserUCIntPort {
     this.errorFormatter.errorNotFound(`User with id ${id} does not exist.`);
 }
 
-    async changeUserPassword(id: string, newPassword: string): Promise<void> {
+    async changeUserPassword(id: string, newPassword: string,usuOldPassword: string): Promise<void> {
         const user = await this.userGateway.getUserById(id);
-        if (user != null) {
-            await this.userGateway.changeUserPassword(id, newPassword);
+        if (!user) {
+            this.errorFormatter.errorNotFound(`User with id ${id} does not exist.`);
             return;
         }
-        this.errorFormatter.errorNotFound(`Invalid password or user with id ${id} does not exist.`);
+        if (await Encrypt.comparePassword(usuOldPassword, user.usuPassword)) {
+            user.usuPassword = await Encrypt.hashPassword(newPassword);
+            await this.userGateway.updateUser(id, user);
+            return;
+        }
+        this.errorFormatter.genericError("Old password is incorrect.");
     }   
 
     async createUser(user: User): Promise<User| null> {
@@ -49,13 +56,24 @@ export class UserUCAdapter implements UserUCIntPort {
         return null;
     }
     async updateUser(id: string, user: User): Promise<User| null> {
-        const exist = await this.userGateway.existByEmail(user.usuEmail);
-        if (this.updateUser(id, user) != null && exist === false) {
-            user.usuPassword = await Encrypt.hashPassword(user.usuPassword);
-            return this.userGateway.updateUser(id, user);
+        const data = await this.userGateway.getUserById(id);
+        if (!data) {
+            this.errorFormatter.errorNotFound(`User with id ${id} does not exist.`);
+            return null;
         }
-        this.errorFormatter.errorExistsEntity(`User with id ${user.usuEmail} already exist.`);
-        return null;
+        if (data.usuEmail !== user.usuEmail) {
+            const exists = await this.userGateway.existByEmail(user.usuEmail);
+            if (exists) {
+                this.errorFormatter.errorExistsEntity(`User with email ${user.usuEmail} already exists.`);
+                return null;
+            }
+        }
+        if (user.usuPassword) {
+            user.usuPassword = await Encrypt.hashPassword(user.usuPassword);
+        }else {
+            user.usuPassword = data.usuPassword;
+        }
+        return this.userGateway.updateUser(id, user);
     }
 
     //professor only

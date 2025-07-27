@@ -133,7 +133,7 @@ export class StudentUCAdapter implements StudentUCIntPort {
         }
 
         const token = await TokenService.createAccessToken({stuID: student.stuID, roomID: student.roomID, usuRol: "student"});
-
+        console.log(token,student);
         return {
             ...student,
             token: token

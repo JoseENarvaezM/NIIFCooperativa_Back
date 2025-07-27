@@ -102,18 +102,20 @@ export class UserController {
       res.status(204).json(result);
     }
     catch (error) {
+      console.log("Error deleting user:", error);
       next(error);
     }
   };
 
   changeUserPassword = async (req: Request, res: Response, next: NextFunction) => {
     try {
-      const user = { usuOldPassword: req.body.usuOldPassword, usuPassword: req.body.usuPassword, usuID: req.body.user.usuID };
-
-      const result = await this.userUseCases.changeUserPassword(user.usuID, user.usuPassword);
+      const {usuPassword, usuOldPassword } = req.body;
+      const { usuID } = req.user; 
+      const result = await this.userUseCases.changeUserPassword(usuID, usuPassword, usuOldPassword);
 
       res.status(200).json(result);
     } catch (error) {
+      console.log("Error changing user password:", error);
       next(error);
     }
   }

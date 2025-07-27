@@ -31,4 +31,28 @@ export class AuthController {
             next(error);
         }
     };
+    profile = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const user = req.user; // Assuming user is set by auth middleware
+            res.status(200).json({
+                usuID: user.usuID,
+                usuRol: user.usuRol
+            });
+        } catch (error) {
+            next(error);
+        }
+    };
+    studentProfile = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const user = req.user; 
+            res.status(200).json({
+                stuID: user.stuID,
+                roomID: user.roomID,
+                usuRol: user.usuRol
+            });
+        } catch (error) {
+            next(error);
+        }
+    };
+
 }

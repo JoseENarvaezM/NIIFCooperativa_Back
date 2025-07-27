@@ -1,6 +1,6 @@
 generator client {
-  provider      = "prisma-client-js"
-  output        = "../src/generated/prisma"
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
 }
 
 datasource db {
@@ -9,57 +9,57 @@ datasource db {
 }
 
 model formactivosfijos {
-  actID  String   @id @default(cuid())
+  actID      String   @id @default(cuid())
   actContent Json
-  report report[]
+  report     report[]
 }
 
 model formcaratula {
-  carID  String   @id @default(cuid())
+  carID      String   @id @default(cuid())
   carContent Json
-  report report[]
+  report     report[]
 }
 
 model formdetallerenglones {
-  detID  String   @id @default(cuid())
+  detID      String   @id @default(cuid())
   detContent Json
-  report report[]
+  report     report[]
 }
 
 model formesfpatrimonio {
-  esfID  String   @id @default(cuid())
+  esfID      String   @id @default(cuid())
   esfContent Json
-  report report[]
+  report     report[]
 }
 
 model formimpuestodiferido {
-  impID  String   @id @default(cuid())
+  impID      String   @id @default(cuid())
   impContent Json
-  report report[]
+  report     report[]
 }
 
 model formingresosfancturacion {
-  ingID  String   @id @default(cuid())
+  ingID      String   @id @default(cuid())
   ingContent Json
-  report report[]
+  report     report[]
 }
 
 model formr110 {
-  r110ID  String   @id @default(cuid())
+  r110ID      String   @id @default(cuid())
   r110Content Json
-  report report[]
+  report      report[]
 }
 
 model formrentaliquida {
-  renID  String   @id @default(cuid())
+  renID      String   @id @default(cuid())
   renContent Json
-  report report[]
+  report     report[]
 }
 
 model formresumenesferi {
-  resID  String   @id @default(cuid())
+  resID      String   @id @default(cuid())
   resContent Json
-  report report[]
+  report     report[]
 }
 
 model report {
@@ -77,17 +77,18 @@ model report {
   resID  String   @db.VarChar(255)
   r110ID String   @db.VarChar(255)
 
-  formactivosfijos         formactivosfijos         @relation(fields: [actID], references: [actID], map: "fk_report_actID")
-  formcaratula             formcaratula             @relation(fields: [carID], references: [carID], map: "fk_report_carID")
-  formdetallerenglones     formdetallerenglones     @relation(fields: [detID], references: [detID], map: "fk_report_detID")
-  formesfpatrimonio        formesfpatrimonio        @relation(fields: [esfID], references: [esfID], map: "fk_report_esfID")
-  formimpuestodiferido     formimpuestodiferido     @relation(fields: [impID], references: [impID], map: "fk_report_impID")
-  formingresosfancturacion formingresosfancturacion @relation(fields: [ingID], references: [ingID], map: "fk_report_ingID")
-  formr110                 formr110                 @relation(fields: [r110ID], references: [r110ID], map: "fk_report_r110ID")
-  formrentaliquida         formrentaliquida         @relation(fields: [renID], references: [renID], map: "fk_report_renID")
-  formresumenesferi        formresumenesferi        @relation(fields: [resID], references: [resID], map: "fk_report_resID")
-  room                     room                     @relation(fields: [roomID], references: [roomID], map: "fk_report_roomID")
-  student                  student                  @relation(fields: [stuID], references: [stuID], map: "fk_report_stuID")
+  formactivosfijos         formactivosfijos         @relation(fields: [actID], references: [actID], map: "fk_report_actID", onDelete: Cascade)
+  formcaratula             formcaratula             @relation(fields: [carID], references: [carID], map: "fk_report_carID", onDelete: Cascade)
+  formdetallerenglones     formdetallerenglones     @relation(fields: [detID], references: [detID], map: "fk_report_detID", onDelete: Cascade)
+  formesfpatrimonio        formesfpatrimonio        @relation(fields: [esfID], references: [esfID], map: "fk_report_esfID", onDelete: Cascade)
+  formimpuestodiferido     formimpuestodiferido     @relation(fields: [impID], references: [impID], map: "fk_report_impID", onDelete: Cascade)
+  formingresosfancturacion formingresosfancturacion @relation(fields: [ingID], references: [ingID], map: "fk_report_ingID", onDelete: Cascade)
+  formr110                 formr110                 @relation(fields: [r110ID], references: [r110ID], map: "fk_report_r110ID", onDelete: Cascade)
+  formrentaliquida         formrentaliquida         @relation(fields: [renID], references: [renID], map: "fk_report_renID", onDelete: Cascade)
+  formresumenesferi        formresumenesferi        @relation(fields: [resID], references: [resID], map: "fk_report_resID", onDelete: Cascade)
+
+  room                     room                     @relation(fields: [roomID], references: [roomID], map: "fk_report_roomID", onDelete: Cascade)
+  student                  student                  @relation(fields: [stuID], references: [stuID], map: "fk_report_stuID", onDelete: Cascade)
 
   @@index([actID], map: "idx_report_actID")
   @@index([carID], map: "idx_report_carID")
@@ -103,37 +104,37 @@ model report {
 }
 
 model room {
-  roomID        String   @id @default(cuid())
-  roomName     String          @db.VarChar(255)
-  roomPassword String          @unique @db.VarChar(255)
-  roomDate     DateTime        @db.Date
-  roomStatus   room_roomStatus
-  roomAnswer   Json
-  usuID        String          @db.VarChar(255)
+  roomID        String          @id @default(cuid())
+  roomName      String          @db.VarChar(255)
+  roomPassword  String          @unique @db.VarChar(255)
+  roomDate      DateTime        @db.Date
+  roomStatus    room_roomStatus
+  roomAnswer    Json
+  usuID         String          @db.VarChar(255)
 
-  report       report[]
-  user         user            @relation(fields: [usuID], references: [usuID], map: "fk_room_usuID")
-  student      student[]
+  report        report[]
+  user          user            @relation(fields: [usuID], references: [usuID], map: "fk_room_usuID", onDelete: Cascade)
+  student       student[]
 
   @@index([usuID], map: "idx_room_usuID")
 }
 
 model student {
   stuID     String   @id @default(cuid())
-  stuCedula String   @db.VarChar(255) @unique
+  stuCedula String   @db.VarChar(255)
   roomID    String
 
   report    report[]
-  room      room     @relation(fields: [roomID], references: [roomID], map: "fk_student_roomID")
+  room      room     @relation(fields: [roomID], references: [roomID], map: "fk_student_roomID", onDelete: Cascade)
 
   @@index([roomID], map: "idx_student_roomID")
 }
 
 model user {
   usuID       String   @id @default(cuid())
-  usuName     String       @db.VarChar(128)
-  usuEmail    String       @unique @db.VarChar(128)
-  usuPassword String       @db.VarChar(255)
+  usuName     String   @db.VarChar(128)
+  usuEmail    String   @unique @db.VarChar(128)
+  usuPassword String   @db.VarChar(255)
   usuRole     user_usuRole
 
   room        room[]
