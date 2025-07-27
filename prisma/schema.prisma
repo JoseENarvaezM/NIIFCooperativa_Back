@@ -142,7 +142,7 @@ model user {
 
 enum user_usuRole {
   admin
-  profesor
+  professor
 }
 
 enum room_roomStatus {

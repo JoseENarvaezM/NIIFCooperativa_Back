@@ -23,7 +23,7 @@ export class ReportRoutes {
         const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler));
 
 
-        router.get("/:id", authMiddleware.authenticate("profesor"), reportController.getReportByID);
+        router.get("/:id", authMiddleware.authenticate("professor"), reportController.getReportByID);
 
         return router;
     }

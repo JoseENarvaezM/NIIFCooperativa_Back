@@ -35,7 +35,7 @@ export class StudentUCAdapter implements StudentUCIntPort {
         private errorFormatter: ErrorFormatterIntPort
     ) { }
 
-    async createStudent(student: Student): Promise<Student & { token: string } | null> {
+    async createStudent(student: Student): Promise<Student & { token: string, usuRole: string } | null> {
 
         const room = await this.roomGateway.obtainRoomByID(student.roomID);
 
@@ -77,11 +77,12 @@ export class StudentUCAdapter implements StudentUCIntPort {
             resumenEsferi.resID!,
             r110.r110ID!))
 
-        const token = await TokenService.createAccessToken({stuID: studentCreated.stuID, roomID: studentCreated.roomID, usuRol: "student"});
+        const token = await TokenService.createAccessToken({stuID: studentCreated.stuID, roomID: studentCreated.roomID, usuRole: "student"});
 
         return {
             ...studentCreated,
-            token: token
+            token: token,
+            usuRole: "student"
         };
     }
 
@@ -116,7 +117,7 @@ export class StudentUCAdapter implements StudentUCIntPort {
         this.errorFormatter.errorNotFound(`Student with id ${id} does not exist.`);
     }
 
-    async getStudentByCedulaRoom(cedula: string, roomID: string): Promise<Student & { token: string } | null> {
+    async getStudentByCedulaRoom(cedula: string, roomID: string): Promise<Student & { token: string, usuRole: string } | null> {
 
         const room = await this.roomGateway.obtainRoomByID(roomID);
 
@@ -132,11 +133,12 @@ export class StudentUCAdapter implements StudentUCIntPort {
             return null;
         }
 
-        const token = await TokenService.createAccessToken({stuID: student.stuID, roomID: student.roomID, usuRol: "student"});
+        const token = await TokenService.createAccessToken({stuID: student.stuID, roomID: student.roomID, usuRole: "student"});
         console.log(token,student);
         return {
             ...student,
-            token: token
+            token: token,
+            usuRole: "student"
         };
     }
 

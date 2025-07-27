@@ -27,7 +27,7 @@ export class AuthMiddleware {
           return;
         }
 
-        if (allowedRoles.length > 0 && !allowedRoles.includes(user.usuRol)) {
+        if (allowedRoles.length > 0 && !allowedRoles.includes(user.usuRole)) {
           res.status(403).json({ message: "Forbidden - insufficient role" });
           return;
         }

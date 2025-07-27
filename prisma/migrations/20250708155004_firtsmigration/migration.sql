@@ -130,7 +130,7 @@ CREATE TABLE `user` (
     `usuName` VARCHAR(128) NOT NULL,
     `usuEmail` VARCHAR(128) NOT NULL,
     `usuPassword` VARCHAR(255) NOT NULL,
-    `usuRole` ENUM('admin', 'profesor') NOT NULL,
+    `usuRole` ENUM('admin', 'professor') NOT NULL,
 
     UNIQUE INDEX `user_usuEmail_key`(`usuEmail`),
     PRIMARY KEY (`usuID`)

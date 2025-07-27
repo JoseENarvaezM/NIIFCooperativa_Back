@@ -31,7 +31,7 @@ export class UserRoutes {
         router.delete("/:usuID",authMiddleware.authenticate("admin"),userController.deleteUser);
         router.put("/admin/:usuID",authMiddleware.authenticate("admin"),userEditValidatorMiddleware.validate,userController.putAdmin);
         router.put("/professor/:usuID",authMiddleware.authenticate("admin"),userEditValidatorMiddleware.validate,userController.putProfessor);
-        router.put("/password", authMiddleware.authenticate("admin","profesor"), changePasswordValidatorMiddleware.validate,userController.changeUserPassword);
+        router.put("/password", authMiddleware.authenticate("admin","professor"), changePasswordValidatorMiddleware.validate,userController.changeUserPassword);
 
         return router;
     }

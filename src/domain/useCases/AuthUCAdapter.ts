@@ -24,7 +24,7 @@ export class AuthUCAdapter implements AuthUCIntPort {
             return null;
         }
 
-        const token = await TokenService.createAccessToken({usuID: user.usuID, usuRol: user.usuRole});
+        const token = await TokenService.createAccessToken({usuID: user.usuID, usuRole: user.usuRole});
         
         return {
             usuID: user.usuID,

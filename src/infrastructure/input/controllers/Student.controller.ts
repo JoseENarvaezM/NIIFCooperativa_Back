@@ -13,7 +13,8 @@ export class StudentController {
             res.cookie("token", result!.token, {httpOnly: true, secure: true});
             res.status(201).json({
                 stuID: result!.stuID,
-                roomID: result!.roomID
+                roomID: result!.roomID,
+                usuRole: result!.usuRole
             });
         } catch (error) {
             console.error(error);
@@ -66,7 +67,7 @@ export class StudentController {
             const { cedula, roomID } = req.params;
             const result = await this.studentUseCases.getStudentByCedulaRoom(cedula, roomID);
             res.cookie("token", result!.token, {httpOnly: true, secure: true});
-            res.status(200).json({ stuID: result?.stuID, roomID: result?.roomID});
+            res.status(200).json({ stuID: result?.stuID, roomID: result?.roomID, usuRole: result?.usuRole });
         } catch (error) {
             next(error);
         }

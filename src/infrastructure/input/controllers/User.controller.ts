@@ -7,7 +7,7 @@ export class UserController {
   postProfessor = async (req: Request, res: Response, next: NextFunction) => {
     try {
       const newUser = req.body;
-      const result = await this.userUseCases.createUser({ ...newUser, usuRole: "profesor" });
+      const result = await this.userUseCases.createUser({ ...newUser, usuRole: "professor" });
       res.status(201).json(result);
     }
     catch (error) {
@@ -28,7 +28,7 @@ export class UserController {
 
   getProfessors = async (req: Request, res: Response, next: NextFunction) => {
     try {
-      const result = await this.userUseCases.listProfessorUsers("profesor");
+      const result = await this.userUseCases.listProfessorUsers("professor");
       res.status(200).json(result);
     }
     catch (error) {
@@ -43,13 +43,13 @@ export class UserController {
       const { usuID } = req.params;
       const { usuName, usuEmail, usuPassword } = req.body;
 
-      const user = { usuID, usuName, usuEmail, usuPassword, usuRole: "profesor" };
+      const user = { usuID, usuName, usuEmail, usuPassword, usuRole: "professor" };
       const userToCrate = new User(
         user.usuID,
         user.usuName,
         user.usuEmail,
         user.usuPassword,
-        "profesor"
+        "professor"
       );
 
       const result = await this.userUseCases.updateUser(usuID, userToCrate);

@@ -107,7 +107,7 @@ export class UserGatewayAdapter implements UserGatewayIntPort {
     }
 
 
-    async listProfessorUsers(role: 'admin' | 'profesor'): Promise<User[]> {
+    async listProfessorUsers(role: 'admin' | 'professor'): Promise<User[]> {
         const usersData = await prisma.user.findMany({
             where: { usuRole: role }
         });

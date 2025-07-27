@@ -24,8 +24,8 @@ export class AuthRoutes {
         const authMiddleware = new AuthMiddleware(new AuthUCAdapter(userGateway, exceptionHandler));
 
         router.post("/login", validatorMiddleware.validate, authController.login);
-        router.post("/logout", authMiddleware.authenticate("profesor", "admin", "student"), authController.logout);
-        router.get("/profile",authMiddleware.authenticate("profesor", "admin"), authController.profile);
+        router.post("/logout", authMiddleware.authenticate("professor", "admin", "student"), authController.logout);
+        router.get("/profile",authMiddleware.authenticate("professor", "admin"), authController.profile);
         router.get("/studentProfile", authMiddleware.authenticate("student"), authController.studentProfile);
         return router;
     }

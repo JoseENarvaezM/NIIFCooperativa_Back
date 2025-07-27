@@ -53,12 +53,12 @@ export class StudentRoutes {
         const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler));
 
         router.post("/", validatorMiddleware.validate, studentController.postStudent);
-        router.get("/", authMiddleware.authenticate("profesor"),studentController.getStudents);
-        router.get("/:stuID", authMiddleware.authenticate("profesor"),studentController.getStudentById);
+        router.get("/", authMiddleware.authenticate("professor"),studentController.getStudents);
+        router.get("/:stuID", authMiddleware.authenticate("professor"),studentController.getStudentById);
         router.put("/:stuID", validatorMiddleware.validate, studentController.putStudent);
         router.delete("/:stuID", studentController.deleteStudent);
         router.get("/search/:cedula/:roomID", studentController.searchStudentsByCedula);
-        router.get("/room/:roomID", authMiddleware.authenticate("profesor"), studentController.searchStudentsByRoom);
+        router.get("/room/:roomID", authMiddleware.authenticate("professor"), studentController.searchStudentsByRoom);
 
         return router;
     }

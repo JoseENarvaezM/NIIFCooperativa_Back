@@ -6,7 +6,7 @@ export class User{
     public usuName: string,
     public usuEmail: string,
     public usuPassword: string,
-    public usuRole: 'admin' | 'profesor',
+    public usuRole: 'admin' | 'professor',
     public room: Room[] = []
   ) {}
 }

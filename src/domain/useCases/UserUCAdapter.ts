@@ -78,7 +78,7 @@ export class UserUCAdapter implements UserUCIntPort {
 
     //professor only
     listProfessorUsers(role: string): Promise<User[]> {
-        if (role === 'profesor') {
+        if (role === 'professor') {
             return this.userGateway.listProfessorUsers(role);
         }
         throw new Error(`User with role ${role} is not a professor.`);
