@@ -3,26 +3,34 @@ import { FormCaratula } from "../../../../domain/models/FormCaratulaModel";
 import { FormsGatewayIntPort } from "../../../../application/output/FormsGatewayIntPort";
 
 export class CaratulaGatewayAdapter implements FormsGatewayIntPort<FormCaratula> {
-    async listForms(): Promise<FormCaratula[]> {
-        return prisma.formcaratula.findMany();
-    }
 
-    async getIDForm(id: string): Promise<FormCaratula | null> {
-        return prisma.formcaratula.findUnique({
-            where: { carID: id }
+    async getIDForm(stuID: string, roomID: string): Promise<FormCaratula | null> {
+        const report = await prisma.report.findFirst({
+            where: { stuID: stuID, roomID: roomID }
         });
+        const caratula = await prisma.formcaratula.findUnique({
+            where: { carID: report?.carID }
+        });
+        return caratula;
     }
 
     async createForm(caratula: FormCaratula): Promise<FormCaratula> {
         return prisma.formcaratula.create({
-            data: caratula
+            data: {
+                carContent: { ...caratula },
+            }
         });
     }
 
-    async updateForm(id: string, caratula: FormCaratula): Promise<FormCaratula> {
+    async updateForm(stuID: string, roomID: string, caratula: FormCaratula): Promise<FormCaratula> {
+        const report = await prisma.report.findFirst({
+            where: { stuID: stuID, roomID: roomID }
+        });
         return prisma.formcaratula.update({
-            where: { carID: id },
-            data: caratula
+            where: { carID: report?.carID },
+            data: {
+                carContent: { ...caratula },
+            }
         });
     }
 }

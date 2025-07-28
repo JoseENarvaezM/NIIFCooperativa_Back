@@ -26,11 +26,10 @@ export class DetalleRenglonesRoutes {
         const validatorMiddleware = new ValidatorMiddleware(DetalleRenglonesSchema);
         const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler));
 
-        router.post("/", validatorMiddleware.validate, authMiddleware.authenticate("student"), detalleRenglonesController.postDetalleRenglones);
-        router.get("/", authMiddleware.authenticate("student"), detalleRenglonesController.getDetalleRenglones);
-        router.get("/:id", authMiddleware.authenticate("student"), detalleRenglonesController.getIDDetalleRenglones);
-        router.put("/:id", validatorMiddleware.validate, authMiddleware.authenticate("student"), detalleRenglonesController.putDetalleRenglones);
 
+        router.get("/id", authMiddleware.authenticate("student"), detalleRenglonesController.getIDDetalleRenglones);
+        router.put("/id", validatorMiddleware.validate, authMiddleware.authenticate("student"), detalleRenglonesController.putDetalleRenglones);
+        router.get("/student/:stuID/room/:roomID", authMiddleware.authenticate("professor"), detalleRenglonesController.getDetalleRenglonesByStudentAndRoom);
         return router;
     }
 }

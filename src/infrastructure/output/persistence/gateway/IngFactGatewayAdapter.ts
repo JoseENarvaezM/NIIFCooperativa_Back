@@ -3,26 +3,34 @@ import { FormIngresosFancturacion } from "../../../../domain/models/FormIngresos
 import { FormsGatewayIntPort } from "../../../../application/output/FormsGatewayIntPort";
 
 export class IngFactGatewayAdapter implements FormsGatewayIntPort<FormIngresosFancturacion> {
-    async listForms(): Promise<FormIngresosFancturacion[]> {
-        return prisma.formingresosfancturacion.findMany();
-    }
 
-    async getIDForm(id: string): Promise<FormIngresosFancturacion | null> {
-        return prisma.formingresosfancturacion.findUnique({
-            where: { ingID: id }
+    async getIDForm(stuID: string, roomID: string): Promise<FormIngresosFancturacion | null> {
+        const report = await prisma.report.findFirst({
+            where: { stuID: stuID, roomID: roomID }
         });
+        const ingFact = await prisma.formingresosfancturacion.findUnique({
+            where: { ingID: report?.ingID }
+        });
+        return ingFact;
     }
 
     async createForm(ingFact: FormIngresosFancturacion): Promise<FormIngresosFancturacion> {
         return prisma.formingresosfancturacion.create({
-            data: ingFact
+            data: {
+                ingContent: { ...ingFact },
+            }
         });
     }
 
-    async updateForm(id: string, ingFact: FormIngresosFancturacion): Promise<FormIngresosFancturacion> {
+    async updateForm(stuID: string, roomID: string, ingFact: FormIngresosFancturacion): Promise<FormIngresosFancturacion> {
+        const report = await prisma.report.findFirst({
+            where: { stuID: stuID, roomID: roomID }
+        });
         return prisma.formingresosfancturacion.update({
-            where: { ingID: id },
-            data: ingFact
+            where: { ingID: report?.ingID },
+            data: {
+                ingContent: { ...ingFact },
+            }
         });
     }
 }

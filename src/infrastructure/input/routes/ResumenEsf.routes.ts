@@ -26,11 +26,10 @@ export class ResumenEsfRoutes {
         const validatorMiddleware = new ValidatorMiddleware(ResumenESFSchema);
         const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler));
 
-        router.post("/", validatorMiddleware.validate, authMiddleware.authenticate("student"), resumenEsfController.createResumenEsferi);
-        router.get("/", authMiddleware.authenticate("student"), resumenEsfController.listResumenEsferi);
-        router.get("/:id", authMiddleware.authenticate("student"), resumenEsfController.getIDResumenEsferi);
-        router.put("/:id", validatorMiddleware.validate, authMiddleware.authenticate("student"), resumenEsfController.updateResumenEsferi);
 
+        router.get("/id", authMiddleware.authenticate("student"), resumenEsfController.getIDResumenEsferi);
+        router.put("/id", validatorMiddleware.validate, authMiddleware.authenticate("student"), resumenEsfController.updateResumenEsferi);
+        router.get("/student/:stuID/room/:roomID", authMiddleware.authenticate("professor"), resumenEsfController.getResumenEsferiByStudentAndRoom);
         return router;
     }
 }

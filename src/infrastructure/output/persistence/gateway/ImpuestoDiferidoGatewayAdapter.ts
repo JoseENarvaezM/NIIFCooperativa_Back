@@ -3,26 +3,34 @@ import { FormImpuestoDiferido } from "../../../../domain/models/FormImpuestoDife
 import { FormsGatewayIntPort } from "../../../../application/output/FormsGatewayIntPort";
 
 export class ImpuestoDiferidoGatewayAdapter implements FormsGatewayIntPort<FormImpuestoDiferido> {
-    async listForms(): Promise<FormImpuestoDiferido[]> {
-        return prisma.formimpuestodiferido.findMany();
-    }
-
-    async getIDForm(id: string): Promise<FormImpuestoDiferido | null> {
-        return prisma.formimpuestodiferido.findUnique({
-            where: { impID: id }
+ 
+    async getIDForm(stuID: string, roomID: string): Promise<FormImpuestoDiferido | null> {
+        const report = await prisma.report.findFirst({
+            where: { stuID: stuID, roomID: roomID }
         });
+        const impuestoDiferido = await prisma.formimpuestodiferido.findUnique({
+            where: { impID: report?.impID }
+        });
+        return impuestoDiferido;
     }
 
     async createForm(impuestoDiferido: FormImpuestoDiferido): Promise<FormImpuestoDiferido> {
         return prisma.formimpuestodiferido.create({
-            data: impuestoDiferido
+            data: {
+                impContent: { ...impuestoDiferido },
+            }
         });
     }
 
-    async updateForm(id: string, impuestoDiferido: FormImpuestoDiferido): Promise<FormImpuestoDiferido> {
+    async updateForm(stuID: string, roomID: string, impuestoDiferido: FormImpuestoDiferido): Promise<FormImpuestoDiferido> {
+        const report = await prisma.report.findFirst({
+            where: { stuID: stuID, roomID: roomID }
+        });
         return prisma.formimpuestodiferido.update({
-            where: { impID: id },
-            data: impuestoDiferido
+            where: { impID: report?.impID },
+            data: {
+                impContent: { ...impuestoDiferido },
+            }
         });
     }
 }

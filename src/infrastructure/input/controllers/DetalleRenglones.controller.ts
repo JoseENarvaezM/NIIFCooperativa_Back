@@ -5,30 +5,10 @@ import { FormDetalleRenglones } from "../../../domain/models/FormDetallerEnglone
 
 export class DetalleRenglonesController {
     constructor(private readonly detalleRenglonesUseCases: FormsUCIntPort<FormDetalleRenglones>) { }
-
-    postDetalleRenglones = async (req: Request, res: Response, next: NextFunction) => {
-        try {
-            const newDetalleRenglones = req.body;
-            const result = await this.detalleRenglonesUseCases.createForm(newDetalleRenglones);
-            res.status(201).json(result);
-        } catch (error) {
-            next(error);
-        }
-    };
-
-    getDetalleRenglones = async (req: Request, res: Response, next: NextFunction) => {
-        try {
-            const result = await this.detalleRenglonesUseCases.listForms();
-            res.status(200).json(result);
-        } catch (error) {
-            next(error);
-        }
-    };
-
     getIDDetalleRenglones = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const { id } = req.params;
-            const result = await this.detalleRenglonesUseCases.getIDForm(id);
+            const { stuID, roomID } = req.user;
+            const result = await this.detalleRenglonesUseCases.getIDForm(stuID, roomID);
             res.status(200).json(result);
         } catch (error) {
             next(error);
@@ -37,9 +17,18 @@ export class DetalleRenglonesController {
 
     putDetalleRenglones = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const { id } = req.params;
+            const { stuID, roomID } = req.user;
             const updatedDetalleRenglones = req.body;
-            const result = await this.detalleRenglonesUseCases.updateForm(id, updatedDetalleRenglones);
+            const result = await this.detalleRenglonesUseCases.updateForm(stuID, roomID, updatedDetalleRenglones);
+            res.status(200).json(result);
+        } catch (error) {
+            next(error);
+        }
+    };
+    getDetalleRenglonesByStudentAndRoom = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const { stuID, roomID } = req.params;
+            const result = await this.detalleRenglonesUseCases.getIDForm(stuID, roomID);
             res.status(200).json(result);
         } catch (error) {
             next(error);

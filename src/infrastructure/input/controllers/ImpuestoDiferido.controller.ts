@@ -4,31 +4,11 @@ import { FormImpuestoDiferido } from "../../../domain/models/FormImpuestoDiferid
 
 export class ImpuestoDiferidoController {
     constructor(private readonly impuestoDiferidoUseCases: FormsUCIntPort<FormImpuestoDiferido>) { }
-
-    listImpuestoDiferido = async (req: Request, res: Response, next: NextFunction) => {
-        try {
-            const result = await this.impuestoDiferidoUseCases.listForms();
-            res.status(200).json(result);
-        } catch (error) {
-            next(error);
-        }
-    };
-
     getIDImpuestoDiferido = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const { id } = req.params;
-            const result = await this.impuestoDiferidoUseCases.getIDForm(id);
+            const { stuID, roomID } = req.user;
+            const result = await this.impuestoDiferidoUseCases.getIDForm(stuID, roomID);
             res.status(200).json(result);
-        } catch (error) {
-            next(error);
-        }
-    };
-
-    createImpuestoDiferido = async (req: Request, res: Response, next: NextFunction) => {
-        try {
-            const newImpuestoDiferido = req.body;
-            const result = await this.impuestoDiferidoUseCases.createForm(newImpuestoDiferido);
-            res.status(201).json(result);
         } catch (error) {
             next(error);
         }
@@ -36,9 +16,18 @@ export class ImpuestoDiferidoController {
 
     updateImpuestoDiferido = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const { id } = req.params;
+            const { stuID, roomID } = req.user;
             const updatedImpuestoDiferido = req.body;
-            const result = await this.impuestoDiferidoUseCases.updateForm(id, updatedImpuestoDiferido);
+            const result = await this.impuestoDiferidoUseCases.updateForm(stuID, roomID, updatedImpuestoDiferido);
+            res.status(200).json(result);
+        } catch (error) {
+            next(error);
+        }
+    };
+    getImpuestoDiferidoByStudentAndRoom = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const { stuID, roomID } = req.params;
+            const result = await this.impuestoDiferidoUseCases.getIDForm(stuID, roomID);
             res.status(200).json(result);
         } catch (error) {
             next(error);

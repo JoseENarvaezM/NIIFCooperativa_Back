@@ -8,21 +8,14 @@ export class ImpuestoDiferidoUCAdapter implements FormsUCIntPort<FormImpuestoDif
         private impuestoDiferidoGateway: FormsGatewayIntPort<FormImpuestoDiferido>,
         private errorFormatter: ErrorFormatterIntPort
     ) {}
-
-    async listForms(): Promise<FormImpuestoDiferido[]> {
-        return this.impuestoDiferidoGateway.listForms();
-    }
-    async getIDForm(id: string): Promise<FormImpuestoDiferido | null> {
-        const formImpuestoDiferido = await this.impuestoDiferidoGateway.getIDForm(id);
+    async getIDForm(stuID: string, roomID: string): Promise<FormImpuestoDiferido | null> {
+        const formImpuestoDiferido = await this.impuestoDiferidoGateway.getIDForm(stuID, roomID);
         if (!formImpuestoDiferido) {
-            this.errorFormatter.errorNotFound(`Form with ID ${id} not found`);
+            this.errorFormatter.errorNotFound(`Form with stuID ${stuID} and roomID ${roomID} not found`);
         }
         return formImpuestoDiferido;
     }
-    async createForm(impuestoDiferido: FormImpuestoDiferido): Promise<FormImpuestoDiferido> {
-        return this.impuestoDiferidoGateway.createForm(impuestoDiferido);
-    }
-    async updateForm(id: string, impuestoDiferido: FormImpuestoDiferido): Promise<FormImpuestoDiferido> {
-        return this.impuestoDiferidoGateway.updateForm(id, impuestoDiferido);
+    async updateForm(stuID: string, roomID: string, impuestoDiferido: FormImpuestoDiferido): Promise<FormImpuestoDiferido> {
+        return this.impuestoDiferidoGateway.updateForm(stuID, roomID, impuestoDiferido);
     }
 }

@@ -3,26 +3,35 @@ import { FormActivosFijos } from "../../../../domain/models/FormActivosFijosMode
 import { FormsGatewayIntPort } from "../../../../application/output/FormsGatewayIntPort";
 
 export class ActivosFijosGatewayAdapter implements FormsGatewayIntPort<FormActivosFijos> {
-    async listForms(): Promise<FormActivosFijos[]> {
-        return prisma.formactivosfijos.findMany();
-    }
 
-    async getIDForm(id: string): Promise<FormActivosFijos | null> {
-        return prisma.formactivosfijos.findUnique({
-            where: { actID: id }
+    async getIDForm(stuID: string, roomID: string): Promise<FormActivosFijos | null> {
+
+        const report = await prisma.report.findFirst({
+            where: { stuID: stuID, roomID: roomID }
         });
+        const activosfijos = await prisma.formactivosfijos.findUnique({
+            where: { actID: report?.actID }
+        });
+        return activosfijos;
     }
 
     async createForm(activo: FormActivosFijos): Promise<FormActivosFijos> {
         return prisma.formactivosfijos.create({
-            data: activo
+            data: {
+                actContent: { ...activo },
+            }
         });
     }
 
-    async updateForm(id: string, activo: FormActivosFijos): Promise<FormActivosFijos> {
+    async updateForm(stuID: string, roomID: string, activo: FormActivosFijos): Promise<FormActivosFijos> {
+        const report = await prisma.report.findFirst({
+            where: { stuID: stuID, roomID: roomID }
+        });
         return prisma.formactivosfijos.update({
-            where: { actID: id },
-            data: activo
+            where: { actID: report?.actID },
+            data: {
+                actContent: { ...activo },
+            }
         });
     }
 }

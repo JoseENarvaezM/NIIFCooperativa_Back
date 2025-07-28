@@ -26,11 +26,10 @@ export class CaratulaRoutes {
         const validatorMiddleware = new ValidatorMiddleware(CaratulaSchema);
         const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler));
 
-        router.post("/", validatorMiddleware.validate, authMiddleware.authenticate("student"), caratulaController.postCaratula);
-        router.get("/", authMiddleware.authenticate("student"), caratulaController.getCaratulas);
-        router.get("/:id", authMiddleware.authenticate("student"), caratulaController.getIDCaratula);
-        router.put("/:id", validatorMiddleware.validate, authMiddleware.authenticate("student"), caratulaController.putCaratula);
 
+        router.get("/id", authMiddleware.authenticate("student"), caratulaController.getIDCaratula);
+        router.put("/id", validatorMiddleware.validate, authMiddleware.authenticate("student"), caratulaController.putCaratula);
+        router.get("/student/:stuID/room/:roomID", authMiddleware.authenticate("professor"), caratulaController.getCaratulaByStudentAndRoom);
         return router;
     }
 }

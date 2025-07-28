@@ -4,30 +4,10 @@ import { FormEsfPatrimonio } from "../../../domain/models/FormEsfPatrimonioModel
 
 export class EsfPatrimonioController {
     constructor(private readonly esfPatrimonioUseCases: FormsUCIntPort<FormEsfPatrimonio>) { }
-
-    postEsfPatrimonio = async (req: Request, res: Response, next: NextFunction) => {
-        try {
-            const newEsfPatrimonio = req.body;
-            const result = await this.esfPatrimonioUseCases.createForm(newEsfPatrimonio);
-            res.status(201).json(result);
-        } catch (error) {
-            next(error);
-        }
-    };
-
-    getEsfPatrimonio = async (req: Request, res: Response, next: NextFunction) => {
-        try {
-            const result = await this.esfPatrimonioUseCases.listForms();
-            res.status(200).json(result);
-        } catch (error) {
-            next(error);
-        }
-    };
-
     getIDEsfPatrimonio = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const { id } = req.params;
-            const result = await this.esfPatrimonioUseCases.getIDForm(id);
+            const { stuID, roomID } = req.user;
+            const result = await this.esfPatrimonioUseCases.getIDForm(stuID, roomID);
             res.status(200).json(result);
         } catch (error) {
             next(error);
@@ -36,9 +16,18 @@ export class EsfPatrimonioController {
     
     putEsfPatrimonio = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const { id } = req.params;
+            const { stuID, roomID } = req.user;
             const updatedEsfPatrimonio = req.body;
-            const result = await this.esfPatrimonioUseCases.updateForm(id, updatedEsfPatrimonio);
+            const result = await this.esfPatrimonioUseCases.updateForm(stuID, roomID, updatedEsfPatrimonio);
+            res.status(200).json(result);
+        } catch (error) {
+            next(error);
+        }
+    };
+    getEsfPatrimonioByStudentAndRoom = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const { stuID, roomID } = req.params;
+            const result = await this.esfPatrimonioUseCases.getIDForm(stuID, roomID);
             res.status(200).json(result);
         } catch (error) {
             next(error);

@@ -8,20 +8,14 @@ export class CaratulaUCAdapter implements FormsUCIntPort<FormCaratula> {
         private caratulaGateway: FormsGatewayIntPort<FormCaratula>,
         private errorFormatter: ErrorFormatterIntPort
     ) {}
-    async listForms(): Promise<FormCaratula[]> {
-        return this.caratulaGateway.listForms();
-    }
-    async getIDForm(id: string): Promise<FormCaratula | null> {
-        const formCaratula = await this.caratulaGateway.getIDForm(id);
+    async getIDForm(stuID: string, roomID: string): Promise<FormCaratula | null> {
+        const formCaratula = await this.caratulaGateway.getIDForm(stuID, roomID);
         if (!formCaratula) {
-            this.errorFormatter.errorNotFound(`Form with ID ${id} not found`);
+            this.errorFormatter.errorNotFound(`Form of the student with ID ${stuID} in room ${roomID} not found.`);
         }
         return formCaratula;
     }
-    async createForm(caratula: FormCaratula): Promise<FormCaratula> {
-        return this.caratulaGateway.createForm(caratula);
-    }
-    async updateForm(id: string, caratula: FormCaratula): Promise<FormCaratula> {
-        return this.caratulaGateway.updateForm(id, caratula);
+    async updateForm(stuID: string, roomID: string, caratula: FormCaratula): Promise<FormCaratula> {
+        return this.caratulaGateway.updateForm(stuID, roomID, caratula);
     }
 }

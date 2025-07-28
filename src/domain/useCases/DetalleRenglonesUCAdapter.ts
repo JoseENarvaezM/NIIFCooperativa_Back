@@ -9,20 +9,14 @@ export class DetalleRenglonesUCAdapter implements FormsUCIntPort<FormDetalleReng
         private errorFormatter: ErrorFormatterIntPort
     ) {}
 
-    async listForms(): Promise<FormDetalleRenglones[]> {
-        return this.detalleRenglonesGateway.listForms();
-    }
-    async getIDForm(id: string): Promise<FormDetalleRenglones | null> {
-        const formDetalleRenglones = await this.detalleRenglonesGateway.getIDForm(id);
+    async getIDForm(stuID: string, roomID: string): Promise<FormDetalleRenglones | null> {
+        const formDetalleRenglones = await this.detalleRenglonesGateway.getIDForm(stuID, roomID);
         if (!formDetalleRenglones) {
-            this.errorFormatter.errorNotFound(`Form with ID ${id} not found`);
+            this.errorFormatter.errorNotFound(`Form with stuID ${stuID} and roomID ${roomID} not found`);
         }
         return formDetalleRenglones;
     }
-    async createForm(detalleRenglones: FormDetalleRenglones): Promise<FormDetalleRenglones> {
-        return this.detalleRenglonesGateway.createForm(detalleRenglones);
-    }
-    async updateForm(id: string, detalleRenglones: FormDetalleRenglones): Promise<FormDetalleRenglones> {
-        return this.detalleRenglonesGateway.updateForm(id, detalleRenglones);
+    async updateForm(stuID: string, roomID: string, detalleRenglones: FormDetalleRenglones): Promise<FormDetalleRenglones> {
+        return this.detalleRenglonesGateway.updateForm(stuID, roomID, detalleRenglones);
     }
 }

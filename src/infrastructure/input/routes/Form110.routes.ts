@@ -26,11 +26,10 @@ export class Form110Routes {
         const validatorMiddleware = new ValidatorMiddleware(Formulario110Schema);
         const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler));
 
-        router.post("/", validatorMiddleware.validate, authMiddleware.authenticate("student"), form110Controller.postForm110);
-        router.get("/", authMiddleware.authenticate("student"), form110Controller.getForm110);
-        router.get("/:id", authMiddleware.authenticate("student"), form110Controller.getIDForm110);
-        router.put("/:id", validatorMiddleware.validate, authMiddleware.authenticate("student"), form110Controller.putForm110);
 
+        router.get("/id", authMiddleware.authenticate("student"), form110Controller.getIDForm110);
+        router.put("/id", validatorMiddleware.validate, authMiddleware.authenticate("student"), form110Controller.putForm110);
+        router.get("/student/:stuID/room/:roomID", authMiddleware.authenticate("professor"), form110Controller.getForm110ByStudentAndRoom);
         return router;
     }
 }

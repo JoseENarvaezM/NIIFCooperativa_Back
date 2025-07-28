@@ -8,21 +8,14 @@ export class IngFactUCAdapter implements FormsUCIntPort<FormIngresosFancturacion
         private ingFactGateway: FormsGatewayIntPort<FormIngresosFancturacion>,
         private errorFormatter: ErrorFormatterIntPort
     ) {}
-
-    async listForms(): Promise<FormIngresosFancturacion[]> {
-        return this.ingFactGateway.listForms();
-    }
-    async getIDForm(id: string): Promise<FormIngresosFancturacion | null> {
-        const formIngresos = await this.ingFactGateway.getIDForm(id);
+    async getIDForm(stuID: string, roomID: string): Promise<FormIngresosFancturacion | null> {
+        const formIngresos = await this.ingFactGateway.getIDForm(stuID, roomID);
         if (!formIngresos) {
-            this.errorFormatter.errorNotFound(`Form with ID ${id} not found`);
+            this.errorFormatter.errorNotFound(`Form with stuID ${stuID} and roomID ${roomID} not found`);
         }
         return formIngresos;
     }
-    async createForm(ingFact: FormIngresosFancturacion): Promise<FormIngresosFancturacion> {
-        return this.ingFactGateway.createForm(ingFact);
-    }
-    async updateForm(id: string, ingFact: FormIngresosFancturacion): Promise<FormIngresosFancturacion> {
-        return this.ingFactGateway.updateForm(id, ingFact);
+    async updateForm(stuID: string, roomID: string, ingFact: FormIngresosFancturacion): Promise<FormIngresosFancturacion> {
+        return this.ingFactGateway.updateForm(stuID, roomID, ingFact);
     }
 }

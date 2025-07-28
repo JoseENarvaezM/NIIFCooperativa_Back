@@ -3,26 +3,34 @@ import { FormEsfPatrimonio } from "../../../../domain/models/FormEsfPatrimonioMo
 import { FormsGatewayIntPort } from "../../../../application/output/FormsGatewayIntPort";
 
 export class EsfPatrimonioGatewayAdapter implements FormsGatewayIntPort<FormEsfPatrimonio> {
-    async listForms(): Promise<FormEsfPatrimonio[]> {
-        return prisma.formesfpatrimonio.findMany();
-    }
 
-    async getIDForm(id: string): Promise<FormEsfPatrimonio | null> {
-        return prisma.formesfpatrimonio.findUnique({
-            where: { esfID: id }
+    async getIDForm(stuID: string, roomID: string): Promise<FormEsfPatrimonio | null> {
+        const report = await prisma.report.findFirst({
+            where: { stuID: stuID, roomID: roomID }
         });
+        const esfPatrimonio = await prisma.formesfpatrimonio.findUnique({
+            where: { esfID: report?.esfID }
+        });
+        return esfPatrimonio;
     }
 
     async createForm(esfPatrimonio: FormEsfPatrimonio): Promise<FormEsfPatrimonio> {
         return prisma.formesfpatrimonio.create({
-            data: esfPatrimonio
+            data: {
+                esfContent: { ...esfPatrimonio },
+            }
         });
     }
 
-    async updateForm(id: string, esfPatrimonio: FormEsfPatrimonio): Promise<FormEsfPatrimonio> {
+    async updateForm(stuID: string, roomID: string, esfPatrimonio: FormEsfPatrimonio): Promise<FormEsfPatrimonio> {
+        const report = await prisma.report.findFirst({
+            where: { stuID: stuID, roomID: roomID }
+        });
         return prisma.formesfpatrimonio.update({
-            where: { esfID: id },
-            data: esfPatrimonio
+            where: { esfID: report?.esfID },
+            data: {
+                esfContent: { ...esfPatrimonio },
+            }
         });
     }
 }

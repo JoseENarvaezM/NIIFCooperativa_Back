@@ -8,21 +8,14 @@ export class Form110UCAdapter implements FormsUCIntPort<FormR110> {
         private form110Gateway: FormsGatewayIntPort<FormR110>,
         private errorFormatter: ErrorFormatterIntPort
     ) {}
-
-    async listForms(): Promise<FormR110[]> {
-        return this.form110Gateway.listForms();
-    }
-    async getIDForm(id: string): Promise<FormR110 | null> {
-        const form110 = await this.form110Gateway.getIDForm(id);
+    async getIDForm(stuID: string, roomID: string): Promise<FormR110 | null> {
+        const form110 = await this.form110Gateway.getIDForm(stuID, roomID);
         if (!form110) {
-            this.errorFormatter.errorNotFound(`Form with ID ${id} not found`);
+            this.errorFormatter.errorNotFound(`Form with stuID ${stuID} and roomID ${roomID} not found`);
         }
         return form110;
     }
-    async createForm(form110: FormR110): Promise<FormR110> {
-        return this.form110Gateway.createForm(form110);
-    }
-    async updateForm(id: string, form110: FormR110): Promise<FormR110> {
-        return this.form110Gateway.updateForm(id, form110);
+    async updateForm(stuID: string, roomID: string, form110: FormR110): Promise<FormR110> {
+        return this.form110Gateway.updateForm(stuID, roomID, form110);
     }
 }

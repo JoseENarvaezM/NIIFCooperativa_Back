@@ -26,11 +26,10 @@ export class ImpuestoDiferidoRoutes {
         const validatorMiddleware = new ValidatorMiddleware(ImpuestoDiferidoSchema);
         const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler));
 
-        router.post("/", validatorMiddleware.validate, authMiddleware.authenticate("student"), impuestoDiferidoController.createImpuestoDiferido);
-        router.get("/", authMiddleware.authenticate("student"), impuestoDiferidoController.listImpuestoDiferido);
-        router.get("/:id", authMiddleware.authenticate("student"), impuestoDiferidoController.getIDImpuestoDiferido);
-        router.put("/:id", validatorMiddleware.validate, authMiddleware.authenticate("student"), impuestoDiferidoController.updateImpuestoDiferido);
 
+        router.get("/id", authMiddleware.authenticate("student"), impuestoDiferidoController.getIDImpuestoDiferido);
+        router.put("/id", validatorMiddleware.validate, authMiddleware.authenticate("student"), impuestoDiferidoController.updateImpuestoDiferido);
+        router.get("/student/:stuID/room/:roomID", authMiddleware.authenticate("professor"), impuestoDiferidoController.getImpuestoDiferidoByStudentAndRoom);
         return router;
     }
 }

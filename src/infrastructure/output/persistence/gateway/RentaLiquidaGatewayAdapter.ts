@@ -3,26 +3,34 @@ import { FormRentaLiquida } from "../../../../domain/models/FormRentaLiquidaMode
 import { FormsGatewayIntPort } from "../../../../application/output/FormsGatewayIntPort";
 
 export class RentaLiquidaGatewayAdapter implements FormsGatewayIntPort<FormRentaLiquida> {
-    async listForms(): Promise<FormRentaLiquida[]> {
-        return prisma.formrentaliquida.findMany();
-    }
 
-    async getIDForm(id: string): Promise<FormRentaLiquida | null> {
-        return prisma.formrentaliquida.findUnique({
-            where: { renID: id }
+    async getIDForm(stuID: string, roomID: string): Promise<FormRentaLiquida | null> {
+        const report = await prisma.report.findFirst({
+            where: { stuID: stuID, roomID: roomID }
         });
+        const rentaLiquida = await prisma.formrentaliquida.findUnique({
+            where: { renID: report?.renID }
+        });
+        return rentaLiquida;
     }
 
     async createForm(rentaLiquida: FormRentaLiquida): Promise<FormRentaLiquida> {
         return prisma.formrentaliquida.create({
-            data: rentaLiquida
+            data: {
+                renContent: { ...rentaLiquida },
+            }
         });
     }
 
-    async updateForm(id: string, rentaLiquida: FormRentaLiquida): Promise<FormRentaLiquida> {
+    async updateForm(stuID: string, roomID: string, rentaLiquida: FormRentaLiquida): Promise<FormRentaLiquida> {
+        const report = await prisma.report.findFirst({
+            where: { stuID: stuID, roomID: roomID }
+        });
         return prisma.formrentaliquida.update({
-            where: { renID: id },
-            data: rentaLiquida
+            where: { renID: report?.renID },
+            data: {
+                renContent: { ...rentaLiquida },
+            }
         });
     }
 }

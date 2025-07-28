@@ -9,20 +9,14 @@ export class EsfPatrimonioUCAdapter implements FormsUCIntPort<FormEsfPatrimonio>
         private errorFormatter: ErrorFormatterIntPort
     ) {}
 
-    async listForms(): Promise<FormEsfPatrimonio[]> {
-        return this.esfPatrimonioGateway.listForms();
-    }
-    async getIDForm(id: string): Promise<FormEsfPatrimonio | null> {
-        const formEsfPatrimonio = await this.esfPatrimonioGateway.getIDForm(id);
+    async getIDForm(stuID: string, roomID: string): Promise<FormEsfPatrimonio | null> {
+        const formEsfPatrimonio = await this.esfPatrimonioGateway.getIDForm(stuID, roomID);
         if (!formEsfPatrimonio) {
-            this.errorFormatter.errorNotFound(`Form with ID ${id} not found`);
+            this.errorFormatter.errorNotFound(`Form with stuID ${stuID} and roomID ${roomID} not found`);
         }
         return formEsfPatrimonio;
     }
-    async createForm(esfPatrimonio: FormEsfPatrimonio): Promise<FormEsfPatrimonio> {
-        return this.esfPatrimonioGateway.createForm(esfPatrimonio);
-    }
-    async updateForm(id: string, esfPatrimonio: FormEsfPatrimonio): Promise<FormEsfPatrimonio> {
-        return this.esfPatrimonioGateway.updateForm(id, esfPatrimonio);
+    async updateForm(stuID: string, roomID: string, esfPatrimonio: FormEsfPatrimonio): Promise<FormEsfPatrimonio> {
+        return this.esfPatrimonioGateway.updateForm(stuID, roomID, esfPatrimonio);
     }
 }

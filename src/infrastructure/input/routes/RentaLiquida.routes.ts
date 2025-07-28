@@ -26,11 +26,10 @@ export class RentaLiquidaRoutes {
         const validatorMiddleware = new ValidatorMiddleware(RentaLiquidaSchema);
         const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler));
 
-        router.post("/", validatorMiddleware.validate, authMiddleware.authenticate("student"), rentaLiquidaController.createRentaLiquida);
-        router.get("/", authMiddleware.authenticate("student"), rentaLiquidaController.listRentaLiquida);
-        router.get("/:id", authMiddleware.authenticate("student"), rentaLiquidaController.getIDRentaLiquida);
-        router.put("/:id", validatorMiddleware.validate, authMiddleware.authenticate("student"), rentaLiquidaController.updateRentaLiquida);
 
+        router.get("/id", authMiddleware.authenticate("student"), rentaLiquidaController.getIDRentaLiquida);
+        router.put("/id", validatorMiddleware.validate, authMiddleware.authenticate("student"), rentaLiquidaController.updateRentaLiquida);
+        router.get("/student/:stuID/room/:roomID", authMiddleware.authenticate("professor"), rentaLiquidaController.getRentaLiquidaByStudentAndRoom);
         return router;
     }
 }

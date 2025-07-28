@@ -8,21 +8,14 @@ export class RentaLiquidaUCAdapter implements FormsUCIntPort<FormRentaLiquida> {
         private rentaLiquidaGateway:  FormsGatewayIntPort<FormRentaLiquida>,
         private errorFormatter: ErrorFormatterIntPort
     ) {}
-
-    async listForms(): Promise<FormRentaLiquida[]> {
-        return this.rentaLiquidaGateway.listForms();
-    }
-    async getIDForm(id: string): Promise<FormRentaLiquida | null> {
-        const formRentaLiquida = await this.rentaLiquidaGateway.getIDForm(id);
+    async getIDForm(stuID: string, roomID: string): Promise<FormRentaLiquida | null> {
+        const formRentaLiquida = await this.rentaLiquidaGateway.getIDForm(stuID, roomID);
         if (!formRentaLiquida) {
-            this.errorFormatter.errorNotFound(`Form with ID ${id} not found`);
+            this.errorFormatter.errorNotFound(`Form with stuID ${stuID} and roomID ${roomID} not found`);
         }
         return formRentaLiquida;
     }
-    async createForm(rentaLiquida: FormRentaLiquida): Promise<FormRentaLiquida> {
-        return this.rentaLiquidaGateway.createForm(rentaLiquida);
-    }
-    async updateForm(id: string, rentaLiquida: FormRentaLiquida): Promise<FormRentaLiquida> {
-        return this.rentaLiquidaGateway.updateForm(id, rentaLiquida);
+    async updateForm(stuID: string, roomID: string, rentaLiquida: FormRentaLiquida): Promise<FormRentaLiquida> {
+        return this.rentaLiquidaGateway.updateForm(stuID, roomID, rentaLiquida);
     }
 }

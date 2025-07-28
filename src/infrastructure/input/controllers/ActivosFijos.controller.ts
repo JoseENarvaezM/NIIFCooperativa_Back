@@ -4,30 +4,10 @@ import { FormActivosFijos } from "../../../domain/models/FormActivosFijosModel";
 
 export class ActivosFijosController {
     constructor(private readonly activosFijosUseCases: FormsUCIntPort<FormActivosFijos>) { }
-
-    postActivoFijo = async (req: Request, res: Response, next: NextFunction) => {
-        try {
-            const newActivoFijo = req.body;
-            const result = await this.activosFijosUseCases.createForm(newActivoFijo);
-            res.status(201).json(result);
-        } catch (error) {
-            next(error);
-        }
-    };
-
-    getActivosFijos = async (req: Request, res: Response, next: NextFunction) => {
-        try {
-            const result = await this.activosFijosUseCases.listForms();
-            res.status(200).json(result);
-        } catch (error) {
-            next(error);
-        }
-    };
-
     getIDActivoFijo = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const { id} = req.params;
-            const result = await this.activosFijosUseCases.getIDForm(id);
+            const { stuID, roomID } = req.user;
+            const result = await this.activosFijosUseCases.getIDForm(stuID, roomID);
             res.status(200).json(result);
         } catch (error) {
             next(error);
@@ -36,9 +16,18 @@ export class ActivosFijosController {
 
     putActivoFijo = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const { id } = req.params;
+            const { stuID, roomID } = req.user;
             const updatedActivoFijo = req.body;
-            const result = await this.activosFijosUseCases.updateForm(id, updatedActivoFijo);
+            const result = await this.activosFijosUseCases.updateForm(stuID, roomID, updatedActivoFijo);
+            res.status(200).json(result);
+        } catch (error) {
+            next(error);
+        }
+    };
+    getActivoFijoByStudentAndRoom = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const { stuID, roomID } = req.params;
+            const result = await this.activosFijosUseCases.getIDForm(stuID, roomID);
             res.status(200).json(result);
         } catch (error) {
             next(error);

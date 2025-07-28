@@ -16,6 +16,7 @@ import { FormResumenEsferi } from "../models/FormResumenEsferiModel";
 import { Report } from "../models/ReportModel";
 import { TokenService } from "./SecurityUtils/TokenService";
 import { RoomGatewayIntPort } from "../../application/output/RoomGatewayIntPort";
+import  * as formsinput from "../../utils/index";
 
 
 export class StudentUCAdapter implements StudentUCIntPort {
@@ -44,15 +45,15 @@ export class StudentUCAdapter implements StudentUCIntPort {
             return null;
         }
 
-        const activosfijos = await this.formsActivosFijosGateway.createForm(new FormActivosFijos( {}));
-        const caratula = await this.formsCaratulaGateway.createForm(new FormCaratula({}));
-        const detalleRenglones = await this.formsDetalleRenglonesGateway.createForm(new FormDetalleRenglones( {}));
-        const esfPatrimonio = await this.formsEsfPatrimonioGateway.createForm(new FormEsfPatrimonio( {}));
-        const r110 = await this.formsR110Gateway.createForm(new FormR110( {}));
-        const impuestoDiferido = await this.formsImpuestoDiferidoGateway.createForm(new FormImpuestoDiferido( {}));
-        const ingresosFancturacion = await this.formsIngresosFancturacionGateway.createForm(new FormIngresosFancturacion( {}));
-        const rentaLiquida = await this.formsRentaLiquidaGateway.createForm(new FormRentaLiquida( {}));
-        const resumenEsferi = await this.formsResumenEsferiGateway.createForm(new FormResumenEsferi( {}));
+        const activosfijos = await this.formsActivosFijosGateway.createForm(new FormActivosFijos( formsinput.ActivosFijosInput ));
+        const caratula = await this.formsCaratulaGateway.createForm(new FormCaratula(formsinput.CaratulaInput));
+        const detalleRenglones = await this.formsDetalleRenglonesGateway.createForm(new FormDetalleRenglones(formsinput.DetalleRenglonesInput ));
+        const esfPatrimonio = await this.formsEsfPatrimonioGateway.createForm(new FormEsfPatrimonio( formsinput.ESFPatrimonioInput ));
+        const r110 = await this.formsR110Gateway.createForm(new FormR110( formsinput.Form110Input ));
+        const impuestoDiferido = await this.formsImpuestoDiferidoGateway.createForm(new FormImpuestoDiferido( formsinput.ImpuestoDiferidoInput ));
+        const ingresosFancturacion = await this.formsIngresosFancturacionGateway.createForm(new FormIngresosFancturacion( formsinput.IngresosFacturacionInput ));
+        const rentaLiquida = await this.formsRentaLiquidaGateway.createForm(new FormRentaLiquida( formsinput.RentaLiquidaInput ));
+        const resumenEsferi = await this.formsResumenEsferiGateway.createForm(new FormResumenEsferi( formsinput.ResumenESFInput ));
 
         const studentExists = await this.studentGateway.searchStudentByCedulaRoom(student.stuCedula, student.roomID);
 

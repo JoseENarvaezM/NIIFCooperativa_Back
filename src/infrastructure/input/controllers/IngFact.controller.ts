@@ -4,29 +4,10 @@ import { FormIngresosFancturacion } from "../../../domain/models/FormIngresosFan
 
 export class IngFactController {
     constructor(private readonly ingresosFacturacionUseCases: FormsUCIntPort<FormIngresosFancturacion>) { }
-    postIngresosFacturacion = async (req: Request, res: Response, next: NextFunction) => {
-        try {
-            const newIngresosFacturacion = req.body;
-            const result = await this.ingresosFacturacionUseCases.createForm(newIngresosFacturacion);
-            res.status(201).json(result);
-        } catch (error) {
-            next(error);
-        }
-    };
-
-    getIngresosFacturacion = async (req: Request, res: Response, next: NextFunction) => {
-        try {
-            const result = await this.ingresosFacturacionUseCases.listForms();
-            res.status(200).json(result);
-        } catch (error) {
-            next(error);
-        }
-    };
-
     getIDIngresosFacturacion = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const { id } = req.params;
-            const result = await this.ingresosFacturacionUseCases.getIDForm(id);
+            const { stuID, roomID } = req.user;
+            const result = await this.ingresosFacturacionUseCases.getIDForm(stuID, roomID);
             res.status(200).json(result);
         } catch (error) {
             next(error);
@@ -35,9 +16,18 @@ export class IngFactController {
     
     putIngresosFacturacion = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const { id } = req.params;
+            const { stuID, roomID } = req.user;
             const updatedIngresosFacturacion = req.body;
-            const result = await this.ingresosFacturacionUseCases.updateForm(id, updatedIngresosFacturacion);
+            const result = await this.ingresosFacturacionUseCases.updateForm(stuID, roomID, updatedIngresosFacturacion);
+            res.status(200).json(result);
+        } catch (error) {
+            next(error);
+        }
+    };
+    getFormByStudentAndRoom = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const { stuID, roomID } = req.params;
+            const result = await this.ingresosFacturacionUseCases.getIDForm(stuID, roomID);
             res.status(200).json(result);
         } catch (error) {
             next(error);

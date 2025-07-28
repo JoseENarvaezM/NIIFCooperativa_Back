@@ -3,34 +3,33 @@ import { ExceptionHandler } from "../../output/exeptionHandler/exeptionHandler";
 import { ErrorFormatterIntPort } from "../../../application/output/ErrorFormaterIntPort";
 import { ValidatorMiddleware } from "../middlewares/ValidatorMiddleware";
 
-import { CaratulaController } from "../controllers/Caratula.controller";
-import { CaratulaSchema } from "../schemas/CaratulaSchema";
-import { CaratulaUCAdapter } from "../../../domain/useCases/CaratulaUCAdapter";
+import { IngFactController } from "../controllers/IngFact.controller";
+import { IngresosFacturacionSchema } from "../schemas/IngFactSchema";
+import { IngFactUCAdapter } from "../../../domain/useCases/IngFactUCAdapter";
 import { FormsGatewayIntPort } from "../../../application/output/FormsGatewayIntPort";
-import { CaratulaGatewayAdapter } from "../../output/persistence/gateway/CaratulaGatewayAdapter";
+import { IngFactGatewayAdapter } from "../../output/persistence/gateway/IngFactGatewayAdapter";
 
-import { FormCaratula } from "../../../domain/models/FormCaratulaModel";
+import { FormIngresosFancturacion } from "../../../domain/models/FormIngresosFancturacionModel";
 
 import { AuthMiddleware } from "../middlewares/AuthMiddleware";
 import { UserGatewayAdapter } from "../../output/persistence/gateway/UserGatewayAdapter";
 import { AuthUCAdapter } from "../../../domain/useCases/AuthUCAdapter";
 
-export class CaratulaRoutes {
+export class IngFactRoutes {
     static get routes(): Router {
         const router = Router();
 
-        const caratulaGateway: FormsGatewayIntPort<FormCaratula> = new CaratulaGatewayAdapter();
+        const ingFactGateway: FormsGatewayIntPort<FormIngresosFancturacion> = new IngFactGatewayAdapter();
         const exceptionHandler: ErrorFormatterIntPort = new ExceptionHandler();
-        const caratulaUseCases = new CaratulaUCAdapter(caratulaGateway,exceptionHandler);
-        const caratulaController: CaratulaController = new CaratulaController(caratulaUseCases);
-        const validatorMiddleware = new ValidatorMiddleware(CaratulaSchema);
+        const ingFactUseCases = new IngFactUCAdapter(ingFactGateway,exceptionHandler);
+        const ingFactController: IngFactController = new IngFactController(ingFactUseCases);
+        const validatorMiddleware = new ValidatorMiddleware(IngresosFacturacionSchema);
         const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler));
 
-        router.post("/", validatorMiddleware.validate, authMiddleware.authenticate("student"), caratulaController.postCaratula);
-        router.get("/", authMiddleware.authenticate("student"), caratulaController.getCaratulas);
-        router.get("/:id", authMiddleware.authenticate("student"), caratulaController.getIDCaratula);
-        router.put("/:id", validatorMiddleware.validate, authMiddleware.authenticate("student"), caratulaController.putCaratula);
 
+        router.get("/id", authMiddleware.authenticate("student"), ingFactController.getIDIngresosFacturacion);
+        router.put("/id", validatorMiddleware.validate, authMiddleware.authenticate("student"), ingFactController.putIngresosFacturacion);
+        router.get("/student/:stuID/room/:roomID", authMiddleware.authenticate("professor"), ingFactController.getFormByStudentAndRoom);
         return router;
     }
 }

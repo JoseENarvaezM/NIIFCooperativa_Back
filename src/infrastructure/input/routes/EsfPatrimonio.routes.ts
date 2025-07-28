@@ -26,11 +26,10 @@ export class EsfPatrimonioRoutes {
         const validatorMiddleware = new ValidatorMiddleware(ESFPatrimonioSchema);
         const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler));
 
-        router.post("/", validatorMiddleware.validate, authMiddleware.authenticate("student"), esfPatrimonioController.postEsfPatrimonio);
-        router.get("/", authMiddleware.authenticate("student"), esfPatrimonioController.getEsfPatrimonio);
-        router.get("/:id", authMiddleware.authenticate("student"), esfPatrimonioController.getIDEsfPatrimonio);
-        router.put("/:id", validatorMiddleware.validate, authMiddleware.authenticate("student"), esfPatrimonioController.putEsfPatrimonio);
 
+        router.get("/id", authMiddleware.authenticate("student"), esfPatrimonioController.getIDEsfPatrimonio);
+        router.put("/id", validatorMiddleware.validate, authMiddleware.authenticate("student"), esfPatrimonioController.putEsfPatrimonio);
+        router.get("/student/:stuID/room/:roomID", authMiddleware.authenticate("professor"), esfPatrimonioController.getEsfPatrimonioByStudentAndRoom);
         return router;
     }
 }

@@ -8,20 +8,14 @@ export class ActivosFijosUCAdapter implements FormsUCIntPort <FormActivosFijos> 
         private activosFijosGateway: FormsGatewayIntPort<FormActivosFijos>,
         private errorFormatter: ErrorFormatterIntPort
     ) {}
-    async listForms(): Promise<FormActivosFijos[]> {
-        return this.activosFijosGateway.listForms();
-    }
-    async getIDForm(id: string): Promise<FormActivosFijos | null> {
-        const formAF = await this.activosFijosGateway.getIDForm(id);
+    async getIDForm(stuID: string, roomID: string): Promise<FormActivosFijos | null> {
+        const formAF = await this.activosFijosGateway.getIDForm(stuID, roomID);
         if (!formAF) {
-            this.errorFormatter.errorNotFound(`Form with ID ${id} not found`);
+            this.errorFormatter.errorNotFound(`Form with stuID ${stuID} and roomID ${roomID} not found`);
         }
         return formAF;
     }
-    async createForm(activo: FormActivosFijos): Promise<FormActivosFijos> {
-        return this.activosFijosGateway.createForm(activo);
-    }
-    async updateForm(id: string, activo: FormActivosFijos): Promise<FormActivosFijos> {
-        return this.activosFijosGateway.updateForm(id, activo);
+    async updateForm(stuID: string, roomID: string, activo: FormActivosFijos): Promise<FormActivosFijos> {
+        return this.activosFijosGateway.updateForm(stuID, roomID, activo);
     }
 }

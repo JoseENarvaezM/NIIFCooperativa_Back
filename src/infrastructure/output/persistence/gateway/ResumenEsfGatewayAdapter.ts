@@ -3,26 +3,35 @@ import { FormResumenEsferi } from "../../../../domain/models/FormResumenEsferiMo
 import { FormsGatewayIntPort } from "../../../../application/output/FormsGatewayIntPort";
 
 export class ResumenEsfGatewayAdapter implements FormsGatewayIntPort<FormResumenEsferi> {
-    async listForms(): Promise<FormResumenEsferi[]> {
-        return prisma.formresumenesferi.findMany();
-    }
 
-    async getIDForm(id: string): Promise<FormResumenEsferi | null> {
-        return prisma.formresumenesferi.findUnique({
-            where: { resID: id }
+
+    async getIDForm(stuID: string, roomID: string): Promise<FormResumenEsferi | null> {
+        const report = await prisma.report.findFirst({
+            where: { stuID: stuID, roomID: roomID }
         });
+        const resumenEsf = await prisma.formresumenesferi.findUnique({
+            where: { resID: report?.resID }
+        });
+        return resumenEsf;
     }
 
     async createForm(resumenEsf: FormResumenEsferi): Promise<FormResumenEsferi> {
         return prisma.formresumenesferi.create({
-            data: resumenEsf
+            data: {
+                resContent: { ...resumenEsf },
+            }
         });
     }
 
-    async updateForm(id: string, resumenEsf: FormResumenEsferi): Promise<FormResumenEsferi> {
+    async updateForm(stuID: string, roomID: string, resumenEsf: FormResumenEsferi): Promise<FormResumenEsferi> {
+        const report = await prisma.report.findFirst({
+            where: { stuID: stuID, roomID: roomID }
+        });
         return prisma.formresumenesferi.update({
-            where: { resID: id },
-            data: resumenEsf
+            where: { resID: report?.resID },
+            data: {
+                resContent: { ...resumenEsf },
+            }
         });
     }
 }

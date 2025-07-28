@@ -27,11 +27,10 @@ export class ActivosFijosRoutes{
         const validatorMiddleware = new ValidatorMiddleware(ActivosFijosSchema);
         const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler));
 
-        router.post("/", validatorMiddleware.validate, authMiddleware.authenticate("student"), activosFijosController.postActivoFijo);
-        router.get("/", authMiddleware.authenticate("student"), activosFijosController.getActivosFijos);
-        router.get("/:id", authMiddleware.authenticate("student"), activosFijosController.getIDActivoFijo);
-        router.put("/:id", validatorMiddleware.validate, authMiddleware.authenticate("student"), activosFijosController.putActivoFijo);
 
+        router.get("/id", authMiddleware.authenticate("student"), activosFijosController.getIDActivoFijo);
+        router.put("/id", validatorMiddleware.validate, authMiddleware.authenticate("student"), activosFijosController.putActivoFijo);
+        router.get("/student/:stuID/room/:roomID", authMiddleware.authenticate("professor"), activosFijosController.getActivoFijoByStudentAndRoom);
         return router;
     }
 
