@@ -17,7 +17,7 @@ export class ImpuestoDiferidoGatewayAdapter implements FormsGatewayIntPort<FormI
     async createForm(impuestoDiferido: FormImpuestoDiferido): Promise<FormImpuestoDiferido> {
         return prisma.formimpuestodiferido.create({
             data: {
-                impContent: { ...impuestoDiferido },
+                impContent: { ...impuestoDiferido.impContent },
             }
         });
     }

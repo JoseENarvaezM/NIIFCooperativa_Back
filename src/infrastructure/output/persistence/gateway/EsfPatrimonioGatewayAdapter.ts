@@ -17,7 +17,7 @@ export class EsfPatrimonioGatewayAdapter implements FormsGatewayIntPort<FormEsfP
     async createForm(esfPatrimonio: FormEsfPatrimonio): Promise<FormEsfPatrimonio> {
         return prisma.formesfpatrimonio.create({
             data: {
-                esfContent: { ...esfPatrimonio },
+                esfContent: { ...esfPatrimonio.esfContent },
             }
         });
     }

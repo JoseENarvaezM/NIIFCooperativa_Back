@@ -17,7 +17,7 @@ export class DetalleRenglonesGatewayAdapter implements FormsGatewayIntPort<FormD
     async createForm(detalleRenglones: FormDetalleRenglones): Promise<FormDetalleRenglones> {
         return prisma.formdetallerenglones.create({
             data: {
-                detContent: { ...detalleRenglones },
+                detContent: { ...detalleRenglones.detContent },
             }
         });
     }

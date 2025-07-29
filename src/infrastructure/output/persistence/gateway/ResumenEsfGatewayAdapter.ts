@@ -18,7 +18,7 @@ export class ResumenEsfGatewayAdapter implements FormsGatewayIntPort<FormResumen
     async createForm(resumenEsf: FormResumenEsferi): Promise<FormResumenEsferi> {
         return prisma.formresumenesferi.create({
             data: {
-                resContent: { ...resumenEsf },
+                resContent: { ...resumenEsf.resContent },
             }
         });
     }

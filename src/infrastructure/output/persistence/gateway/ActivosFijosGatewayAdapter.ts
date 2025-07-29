@@ -18,7 +18,7 @@ export class ActivosFijosGatewayAdapter implements FormsGatewayIntPort<FormActiv
     async createForm(activo: FormActivosFijos): Promise<FormActivosFijos> {
         return prisma.formactivosfijos.create({
             data: {
-                actContent: { ...activo },
+                actContent: { ...activo.actContent },
             }
         });
     }

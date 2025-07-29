@@ -17,7 +17,7 @@ export class CaratulaGatewayAdapter implements FormsGatewayIntPort<FormCaratula>
     async createForm(caratula: FormCaratula): Promise<FormCaratula> {
         return prisma.formcaratula.create({
             data: {
-                carContent: { ...caratula },
+                carContent: { ...caratula.carContent },
             }
         });
     }

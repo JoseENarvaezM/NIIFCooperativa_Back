@@ -17,7 +17,7 @@ export class RentaLiquidaGatewayAdapter implements FormsGatewayIntPort<FormRenta
     async createForm(rentaLiquida: FormRentaLiquida): Promise<FormRentaLiquida> {
         return prisma.formrentaliquida.create({
             data: {
-                renContent: { ...rentaLiquida },
+                renContent: { ...rentaLiquida.renContent },
             }
         });
     }

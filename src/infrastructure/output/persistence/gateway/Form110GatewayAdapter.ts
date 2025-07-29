@@ -18,7 +18,7 @@ export class Form110GatewayAdapter implements FormsGatewayIntPort<FormR110> {
     async createForm(form110: FormR110): Promise<FormR110> {
         return prisma.formr110.create({
             data: {
-                r110Content: { ...form110 },
+                r110Content: { ...form110.r110Content },
             }
         });
     }

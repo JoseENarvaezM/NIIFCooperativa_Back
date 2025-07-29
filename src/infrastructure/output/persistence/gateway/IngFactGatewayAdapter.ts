@@ -17,7 +17,7 @@ export class IngFactGatewayAdapter implements FormsGatewayIntPort<FormIngresosFa
     async createForm(ingFact: FormIngresosFancturacion): Promise<FormIngresosFancturacion> {
         return prisma.formingresosfancturacion.create({
             data: {
-                ingContent: { ...ingFact },
+                ingContent: { ...ingFact.ingContent },
             }
         });
     }
