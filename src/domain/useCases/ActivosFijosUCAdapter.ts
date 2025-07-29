@@ -11,7 +11,7 @@ export class ActivosFijosUCAdapter implements FormsUCIntPort <FormActivosFijos> 
     async getIDForm(stuID: string, roomID: string): Promise<FormActivosFijos | null> {
         const formAF = await this.activosFijosGateway.getIDForm(stuID, roomID);
         if (!formAF) {
-            this.errorFormatter.errorNotFound(`Form with stuID ${stuID} and roomID ${roomID} not found`);
+            this.errorFormatter.errorNotFound(`Formulario con stuID ${stuID} y roomID ${roomID} no se encontró.`);
         }
         return formAF;
     }

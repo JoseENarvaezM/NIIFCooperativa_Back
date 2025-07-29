@@ -18,7 +18,7 @@ export class UserUCAdapter implements UserUCIntPort {
             user.usuPassword = "";
             return user;
         }
-        this.errorFormatter.errorNotFound(`User with id ${id} does not exist.`);
+        this.errorFormatter.errorNotFound(`Usuario con id ${id} no existe.`);
         return null;
     }
 
@@ -29,13 +29,13 @@ export class UserUCAdapter implements UserUCIntPort {
         await this.userGateway.deleteUserById(id);
         return;
     }
-    this.errorFormatter.errorNotFound(`User with id ${id} does not exist.`);
+    this.errorFormatter.errorNotFound(`Usuario con id ${id} no existe.`);
 }
 
     async changeUserPassword(id: string, newPassword: string,usuOldPassword: string): Promise<void> {
         const user = await this.userGateway.getUserById(id);
         if (!user) {
-            this.errorFormatter.errorNotFound(`User with id ${id} does not exist.`);
+            this.errorFormatter.errorNotFound(`Usuario con id ${id} no existe.`);
             return;
         }
         if (await Encrypt.comparePassword(usuOldPassword, user.usuPassword)) {
@@ -43,7 +43,7 @@ export class UserUCAdapter implements UserUCIntPort {
             await this.userGateway.updateUser(id, user);
             return;
         }
-        this.errorFormatter.genericError("Old password is incorrect.");
+        this.errorFormatter.genericError("La contraseña vieja es incorrecta.");
     }   
 
     async createUser(user: User): Promise<User| null> {
@@ -52,19 +52,19 @@ export class UserUCAdapter implements UserUCIntPort {
             user.usuPassword = await Encrypt.hashPassword(user.usuPassword);
             return this.userGateway.createUser(user);
         }
-        this.errorFormatter.errorExistsEntity(`User with email ${user.usuEmail} already exists.`);
+        this.errorFormatter.errorExistsEntity(`Usuario con email ${user.usuEmail} ya existe.`);
         return null;
     }
     async updateUser(id: string, user: User): Promise<User| null> {
         const data = await this.userGateway.getUserById(id);
         if (!data) {
-            this.errorFormatter.errorNotFound(`User with id ${id} does not exist.`);
+            this.errorFormatter.errorNotFound(`Usuario con id ${id} no existe.`);
             return null;
         }
         if (data.usuEmail !== user.usuEmail) {
             const exists = await this.userGateway.existByEmail(user.usuEmail);
             if (exists) {
-                this.errorFormatter.errorExistsEntity(`User with email ${user.usuEmail} already exists.`);
+                this.errorFormatter.errorExistsEntity(`Usuario con email ${user.usuEmail} ya existe.`);
                 return null;
             }
         }
@@ -81,7 +81,7 @@ export class UserUCAdapter implements UserUCIntPort {
         if (role === 'professor') {
             return this.userGateway.listProfessorUsers(role);
         }
-        throw new Error(`User with role ${role} is not a professor.`);
+        throw new Error(`Usuario con rol ${role} no es un profesor.`);
     }
 
 }

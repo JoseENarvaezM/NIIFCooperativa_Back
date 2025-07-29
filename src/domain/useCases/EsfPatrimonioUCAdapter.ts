@@ -12,7 +12,7 @@ export class EsfPatrimonioUCAdapter implements FormsUCIntPort<FormEsfPatrimonio>
     async getIDForm(stuID: string, roomID: string): Promise<FormEsfPatrimonio | null> {
         const formEsfPatrimonio = await this.esfPatrimonioGateway.getIDForm(stuID, roomID);
         if (!formEsfPatrimonio) {
-            this.errorFormatter.errorNotFound(`Form with stuID ${stuID} and roomID ${roomID} not found`);
+            this.errorFormatter.errorNotFound(`Formulario con stuID ${stuID} y roomID ${roomID} no se encontró.`);
         }
         return formEsfPatrimonio;
     }

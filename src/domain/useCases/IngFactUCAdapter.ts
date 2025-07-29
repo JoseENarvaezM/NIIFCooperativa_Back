@@ -11,7 +11,7 @@ export class IngFactUCAdapter implements FormsUCIntPort<FormIngresosFancturacion
     async getIDForm(stuID: string, roomID: string): Promise<FormIngresosFancturacion | null> {
         const formIngresos = await this.ingFactGateway.getIDForm(stuID, roomID);
         if (!formIngresos) {
-            this.errorFormatter.errorNotFound(`Form with stuID ${stuID} and roomID ${roomID} not found`);
+            this.errorFormatter.errorNotFound(`Formulario con stuID ${stuID} y roomID ${roomID} no se encontró.`);
         }
         return formIngresos;
     }

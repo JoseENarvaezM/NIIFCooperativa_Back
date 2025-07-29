@@ -11,7 +11,7 @@ export class ResumenEsfUCAdapter implements FormsUCIntPort<FormResumenEsferi> {
     async getIDForm(stuID: string, roomID: string): Promise<FormResumenEsferi | null> {
         const formResumenEsf = await this.resumenEsfGateway.getIDForm(stuID, roomID);
         if (!formResumenEsf) {
-            this.errorFormatter.errorNotFound(`Form with stuID ${stuID} and roomID ${roomID} not found`);
+            this.errorFormatter.errorNotFound(`Formulario con stuID ${stuID} y roomID ${roomID} no se encontró.`);
         }
         return formResumenEsf;
     }

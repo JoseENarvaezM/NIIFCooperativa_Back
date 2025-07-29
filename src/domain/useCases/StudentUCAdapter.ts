@@ -41,7 +41,7 @@ export class StudentUCAdapter implements StudentUCIntPort {
         const room = await this.roomGateway.obtainRoomByID(student.roomID);
 
         if (!room) {
-            this.errorFormatter.errorNotFound(`Room with id ${student.roomID} does not exist.`);
+            this.errorFormatter.errorNotFound(`Room con id ${student.roomID} no existe.`);
             return null;
         }
 
@@ -58,7 +58,7 @@ export class StudentUCAdapter implements StudentUCIntPort {
         const studentExists = await this.studentGateway.searchStudentByCedulaRoom(student.stuCedula, student.roomID);
 
         if (studentExists) {
-            this.errorFormatter.genericError(`Student with cedula ${student.stuCedula} already exists in room ${room.roomName}.`);
+            this.errorFormatter.genericError(`Estudiante con cedula ${student.stuCedula} ya existe en este room ${room.roomName}.`);
             return null;
         }
 
@@ -96,7 +96,7 @@ export class StudentUCAdapter implements StudentUCIntPort {
         if (student) {
             return student;
         }
-        this.errorFormatter.errorNotFound(`Student with id ${id} does not exist.`);
+        this.errorFormatter.errorNotFound(`Estudiante con id ${id} no existe.`);
         return null;
     }
 
@@ -105,7 +105,7 @@ export class StudentUCAdapter implements StudentUCIntPort {
         if (updatedStudent) {
             return updatedStudent;
         }
-        this.errorFormatter.errorNotFound(`Student with id ${id} does not exist.`);
+        this.errorFormatter.errorNotFound(`Estudiante con id ${id} no existe.`);
         return null;
     }
 
@@ -115,7 +115,7 @@ export class StudentUCAdapter implements StudentUCIntPort {
             await this.studentGateway.deleteStudent(id);
             return;
         }
-        this.errorFormatter.errorNotFound(`Student with id ${id} does not exist.`);
+        this.errorFormatter.errorNotFound(`Estudiante con id ${id} no existe.`);
     }
 
     async getStudentByCedulaRoom(cedula: string, roomID: string): Promise<Student & { token: string, usuRole: string } | null> {
@@ -123,14 +123,14 @@ export class StudentUCAdapter implements StudentUCIntPort {
         const room = await this.roomGateway.obtainRoomByID(roomID);
 
         if (!room) {
-            this.errorFormatter.errorNotFound(`Room with id ${roomID} does not exist.`);
+            this.errorFormatter.errorNotFound(`Room con id ${roomID} no existe.`);
             return null;
         }
 
         const student = await this.studentGateway.searchStudentByCedulaRoom(cedula, roomID);
         
         if (!student) {
-            this.errorFormatter.errorNotFound(`Student with cedula ${cedula} in room ${room.roomName} does not exist.`);
+            this.errorFormatter.errorNotFound(`Estudiante con cedula ${cedula} en este room ${room.roomName} no existe.`);
             return null;
         }
 

@@ -11,7 +11,7 @@ export class ReportUCAdapter implements ReportUCIntPort {
     async getReportByID(id: string): Promise<Report | null> {
         const report = await this.reportGateway.getIDReport(id);
         if (!report) {
-            throw new Error(`Report with ID ${id} not found`);
+            throw new Error(`Reporte con ID ${id} no se encontró.`);
         }
         return report;
     }

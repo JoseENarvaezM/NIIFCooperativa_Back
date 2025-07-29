@@ -11,7 +11,7 @@ export class RentaLiquidaUCAdapter implements FormsUCIntPort<FormRentaLiquida> {
     async getIDForm(stuID: string, roomID: string): Promise<FormRentaLiquida | null> {
         const formRentaLiquida = await this.rentaLiquidaGateway.getIDForm(stuID, roomID);
         if (!formRentaLiquida) {
-            this.errorFormatter.errorNotFound(`Form with stuID ${stuID} and roomID ${roomID} not found`);
+            this.errorFormatter.errorNotFound(`Formulario con stuID ${stuID} y roomID ${roomID} no se encontró.`);
         }
         return formRentaLiquida;
     }
