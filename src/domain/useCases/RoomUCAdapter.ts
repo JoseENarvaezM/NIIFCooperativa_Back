@@ -14,6 +14,12 @@ export class RoomUCAdapter implements RoomUCIntPort {
         room.roomStatus = "closed";
         room.roomAnswer = {}
 
+        const existRoomByPassword = await this.roomGateway.validateRoomPassword(room.roomPassword);
+        if (existRoomByPassword) {
+            this.errorFormatter.genericError(`Room with password ${room.roomPassword} already exists.`);
+            return null;
+        }
+
         return this.roomGateway.createRoom(room);
     }
     async obtainRoomByID(roomID: string): Promise<Room | null> {
@@ -28,8 +34,20 @@ export class RoomUCAdapter implements RoomUCIntPort {
         return this.roomGateway.obtainRoomsByTeacher(teaID);
     }
     async uptdateRoom(roomID: string, room: Room): Promise<Room | null> {
+
+        const existingRoom = await this.roomGateway.obtainRoomByID(roomID);
+        if (!existingRoom) {
+            this.errorFormatter.errorNotFound(`Room with ID ${roomID} does not exist.`);
+            return null;
+        }
+
+        const existRoomByPassword = await this.roomGateway.validateRoomPassword(room.roomPassword);
+        if (!existRoomByPassword) {
+            this.errorFormatter.genericError(`Room with password ${room.roomPassword} does not exist.`);
+            return null;
+        }
+
         return this.roomGateway.uptdateRoom(roomID, room);
-        //this.errorFormatter.errorNotFound(`Room with ID ${roomID} does not exist.`);
     }
     async deleteRoomByID(roomID: string): Promise<void> {
         const room = await this.roomGateway.obtainRoomByID(roomID);
