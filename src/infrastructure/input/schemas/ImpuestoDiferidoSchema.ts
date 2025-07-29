@@ -8,172 +8,191 @@ export const ImpuestoDiferidoSchema = z.object({
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       InversionesEInstrumentosDerivados: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       CuentasPorCobrar: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       Inventarios: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       PropiedadesPlantaYEquipo: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       ActivosIntangibles: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       PropiedadesDeInversion: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       ActivosBiologicos: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       EntregarAPropietarios: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       PasivosFinancierosYCuentasPorPagar: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       ImpuestosGravamenesYTasas: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       BeneficiosAEmpleados: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       Provisiones: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       OtrosPasivosAnticiposYAvancesRecibidos: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       OperacionesConTitulosYDerivados: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       PerdidasFiscalesYExcesosDeRentaPresuntiva: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       Fiscales: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       OtrosActivos: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       Total: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
-      }),
+        TasaFiscalAplicada: z.number()
+      })
     }),
     PasivoDiferido: z.object({
       EfectivoYEfectivoEquivalente: z.object({
@@ -181,173 +200,192 @@ export const ImpuestoDiferidoSchema = z.object({
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       InversionesEInstrumentosDerivados: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       CuentasPorCobrar: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       Inventarios: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       PropiedadesPlantaYEquipo: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       ActivosIntangibles: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       PropiedadesDeInversion: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       ActivosBiologicos: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       EntregarAPropietarios: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       PasivosFinancierosYCuentasPorPagar: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       ImpuestosGravamenesYTasas: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       BeneficiosAEmpleados: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       Provisiones: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       OtrosPasivosAnticiposYAvancesRecibidos: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       OperacionesConTitulosYDerivados: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       PerdidasFiscalesYExcesosDeRentaPresuntiva: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       Fiscales: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       OtrosActivos: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
+        TasaFiscalAplicada: z.number()
       }),
       Total: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
         DiferenciaPermanente: z.number(),
-        SaldoImpuestoDiferido: z.number(),
+        SaldoImpuestoDiferidoActual: z.number(),
+        SaldoImpuestoDiferidoAnterior: z.number(),
         Variacion: z.number(),
-        TasaFiscalAplicada: z.number(),
-      }),
-    }),
+        TasaFiscalAplicada: z.number()
+      })
+    })
   }),
   ActivosCreditosTributos: z.object({
     SaldosFavor: z.object({
@@ -358,7 +396,7 @@ export const ImpuestoDiferidoSchema = z.object({
       CorreccionMayorValor: z.number(),
       CorreccionMenorValor: z.number(),
       AjusteMayorValor: z.number(),
-      AjusteMenorValor: z.number(),
+      AjusteMenorValor: z.number()
     }),
     ImpuestosPagadosExterior: z.object({
       Saldo31VigenciaActual: z.number(),
@@ -368,11 +406,11 @@ export const ImpuestoDiferidoSchema = z.object({
       CorreccionMayorValor: z.number(),
       CorreccionMenorValor: z.number(),
       AjusteMayorValor: z.number(),
-      AjusteMenorValor: z.number(),
-    }),
+      AjusteMenorValor: z.number()
+    })
   }),
-  DetalleCompensacionPerdidasFiscales: z.array(
-    z.object({
+  DetalleCompensacionPerdidasFiscales: z.object({
+    Anterior: z.object({
       Anio: z.number(),
       PerdidasFiscalesAcumuladasCompensarInicio: z.number(),
       PerdidaFiscalGeneradaPeriodo: z.number(),
@@ -381,11 +419,22 @@ export const ImpuestoDiferidoSchema = z.object({
       AjustesMayorValor: z.number(),
       AjustesMenorValor: z.number(),
       PerdidaFiscalAcumuladaCompensarFinal: z.number(),
-      SaldoActivoImpuestoDiferido: z.number(),
+      SaldoActivoImpuestoDiferido: z.number()
+    }),
+    Actual: z.object({
+      Anio: z.number(),
+      PerdidasFiscalesAcumuladasCompensarInicio: z.number(),
+      PerdidaFiscalGeneradaPeriodo: z.number(),
+      PerdidaFiscalCompensadaPeriodo: z.number(),
+      ValoresNoCompesados: z.number(),
+      AjustesMayorValor: z.number(),
+      AjustesMenorValor: z.number(),
+      PerdidaFiscalAcumuladaCompensarFinal: z.number(),
+      SaldoActivoImpuestoDiferido: z.number()
     })
-  ),
-  DetalleCompensacionExcesoRentaPresuntiva: z.array(
-    z.object({
+  }),
+  DetalleCompensacionExcesoRentaPresuntiva: z.object({
+    Anterior: z.object({
       Anio: z.number(),
       ValorAcumuladoCompensarInicioPeriodo: z.number(),
       ValorGeneradoPeriodo: z.number(),
@@ -394,7 +443,19 @@ export const ImpuestoDiferidoSchema = z.object({
       AjustesMayorValor: z.number(),
       AjustesMenorValor: z.number(),
       ValorAcumuladoCompensarFinalPerido: z.number(),
-      SaldoActivoImpuestoDiferidoFinal: z.number(),
+      SaldoActivoImpuestoDiferidoFinal: z.number()
+    }),
+    Actual: z.object({
+      Anio: z.number(),
+      ValorAcumuladoCompensarInicioPeriodo: z.number(),
+      ValorGeneradoPeriodo: z.number(),
+      ValorCompensadoPeriodo: z.number(),
+      ValoresNoCompensados: z.number(),
+      AjustesMayorValor: z.number(),
+      AjustesMenorValor: z.number(),
+      ValorAcumuladoCompensarFinalPerido: z.number(),
+      SaldoActivoImpuestoDiferidoFinal: z.number()
     })
-  ),
-});
+  })
+})
+
