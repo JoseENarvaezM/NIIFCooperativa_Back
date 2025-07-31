@@ -1,1970 +1,2128 @@
 export const ActivosFijosInput = {
-  PropiedadesPlantasEquipos: {
+  PropiedadesPlantasYEquipos: {
     Terrenos: {
-      Contables: {
-        Comienzo: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
     Edificios: {
-      Contables: {
-        Comienzo: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
     Maquinaria: {
-      Contables: {
-        Comienzo: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
     Buques: {
-      Contables: {
-        Comienzo: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
     Aeronave: {
-      Contables: {
-        Comienzo: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
-    EquiposTransporte: {
-      Contables: {
-        Comienzo: {
+    EquiposDeTransporte: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
-    EnseresAccesorios: {
-      Contables: {
-        Comienzo: {
+    EnseresYAccesorios: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
     EquiposInformaticos: {
-      Contables: {
-        Comienzo: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
-    EquiposRedesComunicacion: {
-      Contables: {
-        Comienzo: {
+    EquiposDeRedesYComunicacion: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
-    InfraestructuraRed: {
-      Contables: {
-        Comienzo: {
+    InfraestructuraDeRed: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
-    ActivosTangiblesExploracionEvaluacion: {
-      Contables: {
-        Comienzo: {
+    ActivosTangiblesDeExploracionYEvaluacion: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
-    ActivosMineria: {
-      Contables: {
-        Comienzo: {
+    ActivosDeMineria: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
-    ActivosPetroleoGas: {
-      Contables: {
-        Comienzo: {
+    ActivosDePetroleoYGas: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
-    PPyEArrendamientoOperativo: {
-      Contables: {
-        Comienzo: {
+    "PP&EEnArrendamientoOperativo": {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
     PlantasProductoras: {
-      Contables: {
-        Comienzo: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
     AnimalesProductores: {
-      Contables: {
-        Comienzo: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
-    ConstruccionesProceso: {
-      Contables: {
-        Comienzo: {
+    ConstruccionesEnProceso: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
-    Otras: {
-      Contables: {
-        Comienzo: {
+    OtrasPropiedadesPlantasEquipo: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
-    Total: {
-      Contables: {
-        Comienzo: {
+    TotalPropiedadesPlantasEquipo: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
   },
-  PropiedadesInversión: {
+  PropiedadesDeInversión: {
     Terrenos: {
-      Contables: {
-        Comienzo: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
     Edificios: {
-      Contables: {
-        Comienzo: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
-    Total: {
-      Contables: {
-        Comienzo: {
+    TotalPorpiedadesDeInversion: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
   },
   ANCMV: {
-    ANCMV: {
-      Contables: {
-        Comienzo: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
-  },
   TotalPPEPIANCMV: {
-    Contables: {
-      Comienzo: {
-        Costo: 0,
-        Conversion: 0,
-        Ajuste: 0,
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
+          Costo: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
+        },
+        Incrementos: {
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
+        },
+        Disminuciones: {
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
+        },
+        Depreciacion: {
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
+        },
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
+          Costo: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
+        },
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
+        },
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
+        DesmantelamientoRestauracion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Incrementos: {
-        Transferencias: 0,
-        CambiosValorRazonable: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
-      Disminuciones: {
-        Transferencias: 0,
-        CambiosValorRazonable: 0,
-      },
-      Depreciacion: {
-        Costo: 0,
-        Conversion: 0,
-        Ajuste: 0,
-      },
-      Deterioro: 0,
-      ImporteNeto: {
-        Costo: 0,
-        Ajuste: 0,
-      },
-      GastoDepreciacion: {
-        Costo: 0,
-        Ajuste: 0,
-      },
-      GastoDetereorio: 0,
-      IngresosPeriodoDetereorio: 0,
-      ValorActivosLeasing: 0,
-      DesmantelamientoRestauracion: 0,
-      ValorRevaluacion: 0,
     },
-    Fiscales: {
-      SaldoComienzo: 0,
-      IncrementosTransferencias: 0,
-      DisminucionesTransferencias: 0,
-      SubtotalFinalPeriodo: 0,
-      Depreciacion: 0,
-      TotalNeto: 0,
-      GastoFiscalPeriodo: 0,
-      ValorTotal: 0,
-      DepreacionFinal: 0,
-      ValorNeto: 0,
-      GastoFiscal: 0,
-    },
-  },
   ActivosIntangibles: {
     MarcasComerciales: {
-      Contables: {
-        Comienzo: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
-    ActivosIntangiblesExploracionEvaluacion: {
-      Contables: {
-        Comienzo: {
+    ActivosIntangiblesDeExploracionYEvaluacion: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
-    CabecerasOeriodicosRevistasTitulosPublicaciones: {
-      Contables: {
-        Comienzo: {
+    CabecerasDePeriodicosRevistasOTitulosPublicaciones: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
-    ProgramasAplicacionesInformaticos: {
-      Contables: {
-        Comienzo: {
+    ProgramasYAplicacionesInformaticas: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
-    LicenciasFranquicias: {
-      Contables: {
-        Comienzo: {
+    LicenciasYFranquicias: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
-    PropiedadIntelectualPatentesPropiedadIndustrialServiciosDerechosOperacion: {
-      Contables: {
-        Comienzo: {
+    PropiedadIntelectualPatentesYOtraPropiedadIndustrialServiciosYDerechosOperacion: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
-    RecetasFormulasModelosDiseñosPrototipos: {
-      Contables: {
-        Comienzo: {
+    RecetasFormulasModelosDiseñosYPrototipos: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
     Concesiones: {
-      Contables: {
-        Comienzo: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
-    DesembolsosDesarrolloCapitalizados: {
-      Contables: {
-        Comienzo: {
+    DesembolsosDeDesarrolloCapitalizados: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
-    ActivosIntangiblesDesarrollo: {
-      Contables: {
-        Comienzo: {
+    ActivosIntangiblesEnDesarrollo: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
     Plusvalia: {
-      Contables: {
-        Comienzo: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
-    MejorasDerechosArrendamiento: {
-      Contables: {
-        Comienzo: {
+    MejorasDeDerechosDeArrendamiento: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
-    SubvencionesEstado: {
-      Contables: {
-        Comienzo: {
+    SubvencionesDelEstado: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
-    Otros: {
-      Contables: {
-        Comienzo: {
+    OtrosActivosIntangibles: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
-    Total: {
-      Contables: {
-        Comienzo: {
+    TotalActivosIntangibles: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
           Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
-          Transferencias: 0,
-          CambiosValorRazonable: 0,
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
         },
         Depreciacion: {
-          Costo: 0,
-          Conversion: 0,
-          Ajuste: 0,
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        Deterioro: 0,
-        ImporteNeto: {
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
           Costo: 0,
-          Ajuste: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDepreciacion: {
-          Costo: 0,
-          Ajuste: 0,
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
         },
-        GastoDetereorio: 0,
-        IngresosPeriodoDetereorio: 0,
-        ValorActivosLeasing: 0,
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
         DesmantelamientoRestauracion: 0,
-        ValorRevaluacion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Fiscales: {
-        SaldoComienzo: 0,
-        IncrementosTransferencias: 0,
-        DisminucionesTransferencias: 0,
-        SubtotalFinalPeriodo: 0,
-        Depreciacion: 0,
-        TotalNeto: 0,
-        GastoFiscalPeriodo: 0,
-        ValorTotal: 0,
-        DepreacionFinal: 0,
-        ValorNeto: 0,
-        GastoFiscal: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
     },
   },
-  TotalTodo: {
-    Contables: {
-      Comienzo: {
-        Costo: 0,
-        Conversion: 0,
-        Ajuste: 0,
+  TotalPPEPIANCMVYINTANGIBLES: {
+      DatosContables: {
+        ImporteAlComienzoDelPeriodo: {
+          Costo: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
+        },
+        Incrementos: {
+          "TransferenciasAdquisiciones": 0,
+          CambiosEnValorRazonable: 0,
+        },
+        Disminuciones: {
+          TransferenciasEliminaciones: 0,
+          CambiosEnValorRazonable: 0,
+        },
+        Depreciacion: {
+          PorCosto: 0,
+          EfectoDeConversion: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
+        },
+        DeterioroAcumuladoAlFinalDelPeriodo: 0,
+        ImporteNetoAlFinalDelPeriodo: {
+          Costo: 0,
+          AjustePorRevaluacionesOReExpresiones: 0,
+        },
+        GastoPeriodoPorDepreciacionOAmortizacion: {
+          PorCosto: 0,
+          PorAjustePorRevaluacionesOReExpresiones: 0,
+        },
+        GastoDelPeriodoPorDeterioro: 0,
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
+        DesmantelamientoRestauracion: 0,
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      Incrementos: {
-        Transferencias: 0,
-        CambiosValorRazonable: 0,
+      DatosFiscales: {
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+          SaldoAlComienzoDelPeriodo: 0,
+          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+          DisminucionesPorTransferenciasYOtrosCambios: 0,
+          SubtotalAlFinalPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          TotalNetoAlFinalDelPeriodo: 0,
+          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+        },
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+          ValorTotalAlFinalDelPeriodo: 0,
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+          ValorNetoAlFinalDelPeriodo: 0,
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+        }
       },
-      Disminuciones: {
-        Transferencias: 0,
-        CambiosValorRazonable: 0,
-      },
-      Depreciacion: {
-        Costo: 0,
-        Conversion: 0,
-        Ajuste: 0,
-      },
-      Deterioro: 0,
-      ImporteNeto: {
-        Costo: 0,
-        Ajuste: 0,
-      },
-      GastoDepreciacion: {
-        Costo: 0,
-        Ajuste: 0,
-      },
-      GastoDetereorio: 0,
-      IngresosPeriodoDetereorio: 0,
-      ValorActivosLeasing: 0,
-      DesmantelamientoRestauracion: 0,
-      ValorRevaluacion: 0,
-    },
-    Fiscales: {
-      SaldoComienzo: 0,
-      IncrementosTransferencias: 0,
-      DisminucionesTransferencias: 0,
-      SubtotalFinalPeriodo: 0,
-      Depreciacion: 0,
-      TotalNeto: 0,
-      GastoFiscalPeriodo: 0,
-      ValorTotal: 0,
-      DepreacionFinal: 0,
-      ValorNeto: 0,
-      GastoFiscal: 0,
-    },
   },
 };
