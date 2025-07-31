@@ -11,7 +11,7 @@ export class ImpuestoDiferidoUCAdapter implements FormsUCIntPort<FormImpuestoDif
     async getIDForm(stuID: string, roomID: string): Promise<FormImpuestoDiferido | null> {
         const formImpuestoDiferido = await this.impuestoDiferidoGateway.getIDForm(stuID, roomID);
         if (!formImpuestoDiferido) {
-            this.errorFormatter.errorNotFound(`Form with stuID ${stuID} and roomID ${roomID} not found`);
+            this.errorFormatter.errorNotFound(`Formulario con stuID ${stuID} y roomID ${roomID} no se encontró.`);
         }
         return formImpuestoDiferido;
     }

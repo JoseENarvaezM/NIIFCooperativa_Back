@@ -12,7 +12,7 @@ export class DetalleRenglonesUCAdapter implements FormsUCIntPort<FormDetalleReng
     async getIDForm(stuID: string, roomID: string): Promise<FormDetalleRenglones | null> {
         const formDetalleRenglones = await this.detalleRenglonesGateway.getIDForm(stuID, roomID);
         if (!formDetalleRenglones) {
-            this.errorFormatter.errorNotFound(`Form with stuID ${stuID} and roomID ${roomID} not found`);
+            this.errorFormatter.errorNotFound(`Formulario con stuID ${stuID} y roomID ${roomID} no se encontró.`);
         }
         return formDetalleRenglones;
     }

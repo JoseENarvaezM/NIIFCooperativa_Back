@@ -11,7 +11,7 @@ export class CaratulaUCAdapter implements FormsUCIntPort<FormCaratula> {
     async getIDForm(stuID: string, roomID: string): Promise<FormCaratula | null> {
         const formCaratula = await this.caratulaGateway.getIDForm(stuID, roomID);
         if (!formCaratula) {
-            this.errorFormatter.errorNotFound(`Form of the student with ID ${stuID} in room ${roomID} not found.`);
+            this.errorFormatter.errorNotFound(`Formulario con stuID ${stuID} y roomID ${roomID} no se encontró.`);
         }
         return formCaratula;
     }

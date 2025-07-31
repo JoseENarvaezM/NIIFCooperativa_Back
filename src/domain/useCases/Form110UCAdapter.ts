@@ -11,7 +11,7 @@ export class Form110UCAdapter implements FormsUCIntPort<FormR110> {
     async getIDForm(stuID: string, roomID: string): Promise<FormR110 | null> {
         const form110 = await this.form110Gateway.getIDForm(stuID, roomID);
         if (!form110) {
-            this.errorFormatter.errorNotFound(`Form with stuID ${stuID} and roomID ${roomID} not found`);
+            this.errorFormatter.errorNotFound(`Formulario con stuID ${stuID} y roomID ${roomID} no se encontró.`);
         }
         return form110;
     }
