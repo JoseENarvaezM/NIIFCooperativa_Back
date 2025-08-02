@@ -1,109 +1,109 @@
 
 export const IngresosFacturacionInput = {
-  VentBien: {
-    PasivIngrDif: {
-      SaldoIniPer: 0,
-      IngrContPer: 0,
-      GenPer: 0,
-      TotPasivDif: 0,
+  VentaDeBienes: {
+    PasivoPorIngresoDiferido: {
+      SaldoAlInicioDelPeriodo: 0,
+      RegistradoComoIngresoContableEnElPeriodo: 0,
+      GeneradoEnElPeriodo: 0,
+      SaldoAlFinalDelPeriodo: 0,
     },
-    FactEmitPer: {
-      DevIngrPerAnt: 0,
-      DevIngrPerAct: 0,
-      RegIngDif: 0,
-      SoloFact: 0,
-      TotFactEmiPEr: 0,
+    FacturacionEmitidaEnElPeriodo: {
+      DevengadaComoIngresoEnPeriodosAnteriores: 0,
+      DevengadaComoIngresosDelPeriodo: 0,
+      RegistradaComoIngresoDiferido: 0,
+      SoloFacturadoNoHaGeneradoIngresoNiPasivoDiferido: 0,
+      ValorTotal: 0,
     },
-    IngrContDevPer: {
-      SinFact: 0,
-      FactPerAnt: 0,
-      TotalIngrContDevPer: 0,
+    IngresoContableDevengadoEnElPeriodo: {
+      SinFacturar: 0,
+      FacturadoPeriodosAnteriores: 0,
+      ValorTotal: 0,
     },
   },
-  PrestServ: {
-    PasivIngrDif: {
-      SaldoIniPer: 0,
-      IngrContPer: 0,
-      GenPer: 0,
-      TotPasivDif: 0,
+  PrestacionDeServicios: {
+    PasivoPorIngresoDiferido: {
+      SaldoAlInicioDelPeriodo: 0,
+      RegistradoComoIngresoContableEnElPeriodo: 0,
+      GeneradoEnElPeriodo: 0,
+      SaldoAlFinalDelPeriodo: 0,
     },
-    FactEmitPer: {
-      DevIngrPerAnt: 0,
-      DevIngrPerAct: 0,
-      RegIngDif: 0,
-      SoloFact: 0,
-      TotFactEmiPEr: 0,
+    FacturacionEmitidaEnElPeriodo: {
+      DevengadaComoIngresoEnPeriodosAnteriores: 0,
+      DevengadaComoIngresosDelPeriodo: 0,
+      RegistradaComoIngresoDiferido: 0,
+      SoloFacturadoNoHaGeneradoIngresoNiPasivoDiferido: 0,
+      ValorTotal: 0,
     },
-    IngrContDevPer: {
-      SinFact: 0,
-      FactPerAnt: 0,
-      TotalIngrContDevPer: 0,
+    IngresoContableDevengadoEnElPeriodo: {
+      SinFacturar: 0,
+      FacturadoPeriodosAnteriores: 0,
+      ValorTotal: 0,
     },
   },
   OtrosIngresos: {
-    PasivIngrDif: {
-      SaldoIniPer: 0,
-      IngrContPer: 0,
-      GenPer: 0,
-      TotPasivDif: 0,
+    PasivoPorIngresoDiferido: {
+      SaldoAlInicioDelPeriodo: 0,
+      RegistradoComoIngresoContableEnElPeriodo: 0,
+      GeneradoEnElPeriodo: 0,
+      SaldoAlFinalDelPeriodo: 0,
     },
-    FactEmitPer: {
-      DevIngrPerAnt: 0,
-      DevIngrPerAct: 0,
-      RegIngDif: 0,
-      SoloFact: 0,
-      TotFactEmiPEr: 0,
+    FacturacionEmitidaEnElPeriodo: {
+      DevengadaComoIngresoEnPeriodosAnteriores: 0,
+      DevengadaComoIngresosDelPeriodo: 0,
+      RegistradaComoIngresoDiferido: 0,
+      SoloFacturadoNoHaGeneradoIngresoNiPasivoDiferido: 0,
+      ValorTotal: 0,
     },
-    IngrContDevPer: {
-      SinFact: 0,
-      FactPerAnt: 0,
-      TotalIngrContDevPer: 0,
-    },
-  },
-  IngresosTer: {
-    FactEmitPer: {
-      DevIngrPerAnt: 0,
-      DevIngrPerAct: 0,
-      RegIngDif: 0,
-      SoloFact: 0,
-      TotFactEmiPEr: 0,
-    },
-    IngrContDevPer: {
-      TotalIngrContDevPer: 0,
+    IngresoContableDevengadoEnElPeriodo: {
+      SinFacturar: 0,
+      FacturadoPeriodosAnteriores: 0,
+      ValorTotal: 0,
     },
   },
-  AjustesValAdec: {
-    FactEmitPer: {
-      DevIngrPerAnt: 0,
-      DevIngrPerAct: 0,
-      RegIngDif: 0,
-      SoloFact: 0,
-      TotFactEmiPEr: 0,
+  IngresosParaTerceros: {
+    FacturacionEmitidaEnElPeriodo: {
+      DevengadaComoIngresoEnPeriodosAnteriores: 0,
+      DevengadaComoIngresosDelPeriodo: 0,
+      RegistradaComoIngresoDiferido: 0,
+      SoloFacturadoNoHaGeneradoIngresoNiPasivoDiferido: 0,
+      ValorTotal: 0,
     },
-    IngrContDevPer: {
-      SinFact: 0,
-      FactPerAnt: 0,
-      TotalIngrContDevPer: 0,
+    IngresoContableDevengadoEnElPeriodo: {
+      ValorTotal: 0,
     },
   },
-  Totales: {
-    PasivIngrDif: {
-      SaldoIniPer: 0,
-      IngrContPer: 0,
-      GenPer: 0,
-      TotPasivDif: 0,
+  AjustesAlValorFacturadoDescuentosNotas: {
+    FacturacionEmitidaEnElPeriodo: {
+      DevengadaComoIngresoEnPeriodosAnteriores: 0,
+      DevengadaComoIngresosDelPeriodo: 0,
+      RegistradaComoIngresoDiferido: 0,
+      SoloFacturadoNoHaGeneradoIngresoNiPasivoDiferido: 0,
+      ValorTotal: 0,
     },
-    FactEmitPer: {
-      DevIngrPerAnt: 0,
-      DevIngrPerAct: 0,
-      RegIngDif: 0,
-      SoloFact: 0,
-      TotFactEmiPEr: 0,
+    IngresoContableDevengadoEnElPeriodo: {
+      SinFacturar: 0,
+      FacturadoPeriodosAnteriores: 0,
+      ValorTotal: 0,
     },
-    IngrContDevPer: {
-      SinFact: 0,
-      FactPerAnt: 0,
-      TotalIngrContDevPer: 0,
+  },
+  Total: {
+    PasivoPorIngresoDiferido: {
+      SaldoAlInicioDelPeriodo: 0,
+      RegistradoComoIngresoContableEnElPeriodo: 0,
+      GeneradoEnElPeriodo: 0,
+      SaldoAlFinalDelPeriodo: 0,
+    },
+    FacturacionEmitidaEnElPeriodo: {
+      DevengadaComoIngresoEnPeriodosAnteriores: 0,
+      DevengadaComoIngresosDelPeriodo: 0,
+      RegistradaComoIngresoDiferido: 0,
+      SoloFacturadoNoHaGeneradoIngresoNiPasivoDiferido: 0,
+      ValorTotal: 0,
+    },
+    IngresoContableDevengadoEnElPeriodo: {
+      SinFacturar: 0,
+      FacturadoPeriodosAnteriores: 0,
+      ValorTotal: 0,
     },
   },
 };

@@ -2,5094 +2,5282 @@ import { z } from "zod";
 
 export const RentaLiquidaSchema = z.object({
   Ingresos: z.object({
-    IngresosNetosActividadIndustrialCoSer: z.object({
-      IngresosNetosActividadIndustrialCoSer: z.object({
-        VentaTerritorioNacional: z.object({
+    IngresosNetosActividadIndustrialComercialYServicios: z.object({
+      IngresosNetosActividadIndustrialComercialYServicios: z.object({
+        VentaDeBienesAlTerritorioNacional: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        VentaExportacion: z.object({
+        VentaDeBienesAOtrosPaises: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        VentaZonaFranca: z.object({
+        VentaDeBienesZonaFranca: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        VentaComercializadorasInternacionales: z.object({
+        VentaDeBienesComercializadorasInternacionales: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        VentaJurisdiccionesNoCooperantes: z.object({
+        VentaDeBienesJurisdiccionesNoCooperantesDeBajaONulaImposicionYRegiminesTributariosPreferenciales: z.object(
+          {
+            ValorContable: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            ValorFiscal: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
+            MegaInversiones: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
+            Otras: z.number()
+          }
+        ),
+        VentaDeBienesVinculadoEconomicosZonaFrancaYExterior: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        VentaVinculadoEconomicosFranca: z.object({
+        PrestacionDeServiciosAlTerritorioNacional: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        PrestacionServiciosTerritorioNacional: z.object({
+        PrestacionDeServiciosExportacionAOtrosPaises: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        PrestacionServiciosExportacion: z.object({
+        PrestacionDeServiciosZonaFranca: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        PrestacionServiciosZonaFranca: z.object({
+        PrestacionDeServiciosComercializadorasInternacionales: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        PrestacionServiciosComercializadorasInternacionales: z.object({
+        PrestacionDeServiciosJurisdiccionesNoCooperantesDeBajaONulaImposicionYRegiminesTributariosPreferenciales: z.object(
+          {
+            ValorContable: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            ValorFiscal: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
+            MegaInversiones: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
+            Otras: z.number()
+          }
+        ),
+        PrestacionDeServiciosVinculadoEconomicosZonaFrancaYExterior: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        PrestacionServiciosJurisdiccionesNoCooperantes: z.object({
+        ServiciosDeConstruccion: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        PrestacionServiciosVinculadoEconomicosFranca: z.object({
+        AcuerdosDeConcesionDeServicios: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
-          Otras: z.number()
-        }),
-        ServiciosConstruccion: z.object({
-          ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
-          ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
-          MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
-          Otras: z.number()
-        }),
-        AcuerdosConcesion: z.object({
-          ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
-          ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
-          MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         ArrendamientosOperativos: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        Regalias: z.object({
+        Regalías: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        Comisiones: z.object({
+        ComisionesRelacionalesDeAgencia: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         HonorariosProfesionales: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        ActividadesSegurosCapitalizacion: z.object({
+        ActividadesDeSegurosYDeCapitalizacion: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        LiberacionReservasContratosSeguros: z.object({
+        LiberacionDeReservasEnContratosDeSeguros: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        ComisionesBancarias: z.object({
+        ComisionesBancariasCostosDeTransaccionEntroOtros: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         OtrosIngresos: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         Total: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         })
       }),
-      DevolucionesRebajasDescuentos: z.object({
-        VentaBienes: z.object({
+      DevolucionesRebajasYDescuentos: z.object({
+        EnVentaDeBienes: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        PrestacionServicios: z.object({
+        EnPrestacionDeServicios: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        OtrasDevoluciones: z.object({
+        OtrasDevolucionesRebajasYDescuentos: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         Total: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         })
       }),
       Total: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       })
     }),
     IngresosFinancieros: z.object({
-      ArrendamientoFinanciero: z.object({
+      ArrendamientoFinancieroOMercantilLeasing: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       InteresesSectorFinanciero: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      InteresesPrestamosTerceros: z.object({
+      InteresesPorPrestamosATercerosDistintosAlSectorFinanciero: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      IntrumentosFinancierosMedidos: z.object({
+      PorInstrumentosFinancierosMedidosACostoAmortizadoDistintoAPrestamos: z.object(
+        {
+          ValorContable: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          ValorFiscal: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
+          MegaInversiones: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
+          Otras: z.number()
+        }
+      ),
+      InteresesImplicitosTransaccionesDeFinanciacion: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      InteresesImplicitos: z.object({
+      DiferenciaEnCambio: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      DiferenciaCambio: z.object({
+      OtrosIngresosFinancieros: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      }),
-      OtrosIngresos: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
-        ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      }),
-      Total: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
-        ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      })
-    }),
-    GananciasInversionesSubsidiariasAsociadasNegocios: z.object({
-      GananciasMetodoParticipacion: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      }),
-      GananciasCambioValorRazonable: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      }),
-      DividendosParticipacionesNoContribuyentes: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
-        ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      }),
-      DividendosParticipacionesDistribuidosEntidadesNoColombia: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
-        ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      }),
-      DividendosParticipacionesGravadasTarifaGeneral: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
-        ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      }),
-      DividendosParticipacionesGravadasPersonaNatural: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
-        ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      }),
-      DividendosParticipacionesGravadasPersonaNaturalSinResidencia: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
-        ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      }),
-      DividendosParticipaciones10: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
-        ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      }),
-      DividendosParticipacionesGravadasTarifaGeneralExtranjeras: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
-        ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      }),
-      DividendosProyectosMegainversion: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
-        ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       Total: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       })
     }),
-    IngresosPorMedicionesValorRazonable: z.object({
+    GananciasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos: z.object(
+      {
+        GananciasPorElMetodoDeParticipacion: z.object({
+          ValorContable: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
+          MegaInversiones: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
+          Otras: z.number()
+        }),
+        GananciasCambiosEnElValorRazonable: z.object({
+          ValorContable: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
+          MegaInversiones: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
+          Otras: z.number()
+        }),
+        DividendosYOParticipacionesNoConstitutivosDeRentaNiGananciaOcasionalIncluyeCapitalizacionesNoGravadas: z.object(
+          {
+            ValorContable: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            ValorFiscal: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
+            MegaInversiones: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
+            Otras: z.number()
+          }
+        ),
+        DividendosOParticipacionesDistribuidosPorEntidadesNoResidentesEnColombiaAUnaCHCYPrimaEnColocacionDeAcciones: z.object(
+          {
+            ValorContable: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            ValorFiscal: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
+            MegaInversiones: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
+            Otras: z.number()
+          }
+        ),
+        DividendosYOParticipacionesGravadasALaTarifaGeneralProvenientesDeSeciedadesYEntidadesExtranjerasODeSociedadesNacionales: z.object(
+          {
+            ValorContable: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            ValorFiscal: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
+            MegaInversiones: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
+            Otras: z.number()
+          }
+        ),
+        DividendosYOParticipacionesGravadasRecibidasPorPersonasNaturalesSinResidenciaFiscalAnio2016YAnteriores: z.object(
+          {
+            ValorContable: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            ValorFiscal: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
+            MegaInversiones: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
+            Otras: z.number()
+          }
+        ),
+        DividendosYOParticipacionesGravadasRecibidasPorPersonasNaturalesSinResidenciaFiscalAnio2017YSiguientes: z.object(
+          {
+            ValorContable: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            ValorFiscal: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
+            MegaInversiones: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
+            Otras: z.number()
+          }
+        ),
+        DividendosYOParticipacionesGravadasAl10Porciento: z.object({
+          ValorContable: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          ValorFiscal: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
+          MegaInversiones: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
+          Otras: z.number()
+        }),
+        DividendosYOParticipacionesGravadasATarifaGeneralEPYSociedadesExtranjerasUtilidadesGeneradasAPartirDelAnio2017: z.object(
+          {
+            ValorContable: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            ValorFiscal: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
+            MegaInversiones: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
+            Otras: z.number()
+          }
+        ),
+        DividendosYParticipacionesProvenientesDeProyectosCalificadosComoMegaInversionGravadasAl27Porciento: z.object(
+          {
+            ValorContable: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            ValorFiscal: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
+            MegaInversiones: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
+            Otras: z.number()
+          }
+        ),
+        Total: z.object({
+          ValorContable: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          ValorFiscal: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
+          MegaInversiones: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
+          Otras: z.number()
+        })
+      }
+    ),
+    IngresosPorMedicionesAValorRazonable: z.object({
       ActivosBiologicos: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      PropiedadesInversion: z.object({
+      PropiedadesDeInversion: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      InstrumentosFinancieros: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
-        ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      }),
+      InstrumentosFinancierosDistintoAInversionesEnSubsidiariasAsociadasYONegociosConjuntos: z.object(
+        {
+          ValorContable: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          ValorFiscal: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
+          MegaInversiones: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
+          Otras: z.number()
+        }
+      ),
       InstrumentosDerivados: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       Otros: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       Total: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       })
     }),
-    UtilidadVentaEnajenacionActivosMenos2Anos: z.object({
-      PropiedadesPlanta: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
-        ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      }),
-      PropiedadesInversion: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
-        ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      }),
-      ActivosBiologicos: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
-        ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      }),
-      ActivosNoCorrientesMantenidosVentaEntregarPropietarios: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
-        ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      }),
-      ActivosIntangibles: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
-        ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      }),
-      InversionesAccionesOtrasParticipaciones: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
-        ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      }),
-      DisposicionOtrosInstrumentosFinancieros: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
-        ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      }),
-      Otros: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
-        ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      }),
-      Total: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
-        ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      })
-    }),
-    UtilidadVentaEnajenacionActivosMas2Anos: z.object({
-      PropiedadesPlanta: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
-        ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      }),
-      PropiedadesInversion: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
-        ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      }),
-      ActivosBiologicos: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
-        ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      }),
-      ActivosNoCorrientesMantenidosVentaEntregarPropietarios: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
-        ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      }),
-      ActivosIntangibles: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
-        ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      }),
-      InversionesAccionesOtrasParticipaciones: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
-        ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      }),
-      DisposicionOtrosInstrumentosFinancieros: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
-        ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      }),
-      Otros: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
-        ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      }),
-      Total: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
-        ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      })
-    }),
-    IngresosReversionDeterioroValor: z.object({
+    UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios: z.object(
+      {
+        PropiedadesPlantaYEquipo: z.object({
+          ValorContable: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          ValorFiscal: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
+          MegaInversiones: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
+          Otras: z.number()
+        }),
+        PropiedadesDeInversion: z.object({
+          ValorContable: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          ValorFiscal: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
+          MegaInversiones: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
+          Otras: z.number()
+        }),
+        ActivosBiologicosSinPlantasProductoras: z.object({
+          ValorContable: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          ValorFiscal: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
+          MegaInversiones: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
+          Otras: z.number()
+        }),
+        ActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios: z.object(
+          {
+            ValorContable: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            ValorFiscal: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
+            MegaInversiones: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
+            Otras: z.number()
+          }
+        ),
+        ActivosIntangibles: z.object({
+          ValorContable: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          ValorFiscal: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
+          MegaInversiones: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
+          Otras: z.number()
+        }),
+        InversionesEnAccionesYOtrasParticipaciones: z.object({
+          ValorContable: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          ValorFiscal: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
+          MegaInversiones: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
+          Otras: z.number()
+        }),
+        PorDisposicionDeOtrosInstrumentosFinancieros: z.object({
+          ValorContable: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          ValorFiscal: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
+          MegaInversiones: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
+          Otras: z.number()
+        }),
+        Otros: z.object({
+          ValorContable: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          ValorFiscal: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
+          MegaInversiones: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
+          Otras: z.number()
+        }),
+        Total: z.object({
+          ValorContable: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          ValorFiscal: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
+          MegaInversiones: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
+          Otras: z.number()
+        })
+      }
+    ),
+    UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional: z.object(
+      {
+        PropiedadesPlantaYEquipo: z.object({
+          ValorContable: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          ValorFiscal: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
+          MegaInversiones: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
+          Otras: z.number()
+        }),
+        PropiedadesDeInversion: z.object({
+          ValorContable: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          ValorFiscal: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
+          MegaInversiones: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
+          Otras: z.number()
+        }),
+        ActivosBiologicosSinPlantasProductoras: z.object({
+          ValorContable: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          ValorFiscal: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
+          MegaInversiones: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
+          Otras: z.number()
+        }),
+        ActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios: z.object(
+          {
+            ValorContable: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            ValorFiscal: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
+            MegaInversiones: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
+            Otras: z.number()
+          }
+        ),
+        ActivosIntangibles: z.object({
+          ValorContable: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          ValorFiscal: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
+          MegaInversiones: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
+          Otras: z.number()
+        }),
+        InversionesEnAccionesYOtrasParticipaciones: z.object({
+          ValorContable: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          ValorFiscal: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
+          MegaInversiones: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
+          Otras: z.number()
+        }),
+        PorDisposicionDeOtrosInstrumentosFinancieros: z.object({
+          ValorContable: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          ValorFiscal: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
+          MegaInversiones: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
+          Otras: z.number()
+        }),
+        Otros: z.object({
+          ValorContable: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          ValorFiscal: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
+          MegaInversiones: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
+          Otras: z.number()
+        }),
+        Total: z.object({
+          ValorContable: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          ValorFiscal: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
+          MegaInversiones: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
+          Otras: z.number()
+        })
+      }
+    ),
+    IngresosPorReversionDeDeterioroDelValor: z.object({
       Inventarios: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      PropiedadesPlantaEquipo: z.object({
+      PropiedadesPlantaYEquipo: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       ActivosIntangibles: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      ActivosExploracionEvaluacionRecursosMinerales: z.object({
+      ActivosDeExploracionYEvaluacionDeRecursosMinerales: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      PropiedadesInversionMedidasCosto: z.object({
+      PropiedadesDeInversionMedidasAlModeloDeCosto: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      ActivosNoCorrientesMantenidosVentaEntregarPropietarios: z.object({
+      ActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      ActivosBiologicosMedidosCosto: z.object({
+      ActivosBiologicosMedidosAlModeloDeCosto: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      BienesArteCultura: z.object({
+      BienesDeArteYCultura: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      ActivosFinancieros: z.object({
+      ActivosFinancierosDistintosACarteraDeCrediroYOperacionesDeLeasing: z.object(
+        {
+          ValorContable: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          ValorFiscal: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
+          MegaInversiones: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
+          Otras: z.number()
+        }
+      ),
+      CarteraDeCreditoYOperacionesDeLeasing: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      CarteraCreditoOperacionesLeasing: z.object({
+      OtrasInversionesMedidasAlCostoOElMetodoDeLaParticipacion: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      OtrasInversionesMedidasCostoMetodoParticipacion: z.object({
+      OtrosDeterior: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      }),
-      OtrosDeterioros: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
-        ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       Total: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       })
     }),
-    IngresosReversionProvisiones: z.object({
+    IngresosPorReversionDeProvisionesPasivosDeMontoOFechaInciertos: z.object({
       Garantias: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       ContratosOnerosos: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       Litigios: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      ReembolsosClientes: z.object({
+      ReembolsosAClientes: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      ReestructuracionesNegocios: z.object({
+      ReestructuracionesDeNegocios: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      PasivosContingentesCombinacionNegocios: z.object({
+      PasivosContingentesAsumidosEnUnaCombinacionDeNegocios: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       Otros: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       Total: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       })
     }),
-    IngresosReversionPasivosBeneficiosEmpleados: z.object({
-      BeneficiosDeCortoPlazo: z.object({
+    IngresosPorReversionDePasivosPorBeneficiosALosEmpleados: z.object({
+      BeneficiosDeCortoplazo: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       BeneficiosDeLargoPlazo: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      BeneficiosAEmpeladosPorTerminacionDelVinculoLaboral: z.object({
+      BeneficiosAEmpleadosPorTerminacionDelVinculoLaboral: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      BeneficiosAEmpeladosPostEmpleo: z.object({
+      BeneficiosAEmpleadosPostEmpleo: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       Total: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       })
     }),
     OtrosIngresos: z.object({
-      TransferenciasSubvencionesAyudasGubernamentales: z.object({
+      TransferenciasSubvencionesYAyudasGubernamentales: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      DonacionesAportacionesSimilares: z.object({
+      DonacionesAportacionesYSimilares: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      ReembolsosCompaniasSegurosIndemnizaciones: z.object({
+      ReembolsosDeCompaniasDeSeguroIndemnizaciones: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       OtrasIndemnizaciones: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      OtrasReversionesRecuperaciones: z.object({
+      OtrasReversionesORecuperaciones: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       Otros: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       Total: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       })
     }),
-    GananciasNetasOperacionesDiscontinuas: z.object({
+    GananciasNetasEnOperacionesDiscontinuas: z.object({
       ValorContable: z.number(),
-      EfectoConversion: z.number(),
-      MenorValorFiscal: z.number()
+      EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+      MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number()
     }),
     AjustesFiscales: z.object({
-      AdicionIngresos: z.object({
+      AdicionDeIngresos: z.object({
         RecuperacionDeDeduccionesSinIncidenciaContable: z.object({
-          MayorValorFiscal: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         InteresesPresuntos: z.object({
-          MayorValorFiscal: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        MayorIngresoPreciosDeTransferencia: z.object({
-          MayorValorFiscal: z.number(),
+        MayorIngresosPreciosDeTransferencia: z.object({
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         OtrosIngresosFiscalesYNoIncluidosContablemente: z.object({
-          MayorValorFiscal: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         Total: z.object({
-          MayorValorFiscal: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         })
       }),
       Total: z.object({
-        MayorValorFiscal: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       })
     }),
-    MenosIngresosNoConstitutivosRenta: z.object({
-      MayorValorFiscal: z.number(),
+    MenosIngresosNoConstitutivosDeRentaNiGananciaOcasional: z.object({
+      MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
       ValorFiscal: z.number(),
-      Tarifa9: z.number(),
-      Tarifa15: z.number(),
-      Tarifa20: z.number(),
+      TarifaDel9Porciento: z.number(),
+      TarifaDel15Porciento: z.number(),
+      TarifaDel20Porciento: z.number(),
       MegaInversiones: z.number(),
-      MegaInversiones27: z.number(),
-      TarifaGeneral240: z.number(),
+      MegaInversiones27Porciento: z.number(),
+      TarifaGeneralArticulo240ET: z.number(),
       Otras: z.number()
     }),
     TotalIngresos: z.object({
       ValorContable: z.number(),
-      EfectoConversion: z.number(),
-      MenorValorFiscal: z.number(),
-      MayorValorFiscal: z.number(),
+      EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+      MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+      MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
       ValorFiscal: z.number(),
-      Tarifa9: z.number(),
-      Tarifa15: z.number(),
-      Tarifa20: z.number(),
+      TarifaDel9Porciento: z.number(),
+      TarifaDel15Porciento: z.number(),
+      TarifaDel20Porciento: z.number(),
       MegaInversiones: z.number(),
-      MegaInversiones27: z.number(),
-      TarifaGeneral240: z.number(),
+      MegaInversiones27Porciento: z.number(),
+      TarifaGeneralArticulo240ET: z.number(),
       Otras: z.number()
     })
   }),
   Costos: z.object({
-    MateriasPrimasReventaBienes: z.object({
-      CostossVentasCalculadoSistemaPermanente: z.object({
+    MateriasPrimasReventaDeBienesTerminadosYServicios: z.object({
+      CostosDeVentasCalculadoPorElSistemaPermanente: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       MateriasPrimasProduccion: z.object({
         InventarioInicial: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         ComprasLocales: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         Importaciones: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         InventarioFinal: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         })
       }),
       CostoBienesVendidos: z.object({
         InventarioInicial: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         ComprasLocales: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         Importaciones: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         InventarioFinal: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         })
       }),
-      ProductosProceso: z.object({
+      ProductosEnProceso: z.object({
         InventarioInicial: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         InventarioFinal: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         })
       }),
       ProductosTerminados: z.object({
         InventarioInicial: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         InventarioFinal: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         })
       }),
-      CostosPrestacionServicios: z.object({
+      CostosEnLaPrestacionDeServicios: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      OtrosSistemasDeterminacionCostoVentas: z.object({
+      OtrosSistemasDeDeterminacionDelCostoDeVentas: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       Ajustes: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       Total: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       })
     }),
     ManoObra: z.object({
-      CortoPlazo: z.object({
+      DeCortoPlazo: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      LargoPlazo: z.object({
+      DeLargoPlazo: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      PostTerminacionVinculoLaboral: z.object({
+      PorTerminacionDeVinculoLaboral: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       PostEmpleo: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       Total: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       })
     }),
-    DepresionacionesAmortizacionesDeterioros: z.object({
-      DepreciacionPropiedadesPlantaEquipo: z.object({
-        Costo: z.object({
+    DepresionacionesAmortizacionesYDeterioros: z.object({
+      DepreciacionPropiedadesPlantaYEquipo: z.object({
+        DelCosto: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        AjusteAcumunlado: z.object({
-          ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
-          ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
-          MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
-          Otras: z.number()
-        })
+        DelAjusteAcumunladoPorAjusteAculudadoPorRevaluacionesOReExpresiones: z.object(
+          {
+            ValorContable: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            ValorFiscal: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
+            MegaInversiones: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
+            Otras: z.number()
+          }
+        )
       }),
-      DepreciacionPropiedadesInversion: z.object({
-        Costo: z.object({
+      DepreciacionPropiedadesDeInversion: z.object({
+        DelCosto: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        AjusteAcumunlado: z.object({
-          ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
-          ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
-          MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
-          Otras: z.number()
-        })
+        DelAjusteAcumunladoPorAjusteAculudadoPorRevaluacionesOReExpresiones: z.object(
+          {
+            ValorContable: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            ValorFiscal: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
+            MegaInversiones: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
+            Otras: z.number()
+          }
+        )
       }),
       DepreciacionActivosBiologicos: z.object({
-        Costo: z.object({
+        DelCosto: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        AjusteAcumunlado: z.object({
-          ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
-          ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
-          MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
-          Otras: z.number()
-        })
+        DelAjusteAcumunladoPorAjusteAculudadoPorRevaluacionesOReExpresiones: z.object(
+          {
+            ValorContable: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            ValorFiscal: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
+            MegaInversiones: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
+            Otras: z.number()
+          }
+        )
       }),
       AmortizacionActivosIntangibles: z.object({
-        Costo: z.object({
+        DelCosto: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        AjusteAcumunlado: z.object({
-          ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
-          ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
-          MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
-          Otras: z.number()
-        })
+        DelAjusteAcumunladoPorAjusteAculudadoPorRevaluacionesOReExpresiones: z.object(
+          {
+            ValorContable: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            ValorFiscal: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
+            MegaInversiones: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
+            Otras: z.number()
+          }
+        )
       }),
-      DepreciacionDerechosUsoArrendamientos: z.object({}),
-      OtrasDepreciacionesAmortizaciones: z.object({
-        Costo: z.object({
+      DepreciacionDerechosUsoEnArrendamientosOperativosNIIF16: z.object({
+        ValorContable: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        ValorFiscal: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
+        MegaInversiones: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
+        Otras: z.number()
+      }),
+      OtrasDepreciacionesYAmortizaciones: z.object({
+        DelCosto: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        AjusteAcumunlado: z.object({
-          ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
-          ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
-          MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
-          Otras: z.number()
-        })
+        DelAjusteAcumunladoPorAjusteAculudadoPorRevaluacionesOReExpresiones: z.object(
+          {
+            ValorContable: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            ValorFiscal: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
+            MegaInversiones: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
+            Otras: z.number()
+          }
+        )
       }),
-      DeterioroValorActivos: z.object({
+      DeterioroDelValorDeLosActivos: z.object({
         Inventarios: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        PropiedadesPlantaEquipo: z.object({
+        PropiedadesPlantaYEquipo: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         ActivosIntangibles: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        ActivosExploracionEvaluacionRecursosMinerales: z.object({
+        ActivosDeExploracionYEvaluacionDeRecursosMinerales: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        PropiedadesInversionMedidasCosto: z.object({
+        PropiedadesDeInversionMedidasAlModeloDeCosto: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        ActivosNoCorrientesMantenidosVentaEntregarPropietarios: z.object({
+        ActivosNoCorrientesMantenidosParaLaVentaDistribuirALosPropietarios: z.object(
+          {
+            ValorContable: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            ValorFiscal: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
+            MegaInversiones: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
+            Otras: z.number()
+          }
+        ),
+        ActivosBiologicosMedidosAlModeloDeCosto: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        ActivosBiologicosMedidosCosto: z.object({
+        BienesDeArteYCulturaMedidosAlModeloDeCosto: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        BienesArteCultura: z.object({
+        ActivosFinancierosDistintosACarteraDeCreditoYOperacionesDeLeasing: z.object(
+          {
+            ValorContable: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            ValorFiscal: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
+            MegaInversiones: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
+            Otras: z.number()
+          }
+        ),
+        CarteraDeCreditoYOperacionesDeLeasing: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        ActivosFinancieros: z.object({
+        OtrasInversionesMedidasAlCostoOPorElMetodoDeLaParticipacion: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        CarteraCreditoOperacionesLeasing: z.object({
+        DerechosDeUsoEnArrendamientosOperativosNIIF16: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        OtrasInversionesMedidasCostoMetodoParticipacion: z.object({
+        OtrosDeteriroros: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
-          Otras: z.number()
-        }),
-        DerechosUsoArrendamientosOperativos: z.object({
-          ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
-          ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
-          MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
-          Otras: z.number()
-        }),
-        OtrosDeterioros: z.object({
-          ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
-          ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
-          MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         })
       }),
-      Total: z.object({})
+      Total: z.object({
+        ValorContable: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        ValorFiscal: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
+        MegaInversiones: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
+        Otras: z.number()
+      })
     }),
     OtrosCostos: z.object({
       Arrendamientos: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       Seguros: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       Servicios: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       Honorarios: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       ServiciosTecnicos: z.object({
         VinculadosEconomicos: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        JurisdiccionesNoCooperantesBajaNulaImposicion: z.object({
-          ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
-          ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
-          MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
-          Otras: z.number()
-        }),
+        JurisdiccionesNoCooperantesDeBajaONulaImposicionYRegimenesTributariosPreferenciales: z.object(
+          {
+            ValorContable: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            ValorFiscal: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
+            MegaInversiones: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
+            Otras: z.number()
+          }
+        ),
         NoVinculados: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         })
       }),
       AsistenciaTecnica: z.object({
         VinculadosEconomicos: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        JurisdiccionesNoCooperantesBajaNulaImposicion: z.object({
-          ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
-          ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
-          MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
-          Otras: z.number()
-        }),
+        JurisdiccionesNoCooperantesDeBajaONulaImposicionYRegimenesTributariosPreferenciales: z.object(
+          {
+            ValorContable: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            ValorFiscal: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
+            MegaInversiones: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
+            Otras: z.number()
+          }
+        ),
         NoVinculados: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         })
       }),
-      OtrosConceptosReconocidosCostos: z.object({
+      OtrosConceptosReconocidosComoCostosEnElEstadoDeResultados: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      OtrosConceptosFiscalesNoReconocidos: z.object({
-        MayorValorFiscal: z.number(),
+      OtrosCostosFiscalesNoReconocidosContablemente: z.object({
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       Total: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       })
     }),
-    MenosCostoAjustePrecios: z.object({
-      MayorValorFiscal: z.number(),
+    MenosCostoAjustePreciosDeTrasferencia: z.object({
+      MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
       ValorFiscal: z.number(),
-      Tarifa9: z.number(),
-      Tarifa15: z.number(),
-      Tarifa20: z.number(),
+      TarifaDel9Porciento: z.number(),
+      TarifaDel15Porciento: z.number(),
+      TarifaDel20Porciento: z.number(),
       MegaInversiones: z.number(),
-      MegaInversiones27: z.number(),
-      TarifaGeneral240: z.number(),
+      MegaInversiones27Porciento: z.number(),
+      TarifaGeneralArticulo240ET: z.number(),
       Otras: z.number()
     }),
     TotalCostos: z.object({
       ValorContable: z.number(),
-      EfectoConversion: z.number(),
-      MenorValorFiscal: z.number(),
-      MayorValorFiscal: z.number(),
+      EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+      MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+      MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
       ValorFiscal: z.number(),
-      Tarifa9: z.number(),
-      Tarifa15: z.number(),
-      Tarifa20: z.number(),
+      TarifaDel9Porciento: z.number(),
+      TarifaDel15Porciento: z.number(),
+      TarifaDel20Porciento: z.number(),
       MegaInversiones: z.number(),
-      MegaInversiones27: z.number(),
-      TarifaGeneral240: z.number(),
+      MegaInversiones27Porciento: z.number(),
+      TarifaGeneralArticulo240ET: z.number(),
       Otras: z.number()
     })
   }),
   Gastos: z.object({
-    Administracion: z.object({
-      ManoObra: z.object({
-        CortoPlazo: z.object({
+    DeAdministracion: z.object({
+      ManoDeObra: z.object({
+        DeCortoPlazo: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        LargoPlazo: z.object({
+        DeLargoPlazo: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        PostTerminacionVinculoLaboral: z.object({
+        PorTerminacionDelVinculoLaboral: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         PostEmpleo: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         Total: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         })
       }),
-      OtrosGastosAdministracion: z.object({
+      OtrosGastosDeAdministracion: z.object({
         ImpuestosDistintosAlImpuestosDeRentaYComplementarios: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         ArrendamientosOperativos: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         ContribucionesYAfiliaciones: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         Honorarios: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         Seguros: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         ServiciosAdministrativos: z.object({
           VinculadosEconomicos: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           }),
-          JurisdiccionesNoCooperantesBajaNulaImposicion: z.object({
-            ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
-            ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
-            MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
-            Otras: z.number()
-          }),
+          JurisdiccionesNoCooperantesBajaNulaImposicionDeBajaONulaImposicionYRegimenesTributariosPreferenciales: z.object(
+            {
+              ValorContable: z.number(),
+              EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+              MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+              MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+              ValorFiscal: z.number(),
+              TarifaDel9Porciento: z.number(),
+              TarifaDel15Porciento: z.number(),
+              TarifaDel20Porciento: z.number(),
+              MegaInversiones: z.number(),
+              MegaInversiones27Porciento: z.number(),
+              TarifaGeneralArticulo240ET: z.number(),
+              Otras: z.number()
+            }
+          ),
           NoVinculados: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           })
         }),
         Regalias: z.object({
           VinculadosEconomicos: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           }),
-          JurisdiccionesNoCooperantesBajaNulaImposicion: z.object({
-            ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
-            ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
-            MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
-            Otras: z.number()
-          }),
+          JurisdiccionesNoCooperantesBajaNulaImposicionDeBajaONulaImposicionYRegimenesTributariosPreferenciales: z.object(
+            {
+              ValorContable: z.number(),
+              EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+              MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+              MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+              ValorFiscal: z.number(),
+              TarifaDel9Porciento: z.number(),
+              TarifaDel15Porciento: z.number(),
+              TarifaDel20Porciento: z.number(),
+              MegaInversiones: z.number(),
+              MegaInversiones27Porciento: z.number(),
+              TarifaGeneralArticulo240ET: z.number(),
+              Otras: z.number()
+            }
+          ),
           NoVinculados: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           })
         }),
         AsistenciaTecnica: z.object({
           VinculadosEconomicos: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           }),
-          JurisdiccionesNoCooperantesBajaNulaImposicion: z.object({
-            ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
-            ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
-            MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
-            Otras: z.number()
-          }),
+          JurisdiccionesNoCooperantesBajaNulaImposicionDeBajaONulaImposicionYRegimenesTributariosPreferenciales: z.object(
+            {
+              ValorContable: z.number(),
+              EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+              MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+              MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+              ValorFiscal: z.number(),
+              TarifaDel9Porciento: z.number(),
+              TarifaDel15Porciento: z.number(),
+              TarifaDel20Porciento: z.number(),
+              MegaInversiones: z.number(),
+              MegaInversiones27Porciento: z.number(),
+              TarifaGeneralArticulo240ET: z.number(),
+              Otras: z.number()
+            }
+          ),
           NoVinculados: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           })
         }),
         OtrosServicios: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         InvestigacionYDesarrollo: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         GastosLegales: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        ReparacionMantenimientoAdecuacionInstalaciones: z.object({
+        ReparacionMantenimientoAdecuacionEInstalaciones: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         Transporte: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         OtrosGastos: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         Total: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         })
       }),
       DepreciacionesAmortizacionesDeterioros: z.object({
-        DepreciacionPropiedadesPlantaEquipo: z.object({
-          Costo: z.object({
+        DepreciacionPropiedadesPlantaYEquipo: z.object({
+          DelCosto: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           }),
-          AjusteAcumunlado: z.object({
+          DelAjusteAcumuladoPorRevaliacionesOReExpresiones: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           })
         }),
-        DepreciacionPropiedadesInversion: z.object({
-          Costo: z.object({
+        DepreciacionPropiedadesDeInversion: z.object({
+          DelCosto: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           }),
-          AjusteAcumunlado: z.object({
+          DelAjusteAcumuladoPorRevaliacionesOReExpresiones: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           })
         }),
-        DepreciacionArrendamientosOperativos: z.object({
+        DepreciacionArrendamientosOperativosNIIF16: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         OtrasDepreciaciones: z.object({
-          Costo: z.object({
+          DelCosto: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           }),
-          AjusteAcumunlado: z.object({
+          DelAjusteAcumuladoPorRevaliacionesOReExpresiones: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           })
         }),
         AmortizacionActivosIntangibles: z.object({
-          Costo: z.object({
+          DelCosto: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           }),
-          AjusteAcumunlado: z.object({
+          DelAjusteAcumuladoPorRevaliacionesOReExpresiones: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           })
         }),
         OtrasAmortizaciones: z.object({
-          Costo: z.object({
+          DelCosto: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           }),
-          AjusteAcumunlado: z.object({
+          DelAjusteAcumuladoPorRevaliacionesOReExpresiones: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           })
         }),
-        DeterioroValorActivos: z.object({
+        DeterioroDelValorDeLosActivos: z.object({
           Inventarios: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           }),
-          PropiedadesPlantaEquipo: z.object({
+          PropiedadesPlantaYEquipo: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           }),
           ActivosIntangibles: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           }),
-          ActivosExploracionEvaluacionRecursosMinerales: z.object({
+          ActivosDeExploracionYEvaluacionDeRecursosMinerales: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           }),
-          PropiedadesInversionMedidasCosto: z.object({
+          PropiedadesDeInversionMedidasAlModeloDeCosto: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           }),
-          ActivosNoCorrientesMantenidosVentaEntregarPropietarios: z.object({
+          ActivosNoCorrientesMantenidosParaLaVentaDistribuirALosPropietarios: z.object(
+            {
+              ValorContable: z.number(),
+              EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+              MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+              MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+              ValorFiscal: z.number(),
+              TarifaDel9Porciento: z.number(),
+              TarifaDel15Porciento: z.number(),
+              TarifaDel20Porciento: z.number(),
+              MegaInversiones: z.number(),
+              MegaInversiones27Porciento: z.number(),
+              TarifaGeneralArticulo240ET: z.number(),
+              Otras: z.number()
+            }
+          ),
+          BienesDeArteYCulturaMedidosAlModeloDeCosto: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           }),
-          BienesArteCultura: z.object({
+          ActivosBiologicosMedidosAlModeloDeCosto: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           }),
-          ActivosBiologicosMedidosCosto: z.object({
+          ActivosFinancierosDistintosACarteraDeCreditoYOperacionesDeLeasing: z.object(
+            {
+              ValorContable: z.number(),
+              EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+              MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+              MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+              ValorFiscal: z.number(),
+              TarifaDel9Porciento: z.number(),
+              TarifaDel15Porciento: z.number(),
+              TarifaDel20Porciento: z.number(),
+              MegaInversiones: z.number(),
+              MegaInversiones27Porciento: z.number(),
+              TarifaGeneralArticulo240ET: z.number(),
+              Otras: z.number()
+            }
+          ),
+          CarteraDeCreditoYOperacionesDeLeasing: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           }),
-          ActivosFinancieros: z.object({
+          OtrasInversionesMedidasAlCostoOPorElMetodoDeLaParticipacion: z.object(
+            {
+              ValorContable: z.number(),
+              EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+              MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+              MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+              ValorFiscal: z.number(),
+              TarifaDel9Porciento: z.number(),
+              TarifaDel15Porciento: z.number(),
+              TarifaDel20Porciento: z.number(),
+              MegaInversiones: z.number(),
+              MegaInversiones27Porciento: z.number(),
+              TarifaGeneralArticulo240ET: z.number(),
+              Otras: z.number()
+            }
+          ),
+          DerechosDeUsoEnArrendamientosOperativosNIIF16: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
-            Otras: z.number()
-          }),
-          CarteraCreditoOperacionesLeasing: z.object({
-            ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
-            ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
-            MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
-            Otras: z.number()
-          }),
-          OtrasInversionesMedidasCostoMetodoParticipacion: z.object({
-            ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
-            ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
-            MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
-            Otras: z.number()
-          }),
-          DerechosUsoArrendamientosOperativos: z.object({
-            ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
-            ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
-            MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           }),
           OtrosDeterioros: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           })
         }),
         Total: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         })
       }),
       Total: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       })
     }),
-    GastosDistribucionVentas: z.object({
-      ManoObra: z.object({
-        CortoPlazo: z.object({
+    GastosDeDistribucionYVentas: z.object({
+      ManoDeObra: z.object({
+        DeCortoPlazo: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        LargoPlazo: z.object({
+        DeLargoPlazo: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        PostTerminacionVinculoLaboral: z.object({
+        PorTerminacionVinculoLaboral: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         PostEmpleo: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         Total: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         })
       }),
-      OtrosGastosDistribucion: z.object({
+      OtrosGastosDeDistribucionYVentas: z.object({
         ImpuestosDistintosAlImpuestosDeRentaYComplementarios: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         ArrendamientosOperativos: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         ContribucionesYAfiliaciones: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         Honorarios: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         Seguros: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         ServiciosAdministrativos: z.object({
           VinculadosEconomicos: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           }),
-          JurisdiccionesNoCooperantesBajaNulaImposicion: z.object({
-            ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
-            ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
-            MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
-            Otras: z.number()
-          }),
+          JurisdiccionesNoCooperantesDeBajaONulaImposicionYRegimenesTributariosPreferenciales: z.object(
+            {
+              ValorContable: z.number(),
+              EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+              MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+              MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+              ValorFiscal: z.number(),
+              TarifaDel9Porciento: z.number(),
+              TarifaDel15Porciento: z.number(),
+              TarifaDel20Porciento: z.number(),
+              MegaInversiones: z.number(),
+              MegaInversiones27Porciento: z.number(),
+              TarifaGeneralArticulo240ET: z.number(),
+              Otras: z.number()
+            }
+          ),
           NoVinculados: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           })
         }),
         Regalias: z.object({
           VinculadosEconomicos: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           }),
-          JurisdiccionesNoCooperantesBajaNulaImposicion: z.object({
-            ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
-            ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
-            MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
-            Otras: z.number()
-          }),
+          JurisdiccionesNoCooperantesDeBajaONulaImposicionYRegimenesTributariosPreferenciales: z.object(
+            {
+              ValorContable: z.number(),
+              EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+              MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+              MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+              ValorFiscal: z.number(),
+              TarifaDel9Porciento: z.number(),
+              TarifaDel15Porciento: z.number(),
+              TarifaDel20Porciento: z.number(),
+              MegaInversiones: z.number(),
+              MegaInversiones27Porciento: z.number(),
+              TarifaGeneralArticulo240ET: z.number(),
+              Otras: z.number()
+            }
+          ),
           NoVinculados: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           })
         }),
         AsistenciaTecnica: z.object({
           VinculadosEconomicos: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           }),
-          JurisdiccionesNoCooperantesBajaNulaImposicion: z.object({
-            ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
-            ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
-            MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
-            Otras: z.number()
-          }),
+          JurisdiccionesNoCooperantesDeBajaONulaImposicionYRegimenesTributariosPreferenciales: z.object(
+            {
+              ValorContable: z.number(),
+              EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+              MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+              MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+              ValorFiscal: z.number(),
+              TarifaDel9Porciento: z.number(),
+              TarifaDel15Porciento: z.number(),
+              TarifaDel20Porciento: z.number(),
+              MegaInversiones: z.number(),
+              MegaInversiones27Porciento: z.number(),
+              TarifaGeneralArticulo240ET: z.number(),
+              Otras: z.number()
+            }
+          ),
           NoVinculados: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           })
         }),
         OtrosServicios: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         InvestigacionYDesarrollo: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         GastosLegales: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        ReparacionMantenimientoAdecuacionInstalaciones: z.object({
+        ReparacionMantenimientoAdecuacionEInstalaciones: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         Transporte: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        ConstitucionReservas: z.object({
+        ConstitucionReservasEmpresasAseguradoras: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        LiquidacionSiniestros: z.object({
+        LiquidacionDeSiniestros: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        PrimasReaseguros: z.object({
+        PrimasDeReaseguros: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         OtrosGastos: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
         Total: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         })
       }),
-      DepreciacionesAmortizacionesDeterioros: z.object({
-        DepreciacionPropiedadesPlantaEquipo: z.object({
-          Costo: z.object({
+      DepreciacionesAmortizacionesYDeterioros: z.object({
+        DepreciacionPropiedadesPlantaYEquipo: z.object({
+          DelCosto: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           }),
-          AjusteAcumunlado: z.object({
+          DelAjusteAcumunladoPorRevaluacionesOReExpresiones: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           })
         }),
-        DepreciacionPropiedadesInversion: z.object({
-          Costo: z.object({
+        DepreciacionPropiedadesDeInversion: z.object({
+          DelCosto: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           }),
-          AjusteAcumunlado: z.object({
+          DelAjusteAcumunladoPorRevaluacionesOReExpresiones: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           })
         }),
-        DepreciacionArrendamientosOperativos: z.object({}),
-        OtrasDepreciaciones: z.object({
-          Costo: z.object({
+        DepreciacionActivosBiologicos: z.object({
+          DelCosto: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           }),
-          AjusteAcumunlado: z.object({
+          DelAjusteAcumunladoPorRevaluacionesOReExpresiones: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           })
         }),
         AmortizacionActivosIntangibles: z.object({
-          Costo: z.object({
+          DelCosto: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           }),
-          AjusteAcumunlado: z.object({
+          DelAjusteAcumunladoPorRevaluacionesOReExpresiones: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           })
         }),
-        OtrasAmortizaciones: z.object({
-          Costo: z.object({
+        DepreciacionArrendamientosOperativosNIFF16: z.object({
+          ValorContable: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          ValorFiscal: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
+          MegaInversiones: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
+          Otras: z.number()
+        }),
+        OtrasDepreciacionesYAmortizaciones: z.object({
+          DelCosto: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           }),
-          AjusteAcumunlado: z.object({
+          DelAjusteAcumunladoPorRevaluacionesOReExpresiones: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           })
         }),
-        DeterioroValorActivos: z.object({
+        DeterioroDelValorActivos: z.object({
           Inventarios: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           }),
-          PropiedadesPlantaEquipo: z.object({
+          PropiedadesPlantaYEquipo: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           }),
           ActivosIntangibles: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           }),
-          ActivosExploracionEvaluacionRecursosMinerales: z.object({
+          ActivosDeExploracionYEvaluacionDeRecursosMinerales: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           }),
-          PropiedadesInversionMedidasCosto: z.object({
+          PropiedadesDeInversionMedidasAlModeloDeCosto: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           }),
-          ActivosNoCorrientesMantenidosVentaEntregarPropietarios: z.object({
+          ActivosNoCorrientesMantenidosParaLaVentaDistribuirALosPropietarios: z.object(
+            {
+              ValorContable: z.number(),
+              EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+              MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+              MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+              ValorFiscal: z.number(),
+              TarifaDel9Porciento: z.number(),
+              TarifaDel15Porciento: z.number(),
+              TarifaDel20Porciento: z.number(),
+              MegaInversiones: z.number(),
+              MegaInversiones27Porciento: z.number(),
+              TarifaGeneralArticulo240ET: z.number(),
+              Otras: z.number()
+            }
+          ),
+          BienesDeArteYCulturaMedidosAlModeloDeCosto: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           }),
-          BienesArteCultura: z.object({
+          ActivosBiologicosMedidosAlModeloDeCosto: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           }),
-          ActivosBiologicosMedidosCosto: z.object({
+          ActivosFinancierosDistintosACarteraDeCreditoYOperacionesDeLeasing: z.object(
+            {
+              ValorContable: z.number(),
+              EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+              MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+              MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+              ValorFiscal: z.number(),
+              TarifaDel9Porciento: z.number(),
+              TarifaDel15Porciento: z.number(),
+              TarifaDel20Porciento: z.number(),
+              MegaInversiones: z.number(),
+              MegaInversiones27Porciento: z.number(),
+              TarifaGeneralArticulo240ET: z.number(),
+              Otras: z.number()
+            }
+          ),
+          CarteraDeCreditoYOperacionesDeLeasing: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           }),
-          ActivosFinancieros: z.object({
+          OtrasInversionesMedidasAlCostoOPorElMetodoDeLaParticipacion: z.object(
+            {
+              ValorContable: z.number(),
+              EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+              MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+              MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+              ValorFiscal: z.number(),
+              TarifaDel9Porciento: z.number(),
+              TarifaDel15Porciento: z.number(),
+              TarifaDel20Porciento: z.number(),
+              MegaInversiones: z.number(),
+              MegaInversiones27Porciento: z.number(),
+              TarifaGeneralArticulo240ET: z.number(),
+              Otras: z.number()
+            }
+          ),
+          DerechosDeUsoEnArrendamientosOperativosNIIF16: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
-            Otras: z.number()
-          }),
-          CarteraCreditoOperacionesLeasing: z.object({
-            ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
-            ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
-            MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
-            Otras: z.number()
-          }),
-          OtrasInversionesMedidasCostoMetodoParticipacion: z.object({
-            ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
-            ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
-            MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
-            Otras: z.number()
-          }),
-          DerechosUsoArrendamientosOperativos: z.object({
-            ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
-            ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
-            MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           }),
           OtrosDeterioros: z.object({
             ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
+            EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+            MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+            MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
             ValorFiscal: z.number(),
-            Tarifa9: z.number(),
-            Tarifa15: z.number(),
-            Tarifa20: z.number(),
+            TarifaDel9Porciento: z.number(),
+            TarifaDel15Porciento: z.number(),
+            TarifaDel20Porciento: z.number(),
             MegaInversiones: z.number(),
-            MegaInversiones27: z.number(),
-            TarifaGeneral240: z.number(),
+            MegaInversiones27Porciento: z.number(),
+            TarifaGeneralArticulo240ET: z.number(),
             Otras: z.number()
           })
         }),
         Total: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         })
       }),
       Total: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       })
     }),
     GastosFinancieros: z.object({
       Arrendamiento: z.object({
-        Financiero: z.object({
+        FinancieroOMercantilLeasing: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         }),
-        Operativo: z.object({
+        OperativoNIIF16: z.object({
           ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
           ValorFiscal: z.number(),
-          Tarifa9: z.number(),
-          Tarifa15: z.number(),
-          Tarifa20: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
           MegaInversiones: z.number(),
-          MegaInversiones27: z.number(),
-          TarifaGeneral240: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
           Otras: z.number()
         })
       }),
       InteresesDevengadosSectorFinanciero: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      InteresesDevengadosPrestamosTerceros: z.object({
+      InteresesDevengadosPorPrestamosDeDistintoAlSectorFinanciero: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      IntrumentosFinancierosMedidos: z.object({
+      PorInstrumentosFinancierosMedidosACostoAmortizadoDistintoAPrestamos: z.object(
+        {
+          ValorContable: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          ValorFiscal: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
+          MegaInversiones: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
+          Otras: z.number()
+        }
+      ),
+      CostosDeTransaccionComisionesBancariasTasasEntreOtros: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      CostosTransaccion: z.object({
+      DiferenciaEnCambio: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      DiferenciaCambio: z.object({
+      InteresesImplicitosTransaccionesDeFinanciacion: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      InteresesImplicitos: z.object({
+      ActualizacionDeProvisionesReconocidasAValorPresente: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      ActualizacionProvisiones: z.object({
+      InteresesPorAccionesPreferenciales: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      AccionesPreferenciales: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
-        ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      }),
-      OtrosGastosFinancieros: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
-        ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      }),
+      OtrosGastosFinancierosReconocidosComoGastoEnElEstadoDeResultados: z.object(
+        {
+          ValorContable: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          ValorFiscal: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
+          MegaInversiones: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
+          Otras: z.number()
+        }
+      ),
       Total: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       })
     }),
-    PredidasPorInversionesSubsidiariasAsociadasNegocios: z.object({
-      PerdidaMetodoParticipacion: z.object({
+    PerdidasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos: z.object({
+      PerdidasPorElMetodoDeParticipacion: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number()
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number()
       }),
-      PerdidaMetodoValorRazonable: z.object({
+      PerdidasPorMedicionesAValorRazonable: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number()
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number()
       }),
       Total: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number()
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number()
       })
     }),
-    PerdidasPorMedicionesValorRazonable: z.object({
+    PerdidasPorMedicionesAValorRazonable: z.object({
       ActivosBiologicos: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      PropiedadesInversion: z.object({
+      PropiedadesDeInversion: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       InstrumentosFinancieros: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       InstrumentosDerivados: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      Otros: z.object({
+      Otras: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       Total: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       })
     }),
-    PerdidaVentaEnajenacionActivosFijos: z.object({
-      PropiedadesPlanta: z.object({
+    PerdidaEnLaVentaOEnajenacionDeActivosFijos: z.object({
+      PropiedadesPlantaYEquipo: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      PropiedadesInversion: z.object({
+      PropiedadesDeInversion: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      ActivosNoCorrientesMantenidosVentaEntregarPropietarios: z.object({
+      ActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      ValoracionVentaInversionesFondoLiquidez: z.object({
+      ValoracionYVentaDeInversionesFondoDeLiquidezYTitulosParticipativos: z.object(
+        {
+          ValorContable: z.number(),
+          EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+          MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+          ValorFiscal: z.number(),
+          TarifaDel9Porciento: z.number(),
+          TarifaDel15Porciento: z.number(),
+          TarifaDel20Porciento: z.number(),
+          MegaInversiones: z.number(),
+          MegaInversiones27Porciento: z.number(),
+          TarifaGeneralArticulo240ET: z.number(),
+          Otras: z.number()
+        }
+      ),
+      PorDisposicionDeOtrosInstrumentosFinancieros: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
-        Otras: z.number()
-      }),
-      DisposicionInstrumentosFinancieros: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
-        ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
-        MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       ActivosIntangibles: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      DescuentoOperacionesFactoring: z.object({
+      DescuentoEnOperacionesDeFactoring: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      InversionesAccionesOtrasParticipaciones: z.object({
+      InversionesEnAccionesYOtrasParticipaciones: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       Otros: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       Total: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       })
     }),
-    GastosPorProviciones: z.object({
+    GastosPorProvisionesPasivosDeMontoOFechaInciertos: z.object({
       Garantias: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       ContratosOnerosos: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       Litigios: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      ReembolsosClientes: z.object({
+      ReembolsosAClientes: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      ReestructuracionesNegocios: z.object({
+      ReestructuracionesDeNegocios: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      PasivosContingentesCombinacionNegocios: z.object({
+      PasivosContingentesAsumidosEnUnaCombinacionDeNegocios: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       Otros: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       Total: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       })
     }),
     OtrosGastos: z.object({
-      TransferenciasSubvencionesAyudasGubernamentales: z.object({
+      TransferenciasSubvencionesYAyudasGubernamentales: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      DonacionesAportacionesSimilares: z.object({
+      DonacionesAportacionesYSimilares: z.object({
         ValorContable: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      ContribucionesEducacionEmpleados: z.object({
+      ContribucionesAEducacionDeLosEmpleadosArt1072DelET: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       Otros: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      DeduccionesFiscalesNoReconocidas: z.object({}),
-      Total: z.object({})
+      DeduccionesFiscalesNoReconocidosContablemente: z.object({
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        ValorFiscal: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
+        MegaInversiones: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
+        Otras: z.number()
+      }),
+      Total: z.object({
+        ValorContable: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        ValorFiscal: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
+        MegaInversiones: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
+        Otras: z.number()
+      })
     }),
-    PerdidasNetasOperacionesDiscontinuas: z.object({
+    PerdidasNetasEnOperacionesDiscontinuas: z.object({
       ValorContable: z.number(),
-      EfectoConversion: z.number(),
-      MenorValorFiscal: z.number()
+      EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+      MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number()
     }),
-    MenorGastoDeduccionPrecioTransferencia: z.object({
-      MayorValorFiscal: z.number(),
+    MenorGastoODeduccionAjustePreciosDeTransferencia: z.object({
+      MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
       ValorFiscal: z.number(),
-      Tarifa9: z.number(),
-      Tarifa15: z.number(),
-      Tarifa20: z.number(),
+      TarifaDel9Porciento: z.number(),
+      TarifaDel15Porciento: z.number(),
+      TarifaDel20Porciento: z.number(),
       MegaInversiones: z.number(),
-      MegaInversiones27: z.number(),
-      TarifaGeneral240: z.number(),
+      MegaInversiones27Porciento: z.number(),
+      TarifaGeneralArticulo240ET: z.number(),
       Otras: z.number()
     }),
-    Total: z.object({
+    TotalGastos: z.object({
       ValorContable: z.number(),
-      EfectoConversion: z.number(),
-      MenorValorFiscal: z.number(),
-      MayorValorFiscal: z.number(),
+      EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+      MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+      MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
       ValorFiscal: z.number(),
-      Tarifa9: z.number(),
-      Tarifa15: z.number(),
-      Tarifa20: z.number(),
+      TarifaDel9Porciento: z.number(),
+      TarifaDel15Porciento: z.number(),
+      TarifaDel20Porciento: z.number(),
       MegaInversiones: z.number(),
-      MegaInversiones27: z.number(),
-      TarifaGeneral240: z.number(),
+      MegaInversiones27Porciento: z.number(),
+      TarifaGeneralArticulo240ET: z.number(),
       Otras: z.number()
     })
   }),
-  GanaciaPerdidaAntesImpuestos: z.object({
+  GanaciaOPerdidaAntesDeImpuestoALaRentaORentaLiquida: z.object({
     ValorContable: z.number(),
-    EfectoConversion: z.number(),
-    MenorValorFiscal: z.number(),
-    MayorValorFiscal: z.number(),
+    EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+    MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+    MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
     ValorFiscal: z.number(),
-    Tarifa9: z.number(),
-    Tarifa15: z.number(),
-    Tarifa20: z.number(),
+    TarifaDel9Porciento: z.number(),
+    TarifaDel15Porciento: z.number(),
+    TarifaDel20Porciento: z.number(),
     MegaInversiones: z.number(),
-    MegaInversiones27: z.number(),
-    TarifaGeneral240: z.number(),
+    MegaInversiones27Porciento: z.number(),
+    TarifaGeneralArticulo240ET: z.number(),
     Otras: z.number()
   }),
   InformativoClasificacionDiferencias: z.object({
-    DiferenciasPermanentesDisminuyenRentaLiquida: z.object({
+    IngresosNoConstitutivosDeRentaNiGananciaOcasional: z.object({
       IngresosNoConstitutivosRenta: z.object({
-        ValorFiscalTieneDerecho: z.number(),
+        ValorFiscalAlQueTieneDerecho: z.number(),
         ValorFiscalSolicitado: z.number()
       }),
-      UtilidadVentaEnajenacionActivosMas2Anos: z.object({
-        ValorFiscalTieneDerecho: z.number(),
+      UtilidadEnLaVentaOEnajenacionDeActivosPoseidosPorDosAniosOMasGananciaOcasional: z.object(
+        {
+          ValorFiscalAlQueTieneDerecho: z.number(),
+          ValorFiscalSolicitado: z.number()
+        }
+      ),
+      GananciasPorElMetodoDeParticipacion: z.object({
+        ValorFiscalAlQueTieneDerecho: z.number(),
         ValorFiscalSolicitado: z.number()
       }),
-      GananciasMetodoParticipacion: z.object({
-        ValorFiscalTieneDerecho: z.number(),
-        ValorFiscalSolicitado: z.number()
-      }),
-      DeduccionEspecialeesInversionesAdquisicion: z.object({
-        ValorFiscalTieneDerecho: z.number(),
-        ValorFiscalSolicitado: z.number()
-      }),
-      InversionesInvestigacion: z.object({
-        ValorFiscalTieneDerecho: z.number(),
-        ValorFiscalSolicitado: z.number()
-      }),
-      MayorValorConstoActivosFijos: z.object({
-        ValorFiscalTieneDerecho: z.number(),
-        ValorFiscalSolicitado: z.number()
-      }),
-      RecuperacionDeducciones: z.object({
-        ValorFiscalTieneDerecho: z.number(),
-        ValorFiscalSolicitado: z.number()
-      }),
-      SalariosConDeduccionesEspeciales: z.object({
-        ValorFiscalTieneDerecho: z.number(),
-        ValorFiscalSolicitado: z.number()
-      }),
-      ReintegroProvisionesDiferencias: z.object({
-        ValorFiscalTieneDerecho: z.number(),
-        ValorFiscalSolicitado: z.number()
-      }),
-      AjusteAtribucionRentas: z.object({
-        ValorFiscalTieneDerecho: z.number(),
-        ValorFiscalSolicitado: z.number()
-      }),
-      Otros: z.object({
-        ValorFiscalTieneDerecho: z.number(),
-        ValorFiscalSolicitado: z.number()
+      OtrosBeneficiosFiscales: z.object({
+        DeduccionEspecialesPorInversionesOEnAdquisicionDeActivosContratoDeEstabilidadJuridica: z.object(
+          {
+            ValorFiscalAlQueTieneDerecho: z.number(),
+            ValorFiscalSolicitado: z.number()
+          }
+        ),
+        InversionesEnInvestigacionDesarrolloTecnologicoEInnovacion: z.object({
+          ValorFiscalAlQueTieneDerecho: z.number(),
+          ValorFiscalSolicitado: z.number()
+        }),
+        MayorValorDelCostoDelosActivosFijosPorReajustesFiscalesOSaneamientosAnio1995: z.object(
+          {
+            ValorFiscalAlQueTieneDerecho: z.number(),
+            ValorFiscalSolicitado: z.number()
+          }
+        ),
+        RecuperacionDeDeduccionesValorFiscal: z.object({
+          ValorFiscalAlQueTieneDerecho: z.number(),
+          ValorFiscalSolicitado: z.number()
+        }),
+        SalariosConDeduccionesEspeciales: z.object({
+          ValorFiscalAlQueTieneDerecho: z.number(),
+          ValorFiscalSolicitado: z.number()
+        }),
+        ReintegroORecuperacionDeProvisionesQueConstituyandifernciasVermanentesEnPeriodosAnterioresProvisionesParaGastosNoDeducibles: z.object(
+          {
+            ValorFiscalAlQueTieneDerecho: z.number(),
+            ValorFiscalSolicitado: z.number()
+          }
+        ),
+        AjustePorAtribucionDeRentasEstablecimientosPermanentesYSucursales: z.object(
+          {
+            ValorFiscalAlQueTieneDerecho: z.number(),
+            ValorFiscalSolicitado: z.number()
+          }
+        ),
+        OtrosBeneficiosFiscalesDeNaturalezaPermanente: z.object({
+          ValorFiscalAlQueTieneDerecho: z.number(),
+          ValorFiscalSolicitado: z.number()
+        })
       }),
       Total: z.object({
-        ValorFiscalTieneDerecho: z.number(),
+        ValorFiscalAlQueTieneDerecho: z.number(),
         ValorFiscalSolicitado: z.number()
       })
     }),
-    DiferenciasPermanentesAumentanRentaLiquida: z.object({
-      PerdidasGastosNoDeducibles: z.object({
-        DeduccionesImpuestos: z.object({
-          ValorFiscalTieneDerecho: z.number(),
+    DiferenciasPermanentesQueAumentanLaRentaLiquida: z.object({
+      PerdidasYGastosNoDeducibles: z.object({
+        DeduccionesDeImpuestosGMFPatrimonioVehiculosEntreOtros: z.object({
+          ValorFiscalAlQueTieneDerecho: z.number(),
           ValorFiscalSolicitado: z.number()
         }),
         GastosSinSoporte: z.object({
-          ValorFiscalTieneDerecho: z.number(),
+          ValorFiscalAlQueTieneDerecho: z.number(),
           ValorFiscalSolicitado: z.number()
         }),
-        PagosExteriorSinRetencionFuente: z.object({
-          ValorFiscalTieneDerecho: z.number(),
+        PagosAlExteriorSinLaPruebaDelaretencionEnLaFuente: z.object({
+          ValorFiscalAlQueTieneDerecho: z.number(),
           ValorFiscalSolicitado: z.number()
         }),
-        PagosExteriorExceden15PorcientoRentaLiquida: z.object({
-          ValorFiscalTieneDerecho: z.number(),
+        PagosAlExteriorQueExcedenEl15PorcientoDeLaRentaLiquida: z.object({
+          ValorFiscalAlQueTieneDerecho: z.number(),
           ValorFiscalSolicitado: z.number()
         }),
-        DonacionesNoCumplenRequisitosLegales: z.object({
-          ValorFiscalTieneDerecho: z.number(),
+        DonacionesQueNoCumplanLosRequisitosLegales: z.object({
+          ValorFiscalAlQueTieneDerecho: z.number(),
           ValorFiscalSolicitado: z.number()
         }),
-        SalariosSinPagoAportesParafiscales: z.object({
-          ValorFiscalTieneDerecho: z.number(),
+        SalariosSinElPagoDelosAportesParafiscales: z.object({
+          ValorFiscalAlQueTieneDerecho: z.number(),
           ValorFiscalSolicitado: z.number()
         }),
-        GastosVigenciasAnteriores: z.object({
-          ValorFiscalTieneDerecho: z.number(),
+        GastosDeVigenciasAnteriores: z.object({
+          ValorFiscalAlQueTieneDerecho: z.number(),
           ValorFiscalSolicitado: z.number()
         }),
-        GastoFinancieroNoDeducibleSubcapitalizacion: z.object({
-          ValorFiscalTieneDerecho: z.number(),
+        GastoFinancieroNoDeduciblePorReglaDeSubcapitalizacion: z.object({
+          ValorFiscalAlQueTieneDerecho: z.number(),
           ValorFiscalSolicitado: z.number()
         }),
         OtrosGastosFinancierosNoDeducibles: z.object({
-          ValorFiscalTieneDerecho: z.number(),
+          ValorFiscalAlQueTieneDerecho: z.number(),
           ValorFiscalSolicitado: z.number()
         }),
-        DeterioroInversionesPerdidaEnajenacionAcciones: z.object({
-          ValorFiscalTieneDerecho: z.number(),
-          ValorFiscalSolicitado: z.number()
-        }),
-        PerdidaEnajenacionAccionesVentaInmuebles: z.object({
-          ValorFiscalTieneDerecho: z.number(),
-          ValorFiscalSolicitado: z.number()
-        }),
-        PerdidasNoDeduciblesFaltantesInventarios: z.object({
-          ValorFiscalTieneDerecho: z.number(),
-          ValorFiscalSolicitado: z.number()
-        }),
-        PerdidasMetodoParticipacion: z.object({
-          ValorFiscalTieneDerecho: z.number(),
-          ValorFiscalSolicitado: z.number()
-        }),
-        PagosRegaliasIntangiblesVinculadosExteriorZonasFrancas: z.object({
-          ValorFiscalTieneDerecho: z.number(),
-          ValorFiscalSolicitado: z.number()
-        }),
-        LimitacionCostosComprasProveedoresFicticiosInsolventes: z.object({
-          ValorFiscalTieneDerecho: z.number(),
-          ValorFiscalSolicitado: z.number()
-        }),
-        ImpuestosMultasSancionesInteresesMoratoriosCondenasNoDeducibles: z.object(
+        DeterioroDeInversionesParaCubrirUnaperdidaEnEnajenacionDeAcciones: z.object(
           {
-            ValorFiscalTieneDerecho: z.number(),
+            ValorFiscalAlQueTieneDerecho: z.number(),
             ValorFiscalSolicitado: z.number()
           }
         ),
-        GastosNoRelacionCausalidadNecesidadActividadProductoraRenta: z.object({
-          ValorFiscalTieneDerecho: z.number(),
+        PerdidaEnLaEnajenacionDeAccionesYVentaDeBienesInmuebles: z.object({
+          ValorFiscalAlQueTieneDerecho: z.number(),
           ValorFiscalSolicitado: z.number()
         }),
-        MontoExcedeLimiteAtencionesClientesProveedoresEmpleados: z.object({
-          ValorFiscalTieneDerecho: z.number(),
+        PerdidasNoDeduciblesPorFaltantesDeInventarios: z.object({
+          ValorFiscalAlQueTieneDerecho: z.number(),
           ValorFiscalSolicitado: z.number()
         }),
-        ImportacionTecnologiaPatentesMarcas: z.object({
-          ValorFiscalTieneDerecho: z.number(),
+        PerdidasPorElMetodoDeParticipacion: z.object({
+          ValorFiscalAlQueTieneDerecho: z.number(),
           ValorFiscalSolicitado: z.number()
         }),
-        GastosNoDeduciblesContratosArrendamientoPermanente: z.object({
-          ValorFiscalTieneDerecho: z.number(),
-          ValorFiscalSolicitado: z.number()
-        }),
-        GastosNoDeduciblesOperacionesIVAConNoInscritosRegimenComun: z.object({
-          ValorFiscalTieneDerecho: z.number(),
-          ValorFiscalSolicitado: z.number()
-        }),
-        GastoNoDeducibleDonaciones: z.object({
-          ValorFiscalTieneDerecho: z.number(),
-          ValorFiscalSolicitado: z.number()
-        }),
-        GastosNoDeduciblesAtribuiblesIngresosExentosNoConstitutivosRenta: z.object(
+        PagosDeRegaliasPorConceptoDeIntangiblesAVinculadosDelExteriorYZonasFrancas: z.object(
           {
-            ValorFiscalTieneDerecho: z.number(),
+            ValorFiscalAlQueTieneDerecho: z.number(),
             ValorFiscalSolicitado: z.number()
           }
         ),
-        OtrosGastosNoDeduciblesPermanente: z.object({
-          ValorFiscalTieneDerecho: z.number(),
+        LimitacionDeCostosPorComprasAProveedoresFicticesOInsolventes: z.object({
+          ValorFiscalAlQueTieneDerecho: z.number(),
+          ValorFiscalSolicitado: z.number()
+        }),
+        ImpuestosMultasSancionesInteresesMoratoriosYLasCondneasNoDeducibles: z.object(
+          {
+            ValorFiscalAlQueTieneDerecho: z.number(),
+            ValorFiscalSolicitado: z.number()
+          }
+        ),
+        GastosQueNoGuardanRelacionDeCausalidadYNecesidadConLaActividadProductoraDeRenta: z.object(
+          {
+            ValorFiscalAlQueTieneDerecho: z.number(),
+            ValorFiscalSolicitado: z.number()
+          }
+        ),
+        MontoQueSuperaElLimitePermitidoParaAtencionesAClientesProveedoresYEmpleados: z.object(
+          {
+            ValorFiscalAlQueTieneDerecho: z.number(),
+            ValorFiscalSolicitado: z.number()
+          }
+        ),
+        ImportacionDeTecnologiaPatentesYMarcas: z.object({
+          ValorFiscalAlQueTieneDerecho: z.number(),
+          ValorFiscalSolicitado: z.number()
+        }),
+        GastosNoDeduciblesEnContratosDeArrendamientosDeNaturalezaPermanente: z.object(
+          {
+            ValorFiscalAlQueTieneDerecho: z.number(),
+            ValorFiscalSolicitado: z.number()
+          }
+        ),
+        GastosNoDeduciblesPorOperacionesGravadasConIVARealizadasConPersonasNoInscritasEnElRegimenComunDelImpuestosobreLasVentas: z.object(
+          {
+            ValorFiscalAlQueTieneDerecho: z.number(),
+            ValorFiscalSolicitado: z.number()
+          }
+        ),
+        GastoNoDeduciblePorDonaciones: z.object({
+          ValorFiscalAlQueTieneDerecho: z.number(),
+          ValorFiscalSolicitado: z.number()
+        }),
+        GastosNoDeduciblesAtribuiblesAIngresosExentosONoConstutivosDeRentaNiGananciaOcasional: z.object(
+          {
+            ValorFiscalAlQueTieneDerecho: z.number(),
+            ValorFiscalSolicitado: z.number()
+          }
+        ),
+        OtrosGastosNoDeduciblesDeNaturalezaPermanente: z.object({
+          ValorFiscalAlQueTieneDerecho: z.number(),
           ValorFiscalSolicitado: z.number()
         })
       }),
       OtrosAjustes: z.object({
-        DividendosDeclaradosContribuyentePeriodoFiscal: z.object({
-          ValorFiscalTieneDerecho: z.number(),
+        DividendosDeclaradosAFavorDelContribuyenteEnElPeriodoFiscal: z.object({
+          ValorFiscalAlQueTieneDerecho: z.number(),
           ValorFiscalSolicitado: z.number()
         }),
-        RentasLiquidasVentasInversiones: z.object({
-          ValorFiscalTieneDerecho: z.number(),
+        RentasLiquidasPorVentasDeInversiones: z.object({
+          ValorFiscalAlQueTieneDerecho: z.number(),
           ValorFiscalSolicitado: z.number()
         }),
-        MayorIngresoAjustesPreciosTransferencia: z.object({
-          ValorFiscalTieneDerecho: z.number(),
+        MayorIngresoAjustesPorPreciosDeTransferencia: z.object({
+          ValorFiscalAlQueTieneDerecho: z.number(),
           ValorFiscalSolicitado: z.number()
         }),
-        MenorCostoDeduccionAjustesPreciosTransferencia: z.object({
-          ValorFiscalTieneDerecho: z.number(),
+        MenorCostoODeduccionAjustesPorPreciosDeTransferencia: z.object({
+          ValorFiscalAlQueTieneDerecho: z.number(),
           ValorFiscalSolicitado: z.number()
         }),
-        RentasLiquidasRecuperacionDeduccionesPermanente: z.object({
-          ValorFiscalTieneDerecho: z.number(),
-          ValorFiscalSolicitado: z.number()
-        }),
-        AjusteAtribucionRentasEstablecimientosPermanentesSucursales: z.object({
-          ValorFiscalTieneDerecho: z.number(),
-          ValorFiscalSolicitado: z.number()
-        }),
+        RentasLiquidasPorRecuperacionDeDeduccionesDeNaturalezaPermanente: z.object(
+          {
+            ValorFiscalAlQueTieneDerecho: z.number(),
+            ValorFiscalSolicitado: z.number()
+          }
+        ),
+        AjustePorAtribucionDeRentasEstablecimientosPermanentesYSucursales: z.object(
+          {
+            ValorFiscalAlQueTieneDerecho: z.number(),
+            ValorFiscalSolicitado: z.number()
+          }
+        ),
         OtrosAjustes: z.object({
-          ValorFiscalTieneDerecho: z.number(),
+          ValorFiscalAlQueTieneDerecho: z.number(),
           ValorFiscalSolicitado: z.number()
         })
       }),
       Total: z.object({
-        ValorFiscalTieneDerecho: z.number(),
+        ValorFiscalAlQueTieneDerecho: z.number(),
         ValorFiscalSolicitado: z.number()
       })
     }),
-    GananciaPerdidaContableDiferenciaPermanente: z.object({
-      ValorFiscalTieneDerecho: z.number(),
+    GananciaOPerdidaContableConDiferenciasPermanentes: z.object({
+      ValorFiscalAlQueTieneDerecho: z.number(),
       ValorFiscalSolicitado: z.number()
     }),
-    AjustesResultadoContableDiferenciasTemporales: z.object({
-      DiferenciasTemporalesDeducibles: z.object({
-        PerdidasDeterioroValorActivos: z.object({
-          Inventarios: z.object({
-            Generaciones: z.number(),
-            Reversiones: z.number()
-          }),
-          PropiedadesPlantaEquipo: z.object({
-            Generaciones: z.number(),
-            Reversiones: z.number()
-          }),
-          ActivosIntangibles: z.object({
-            Generaciones: z.number(),
-            Reversiones: z.number()
-          }),
-          ActivosExploracionEvaluacionRecursosMinerales: z.object({
-            Generaciones: z.number(),
-            Reversiones: z.number()
-          }),
-          PropiedadesInversionMedidasCosto: z.object({
-            Generaciones: z.number(),
-            Reversiones: z.number()
-          }),
-          ActivosNoCorrientesMantenidosVentaEntregarPropietarios: z.object({
-            Generaciones: z.number(),
-            Reversiones: z.number()
-          }),
-          ActivosBiologicosMedidosCosto: z.object({
-            Generaciones: z.number(),
-            Reversiones: z.number()
-          }),
-          BienesArteCultura: z.object({
-            Generaciones: z.number(),
-            Reversiones: z.number()
-          }),
-          ActivosFinancieros: z.object({
-            Generaciones: z.number(),
-            Reversiones: z.number()
-          }),
-          CarteraCreditoOperacionesLeasing: z.object({
-            Generaciones: z.number(),
-            Reversiones: z.number()
-          }),
-          OtrasInversionesMedidasCostoMetodoParticipacion: z.object({
-            Generaciones: z.number(),
-            Reversiones: z.number()
-          }),
-          OtrasPerdidasDeterioros: z.object({
-            Generaciones: z.number(),
-            Reversiones: z.number()
-          })
-        }),
-        GastosDepreciacionExedidoLimiteFiscal: z.object({
-          PropiedadesPlantaEquipo: z.object({
-            Generaciones: z.number(),
-            Reversiones: z.number()
-          }),
-          PropiedadesInversion: z.object({
-            Generaciones: z.number(),
-            Reversiones: z.number()
-          }),
-          ActivosBiologicos: z.object({
-            Generaciones: z.number(),
-            Reversiones: z.number()
-          }),
-          BienesArteCultura: z.object({
-            Generaciones: z.number(),
-            Reversiones: z.number()
-          }),
-          Otros: z.object({
-            Generaciones: z.number(),
-            Reversiones: z.number()
-          })
-        }),
-        GastosAmortizacionExedidoLimiteFiscal: z.object({
-          Generaciones: z.number(),
-          Reversiones: z.number()
-        }),
-        PerdidasMedicionValorRazonable: z.object({
-          PropiedadesInversion: z.object({
-            Generaciones: z.number(),
-            Reversiones: z.number()
-          }),
-          InstrumentosDerivados: z.object({
-            Generaciones: z.number(),
-            Reversiones: z.number()
-          }),
-          OtrosInstrumentosFinancieros: z.object({
-            Generaciones: z.number(),
-            Reversiones: z.number()
-          })
-        }),
-        PerdidaDiferenciaCambio: z.object({
-          Generaciones: z.number(),
-          Reversiones: z.number()
-        }),
-        PerdidasEsperadasContratosConstruccionProvisionesContratosOnerosos: z.object(
-          { Generaciones: z.number(), Reversiones: z.number() }
-        ),
-        InteresesImplicitosVentasPrestamosTerceros: z.object({
-          Generaciones: z.number(),
-          Reversiones: z.number()
-        }),
-        OtrasProvisionesPasivosMontoFechaInciertos: z.object({
-          Generaciones: z.number(),
-          Reversiones: z.number()
-        }),
-        BeneficiosEmpleados: z.object({
-          Generaciones: z.number(),
-          Reversiones: z.number()
-        }),
-        GastosActualizacionProvisionesValorPresente: z.object({
-          Generaciones: z.number(),
-          Reversiones: z.number()
-        }),
-        CostosPrestamosActivosAptosNIIFParaPYMES: z.object({
-          Generaciones: z.number(),
-          Reversiones: z.number()
-        }),
-        PasivosIngresosDiferidosProgramasFidelizacionClientes: z.object({
-          Generaciones: z.number(),
-          Reversiones: z.number()
-        }),
-        AjustesContratosConcesionConstruccionAdministracionOperacionMantenimiento: z.object(
-          { Generaciones: z.number(), Reversiones: z.number() }
-        ),
-        GastosEstablecimiento: z.object({
-          Generaciones: z.number(),
-          Reversiones: z.number()
-        }),
-        GastosInvestigacionDesarrolloInnovacion: z.object({
-          Generaciones: z.number(),
-          Reversiones: z.number()
-        }),
-        PagosBasadosAcciones: z.object({
-          Generaciones: z.number(),
-          Reversiones: z.number()
-        }),
-        ExplotacionMinasPetroleoGas: z.object({
-          Generaciones: z.number(),
-          Reversiones: z.number()
-        }),
-        RentasDerechoCobroNoCumplieronCriteriosIngresosPeriodoGravable: z.object(
-          { Generaciones: z.number(), Reversiones: z.number() }
-        ),
-        OtrasDiferenciasTemporalesDeducibles: z.object({
-          Generaciones: z.number(),
-          Reversiones: z.number()
-        }),
-        Total: z.object({ Generaciones: z.number(), Reversiones: z.number() })
-      }),
-      DiferenciasTemporalesImponiblesGravables: z.object({
-        GastosDepreciacionesActivosFijosAceptadosTemporaria: z.object({
-          CostosAtribuidosFechaTransicion: z.object({
-            Generaciones: z.number(),
-            Reversiones: z.number()
-          }),
-          ApliacionModeloRevaluacion: z.object({
-            Generaciones: z.number(),
-            Reversiones: z.number()
-          }),
-          CostosEstimadosDesmantelamiento: z.object({
-            Generaciones: z.number(),
-            Reversiones: z.number()
-          }),
-          Otros: z.object({
-            Generaciones: z.number(),
-            Reversiones: z.number()
-          })
-        }),
-        GastosAmortizacionesActivosIntangiblesAceptadasFiscalmenteTemporaria: z.object(
-          {
-            CostosAtribuidosFechaTransicion: z.object({
+    AjustesAlResultadoContablePorDiferenciasTemporalesQueAfectenAlResultado: z.object(
+      {
+        DiferenciasTemporalesDeducibles: z.object({
+          PerdidasPorDeterioroDelValorDeLosActivos: z.object({
+            Inventarios: z.object({
               Generaciones: z.number(),
               Reversiones: z.number()
             }),
-            ApliacionModeloRevaluacion: z.object({
+            PropiedadesPlantaYEquipo: z.object({
               Generaciones: z.number(),
               Reversiones: z.number()
             }),
-            Plusvalia: z.object({
+            ActivosIntangibles: z.object({
               Generaciones: z.number(),
               Reversiones: z.number()
             }),
-            Otros: z.object({
+            ActivosDeExploracionYEvaluacionDeRecursosMinerales: z.object({
+              Generaciones: z.number(),
+              Reversiones: z.number()
+            }),
+            PropiedadesDeInversionMedidasAlModeloDeCosto: z.object({
+              Generaciones: z.number(),
+              Reversiones: z.number()
+            }),
+            ActivosNoCorrientesMantenidosParaLaVentaDistribuirALosPropietarios: z.object(
+              { Generaciones: z.number(), Reversiones: z.number() }
+            ),
+            ActivosBiologicosMedidosAlModeloDeCosto: z.object({
+              Generaciones: z.number(),
+              Reversiones: z.number()
+            }),
+            BienesDeArteYCulturaMedidosAlModeloDeCosto: z.object({
+              Generaciones: z.number(),
+              Reversiones: z.number()
+            }),
+            ActivosFinancierosDistintosACarteraDeCreditoYOperacionesDeLeasing: z.object(
+              { Generaciones: z.number(), Reversiones: z.number() }
+            ),
+            CarteraDeCreditoYOperacionesDeLeasing: z.object({
+              Generaciones: z.number(),
+              Reversiones: z.number()
+            }),
+            OtrasInversionesMedidasAlCostoOPorElMetodoDeLaParticipacion: z.object(
+              { Generaciones: z.number(), Reversiones: z.number() }
+            ),
+            OtrasPerdidasPorDeterioro: z.object({
               Generaciones: z.number(),
               Reversiones: z.number()
             })
-          }
-        ),
-        GananciasMedicionValorRazonable: z.object({
-          PropiedadesInversion: z.object({
+          }),
+          GastosPorDepreciacionQueHanExcedidoElLimiteMaximoFiscal: z.object({
+            PropiedadesPlantaYEquipo: z.object({
+              Generaciones: z.number(),
+              Reversiones: z.number()
+            }),
+            PropiedadesDeInversion: z.object({
+              Generaciones: z.number(),
+              Reversiones: z.number()
+            }),
+            ActivosBiologicos: z.object({
+              Generaciones: z.number(),
+              Reversiones: z.number()
+            }),
+            BienesDeArteYCultura: z.object({
+              Generaciones: z.number(),
+              Reversiones: z.number()
+            }),
+            OtrosActivos: z.object({
+              Generaciones: z.number(),
+              Reversiones: z.number()
+            })
+          }),
+          GastosPorAmortizacionQueHanExcedidoElLimiteMaximoFiscal: z.object({
             Generaciones: z.number(),
             Reversiones: z.number()
           }),
-          InstrumentosDerivados: z.object({
+          PerdidasPorMedicionAValorRazonable: z.object({
+            PropiedadesDeInversion: z.object({
+              Generaciones: z.number(),
+              Reversiones: z.number()
+            }),
+            InstrumentosDerivados: z.object({
+              Generaciones: z.number(),
+              Reversiones: z.number()
+            }),
+            OtrosInstrumentosFinancierosDistintosATitulosDeRentaFijaMedidosAlModeloDelValorRazonable: z.object(
+              { Generaciones: z.number(), Reversiones: z.number() }
+            )
+          }),
+          PerdidaPorDiferenciaEnCambio: z.object({
             Generaciones: z.number(),
             Reversiones: z.number()
           }),
-          OtrosInstrumentosFinancieros: z.object({
+          PerdidasEsperadasEnContratosDeconstruccionYOtrosServiciosProvisionesPorContratosOnerosos: z.object(
+            { Generaciones: z.number(), Reversiones: z.number() }
+          ),
+          InteresesImplicitosVentasOPrestamosConcedidosATerceros: z.object({
+            Generaciones: z.number(),
+            Reversiones: z.number()
+          }),
+          OtrasProvisionesAsociadasAPasivosDeMontoOFechaInciertos: z.object({
+            Generaciones: z.number(),
+            Reversiones: z.number()
+          }),
+          PorBeneficiosAEmpleados: z.object({
+            Generaciones: z.number(),
+            Reversiones: z.number()
+          }),
+          GastosPorActualizacionDeProvisionesReconocidasAValorPresente: z.object(
+            { Generaciones: z.number(), Reversiones: z.number() }
+          ),
+          CostosPorPrestamosAtribuiblesAActivosAptosParaEntidadesQueApliacanLaNIIFParaPYMES: z.object(
+            { Generaciones: z.number(), Reversiones: z.number() }
+          ),
+          PasivosPorIngresosDiferidosProductoDeProgramasDeFidelizacionDeClientesQueNoHanSidoReversadosContablementePeroQueDebenSerGravadosFiscalmente: z.object(
+            { Generaciones: z.number(), Reversiones: z.number() }
+          ),
+          AjustesPorContratosDeconcesionQueIncorporanLasEtapasDeconstruccionAdministracionOperacionYMantenimiento: z.object(
+            { Generaciones: z.number(), Reversiones: z.number() }
+          ),
+          GastosDeEstablecimiento: z.object({
+            Generaciones: z.number(),
+            Reversiones: z.number()
+          }),
+          GastosDeInvestigacionDesarrolloEInnovacion: z.object({
+            Generaciones: z.number(),
+            Reversiones: z.number()
+          }),
+          PorPagosBasadosEnAcciones: z.object({
+            Generaciones: z.number(),
+            Reversiones: z.number()
+          }),
+          EnLaExplotacionDeMinasPetroleoYGas: z.object({
+            Generaciones: z.number(),
+            Reversiones: z.number()
+          }),
+          RentasConDerechoACobroCausadasQueNoCumplieronCriteriosParaSerContabilizadasComoIngresosDelPeriodoGravable: z.object(
+            { Generaciones: z.number(), Reversiones: z.number() }
+          ),
+          OtrasDiferenciasTemporalesDeducibles: z.object({
+            Generaciones: z.number(),
+            Reversiones: z.number()
+          }),
+          TotalDiferenciasTemporalesDeducibles: z.object({
             Generaciones: z.number(),
             Reversiones: z.number()
           })
         }),
-        GananciaPorDiferenciaCambio: z.object({
-          Generaciones: z.number(),
-          Reversiones: z.number()
+        DiferenciasTemporalesImponiblesGravables: z.object({
+          GastosPorDepreciacionesDeActivosFijosNoAceptadasFiscalmenteDeNaturalezaTemporaria: z.object(
+            {
+              CostosAtribuidosEnLaFechaDeTransicionALosNuevosMarcosTecnicosNormativosContables: z.object(
+                { Generaciones: z.number(), Reversiones: z.number() }
+              ),
+              AplicacionDelModeloDeRevaluacion: z.object({
+                Generaciones: z.number(),
+                Reversiones: z.number()
+              }),
+              CostosEstimadosDeDesmantelamiento: z.object({
+                Generaciones: z.number(),
+                Reversiones: z.number()
+              }),
+              Otros: z.object({
+                Generaciones: z.number(),
+                Reversiones: z.number()
+              })
+            }
+          ),
+          GastosPorAmortizacionesDeActivosIntangiblesNoAceptadasFiscalmenteDeNaturalezaTemporaria: z.object(
+            {
+              CostosAtribuidosEnLaFechaDeTransicionALosNuevosMarcosTecnicosNormativosContables: z.object(
+                { Generaciones: z.number(), Reversiones: z.number() }
+              ),
+              AplicacionDelModeloDeRevaluacion: z.object({
+                Generaciones: z.number(),
+                Reversiones: z.number()
+              }),
+              PlusvaliaGoodWillFondoDeComercioYCreditoMercantil: z.object({
+                Generaciones: z.number(),
+                Reversiones: z.number()
+              }),
+              Otros: z.object({
+                Generaciones: z.number(),
+                Reversiones: z.number()
+              })
+            }
+          ),
+          GananciasPorLaMedicionAValorRazonable: z.object({
+            PropiedadesDeInversion: z.object({
+              Generaciones: z.number(),
+              Reversiones: z.number()
+            }),
+            InstrumentosDerivados: z.object({
+              Generaciones: z.number(),
+              Reversiones: z.number()
+            }),
+            OtrosInstrumentosFinancierosDistintosATitulosDeRentaFijaMedidosAlValorRazonable: z.object(
+              { Generaciones: z.number(), Reversiones: z.number() }
+            )
+          }),
+          GananciaPorDiferenciaEnCambio: z.object({
+            Generaciones: z.number(),
+            Reversiones: z.number()
+          }),
+          IngresosProvenientesPorContraprestacionVariable: z.object({
+            Generaciones: z.number(),
+            Reversiones: z.number()
+          }),
+          InteresesImplicitosComprasOPrestamosObtenidos: z.object({
+            Generaciones: z.number(),
+            Reversiones: z.number()
+          }),
+          DeduccionEspecialDelImpuestoSobreLasVentas: z.object({
+            Generaciones: z.number(),
+            Reversiones: z.number()
+          }),
+          OtrasDiferenciasTemporalesImponiblesGravables: z.object({
+            Generaciones: z.number(),
+            Reversiones: z.number()
+          }),
+          TotalDiferenciasTemporalesImponibles: z.object({
+            Generaciones: z.number(),
+            Reversiones: z.number()
+          })
         }),
-        IngresosProvenientesContraprestacionVariable: z.object({
-          Generaciones: z.number(),
-          Reversiones: z.number()
-        }),
-        InteresesImplicitos: z.object({
-          Generaciones: z.number(),
-          Reversiones: z.number()
-        }),
-        DeduccionEspecialImpuestoVentas: z.object({
-          Generaciones: z.number(),
-          Reversiones: z.number()
-        }),
-        OtrasDiferencias: z.object({
-          Generaciones: z.number(),
-          Reversiones: z.number()
-        }),
-        Total: z.object({ Generaciones: z.number(), Reversiones: z.number() })
-      }),
-      OtrasDiferenciasTemporales: z.object({
-        MedicionesActivosBiologicosValorRazonable: z.object({
-          CambiosValorRazonableMenosCostosVenta: z.object({
+        OtrasDiferenciasTemporales: z.object({
+          MedicionesDeActivosBiologicosAlValorRazonableMenosCostosDeVenta: z.object(
+            {
+              CambiosEnElValorRazonableMenosCostosDeVenta: z.object({
+                GeneracionesDeducibles: z.number(),
+                GeneracionesImponibles: z.number(),
+                ReversionesDeducibles: z.number(),
+                ReversionesImponibles: z.number()
+              }),
+              CostosDeProduccionAtribuiblesALaTransformacionBiologicaOPerdidasCausadasEnCasoDeDestruccionDaniosMuerteYOtrosEventos: z.object(
+                {
+                  GeneracionesDeducibles: z.number(),
+                  GeneracionesImponibles: z.number(),
+                  ReversionesDeducibles: z.number(),
+                  ReversionesImponibles: z.number()
+                }
+              ),
+              DepreciacionFiscalDeAnimalesProductores: z.object({
+                GeneracionesDeducibles: z.number(),
+                GeneracionesImponibles: z.number(),
+                ReversionesDeducibles: z.number(),
+                ReversionesImponibles: z.number()
+              })
+            }
+          ),
+          AjustesPorTitulosDeRentaFijaActivosFinancierosMedidosAlModeloDelValorRazonable: z.object(
+            {
+              AjustesPorValorRazonable: z.object({
+                GeneracionesDeducibles: z.number(),
+                GeneracionesImponibles: z.number(),
+                ReversionesDeducibles: z.number(),
+                ReversionesImponibles: z.number()
+              }),
+              AjustePorRendimientosFinancierosCalculadosDeManerLinealParaEfectosFiscales: z.object(
+                {
+                  GeneracionesDeducibles: z.number(),
+                  GeneracionesImponibles: z.number(),
+                  ReversionesDeducibles: z.number(),
+                  ReversionesImponibles: z.number()
+                }
+              )
+            }
+          ),
+          GastosPorAmortizacionFiscalAcelerada: z.object({
             GeneracionesDeducibles: z.number(),
             GeneracionesImponibles: z.number(),
             ReversionesDeducibles: z.number(),
             ReversionesImponibles: z.number()
           }),
-          CostosProduccionTransformacionBiologica: z.object({
+          AjustesPorOperacionesDeReportoORepoSimultaneasYDeTransferenciaTemporialDeValores: z.object(
+            {
+              GeneracionesDeducibles: z.number(),
+              GeneracionesImponibles: z.number(),
+              ReversionesDeducibles: z.number(),
+              ReversionesImponibles: z.number()
+            }
+          ),
+          ContratosDeArrendamientos: z.object({
             GeneracionesDeducibles: z.number(),
             GeneracionesImponibles: z.number(),
             ReversionesDeducibles: z.number(),
             ReversionesImponibles: z.number()
           }),
-          DepreciacionFiscalAnimalesProductores: z.object({
+          TotalOtrasDiferenciasTemporales: z.object({
             GeneracionesDeducibles: z.number(),
             GeneracionesImponibles: z.number(),
             ReversionesDeducibles: z.number(),
             ReversionesImponibles: z.number()
           })
-        }),
-        AjustesTitulosRentaFijaModeloValorRazonable: z.object({
-          AjustesValorRazonable: z.object({
-            GeneracionesDeducibles: z.number(),
-            GeneracionesImponibles: z.number(),
-            ReversionesDeducibles: z.number(),
-            ReversionesImponibles: z.number()
-          }),
-          AjusteRendimientosFinancieros: z.object({
-            GeneracionesDeducibles: z.number(),
-            GeneracionesImponibles: z.number(),
-            ReversionesDeducibles: z.number(),
-            ReversionesImponibles: z.number()
-          })
-        }),
-        GastosAmortizacionFiscalAcelerada: z.object({
-          GeneracionesDeducibles: z.number(),
-          GeneracionesImponibles: z.number(),
-          ReversionesDeducibles: z.number(),
-          ReversionesImponibles: z.number()
-        }),
-        AjustesOperacionReporteRepo: z.object({
-          GeneracionesDeducibles: z.number(),
-          GeneracionesImponibles: z.number(),
-          ReversionesDeducibles: z.number(),
-          ReversionesImponibles: z.number()
-        }),
-        ContratosArrendamientos: z.object({
-          GeneracionesDeducibles: z.number(),
-          GeneracionesImponibles: z.number(),
-          ReversionesDeducibles: z.number(),
-          ReversionesImponibles: z.number()
         }),
         Total: z.object({
           GeneracionesDeducibles: z.number(),
@@ -5097,14 +5285,8 @@ export const RentaLiquidaSchema = z.object({
           ReversionesDeducibles: z.number(),
           ReversionesImponibles: z.number()
         })
-      }),
-      Total: z.object({
-        GeneracionesDeducibles: z.number(),
-        GeneracionesImponibles: z.number(),
-        ReversionesDeducibles: z.number(),
-        ReversionesImponibles: z.number()
-      })
-    }),
+      }
+    ),
     Total: z.object({
       GeneracionesDeducibles: z.number(),
       GeneracionesImponibles: z.number(),
@@ -5112,662 +5294,688 @@ export const RentaLiquidaSchema = z.object({
       ReversionesImponibles: z.number()
     })
   }),
-  RentaLiquidaOrdinariaEjercicio: z.number(),
-  PerdidaLiquidaOrdinariaEjercicio: z.number(),
+  RentaLiquidaOrdinariaDelEjercicioIncluyendeoDividendosYAntesDeLasRentasLiquidasPasivasECE: z.number(),
+  OPerdidaLiquidaOrdinariaDelEjercicioIncluyendoDividendosYAntesDeLaRentasLiquidasPasivasECE: z.number(),
   AjustesParaLiquidacion: z.object({
-    MenosValorInversionesRealizadas: z.number(),
-    MasValorInversionesLiquidas: z.number()
+    MenosValorInversionesRealizadasEnElPeriodo: z.number(),
+    MasValorInversionesLiquidasEnElPeriodo: z.number()
   }),
   RentasPasivasECE: z.object({
     Ingresos: z.object({
-      DividendosRetirosRepartos: z.object({
+      DividendosRetirosYRepartos: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      InteresesRendimientosFinancieros: z.object({
+      InteresesYRendimientosFinancieros: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      ProvenientesActivosIntangibles: z.object({
+      ProvenientesDeActivosIntangibles: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      EnajenacionCesionDerechos: z.object({
+      EnajenacionOCesionDeDerechos: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      EnajenacionArrendamientoInmuebles: z.object({
+      EnajenacionOArrendamientoDeInmuebles: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      CompraVentaBienesCorporales: z.object({
+      CompraOVentaDeBienesCorporales: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       PorServicios: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
       Total: z.object({
         ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        MenorValorFiscal: z.number(),
-        MayorValorFiscal: z.number(),
+        EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+        MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+        MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       })
     }),
     Costos: z.object({
       ValorContable: z.number(),
-      EfectoConversion: z.number(),
-      MenorValorFiscal: z.number(),
-      MayorValorFiscal: z.number(),
+      EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+      MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+      MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
       ValorFiscal: z.number(),
-      Tarifa9: z.number(),
-      Tarifa15: z.number(),
-      Tarifa20: z.number(),
+      TarifaDel9Porciento: z.number(),
+      TarifaDel15Porciento: z.number(),
+      TarifaDel20Porciento: z.number(),
       MegaInversiones: z.number(),
-      MegaInversiones27: z.number(),
-      TarifaGeneral240: z.number(),
+      MegaInversiones27Porciento: z.number(),
+      TarifaGeneralArticulo240ET: z.number(),
       Otras: z.number()
     }),
     Deducciones: z.object({
       ValorContable: z.number(),
-      EfectoConversion: z.number(),
-      MenorValorFiscal: z.number(),
-      MayorValorFiscal: z.number(),
+      EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+      MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+      MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
       ValorFiscal: z.number(),
-      Tarifa9: z.number(),
-      Tarifa15: z.number(),
-      Tarifa20: z.number(),
+      TarifaDel9Porciento: z.number(),
+      TarifaDel15Porciento: z.number(),
+      TarifaDel20Porciento: z.number(),
       MegaInversiones: z.number(),
-      MegaInversiones27: z.number(),
-      TarifaGeneral240: z.number(),
+      MegaInversiones27Porciento: z.number(),
+      TarifaGeneralArticulo240ET: z.number(),
       Otras: z.number()
     })
   }),
   RentasLiquidasPasivasECE: z.object({
     ValorContable: z.number(),
-    EfectoConversion: z.number(),
-    MenorValorFiscal: z.number(),
-    MayorValorFiscal: z.number(),
+    EfectoConversionMonedaFuncionalDiferenteAlPesoColombiano: z.number(),
+    MenorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
+    MayorValorFiscalPorReconocimientoExencionesLimitaciones: z.number(),
     ValorFiscal: z.number(),
-    Tarifa9: z.number(),
-    Tarifa15: z.number(),
-    Tarifa20: z.number(),
+    TarifaDel9Porciento: z.number(),
+    TarifaDel15Porciento: z.number(),
+    TarifaDel20Porciento: z.number(),
     MegaInversiones: z.number(),
-    MegaInversiones27: z.number(),
-    TarifaGeneral240: z.number(),
+    MegaInversiones27Porciento: z.number(),
+    TarifaGeneralArticulo240ET: z.number(),
     Otras: z.number()
   }),
-  RentaLiquidaRecuperaciónDeducciones: z.object({
+  RentaLiquidaPorRecuperacionDeDeducciones: z.object({
     ValorFiscal: z.number(),
-    Tarifa9: z.number(),
-    Tarifa15: z.number(),
-    Tarifa20: z.number(),
+    TarifaDel9Porciento: z.number(),
+    TarifaDel15Porciento: z.number(),
+    TarifaDel20Porciento: z.number(),
     MegaInversiones: z.number(),
-    MegaInversiones27: z.number(),
-    TarifaGeneral240: z.number(),
+    MegaInversiones27Porciento: z.number(),
+    TarifaGeneralArticulo240ET: z.number(),
     Otras: z.number()
   }),
-  RentaLiquidaOrdinariaEjercicioExcedenteNEto: z.object({
-    ValorFiscal: z.number(),
-    Tarifa9: z.number(),
-    Tarifa15: z.number(),
-    Tarifa20: z.number(),
-    MegaInversiones: z.number(),
-    MegaInversiones27: z.number(),
-    TarifaGeneral240: z.number(),
-    Otras: z.number()
-  }),
-  PerdidaLiquidaEjercicio: z.object({
-    ValorFiscal: z.number(),
-    Tarifa9: z.number(),
-    Tarifa15: z.number(),
-    Tarifa20: z.number(),
-    MegaInversiones: z.number(),
-    MegaInversiones27: z.number(),
-    TarifaGeneral240: z.number(),
-    Otras: z.number()
-  }),
-  Compensaciones: z.object({
-    PerdidasFiscales: z.object({
+  RentaLiquidaOrdinariaDelEjercicioExcedenteNetoIncluyeUnicamenteDividendosDeSociedadesNacionalesATarifaGeneral: z.object(
+    {
       ValorFiscal: z.number(),
-      Tarifa9: z.number(),
-      Tarifa15: z.number(),
-      Tarifa20: z.number(),
+      TarifaDel9Porciento: z.number(),
+      TarifaDel15Porciento: z.number(),
+      TarifaDel20Porciento: z.number(),
       MegaInversiones: z.number(),
-      MegaInversiones27: z.number(),
-      TarifaGeneral240: z.number(),
+      MegaInversiones27Porciento: z.number(),
+      TarifaGeneralArticulo240ET: z.number(),
+      Otras: z.number()
+    }
+  ),
+  OPerdidaLiquidaDelEjercicioIncluyeUnicamenteDividendosDeSociedadesNacionalesATarifaGeneral: z.object(
+    {
+      ValorFiscal: z.number(),
+      TarifaDel9Porciento: z.number(),
+      TarifaDel15Porciento: z.number(),
+      TarifaDel20Porciento: z.number(),
+      MegaInversiones: z.number(),
+      MegaInversiones27Porciento: z.number(),
+      TarifaGeneralArticulo240ET: z.number(),
+      Otras: z.number()
+    }
+  ),
+  Compensaciones: z.object({
+    DePerdidasFiscales: z.object({
+      ValorFiscal: z.number(),
+      TarifaDel9Porciento: z.number(),
+      TarifaDel15Porciento: z.number(),
+      TarifaDel20Porciento: z.number(),
+      MegaInversiones: z.number(),
+      MegaInversiones27Porciento: z.number(),
+      TarifaGeneralArticulo240ET: z.number(),
       Otras: z.number()
     }),
-    ExcesoREntaPresuntivaRentaOrdinaria: z.object({
+    DelExcesoDeRentaPresuntivaSobreRentaOrdinaria: z.object({
       ValorFiscal: z.number(),
-      Tarifa9: z.number(),
-      Tarifa15: z.number(),
-      Tarifa20: z.number(),
+      TarifaDel9Porciento: z.number(),
+      TarifaDel15Porciento: z.number(),
+      TarifaDel20Porciento: z.number(),
       MegaInversiones: z.number(),
-      MegaInversiones27: z.number(),
-      TarifaGeneral240: z.number(),
+      MegaInversiones27Porciento: z.number(),
+      TarifaGeneralArticulo240ET: z.number(),
       Otras: z.number()
     }),
     Total: z.object({
       ValorFiscal: z.number(),
-      Tarifa9: z.number(),
-      Tarifa15: z.number(),
-      Tarifa20: z.number(),
+      TarifaDel9Porciento: z.number(),
+      TarifaDel15Porciento: z.number(),
+      TarifaDel20Porciento: z.number(),
       MegaInversiones: z.number(),
-      MegaInversiones27: z.number(),
-      TarifaGeneral240: z.number(),
+      MegaInversiones27Porciento: z.number(),
+      TarifaGeneralArticulo240ET: z.number(),
       Otras: z.number()
     })
   }),
-  RentaLquidaDividendosSociedadesNacionales: z.object({
+  RentaLquidaIncluyeDividendosDeSociedadesNacionalesATarifaGeneral: z.object({
     ValorFiscal: z.number(),
-    Tarifa9: z.number(),
-    Tarifa15: z.number(),
-    Tarifa20: z.number(),
+    TarifaDel9Porciento: z.number(),
+    TarifaDel15Porciento: z.number(),
+    TarifaDel20Porciento: z.number(),
     MegaInversiones: z.number(),
-    MegaInversiones27: z.number(),
-    TarifaGeneral240: z.number(),
+    MegaInversiones27Porciento: z.number(),
+    TarifaGeneralArticulo240ET: z.number(),
     Otras: z.number()
   }),
   RentaPresuntiva: z.object({
-    PatrimoniLiquidoAñoPeriodoGravable: z.object({
+    PatrimonioLiquidoDelAnioOPeriodoGravableAnterior: z.object({
       ValorFiscal: z.number(),
-      Tarifa9: z.number(),
-      Tarifa15: z.number(),
-      Tarifa20: z.number(),
+      TarifaDel9Porciento: z.number(),
+      TarifaDel15Porciento: z.number(),
+      TarifaDel20Porciento: z.number(),
       MegaInversiones: z.number(),
-      MegaInversiones27: z.number(),
-      TarifaGeneral240: z.number(),
+      MegaInversiones27Porciento: z.number(),
+      TarifaGeneralArticulo240ET: z.number(),
       Otras: z.number()
     }),
     ValorPatrimonialNeto: z.object({
-      AccionesAportesPoseidosSociedadesNacionales: z.object({
+      AccionesYAportesPoseidosEnSociedadesNacionales: z.object({
         ValorFiscal: z.number()
       }),
-      BienesAfectadosHecosConstitutivos: z.object({ ValorFiscal: z.number() }),
-      BienesVinculadosEmpresasPeriodoImproductivo: z.object({
+      BienesAfectadosPorHechosConstitutosDeFuerzaMayorOCasoFortuito: z.object({
         ValorFiscal: z.number()
       }),
-      BienesDestinadosExclusivamenteActividadesDeportivas: z.object({
+      BienesVinculadosAEmpresasEnPeriodoImproductivo: z.object({
         ValorFiscal: z.number()
       }),
-      BienesVinculadosEmpresasExclusivamenteMineras: z.object({
+      BienesDestinadosExclusivamenteAActividadesDeportivas: z.object({
+        ValorFiscal: z.number()
+      }),
+      BienesVinculadosAEmpresasExclusivamenteMineras: z.object({
         ValorFiscal: z.number()
       })
     }),
-    Primeras19000UVTAgropecuario: z.object({ ValorFiscal: z.number() }),
+    Primeras19000UVTDeActivosDestinadosAlSectorAgropecuario: z.object({
+      ValorFiscal: z.number()
+    }),
     OtrasExclusiones: z.object({ ValorFiscal: z.number() }),
-    BaseCalcykiRentaPresuntiva: z.object({ ValorFiscal: z.number() }),
-    CalculoRantaPresuntiva: z.object({ ValorFiscal: z.number() }),
-    RentaGravableGeneraActivosExcluidos: z.object({ ValorFiscal: z.number() }),
+    BaseDeCalculoDeLaRentaPresuntiva: z.object({ ValorFiscal: z.number() }),
+    CalculoRentaPresuntiva0PorcientoSalvoExcepciones: z.object({
+      ValorFiscal: z.number()
+    }),
+    RentaGravableGeneradaPorLosActivosExcluidos: z.object({
+      ValorFiscal: z.number()
+    }),
     Total: z.object({
       ValorFiscal: z.number(),
-      Tarifa9: z.number(),
-      Tarifa15: z.number(),
-      Tarifa20: z.number(),
+      TarifaDel9Porciento: z.number(),
+      TarifaDel15Porciento: z.number(),
+      TarifaDel20Porciento: z.number(),
       MegaInversiones: z.number(),
-      MegaInversiones27: z.number(),
-      TarifaGeneral240: z.number(),
+      MegaInversiones27Porciento: z.number(),
+      TarifaGeneralArticulo240ET: z.number(),
       Otras: z.number()
     })
   }),
-  RenteExenta: z.object({
+  RentaExenta: z.object({
     ValorFiscal: z.number(),
-    Tarifa9: z.number(),
-    Tarifa15: z.number(),
-    Tarifa20: z.number(),
+    TarifaDel9Porciento: z.number(),
+    TarifaDel15Porciento: z.number(),
+    TarifaDel20Porciento: z.number(),
     MegaInversiones: z.number(),
-    MegaInversiones27: z.number(),
-    TarifaGeneral240: z.number(),
+    MegaInversiones27Porciento: z.number(),
+    TarifaGeneralArticulo240ET: z.number(),
     Otras: z.number()
   }),
-  RentasGrvablesREntaLiquida: z.object({
-    PerdidasCompensadasModificadasLiquidacionOfical: z.object({
+  RentasGravablesRentaLiquida: z.object({
+    PerdidasCompensadasModificadasPorLiquidacionOficial: z.object({
       ValorFiscal: z.number(),
-      Tarifa9: z.number(),
-      Tarifa15: z.number(),
-      Tarifa20: z.number(),
+      TarifaDel9Porciento: z.number(),
+      TarifaDel15Porciento: z.number(),
+      TarifaDel20Porciento: z.number(),
       MegaInversiones: z.number(),
-      MegaInversiones27: z.number(),
-      TarifaGeneral240: z.number(),
+      MegaInversiones27Porciento: z.number(),
+      TarifaGeneralArticulo240ET: z.number(),
       Otras: z.number()
     }),
     PasivosInexistentes: z.object({
       ValorFiscal: z.number(),
-      Tarifa9: z.number(),
-      Tarifa15: z.number(),
-      Tarifa20: z.number(),
+      TarifaDel9Porciento: z.number(),
+      TarifaDel15Porciento: z.number(),
+      TarifaDel20Porciento: z.number(),
       MegaInversiones: z.number(),
-      MegaInversiones27: z.number(),
-      TarifaGeneral240: z.number(),
+      MegaInversiones27Porciento: z.number(),
+      TarifaGeneralArticulo240ET: z.number(),
       Otras: z.number()
     }),
-    OmisionActivos: z.object({
+    OmisionDeActivos: z.object({
       ValorFiscal: z.number(),
-      Tarifa9: z.number(),
-      Tarifa15: z.number(),
-      Tarifa20: z.number(),
+      TarifaDel9Porciento: z.number(),
+      TarifaDel15Porciento: z.number(),
+      TarifaDel20Porciento: z.number(),
       MegaInversiones: z.number(),
-      MegaInversiones27: z.number(),
-      TarifaGeneral240: z.number(),
+      MegaInversiones27Porciento: z.number(),
+      TarifaGeneralArticulo240ET: z.number(),
       Otras: z.number()
     }),
     ComparacionPatrimonial: z.object({
       ValorFiscal: z.number(),
-      Tarifa9: z.number(),
-      Tarifa15: z.number(),
-      Tarifa20: z.number(),
+      TarifaDel9Porciento: z.number(),
+      TarifaDel15Porciento: z.number(),
+      TarifaDel20Porciento: z.number(),
       MegaInversiones: z.number(),
-      MegaInversiones27: z.number(),
-      TarifaGeneral240: z.number(),
+      MegaInversiones27Porciento: z.number(),
+      TarifaGeneralArticulo240ET: z.number(),
       Otras: z.number()
     }),
     ESALRTE: z.object({
-      ExedentesNoReinvertidos: z.object({
+      ExcedentesNoReinvertidos: z.object({
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      AsignacionesPermanentes: z.object({
+      AsignacionesPermanentesNoEjecutadas: z.object({
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       }),
-      InversionesLiquidas: z.object({
+      InversionesLiquidadasYNoReinvertidas: z.object({
         ValorFiscal: z.number(),
-        Tarifa9: z.number(),
-        Tarifa15: z.number(),
-        Tarifa20: z.number(),
+        TarifaDel9Porciento: z.number(),
+        TarifaDel15Porciento: z.number(),
+        TarifaDel20Porciento: z.number(),
         MegaInversiones: z.number(),
-        MegaInversiones27: z.number(),
-        TarifaGeneral240: z.number(),
+        MegaInversiones27Porciento: z.number(),
+        TarifaGeneralArticulo240ET: z.number(),
         Otras: z.number()
       })
     }),
     Total: z.object({
       ValorFiscal: z.number(),
-      Tarifa9: z.number(),
-      Tarifa15: z.number(),
-      Tarifa20: z.number(),
+      TarifaDel9Porciento: z.number(),
+      TarifaDel15Porciento: z.number(),
+      TarifaDel20Porciento: z.number(),
       MegaInversiones: z.number(),
-      MegaInversiones27: z.number(),
-      TarifaGeneral240: z.number(),
+      MegaInversiones27Porciento: z.number(),
+      TarifaGeneralArticulo240ET: z.number(),
       Otras: z.number()
     })
   }),
   RentasLiquidasGravables: z.object({
     ValorFiscal: z.number(),
-    Tarifa9: z.number(),
-    Tarifa15: z.number(),
-    Tarifa20: z.number(),
+    TarifaDel9Porciento: z.number(),
+    TarifaDel15Porciento: z.number(),
+    TarifaDel20Porciento: z.number(),
     MegaInversiones: z.number(),
-    MegaInversiones27: z.number(),
-    TarifaGeneral240: z.number(),
+    MegaInversiones27Porciento: z.number(),
+    TarifaGeneralArticulo240ET: z.number(),
     Otras: z.number()
   }),
-  ImpuestoSobreREntaLiquidaGravable: z.object({
+  ImpuestoSobreLaRentaLiquidaGravable: z.object({
     ValorFiscal: z.number(),
-    Tarifa9: z.number(),
-    Tarifa15: z.number(),
-    Tarifa20: z.number(),
+    TarifaDel9Porciento: z.number(),
+    TarifaDel15Porciento: z.number(),
+    TarifaDel20Porciento: z.number(),
     MegaInversiones: z.number(),
-    MegaInversiones27: z.number(),
-    TarifaGeneral240: z.number(),
+    MegaInversiones27Porciento: z.number(),
+    TarifaGeneralArticulo240ET: z.number(),
     Otras: z.number()
   }),
   GananciasOcasionalesGravables: z.object({
-    IngresosGananciaOcasionalVentaActivosFijos: z.object({
+    IngresosPorGananciaOcasionalEnVentaDeActivosFijos: z.object({
       ValorFiscal: z.number()
     }),
-    OtrosIngresosGananciaOcasional: z.object({ ValorFiscal: z.number() }),
-    TotalIngresosGananciasOcasionales: z.object({ ValorFiscal: z.number() }),
-    CostosGananciaOcasionalVentaActivosFijos: z.object({
+    OtrosIngresosPorGananciaOcasional: z.object({ ValorFiscal: z.number() }),
+    TotalIngresosPorGananciasOcasionales: z.object({ ValorFiscal: z.number() }),
+    CostosPorGananciaOcasionalEnVentaDeActivosFijos: z.object({
       ValorFiscal: z.number()
     }),
-    OtrosCostosGananciasOcasionales: z.object({ ValorFiscal: z.number() }),
-    TotalCostosGananciasOcasionales: z.object({ ValorFiscal: z.number() }),
-    GananciasOcasionalesNoGravadasVentaAccionesECE: z.object({
+    OtrosCostosPorGananciasOcasionales: z.object({ ValorFiscal: z.number() }),
+    TotalCostosPorGananciasOcasionales: z.object({ ValorFiscal: z.number() }),
+    GananciasOcasionalesNoGravadasPorLaVentaDeAccionesECE: z.object({
       ValorFiscal: z.number()
     }),
-    OtrasGananciasOcasionalesNoGravadasExentas: z.object({
+    OtrasGananciasOcasionalesNoGravadasYExentas: z.object({
       ValorFiscal: z.number()
     }),
-    RentasDeudoresRegimenLey11162006Decretos5607722020: z.object({
+    RentasDeudoresRegimenLey1116De2006Decretos560Y772De2020: z.object({
       ValorFiscal: z.number()
     }),
-    UtilizacionPerdidasFiscalesAcumuladasArt15Decreto7722020: z.object({
+    UtilizacionPerdidasFiscalesAcumuladasInc2Art15Decreto772De2020: z.object({
       ValorFiscal: z.number()
     }),
-    ImpuestoGananciaOcasional: z.object({ ValorFiscal: z.number() }),
+    ImpuestoDeGananciaOcasional: z.object({ ValorFiscal: z.number() }),
     Total: z.object({ ValorFiscal: z.number() })
   }),
   DescuentosTributarios: z.object({ ValorFiscal: z.number() }),
-  DescuentosImpuestosPAgadosExteriorGananciasOcacionales: z.object({
+  DescuentosPorImpuestosPagadosEnElExteriorPorGananciasOcasionales: z.object({
     ValorFiscal: z.number()
   }),
-  ValorInversionObras50ValorImpuestoCargo: z.object({
-    ValorFiscal: z.number()
-  }),
-  DescuentoEfectivoInversionObrasImpuestos: z.object({
+  ValorInversionObrasPorImpuestosHastaEl50PorcientoDelValorDelImpuestoACargoModalidadDePago1: z.object(
+    { ValorFiscal: z.number() }
+  ),
+  DescuentoEfectivoInversionObrasPorImpuestosModalidadDePago2: z.object({
     ValorFiscal: z.number()
   }),
   AnticipoRentaLiquidadoAnioAnterior: z.object({ ValorFiscal: z.number() }),
-  AnticipoSobretasaLiquidadpAnioAnterior: z.object({ ValorFiscal: z.number() }),
-  SaldoFavorAnioGravableAnteriorSinSolicitusDevolucion: z.object({
-    Autorretenciones: z.object({
-      PorVentas: z.object({ ValorFiscal: z.number() }),
-      PorServicios: z.object({ ValorFiscal: z.number() }),
-      PorRendimientos: z.object({ ValorFiscal: z.number() }),
-      PorOtrosConceptos: z.object({ ValorFiscal: z.number() }),
-      Total: z.object({ ValorFiscal: z.number() })
-    }),
-    OtrasReneciones: z.object({
-      PorVentas: z.object({ ValorFiscal: z.number() }),
-      PorServicios: z.object({ ValorFiscal: z.number() }),
-      PorHonorarios: z.object({ ValorFiscal: z.number() }),
-      PorRendimientos: z.object({ ValorFiscal: z.number() }),
-      PorDividendos: z.object({ ValorFiscal: z.number() }),
-      OtrasRetenciones: z.object({ ValorFiscal: z.number() }),
-      Total: z.object({ ValorFiscal: z.number() })
-    })
+  AnticipoSobretasaLiquidadoAnioGravableAnterior: z.object({
+    ValorFiscal: z.number()
   }),
-  TotalRetencionesAnioGravableDeclara: z.object({ ValorFiscal: z.number() }),
-  AnticipoRentaAnioGravableSiguiente: z.object({ ValorFiscal: z.number() }),
-  AnticipoSobretasaInstitucionesAnioGravableAnterior: z.object({
+  SaldoAFavorAnioGravableAnteriorSinSolicitudDeDevolucionOCompensacion: z.object(
+    {
+      Autorretenciones: z.object({
+        PorVentas: z.object({ ValorFiscal: z.number() }),
+        PorServicios: z.object({ ValorFiscal: z.number() }),
+        PorRendimientosFinancieros: z.object({ ValorFiscal: z.number() }),
+        PorOtrosConceptos: z.object({ ValorFiscal: z.number() }),
+        TotalAutorretenciones: z.object({ ValorFiscal: z.number() })
+      }),
+      OtrasRetenciones: z.object({
+        PorVentas: z.object({ ValorFiscal: z.number() }),
+        PorServicios: z.object({ ValorFiscal: z.number() }),
+        PorHonorariosYComisiones: z.object({ ValorFiscal: z.number() }),
+        PorRendimientosFinancieros: z.object({ ValorFiscal: z.number() }),
+        PorDividendosYParticipaciones: z.object({ ValorFiscal: z.number() }),
+        OtrasRetenciones: z.object({ ValorFiscal: z.number() }),
+        TotalOtrasRetenciones: z.object({ ValorFiscal: z.number() })
+      })
+    }
+  ),
+  TotalRetencionesAnioGravableQueDeclara: z.object({ ValorFiscal: z.number() }),
+  AnticipoRentaPorElAnioGravableSiguiente: z.object({
+    ValorFiscal: z.number()
+  }),
+  AnticipoSobretasaInstitucionesFinancierasAnioGravableAnterior: z.object({
     ValorFiscal: z.number()
   }),
   SobretasaInstitucionesFinancieras: z.object({ ValorFiscal: z.number() }),
-  AnticipoSobretasaIntitucionesFinancierasAnioGravableSiguiente: z.object({
+  AnticipoSobretasaInstitucionesFinancierasAnioGravableSiguiente: z.object({
     ValorFiscal: z.number()
   }),
-  CreditoFiscalInversionesEnProyectosInvestigacion: z.object({
-    ValorFiscal: z.number()
-  }),
+  CreditoFiscalParaInversionesEnProyectosDeInvestigacionDesarrolloTecnologicoEInnovacionOVinculacionDeCapitalHumanoDeAltoNivelArt2561DelETCreadoConArt168Ley1955MayoDe2019: z.object(
+    { ValorFiscal: z.number() }
+  ),
   Sanciones: z.object({ ValorFiscal: z.number() }),
-  InformativoOtroResultadoIntegral: z.object({
-    NoSeReclassificanAlResultado: z.object({
-      CambiosSuperavitRevaluacion: z.object({
+  InformativoOtroResultadoIntegralORII: z.object({
+    NoSeReclasificanAlResultado: z.object({
+      CambiosEnElSuperavitDeRevaluacion: z.object({
         Ganancia: z.number(),
         Perdida: z.number(),
         EfectoConversion: z.number()
       }),
-      NuevasMedicionesPlanesBeneficiosDefinidos: z.object({
+      NuevasMedicionesDeLosPlanesDeBeneficiosDefinidos: z.object({
         Ganancia: z.number(),
         Perdida: z.number(),
         EfectoConversion: z.number()
       }),
-      InversionesInstrumentosPatrimonio: z.object({
+      InversionesEnInstrumentosDePatrimonio: z.object({
         Ganancia: z.number(),
         Perdida: z.number(),
         EfectoConversion: z.number()
       }),
-      ParticipacionOtroResultadoIntegralAsociadasNegociosConjuntosMetodoParticipacion: z.object(
+      ParticipacionOtroResultadoIntegralDeAsociadasYNegociosConjuntosContabilizadosUtilizandoElMetodoDeLaParticipacion: z.object(
         {
           Ganancia: z.number(),
           Perdida: z.number(),
           EfectoConversion: z.number()
         }
       ),
-      InstrumentosCoberturaInversionesInstrumentosPatrimonio: z.object({
+      InstrumentosDeCoberturaCubreninversionesEnInstrumentosDePatrimonio: z.object(
+        {
+          Ganancia: z.number(),
+          Perdida: z.number(),
+          EfectoConversion: z.number()
+        }
+      ),
+      CambioValorRazonableDePasivosFinancierosAtribuibleACambiosEnElRiesgoeDeCreditoDelPasivo: z.object(
+        {
+          Ganancia: z.number(),
+          Perdida: z.number(),
+          EfectoConversion: z.number()
+        }
+      )
+    }),
+    SeReclasificanAlResultado: z.object({
+      DiferenciasDeCambioPorConversion: z.object({
         Ganancia: z.number(),
         Perdida: z.number(),
         EfectoConversion: z.number()
       }),
-      CambioValorRazonablePasivosFinancierosRiesgoCreditoPasivo: z.object({
+      ActivosFinancierosDisponiblesParaLaVenta: z.object({
+        Ganancia: z.number(),
+        Perdida: z.number(),
+        EfectoConversion: z.number()
+      }),
+      ActivosFinancierosMedidosAlValorRazonableConCambiosEnElORI: z.object({
+        Ganancia: z.number(),
+        Perdida: z.number(),
+        EfectoConversion: z.number()
+      }),
+      CoberturaDeFlujosDeEfectivo: z.object({
+        Ganancia: z.number(),
+        Perdida: z.number(),
+        EfectoConversion: z.number()
+      }),
+      CoberturasDeInversionesNetasEnNegociosEnElExtranjero: z.object({
+        Ganancia: z.number(),
+        Perdida: z.number(),
+        EfectoConversion: z.number()
+      }),
+      OtrasPartidasQueDebanSerReconocidasEnElORI: z.object({
         Ganancia: z.number(),
         Perdida: z.number(),
         EfectoConversion: z.number()
       })
     }),
-    SeReclassificanAlResultado: z.object({
-      DiferenciasCambioConversion: z.object({
-        Ganancia: z.number(),
-        Perdida: z.number(),
-        EfectoConversion: z.number()
-      }),
-      ActivosFinancierosDisponiblesVenta: z.object({
-        Ganancia: z.number(),
-        Perdida: z.number(),
-        EfectoConversion: z.number()
-      }),
-      ActivosFinancierosValorRazonableCambiosORI: z.object({
-        Ganancia: z.number(),
-        Perdida: z.number(),
-        EfectoConversion: z.number()
-      }),
-      CoberturaFlujosEfectivo: z.object({
-        Ganancia: z.number(),
-        Perdida: z.number(),
-        EfectoConversion: z.number()
-      }),
-      CoberturasInversionesNetasNegociosExtranjero: z.object({
-        Ganancia: z.number(),
-        Perdida: z.number(),
-        EfectoConversion: z.number()
-      }),
-      OtrasPartidasReconocidasORI: z.object({
-        Ganancia: z.number(),
-        Perdida: z.number(),
-        EfectoConversion: z.number()
-      })
-    }),
-    OtrpResultadoIntegralAntesImpuestos: z.object({
+    OTROResultadoIntegralAntesDeImpuestos: z.object({
       Ganancia: z.number(),
       Perdida: z.number(),
       EfectoConversion: z.number()
     }),
-    ResultadoIntegralTotalAnio: z.object({
+    ResultadoIntegralTotalDelAnio: z.object({
       Ganancia: z.number(),
       Perdida: z.number(),
       EfectoConversion: z.number()
     })
   }),
-  GastoIngresoImpuestoRentaComplementarioPeriodo: z.object({
-    GastosImpuestoCorriente: z.object({
-      SobreRentaLiquidaPresuntivaPeriodo: z.object({
+  GastoIngresoImpuestoDeRentaYComplementarioDelPeriodo: z.object({
+    GastoPorImpuestoCorriente: z.object({
+      SobreRentaLiquidaPresuntivaDelPeriodo: z.object({
         ValorContable: z.number()
       }),
-      GastoAjustesPeriodosAnteriores: z.object({ ValorContable: z.number() }),
-      IngresosAjustesPeriodosAnteriores: z.object({
+      GastoPorAjustesRespectoAPeriodosAnteriores: z.object({
         ValorContable: z.number()
       }),
-      ImpuestosAsumidosExteriorConveniosTratados: z.object({
+      IngresoPorAjustesRespectoAPeriodosAnteriores: z.object({
+        ValorContable: z.number()
+      }),
+      ImpuestosAsumidosDelExteriorConveniosOTratados: z.object({
         ValorContable: z.number()
       })
     }),
-    GastoImpuestoDiferido: z.object({ ValorContable: z.number() }),
+    GastoPorImpuestoDiferido: z.object({ ValorContable: z.number() }),
     IngresoImpuestoDiferido: z.object({ ValorContable: z.number() }),
-    ValorNetoGastoImpuesto: z.object({ ValorContable: z.number() })
+    ValorNetoGastoPorImpuesto: z.object({ ValorContable: z.number() })
   }),
-  DatosInformativoConcepto: z.object({
+  DatosInformativosConcepto: z.object({
     Ingresos: z.object({
-      IngresosDevengadosFidelizacionClientes: z.object({
+      IngresosDevengadosContablesPorFidelizacionDeClientes: z.object({
         ValorContable: z.number(),
         EfectoConversion: z.number(),
         ValorFiscal: z.number()
       }),
-      IngresosFiscalesFidelizacionClientesSinDevengoContable: z.object({
+      IngresosFiscalesPorFidelizacionDeClientesSinDevENgoContable: z.object({
         ValorFiscal: z.number()
       }),
-      RetirosConsumoPublicidadPropagandaPromocion: z.object({
+      RetirosParaConsumoYPublicidadPropagandaYPromocion: z.object({
         ValorContable: z.number(),
         EfectoConversion: z.number(),
         ValorFiscal: z.number()
       }),
-      DividendosDecretadosPeriodoGravable: z.object({
+      DividendosDecretadosEnElPeriodoGravable: z.object({
         ValorContable: z.number(),
         EfectoConversion: z.number()
       }),
-      DividendosCobradosPeriodoGravable: z.object({
+      DividendosCobradosEnElPeriodoGravable: z.object({
         ValorContable: z.number(),
         EfectoConversion: z.number()
       }),
-      IngresosDevengadosFideicomisosEncargosFiduciariosFideicomitenteFiduciante: z.object(
+      IngresosDevengadosDeFideicomisosOEncargosDecuariosCalidadDeFideicomitententeOFiduciante: z.object(
         { ValorContable: z.number(), EfectoConversion: z.number() }
       ),
-      IngresosDevengadosFideicomisosEncargosFiduciariosBeneficiario: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number()
-      })
-    }),
-    CostosGastos: z.object({
-      CostosGastosDevengadosFidelizacionClientes: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        ValorFiscal: z.number()
-      }),
-      BajasInventariosReconocidosCostoGastoEstadoResultados: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        ValorFiscal: z.number()
-      }),
-      CostosIndirectosProduccionNoDistribuidosCostoInventario: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number()
-      }),
-      MontoDescuentosObtenidosPeriodoCompraInventarios: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number()
-      }),
-      CostosGastosDevengadosFideicomisosEncargosFiduciariosFideicomitenteFiduciante: z.object(
+      IngresosDevengadosDeFideicomisosOEncargosDecuariosCalidadDeBeneficiario: z.object(
         { ValorContable: z.number(), EfectoConversion: z.number() }
-      ),
-      CostosGastosDevengadosFideicomisosEncargosFiduciariosBeneficiario: z.object(
-        { ValorContable: z.number(), EfectoConversion: z.number() }
-      ),
-      CostosDeduccionesNoProcedentesActividadMeritoriaRegimenTributarioEspecial: z.object(
-        { ValorFiscal: z.number() }
       )
     }),
-    OtrosDatosInformativos: z.object({
-      TotalCostosGastosNomina: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        ValorFiscal: z.number()
-      }),
-      AportesSistemaSeguridadSocial: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        ValorFiscal: z.number()
-      }),
-      AportesSENAICBFCompensacion: z.object({
-        ValorContable: z.number(),
-        EfectoConversion: z.number(),
-        ValorFiscal: z.number()
-      }),
-      AportesEmpleadorSegurosPrivadosPensionesFondosPensionesVoluntarias: z.object(
+    CostosYGastos: z.object({
+      CostosYGastosDevengadosAsociadosAIngresosPorFidelizacionDeClientes: z.object(
         {
           ValorContable: z.number(),
           EfectoConversion: z.number(),
           ValorFiscal: z.number()
         }
       ),
-      OperacionesVinculadosEconomicos: z.object({
+      BajasDeInventariosFaltantesCasoFortuitoOFuerzaMayorReconocidosComoCostoOGastoEnElEstadoDeResultadosDelEjercicio: z.object(
+        {
+          ValorContable: z.number(),
+          EfectoConversion: z.number(),
+          ValorFiscal: z.number()
+        }
+      ),
+      CostosIndirectosDeProduccionNoDistribuidosComoCostoDelInventarioReconocidosComoCostoOGastoEnElEstadoDeResultadosDelEjercicio: z.object(
+        { ValorContable: z.number(), EfectoConversion: z.number() }
+      ),
+      MontoDescuentosObtenidosEnElPeriodoEnLaCompraDeInventarios: z.object({
+        ValorContable: z.number(),
+        EfectoConversion: z.number()
+      }),
+      CostosYGastosDevengadosDeFideicomisosOEncargosFiduciariosCalidadDeFideicomitenteOFiduciante: z.object(
+        { ValorContable: z.number(), EfectoConversion: z.number() }
+      ),
+      CostosYGastosDevengadosDeFideicomisosOEncargosFiduciariosCalidadDeBeneficiario: z.object(
+        { ValorContable: z.number(), EfectoConversion: z.number() }
+      ),
+      CostosYDeduccionesNoProcedentesActividadMeritoriaRegimenTributarioEspecial: z.object(
+        { ValorFiscal: z.number() }
+      )
+    }),
+    OtrosDatosInformativos: z.object({
+      TotalCostosYGastosDeNomina: z.object({
+        ValorContable: z.number(),
+        EfectoConversion: z.number(),
+        ValorFiscal: z.number()
+      }),
+      AportesAlSistemaDeSecuridadSocial: z.object({
+        ValorContable: z.number(),
+        EfectoConversion: z.number(),
+        ValorFiscal: z.number()
+      }),
+      AportesAlSENAICBFCajasDeCompensacion: z.object({
+        ValorContable: z.number(),
+        EfectoConversion: z.number(),
+        ValorFiscal: z.number()
+      }),
+      AportesDelEmpleadorALosSegurosPrivadosDePensionesYALosFondosDePensionesVoluntarias: z.object(
+        {
+          ValorContable: z.number(),
+          EfectoConversion: z.number(),
+          ValorFiscal: z.number()
+        }
+      ),
+      OperacionesConVinculadosEconomicos: z.object({
         Ingresos: z.object({
           ValorContable: z.number(),
           EfectoConversion: z.number(),
           ValorFiscal: z.number()
         }),
-        CostosDeducciones: z.object({
+        CostosYDeducciones: z.object({
           ValorContable: z.number(),
           EfectoConversion: z.number(),
           ValorFiscal: z.number()
         }),
-        CompraInventarios: z.object({
+        CompraDeInventarios: z.object({
           ValorContable: z.number(),
           EfectoConversion: z.number(),
           ValorFiscal: z.number()
         }),
-        CompraActivosFijos: z.object({
+        CompraDeActivosFijos: z.object({
           ValorContable: z.number(),
           EfectoConversion: z.number(),
           ValorFiscal: z.number()
@@ -5781,3 +5989,4 @@ export const RentaLiquidaSchema = z.object({
     })
   })
 })
+

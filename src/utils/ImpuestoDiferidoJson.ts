@@ -1,7 +1,7 @@
 export const ImpuestoDiferidoInput = {
-  ImpuestosDiferidosDiferenciasTemporarias: {
-    ActivoDiferido: {
-      EfectivoYEfectivoEquivalente: {
+  ImpuestosDiferidosProvenientesDeDiferenciasTemporarias: {
+    ActivoDiferidoDiferenciasTemporariasDeducibles: {
+      EfectivoYEquivalentesAlEfectivo: {
         BaseContable: 0,
         BaseFiscal: 0,
         DiferenciaTemporaria: 0,
@@ -81,7 +81,7 @@ export const ImpuestoDiferidoInput = {
         Variacion: 0,
         TasaFiscalAplicada: 0,
       },
-      EntregarAPropietarios: {
+      ActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios: {
         BaseContable: 0,
         BaseFiscal: 0,
         DiferenciaTemporaria: 0,
@@ -181,7 +181,7 @@ export const ImpuestoDiferidoInput = {
         Variacion: 0,
         TasaFiscalAplicada: 0,
       },
-      Total: {
+      ValorTotal: {
         BaseContable: 0,
         BaseFiscal: 0,
         DiferenciaTemporaria: 0,
@@ -192,8 +192,8 @@ export const ImpuestoDiferidoInput = {
         TasaFiscalAplicada: 0,
       },
     },
-    PasivoDiferido: {
-      EfectivoYEfectivoEquivalente: {
+    PasivoDiferidoDiferenciasTemporariasImponibles: {
+      EfectivoYEquivalentesAlEfectivo: {
         BaseContable: 0,
         BaseFiscal: 0,
         DiferenciaTemporaria: 0,
@@ -273,7 +273,7 @@ export const ImpuestoDiferidoInput = {
         Variacion: 0,
         TasaFiscalAplicada: 0,
       },
-      EntregarAPropietarios: {
+      ActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios: {
         BaseContable: 0,
         BaseFiscal: 0,
         DiferenciaTemporaria: 0,
@@ -373,7 +373,7 @@ export const ImpuestoDiferidoInput = {
         Variacion: 0,
         TasaFiscalAplicada: 0,
       },
-      Total: {
+      ValorTotal: {
         BaseContable: 0,
         BaseFiscal: 0,
         DiferenciaTemporaria: 0,
@@ -385,74 +385,78 @@ export const ImpuestoDiferidoInput = {
       },
     },
   },
-  ActivosCreditosTributos: {
-    SaldosFavor: {
+  ActivosPorCreditosTributariosSaldosAfavorEImpuestosPagadosEnElEsterior: {
+    SaldosAFavor: {
       Saldo31VigenciaActual: 0,
       Saldo31VigenciaAnterior: 0,
       Variacion: 0,
-      ReduccionCompensacion: 0,
-      CorreccionMayorValor: 0,
-      CorreccionMenorValor: 0,
-      AjusteMayorValor: 0,
-      AjusteMenorValor: 0,
+      ExplicacionDeLaVariacion: {
+        ReduccionCompensacionApliacion: 0,
+        CorreccionEnDeclaracionesAnterioresMayorValor: 0,
+        CorreccionEnDeclaracionesAnterioresMenorValor: 0,
+        AjustesContablesPorCorrecionesValorativasMayorValor: 0,
+        AjustesContablesPorCorrecionesValorativasMenorValor: 0,
+      },
     },
-    ImpuestosPagadosExterior: {
+    ImpuestosPagadosEnELExterior: {
       Saldo31VigenciaActual: 0,
       Saldo31VigenciaAnterior: 0,
       Variacion: 0,
-      ReduccionCompensacion: 0,
-      CorreccionMayorValor: 0,
-      CorreccionMenorValor: 0,
-      AjusteMayorValor: 0,
-      AjusteMenorValor: 0,
+      ExplicacionDeLaVariacion: {
+        ReduccionCompensacionApliacion: 0,
+        CorreccionEnDeclaracionesAnterioresMayorValor: 0,
+        CorreccionEnDeclaracionesAnterioresMenorValor: 0,
+        AjustesContablesPorCorrecionesValorativasMayorValor: 0,
+        AjustesContablesPorCorrecionesValorativasMenorValor: 0,
+      },
     },
   },
   DetalleCompensacionPerdidasFiscales: {
-    Anterior: {
+    AñoAnterior: {
       Anio: 0,
-      PerdidasFiscalesAcumuladasCompensarInicio: 0,
-      PerdidaFiscalGeneradaPeriodo: 0,
-      PerdidaFiscalCompensadaPeriodo: 0,
-      ValoresNoCompesados: 0,
-      AjustesMayorValor: 0,
-      AjustesMenorValor: 0,
-      PerdidaFiscalAcumuladaCompensarFinal: 0,
-      SaldoActivoImpuestoDiferido: 0,
+      perdidasFiscalesAcumuladasPorCompensarAlInicioDelPeriodo: 0,
+      PerdidaFiscalGeneradaEnElPeriodo: 0,
+      PerdidaFiscalCompensadaEnElPeriodo: 0,
+      ValoresNoCompensadosPorCaducidad: 0,
+      AjustesPorCorreccionDeLaDeclaracionMayorValor: 0,
+      AjustesPorCorreccionDeLaDeclaracionMenorValor: 0,
+      PerdidaFiscalAcumuladaPorCompensarAlFinalDelPeriodo: 0,
+      SaldoActivoPorImpuestoDiferidoAlFinalDelPeriodo: 0,
     },
-    Actual: {
+    AñoActual: {
       Anio: 0,
-      PerdidasFiscalesAcumuladasCompensarInicio: 0,
-      PerdidaFiscalGeneradaPeriodo: 0,
-      PerdidaFiscalCompensadaPeriodo: 0,
-      ValoresNoCompesados: 0,
-      AjustesMayorValor: 0,
-      AjustesMenorValor: 0,
-      PerdidaFiscalAcumuladaCompensarFinal: 0,
-      SaldoActivoImpuestoDiferido: 0,
+      perdidasFiscalesAcumuladasPorCompensarAlInicioDelPeriodo: 0,
+      PerdidaFiscalGeneradaEnElPeriodo: 0,
+      PerdidaFiscalCompensadaEnElPeriodo: 0,
+      ValoresNoCompensadosPorCaducidad: 0,
+      AjustesPorCorreccionDeLaDeclaracionMayorValor: 0,
+      AjustesPorCorreccionDeLaDeclaracionMenorValor: 0,
+      PerdidaFiscalAcumuladaPorCompensarAlFinalDelPeriodo: 0,
+      SaldoActivoPorImpuestoDiferidoAlFinalDelPeriodo: 0,
     },
   },
-  DetalleCompensacionExcesoRentaPresuntiva: {
-    Anterior: {
+  DetalleDeLaCompensacionPorExcesoDeRentaPresuntiva: {
+    AñoAnterior: {
       Anio: 0,
-      ValorAcumuladoCompensarInicioPeriodo: 0,
-      ValorGeneradoPeriodo: 0,
-      ValorCompensadoPeriodo: 0,
-      ValoresNoCompensados: 0,
-      AjustesMayorValor: 0,
-      AjustesMenorValor: 0,
-      ValorAcumuladoCompensarFinalPerido: 0,
-      SaldoActivoImpuestoDiferidoFinal: 0,
+      ValorAcumuladoPorCompensarAlInicioDelPeriodo: 0,
+      ValorGeneradoEnElPeriodo: 0,
+      ValorCompensadoEnElPeriodo: 0,
+      ValoresNoCompensadosPorCaducidad: 0,
+      AjustesPorCorreccionDeLaDeclaracionMayorValor: 0,
+      AjustesPorCorreccionDeLaDeclaracionMenorValor: 0,
+      ValorAcumuladoPorCompensarAlFinalDelPeriodo: 0,
+      SaldoActivoPorImpuestoDiferidoAlFinalDelPeriodo: 0,
     },
-    Actual: {
+    AñoActual: {
       Anio: 0,
-      ValorAcumuladoCompensarInicioPeriodo: 0,
-      ValorGeneradoPeriodo: 0,
-      ValorCompensadoPeriodo: 0,
-      ValoresNoCompensados: 0,
-      AjustesMayorValor: 0,
-      AjustesMenorValor: 0,
-      ValorAcumuladoCompensarFinalPerido: 0,
-      SaldoActivoImpuestoDiferidoFinal: 0,
+      ValorAcumuladoPorCompensarAlInicioDelPeriodo: 0,
+      ValorGeneradoEnElPeriodo: 0,
+      ValorCompensadoEnElPeriodo: 0,
+      ValoresNoCompensadosPorCaducidad: 0,
+      AjustesPorCorreccionDeLaDeclaracionMayorValor: 0,
+      AjustesPorCorreccionDeLaDeclaracionMenorValor: 0,
+      ValorAcumuladoPorCompensarAlFinalDelPeriodo: 0,
+      SaldoActivoPorImpuestoDiferidoAlFinalDelPeriodo: 0,
     },
   },
 };

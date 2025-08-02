@@ -1,8 +1,8 @@
 export const CaratulaInput = {
-  "Año": 1,
+  "Año": 0,
   DatosDelDeclante: {
     NumeroDeIdentificacionTributariaNIT: 1,
-    DV: 1,
+    DV: 0,
     PrimerApellido: "",
     SegundoApellido: "",
     PrimerNombre: "",
@@ -39,9 +39,9 @@ export const CaratulaInput = {
     CompañiaHoldingColombiana: false,
     ZonaEconomicaYSocialEspecial: false,
   },
-  NoIdentificacionSignatario: 1,
-  CodigoRepresentacion: 1,
-  CodigoContadorORevisorFiscal: 1,
+  NoIdentificacionSignatario: 0,
+  CodigoRepresentacion: 0,
+  CodigoContadorORevisorFiscal: 0,
   ConSalvedad: false,
-  NumeroDeTarjetaProfesional: 1,
+  NumeroDeTarjetaProfesional: 0,
 };

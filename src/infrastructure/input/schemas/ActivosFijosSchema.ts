@@ -1,1736 +1,2282 @@
 import { z } from "zod";
 
 export const ActivosFijosSchema = z.object({
-  PropiedadesPlantasEquipos: z.object({
+  PropiedadesPlantasYEquipos: z.object({
     Terrenos: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
     Edificios: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
     Maquinaria: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
     Buques: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
     Aeronave: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
-    EquiposTransporte: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+    EquiposDeTransporte: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
-    EnseresAccesorios: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+    EnseresYAccesorios: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
     EquiposInformaticos: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
-    EquiposRedesComunicacion: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+    EquiposDeRedesYComunicacion: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
-    InfraestructuraRed: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+    InfraestructuraDeRed: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
-    ActivosTangiblesExploracionEvaluacion: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+    ActivosTangiblesDeExploracionYEvaluacion: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
-    ActivosMineria: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+    ActivosDeMineria: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
-    ActivosPetroleoGas: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+    ActivosDePetroleoYGas: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
-    PPyEArrendamientoOperativo: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+    "PP&EEnArrendamientoOperativo": z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
     PlantasProductoras: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
     AnimalesProductores: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
-    ConstruccionesProceso: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+    ConstruccionesEnProceso: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
-    Otras: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+    OtrasPropiedadesPlantasEquipo: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
-    Total: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+    TotalPropiedadesPlantasEquipo: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
   }),
-  PropiedadesInversión: z.object({
+  PropiedadesDeInversión: z.object({
     Terrenos: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
     Edificios: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
-    Total: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+    TotalPorpiedadesDeInversion: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
   }),
   ANCMV: z.object({
-    ANCMV: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
-        }),
-        Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
-        }),
-        Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
-        }),
-        Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
-        }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
-        DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+    DatosContables: z.object({
+      ImporteAlComienzoDelPeriodo: z.object({
+        Costo: z.number(),
+        EfectoDeConversion: z.number(),
+        AjustePorRevaluacionesOReExpresiones: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      Incrementos: z.object({
+        TransferenciasAdquisiciones: z.number(),
+        CambiosEnValorRazonable: z.number(),
       }),
+      Disminuciones: z.object({
+        TransferenciasEliminaciones: z.number(),
+        CambiosEnValorRazonable: z.number(),
+      }),
+      Depreciacion: z.object({
+        PorCosto: z.number(),
+        EfectoDeConversion: z.number(),
+        AjustePorRevaluacionesOReExpresiones: z.number(),
+      }),
+      DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+      ImporteNetoAlFinalDelPeriodo: z.object({
+        Costo: z.number(),
+        AjustePorRevaluacionesOReExpresiones: z.number(),
+      }),
+      GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+        PorCosto: z.number(),
+        PorAjustePorRevaluacionesOReExpresiones: z.number(),
+      }),
+      GastoDelPeriodoPorDeterioro: z.number(),
+      IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+      ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: z.number(),
+      DesmantelamientoRestauracion: z.number(),
+      MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
+    }),
+    DatosFiscales: z.object({
+      ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object({
+        SaldoAlComienzoDelPeriodo: z.number(),
+        IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+        DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+        SubtotalAlFinalPeriodo: z.number(),
+        DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+        TotalNetoAlFinalDelPeriodo: z.number(),
+        GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+      }),
+      DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+        z.object({
+          ValorTotalAlFinalDelPeriodo: z.number(),
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+          ValorNetoAlFinalDelPeriodo: z.number(),
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+        }),
     }),
   }),
   TotalPPEPIANCMV: z.object({
-    Contables: z.object({
-      Comienzo: z.object({
+    DatosContables: z.object({
+      ImporteAlComienzoDelPeriodo: z.object({
         Costo: z.number(),
-        Conversion: z.number(),
-        Ajuste: z.number(),
+        EfectoDeConversion: z.number(),
+        AjustePorRevaluacionesOReExpresiones: z.number(),
       }),
       Incrementos: z.object({
-        Transferencias: z.number(),
-        CambiosValorRazonable: z.number(),
+        TransferenciasAdquisiciones: z.number(),
+        CambiosEnValorRazonable: z.number(),
       }),
       Disminuciones: z.object({
-        Transferencias: z.number(),
-        CambiosValorRazonable: z.number(),
+        TransferenciasEliminaciones: z.number(),
+        CambiosEnValorRazonable: z.number(),
       }),
       Depreciacion: z.object({
-        Costo: z.number(),
-        Conversion: z.number(),
-        Ajuste: z.number(),
+        PorCosto: z.number(),
+        EfectoDeConversion: z.number(),
+        AjustePorRevaluacionesOReExpresiones: z.number(),
       }),
-      Deterioro: z.number(),
-      ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-      GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-      GastoDetereorio: z.number(),
-      IngresosPeriodoDetereorio: z.number(),
-      ValorActivosLeasing: z.number(),
+      DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+      ImporteNetoAlFinalDelPeriodo: z.object({
+        Costo: z.number(),
+        AjustePorRevaluacionesOReExpresiones: z.number(),
+      }),
+      GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+        PorCosto: z.number(),
+        PorAjustePorRevaluacionesOReExpresiones: z.number(),
+      }),
+      GastoDelPeriodoPorDeterioro: z.number(),
+      IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+      ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: z.number(),
       DesmantelamientoRestauracion: z.number(),
-      ValorRevaluacion: z.number(),
+      MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
     }),
-    Fiscales: z.object({
-      SaldoComienzo: z.number(),
-      IncrementosTransferencias: z.number(),
-      DisminucionesTransferencias: z.number(),
-      SubtotalFinalPeriodo: z.number(),
-      Depreciacion: z.number(),
-      TotalNeto: z.number(),
-      GastoFiscalPeriodo: z.number(),
-      ValorTotal: z.number(),
-      DepreacionFinal: z.number(),
-      ValorNeto: z.number(),
-      GastoFiscal: z.number(),
+    DatosFiscales: z.object({
+      ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object({
+        SaldoAlComienzoDelPeriodo: z.number(),
+        IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+        DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+        SubtotalAlFinalPeriodo: z.number(),
+        DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+        TotalNetoAlFinalDelPeriodo: z.number(),
+        GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+      }),
+      DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+        z.object({
+          ValorTotalAlFinalDelPeriodo: z.number(),
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+          ValorNetoAlFinalDelPeriodo: z.number(),
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+        }),
     }),
   }),
   ActivosIntangibles: z.object({
     MarcasComerciales: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
-    ActivosIntangiblesExploracionEvaluacion: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+    ActivosIntangiblesDeExploracionYEvaluacion: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
-    CabecerasOeriodicosRevistasTitulosPublicaciones: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+    CabecerasDePeriodicosRevistasOTitulosPublicaciones: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
-    ProgramasAplicacionesInformaticos: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+    ProgramasYAplicacionesInformaticas: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
-    LicenciasFranquicias: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+    LicenciasYFranquicias: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
-    PropiedadIntelectualPatentesPropiedadIndustrialServiciosDerechosOperacion:
+    PropiedadIntelectualPatentesYOtraPropiedadIndustrialServiciosYDerechosOperacion:
       z.object({
-        Contables: z.object({
-          Comienzo: z.object({
+        DatosContables: z.object({
+          ImporteAlComienzoDelPeriodo: z.object({
             Costo: z.number(),
-            Conversion: z.number(),
-            Ajuste: z.number(),
+            EfectoDeConversion: z.number(),
+            AjustePorRevaluacionesOReExpresiones: z.number(),
           }),
           Incrementos: z.object({
-            Transferencias: z.number(),
-            CambiosValorRazonable: z.number(),
+            TransferenciasAdquisiciones: z.number(),
+            CambiosEnValorRazonable: z.number(),
           }),
           Disminuciones: z.object({
-            Transferencias: z.number(),
-            CambiosValorRazonable: z.number(),
+            TransferenciasEliminaciones: z.number(),
+            CambiosEnValorRazonable: z.number(),
           }),
           Depreciacion: z.object({
-            Costo: z.number(),
-            Conversion: z.number(),
-            Ajuste: z.number(),
+            PorCosto: z.number(),
+            EfectoDeConversion: z.number(),
+            AjustePorRevaluacionesOReExpresiones: z.number(),
           }),
-          Deterioro: z.number(),
-          ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-          GastoDepreciacion: z.object({
+          DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+          ImporteNetoAlFinalDelPeriodo: z.object({
             Costo: z.number(),
-            Ajuste: z.number(),
+            AjustePorRevaluacionesOReExpresiones: z.number(),
           }),
-          GastoDetereorio: z.number(),
-          IngresosPeriodoDetereorio: z.number(),
-          ValorActivosLeasing: z.number(),
+          GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+            PorCosto: z.number(),
+            PorAjustePorRevaluacionesOReExpresiones: z.number(),
+          }),
+          GastoDelPeriodoPorDeterioro: z.number(),
+          IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+          ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+            z.number(),
           DesmantelamientoRestauracion: z.number(),
-          ValorRevaluacion: z.number(),
+          MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
         }),
-        Fiscales: z.object({
-          SaldoComienzo: z.number(),
-          IncrementosTransferencias: z.number(),
-          DisminucionesTransferencias: z.number(),
-          SubtotalFinalPeriodo: z.number(),
-          Depreciacion: z.number(),
-          TotalNeto: z.number(),
-          GastoFiscalPeriodo: z.number(),
-          ValorTotal: z.number(),
-          DepreacionFinal: z.number(),
-          ValorNeto: z.number(),
-          GastoFiscal: z.number(),
+        DatosFiscales: z.object({
+          ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero:
+            z.object({
+              SaldoAlComienzoDelPeriodo: z.number(),
+              IncrementosPorTransferenciasAdquisicionesYOtrosCambios:
+                z.number(),
+              DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+              SubtotalAlFinalPeriodo: z.number(),
+              DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+              TotalNetoAlFinalDelPeriodo: z.number(),
+              GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+            }),
+          DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+            z.object({
+              ValorTotalAlFinalDelPeriodo: z.number(),
+              DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+              ValorNetoAlFinalDelPeriodo: z.number(),
+              GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+            }),
         }),
       }),
-    RecetasFormulasModelosDiseñosPrototipos: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+    RecetasFormulasModelosDiseñosYPrototipos: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
     Concesiones: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
-    DesembolsosDesarrolloCapitalizados: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+    DesembolsosDeDesarrolloCapitalizados: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
-    ActivosIntangiblesDesarrollo: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+    ActivosIntangiblesEnDesarrollo: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
     Plusvalia: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
-    MejorasDerechosArrendamiento: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+    MejorasDeDerechosDeArrendamiento: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
-    SubvencionesEstado: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+    SubvencionesDelEstado: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
-    Otros: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+    OtrosActivosIntangibles: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
-    Total: z.object({
-      Contables: z.object({
-        Comienzo: z.object({
+    TotalActivosIntangibles: z.object({
+      DatosContables: z.object({
+        ImporteAlComienzoDelPeriodo: z.object({
           Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
         Incrementos: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasAdquisiciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Disminuciones: z.object({
-          Transferencias: z.number(),
-          CambiosValorRazonable: z.number(),
+          TransferenciasEliminaciones: z.number(),
+          CambiosEnValorRazonable: z.number(),
         }),
         Depreciacion: z.object({
-          Costo: z.number(),
-          Conversion: z.number(),
-          Ajuste: z.number(),
+          PorCosto: z.number(),
+          EfectoDeConversion: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
         }),
-        Deterioro: z.number(),
-        ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-        GastoDetereorio: z.number(),
-        IngresosPeriodoDetereorio: z.number(),
-        ValorActivosLeasing: z.number(),
+        DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+        ImporteNetoAlFinalDelPeriodo: z.object({
+          Costo: z.number(),
+          AjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+          PorCosto: z.number(),
+          PorAjustePorRevaluacionesOReExpresiones: z.number(),
+        }),
+        GastoDelPeriodoPorDeterioro: z.number(),
+        IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing:
+          z.number(),
         DesmantelamientoRestauracion: z.number(),
-        ValorRevaluacion: z.number(),
+        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
       }),
-      Fiscales: z.object({
-        SaldoComienzo: z.number(),
-        IncrementosTransferencias: z.number(),
-        DisminucionesTransferencias: z.number(),
-        SubtotalFinalPeriodo: z.number(),
-        Depreciacion: z.number(),
-        TotalNeto: z.number(),
-        GastoFiscalPeriodo: z.number(),
-        ValorTotal: z.number(),
-        DepreacionFinal: z.number(),
-        ValorNeto: z.number(),
-        GastoFiscal: z.number(),
+      DatosFiscales: z.object({
+        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object(
+          {
+            SaldoAlComienzoDelPeriodo: z.number(),
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+            DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+            SubtotalAlFinalPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            TotalNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+          }
+        ),
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          z.object({
+            ValorTotalAlFinalDelPeriodo: z.number(),
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+            ValorNetoAlFinalDelPeriodo: z.number(),
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+          }),
       }),
     }),
   }),
-  TotalTodo: z.object({
-    Contables: z.object({
-      Comienzo: z.object({
+  TotalPPEPIANCMVYINTANGIBLES: z.object({
+    DatosContables: z.object({
+      ImporteAlComienzoDelPeriodo: z.object({
         Costo: z.number(),
-        Conversion: z.number(),
-        Ajuste: z.number(),
+        EfectoDeConversion: z.number(),
+        AjustePorRevaluacionesOReExpresiones: z.number(),
       }),
       Incrementos: z.object({
-        Transferencias: z.number(),
-        CambiosValorRazonable: z.number(),
+        TransferenciasAdquisiciones: z.number(),
+        CambiosEnValorRazonable: z.number(),
       }),
       Disminuciones: z.object({
-        Transferencias: z.number(),
-        CambiosValorRazonable: z.number(),
+        TransferenciasEliminaciones: z.number(),
+        CambiosEnValorRazonable: z.number(),
       }),
       Depreciacion: z.object({
-        Costo: z.number(),
-        Conversion: z.number(),
-        Ajuste: z.number(),
+        PorCosto: z.number(),
+        EfectoDeConversion: z.number(),
+        AjustePorRevaluacionesOReExpresiones: z.number(),
       }),
-      Deterioro: z.number(),
-      ImporteNeto: z.object({ Costo: z.number(), Ajuste: z.number() }),
-      GastoDepreciacion: z.object({ Costo: z.number(), Ajuste: z.number() }),
-      GastoDetereorio: z.number(),
-      IngresosPeriodoDetereorio: z.number(),
-      ValorActivosLeasing: z.number(),
+      DeterioroAcumuladoAlFinalDelPeriodo: z.number(),
+      ImporteNetoAlFinalDelPeriodo: z.object({
+        Costo: z.number(),
+        AjustePorRevaluacionesOReExpresiones: z.number(),
+      }),
+      GastoPeriodoPorDepreciacionOAmortizacion: z.object({
+        PorCosto: z.number(),
+        PorAjustePorRevaluacionesOReExpresiones: z.number(),
+      }),
+      GastoDelPeriodoPorDeterioro: z.number(),
+      IngresosDelPeriodoPorRecuperacionDelDeterioro: z.number(),
+      ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: z.number(),
       DesmantelamientoRestauracion: z.number(),
-      ValorRevaluacion: z.number(),
+      MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: z.number(),
     }),
-    Fiscales: z.object({
-      SaldoComienzo: z.number(),
-      IncrementosTransferencias: z.number(),
-      DisminucionesTransferencias: z.number(),
-      SubtotalFinalPeriodo: z.number(),
-      Depreciacion: z.number(),
-      TotalNeto: z.number(),
-      GastoFiscalPeriodo: z.number(),
-      ValorTotal: z.number(),
-      DepreacionFinal: z.number(),
-      ValorNeto: z.number(),
-      GastoFiscal: z.number(),
+    DatosFiscales: z.object({
+      ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: z.object({
+        SaldoAlComienzoDelPeriodo: z.number(),
+        IncrementosPorTransferenciasAdquisicionesYOtrosCambios: z.number(),
+        DisminucionesPorTransferenciasYOtrosCambios: z.number(),
+        SubtotalAlFinalPeriodo: z.number(),
+        DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+        TotalNetoAlFinalDelPeriodo: z.number(),
+        GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: z.number(),
+      }),
+      DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+        z.object({
+          ValorTotalAlFinalDelPeriodo: z.number(),
+          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: z.number(),
+          ValorNetoAlFinalDelPeriodo: z.number(),
+          GastoFiscalDepreciacionYAmortizacionDelPeriodo: z.number(),
+        }),
     }),
   }),
 });

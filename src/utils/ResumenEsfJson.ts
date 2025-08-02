@@ -1,12 +1,12 @@
 export const ResumenESFInput = {
-  EstadoSituacionFinanciera: {
+  EstadoDeSituacionFinancieraPatrimonio: {
     Activos: {
-      EfectivoEquivalentesEfectivo: {
+      EfectivoYEquivalentesAlEfectivo: {
         ValorContable: 0,
         ValorFiscal: 0,
         Variacion: 0,
       },
-      InversionesInstrumentosFinancierosDerivados: {
+      InversionesEInstrumentosFinancierosDerivados: {
         ValorContable: 0,
         ValorFiscal: 0,
         Variacion: 0,
@@ -21,22 +21,22 @@ export const ResumenESFInput = {
         ValorFiscal: 0,
         Variacion: 0,
       },
-      GastosPagadosAnticipado: {
+      GastosPagadosPorAnticipado: {
         ValorContable: 0,
         ValorFiscal: 0,
         Variacion: 0,
       },
-      ActivosImpuestosCorrientes: {
+      ActivosPorImpuestosCorrientes: {
         ValorContable: 0,
         ValorFiscal: 0,
         Variacion: 0,
       },
-      ActivosImpuestosDiferidos: {
+      ActivosPorImpuestosDiferidos: {
         ValorContable: 0,
         ValorFiscal: 0,
         Variacion: 0,
       },
-      PropiedadesPlantaEquipo: {
+      PropiedadesPlantaYEquipo: {
         ValorContable: 0,
         ValorFiscal: 0,
         Variacion: 0,
@@ -46,12 +46,12 @@ export const ResumenESFInput = {
         ValorFiscal: 0,
         Variacion: 0,
       },
-      PropiedadesInversion: {
+      PropiedadesDeInversion: {
         ValorContable: 0,
         ValorFiscal: 0,
         Variacion: 0,
       },
-      ActivosNoCorrientesMantenidosVentaDistribuirPropietarios: {
+      ActivosNoCorrientesMantenidosParaLaVentaDistribuirALosPropietarios: {
         ValorContable: 0,
         ValorFiscal: 0,
         Variacion: 0,
@@ -73,7 +73,7 @@ export const ResumenESFInput = {
       },
     },
     Pasivos: {
-      ObligacionesFinancierasCuentasPorPagar: {
+      ObligacionesFinancierasYCuentasPorPagar: {
         ValorContable: 0,
         ValorFiscal: 0,
         Variacion: 0,
@@ -88,17 +88,17 @@ export const ResumenESFInput = {
         ValorFiscal: 0,
         Variacion: 0,
       },
-      ImpuestosGravamenesTasasPorPagar: {
+      ImpuestosGravamenesYTasasPorPagar: {
         ValorContable: 0,
         ValorFiscal: 0,
         Variacion: 0,
       },
-      PasivosImpuestosDiferidos: {
+      PasivosPorImpuestosDiferidos: {
         ValorContable: 0,
         ValorFiscal: 0,
         Variacion: 0,
       },
-      PasivosBeneficiosEmpleados: {
+      PasivosPorBeneficiosALosEmpleados: {
         ValorContable: 0,
         ValorFiscal: 0,
         Variacion: 0,
@@ -108,7 +108,7 @@ export const ResumenESFInput = {
         ValorFiscal: 0,
         Variacion: 0,
       },
-      PasivosIngresosDiferidos: {
+      PasivosPorIngresosDiferidos: {
         ValorContable: 0,
         ValorFiscal: 0,
         Variacion: 0,
@@ -125,16 +125,16 @@ export const ResumenESFInput = {
       },
     },
     Patrimonio: {
-      CapitalSocialReservas: {
+      CapitalSocialYReservas: {
         ValorContable: 0,
       },
-      ResultadosEjercicio: {
+      ResultadosDelEjercicio: {
         ValorContable: 0,
       },
       ResultadosAcumulados: {
         ValorContable: 0,
       },
-      GananciasPerdidasAcumuladasAdopcionPrimera: {
+      GananciasPerdidasAcumuladasPorLaAdopcionPorPrimera: {
         ValorContable: 0,
       },
       OtroResultadoIntegralAcumulado: {
@@ -146,14 +146,14 @@ export const ResumenESFInput = {
       },
     },
   },
-  EstadosResultadoIntegral: {
+  EstadoDeResultadoIntegralImpuestosDeRenta: {
     Ingresos: {
-      IngresosNetosActividadIndustrialComercialServicios: {
+      IngresosNetosActividadIndustrialComercialYServicios: {
         ValorContable: 0,
         ValorFiscal: 0,
         Variacion: 0,
       },
-      DevolucionesRebajasDescuentos: {
+      DevolucionesRebajasYDescuentos: {
         ValorContable: 0,
         ValorFiscal: 0,
         Variacion: 0,
@@ -163,37 +163,37 @@ export const ResumenESFInput = {
         ValorFiscal: 0,
         Variacion: 0,
       },
-      GananciasInversionesSubsidiariasAsociadasNegociosConjuntos: {
+      GananciasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos: {
         ValorContable: 0,
         ValorFiscal: 0,
         Variacion: 0,
       },
-      IngresosMedicionesValorRazonable: {
+      IngresosPorMedicionesAValorRazonable: {
         ValorContable: 0,
         ValorFiscal: 0,
         Variacion: 0,
       },
-      UtilidadVentaEnajenacionActivosMenos2Anios: {
+      UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios: {
         ValorContable: 0,
         ValorFiscal: 0,
         Variacion: 0,
       },
-      UtilidadVentaEnajenacionActivosMas2Anios: {
+      UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional: {
         ValorContable: 0,
         ValorFiscal: 0,
         Variacion: 0,
       },
-      IngresosReversionDeterioroValor: {
+      IngresosPorReversionDeDeterioroDelValor: {
         ValorContable: 0,
         ValorFiscal: 0,
         Variacion: 0,
       },
-      IngresosReversionProvisiones: {
+      IngresosPorReversionDeProvisionesPasivosDeMontoOFechaInciertos: {
         ValorContable: 0,
         ValorFiscal: 0,
         Variacion: 0,
       },
-      IngresosReversionPasivosBeneficiosEmpleados: {
+      IngresosPorReversionDePasivosPorBeneficiosALosEmpleados: {
         ValorContable: 0,
         ValorFiscal: 0,
         Variacion: 0,
@@ -203,7 +203,7 @@ export const ResumenESFInput = {
         ValorFiscal: 0,
         Variacion: 0,
       },
-      GananciasNetasOperacionesDiscontinuadas: {
+      GananciasNetasEnOperacionesDiscontinuadas: {
         ValorContable: 0,
         ValorFiscal: 0,
         Variacion: 0,
@@ -225,7 +225,7 @@ export const ResumenESFInput = {
       },
     },
     Costos: {
-      MateriasPrimasReventaBienesTerminadosServicios: {
+      MateriasPrimasReventaDeBienesTerminadosYServicios: {
         ValorContable: 0,
         ValorFiscal: 0,
         Variacion: 0,
@@ -235,7 +235,7 @@ export const ResumenESFInput = {
         ValorFiscal: 0,
         Variacion: 0,
       },
-      DepreciacionesAmortizacionesDeterioros: {
+      DepreciacionesAmortizacionesYDeterioros: {
         ValorContable: 0,
         ValorFiscal: 0,
         Variacion: 0,
@@ -245,7 +245,7 @@ export const ResumenESFInput = {
         ValorFiscal: 0,
         Variacion: 0,
       },
-      MenorCostoAjustePreciosTransferencia: {
+      MenorCostoAjusteDePreciosDeTransferencia: {
         ValorContable: 0,
         ValorFiscal: 0,
         Variacion: 0,
@@ -257,45 +257,45 @@ export const ResumenESFInput = {
       },
     },
     Gastos: {
-      Administracion: {
+      DeAdministracion: {
         ManoDeObra: {
           ValorContable: 0,
           ValorFiscal: 0,
           Variacion: 0,
         },
-        OtrosGastosAdministracion: {
+        OtrosGastosDeAdministracion: {
           ValorContable: 0,
           ValorFiscal: 0,
           Variacion: 0,
         },
-        DepreciacionesAmortizacionesDeterioros: {
+        DepreciacionesAmortizacionesYDeterioros: {
           ValorContable: 0,
           ValorFiscal: 0,
           Variacion: 0,
         },
-        TotalGastosAdministracion: {
+        TotalGastosDeAdministracion: {
           ValorContable: 0,
           ValorFiscal: 0,
           Variacion: 0,
         },
       },
-      DistribucionVentas: {
+      DeDistribucionYVentas: {
         ManoDeObra: {
           ValorContable: 0,
           ValorFiscal: 0,
           Variacion: 0,
         },
-        OtrosGastosDistribucionVentas: {
+        OtrosGastosDeDistribucionYVentas: {
           ValorContable: 0,
           ValorFiscal: 0,
           Variacion: 0,
         },
-        DepreciacionesAmortizacionesDeterioros: {
+        DepreciacionesAmortizacionesYDeterioros: {
           ValorContable: 0,
           ValorFiscal: 0,
           Variacion: 0,
         },
-        TotalGastosDistribucionVentas: {
+        TotalGastosDeDistribucionYVentas: {
           ValorContable: 0,
           ValorFiscal: 0,
           Variacion: 0,
@@ -306,22 +306,22 @@ export const ResumenESFInput = {
         ValorFiscal: 0,
         Variacion: 0,
       },
-      PerdidasInversionesSubsidiariasAsociadasNegociosConjuntos: {
+      PerdidasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos: {
         ValorContable: 0,
         ValorFiscal: 0,
         Variacion: 0,
       },
-      PerdidasMedicionesValorRazonable: {
+      PerdidasPorMedicionesAValorRazonable: {
         ValorContable: 0,
         ValorFiscal: 0,
         Variacion: 0,
       },
-      PerdidaVentaEnajenacionActivosFijos: {
+      PerdidaEnLaVentaOEnajenacionDeActivosFijos: {
         ValorContable: 0,
         ValorFiscal: 0,
         Variacion: 0,
       },
-      GastosProvisiones: {
+      GastosPorProvisionesPasivosDeMontoOFechaInciertos: {
         ValorContable: 0,
         ValorFiscal: 0,
         Variacion: 0,
@@ -331,12 +331,17 @@ export const ResumenESFInput = {
         ValorFiscal: 0,
         Variacion: 0,
       },
-      PerdidasNetasOperacionesDiscontinuadas: {
+      PerdidasNetasEnOperacionesDiscontinuadas: {
         ValorContable: 0,
         ValorFiscal: 0,
         Variacion: 0,
       },
       MenorGastoDeduccionAjustePreciosTransferencia: {
+        ValorContable: 0,
+        ValorFiscal: 0,
+        Variacion: 0,
+      },
+      MenorGastoODeduccionAjustePreciosTransferencia: {
         ValorContable: 0,
         ValorFiscal: 0,
         Variacion: 0,
@@ -348,7 +353,7 @@ export const ResumenESFInput = {
       },
     },
   },
-  ResultadoEjercicio: {
+  ResultadoDelEjercicio: {
     ValorContable: 0,
     ValorFiscal: 0,
     Variacion: 0,

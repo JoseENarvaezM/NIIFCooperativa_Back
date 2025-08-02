@@ -1,135 +1,141 @@
 import { z } from "zod";
 
 export const Formulario110Schema = z.object({
-  DatoPers: z.object({
-    Anno: z.number(),
-    NumForm: z.number(),
-    DatDecl: z.object({
+  DeclaracionDeRentaYComplementarioParaPersonasJuridicasYAsimiladas: z.object({
+    Año: z.number(),
+    NumeroDeFormulario: z.number(),
+    DatosDelDeclarante: z.object({
       NIT: z.number(),
       DV: z.number(),
-      PriApll: z.string(),
-      SecApll: z.string(),
-      PriNomb: z.string(),
-      OtrosNomb: z.string(),
-      RazonSoc: z.string(),
-      CodDir: z.string(),
-      ActEcoPrin: z.string(),
-      Correct: z.object({ Cod: z.number(), NoFormAnt: z.number() }),
+      PrimerApellido: z.string(),
+      SegundoApellido: z.string(),
+      PrimerNombre: z.string(),
+      OtrosNombres: z.string(),
+      RazonSocial: z.string(),
+      CodigoDireccionSeccional: z.string(),
+      ActividadEconomicaPrincipal: z.string(),
+      SiEsUnaCorrecionIndique: z.object({
+        Cod: z.number(),
+        CodigoFormularioAnterior: z.number()
+      })
     }),
-    FractAnnoAgrv: z.boolean(),
-    RenunPertRegTribEsp: z.boolean(),
-    VinPagObraImpu: z.boolean(),
-    PerdFiscAcumAnnoAnt: z.number(),
+    FraccionAñoGravableSiguiente: z.boolean(),
+    RenuncioAPertenecerAlRegimenTributarioEspecial: z.boolean(),
+    VinculadoAlPagoDeObrasPorImpuestos: z.boolean(),
+    PerdidasFiscalesAcumuladasAñosAnterioresSinCompensar: z.number()
   }),
-  DatosResum: z.object({
-    DatosInf: z.object({
-      TotalCostGastNom: z.number(),
-      AportSistSegSocial: z.number(),
-      AportSenaEtc: z.number(),
+  DatosResumen: z.object({
+    DatosInformativos: z.object({
+      TotalCostosGastosDeNomina: z.number(),
+      AportesAlSistemaDeSeguridadSocial: z.number(),
+      AportacionesSENAICBFCajasCompensacion: z.number()
     }),
-    Patrim: z.object({
-      EfectvEquiEfect: z.number(),
-      InvInstFinDeriv: z.number(),
-      CuentDocArreFinCob: z.number(),
-      Inv: z.number(),
-      ActivInt: z.number(),
-      ActivBio: z.number(),
-      PPEPANCMC: z.number(),
-      Otro: z.number(),
-      TotalBruto: z.number(),
-      Pasiv: z.number(),
-      TotalLiqui: z.number(),
+    Patromonio: z.object({
+      EfectivoYEquivalentesDeEfectivo: z.number(),
+      InversionesEInstrumentosFinancierosDerivados: z.number(),
+      CuentasDocumentosYArrendamientosFinancierosPorCobrar: z.number(),
+      Inventarios: z.number(),
+      ActivosIntangibles: z.number(),
+      ActivosBiologicos: z.number(),
+      PropiedadesPlantaYEquipoPropiedadesDeInversionYANCMV: z.number(),
+      OtrosActivos: z.number(),
+      TotalPatrimonioBruto: z.number(),
+      Pasivos: z.number(),
+      TotalPatrimonioLiquido: z.number()
     }),
-    Ingre: z.object({
-      Brutos: z.number(),
-      Finan: z.number(),
-      DividNoCont: z.number(),
-      DividDistrEntNoCol: z.number(),
-      DividGravExt06: z.number(),
-      DividGravNat06: z.number(),
-      DividGravNat07: z.number(),
-      DiviDNoGrav07: z.number(),
-      DividGravExt07: z.number(),
-      DividGravMega07: z.number(),
-      Otro: z.number(),
-      TotBruto: z.number(),
-      DevRebDec: z.number(),
-      IngNoRent: z.number(),
-      Tot: z.number(),
+    Ingresos: z.object({
+      IngresosBrutosDeActividadesOrdinarias: z.number(),
+      IngresosFinancieros: z.number(),
+      DividendosYOParticipacionesNoConstitutivosDeRentaNiGananciaOcasional: z.number(),
+      DividendosYOParticipacionesDistribuidasPorEntidadesNoResidentesEnColombiaAUnaCHC: z.number(),
+      DividendosYOParticipacionesGravadas2016YAnterioresRecibidosPorSociedadesExtranjeras: z.number(),
+      DividendosYOParticipacionesGravadas2016YAnterioresRecibidosPorPersonasNaturalesSinResidenciaFiscal: z.number(),
+      DividendosYOParticipacionesGravadas2017YSiguientesRecibidosPorPersonasNaturalesSinResidenciaFiscal: z.number(),
+      DividendosYOParticipacionesNoGravadasPeroQueTributaranAl10Porciento: z.number(),
+      DividendosYOParticipacionesGravadas2017YSiguientesRecibidosPorEstablecimientosPermanentes: z.number(),
+      DividendosYParticipacionesGravados2017YSiguientesRecibidosDeParteDeunasSociedadQueLlevoACaboMegainversiones: z.number(),
+      OtrosIngresos: z.number(),
+      TotalIngresosBrutos: z.number(),
+      DevolucionesRebajasYDescuentosEnVentas: z.number(),
+      IngresosNoConstitutivosDeRentaNiGananciaOcasional: z.number(),
+      TotalIngresosNetos: z.number()
     }),
-    CostDedic: z.object({
-      Cost: z.number(),
-      GastAdmin: z.number(),
-      GastDistVent: z.number(),
-      GastFinan: z.number(),
-      Otro: z.number(),
-      Tot: z.number(),
+    CostosYDeducciones: z.object({
+      Costos: z.number(),
+      GastosDeAdministracion: z.number(),
+      GastosDeDistribucionYVentas: z.number(),
+      GastosFinancieros: z.number(),
+      OtrosGastosYDeducciones: z.number(),
+      TotalCostosYGastosDeducibles: z.number()
     }),
-    ESAL: z.object({ InvEfecAnno: z.number(), InvLiqui: z.number() }),
+    ESAL: z.object({
+      InversionesEfectuadasEnElAnio: z.number(),
+      InversionesLiquidadasDePeriodosGravablesAnteriores: z.number()
+    }),
     Renta: z.object({
-      RecuDedu: z.number(),
-      Passiv: z.number(),
-      LiquidOrd: z.number(),
-      PerdidLiqui: z.number(),
-      Compensacion: z.number(),
-      RentLiquida: z.number(),
-      RentPresun: z.number(),
-      RentExenta: z.number(),
-      RenGravable: z.number(),
-      RenLiquida: z.number(),
+      RentaPorRecuperacionDeDeducciones: z.number(),
+      RentaPasivaECESinResidenciaFiscalEnColombia: z.number(),
+      RentaLiquidaOrdinariaDelEjercicioSinCasillas52A56: z.number(),
+      OPerdidaLiquidaDelEjercicioSinCasillas52A56: z.number(),
+      Compensaciones: z.number(),
+      RentaLiquidaSinCasillas52A56: z.number(),
+      RentaPresuntiva: z.number(),
+      RentaExenta: z.number(),
+      RentasGravables: z.number(),
+      RentaLiquidaGravadaSinCasillas52A56: z.number()
     }),
-    GananciasOcasion: z.object({
-      IngreGananOcasion: z.number(),
-      RentDeudReg: z.number(),
-      UtiliPerdFisc: z.number(),
-      CostGananOcas: z.number(),
-      GananOcasionNoAgrav: z.number(),
-      GananOcasGrav: z.number(),
+    GananciasOcasionales: z.object({
+      IngresosParGananciasOcasionales: z.number(),
+      RentasDeudoresRegimenLey1116De2006Decreto560YArt15Decreto772: z.number(),
+      UtilizacionPerdidasFiscalesAcumuladasInciso2Articulo15Decreto772: z.number(),
+      CostosPorGananciasOcasionales: z.number(),
+      GananciasOcasionalesNoGravadasYExentas: z.number(),
+      GananciasOcasionalesGravables: z.number()
     }),
-    LiquiPriv: z.object({
-      ImpuesRentLiquiGrav: z.object({
-        RentLiquidGrav: z.number(),
-        DivPartGravET00: z.number(),
-        DivPartGravET: z.number(),
-        DivPartGrav27: z.number(),
-        DivPartGrav: z.number(),
-        DivPartGrav33: z.number(),
+    LiquidacionPrivada: z.object({
+      ImpuestosSobreLasRentasLiquidasGravables: z.object({
+        ImpuestoSobreLaRentaLiquidaGravableSinCasillas52A56: z.number(),
+        DeDividendosYOParticipacionesGravadasALaTarifaDel10Porciento: z.number(),
+        DeDividendosYOParticipacionesGravadasALaTarifaDelArticulo240DelET: z.number(),
+        DeDividendosYOParticipacionesGravadasALaTarifaDel27Porciento: z.number(),
+        DeDividendosYOParticipacionesGravadasALaTarifaDelArt240: z.number(),
+        DeDividendosYOParticipacionesGravadasALaTarifaDel33Porciento: z.number()
       }),
-      TotImpRentLiquidGrav: z.number(),
-      DescTrib: z.number(),
-      ImpNetRent: z.number(),
-      ImpGanOcas: z.number(),
-      DescPorImpPagad: z.number(),
-      TotImpCarg: z.number(),
-      ValInvObraImp50: z.number(),
-      DescEfectInvObrImp: z.number(),
-      CredFisc: z.number(),
-      AnticRentLiquidAnnoAntGrav: z.number(),
-      SaldFavAnnoAntGrav: z.number(),
-      Reten: z.object({
-        AutoReten: z.number(),
-        OtraReten: z.number(),
-        TotReten: z.number(),
+      TotalImpuestoSobreLasRentasLiquidasGravables: z.number(),
+      DescuentosTributarios: z.number(),
+      ImpuestoNetoDeRenta: z.number(),
+      ImpuestoDeGananciasOcasionales: z.number(),
+      DescuentosPorImpuestosPagadosEnElExteriorPorGananciasOcasionales: z.number(),
+      TotalImpuestoACargo: z.number(),
+      MenosValorInversionObrasPorImpuestosHastaDelal50Porciento: z.number(),
+      MenosDescuentoEfectivoInversionObrasPorImpuestos: z.number(),
+      CreditoFiscalArticulo256: z.number(),
+      MenosAnticipoRentaLiquidadoAnioGravableAnterior: z.number(),
+      MenosSaldoAFavorAnioGravableAnteriorSinSolicitudDeDevolucion: z.number(),
+      Retenciones: z.object({
+        Autorretenciones: z.number(),
+        OtrasRetenciones: z.number(),
+        TotalRetencionesAnioGravableADeclarar: z.number()
       }),
-      AntRenAnnoGravSig: z.number(),
-      SobreInstFin: z.object({
-        AnticSobreInstAnnoGranAnt: z.number(),
-        SobreInstFinan: z.number(),
-        AnticSobreInstAnnoGravSig: z.number(),
+      MasAnticipoRentaParaElAnioGravableSiguiente: z.number(),
+      SobretasaInstucionesFinancieras: z.object({
+        MenosAnticipoSobretasaInstitucionesFinancierasAnioGravableAnterior: z.number(),
+        MasSobretasaInstitucionesFinancieras: z.number(),
+        MasAnticipoSobretasaInstitucionesFinancierasAnioGravableSiguiente: z.number()
       }),
-      SaldoPagImp: z.number(),
-      Sansion: z.number(),
-      TotSaldPag: z.number(),
-      TotSaldFav: z.number(),
-    }),
+      SaldoAPagarPorImpuesto: z.number(),
+      Sanciones: z.number(),
+      TotalSaldoAPagar: z.number(),
+      OTotalSaldoAFavor: z.number()
+    })
   }),
   Totales: z.object({
-    ValTotExiObrImpMod0: z.number(),
-    ValTotProyObrImpMod2: z.number(),
-    CodRepre: z.number(),
-    CodCont: z.number(),
-    Salvedad: z.boolean(),
-    NoTarjProf: z.number(),
-    PagoTot: z.number(),
-  }),
-});
+    ValorTotalImpuestoExigiblePorObrasPorImpuestosModalidadDePago1: z.number(),
+    ValorTotalProyectoObrasPorImpuestosModalidadDePago2: z.number(),
+    CodigoRepresentacion: z.number(),
+    CodigoContratadorORevisorFiscal: z.number(),
+    ConSalvedades: z.boolean(),
+    NumeroDeTarjetaProfesional: z.number(),
+    PagoTotal: z.number()
+  })
+})

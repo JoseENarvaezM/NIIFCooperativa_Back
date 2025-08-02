@@ -1,108 +1,109 @@
 import { z } from "zod";
 
 export const IngresosFacturacionSchema = z.object({
-  VentBien: z.object({
-    PasivIngrDif: z.object({
-      SaldoIniPer: z.number(),
-      IngrContPer: z.number(),
-      GenPer: z.number(),
-      TotPasivDif: z.number(),
+  VentaDeBienes: z.object({
+    PasivoPorIngresoDiferido: z.object({
+      SaldoAlInicioDelPeriodo: z.number(),
+      RegistradoComoIngresoContableEnElPeriodo: z.number(),
+      GeneradoEnElPeriodo: z.number(),
+      SaldoAlFinalDelPeriodo: z.number()
     }),
-    FactEmitPer: z.object({
-      DevIngrPerAnt: z.number(),
-      DevIngrPerAct: z.number(),
-      RegIngDif: z.number(),
-      SoloFact: z.number(),
-      TotFactEmiPEr: z.number(),
+    FacturacionEmitidaEnElPeriodo: z.object({
+      DevengadaComoIngresoEnPeriodosAnteriores: z.number(),
+      DevengadaComoIngresosDelPeriodo: z.number(),
+      RegistradaComoIngresoDiferido: z.number(),
+      SoloFacturadoNoHaGeneradoIngresoNiPasivoDiferido: z.number(),
+      ValorTotal: z.number()
     }),
-    IngrContDevPer: z.object({
-      SinFact: z.number(),
-      FactPerAnt: z.number(),
-      TotalIngrContDevPer: z.number(),
-    }),
+    IngresoContableDevengadoEnElPeriodo: z.object({
+      SinFacturar: z.number(),
+      FacturadoPeriodosAnteriores: z.number(),
+      ValorTotal: z.number()
+    })
   }),
-  PrestServ: z.object({
-    PasivIngrDif: z.object({
-      SaldoIniPer: z.number(),
-      IngrContPer: z.number(),
-      GenPer: z.number(),
-      TotPasivDif: z.number(),
+  PrestacionDeServicios: z.object({
+    PasivoPorIngresoDiferido: z.object({
+      SaldoAlInicioDelPeriodo: z.number(),
+      RegistradoComoIngresoContableEnElPeriodo: z.number(),
+      GeneradoEnElPeriodo: z.number(),
+      SaldoAlFinalDelPeriodo: z.number()
     }),
-    FactEmitPer: z.object({
-      DevIngrPerAnt: z.number(),
-      DevIngrPerAct: z.number(),
-      RegIngDif: z.number(),
-      SoloFact: z.number(),
-      TotFactEmiPEr: z.number(),
+    FacturacionEmitidaEnElPeriodo: z.object({
+      DevengadaComoIngresoEnPeriodosAnteriores: z.number(),
+      DevengadaComoIngresosDelPeriodo: z.number(),
+      RegistradaComoIngresoDiferido: z.number(),
+      SoloFacturadoNoHaGeneradoIngresoNiPasivoDiferido: z.number(),
+      ValorTotal: z.number()
     }),
-    IngrContDevPer: z.object({
-      SinFact: z.number(),
-      FactPerAnt: z.number(),
-      TotalIngrContDevPer: z.number(),
-    }),
+    IngresoContableDevengadoEnElPeriodo: z.object({
+      SinFacturar: z.number(),
+      FacturadoPeriodosAnteriores: z.number(),
+      ValorTotal: z.number()
+    })
   }),
   OtrosIngresos: z.object({
-    PasivIngrDif: z.object({
-      SaldoIniPer: z.number(),
-      IngrContPer: z.number(),
-      GenPer: z.number(),
-      TotPasivDif: z.number(),
+    PasivoPorIngresoDiferido: z.object({
+      SaldoAlInicioDelPeriodo: z.number(),
+      RegistradoComoIngresoContableEnElPeriodo: z.number(),
+      GeneradoEnElPeriodo: z.number(),
+      SaldoAlFinalDelPeriodo: z.number()
     }),
-    FactEmitPer: z.object({
-      DevIngrPerAnt: z.number(),
-      DevIngrPerAct: z.number(),
-      RegIngDif: z.number(),
-      SoloFact: z.number(),
-      TotFactEmiPEr: z.number(),
+    FacturacionEmitidaEnElPeriodo: z.object({
+      DevengadaComoIngresoEnPeriodosAnteriores: z.number(),
+      DevengadaComoIngresosDelPeriodo: z.number(),
+      RegistradaComoIngresoDiferido: z.number(),
+      SoloFacturadoNoHaGeneradoIngresoNiPasivoDiferido: z.number(),
+      ValorTotal: z.number()
     }),
-    IngrContDevPer: z.object({
-      SinFact: z.number(),
-      FactPerAnt: z.number(),
-      TotalIngrContDevPer: z.number(),
-    }),
+    IngresoContableDevengadoEnElPeriodo: z.object({
+      SinFacturar: z.number(),
+      FacturadoPeriodosAnteriores: z.number(),
+      ValorTotal: z.number()
+    })
   }),
-  IngresosTer: z.object({
-    FactEmitPer: z.object({
-      DevIngrPerAnt: z.number(),
-      DevIngrPerAct: z.number(),
-      RegIngDif: z.number(),
-      SoloFact: z.number(),
-      TotFactEmiPEr: z.number(),
+  IngresosParaTerceros: z.object({
+    FacturacionEmitidaEnElPeriodo: z.object({
+      DevengadaComoIngresoEnPeriodosAnteriores: z.number(),
+      DevengadaComoIngresosDelPeriodo: z.number(),
+      RegistradaComoIngresoDiferido: z.number(),
+      SoloFacturadoNoHaGeneradoIngresoNiPasivoDiferido: z.number(),
+      ValorTotal: z.number()
     }),
-    IngrContDevPer: z.object({ TotalIngrContDevPer: z.number() }),
+    IngresoContableDevengadoEnElPeriodo: z.object({ ValorTotal: z.number() })
   }),
-  AjustesValAdec: z.object({
-    FactEmitPer: z.object({
-      DevIngrPerAnt: z.number(),
-      DevIngrPerAct: z.number(),
-      RegIngDif: z.number(),
-      SoloFact: z.number(),
-      TotFactEmiPEr: z.number(),
+  AjustesAlValorFacturadoDescuentosNotas: z.object({
+    FacturacionEmitidaEnElPeriodo: z.object({
+      DevengadaComoIngresoEnPeriodosAnteriores: z.number(),
+      DevengadaComoIngresosDelPeriodo: z.number(),
+      RegistradaComoIngresoDiferido: z.number(),
+      SoloFacturadoNoHaGeneradoIngresoNiPasivoDiferido: z.number(),
+      ValorTotal: z.number()
     }),
-    IngrContDevPer: z.object({
-      SinFact: z.number(),
-      FactPerAnt: z.number(),
-      TotalIngrContDevPer: z.number(),
-    }),
+    IngresoContableDevengadoEnElPeriodo: z.object({
+      SinFacturar: z.number(),
+      FacturadoPeriodosAnteriores: z.number(),
+      ValorTotal: z.number()
+    })
   }),
-  Totales: z.object({
-    PasivIngrDif: z.object({
-      SaldoIniPer: z.number(),
-      IngrContPer: z.number(),
-      GenPer: z.number(),
-      TotPasivDif: z.number(),
+  Total: z.object({
+    PasivoPorIngresoDiferido: z.object({
+      SaldoAlInicioDelPeriodo: z.number(),
+      RegistradoComoIngresoContableEnElPeriodo: z.number(),
+      GeneradoEnElPeriodo: z.number(),
+      SaldoAlFinalDelPeriodo: z.number()
     }),
-    FactEmitPer: z.object({
-      DevIngrPerAnt: z.number(),
-      DevIngrPerAct: z.number(),
-      RegIngDif: z.number(),
-      SoloFact: z.number(),
-      TotFactEmiPEr: z.number(),
+    FacturacionEmitidaEnElPeriodo: z.object({
+      DevengadaComoIngresoEnPeriodosAnteriores: z.number(),
+      DevengadaComoIngresosDelPeriodo: z.number(),
+      RegistradaComoIngresoDiferido: z.number(),
+      SoloFacturadoNoHaGeneradoIngresoNiPasivoDiferido: z.number(),
+      ValorTotal: z.number()
     }),
-    IngrContDevPer: z.object({
-      SinFact: z.number(),
-      FactPerAnt: z.number(),
-      TotalIngrContDevPer: z.number(),
-    }),
-  }),
-});
+    IngresoContableDevengadoEnElPeriodo: z.object({
+      SinFacturar: z.number(),
+      FacturadoPeriodosAnteriores: z.number(),
+      ValorTotal: z.number()
+    })
+  })
+})
+

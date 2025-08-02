@@ -1781,7 +1781,6 @@ export const DetalleRenglonesInput = {
     TotalIngresosFinancierosSaldosContablesADiciembre31: 0,
     TotalIngresosFinancierosSaldosFiscalesADiciembre31: 0,
   },
-  //TODO: mirar para lo poner label personalizado
   Reglon49: {
     "RecibidosDeSociedadNacionalDelRegimenOrdinarioQueSiLlevaACaboLasMegainversionesDelArt235": {
       SaldosContablesADiciembre31Parciales: 0,
@@ -1829,100 +1828,96 @@ export const DetalleRenglonesInput = {
       SaldosFiscalesADiciembre31Parciales: 0,
     }
   },
-  //TODO: mirar para lo poner label personalizado Linea 358 en el excel
   Reglon52: {
-    RecSocNacMeg: {
+    RecibidosDeSociedadNacionalDelRegimenOrdinarioQueSiLlevaACaboLasMegainversionesDelArt235: {
       SaldosContablesADiciembre31Parciales: 0,
       AjustesParaLlegarASaldosFiscales1: 0,
       AjustesParaLlegarASaldosFiscales2: "",
       AjustesParaLlegarASaldosFiscales3: 0,
       SaldosFiscalesADiciembre31Parciales: 0,
     },
-    RecSocNacNoMegNoSoc: {
+    RecibidosDeSociedadNacionalDelRegimenOrdinarioQueNoLlevaACaboLasMegainversionesDelArt235YQueNoEstaAcogidaAlRegimenDeSociedadesCHCDeLosArts894A898DelET: {
       SaldosContablesADiciembre31Parciales: 0,
       AjustesParaLlegarASaldosFiscales1: 0,
       AjustesParaLlegarASaldosFiscales2: "",
       AjustesParaLlegarASaldosFiscales3: 0,
       SaldosFiscalesADiciembre31Parciales: 0,
     },
-    RecSocNacNoMegSoc: {
+    RecibidosDeSociedadNacionalDelRegimenOrdinarioQueNoLlevaACaboLasMegainversionesDelArt235PeroQueSiEstaAcogidaAlRegimenDeSociedadesCHCDeLosArts894A898DelET: {
       SaldosContablesADiciembre31Parciales: 0,
       AjustesParaLlegarASaldosFiscales1: 0,
       AjustesParaLlegarASaldosFiscales2: "",
       AjustesParaLlegarASaldosFiscales3: 0,
       SaldosFiscalesADiciembre31Parciales: 0,
     },
-    RecSocNacSim: {
+    RecibidosDeUnaSociedadNacionalDelRegimenSimple: {
       SaldosContablesADiciembre31Parciales: 0,
       AjustesParaLlegarASaldosFiscales1: 0,
       AjustesParaLlegarASaldosFiscales2: "",
       AjustesParaLlegarASaldosFiscales3: 0,
       SaldosFiscalesADiciembre31Parciales: 0,
     },
-    TotalesSaldosContablesADiciembre31: 0,
-    TotalesSaldosFiscalesADiciembre31: 0,
+    TotalDividendosYParticipacionesGravadasPorPersonasNaturalesSaldosContablesADiciembre3152: 0,
+    TotalDividendosYParticipacionesGravadasPorPersonasNaturalesSaldosFiscalesADiciembre3152: 0,
   },
-  //TODO: mirar para lo poner label personalizado Linea 392 en el excel
   Reglon53: {
-    RecSocNacNoMegNoSoc: {
+    RecibidosDeSociedadNacionalDelRegimenOrdinarioQueNoLlevaACaboLasMegainversionesDelArt235YQueNoEstaAcogidaAlRegimenDeSociedadesCHCDeLosArts894A898DelET: {
       SaldosContablesADiciembre31Parciales: 0,
       AjustesParaLlegarASaldosFiscales1: 0,
       AjustesParaLlegarASaldosFiscales2: "",
       AjustesParaLlegarASaldosFiscales3: 0,
       SaldosFiscalesADiciembre31Parciales: 0,
     },
-    RecSocNacNoMegSoc: {
+    RecibidosDeSociedadNacionalDelRegimenOrdinarioQueNoLlevaACaboLasMegainversionesDelArt235PeroQueSiEstaAcogidaAlRegimenDeSociedadesCHCDeLosArts894A898DelET: {
       SaldosContablesADiciembre31Parciales: 0,
       AjustesParaLlegarASaldosFiscales1: 0,
       AjustesParaLlegarASaldosFiscales2: "",
       AjustesParaLlegarASaldosFiscales3: 0,
       SaldosFiscalesADiciembre31Parciales: 0,
     },
-    RecSocNacSim: {
+    RecibidosDeUnaSociedadNacionalDelRegimenSimple: {
       SaldosContablesADiciembre31Parciales: 0,
       AjustesParaLlegarASaldosFiscales1: 0,
       AjustesParaLlegarASaldosFiscales2: "",
       AjustesParaLlegarASaldosFiscales3: 0,
       SaldosFiscalesADiciembre31Parciales: 0,
     },
-    TotalesSaldosContablesADiciembre31: 0,
-    TotalesSaldosFiscalesADiciembre31: 0,
+    Total53SaldosContablesADiciembre31: 0,
+    Total53SaldosFiscalesADiciembre31: 0,
   },
-  //TODO: mirar para lo poner label personalizado Linea 396 en el excel
   Reglon54: {
-    RecSocNacNoMegNoSoc: {
+    RecibidosDeSociedadNacionalDelRegimenOrdinarioQueNoLlevaACaboLasMegainversionesDelArt235YQueNoEstaAcogidaAlRegimenDeSociedadesCHCDeLosArts894A898DelET: {
       SaldosContablesADiciembre31Parciales: 0,
       AjustesParaLlegarASaldosFiscales1: 0,
       AjustesParaLlegarASaldosFiscales2: "",
       AjustesParaLlegarASaldosFiscales3: 0,
       SaldosFiscalesADiciembre31Parciales: 0,
     },
-    RecSocNacNoMegSoc: {
+    RecibidosDeSociedadNacionalDelRegimenOrdinarioQueNoLlevaACaboLasMegainversionesDelArt235PeroQueSiEstaAcogidaAlRegimenDeSociedadesCHCDeLosArts894A898DelET: {
       SaldosContablesADiciembre31Parciales: 0,
       AjustesParaLlegarASaldosFiscales1: 0,
       AjustesParaLlegarASaldosFiscales2: "",
       AjustesParaLlegarASaldosFiscales3: 0,
       SaldosFiscalesADiciembre31Parciales: 0,
     },
-    RecSocNacSim: {
+    RecSocNacSim54: {
       SaldosContablesADiciembre31Parciales: 0,
       AjustesParaLlegarASaldosFiscales1: 0,
       AjustesParaLlegarASaldosFiscales2: "",
       AjustesParaLlegarASaldosFiscales3: 0,
       SaldosFiscalesADiciembre31Parciales: 0,
     },
-    TotalesSaldosContablesADiciembre31: 0,
-    TotalesSaldosFiscalesADiciembre31: 0,
+    Total54SaldosContablesADiciembre31: 0,
+    Total54SaldosFiscalesADiciembre31: 0,
   },
   "Reglon55": {
     "TotalSaldosContablesADiciembre31Parciales": 0,
     "TotalSaldosFiscalesADiciembre31Parciales": 0
   },
-  //TODO: mirar para lo poner label personalizado Linea 403 en el excel
   Reglon56: {
-    TotalesSaldosContablesADiciembre31: 0,
-    TotalesSaldosFiscalesADiciembre31: 0,
-    RecSocNacMeg: {
+    Total56SaldosContablesADiciembre31: 0,
+    Total56SaldosFiscalesADiciembre31: 0,
+    RecibidosDeSociedadNacionalDelRegimenOrdinarioQueSiLlevaACaboLasMegainversionesDelArt235: {
       SaldosContablesADiciembre31Parciales: 0,
       AjustesParaLlegarASaldosFiscales1: 0,
       AjustesParaLlegarASaldosFiscales2: "",
@@ -2375,43 +2370,42 @@ export const DetalleRenglonesInput = {
     TotalMenosDevolucionesDescuentosRebajasSaldosFiscalesADiciembre31: 0,
     },
   },
-  //TODO: mirar para lo poner label personalizado Linea 492 en el excel
   Reglon60: {
     DiviNoGrav: {
-      Ajust1: 0,
-      SaldFisc: 0,
+      AjustesParaLlegarASaldosFiscales1: 0,
+      SaldosFiscalesADiciembre31Parciales: 0,
     },
     AprtObl: {
-      Ajust1: 0,
-      SaldFisc: 0,
+      AjustesParaLlegarASaldosFiscales1: 0,
+      SaldosFiscalesADiciembre31Parciales: 0,
     },
     AprtVol: {
-      Ajust1: 0,
-      SaldFisc: 0,
+      AjustesParaLlegarASaldosFiscales1: 0,
+      SaldosFiscalesADiciembre31Parciales: 0,
     },
     UtilEnaj: {
-      Ajust1: 0,
-      SaldFisc: 0,
+      AjustesParaLlegarASaldosFiscales1: 0,
+      SaldosFiscalesADiciembre31Parciales: 0,
     },
     ValCap: {
-      Ajust1: 0,
-      SaldFisc: 0,
+      AjustesParaLlegarASaldosFiscales1: 0,
+      SaldosFiscalesADiciembre31Parciales: 0,
     },
-    Indem: {
-      Ajust1: 0,
-      SaldFisc: 0,
+    Indem60: {
+      AjustesParaLlegarASaldosFiscales1: 0,
+      SaldosFiscalesADiciembre31Parciales: 0,
     },
-    Recom: {
-      Ajust1: 0,
-      SaldFisc: 0,
+    Recom60: {
+      AjustesParaLlegarASaldosFiscales1: 0,
+      SaldosFiscalesADiciembre31Parciales: 0,
     },
-    Ganan: {
-      Ajust1: 0,
-      SaldFisc: 0,
+    Ganan60: {
+      AjustesParaLlegarASaldosFiscales1: 0,
+      SaldosFiscalesADiciembre31Parciales: 0,
     },
     SubsAgro: {
-      Ajust1: 0,
-      SaldFisc: 0,
+      AjustesParaLlegarASaldosFiscales1: 0,
+      SaldosFiscalesADiciembre31Parciales: 0,
     },
     TotalIngresosNoConstituidosDeRentaNiGananciaOcasionalSaldosFiscalesADiciembre31: 0,
   },
@@ -4034,7 +4028,6 @@ export const DetalleRenglonesInput = {
     "SaldosContablesADiciembre31Parciales": 0,
     "SaldosFiscalesADiciembre31Parciales": 0
   },
-  //TODO: mirar para poner en la lista de tags personalizados
   Reglon70: {
     IndmnCompAseg: {
       SaldosContablesADiciembre31Parciales: 0,
@@ -4064,52 +4057,73 @@ export const DetalleRenglonesInput = {
     "SaldosContablesADiciembre31Parciales": 0,
     "SaldosFiscalesADiciembre31Parciales": 0
   },
-  //TODO: mirar para poner en la lista de tags personalizados
   Reglon72: {
     TotalRentaLiquidaOrdinariaDelEjercicioSaldosContablesADiciembre31: 0,
     TotalRentaLiquidaOrdinariaDelEjercicioSaldosFiscalesADiciembre31: 0,
   },
-  //TODO: mirar para poner en la lista de tags personalizados
   Reglon73: {
-    TotalesSaldosContablesADiciembre31: 0,
-    TotalesSaldosFiscalesADiciembre31: 0,
+    TotalPerdidaLiquidaDelEjercicioSaldosContablesADiciembre31: 0,
+    TotalPerdidaLiquidaDelEjercicioSaldosFiscalesADiciembre31: 0,
   },
-  //TODO: mirar para poner en la lista de tags personalizados
   "Reglon74": {
     "CompenPerFisc": {
-      "Val": 0
+      "SaldosFiscalesADiciembre31Parciales": 0
     },
-    CompenExcRen: {
-      Exc: 0,
-      Sub: 0,
-      ValFin: 0,
+    CompensacionesDeExcesosDeRentaPresuntiva: {
+      ExcRentPres: {
+        SaldosFiscalesADiciembre31Parciales: 0,
+      },
+      SubRentPres: {
+        SaldosFiscalesADiciembre31Parciales: 0,
+      },
+      ValFinRentPres: {
+        SaldosFiscalesADiciembre31Parciales: 0,
+      },
     },
-    TotalesSaldosFiscalesADiciembre31: 0,
+    TotalCompensacionesSaldosFiscalesADiciembre31: 0,
   },
-  //TODO: mirar para poner en la lista de tags personalizados
   Reglon75: {
-    TotalesSaldosFiscalesADiciembre31: 0,
+    TotalRentaLiquidaSaldosFiscalesADiciembre31: 0,
   },
   "Reglon76": {
     "SaldosFiscalesADiciembre31Parciales": 0
   },
-  //TODO: mirar para poner en la lista de tags personalizados
   Reglon77: {
-    Act235: 0,
-    RentNet: 0,
-    RentHot: 0,
-    RentExent: 0,
-    PensColom: 0,
-    TotalesSaldosFiscalesADiciembre31: 0,
+    Act235: {
+        SaldosFiscalesADiciembre31Parciales: 0,
+      },
+    RentNet: {
+        SaldosFiscalesADiciembre31Parciales: 0,
+      },
+    RentHot: {
+        SaldosFiscalesADiciembre31Parciales: 0,
+      },
+    RentExent: {
+        SaldosFiscalesADiciembre31Parciales: 0,
+      },
+    PensColom: {
+        SaldosFiscalesADiciembre31Parciales: 0,
+      },
+    TotalRentasExentasSaldosFiscalesADiciembre31: 0,
   },
-  ////TODO: mirar para poner en la lista de tags personalizados
+  
   Reglon78: {
-    ActOmi: 0,
-    PasivNoReal: 0,
-    RecEsp: 0,
-    RentComp: 0,
-    RentLiq: 0,
-    TotalesSaldosFiscalesADiciembre31: 0,
+    ActOmi: {
+        SaldosFiscalesADiciembre31Parciales: 0,
+      },
+    PasivNoReal: {
+        SaldosFiscalesADiciembre31Parciales: 0,
+      },
+    RecEsp: {
+        SaldosFiscalesADiciembre31Parciales: 0,
+      },
+    RentComp: {
+        SaldosFiscalesADiciembre31Parciales: 0,
+      },
+    RentLiq: {
+        SaldosFiscalesADiciembre31Parciales: 0,
+      },
+    TotalRentasGravablesSaldosFiscalesADiciembre31: 0,
   },
   Reglon79: {
     TotalesSaldosFiscalesADiciembre31: 0,
@@ -4131,7 +4145,7 @@ export const DetalleRenglonesInput = {
         AjustesParaLlegarASaldosFiscales1: 0,
         SaldosFiscalesADiciembre31Parciales: 0,
       },
-      //TODO: mirar para poner en la lista de tags personalizados
+  
       AprtSoc: {
         SaldosContablesADiciembre31Parciales: 0,
         AjustesParaLlegarASaldosFiscales1: 0,
@@ -4146,9 +4160,8 @@ export const DetalleRenglonesInput = {
     TotalesSaldosContablesADiciembre31: 0,
     TotalesSaldosFiscalesADiciembre31: 0,
   },
-  //TODO: mirar para poner en la lista de tags personalizados
   Reglon81: {
-    Valor: {
+    ValoresQuitasCap: {
       SaldosContablesADiciembre31Parciales: 0,
       AjustesParaLlegarASaldosFiscales1: 0,
       AjustesParaLlegarASaldosFiscales2: "",
@@ -4158,10 +4171,12 @@ export const DetalleRenglonesInput = {
     TotalRentaDeudoresSaldosContablesADiciembre31: 0,
     TotalRentaDeudoresSaldosFiscalesADiciembre31: 0,
   },
-  //TODO: mirar para poner en la lista de tags personalizados
+  
   Reglon82: {
-    Val: 0,
-    TotalesSaldosFiscalesADiciembre31: 0,
+    VerLasInstruccionesAl: {
+        SaldosFiscalesADiciembre31Parciales: 0,
+      },
+    TotalUtilizacionPerdidasFiscalesAcumuladasSaldosFiscalesADiciembre31: 0,
   },
   Reglon83: {
     CostoFiscalDeActivoFijoOBiologicoVendidoYPoseidoPorMasDeDosAños: {
@@ -4181,7 +4196,6 @@ export const DetalleRenglonesInput = {
     TotalCostosYDeduccionesPorGananciasOcasionalesSaldosContablesADiciembre31: 0,
     TotalCostosYDeduccionesPorGananciasOcasionalesSaldosFiscalesADiciembre31: 0,
   },
-  //TODO: mirar para poner en la lista de tags personalizados
   Reglon84: {
     UtilVent: {
       AjustesParaLlegarASaldosFiscales1: 0,
@@ -4191,53 +4205,52 @@ export const DetalleRenglonesInput = {
       AjustesParaLlegarASaldosFiscales1: 0,
       SaldosFiscalesADiciembre31Parciales: 0,
     },
-    Indemn: {
+    IndemnSeguVid: {
       AjustesParaLlegarASaldosFiscales1: 0,
       SaldosFiscalesADiciembre31Parciales: 0,
     },
-    AprtSoc: {
+    AprtSocLiq: {
       AjustesParaLlegarASaldosFiscales1: 0,
       SaldosFiscalesADiciembre31Parciales: 0,
     },
     TotalGananciasOcasionalesNoGravadasYExentasSaldosFiscalesADiciembre31: 0,
   },
-  //TODO: mirar para poner en la lista de tags personalizados
   Reglon85: {
-    Esc1: 0,
-    Esc2: 0,
-    Esc3: 0,
-    Esc4: 0,
+    Esc1: {
+        SaldosFiscalesADiciembre31Parciales: 0,
+      },
+    Esc2: {
+        SaldosFiscalesADiciembre31Parciales: 0,
+      },
+    Esc3: {
+        SaldosFiscalesADiciembre31Parciales: 0,
+      },
+    Esc4: {
+        SaldosFiscalesADiciembre31Parciales: 0,
+      },
     TotalGananciasOcasionalesGravablesSaldosFiscalesADiciembre31: 0,
   },
-  //TODO: mirar para poner en la lista de tags personalizados
   Reglon86: {
     TotalImpuestoSobreLaRentaLiquidaSaldosFiscalesADiciembre31: 0,
   },
-  //TODO: mirar para poner en la lista de tags personalizados
   Reglon87: {
     TotalDeDividendosYParticipacionesGravadasALaTarifaSaldosFiscalesADiciembre31: 0,
   },
-  //TODO: mirar para poner en la lista de tags personalizados
   "Reglon88": {
-    "TotalSaldosFiscalesADiciembre31": 0
+    "Total88SaldosFiscalesADiciembre31": 0
   },
-  //TODO: mirar para poner en la lista de tags personalizados
   Reglon89: {
-    TotalSaldosFiscalesADiciembre31: 0,
+    Total89SaldosFiscalesADiciembre31: 0,
   },
-  //TODO: mirar para poner en la lista de tags personalizados
   Reglon90: {
-    TotalSaldosFiscalesADiciembre31: 0,
+    Total90SaldosFiscalesADiciembre31: 0,
   },
-  //TODO: mirar para poner en la lista de tags personalizados
   Reglon91: {
-    TotalSaldosFiscalesADiciembre31: 0,
+    Total91SaldosFiscalesADiciembre31: 0,
   },
-  //TODO: mirar para poner en la lista de tags personalizados
   Reglon92: {
-    TotalSaldosFiscalesADiciembre31: 0,
+    Total92SaldosFiscalesADiciembre31: 0,
   },
-  //TODO: mirar para poner en la lista de tags personalizados
   Reglon93: {
     DescuentosTributarios: {
       AjustesParaLlegarASaldosFiscales1: 0,
@@ -4245,17 +4258,17 @@ export const DetalleRenglonesInput = {
     },
     DescuentosDonacionesEntidades: {
       DonacionHechaAFundacionPor: {
-      PorcApli: {SaldosFiscalesADiciembre31Parciales: 0},
-      ValApli:  {SaldosFiscalesADiciembre31Parciales: 0},
-      Limit:  {SaldosFiscalesADiciembre31Parciales: 0},
-      Desc:  {SaldosFiscalesADiciembre31Parciales: 0},
+      PorcentajeAplicable: {SaldosFiscalesADiciembre31Parciales: 0},
+      ValorQueInicialmenteSePodriaTomarComoDescuento:  {SaldosFiscalesADiciembre31Parciales: 0},
+      LimiteAlCualSeDebeSometerEsteDescuento:  {SaldosFiscalesADiciembre31Parciales: 0},
+      ValorFinalQuePuedeTomarsePorEsteDescuento:  {SaldosFiscalesADiciembre31Parciales: 0},
       }
     },
     DescuentosOtros: {
-      IndCom: {SaldosFiscalesADiciembre31Parciales: 0},
-      IVA: {SaldosFiscalesADiciembre31Parciales: 0},
-      RetTran: {SaldosFiscalesADiciembre31Parciales: 0},
-      Otro: {SaldosFiscalesADiciembre31Parciales: 0},
+      PorIndustriaYComercioYAvisosYTablerosPagadosDuranteElAño: {SaldosFiscalesADiciembre31Parciales: 0},
+      PorIVACompra: {SaldosFiscalesADiciembre31Parciales: 0},
+      RetTrasladable: {SaldosFiscalesADiciembre31Parciales: 0},
+      OtrosDescApliq: {SaldosFiscalesADiciembre31Parciales: 0},
     },
     TotalDescuentosTributariosSaldosFiscalesADiciembre31: 0,
   },
@@ -4267,25 +4280,20 @@ export const DetalleRenglonesInput = {
     "SobreLasDemasGananciasOcasionales": {SaldosFiscalesADiciembre31Parciales: 0},
     "TotalImpuestoDeGananciasOcasionalesSaldosFiscalesADiciembre31": 0
   },
-  //TODO: mirar para poner en la lista de tags personalizados
   "Reglon96": {
     "SaldosFiscalesADiciembre31Parciales": 0
   },
-  //TODO: mirar para poner en la lista de tags personalizados
   Reglon97: {
-    TotalesSaldosFiscalesADiciembre31: 0,
+    TotalSaldosFiscalesADiciembre31: 0,
   },
-  //TODO: mirar para poner en la lista de tags personalizados
   "Reglon98": {
-    "TotalesSaldosFiscalesADiciembre31": 0
+    "TotalSaldosFiscalesADiciembre31": 0
   },
-  //TODO: mirar para poner en la lista de tags personalizados
   "Reglon99": {
-    "TotalesSaldosFiscalesADiciembre31": 0
+    "TotalSaldosFiscalesADiciembre31": 0
   },
-  //TODO: mirar para poner en la lista de tags personalizados
   "Reglon100": {
-    "TotalesSaldosFiscalesADiciembre31": 0
+    "TotalSaldosFiscalesADiciembre31": 0
   },
   "Reglon101MenosAnticipoRentaLiquidadiGravableAnterior": {
     "TotalesSaldosFiscalesADiciembre31": 0
@@ -4391,48 +4399,38 @@ export const DetalleRenglonesInput = {
     TotalOtrasRetencionesSaldosContablesADiciembre31: 0,
     TotalOtrasRetencionesSaldosFiscalesADiciembre31: 0,
   },
-  //TODO: mirar para poner en la lista de tags personalizados
   Reglon105: {
-    TotalesSaldosFiscalesADiciembre31: 0,
+    TotalSaldosFiscalesADiciembre31: 0,
   },
-  //TODO: mirar para poner en la lista de tags personalizados
   "Reglon106": {
-    "TotalesSaldosFiscalesADiciembre31": 0
+    "TotalSaldosFiscalesADiciembre31": 0
   },
-  //TODO: mirar para poner en la lista de tags personalizados
   "Reglon107": {
-    "TotalesSaldosFiscalesADiciembre31": 0
+    "TotalSaldosFiscalesADiciembre31": 0
   },
-  //TODO: mirar para poner en la lista de tags personalizados
   "Reglon108": {
-    "TotalesSaldosFiscalesADiciembre31": 0
+    "TotalSaldosFiscalesADiciembre31": 0
   },
-  //TODO: mirar para poner en la lista de tags personalizados
   "Reglon109": {
-    "TotalesSaldosFiscalesADiciembre31": 0
+    "TotalSaldosFiscalesADiciembre31": 0
   },
-  //TODO: mirar para poner en la lista de tags personalizados
   Reglon110: {
-    TotalesSaldosFiscalesADiciembre31: 0,
+    TotalSaldosFiscalesADiciembre31: 0,
   },
   Reglon111Sanciones: {
     PorExtemporaneidad: 0,
     TotalesSaldosFiscalesADiciembre31: 0,
   },
-  //TODO: mirar para poner en la lista de tags personalizados
   Reglon112: {
-    TotalesSaldosFiscalesADiciembre31: 0,
+    TotalSaldosFiscalesADiciembre31: 0,
   },
-  //TODO: mirar para poner en la lista de tags personalizados
   Reglon113: {
-    TotalesSaldosFiscalesADiciembre31: 0,
+    TotalSaldosFiscalesADiciembre31: 0,
   },
-  //TODO: mirar para poner en la lista de tags personalizados
   "Reglon114": {
-    "TotalesSaldosFiscalesADiciembre31": 0
+    "TotalSaldosFiscalesADiciembre31": 0
   },
-  //TODO: mirar para poner en la lista de tags personalizados
   "Reglon115": {
-    "TotalesSaldosFiscalesADiciembre31": 0
+    "TotalSaldosFiscalesADiciembre31": 0
   }
 };

@@ -1,14 +1,14 @@
 import { z } from "zod";
 
 export const ResumenESFSchema = z.object({
-  EstadoSituacionFinanciera: z.object({
+  EstadoDeSituacionFinancieraPatrimonio: z.object({
     Activos: z.object({
-      EfectivoEquivalentesEfectivo: z.object({
+      EfectivoYEquivalentesAlEfectivo: z.object({
         ValorContable: z.number(),
         ValorFiscal: z.number(),
         Variacion: z.number()
       }),
-      InversionesInstrumentosFinancierosDerivados: z.object({
+      InversionesEInstrumentosFinancierosDerivados: z.object({
         ValorContable: z.number(),
         ValorFiscal: z.number(),
         Variacion: z.number()
@@ -23,22 +23,22 @@ export const ResumenESFSchema = z.object({
         ValorFiscal: z.number(),
         Variacion: z.number()
       }),
-      GastosPagadosAnticipado: z.object({
+      GastosPagadosPorAnticipado: z.object({
         ValorContable: z.number(),
         ValorFiscal: z.number(),
         Variacion: z.number()
       }),
-      ActivosImpuestosCorrientes: z.object({
+      ActivosPorImpuestosCorrientes: z.object({
         ValorContable: z.number(),
         ValorFiscal: z.number(),
         Variacion: z.number()
       }),
-      ActivosImpuestosDiferidos: z.object({
+      ActivosPorImpuestosDiferidos: z.object({
         ValorContable: z.number(),
         ValorFiscal: z.number(),
         Variacion: z.number()
       }),
-      PropiedadesPlantaEquipo: z.object({
+      PropiedadesPlantaYEquipo: z.object({
         ValorContable: z.number(),
         ValorFiscal: z.number(),
         Variacion: z.number()
@@ -48,16 +48,18 @@ export const ResumenESFSchema = z.object({
         ValorFiscal: z.number(),
         Variacion: z.number()
       }),
-      PropiedadesInversion: z.object({
+      PropiedadesDeInversion: z.object({
         ValorContable: z.number(),
         ValorFiscal: z.number(),
         Variacion: z.number()
       }),
-      ActivosNoCorrientesMantenidosVentaDistribuirPropietarios: z.object({
-        ValorContable: z.number(),
-        ValorFiscal: z.number(),
-        Variacion: z.number()
-      }),
+      ActivosNoCorrientesMantenidosParaLaVentaDistribuirALosPropietarios: z.object(
+        {
+          ValorContable: z.number(),
+          ValorFiscal: z.number(),
+          Variacion: z.number()
+        }
+      ),
       ActivosBiologicos: z.object({
         ValorContable: z.number(),
         ValorFiscal: z.number(),
@@ -75,7 +77,7 @@ export const ResumenESFSchema = z.object({
       })
     }),
     Pasivos: z.object({
-      ObligacionesFinancierasCuentasPorPagar: z.object({
+      ObligacionesFinancierasYCuentasPorPagar: z.object({
         ValorContable: z.number(),
         ValorFiscal: z.number(),
         Variacion: z.number()
@@ -90,17 +92,17 @@ export const ResumenESFSchema = z.object({
         ValorFiscal: z.number(),
         Variacion: z.number()
       }),
-      ImpuestosGravamenesTasasPorPagar: z.object({
+      ImpuestosGravamenesYTasasPorPagar: z.object({
         ValorContable: z.number(),
         ValorFiscal: z.number(),
         Variacion: z.number()
       }),
-      PasivosImpuestosDiferidos: z.object({
+      PasivosPorImpuestosDiferidos: z.object({
         ValorContable: z.number(),
         ValorFiscal: z.number(),
         Variacion: z.number()
       }),
-      PasivosBeneficiosEmpleados: z.object({
+      PasivosPorBeneficiosALosEmpleados: z.object({
         ValorContable: z.number(),
         ValorFiscal: z.number(),
         Variacion: z.number()
@@ -110,7 +112,7 @@ export const ResumenESFSchema = z.object({
         ValorFiscal: z.number(),
         Variacion: z.number()
       }),
-      PasivosIngresosDiferidos: z.object({
+      PasivosPorIngresosDiferidos: z.object({
         ValorContable: z.number(),
         ValorFiscal: z.number(),
         Variacion: z.number()
@@ -127,10 +129,10 @@ export const ResumenESFSchema = z.object({
       })
     }),
     Patrimonio: z.object({
-      CapitalSocialReservas: z.object({ ValorContable: z.number() }),
-      ResultadosEjercicio: z.object({ ValorContable: z.number() }),
+      CapitalSocialYReservas: z.object({ ValorContable: z.number() }),
+      ResultadosDelEjercicio: z.object({ ValorContable: z.number() }),
       ResultadosAcumulados: z.object({ ValorContable: z.number() }),
-      GananciasPerdidasAcumuladasAdopcionPrimera: z.object({
+      GananciasPerdidasAcumuladasPorLaAdopcionPorPrimera: z.object({
         ValorContable: z.number()
       }),
       OtroResultadoIntegralAcumulado: z.object({ ValorContable: z.number() }),
@@ -140,14 +142,14 @@ export const ResumenESFSchema = z.object({
       })
     })
   }),
-  EstadosResultadoIntegral: z.object({
+  EstadoDeResultadoIntegralImpuestosDeRenta: z.object({
     Ingresos: z.object({
-      IngresosNetosActividadIndustrialComercialServicios: z.object({
+      IngresosNetosActividadIndustrialComercialYServicios: z.object({
         ValorContable: z.number(),
         ValorFiscal: z.number(),
         Variacion: z.number()
       }),
-      DevolucionesRebajasDescuentos: z.object({
+      DevolucionesRebajasYDescuentos: z.object({
         ValorContable: z.number(),
         ValorFiscal: z.number(),
         Variacion: z.number()
@@ -157,37 +159,43 @@ export const ResumenESFSchema = z.object({
         ValorFiscal: z.number(),
         Variacion: z.number()
       }),
-      GananciasInversionesSubsidiariasAsociadasNegociosConjuntos: z.object({
+      GananciasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos: z.object(
+        {
+          ValorContable: z.number(),
+          ValorFiscal: z.number(),
+          Variacion: z.number()
+        }
+      ),
+      IngresosPorMedicionesAValorRazonable: z.object({
         ValorContable: z.number(),
         ValorFiscal: z.number(),
         Variacion: z.number()
       }),
-      IngresosMedicionesValorRazonable: z.object({
+      UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios: z.object(
+        {
+          ValorContable: z.number(),
+          ValorFiscal: z.number(),
+          Variacion: z.number()
+        }
+      ),
+      UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional: z.object(
+        {
+          ValorContable: z.number(),
+          ValorFiscal: z.number(),
+          Variacion: z.number()
+        }
+      ),
+      IngresosPorReversionDeDeterioroDelValor: z.object({
         ValorContable: z.number(),
         ValorFiscal: z.number(),
         Variacion: z.number()
       }),
-      UtilidadVentaEnajenacionActivosMenos2Anios: z.object({
+      IngresosPorReversionDeProvisionesPasivosDeMontoOFechaInciertos: z.object({
         ValorContable: z.number(),
         ValorFiscal: z.number(),
         Variacion: z.number()
       }),
-      UtilidadVentaEnajenacionActivosMas2Anios: z.object({
-        ValorContable: z.number(),
-        ValorFiscal: z.number(),
-        Variacion: z.number()
-      }),
-      IngresosReversionDeterioroValor: z.object({
-        ValorContable: z.number(),
-        ValorFiscal: z.number(),
-        Variacion: z.number()
-      }),
-      IngresosReversionProvisiones: z.object({
-        ValorContable: z.number(),
-        ValorFiscal: z.number(),
-        Variacion: z.number()
-      }),
-      IngresosReversionPasivosBeneficiosEmpleados: z.object({
+      IngresosPorReversionDePasivosPorBeneficiosALosEmpleados: z.object({
         ValorContable: z.number(),
         ValorFiscal: z.number(),
         Variacion: z.number()
@@ -197,7 +205,7 @@ export const ResumenESFSchema = z.object({
         ValorFiscal: z.number(),
         Variacion: z.number()
       }),
-      GananciasNetasOperacionesDiscontinuadas: z.object({
+      GananciasNetasEnOperacionesDiscontinuadas: z.object({
         ValorContable: z.number(),
         ValorFiscal: z.number(),
         Variacion: z.number()
@@ -219,7 +227,7 @@ export const ResumenESFSchema = z.object({
       })
     }),
     Costos: z.object({
-      MateriasPrimasReventaBienesTerminadosServicios: z.object({
+      MateriasPrimasReventaDeBienesTerminadosYServicios: z.object({
         ValorContable: z.number(),
         ValorFiscal: z.number(),
         Variacion: z.number()
@@ -229,7 +237,7 @@ export const ResumenESFSchema = z.object({
         ValorFiscal: z.number(),
         Variacion: z.number()
       }),
-      DepreciacionesAmortizacionesDeterioros: z.object({
+      DepreciacionesAmortizacionesYDeterioros: z.object({
         ValorContable: z.number(),
         ValorFiscal: z.number(),
         Variacion: z.number()
@@ -239,7 +247,7 @@ export const ResumenESFSchema = z.object({
         ValorFiscal: z.number(),
         Variacion: z.number()
       }),
-      MenorCostoAjustePreciosTransferencia: z.object({
+      MenorCostoAjusteDePreciosDeTransferencia: z.object({
         ValorContable: z.number(),
         ValorFiscal: z.number(),
         Variacion: z.number()
@@ -251,45 +259,45 @@ export const ResumenESFSchema = z.object({
       })
     }),
     Gastos: z.object({
-      Administracion: z.object({
+      DeAdministracion: z.object({
         ManoDeObra: z.object({
           ValorContable: z.number(),
           ValorFiscal: z.number(),
           Variacion: z.number()
         }),
-        OtrosGastosAdministracion: z.object({
+        OtrosGastosDeAdministracion: z.object({
           ValorContable: z.number(),
           ValorFiscal: z.number(),
           Variacion: z.number()
         }),
-        DepreciacionesAmortizacionesDeterioros: z.object({
+        DepreciacionesAmortizacionesYDeterioros: z.object({
           ValorContable: z.number(),
           ValorFiscal: z.number(),
           Variacion: z.number()
         }),
-        TotalGastosAdministracion: z.object({
+        TotalGastosDeAdministracion: z.object({
           ValorContable: z.number(),
           ValorFiscal: z.number(),
           Variacion: z.number()
         })
       }),
-      DistribucionVentas: z.object({
+      DeDistribucionYVentas: z.object({
         ManoDeObra: z.object({
           ValorContable: z.number(),
           ValorFiscal: z.number(),
           Variacion: z.number()
         }),
-        OtrosGastosDistribucionVentas: z.object({
+        OtrosGastosDeDistribucionYVentas: z.object({
           ValorContable: z.number(),
           ValorFiscal: z.number(),
           Variacion: z.number()
         }),
-        DepreciacionesAmortizacionesDeterioros: z.object({
+        DepreciacionesAmortizacionesYDeterioros: z.object({
           ValorContable: z.number(),
           ValorFiscal: z.number(),
           Variacion: z.number()
         }),
-        TotalGastosDistribucionVentas: z.object({
+        TotalGastosDeDistribucionYVentas: z.object({
           ValorContable: z.number(),
           ValorFiscal: z.number(),
           Variacion: z.number()
@@ -300,22 +308,24 @@ export const ResumenESFSchema = z.object({
         ValorFiscal: z.number(),
         Variacion: z.number()
       }),
-      PerdidasInversionesSubsidiariasAsociadasNegociosConjuntos: z.object({
+      PerdidasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos: z.object(
+        {
+          ValorContable: z.number(),
+          ValorFiscal: z.number(),
+          Variacion: z.number()
+        }
+      ),
+      PerdidasPorMedicionesAValorRazonable: z.object({
         ValorContable: z.number(),
         ValorFiscal: z.number(),
         Variacion: z.number()
       }),
-      PerdidasMedicionesValorRazonable: z.object({
+      PerdidaEnLaVentaOEnajenacionDeActivosFijos: z.object({
         ValorContable: z.number(),
         ValorFiscal: z.number(),
         Variacion: z.number()
       }),
-      PerdidaVentaEnajenacionActivosFijos: z.object({
-        ValorContable: z.number(),
-        ValorFiscal: z.number(),
-        Variacion: z.number()
-      }),
-      GastosProvisiones: z.object({
+      GastosPorProvisionesPasivosDeMontoOFechaInciertos: z.object({
         ValorContable: z.number(),
         ValorFiscal: z.number(),
         Variacion: z.number()
@@ -325,12 +335,17 @@ export const ResumenESFSchema = z.object({
         ValorFiscal: z.number(),
         Variacion: z.number()
       }),
-      PerdidasNetasOperacionesDiscontinuadas: z.object({
+      PerdidasNetasEnOperacionesDiscontinuadas: z.object({
         ValorContable: z.number(),
         ValorFiscal: z.number(),
         Variacion: z.number()
       }),
       MenorGastoDeduccionAjustePreciosTransferencia: z.object({
+        ValorContable: z.number(),
+        ValorFiscal: z.number(),
+        Variacion: z.number()
+      }),
+      MenorGastoODeduccionAjustePreciosTransferencia: z.object({
         ValorContable: z.number(),
         ValorFiscal: z.number(),
         Variacion: z.number()
@@ -342,9 +357,10 @@ export const ResumenESFSchema = z.object({
       })
     })
   }),
-  ResultadoEjercicio: z.object({
+  ResultadoDelEjercicio: z.object({
     ValorContable: z.number(),
     ValorFiscal: z.number(),
     Variacion: z.number()
   })
 })
+

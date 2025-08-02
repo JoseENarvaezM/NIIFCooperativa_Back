@@ -1688,4 +1688,5 @@ export const ESFPatrimonioSchema = z.object({
       })
     })
   })
-});
+})
+

@@ -1,4206 +1,4466 @@
 import { z } from "zod";
 
 export const DetalleRenglonesSchema = z.object({
-  R33: z.object({
-    510506: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+  Reglon33: z.object({
+    "510506Sueldos": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    510527: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "510527AuxilioDeTransporte": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    510530: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "510530Cesantias": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    510533: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "510533InteresesSobreCesantias": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    510536: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "510536PrimaDeServicios": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    510539: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "510539Vacaciones": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    510548: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "510548Bonificaciones": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    520506: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "520506Sueldos": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    520518: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "520518Comisiones": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    520527: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "520527AuxilioDeTransporte": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    520530: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "520530Cesantias": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    520533: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "520533InteresesSobreCesantias": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    520536: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "520536PrimaDeServicios": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    520539: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "520539Vacaciones": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    520548: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "520548Bonificaciones": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    720506: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "720506Sueldos": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    720527: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "720527AuxilioDeTransporte": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    720530: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "720530Cesantias": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    720533: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "720533InteresesSobreCesantias": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    720536: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "720536PrimaDeServicios": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    720539: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "720539Vacaciones": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    720548: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "720548Bonificaciones": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    TotCont: z.number(),
-    TotFisc: z.number(),
+    TotalCostosYGastosDeNominaSaldosContablesADiciembre31: z.number(),
+    TotalCostosYGastosDeNominaSaldosFiscalesADiciembre31: z.number()
   }),
-  R34: z.object({
-    510568: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+  Reglon34: z.object({
+    "510568ARL": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    510569: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "510569EPS": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    510570: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "510570FondosPensiones": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    520568: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "520568ARL": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    520569: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "520569EPS": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    520570: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "520570FondosPensiones": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    720568: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "720568ARL": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    720569: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "720569EPS": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    720570: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "720570FondosPensiones": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    TotCont: z.number(),
-    TotFisc: z.number(),
+    TotalAportesAlSistemaDeSeguridadSocialSaldosContablesADiciembre31: z.number(),
+    TotalAportesAlSistemaDeSeguridadSocialSaldosFiscalesADiciembre31: z.number()
   }),
-  R35: z.object({
-    510572: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+  Reglon35: z.object({
+    "510572CajaComp": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    510575: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "510575ICBF": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    510578: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "510578SENA": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    520572: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "520572CajaComp": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    520575: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "520575ICBF": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    520578: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "520578SENA": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    720572: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "720572CajaComp": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    720575: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "720575ICBF": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    720578: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "720578SENA": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    TotCont: z.number(),
-    TotFisc: z.number(),
+    TotalAportesAlSENAICBFCajaCompensacionSaldosContablesADiciembre31: z.number(),
+    TotalAportesAlSENAICBFCajaCompensacionSaldosFiscalesADiciembre31: z.number()
   }),
-  R36: z.object({
-    1105: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+  Reglon36: z.object({
+    "1105CajaGeneral": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1110: z.object({
-      Nac: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+    "1110Bancos": z.object({
+      BancosMonedaNacional: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      Ext: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
+      BancosMonedaExtranjera: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      })
     }),
-    1115: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1115RemesasEnTransito": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1120: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1120CuentasDeAhorro": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1125: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1125Fondo": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1140: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1140CertificadoDeDepositoATermino": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    TotCont: z.number(),
-    TotFisc: z.number(),
+    TotalEfectivoYEquivalentesDeEfectivoSaldosContablesADiciembre31: z.number(),
+    TotalEfectivoYEquivalentesDeEfectivoSaldosFiscalesADiciembre31: z.number()
   }),
-  R37: z.object({
-    1205: z.object({
-      MedCost: z.object({
-        ValCost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+  Reglon37: z.object({
+    "1205InversionesEnAsociadasYSubsidiariasAccionesYAportesEnSociedades": z.object(
+      {
+        MedidasAlCosto: z.object({
+          ValorDelCosto: z.object({
+            SaldosContablesADiciembre31Parciales: z.number(),
+            AjustesParaLlegarASaldosFiscales1: z.number(),
+            AjustesParaLlegarASaldosFiscales2: z.string(),
+            AjustesParaLlegarASaldosFiscales3: z.number(),
+            SaldosFiscalesADiciembre31Parciales: z.number()
+          }),
+          DetrioroDelValor: z.object({
+            SaldosContablesADiciembre31Parciales: z.number(),
+            AjustesParaLlegarASaldosFiscales1: z.number(),
+            AjustesParaLlegarASaldosFiscales2: z.string(),
+            AjustesParaLlegarASaldosFiscales3: z.number(),
+            SaldosFiscalesADiciembre31Parciales: z.number()
+          })
         }),
-        DetCost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+        MedidasAlValorRazonableConCambiosEnResultados: z.object({
+          ValorDeAdquisicion: z.object({
+            SaldosContablesADiciembre31Parciales: z.number(),
+            AjustesParaLlegarASaldosFiscales1: z.number(),
+            AjustesParaLlegarASaldosFiscales2: z.string(),
+            AjustesParaLlegarASaldosFiscales3: z.number(),
+            SaldosFiscalesADiciembre31Parciales: z.number()
+          }),
+          EfectosPorMedicionesAlValorDeMercado: z.object({
+            SaldosContablesADiciembre31Parciales: z.number(),
+            AjustesParaLlegarASaldosFiscales1: z.number(),
+            AjustesParaLlegarASaldosFiscales2: z.string(),
+            AjustesParaLlegarASaldosFiscales3: z.number(),
+            SaldosFiscalesADiciembre31Parciales: z.number()
+          })
         }),
+        MedidasAlValorRazonableConCambiosEnElORI: z.object({
+          ValorDeAdquisicion: z.object({
+            SaldosContablesADiciembre31Parciales: z.number(),
+            AjustesParaLlegarASaldosFiscales1: z.number(),
+            AjustesParaLlegarASaldosFiscales2: z.string(),
+            AjustesParaLlegarASaldosFiscales3: z.number(),
+            SaldosFiscalesADiciembre31Parciales: z.number()
+          }),
+          EfectosPorMedicionesAlValorDeMercado: z.object({
+            SaldosContablesADiciembre31Parciales: z.number(),
+            AjustesParaLlegarASaldosFiscales1: z.number(),
+            AjustesParaLlegarASaldosFiscales2: z.string(),
+            AjustesParaLlegarASaldosFiscales3: z.number(),
+            SaldosFiscalesADiciembre31Parciales: z.number()
+          })
+        }),
+        MedidasConMetodoDeParticipacion: z.object({
+          ValorDeAdquisicion: z.object({
+            SaldosContablesADiciembre31Parciales: z.number(),
+            AjustesParaLlegarASaldosFiscales1: z.number(),
+            AjustesParaLlegarASaldosFiscales2: z.string(),
+            AjustesParaLlegarASaldosFiscales3: z.number(),
+            SaldosFiscalesADiciembre31Parciales: z.number()
+          }),
+          EfectosDeAplicacionDelMetodoDeParticipacion: z.object({
+            SaldosContablesADiciembre31Parciales: z.number(),
+            AjustesParaLlegarASaldosFiscales1: z.number(),
+            AjustesParaLlegarASaldosFiscales2: z.string(),
+            AjustesParaLlegarASaldosFiscales3: z.number(),
+            SaldosFiscalesADiciembre31Parciales: z.number()
+          }),
+          DetrioroDelValor: z.object({
+            SaldosContablesADiciembre31Parciales: z.number(),
+            AjustesParaLlegarASaldosFiscales1: z.number(),
+            AjustesParaLlegarASaldosFiscales2: z.string(),
+            AjustesParaLlegarASaldosFiscales3: z.number(),
+            SaldosFiscalesADiciembre31Parciales: z.number()
+          })
+        })
+      }
+    ),
+    "1210BonosYOtrosInstrumentosDeDeudaOPatrimonio": z.object({
+      MedidasAlCosto: z.object({
+        ValorDeAdquisicion: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        DetrioroDelValor: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
       }),
-      MedValRazCamRes: z.object({
-        ValCost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+      MedidasAlValorRazonableConCambiosEnResultados: z.object({
+        ValorDeAdquisicion: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        EfectMed: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
+        EfectosPorMedicionesAlValorDeMercado: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
       }),
-      MedValRazCamORI: z.object({
-        ValCost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+      MedidasAlValorRazonableConCambiosEnElORI: z.object({
+        ValorDeAdquisicion: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        EfectMed: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-      }),
-      MedMetPart: z.object({
-        ValCost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        EfectApliPart: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        DetCost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-      }),
+        EfectosPorMedicionesAlValorDeMercado: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
+      })
     }),
-    1210: z.object({
-      MedCost: z.object({
-        ValCost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+    "1215InstrumentosFinancierosDerivadosConFinesDeNegociacion": z.object({
+      MedidasAlCosto: z.object({
+        ValorDeAdquisicion: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        DetCost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
+        DetrioroDelValor: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
       }),
-      MedValRazCamRes: z.object({
-        ValCost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        EfectMed: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-      }),
-      MedValRazCamORI: z.object({
-        ValCost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        EfectMed: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-      }),
+      InstrumentosFinancierosDerivadosConFinesDeCobertura: z.object({
+        MedidasAlCosto: z.object({
+          ValorDeAdquisicion: z.object({
+            SaldosContablesADiciembre31Parciales: z.number(),
+            AjustesParaLlegarASaldosFiscales1: z.number(),
+            AjustesParaLlegarASaldosFiscales2: z.string(),
+            AjustesParaLlegarASaldosFiscales3: z.number(),
+            SaldosFiscalesADiciembre31Parciales: z.number()
+          }),
+          DetrioroDelValor: z.object({
+            SaldosContablesADiciembre31Parciales: z.number(),
+            AjustesParaLlegarASaldosFiscales1: z.number(),
+            AjustesParaLlegarASaldosFiscales2: z.string(),
+            AjustesParaLlegarASaldosFiscales3: z.number(),
+            SaldosFiscalesADiciembre31Parciales: z.number()
+          })
+        })
+      })
     }),
-    1215: z.object({
-      InsFinDervNegMedCost: z.object({
-        ValCost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+    "1215DerechosFiduciarios": z.object({
+      MedidasAlCosto: z.object({
+        ValorDeAdquisicion: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        DetCost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-      }),
-      InsFinDervCovMedCost: z.object({
-        ValCost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        DetCost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-      }),
-      DerFidNegMedCost: z.object({
-        ValCost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        DetCost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-      }),
+        DetrioroDelValor: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
+      })
     }),
-    1216: z.object({
-      ValCost: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      DetCost: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
+    "1216DerechosDeRecompraDeInversiones": z.object({
+      MedidasAlCosto: z.object({
+        ValorDeAdquisicion: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        DetrioroDelValor: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
+      })
     }),
-    TotCont: z.number(),
-    TotFisc: z.number(),
+    TotalInversionesEInstrumentosFinancierosDerivadosSaldosContablesADiciembre31: z.number(),
+    TotalInversionesEInstrumentosFinancierosDerivadosSaldosFiscalesADiciembre31: z.number()
   }),
-  R38: z.object({
-    1305: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+  Reglon38: z.object({
+    "1305Clientes": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1310: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1310ACompaniasVinculadas": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1315: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1315CuentaPorCobrarACasaMatriz": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1320: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1320CuentasPorCobrarAVinculadosEconomicos": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1325: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1325CuentasPorCobrarASociosOAccionistas": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1330: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1330AnticiposYAvances": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1335: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1335Depositos": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1340: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1340PromesasDeCompraventa": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1345: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1345IngresosPorCobrar": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1350: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1350RetencionesSebreContratos": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1360: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1360Reclamaciones": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1365: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1365CuentasPorCobrarATrabajadores": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1380: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1380DeudoresVarios": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1399: z.object({
-      DetCli: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      DetDem: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
+    "1399DeterioroSobreClientesYOtrasCuentasQueSiTuvieronEnEsteAnioOEnLosAnterioresUnaContrapartidaEnElIngresoYSinIncluirLasCuentasPorCobrarQueSeamConVinculadosEconomicos": z.object(
+      {
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }
+    ),
+    "1399DeterioroSobreLasDemasCtasPorCobrar": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    TotCont: z.number(),
-    TotFisc: z.number(),
+    TotalCuentasDocumentosYArrendamientosFinancierosPorCobrarSaldosContablesADiciembre31: z.number(),
+    TotalCuentasDocumentosYArrendamientosFinancierosPorCobrarSaldosFiscalesADiciembre31: z.number()
   }),
-  R39: z.object({
-    1405: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+  Reglon39: z.object({
+    "1405MateriasPrimas": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1410: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1410ProductosEnProceso": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1415: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1415ObrasDeConstriccionEnCurso": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1430: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1430ProductosTerminados": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1435: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1435MercanciasNoFabricadasPorLaEmpresa": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1440: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1440BienesRaicesParaLaVenta": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1455: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1455MaterialesRepuestosYAccesorios": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1460: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1460EnvasesYEmpaques": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1465: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1465InventariosEnTransito": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1499: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1499DeterioroDeInventarios": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    TotCont: z.number(),
-    TotFisc: z.number(),
+    TotalInventariosSaldosContablesADiciembre31: z.number(),
+    TotalInventariosSaldosFiscalesADiciembre31: z.number()
   }),
-  R40: z.object({
-    1505: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+  Reglon40: z.object({
+    "1505AcuerdosDeConcesionModeloDelActivoIntangible": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1507: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    1510: z.object({
+    "1507ActivosIntangiblesExploracionYEvaluacionDeRecursosMinerales": z.object(
+      {
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }
+    ),
+    "1510MarcasPatentesYLicencias": z.object({
       REFSaldCont: z.number(),
       Ajust1: z.number(),
       Ajust2: z.string(),
       Ajust3: z.number(),
       REFSaldFisc: z.number()
     }),
-    1520: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1520OtrosActivosIntangibles": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1558: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1558AmortizacionAcumulada": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1569: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1569DeterioroDeIntangibles": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1570: z.object({
-      Plus: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+    "1570PlusvaliaOGoodWill": z.object({
+      PlusvaliaOGoodWill: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      Adq: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      AdquisicionDeEstablecimientoDeComercio: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      Fus: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      Fusiones: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      Esci: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      Escisiones: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      CompAcc: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
+      CompraDeAcciones: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      })
     }),
-    1578: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1578AmortizacionAcumuladaDeLaPlusvaliaOGoodWill": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1579: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1579DeterioroAcumuladoDeLaPlusvaliaOGoodWill": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    TotCont: z.number(),
-    TotFisc: z.number(),
+    TotalActivosIntangiblesSaldosContablesADiciembre31: z.number(),
+    TotalActivosIntangiblesSaldosFiscalesADiciembre31: z.number()
   }),
-  R41: z.object({
-    1605: z.object({
-      AniProdCost: z.object({
-        ValCost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+  Reglon41: z.object({
+    "1605AnimalesProductoresMedidosAlCosto": z.object({
+      AnimalesProductoresMedidosAlCosto: z.object({
+        ValorDelCosto: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        DeprAcum: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+        DepreciacionAcumulada: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        DetAcum: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
+        DeterioroAcumulado: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
       }),
-      AniProdCRaz: z.object({
-        ValCost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+      AnimalesProductoresMedidosAlValorRazonable: z.object({
+        ValorDelCosto: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        Reval: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-      }),
+        Revaluaciones: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
+      })
     }),
-    1610: z.object({
-      AniConsCost: z.object({
-        ValCost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+    "1610AnimalesConsumiblesMedidosAlCosto": z.object({
+      AnimalesConsumiblesMedidosAlCosto: z.object({
+        ValorDelCosto: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        DetAni: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
+        DeterioroDeAnimalesConsumiblesMedidosAlCosto: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
       }),
-      AniConsCRaz: z.object({
-        ValCost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+      AnimalesConsumiblesMedidosAlValorRazonable: z.object({
+        ValorDelCosto: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        Reval: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-      }),
+        Revaluaciones: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
+      })
     }),
-    1615: z.object({
-      PlaProdCost: z.object({
-        ValCost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+    "1615PlantasProductorasMedidasAlCosto": z.object({
+      PlantasProductorasMedidasAlCosto: z.object({
+        ValorDelCosto: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        DeprAcum: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+        DepreciacionAcumulada: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        DetAcum: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
+        DeterioroAcumulado: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
       }),
-      PlaProdCRaz: z.object({
-        ValCost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+      PlantasProductorasMedidasAlValorRazonable: z.object({
+        ValorDelCosto: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        Reval: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-      }),
+        Revaluaciones: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
+      })
     }),
-    1620: z.object({
-      PlaConsCost: z.object({
-        ValCost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+    "1620PlantasConsumiblesMedidosAlCosto": z.object({
+      PlantasConsumiblesMedidosAlCosto: z.object({
+        ValorDelCosto: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        DetAni: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
+        DeterioroDeConsumiblesMedidosAlCosto: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
       }),
-      PlaConsCRaz: z.object({
-        ValCost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+      PlantasConsumiblesMedidosAlValorRazonable: z.object({
+        ValorDelCosto: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        Reval: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-      }),
+        Revaluaciones: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
+      })
     }),
-    TotCont: z.number(),
-    TotFisc: z.number(),
+    TotalActivosBiologicosSaldosContablesADiciembre31: z.number(),
+    TotalActivosBiologicosSaldosFiscalesADiciembre31: z.number()
   }),
-  R42: z.object({
-    1704: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+  Reglon42: z.object({
+    "1704Terrenos": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1708: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1708ConstruccionesEnCurso": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1716: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1716Edificaciones": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1720: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1720MaquinariaYEquipo": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1724: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1724EquipoDeOficinaMueblesYEnseres": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1728: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1728EquipoDeComunicacionYComputo": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1732: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1732EquipoMedicoYCientifico": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1736: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1736EquipoDeHotelesYRestaurantes": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1740: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1740FlotaYEquipoDeTransporte": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1745: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1745BienesRecibidosEnLeasing": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1768: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1768DepreciacionAcumulada": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1769: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1769Deterioro": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1779: z.object({
-      ValCost: z.object({
-        REFSaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+    "1779PropiedadesDeInversionTerrenos": z.object({
+      ValorDelCosto: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      Reval: z.object({
-        REFSaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
+      Revaluaciones: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      })
     }),
-    1780: z.object({
-      ValCost: z.object({
-        REFSaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+    "1780PropiedadesDeInversionEdificaciones": z.object({
+      ValorDelCosto: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      Reval: z.object({
-        REFSaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
+      Revaluaciones: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      })
     }),
-    1788: z.object({
-      ValCost: z.object({
-        REFSaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+    "1788PropDeInversiDepreciacionAcumulada": z.object({
+      DelCosto: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      Reval: z.object({
-        REFSaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
+      DeLasRevaluaciones: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      })
     }),
-    1789: z.object({
+    "1789PropieDeInversDeterioAcumulado": z.object({
       REFSaldCont: z.number(),
       Ajust1: z.number(),
       Ajust2: z.string(),
       Ajust3: z.number(),
-      SaldFisc: z.number(),
+      SaldFisc: z.number()
     }),
-    1790: z.object({
-      ValCost: z.object({
+    "1790ActivosNoCorrientesMantenidosParaLaVenta": z.object({
+      ValorDelCosto: z.object({
         REFSaldCont: z.number(),
         Ajust1: z.number(),
         Ajust2: z.string(),
         Ajust3: z.number(),
         REFSaldFisc: z.number()
       }),
-      DeprAcum: z.object({
+      MenosDepreciacionesAcumuladas: z.object({
         REFSaldCont: z.number(),
         Ajust1: z.number(),
         Ajust2: z.string(),
         Ajust3: z.number(),
         REFSaldFisc: z.number()
       }),
-      Det: z.object({
-        REFSaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
+      MenosDeteroros: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      })
     }),
-    TotCont: z.number(),
-    TotFisc: z.number(),
+    TotalPropiedadesPlantaEquipoPropiedadesDeInversionANCMVSaldosContablesADiciembre31: z.number(),
+    TotalPropiedadesPlantaEquipoPropiedadesDeInversionANCMVSaldosFiscalesADiciembre31: z.number()
   }),
-  R43: z.object({
-    1805: z.object({
-      AntiImpRenSobT: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+  Reglon43: z.object({
+    "1805AnticiposPorImpuestosCorrientes": z.object({
+      AnticipoDelImpuestoDeRentaYDeSobretasa: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      RetAutFuente: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      RetencionesYAutorretencionesEnLaFuente: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      RetIVA: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      RetencionesDeIVA: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      RetICA: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      RetencionesDeICA: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      SaldoFavor: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      SaldoAFavorRenta: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      SaldoIVA: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      SaldosAFavorIVA: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      SaldoICA: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
+      SaldoAFavorICA: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      })
     }),
-    1810: z.object({
-      Plub: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+    "1810GastosPagadosPorAnticipado": z.object({
+      Publicidad: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      PriSeg: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      PrimasDeSegunos: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      Arrend: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      Arrendamientos: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      Otro: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
+      Otros: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      })
     }),
-    1850: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "1850OtrosActivosPlanDeBeneficiosAEmpleados": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    1860: z.object({
+    "1860ActivoPorImpuestoDiferido": z.object({
       REFSaldCont: z.number(),
       Ajust1: z.number(),
       Ajust2: z.string(),
       Ajust3: z.number(),
-      SaldFisc: z.number(),
+      SaldFisc: z.number()
     }),
-    CargDifInt: z.object({
-      ValCost: z.object({
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+    CargosDiferidosEIntangiblesQueSoloSonFiscales: z.object({
+      ValorDelCosto: z.object({
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscales: z.number()
       }),
-      AmortAcum: z.object({
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
+      AmortizacionAcumulada: z.object({
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscales: z.number()
+      })
     }),
-    TotCont: z.number(),
-    TotFisc: z.number(),
+    TotalOtrosActivosSaldosContablesADiciembre31: z.number(),
+    TotalOtrosActivosSaldosFiscalesADiciembre31: z.number()
   }),
-  R44: z.object({ TotCont: z.number(), TotFisc: z.number() }),
-  R45: z.object({
-    2105: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    2110: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    2115: z.object({
-      Colombia: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      NoColombia: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-    }),
-    2205: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    2210: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    2335: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    2355: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    2365: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    2367: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    2368: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    2370: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    2404: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    2408: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    2412: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    2505: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    2510: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    2515: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    2525: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    2530: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    2605: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    2705: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    2710: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    2715: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    2805: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    2810: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    2815: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    2816: z.object({
-      REFSaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    2820: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    2825: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    2826: z.object({
-      REFSaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    2835: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    2840: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    2895: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    PasivRecFisc: z.object({
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    TotCont: z.number(),
-    TotFisc: z.number(),
+  Reglon44TotalPatrimonioBruto: z.object({
+    TotalSaldosContablesADiciembre31: z.number(),
+    TotalSaldosFiscalesADiciembre31: z.number()
   }),
-  R46: z.object({
-    3130: z.object({ SaldCont: z.number() }),
-    3605: z.object({
-      UtilDesImp: z.object({ SaldCont: z.number() }),
-      PerDesImp: z.object({ SaldCont: z.number() })
+  Reglon45: z.object({
+    "2105BancosNacionales": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    3705: z.object({ SaldCont: z.number() }),
-    3710: z.object({ SaldCont: z.number() }),
-    3715: z.object({
-      GananAcum: z.object({ SaldCont: z.number() }),
-      PerAcum: z.object({ SaldCont: z.number() })
+    "2110BancosDelExterior": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    3720: z.object({
-      GananAcumORI: z.object({ SaldCont: z.number() }),
-      PerAcumORI: z.object({ SaldCont: z.number() })
+    "2115CorporacionesFinancieras": z.object({
+      EnColombia: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      EnElExterior: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      })
     }),
-    3805: z.object({
-      Reval: z.object({ SaldCont: z.number() }),
-      MetPar: z.object({ SaldCont: z.number() })
+    "2205ProveedoresNacionales": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    TotCont: z.number(),
-    TotFisc: z.number(),
+    "2210ProveedoresExterior": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "2335CostosYGastosPorPagar": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "2355DeudasConSociedadesDondeSeSocioOAccionista": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "2365RetencionEnLaFuente": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "2367RetencionDeIVA": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "2368RetencionDeIndustriaYComercio": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "2370RetencionesYAportesEnNomina": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "2404ImpuestoPorPagarDeRentaYComplementarios": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "2408ImpuestosSobreLasVentas": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "2412OtrosImpuestosPorPagar": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "2505SalariosPorPagar": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "2510CesantiasConsolidadas": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "2515InteresdeCesantias": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "2525VacacionesConsolidadas": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "2530PrestacionesExtralegales": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "2605ProvisionParaCostosYGastos": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "2705IngresosRecibidosPorAnticipado": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "2710AbonosDiferidos": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "2715UtilidadDiferidaEnVentasAPlazos": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "2805AnticiposYAvancesRecibidos": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "2810DepositosRecibidos": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "2815IngresosRecibidosParaTerceros": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "2816PasivoPorIngresoDiferido": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "2820CuentasDeOperacionConjunta": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "2825RetencionesATercerosContratos": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "2826PasivoPorImpuestoDiferido": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "2835AcreedoresDelSistema": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "2840CuentasEnParticipacion": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "2895Diversos": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    PasivosReconocidoSolamenteParaFinesFiscales: z.object({
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    TotalPasivosSaldosContablesADiciembre31: z.number(),
+    TotalPasivosSaldosFiscalesADiciembre31: z.number()
   }),
-  R47: z.object({
-    VentBien: z.object({
-      CliNac: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      Export: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      CliZonFrac: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      SocCom: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      CliJuri: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      VincEcoZonFrac: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
+  Reglon46: z.object({
+    TotalPatrimonioLiquidoPositivoSaldosContablesADiciembre31: z.number(),
+    TotalPatrimonioLiquidoPositivoSaldosFiscalesADiciembre31: z.number(),
+    "3130CapitalDePersonasNaturales": z.object({
+      SaldosContablesADiciembre31Parciales: z.number()
     }),
-    ServGen: z.object({
-      CliNac: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+    "3605ResultadoDelEjercicio": z.object({
+      UtilidadDespuesDeImpuestos: z.object({
+        SaldosContablesADiciembre31Parciales: z.number()
       }),
-      Export: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      PerdidaDespuesDeImpuestos: z.object({
+        SaldosContablesADiciembre31Parciales: z.number()
+      })
+    }),
+    "3705UtilidadesDePeriodosAnteriores": z.object({
+      SaldosContablesADiciembre31Parciales: z.number()
+    }),
+    "3710PerdidasDeEjerciciosAnteriores": z.object({
+      SaldosContablesADiciembre31Parciales: z.number()
+    }),
+    "3715GananciasPerdidasAcumuladasORetenidasPorLaAdopcionPorPrimera": z.object(
+      {
+        GananciasAcumuladas: z.object({
+          SaldosContablesADiciembre31Parciales: z.number()
+        }),
+        PerdidasAcumuladas: z.object({
+          SaldosContablesADiciembre31Parciales: z.number()
+        })
+      }
+    ),
+    "3720OtroResultadoIntegralAcumulado": z.object({
+      GananciasAcumuladasORI: z.object({
+        SaldosContablesADiciembre31Parciales: z.number()
       }),
-      CliZonFrac: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      PerdidasAcumuladasORI: z.object({
+        SaldosContablesADiciembre31Parciales: z.number()
+      })
+    }),
+    "3805Superavit": z.object({
+      PorRevaluaciones: z.object({
+        SaldosContablesADiciembre31Parciales: z.number()
       }),
-      SocCom: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      CliJuri: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      VincEcoZonFrac: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-    }),
-    ServConst: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    AcuConcServ: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    ArrenOper: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    Regal: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    Comis: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    HonProf: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    ActSegCap: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    LibRes: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    ComBanc: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    Otro: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    TotCont: z.number(),
-    TotFisc: z.number(),
+      PorMetodoDeParticipacion: z.object({
+        SaldosContablesADiciembre31Parciales: z.number()
+      })
+    })
   }),
-  R48: z.object({
-    421005: z.object({
-      ArreFinMerc: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+  Reglon47: z.object({
+    VentaDeBienes: z.object({
+      AClientesNacionalesPorFueraDeZonaFranca: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      IntFin: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      ExportacionesSinIncluirLasExportacionesATerritoriosOPaisesNoCooperantes: z.object(
+        {
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }
+      ),
+      AClientesEnZonasFrancasQueNoSeanVinculadosEconomicos: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      IntPrest: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      ASociedadesDeComercializacionInternacional: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      IntFinAmrt: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      IntImplc: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
+      AClientesEnJurisdiccionesNoCooperantesPeroQueNoSeanVinculadosEconomicos: z.object(
+        {
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }
+      ),
+      AVinculadosEconomicosUbicadosEnZonaFrancaOUbicadosEnCualquierOtroPais: z.object(
+        {
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }
+      )
     }),
-    421020: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    ServiciosGeneralesSinIncluirHonorariosProfesionales: z.object({
+      AClientesNacionalesPorFueraDeZonaFranca: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      ExportacionesSinIncluirLasExportacionesATerritoriosOPaisesNoCooperantes: z.object(
+        {
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }
+      ),
+      AClientesEnZonasFrancasQueNoSeanVinculadosEconomicos: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      ASociedadesDeComercializacionInternacional: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      AClientesEnJurisdiccionesNoCooperantesPeroQueNoSeanVinculadosEconomicos: z.object(
+        {
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }
+      ),
+      AVinculadosEconomicosUbicadosEnZonaFrancaOUbicadosEnCualquierOtroPais: z.object(
+        {
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }
+      )
     }),
-    421021: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    ServiciosDeConstruccion: z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    IntPresSoc: z.object({
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    AcuerdosDeConcesionDeServicios: z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    TotCont: z.number(),
-    TotFisc: z.number(),
+    ArrendamientosOperativos: z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    Regalias: z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    ComisionesRelacionesDeAgencia: z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    HonorariosProfesionales: z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    ActividadesDeSegurosYDeCapitalizacion: z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    LiberacionDeReservasEnContratosDeSegunos: z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    ComisionesBancariasCostosDeTransaccionEntreOtros: z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    OtrosIngresos: z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    TotalIngresosBrutosDeActividadesOrdinariasSaldosContablesADiciembre31: z.number(),
+    TotalIngresosBrutosDeACtividadesOrdinariasSaldosFiscalesADiciembre31: z.number()
   }),
-  R49: z.object({
-    RecSocNacMeg: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+  Reglon48: z.object({
+    "421005FinancierosIntereses": z.object({
+      ArrendamientoFinancieroOMercantilLeasing: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      InteresesSectorFinanciero: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      InteresesPorPrestamosATercerosDiferentesAlSectorFinanciero: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      PorInstrumentosFinancierosMedidosACostoAmortizadoDistintoAPrestamos: z.object(
+        {
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }
+      ),
+      InteresesImplicitosTransaccionesDeFinanciacion: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      })
     }),
-    RecSocNacNoMegNoSoc: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "421020DiferenciaEnCambio": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    RecSocNacNoMegSoc: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "421021OtrosIngresosFinancieros": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    RecSocNacSim: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    TotCont: z.number(),
-    TotFisc: z.number(),
+    InteresesPresuntivosPorHacerPrestamosEnDineroALosSociosDeEstaSociedad: z.object(
+      {
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }
+    ),
+    TotalIngresosFinancierosSaldosContablesADiciembre31: z.number(),
+    TotalIngresosFinancierosSaldosFiscalesADiciembre31: z.number()
   }),
-  R50: z.object({ ValCont: z.number(), ValFisc: z.number() }),
-  R51: z.object({
-    ValCont: z.number(),
-    ValFisc: z.number(),
-    Dat: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+  Reglon49: z.object({
+    RecibidosDeSociedadNacionalDelRegimenOrdinarioQueSiLlevaACaboLasMegainversionesDelArt235: z.object(
+      {
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }
+    ),
+    RecibidosDeSociedadNacionalDelRegimenOrdinarioQueNoLlevaACaboLasMegainversionesDelArt235YQueNoEstaAcogidaAlRegimenDeSociedadesCHCDeLosArts894A898DelET: z.object(
+      {
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }
+    ),
+    RecibidosDeSociedadNacionalDelRegimenOrdinarioQueNoLlevaACaboLasMegainversionesDelArt235PeroQueSiEstaAcogidaAlRegimenDeSociedadesCHCDeLosArts894A898DelET: z.object(
+      {
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }
+    ),
+    RecibidosDeUnaSociedadNacionalDelRegimenSimple: z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
+    TotalDividentosOParticipacionesGananciaOcasionalSaldosContablesADiciembre31: z.number(),
+    TotalDividentosOParticipacionesGananciaOcasionalSaldosFiscalesADiciembre31: z.number()
   }),
-  R52: z.object({
-    RecSocNacMeg: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+  Reglon50DividendosOParticipacionesDistribuidosPorEntidadesResidentesEnColombia: z.object(
+    {
+      TotalSaldosContablesADiciembre31Parciales: z.number(),
+      TotalSaldosFiscalesADiciembre31Parciales: z.number()
+    }
+  ),
+  Reglon51DividendosOParticipacionesGravadasAñoRecibidosPorSociedadesExtranjeras: z.object(
+    {
+      TotalSaldosContablesADiciembre31Parciales: z.number(),
+      TotalSaldosFiscalesADiciembre31Parciales: z.number(),
+      Detalles: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      })
+    }
+  ),
+  Reglon52: z.object({
+    RecibidosDeSociedadNacionalDelRegimenOrdinarioQueSiLlevaACaboLasMegainversionesDelArt235: z.object(
+      {
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }
+    ),
+    RecibidosDeSociedadNacionalDelRegimenOrdinarioQueNoLlevaACaboLasMegainversionesDelArt235YQueNoEstaAcogidaAlRegimenDeSociedadesCHCDeLosArts894A898DelET: z.object(
+      {
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }
+    ),
+    RecibidosDeSociedadNacionalDelRegimenOrdinarioQueNoLlevaACaboLasMegainversionesDelArt235PeroQueSiEstaAcogidaAlRegimenDeSociedadesCHCDeLosArts894A898DelET: z.object(
+      {
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }
+    ),
+    RecibidosDeUnaSociedadNacionalDelRegimenSimple: z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    RecSocNacNoMegNoSoc: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    RecSocNacNoMegSoc: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    RecSocNacSim: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    TotCont: z.number(),
-    TotFisc: z.number(),
+    TotalDividendosYParticipacionesGravadasPorPersonasNaturalesSaldosContablesADiciembre3152: z.number(),
+    TotalDividendosYParticipacionesGravadasPorPersonasNaturalesSaldosFiscalesADiciembre3152: z.number()
   }),
-  R53: z.object({
-    RecSocNacNoMegNoSoc: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+  Reglon53: z.object({
+    RecibidosDeSociedadNacionalDelRegimenOrdinarioQueNoLlevaACaboLasMegainversionesDelArt235YQueNoEstaAcogidaAlRegimenDeSociedadesCHCDeLosArts894A898DelET: z.object(
+      {
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }
+    ),
+    RecibidosDeSociedadNacionalDelRegimenOrdinarioQueNoLlevaACaboLasMegainversionesDelArt235PeroQueSiEstaAcogidaAlRegimenDeSociedadesCHCDeLosArts894A898DelET: z.object(
+      {
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }
+    ),
+    RecibidosDeUnaSociedadNacionalDelRegimenSimple: z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    RecSocNacNoMegSoc: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    RecSocNacSim: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    TotCont: z.number(),
-    TotFisc: z.number(),
+    Total53SaldosContablesADiciembre31: z.number(),
+    Total53SaldosFiscalesADiciembre31: z.number()
   }),
-  R54: z.object({
-    RecSocNacNoMegNoSoc: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+  Reglon54: z.object({
+    RecibidosDeSociedadNacionalDelRegimenOrdinarioQueNoLlevaACaboLasMegainversionesDelArt235YQueNoEstaAcogidaAlRegimenDeSociedadesCHCDeLosArts894A898DelET: z.object(
+      {
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }
+    ),
+    RecibidosDeSociedadNacionalDelRegimenOrdinarioQueNoLlevaACaboLasMegainversionesDelArt235PeroQueSiEstaAcogidaAlRegimenDeSociedadesCHCDeLosArts894A898DelET: z.object(
+      {
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }
+    ),
+    RecSocNacSim54: z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    RecSocNacNoMegSoc: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    RecSocNacSim: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    TotCont: z.number(),
-    TotFisc: z.number(),
+    Total54SaldosContablesADiciembre31: z.number(),
+    Total54SaldosFiscalesADiciembre31: z.number()
   }),
-  R55: z.object({ ValCont: z.number(), ValFisc: z.number() }),
-  R56: z.object({
-    TotCont: z.number(),
-    TotFisc: z.number(),
-    RecSocNacMeg: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
+  Reglon55: z.object({
+    TotalSaldosContablesADiciembre31Parciales: z.number(),
+    TotalSaldosFiscalesADiciembre31Parciales: z.number()
   }),
-  R57: z.object({
-    4245: z.object({
-      Menos2: z.object({
-        PrpPlntEqp: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        PrpInv: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        ActBio: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        ActNoCorr: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        ActInta: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        InvAccOtro: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        DispInstr: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        Otro: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-      }),
-      Mas2: z.object({
-        PrpPlntEqp: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        PrpInv: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        ActBio: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        ActNoCorr: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        ActInta: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        InvAccOtro: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        DispInstr: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        Otro: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-      }),
-    }),
-    4255: z.object({
-      ReembCompSeg: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      Otro: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-    }),
-    4265: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    4295: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    425035: z.object({
-      Inv: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      PrpPlntEqp: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      ActInt: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      ActExplrRecMat: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      PrpInv: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      ActNoCorrVent: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      ActBio: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      BienArtCult: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      ActFinan: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      CartCred: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      OtraInv: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      Otro: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-    }),
-    425036: z.object({
-      Garan: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      ContOner: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      Litig: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      Reembol: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      Reestruc: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      Pasiv: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      Otro: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-    }),
-    425037: z.object({
-      BenefCortoPlz: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      BenefLargPlz: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      BenefEmplTemVinLab: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      BenefEmplPost: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-    }),
-    425050: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    429501: z.object({
-      GananApli: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      GananCamb: z.object({
-        InvAsoSubNegCon: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        ActBio: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        PropInv: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        InstFinan: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        InstDer: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        Otro: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-      }),
-    }),
-    429502: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    429503: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    429506: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    429507: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    429543: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    TotCont: z.number(),
-    TotFisc: z.number(),
+  Reglon56: z.object({
+    Total56SaldosContablesADiciembre31: z.number(),
+    Total56SaldosFiscalesADiciembre31: z.number(),
+    RecibidosDeSociedadNacionalDelRegimenOrdinarioQueSiLlevaACaboLasMegainversionesDelArt235: z.object(
+      {
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }
+    )
   }),
-  R58: z.object({ TotCont: z.number(), TotFisc: z.number() }),
-  R59: z.object({
-    4175: z.object({
-      VentBien: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+  Reglon57: z.object({
+    "4245UtilidadEnVentaDeActivoFijo": z.object({
+      PorVentasDeActivosPoseidosMenosDe2Anios: z.object({
+        PropiedadesPlantaYEquipo: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        PropiedadesDeInversion: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        ActivosBiologicosSinPlantasProductoras: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        ActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios: z.object(
+          {
+            SaldosContablesADiciembre31Parciales: z.number(),
+            AjustesParaLlegarASaldosFiscales1: z.number(),
+            AjustesParaLlegarASaldosFiscales2: z.string(),
+            AjustesParaLlegarASaldosFiscales3: z.number(),
+            SaldosFiscalesADiciembre31Parciales: z.number()
+          }
+        ),
+        ActivosIntangibles: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        InversionesEnAccionesYOtrasParticipaciones: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        PorDisposicionDeOtrosInstrumentosFinancieros: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        Otros: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
       }),
-      PresServ: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      Otro: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
+      PorVentasDeActivosPoseidosMasDe2Anios: z.object({
+        PropiedadesPlantaYEquipo: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        PropiedadesDeInversion: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        ActivosBiologicosSinPlantasProductoras: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        ActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios: z.object(
+          {
+            SaldosContablesADiciembre31Parciales: z.number(),
+            AjustesParaLlegarASaldosFiscales1: z.number(),
+            AjustesParaLlegarASaldosFiscales2: z.string(),
+            AjustesParaLlegarASaldosFiscales3: z.number(),
+            SaldosFiscalesADiciembre31Parciales: z.number()
+          }
+        ),
+        ActivosIntangibles: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        InversionesEnAccionesYOtrasParticipaciones: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        PorDisposicionDeOtrosInstrumentosFinancieros: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        Otros: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
+      })
     }),
-    TotCont: z.number(),
-    TotFisc: z.number(),
+    "4265IngresosDeEjerciciosAnteriores": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "425035ReversionDeDeterioroDeValor": z.object({
+      Inventarios: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      PropiedadesPlantaYEquipo: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      ActivosIntangibles: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      ActivosDeExploracionYEvaluacionDeRecursosMinerales: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      PropiedadesDeInversionMedidasAlModeloDeCosto: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      ActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      ActivosBiologicosMedidosAlModeloDeCosto: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      BienesDeArteYCultura: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      ActivosFinancierosDiferentesACarteraDeCredito: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      CarteraDeCreditoYOperacionesDeLeasing: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      OtrasInversionesMedidasAlCostoOElMetodoDeLaParticipacion: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      OtrosDeterioros: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      })
+    }),
+    "425036ReversionDeProvisionesMontoOFechaInciertos": z.object({
+      Garantias: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      ContratosOnerosos: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      Litigios: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      ReembolsosAClientes: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      ReestructuracionesDeNegocios: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      PasivosContingentesAsumidosEnUnaCombinacionDeNegocios: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      Otros: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      })
+    }),
+    "425037ReversionDePasivosPorBeneficiosALosEmpleados": z.object({
+      BeneficiosDeCortoPlayaz: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      BeneficiosDeLargoPlaazo: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      BeneficiosAEmpleadosPorTerminacionDelVinculoLaboral: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      BeneficiosAEmpleadosPostEmpleo: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      })
+    }),
+    "425050ReintegrodeOtrosCostosYGastos": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "4255Indemnizaciones": z.object({
+      ReembolsosDeCompaniasDeSegros: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      OtrasIndemnizaciones: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      })
+    }),
+    "4295Diversos": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "429501GananciasPorAplicacionMetodoDeParticipacion": z.object({
+      GananciasPorAplicacionMetodoDeParticipacion: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      GananciasPorCambiosEnElValorRazonableDeActivos: z.object({
+        DeInversionesEnAsociadasSubsidiariasYNegociosConjuntos: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        DeActivosBiologicos: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        DePropiedadesDeInversion: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        DeInstrumentosFinancierosDiferenteAInversiones: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        DeInstrumentosDerivados: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        DeOtrosActivos: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
+      })
+    }),
+    "429502TransferenciasSubvencionesYAyudasGubernamentales": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "429503DonacionesAportacionesYSimilares": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "429506OtrasReversionesORecuperaciones": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "429507Otros": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    "429543LoteriasRifasYSimilares": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    TotalOtrosIngresosSaldosContablesADiciembre31: z.number(),
+    TotalOtrosIngresosSaldosFiscalesADiciembre31: z.number()
   }),
-  R60: z.object({
-    DiviNoGrav: z.object({ Ajust1: z.number(), SaldFisc: z.number() }),
-    AprtObl: z.object({ Ajust1: z.number(), SaldFisc: z.number() }),
-    AprtVol: z.object({ Ajust1: z.number(), SaldFisc: z.number() }),
-    UtilEnaj: z.object({ Ajust1: z.number(), SaldFisc: z.number() }),
-    ValCap: z.object({ Ajust1: z.number(), SaldFisc: z.number() }),
-    Indem: z.object({ Ajust1: z.number(), SaldFisc: z.number() }),
-    Recom: z.object({ Ajust1: z.number(), SaldFisc: z.number() }),
-    Ganan: z.object({ Ajust1: z.number(), SaldFisc: z.number() }),
-    SubsAgro: z.object({ Ajust1: z.number(), SaldFisc: z.number() }),
-    TotFisc: z.number(),
+  Reglon58: z.object({
+    TotalIngresosBrutosSaldosContablesADiciembre31: z.number(),
+    TotalIngresosBrutosSaldosFiscalesADiciembre31: z.number()
   }),
-  R61: z.object({ TotCont: z.number(), TotFisc: z.number() }),
-  R62: z.object({
-    61: z.object({
-      InvIniTrbProc: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+  Reglon59: z.object({
+    "4175DevolucionesYRebajasEnVentas": z.object({
+      EnVentaDeBienes: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      InvIniMatPri: z.object({
-        Data: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        CompLoc: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        Imp: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        InvFinMatPri: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
+      EnPrestacionDeServicios: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      CostManoObr: z.object({
-        CortoPlz: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        LargoPlz: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        TermVincLab: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        PostEmpl: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
+      OtrasDevolucionesRebajasYDescuentos: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      CostDepr: z.object({
-        DeprPrpPltEqu: z.object({
+      TotalMenosDevolucionesDescuentosRebajasSaldosContablesADiciembre31: z.number(),
+      TotalMenosDevolucionesDescuentosRebajasSaldosFiscalesADiciembre31: z.number()
+    })
+  }),
+  Reglon60: z.object({
+    DiviNoGrav: z.object({
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    AprtObl: z.object({
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    AprtVol: z.object({
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    UtilEnaj: z.object({
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    ValCap: z.object({
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    Indem60: z.object({
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    Recom60: z.object({
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    Ganan60: z.object({
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    SubsAgro: z.object({
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    TotalIngresosNoConstituidosDeRentaNiGananciaOcasionalSaldosFiscalesADiciembre31: z.number()
+  }),
+  Reglon61: z.object({
+    TotalIngresosNetosSaldosContablesADiciembre31: z.number(),
+    TotalIngresosNetosSaldosFiscalesADiciembre31: z.number()
+  }),
+  Reglon62: z.object({
+    "61CostosDeLasMercanciasFabricadasYVendidas": z.object({
+      InventarioInicialDeTrabajoEnProceso: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      InventarioInicialDeMateriaPrimas: z.object({
+        MasComprasLocales: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        MasImportaciones: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        MenosInventarioFinalMateriasPrimas: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
+      }),
+      MasCostoDeManoDeObra: z.object({
+        DeCortoPlayzo: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        DeLargoPlayzo: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        PorTerminacionDelVinculoLaboral: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        PostEmpleo: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
+      }),
+      MasCostosIndirectosDeFabricacion: z.object({
+        DepreciacionPropiedadesPlantaYEquipo: z.object({
+          DelCosto: z.object({
+            SaldosContablesADiciembre31Parciales: z.number(),
+            AjustesParaLlegarASaldosFiscales1: z.number(),
+            AjustesParaLlegarASaldosFiscales2: z.string(),
+            AjustesParaLlegarASaldosFiscales3: z.number(),
+            SaldosFiscalesADiciembre31Parciales: z.number()
+          }),
+          DelAjusteAcumuladoPorRevaluacionesOReExpresiones: z.object({
+            SaldosContablesADiciembre31Parciales: z.number(),
+            AjustesParaLlegarASaldosFiscales1: z.number(),
+            AjustesParaLlegarASaldosFiscales2: z.string(),
+            AjustesParaLlegarASaldosFiscales3: z.number(),
+            SaldosFiscalesADiciembre31Parciales: z.number()
+          })
+        }),
+        DepreciacionDePropiedadesDeInversion: z.object({
           Cost: z.object({
-            SaldCont: z.number(),
-            Ajust1: z.number(),
-            Ajust2: z.string(),
-            Ajust3: z.number(),
-            SaldFisc: z.number(),
+            SaldosContablesADiciembre31Parciales: z.number(),
+            AjustesParaLlegarASaldosFiscales1: z.number(),
+            AjustesParaLlegarASaldosFiscales2: z.string(),
+            AjustesParaLlegarASaldosFiscales3: z.number(),
+            SaldosFiscalesADiciembre31Parciales: z.number()
           }),
           AjusAcum: z.object({
-            SaldCont: z.number(),
-            Ajust1: z.number(),
-            Ajust2: z.string(),
-            Ajust3: z.number(),
-            SaldFisc: z.number(),
-          }),
-        }),
-        DeprPrpInv: z.object({
-          Cost: z.object({
-            SaldCont: z.number(),
-            Ajust1: z.number(),
-            Ajust2: z.string(),
-            Ajust3: z.number(),
-            SaldFisc: z.number(),
-          }),
-          AjusAcum: z.object({
-            SaldCont: z.number(),
-            Ajust1: z.number(),
-            Ajust2: z.string(),
-            Ajust3: z.number(),
-            SaldFisc: z.number(),
-          }),
+            SaldosContablesADiciembre31Parciales: z.number(),
+            AjustesParaLlegarASaldosFiscales1: z.number(),
+            AjustesParaLlegarASaldosFiscales2: z.string(),
+            AjustesParaLlegarASaldosFiscales3: z.number(),
+            SaldosFiscalesADiciembre31Parciales: z.number()
+          })
         }),
         DeprActBio: z.object({
-          Cost: z.object({
-            SaldCont: z.number(),
-            Ajust1: z.number(),
-            Ajust2: z.string(),
-            Ajust3: z.number(),
-            SaldFisc: z.number(),
+          DelCosto: z.object({
+            SaldosContablesADiciembre31Parciales: z.number(),
+            AjustesParaLlegarASaldosFiscales1: z.number(),
+            AjustesParaLlegarASaldosFiscales2: z.string(),
+            AjustesParaLlegarASaldosFiscales3: z.number(),
+            SaldosFiscalesADiciembre31Parciales: z.number()
           }),
-          AjusAcum: z.object({
-            SaldCont: z.number(),
-            Ajust1: z.number(),
-            Ajust2: z.string(),
-            Ajust3: z.number(),
-            SaldFisc: z.number(),
-          }),
+          DelAjusteAcumuladoPorRevaluacionesOReExpresiones: z.object({
+            SaldosContablesADiciembre31Parciales: z.number(),
+            AjustesParaLlegarASaldosFiscales1: z.number(),
+            AjustesParaLlegarASaldosFiscales2: z.string(),
+            AjustesParaLlegarASaldosFiscales3: z.number(),
+            SaldosFiscalesADiciembre31Parciales: z.number()
+          })
         }),
-        DepreActInt: z.object({
-          Cost: z.object({
-            SaldCont: z.number(),
-            Ajust1: z.number(),
-            Ajust2: z.string(),
-            Ajust3: z.number(),
-            SaldFisc: z.number(),
+        DepreciacionDeActivosBiologicos: z.object({
+          DelCosto: z.object({
+            SaldosContablesADiciembre31Parciales: z.number(),
+            AjustesParaLlegarASaldosFiscales1: z.number(),
+            AjustesParaLlegarASaldosFiscales2: z.string(),
+            AjustesParaLlegarASaldosFiscales3: z.number(),
+            SaldosFiscalesADiciembre31Parciales: z.number()
           }),
-          AjusAcum: z.object({
-            SaldCont: z.number(),
-            Ajust1: z.number(),
-            Ajust2: z.string(),
-            Ajust3: z.number(),
-            SaldFisc: z.number(),
-          }),
+          DelAjusteAcumuladoPorRevaluacionesOReExpresiones: z.object({
+            SaldosContablesADiciembre31Parciales: z.number(),
+            AjustesParaLlegarASaldosFiscales1: z.number(),
+            AjustesParaLlegarASaldosFiscales2: z.string(),
+            AjustesParaLlegarASaldosFiscales3: z.number(),
+            SaldosFiscalesADiciembre31Parciales: z.number()
+          })
         }),
-        Otro: z.object({
-          Cost: z.object({
-            SaldCont: z.number(),
-            Ajust1: z.number(),
-            Ajust2: z.string(),
-            Ajust3: z.number(),
-            SaldFisc: z.number(),
+        AmortizacionDeActivosIntangibles: z.object({
+          DelCosto: z.object({
+            SaldosContablesADiciembre31Parciales: z.number(),
+            AjustesParaLlegarASaldosFiscales1: z.number(),
+            AjustesParaLlegarASaldosFiscales2: z.string(),
+            AjustesParaLlegarASaldosFiscales3: z.number(),
+            SaldosFiscalesADiciembre31Parciales: z.number()
           }),
-          AjusAcum: z.object({
-            SaldCont: z.number(),
-            Ajust1: z.number(),
-            Ajust2: z.string(),
-            Ajust3: z.number(),
-            SaldFisc: z.number(),
-          }),
+          DelAjusteAcumuladoPorRevaluacionesOReExpresiones: z.object({
+            SaldosContablesADiciembre31Parciales: z.number(),
+            AjustesParaLlegarASaldosFiscales1: z.number(),
+            AjustesParaLlegarASaldosFiscales2: z.string(),
+            AjustesParaLlegarASaldosFiscales3: z.number(),
+            SaldosFiscalesADiciembre31Parciales: z.number()
+          })
         }),
+        OtrasDepreciacionesYAmortizaciones: z.object({
+          DelCosto: z.object({
+            SaldosContablesADiciembre31Parciales: z.number(),
+            AjustesParaLlegarASaldosFiscales1: z.number(),
+            AjustesParaLlegarASaldosFiscales2: z.string(),
+            AjustesParaLlegarASaldosFiscales3: z.number(),
+            SaldosFiscalesADiciembre31Parciales: z.number()
+          }),
+          DelAjusteAcumuladoPorRevaluacionesOReExpresiones: z.object({
+            SaldosContablesADiciembre31Parciales: z.number(),
+            AjustesParaLlegarASaldosFiscales1: z.number(),
+            AjustesParaLlegarASaldosFiscales2: z.string(),
+            AjustesParaLlegarASaldosFiscales3: z.number(),
+            SaldosFiscalesADiciembre31Parciales: z.number()
+          })
+        })
       }),
-      AmrtGatPagAnti: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      AmortizacionDeGastosPagadosPorAnticipado: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
       Deterioros: z.object({
-        Inv: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+        DeInventarios: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        PrpPltEqu: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+        DePropiedadesPlantaYEquipo: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        ActInt: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+        DeActivosIntangibles: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        ActExp: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+        DeActivosDeExploracionYEvaluacionDeRecursosMinerales: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        PrpInver: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+        DePropiedadesDeInversionMedidasAlModeloDeCosto: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        ActNoCorr: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+        DeActivosNoCorrientesMantenidosParaLaVentaDistribuirALosPropietarios: z.object(
+          {
+            SaldosContablesADiciembre31Parciales: z.number(),
+            AjustesParaLlegarASaldosFiscales1: z.number(),
+            AjustesParaLlegarASaldosFiscales2: z.string(),
+            AjustesParaLlegarASaldosFiscales3: z.number(),
+            SaldosFiscalesADiciembre31Parciales: z.number()
+          }
+        ),
+        DeActivosBiologicosMedidosAlModeloDeCosto: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        ActBio: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+        DeBienesDeArteYCulturaMedidosAlModeloDeCosto: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        BienArt: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+        DeActivosFinancierosDiferentesACarteraDeCredito: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        ActFin: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+        DeCarteraDeCreditoYOperacionesDeLeasing: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        CartCred: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+        DeOtrasInversionesMedidasAlCostoOPorElMetodoDeLaParticipacion: z.object(
+          {
+            SaldosContablesADiciembre31Parciales: z.number(),
+            AjustesParaLlegarASaldosFiscales1: z.number(),
+            AjustesParaLlegarASaldosFiscales2: z.string(),
+            AjustesParaLlegarASaldosFiscales3: z.number(),
+            SaldosFiscalesADiciembre31Parciales: z.number()
+          }
+        ),
+        DeDerechosDeUsoEnArrendamientosOperativos: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        OtrasInv: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+        DeOtrosActivos: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
+      }),
+      OtrosCostos: z.object({
+        Arrendamientos: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        DerUso: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+        Seguros: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        Servicios: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        Honorarios: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
+      }),
+      ServiciosTecnicos: z.object({
+        ConVinculadosEconomicos: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        ConJurisdiccionesNoCooperantesDeBajaONulaImposicion: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        ConNoVinculados: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
+      }),
+      AsistenciaTecnica: z.object({
+        ConVinculadosEconomicos: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        ConJurisdiccionesNoCooperantesDeBajaONulaImposicion: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        ConNoVinculados: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
         Otros: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
+        MenosInventarioFinalDeTrabajoEnProceso: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        MasInventarioInicialDeProductoTerminado: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        MasCostoDeFabricacionDelPeriodo: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        MenosInventarioFinalDeProductoTerminado: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
       }),
-      Otros: z.object({
-        Arren: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+      CostoDeVentasParaComerciasntesQueUtilizanJuegoDeInventarios: z.object({
+        InventarioInicial: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        Seguro: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+        MasComprasLocales: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        Serv: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+        MasImportaciones: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        Honor: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
+        MenosInventarioFinal: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
       }),
-      ServTecn: z.object({
-        VinEco: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        JurisNoCoop: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        NoVin: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-      }),
-      AsisTec: z.object({
-        VinEco: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        JurisNoCoop: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        NoVin: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        Otros: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        InvFinTrbProc: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        InvIniProdTer: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        CostFabric: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        InvFinProdTer: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-      }),
-      CostVentInv: z.object({
-        InvIni: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        CompLoc: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        Import: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        InvFin: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-      }),
-      CostVenSisPer: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
+      CostoDeVentasParaComerciantesQueUtilizanSistemaPermanente: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      })
     }),
-    6140: z.object({
-      CostActRenExt: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+    "6140CostoDeLasActividadesQueFormanLasRentasExentas": z.object({
+      CostoDeLasActividadesQueFormanLasRentasExentas: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      CostFiscActFij: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
+      CostoFiscalDeActivosFijosOBiologicosVendidosYPoseidosMenosDeDosAnios: z.object(
+        {
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }
+      )
     }),
-    TotCont: z.number(),
-    TotFisc: z.number(),
+    TotalCostosSaldosContablesADiciembre31: z.number(),
+    TotalCostosSaldosFiscalesADiciembre31: z.number()
   }),
-  R63: z.object({
-    5105: z.object({
-      SalOtro: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+  Reglon63: z.object({
+    "5105BeneficiosAEmpleadosDeCortoPlayzo": z.object({
+      SalariosYOtros: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      AporEPS: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      AportesAEPS: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      AporARL: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      AportesAARL: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      AporFondPen: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      AportesAFondosDePensiones: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      AporSENA: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      AportesAlSENA: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      AporICBF: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      AportesAlICBF: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      AporCajaComp: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
+      AportesACajasDeCompensacion: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      })
     }),
-    5110: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "5110Honorarios": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    5115: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "5115ImpuestosAlPatrimonioIndustriaYComercio": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    5120: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "5120Arrendamientos": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    5125: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "5125Contribuciones": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    5130: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "5130Seguros": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    5135: z.object({
-      ServAdmVinEco: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+    "5135Servicios": z.object({
+      ServiciosAdministrativosConVinculadosEconomicos: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      ServAdmVinTer: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      ServiciosAdministrativosConTercerosUbicadosEnJurisdiccionesNoCooperantes: z.object(
+        {
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }
+      ),
+      ServiciosAdministrativosConNoVinculados: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      ServAdmNoVin: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      AsistenciaTecnicaConVinculadosEconomicos: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      ServTecVinEco: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      AsistenciaTecnicaConTercerosUbicadosEnJurisdiccionesNoCooperantes: z.object(
+        {
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }
+      ),
+      AsistenciaTecnicaConNoVinculados: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      ServTecVinTer: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      ServTecNoVin: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      Otro: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
+      OtrosServicios: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      })
     }),
-    5136: z.object({
-      VinEco: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+    "5136Regalias": z.object({
+      ConVinculadosEconomicos: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      TerJurNoCoop: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      ConTercerosUbicadosEnJurisdiccionesNoCooperantes: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      NoVin: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
+      ConNoVinculados: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      })
     }),
-    5137: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "5137GastosDeInvestigacion": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    5140: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "5140GastosLegales": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    5145: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "5145MantenimientoYReparacion": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    5150: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "5150AdecuacionesEInstalaciones": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    5155: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "5155GastosDeTransportes": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    5160: z.object({
-      DeprePrpPltEqui: z.object({
-        Cost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+    "5160Depreciaciones": z.object({
+      DepreciacionPropiedadesPlantaYEquipo: z.object({
+        DelCosto: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        AjusAcum: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
+        DelAjusteAcumuladoPorRevaluacionesOReExpresiones: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
       }),
-      DeprePropInv: z.object({
-        Cost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+      DepreciacionDePropiedadesDeInversion: z.object({
+        DelCosto: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        AjusAcum: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
+        DelAjusteAcumuladoPorRevaluacionesOReExpresiones: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
       }),
-      DepreOtro: z.object({
-        Cost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+      DepreciacionDeOtrosActivos: z.object({
+        DelCosto: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        AjusAcum: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-      }),
+        DelAjusteAcumuladoPorRevaluacionesOReExpresiones: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
+      })
     }),
-    5165: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "5165AmortizacionDeGastosPagadosPorAnticipado": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    5166: z.object({
-      AmortActInt: z.object({
-        Cost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+    "5166AmortizacionDeActivosIntangibles": z.object({
+      AmortizacionDeActivosIntangibles: z.object({
+        DelCosto: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        AjusAcum: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
+        DelAjusteAcumuladoPorRevaluacionesOReExpresiones: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
       }),
-      Otros: z.object({
-        Cost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+      OtrasAmortizaciones: z.object({
+        DelCosto: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        AjusAcum: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-      }),
+        DelAjusteAcumuladoPorRevaluacionesOReExpresiones: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
+      })
     }),
-    5195: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "5195Diversos": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    5199: z.object({
-      Inv: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+    "5199Deterioros": z.object({
+      Inventarios: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      PrpPltEqui: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      PropiedadesPlantaYEquipo: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      ActInt: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      ActivosIntangibles: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      ActExplEva: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      ActivosDeExploracionYEvaluacionDeRecursosMinerales: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      PropInv: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      PropiedadesDeInversionMedidasAlModeloDeCosto: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      ActNoCorr: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      ActivosNoCorrientesMantenidosParaLaVentaDistribuirALosPropietarios: z.object(
+        {
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }
+      ),
+      BienesDeArteYCulturaMedidosAlModeloDeCosto: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      BienArt: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      ActivosBiologicosMedidosAlModeloDeCosto: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      ActBio: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      ActivosFinancierosDiferentesACarteraDeCredito: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      ActFin: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      CarteraDeCreditoYOperacionesDeLeasing: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      CartCred: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      OtrasInversionesMedidasAlCostoOPorElMetodoDeLaParticipacion: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      OtroInv: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      DerechosDeUsoEnArrendamientosOperativos: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      DerUso: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      Otro: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
+      OtrosDeteriors: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      })
     }),
-    TotCont: z.number(),
-    TotFisc: z.number(),
+    TotalGastosDeAdministracionSaldosContablesADiciembre31: z.number(),
+    TotalGastosDeAdministracionSaldosFiscalesADiciembre31: z.number()
   }),
-  R64: z.object({
-    5205: z.object({
-      SalOtro: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+  Reglon64: z.object({
+    "5205BeneficiosALosEmpleadosCortoPlayzo": z.object({
+      SalariosYOtros: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      AporEPS: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      AportesAEPS: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      AporARL: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      AportesAARL: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      AporFondPen: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      AportesAFondosDePensiones: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      AporSENA: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      AportesAlSENA: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      AporICBF: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      AportesAlICBF: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      AporCajaComp: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
+      AportesACajasDeCompensacion: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      })
     }),
-    5210: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "5210Honorarios": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    5215: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "5215ImpuestosAlPatrimonioIndustriaYComercio": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    5220: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "521501IVAEnLaAdquisicionOImportacionDeBienesDeCapitalMedianteLeasing": z.object(
+      {
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }
+    ),
+    "5220Arrendamientos": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    5225: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "5225Contribuciones": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    5230: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "5230Seguros": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    5235: z.object({
-      ServAdmVinEco: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+    "5235Servicios": z.object({
+      ServiciosAdministrativosConVinculadosEconomicos: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      ServAdmVinTer: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      ServiciosAdministrativosConTercerosUbicadosEnJurisdiccionesNoCooperantes: z.object(
+        {
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }
+      ),
+      ServiciosAdministrativosConNoVinculados: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      ServAdmNoVin: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      AsistenciaTecnicaConVinculadosEconomicos: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      ServTecVinEco: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      AsistenciaTecnicaConTercerosUbicadosEnJurisdiccionesNoCooperantes: z.object(
+        {
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }
+      ),
+      AsistenciaTecnicaConNoVinculados: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      ServTecVinTer: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      OtrosServicios: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      })
+    }),
+    "5236Regalias": z.object({
+      ConVinculadosEconomicos: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      ServTecNoVin: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      ConTercerosUbicadosEnJurisdiccionesNoCooperantes: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      Otro: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
+      ConNoVinculados: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      })
     }),
-    5236: z.object({
-      VinEco: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      TerJurNoCoop: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      NoVin: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
+    "5237ConstitucionDeReservasEmpresasAseguradoras": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    5237: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "5238LiquidacionDeSiniestros": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    5238: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "5239PrimasDeReaseguros": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    5239: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "5240GastosLegales": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    5240: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "5241InvestigacionYDesarrollo": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    5241: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "5245MantenimientoYReparacion": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    5245: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "5250AdecuacionesEInstalaciones": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    5250: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "5255GastosDeTransportes": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    5255: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    5260: z.object({
-      DeprePrpPltEqui: z.object({
-        Cost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+    "5260Depreciaciones": z.object({
+      DepreciacionPropiedadesPlantaYEquipo: z.object({
+        DelCosto: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        AjusAcum: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
+        DelAjusteAcumuladoPorRevaluacionesOReExpresiones: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
       }),
-      DeprePropInv: z.object({
-        Cost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+      DepreciacionDePropiedadesDeInversion: z.object({
+        DelCosto: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        AjusAcum: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
+        DelAjusteAcumuladoPorRevaluacionesOReExpresiones: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
       }),
-      DepreOtro: z.object({
-        Cost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+      DepreciacionDeOtrosActivos: z.object({
+        DelCosto: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        AjusAcum: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
+        DelAjusteAcumuladoPorRevaluacionesOReExpresiones: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
       }),
-      DepreActBio: z.object({
-        Cost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+      DepreciacionDeActivosBiologicos: z.object({
+        DelCosto: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        AjusAcum: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-      }),
+        DelAjusteAcumuladoPorRevaluacionesOReExpresiones: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
+      })
     }),
-    5265: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "5265AmortizacionDeGastosPagadosPorAnticipado": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    5266: z.object({
-      AmortActInt: z.object({
-        Cost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+    "5266AmortizacionDeActivosIntangibles": z.object({
+      AmortizacionDeActivosIntangibles: z.object({
+        DelCosto: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        AjusAcum: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+        DelAjusteAcumuladoPorRevaluacionesOReExpresiones: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
+      }),
+      OtrasAmortizaciones: z.object({
+        DelCosto: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-      }),
-      Otros: z.object({
-        Cost: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        AjusAcum: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-      }),
+        DelAjusteAcumuladoPorRevaluacionesOReExpresiones: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
+      })
     }),
-    5295: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "5295Diversos": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    5299: z.object({
-      Inv: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+    "5299Deterioros": z.object({
+      Inventarios: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      PrpPltEqui: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      PropiedadesPlantaYEquipo: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      ActInt: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      ActivosIntangibles: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      ActExplEva: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      ActivosDeExploracionYEvaluacionDeRecursosMinerales: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      PropInv: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      PropiedadesDeInversionMedidasAlModeloDeCosto: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      ActNoCorr: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      ActivosNoCorrientesMantenidosParaLaVentaDistribuirALosPropietarios: z.object(
+        {
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }
+      ),
+      BienesDeArteYCulturaMedidosAlModeloDeCosto: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      BienArt: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      ActivosBiologicosMedidosAlModeloDeCosto: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      ActBio: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      ActivosFinancierosDiferentesACarteraDeCredito: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      ActFin: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      CarteraDeCreditoYOperacionesDeLeasing: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      CartCred: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      OtrasInversionesMedidasAlCostoOPorElMetodoDeLaParticipacion: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      OtroInv: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      DerechosDeUsoEnArrendamientosOperativos: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      DerUso: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      Otro: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
+      OtrosDeteriors: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      })
     }),
-    521501: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    TotCont: z.number(),
-    TotFisc: z.number(),
+    TotalGastosDeDistribucionYVentasSaldosContablesADiciembre31: z.number(),
+    TotalGastosDeDistribucionYVentasSaldosFiscalesADiciembre31: z.number()
   }),
-  R65: z.object({
+  Reglon65: z.object({
     5305: z.object({
+      IntDevSecFin: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
       IntDevPrestTer: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
       InstFin: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
       CstTrans: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
       DifCamb: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
       IntImpl: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
       ActProvRecValPres: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
       IntAccPref: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
       Otro: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
       IntDIANSegSoc: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      })
     }),
-    TotCont: z.number(),
-    TotFisc: z.number(),
+    TotalesSaldosContablesADiciembre31: z.number(),
+    TotalesSaldosFiscalesADiciembre31: z.number()
   }),
-  R66: z.object({
-    5310: z.object({
-      Menos2: z.object({
-        PrpPltEqui: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+  Reglon66: z.object({
+    "5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios": z.object({
+      PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios: z.object({
+        DePropiedadesPlantaYEquipo: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        PrpInv: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+        DePropiedadesDeInversion: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        ActNoCor: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+        DeActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios: z.object(
+          {
+            SaldosContablesADiciembre31Parciales: z.number(),
+            AjustesParaLlegarASaldosFiscales1: z.number(),
+            AjustesParaLlegarASaldosFiscales2: z.string(),
+            AjustesParaLlegarASaldosFiscales3: z.number(),
+            SaldosFiscalesADiciembre31Parciales: z.number()
+          }
+        ),
+        DeValoracionYVentaDeInversionesFondoDeLiquidezYTitulosParticipativos: z.object(
+          {
+            SaldosContablesADiciembre31Parciales: z.number(),
+            AjustesParaLlegarASaldosFiscales1: z.number(),
+            AjustesParaLlegarASaldosFiscales2: z.string(),
+            AjustesParaLlegarASaldosFiscales3: z.number(),
+            SaldosFiscalesADiciembre31Parciales: z.number()
+          }
+        ),
+        DePorDisposicionDeOtrosInstrumentosFinancieros: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        ValorVent: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+        DeActivosIntangibles: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        DispOtroInst: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+        DeInversionesEnAccionesYOtrasParticipaciones: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        ActInt: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        InvAccPart: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        Otro: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
+        DeOtrosActivos: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
       }),
-      Mas2: z.object({
-        PrpPltEqui: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+      PerdidaEnVentaYRetiroDeBienesPoseidosMasDeDosAnios: z.object({
+        DePropiedadesPlantaYEquipo: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        PrpInv: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+        DePropiedadesDeInversion: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        ActNoCor: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+        DeActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios: z.object(
+          {
+            SaldosContablesADiciembre31Parciales: z.number(),
+            AjustesParaLlegarASaldosFiscales1: z.number(),
+            AjustesParaLlegarASaldosFiscales2: z.string(),
+            AjustesParaLlegarASaldosFiscales3: z.number(),
+            SaldosFiscalesADiciembre31Parciales: z.number()
+          }
+        ),
+        DeValoracionYVentaDeInversionesFondoDeLiquidezYTitulosParticipativos: z.object(
+          {
+            SaldosContablesADiciembre31Parciales: z.number(),
+            AjustesParaLlegarASaldosFiscales1: z.number(),
+            AjustesParaLlegarASaldosFiscales2: z.string(),
+            AjustesParaLlegarASaldosFiscales3: z.number(),
+            SaldosFiscalesADiciembre31Parciales: z.number()
+          }
+        ),
+        DePorDisposicionDeOtrosInstrumentosFinancieros: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        ValorVent: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+        DeActivosIntangibles: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        DispOtroInst: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+        DeInversionesEnAccionesYOtrasParticipaciones: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        ActInt: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+        DeOtrosActivos: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
         }),
-        InvAccPart: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-        Otro: z.object({
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
-        }),
-      }),
+        DescuentoEnOperacionesDeFactoring: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
+      })
     }),
-    5313: z.object({
-      PerMetPart: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+    "5313PerdidaPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos": z.object(
+      {
+        PerdidasPorElMetodoDeParticipacion: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        PerdidasPorMedicionAValorRazonable: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
+      }
+    ),
+    "5314PerdidasPorMedicionesAValorRazonable": z.object({
+      DeActivosBiologicos: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      PerMedValRaz: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      DePropiedadesDeInversion: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
+      DeInstrumentosFinancieros: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      DeInstrumentosDerivados: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      DeOtrasActivos: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      })
     }),
-    5314: z.object({
-      ActBio: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+    "5315GastosPorProvisionesPasivosDeMontoOFechaInciertos": z.object({
+      Garantias: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      PrpInv: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      ContratosOnerosos: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      InsFin: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      Litigios: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      InsDer: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      Otros: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-    }),
-    5315: z.object({
-      Garant: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      ContOne: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      Litig: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
-      ReembCli: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      ReembolsosAClientes: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
       ReestNeg: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      PasivCont: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      PasivosContingentesAsumidosEnUnaCombinacionDeNegocios: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      Otro: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
+      Otros: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      })
     }),
-    5316: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    "5316GastosExtraordinarios": z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    5395: z.object({
-      TransBubAyuGub: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+    "5395GastosDiversos": z.object({
+      TransferenciasSubvencionesYAyudasGubernamentales: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      Don: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      Donaciones: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      Otro: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      Otros: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      DeducEspcPubl: z.object({
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
+      DeduccionPorInversionEnEspectaculosPublicos: z.object({
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      DeducInvActFij: z.object({
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        SaldFisc: z.number(),
-      }),
+      DeduccionPorInversionEnActivosFijosProductoresDeRenta: z.object({
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      })
     }),
-    TotCont: z.number(),
-    TotFisc: z.number(),
+    TotalOtrosGastosYDeduccionesSaldosContablesADiciembre31: z.number(),
+    TotalOtrosGastosYDeduccionesSaldosFiscalesADiciembre31: z.number()
   }),
-  R67: z.object({ TotCont: z.number(), TotFisc: z.number() }),
-  R68: z.object({ ValCont: z.number(), ValFisc: z.number() }),
-  R69: z.object({ ValCont: z.number(), ValFisc: z.number() }),
-  R70: z.object({
-    TotCont: z.number(),
-    TotFisc: z.number(),
+  Reglon67: z.object({
+    TotalCostosYGastosDeduciblesSaldosContablesADiciembre31: z.number(),
+    TotalCostosYGastosDeduciblesSaldosFiscalesADiciembre31: z.number()
+  }),
+  Reglon68: z.object({
+    SaldosContablesADiciembre31Parciales: z.number(),
+    SaldosFiscalesADiciembre31Parciales: z.number()
+  }),
+  Reglon69: z.object({
+    SaldosContablesADiciembre31Parciales: z.number(),
+    SaldosFiscalesADiciembre31Parciales: z.number()
+  }),
+  Reglon70: z.object({
     IndmnCompAseg: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
     RecCuen: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
     RecDepre: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
+    TotalRentaPorRecuperacionDeDeduccionesSaldosContablesADiciembre31: z.number(),
+    TotalRentaPorRecuperacionDeDeduccionesSaldosFiscalesADiciembre31: z.number()
   }),
-  R71: z.object({ ValCont: z.number(), ValFisc: z.number() }),
-  R72: z.object({ TotCont: z.number(), TotFisc: z.number() }),
-  R73: z.object({ TotCont: z.number(), TotFisc: z.number() }),
-  R74: z.object({
-    CompenPerFisc: z.object({ Val: z.number() }),
-    CompenExcRen: z.object({
-      Exc: z.number(),
-      Sub: z.number(),
-      ValFin: z.number(),
+  Reglon71ValorIngresosBrutosQueCorresponden: z.object({
+    SaldosContablesADiciembre31Parciales: z.number(),
+    SaldosFiscalesADiciembre31Parciales: z.number()
+  }),
+  Reglon72: z.object({
+    TotalRentaLiquidaOrdinariaDelEjercicioSaldosContablesADiciembre31: z.number(),
+    TotalRentaLiquidaOrdinariaDelEjercicioSaldosFiscalesADiciembre31: z.number()
+  }),
+  Reglon73: z.object({
+    TotalPerdidaLiquidaDelEjercicioSaldosContablesADiciembre31: z.number(),
+    TotalPerdidaLiquidaDelEjercicioSaldosFiscalesADiciembre31: z.number()
+  }),
+  Reglon74: z.object({
+    CompenPerFisc: z.object({
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    TotFisc: z.number(),
-  }),
-  R75: z.object({ TotFisc: z.number() }),
-  R76: z.object({ ValFisc: z.number() }),
-  R77: z.object({
-    Act235: z.number(),
-    RentNet: z.number(),
-    RentHot: z.number(),
-    RentExent: z.number(),
-    PensColom: z.number(),
-    TotFisc: z.number(),
-  }),
-  R78: z.object({
-    ActOmi: z.number(),
-    PasivNoReal: z.number(),
-    RecEsp: z.number(),
-    RentComp: z.number(),
-    RentLiq: z.number(),
-    TotFisc: z.number(),
-  }),
-  R79: z.object({ TotFisc: z.number() }),
-  R80: z.object({
-    429543: z.object({
-      PreRifLot: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        SaldFisc: z.number(),
+    CompensacionesDeExcesosDeRentaPresuntiva: z.object({
+      ExcRentPres: z.object({
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      PreVent: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        SaldFisc: z.number(),
+      SubRentPres: z.object({
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      IngHerLeg: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        SaldFisc: z.number(),
+      ValFinRentPres: z.object({
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      })
+    }),
+    TotalCompensacionesSaldosFiscalesADiciembre31: z.number()
+  }),
+  Reglon75: z.object({
+    TotalRentaLiquidaSaldosFiscalesADiciembre31: z.number()
+  }),
+  Reglon76: z.object({ SaldosFiscalesADiciembre31Parciales: z.number() }),
+  Reglon77: z.object({
+    Act235: z.object({ SaldosFiscalesADiciembre31Parciales: z.number() }),
+    RentNet: z.object({ SaldosFiscalesADiciembre31Parciales: z.number() }),
+    RentHot: z.object({ SaldosFiscalesADiciembre31Parciales: z.number() }),
+    RentExent: z.object({ SaldosFiscalesADiciembre31Parciales: z.number() }),
+    PensColom: z.object({ SaldosFiscalesADiciembre31Parciales: z.number() }),
+    TotalRentasExentasSaldosFiscalesADiciembre31: z.number()
+  }),
+  Reglon78: z.object({
+    ActOmi: z.object({ SaldosFiscalesADiciembre31Parciales: z.number() }),
+    PasivNoReal: z.object({ SaldosFiscalesADiciembre31Parciales: z.number() }),
+    RecEsp: z.object({ SaldosFiscalesADiciembre31Parciales: z.number() }),
+    RentComp: z.object({ SaldosFiscalesADiciembre31Parciales: z.number() }),
+    RentLiq: z.object({ SaldosFiscalesADiciembre31Parciales: z.number() }),
+    TotalRentasGravablesSaldosFiscalesADiciembre31: z.number()
+  }),
+  Reglon79: z.object({ TotalesSaldosFiscalesADiciembre31: z.number() }),
+  Reglon80: z.object({
+    "429543PremiosRifasYLoterias": z.object({
+      PremiosRifasYLoterias: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      PrecioDeVentaActivosFijosPoseidosMasDeDosAnios: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      IngresosPorHerenciasLegadosYDonaciones: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
       AprtSoc: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        SaldFisc: z.number(),
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
-      GananOca: z.object({
-        SaldCont: z.number(),
-        Ajust1: z.number(),
-        SaldFisc: z.number(),
+      LasDemásGananciasOcasionales: z.object({
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      })
+    }),
+    TotalesSaldosContablesADiciembre31: z.number(),
+    TotalesSaldosFiscalesADiciembre31: z.number()
+  }),
+  Reglon81: z.object({
+    ValoresQuitasCap: z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    TotalRentaDeudoresSaldosContablesADiciembre31: z.number(),
+    TotalRentaDeudoresSaldosFiscalesADiciembre31: z.number()
+  }),
+  Reglon82: z.object({
+    VerLasInstruccionesAl: z.object({
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    TotalUtilizacionPerdidasFiscalesAcumuladasSaldosFiscalesADiciembre31: z.number()
+  }),
+  Reglon83: z.object({
+    CostoFiscalDeActivoFijoOBiologicoVendidoYPoseidoPorMasDeDosAños: z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    OtrosCostos: z.object({
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    TotalCostosYDeduccionesPorGananciasOcasionalesSaldosContablesADiciembre31: z.number(),
+    TotalCostosYDeduccionesPorGananciasOcasionalesSaldosFiscalesADiciembre31: z.number()
+  }),
+  Reglon84: z.object({
+    UtilVent: z.object({
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    HerLegDon: z.object({
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    IndemnSeguVid: z.object({
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    AprtSocLiq: z.object({
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    TotalGananciasOcasionalesNoGravadasYExentasSaldosFiscalesADiciembre31: z.number()
+  }),
+  Reglon85: z.object({
+    Esc1: z.object({ SaldosFiscalesADiciembre31Parciales: z.number() }),
+    Esc2: z.object({ SaldosFiscalesADiciembre31Parciales: z.number() }),
+    Esc3: z.object({ SaldosFiscalesADiciembre31Parciales: z.number() }),
+    Esc4: z.object({ SaldosFiscalesADiciembre31Parciales: z.number() }),
+    TotalGananciasOcasionalesGravablesSaldosFiscalesADiciembre31: z.number()
+  }),
+  Reglon86: z.object({
+    TotalImpuestoSobreLaRentaLiquidaSaldosFiscalesADiciembre31: z.number()
+  }),
+  Reglon87: z.object({
+    TotalDeDividendosYParticipacionesGravadasALaTarifaSaldosFiscalesADiciembre31: z.number()
+  }),
+  Reglon88: z.object({ Total88SaldosFiscalesADiciembre31: z.number() }),
+  Reglon89: z.object({ Total89SaldosFiscalesADiciembre31: z.number() }),
+  Reglon90: z.object({ Total90SaldosFiscalesADiciembre31: z.number() }),
+  Reglon91: z.object({ Total91SaldosFiscalesADiciembre31: z.number() }),
+  Reglon92: z.object({ Total92SaldosFiscalesADiciembre31: z.number() }),
+  Reglon93: z.object({
+    DescuentosTributarios: z.object({
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
+    }),
+    DescuentosDonacionesEntidades: z.object({
+      DonacionHechaAFundacionPor: z.object({
+        PorcentajeAplicable: z.object({
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        ValorQueInicialmenteSePodriaTomarComoDescuento: z.object({
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        LimiteAlCualSeDebeSometerEsteDescuento: z.object({
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
+        ValorFinalQuePuedeTomarsePorEsteDescuento: z.object({
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        })
+      })
+    }),
+    DescuentosOtros: z.object({
+      PorIndustriaYComercioYAvisosYTablerosPagadosDuranteElAño: z.object({
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
+      PorIVACompra: z.object({
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      RetTrasladable: z.object({
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      }),
+      OtrosDescApliq: z.object({
+        SaldosFiscalesADiciembre31Parciales: z.number()
+      })
     }),
-    TotCont: z.number(),
-    TotFisc: z.number(),
+    TotalDescuentosTributariosSaldosFiscalesADiciembre31: z.number()
   }),
-  R81: z.object({
-    Valor: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+  Reglon94: z.object({
+    TotalImpuestoNetoRentaSaldosFiscalesADiciembre31: z.number()
+  }),
+  Reglon95ImpuestoDeGananciasOcasionales: z.object({
+    SobreLoteriasYSimilares: z.object({
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    TotCont: z.number(),
-    TotFisc: z.number(),
-  }),
-  R82: z.object({ Val: z.number(), TotFisc: z.number() }),
-  R83: z.object({
-    CostFiscAct: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
+    SobreLasDemasGananciasOcasionales: z.object({
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
-    Otros: z.object({
-      SaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number(),
-    }),
-    TotCont: z.number(),
-    TotFisc: z.number(),
+    TotalImpuestoDeGananciasOcasionalesSaldosFiscalesADiciembre31: z.number()
   }),
-  R84: z.object({
-    UtilVent: z.object({ Ajust1: z.number(), SaldFisc: z.number() }),
-    HerLegDon: z.object({ Ajust1: z.number(), SaldFisc: z.number() }),
-    Indemn: z.object({ Ajust1: z.number(), SaldFisc: z.number() }),
-    AprtSoc: z.object({ Ajust1: z.number(), SaldFisc: z.number() }),
-    TotFisc: z.number(),
+  Reglon96: z.object({ SaldosFiscalesADiciembre31Parciales: z.number() }),
+  Reglon97: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
+  Reglon98: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
+  Reglon99: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
+  Reglon100: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
+  Reglon101MenosAnticipoRentaLiquidadiGravableAnterior: z.object({
+    TotalesSaldosFiscalesADiciembre31: z.number()
   }),
-  R85: z.object({
-    Esc1: z.number(),
-    Esc2: z.number(),
-    Esc3: z.number(),
-    Esc4: z.number(),
-    TotFisc: z.number(),
+  Reglon102MenosSaldoAFavorRentaSinSolicitudDeDevolucionNiCompensacion: z.object(
+    { TotalesSaldosFiscalesADiciembre31: z.number() }
+  ),
+  Reglon103Autocorretenciones: z.object({
+    TotalesSaldosContablesADiciembre31: z.number(),
+    TotalesSaldosFiscalesADiciembre31: z.number()
   }),
-  R86: z.object({ TotFisc: z.number() }),
-  R87: z.object({ TotFisc: z.number() }),
-  R88: z.object({ ValFisc: z.number() }),
-  R89: z.object({ TotFisc: z.number() }),
-  R90: z.object({ TotFisc: z.number() }),
-  R91: z.object({ TotFisc: z.number() }),
-  R92: z.object({ TotFisc: z.number() }),
-  R93: z.object({
-    DescTrib: z.object({ Ajust1: z.number(), SaldFisc: z.number() }),
-    DescDonEnt: z.object({
-      Donac: z.number(),
-      PorcApli: z.number(),
-      ValApli: z.number(),
-      Limit: z.number(),
-      Desc: z.number(),
-    }),
-    Otro: z.object({
-      IndCom: z.number(),
-      IVA: z.number(),
-      RetTran: z.number(),
-      Otro: z.number(),
-    }),
-    TotFisc: z.number(),
-  }),
-  R94: z.object({ TotFisc: z.number() }),
-  R95: z.object({
-    LotRif: z.number(),
-    OtroGanOca: z.number(),
-    TotFisc: z.number()
-  }),
-  R96: z.object({ ValFisc: z.number() }),
-  R97: z.object({ TotFisc: z.number() }),
-  R98: z.object({ ValFisc: z.number() }),
-  R99: z.object({ ValFisc: z.number() }),
-  R100: z.object({ ValFisc: z.number() }),
-  R101: z.object({ ValFisc: z.number() }),
-  R102: z.object({ ValFisc: z.number() }),
-  R103: z.object({ ValCont: z.number(), ValFisc: z.number() }),
-  R104: z.object({
-    Ventas: z.object({
-      Data: z.array(
+  Reglon104: z.object({
+    PorVentas: z.object({
+      InformacionPorEmpresa: z.array(
         z.object({
-          Nombre: z.string(),
-          Nit: z.string(),
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+          NombreEmpresa: z.string(),
+          NitEmpresa: z.string(),
+          SaldosContablesADiciembre31: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31: z.number()
         })
       ),
-      TotCont: z.number(),
-      TotFisc: z.number(),
+      TotalPorVentasSaldosContablesADiciembre31: z.number(),
+      TotalPorVentasSaldosFiscalesADiciembre31: z.number()
     }),
-    Servicio: z.object({
-      Data: z.array(
+    PorServicios: z.object({
+      InformacionPorEmpresa: z.array(
         z.object({
-          Nombre: z.string(),
-          Nit: z.string(),
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+          NombreEmpresa: z.string(),
+          NitEmpresa: z.string(),
+          SaldosContablesADiciembre31: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31: z.number()
         })
       ),
-      TotCont: z.number(),
-      TotFisc: z.number(),
+      TotalPorServiciosSaldosContablesADiciembre31: z.number(),
+      TotalPorServiciosSaldosFiscalesADiciembre31: z.number()
     }),
-    HonorCom: z.object({
-      Data: z.array(
+    PorHonorariosYComisiones: z.object({
+      InformacionPorEmpresa: z.array(
         z.object({
-          Nombre: z.string(),
-          Nit: z.string(),
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+          NombreEmpresa: z.string(),
+          NitEmpresa: z.string(),
+          SaldosContablesADiciembre31: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31: z.number()
         })
       ),
-      TotCont: z.number(),
-      TotFisc: z.number(),
+      TotalPorHonorariosYComisionesSaldosContablesADiciembre31: z.number(),
+      TotalPorHonorariosYComisionesSaldosFiscalesADiciembre31: z.number()
     }),
-    RenFin: z.object({
-      Data: z.array(
+    PorRendimientoFinanciero: z.object({
+      InformacionPorEmpresa: z.array(
         z.object({
-          Nombre: z.string(),
-          Nit: z.string(),
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+          NombreEmpresa: z.string(),
+          NitEmpresa: z.string(),
+          SaldosContablesADiciembre31: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31: z.number()
         })
       ),
-      TotCont: z.number(),
-      TotFisc: z.number(),
+      TotalPorRendimientoFinancieroSaldosContablesADiciembre31: z.number(),
+      TotalPorRendimientoFinancieroSaldosFiscalesADiciembre31: z.number()
     }),
-    DiviPart: z.object({
-      Data: z.array(
+    PorDividendosYParticipaciones: z.object({
+      InformacionPorEmpresa: z.array(
         z.object({
-          Nombre: z.string(),
-          Nit: z.string(),
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+          NombreEmpresa: z.string(),
+          NitEmpresa: z.string(),
+          SaldosContablesADiciembre31: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31: z.number()
         })
       ),
-      TotCont: z.number(),
-      TotFisc: z.number(),
+      TotalPorDividendosYParticipacionesSaldosContablesADiciembre31: z.number(),
+      TotalPorDividendosYParticipacionesSaldosFiscalesADiciembre31: z.number()
     }),
-    Otro: z.object({
-      Data: z.array(
+    PorOtrosConceptosInteresesLoteriasYRifas: z.object({
+      InformacionPorEmpresa: z.array(
         z.object({
-          Nombre: z.string(),
-          Nit: z.string(),
-          SaldCont: z.number(),
-          Ajust1: z.number(),
-          Ajust2: z.string(),
-          Ajust3: z.number(),
-          SaldFisc: z.number(),
+          NombreEmpresa: z.string(),
+          NitEmpresa: z.string(),
+          SaldosContablesADiciembre31: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31: z.number()
         })
       ),
-      TotCont: z.number(),
-      TotFisc: z.number(),
+      TotalPorOtrosConceptosInteresesLoteriasYRifasSaldosContablesADiciembre31: z.number(),
+      TotalPorOtrosConceptosInteresesLoteriasYRifasSaldosFiscalesADiciembre31: z.number()
     }),
-    TotCont: z.number(),
-    TotFisc: z.number(),
+    TotalOtrasRetencionesSaldosContablesADiciembre31: z.number(),
+    TotalOtrasRetencionesSaldosFiscalesADiciembre31: z.number()
   }),
-  R105: z.object({ TotFisc: z.number() }),
-  R106: z.object({ ValFisc: z.number() }),
-  R107: z.object({ ValFisc: z.number() }),
-  R108: z.object({ ValFisc: z.number() }),
-  R109: z.object({ ValFisc: z.number() }),
-  R110: z.object({ TotFisc: z.number() }),
-  R111: z.object({ Extem: z.number(), TotFisc: z.number() }),
-  R112: z.object({ TotFisc: z.number() }),
-  R113: z.object({ TotFisc: z.number() }),
-  R114: z.object({ ValFisc: z.number() }),
-  R115: z.object({ ValFisc: z.number() })
+  Reglon105: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
+  Reglon106: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
+  Reglon107: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
+  Reglon108: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
+  Reglon109: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
+  Reglon110: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
+  Reglon111Sanciones: z.object({
+    PorExtemporaneidad: z.number(),
+    TotalesSaldosFiscalesADiciembre31: z.number()
+  }),
+  Reglon112: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
+  Reglon113: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
+  Reglon114: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
+  Reglon115: z.object({ TotalSaldosFiscalesADiciembre31: z.number() })
 })

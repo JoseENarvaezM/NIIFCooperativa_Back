@@ -1,9 +1,9 @@
 import { z } from "zod";
 
 export const ImpuestoDiferidoSchema = z.object({
-  ImpuestosDiferidosDiferenciasTemporarias: z.object({
-    ActivoDiferido: z.object({
-      EfectivoYEfectivoEquivalente: z.object({
+  ImpuestosDiferidosProvenientesDeDiferenciasTemporarias: z.object({
+    ActivoDiferidoDiferenciasTemporariasDeducibles: z.object({
+      EfectivoYEquivalentesAlEfectivo: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
@@ -83,7 +83,7 @@ export const ImpuestoDiferidoSchema = z.object({
         Variacion: z.number(),
         TasaFiscalAplicada: z.number()
       }),
-      EntregarAPropietarios: z.object({
+      ActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
@@ -183,7 +183,7 @@ export const ImpuestoDiferidoSchema = z.object({
         Variacion: z.number(),
         TasaFiscalAplicada: z.number()
       }),
-      Total: z.object({
+      ValorTotal: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
@@ -194,8 +194,8 @@ export const ImpuestoDiferidoSchema = z.object({
         TasaFiscalAplicada: z.number()
       })
     }),
-    PasivoDiferido: z.object({
-      EfectivoYEfectivoEquivalente: z.object({
+    PasivoDiferidoDiferenciasTemporariasImponibles: z.object({
+      EfectivoYEquivalentesAlEfectivo: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
@@ -275,7 +275,7 @@ export const ImpuestoDiferidoSchema = z.object({
         Variacion: z.number(),
         TasaFiscalAplicada: z.number()
       }),
-      EntregarAPropietarios: z.object({
+      ActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
@@ -375,7 +375,7 @@ export const ImpuestoDiferidoSchema = z.object({
         Variacion: z.number(),
         TasaFiscalAplicada: z.number()
       }),
-      Total: z.object({
+      ValorTotal: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
@@ -387,75 +387,82 @@ export const ImpuestoDiferidoSchema = z.object({
       })
     })
   }),
-  ActivosCreditosTributos: z.object({
-    SaldosFavor: z.object({
-      Saldo31VigenciaActual: z.number(),
-      Saldo31VigenciaAnterior: z.number(),
-      Variacion: z.number(),
-      ReduccionCompensacion: z.number(),
-      CorreccionMayorValor: z.number(),
-      CorreccionMenorValor: z.number(),
-      AjusteMayorValor: z.number(),
-      AjusteMenorValor: z.number()
-    }),
-    ImpuestosPagadosExterior: z.object({
-      Saldo31VigenciaActual: z.number(),
-      Saldo31VigenciaAnterior: z.number(),
-      Variacion: z.number(),
-      ReduccionCompensacion: z.number(),
-      CorreccionMayorValor: z.number(),
-      CorreccionMenorValor: z.number(),
-      AjusteMayorValor: z.number(),
-      AjusteMenorValor: z.number()
-    })
-  }),
+  ActivosPorCreditosTributariosSaldosAfavorEImpuestosPagadosEnElEsterior: z.object(
+    {
+      SaldosAFavor: z.object({
+        Saldo31VigenciaActual: z.number(),
+        Saldo31VigenciaAnterior: z.number(),
+        Variacion: z.number(),
+        ExplicacionDeLaVariacion: z.object({
+          ReduccionCompensacionApliacion: z.number(),
+          CorreccionEnDeclaracionesAnterioresMayorValor: z.number(),
+          CorreccionEnDeclaracionesAnterioresMenorValor: z.number(),
+          AjustesContablesPorCorrecionesValorativasMayorValor: z.number(),
+          AjustesContablesPorCorrecionesValorativasMenorValor: z.number()
+        })
+      }),
+      ImpuestosPagadosEnELExterior: z.object({
+        Saldo31VigenciaActual: z.number(),
+        Saldo31VigenciaAnterior: z.number(),
+        Variacion: z.number(),
+        ExplicacionDeLaVariacion: z.object({
+          ReduccionCompensacionApliacion: z.number(),
+          CorreccionEnDeclaracionesAnterioresMayorValor: z.number(),
+          CorreccionEnDeclaracionesAnterioresMenorValor: z.number(),
+          AjustesContablesPorCorrecionesValorativasMayorValor: z.number(),
+          AjustesContablesPorCorrecionesValorativasMenorValor: z.number()
+        })
+      })
+    }
+  ),
   DetalleCompensacionPerdidasFiscales: z.object({
-    Anterior: z.object({
+    AñoAnterior: z.object({
       Anio: z.number(),
-      PerdidasFiscalesAcumuladasCompensarInicio: z.number(),
-      PerdidaFiscalGeneradaPeriodo: z.number(),
-      PerdidaFiscalCompensadaPeriodo: z.number(),
-      ValoresNoCompesados: z.number(),
-      AjustesMayorValor: z.number(),
-      AjustesMenorValor: z.number(),
-      PerdidaFiscalAcumuladaCompensarFinal: z.number(),
-      SaldoActivoImpuestoDiferido: z.number()
+      perdidasFiscalesAcumuladasPorCompensarAlInicioDelPeriodo: z.number(),
+      PerdidaFiscalGeneradaEnElPeriodo: z.number(),
+      PerdidaFiscalCompensadaEnElPeriodo: z.number(),
+      ValoresNoCompensadosPorCaducidad: z.number(),
+      AjustesPorCorreccionDeLaDeclaracionMayorValor: z.number(),
+      AjustesPorCorreccionDeLaDeclaracionMenorValor: z.number(),
+      PerdidaFiscalAcumuladaPorCompensarAlFinalDelPeriodo: z.number(),
+      SaldoActivoPorImpuestoDiferidoAlFinalDelPeriodo: z.number()
     }),
-    Actual: z.object({
+    AñoActual: z.object({
       Anio: z.number(),
-      PerdidasFiscalesAcumuladasCompensarInicio: z.number(),
-      PerdidaFiscalGeneradaPeriodo: z.number(),
-      PerdidaFiscalCompensadaPeriodo: z.number(),
-      ValoresNoCompesados: z.number(),
-      AjustesMayorValor: z.number(),
-      AjustesMenorValor: z.number(),
-      PerdidaFiscalAcumuladaCompensarFinal: z.number(),
-      SaldoActivoImpuestoDiferido: z.number()
+      perdidasFiscalesAcumuladasPorCompensarAlInicioDelPeriodo: z.number(),
+      PerdidaFiscalGeneradaEnElPeriodo: z.number(),
+      PerdidaFiscalCompensadaEnElPeriodo: z.number(),
+      ValoresNoCompensadosPorCaducidad: z.number(),
+      AjustesPorCorreccionDeLaDeclaracionMayorValor: z.number(),
+      AjustesPorCorreccionDeLaDeclaracionMenorValor: z.number(),
+      PerdidaFiscalAcumuladaPorCompensarAlFinalDelPeriodo: z.number(),
+      SaldoActivoPorImpuestoDiferidoAlFinalDelPeriodo: z.number()
     })
   }),
-  DetalleCompensacionExcesoRentaPresuntiva: z.object({
-    Anterior: z.object({
+  DetalleDeLaCompensacionPorExcesoDeRentaPresuntiva: z.object({
+    AñoAnterior: z.object({
       Anio: z.number(),
-      ValorAcumuladoCompensarInicioPeriodo: z.number(),
-      ValorGeneradoPeriodo: z.number(),
-      ValorCompensadoPeriodo: z.number(),
-      ValoresNoCompensados: z.number(),
-      AjustesMayorValor: z.number(),
-      AjustesMenorValor: z.number(),
-      ValorAcumuladoCompensarFinalPerido: z.number(),
-      SaldoActivoImpuestoDiferidoFinal: z.number()
+      ValorAcumuladoPorCompensarAlInicioDelPeriodo: z.number(),
+      ValorGeneradoEnElPeriodo: z.number(),
+      ValorCompensadoEnElPeriodo: z.number(),
+      ValoresNoCompensadosPorCaducidad: z.number(),
+      AjustesPorCorreccionDeLaDeclaracionMayorValor: z.number(),
+      AjustesPorCorreccionDeLaDeclaracionMenorValor: z.number(),
+      ValorAcumuladoPorCompensarAlFinalDelPeriodo: z.number(),
+      SaldoActivoPorImpuestoDiferidoAlFinalDelPeriodo: z.number()
     }),
-    Actual: z.object({
+    AñoActual: z.object({
       Anio: z.number(),
-      ValorAcumuladoCompensarInicioPeriodo: z.number(),
-      ValorGeneradoPeriodo: z.number(),
-      ValorCompensadoPeriodo: z.number(),
-      ValoresNoCompensados: z.number(),
-      AjustesMayorValor: z.number(),
-      AjustesMenorValor: z.number(),
-      ValorAcumuladoCompensarFinalPerido: z.number(),
-      SaldoActivoImpuestoDiferidoFinal: z.number()
+      ValorAcumuladoPorCompensarAlInicioDelPeriodo: z.number(),
+      ValorGeneradoEnElPeriodo: z.number(),
+      ValorCompensadoEnElPeriodo: z.number(),
+      ValoresNoCompensadosPorCaducidad: z.number(),
+      AjustesPorCorreccionDeLaDeclaracionMayorValor: z.number(),
+      AjustesPorCorreccionDeLaDeclaracionMenorValor: z.number(),
+      ValorAcumuladoPorCompensarAlFinalDelPeriodo: z.number(),
+      SaldoActivoPorImpuestoDiferidoAlFinalDelPeriodo: z.number()
     })
   })
 })
+
 

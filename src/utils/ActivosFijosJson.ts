@@ -8,7 +8,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -45,12 +45,13 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
     Edificios: {
@@ -61,7 +62,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -98,12 +99,13 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
     Maquinaria: {
@@ -114,7 +116,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -151,12 +153,13 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
     Buques: {
@@ -167,7 +170,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -204,12 +207,13 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
     Aeronave: {
@@ -220,7 +224,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -257,12 +261,13 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
     EquiposDeTransporte: {
@@ -273,7 +278,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -310,12 +315,13 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
     EnseresYAccesorios: {
@@ -326,7 +332,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -363,12 +369,13 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
     EquiposInformaticos: {
@@ -379,7 +386,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -416,12 +423,13 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
     EquiposDeRedesYComunicacion: {
@@ -432,7 +440,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -469,12 +477,13 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
     InfraestructuraDeRed: {
@@ -485,7 +494,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -522,12 +531,13 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
     ActivosTangiblesDeExploracionYEvaluacion: {
@@ -538,7 +548,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -575,12 +585,13 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
     ActivosDeMineria: {
@@ -591,7 +602,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -628,12 +639,13 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
     ActivosDePetroleoYGas: {
@@ -644,7 +656,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -681,12 +693,13 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
     "PP&EEnArrendamientoOperativo": {
@@ -697,7 +710,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -734,12 +747,13 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
     PlantasProductoras: {
@@ -750,7 +764,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -787,12 +801,13 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
     AnimalesProductores: {
@@ -803,7 +818,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -840,12 +855,13 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
     ConstruccionesEnProceso: {
@@ -856,7 +872,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -893,12 +909,13 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
     OtrasPropiedadesPlantasEquipo: {
@@ -909,7 +926,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -946,12 +963,13 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
     TotalPropiedadesPlantasEquipo: {
@@ -962,7 +980,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -999,12 +1017,13 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
   },
@@ -1017,7 +1036,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -1054,12 +1073,13 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
     Edificios: {
@@ -1070,7 +1090,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -1107,12 +1127,13 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
     TotalPorpiedadesDeInversion: {
@@ -1123,7 +1144,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -1160,121 +1181,124 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
   },
   ANCMV: {
-      DatosContables: {
-        ImporteAlComienzoDelPeriodo: {
-          Costo: 0,
-          EfectoDeConversion: 0,
-          AjustePorRevaluacionesOReExpresiones: 0,
-        },
-        Incrementos: {
-          "TransferenciasAdquisiciones": 0,
-          CambiosEnValorRazonable: 0,
-        },
-        Disminuciones: {
-          TransferenciasEliminaciones: 0,
-          CambiosEnValorRazonable: 0,
-        },
-        Depreciacion: {
-          PorCosto: 0,
-          EfectoDeConversion: 0,
-          AjustePorRevaluacionesOReExpresiones: 0,
-        },
-        DeterioroAcumuladoAlFinalDelPeriodo: 0,
-        ImporteNetoAlFinalDelPeriodo: {
-          Costo: 0,
-          AjustePorRevaluacionesOReExpresiones: 0,
-        },
-        GastoPeriodoPorDepreciacionOAmortizacion: {
-          PorCosto: 0,
-          PorAjustePorRevaluacionesOReExpresiones: 0,
-        },
-        GastoDelPeriodoPorDeterioro: 0,
-        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
-        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
-        DesmantelamientoRestauracion: 0,
-        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
+    DatosContables: {
+      ImporteAlComienzoDelPeriodo: {
+        Costo: 0,
+        EfectoDeConversion: 0,
+        AjustePorRevaluacionesOReExpresiones: 0,
       },
-      DatosFiscales: {
-        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
-          SaldoAlComienzoDelPeriodo: 0,
-          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
-          DisminucionesPorTransferenciasYOtrosCambios: 0,
-          SubtotalAlFinalPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          TotalNetoAlFinalDelPeriodo: 0,
-          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
-        },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+      Incrementos: {
+        TransferenciasAdquisiciones: 0,
+        CambiosEnValorRazonable: 0,
+      },
+      Disminuciones: {
+        TransferenciasEliminaciones: 0,
+        CambiosEnValorRazonable: 0,
+      },
+      Depreciacion: {
+        PorCosto: 0,
+        EfectoDeConversion: 0,
+        AjustePorRevaluacionesOReExpresiones: 0,
+      },
+      DeterioroAcumuladoAlFinalDelPeriodo: 0,
+      ImporteNetoAlFinalDelPeriodo: {
+        Costo: 0,
+        AjustePorRevaluacionesOReExpresiones: 0,
+      },
+      GastoPeriodoPorDepreciacionOAmortizacion: {
+        PorCosto: 0,
+        PorAjustePorRevaluacionesOReExpresiones: 0,
+      },
+      GastoDelPeriodoPorDeterioro: 0,
+      IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+      ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
+      DesmantelamientoRestauracion: 0,
+      MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
+    },
+    DatosFiscales: {
+      ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+        SaldoAlComienzoDelPeriodo: 0,
+        IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+        DisminucionesPorTransferenciasYOtrosCambios: 0,
+        SubtotalAlFinalPeriodo: 0,
+        DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+        TotalNetoAlFinalDelPeriodo: 0,
+        GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+      },
+      DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+        {
           ValorTotalAlFinalDelPeriodo: 0,
           DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
           ValorNetoAlFinalDelPeriodo: 0,
           GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
-      },
+        },
     },
+  },
   TotalPPEPIANCMV: {
-      DatosContables: {
-        ImporteAlComienzoDelPeriodo: {
-          Costo: 0,
-          EfectoDeConversion: 0,
-          AjustePorRevaluacionesOReExpresiones: 0,
-        },
-        Incrementos: {
-          "TransferenciasAdquisiciones": 0,
-          CambiosEnValorRazonable: 0,
-        },
-        Disminuciones: {
-          TransferenciasEliminaciones: 0,
-          CambiosEnValorRazonable: 0,
-        },
-        Depreciacion: {
-          PorCosto: 0,
-          EfectoDeConversion: 0,
-          AjustePorRevaluacionesOReExpresiones: 0,
-        },
-        DeterioroAcumuladoAlFinalDelPeriodo: 0,
-        ImporteNetoAlFinalDelPeriodo: {
-          Costo: 0,
-          AjustePorRevaluacionesOReExpresiones: 0,
-        },
-        GastoPeriodoPorDepreciacionOAmortizacion: {
-          PorCosto: 0,
-          PorAjustePorRevaluacionesOReExpresiones: 0,
-        },
-        GastoDelPeriodoPorDeterioro: 0,
-        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
-        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
-        DesmantelamientoRestauracion: 0,
-        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
+    DatosContables: {
+      ImporteAlComienzoDelPeriodo: {
+        Costo: 0,
+        EfectoDeConversion: 0,
+        AjustePorRevaluacionesOReExpresiones: 0,
       },
-      DatosFiscales: {
-        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
-          SaldoAlComienzoDelPeriodo: 0,
-          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
-          DisminucionesPorTransferenciasYOtrosCambios: 0,
-          SubtotalAlFinalPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          TotalNetoAlFinalDelPeriodo: 0,
-          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
-        },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+      Incrementos: {
+        TransferenciasAdquisiciones: 0,
+        CambiosEnValorRazonable: 0,
+      },
+      Disminuciones: {
+        TransferenciasEliminaciones: 0,
+        CambiosEnValorRazonable: 0,
+      },
+      Depreciacion: {
+        PorCosto: 0,
+        EfectoDeConversion: 0,
+        AjustePorRevaluacionesOReExpresiones: 0,
+      },
+      DeterioroAcumuladoAlFinalDelPeriodo: 0,
+      ImporteNetoAlFinalDelPeriodo: {
+        Costo: 0,
+        AjustePorRevaluacionesOReExpresiones: 0,
+      },
+      GastoPeriodoPorDepreciacionOAmortizacion: {
+        PorCosto: 0,
+        PorAjustePorRevaluacionesOReExpresiones: 0,
+      },
+      GastoDelPeriodoPorDeterioro: 0,
+      IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+      ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
+      DesmantelamientoRestauracion: 0,
+      MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
+    },
+    DatosFiscales: {
+      ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+        SaldoAlComienzoDelPeriodo: 0,
+        IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+        DisminucionesPorTransferenciasYOtrosCambios: 0,
+        SubtotalAlFinalPeriodo: 0,
+        DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+        TotalNetoAlFinalDelPeriodo: 0,
+        GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+      },
+      DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+        {
           ValorTotalAlFinalDelPeriodo: 0,
           DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
           ValorNetoAlFinalDelPeriodo: 0,
           GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
-      },
+        },
     },
+  },
   ActivosIntangibles: {
     MarcasComerciales: {
       DatosContables: {
@@ -1284,7 +1308,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -1321,12 +1345,13 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
     ActivosIntangiblesDeExploracionYEvaluacion: {
@@ -1337,7 +1362,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -1374,12 +1399,13 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
     CabecerasDePeriodicosRevistasOTitulosPublicaciones: {
@@ -1390,7 +1416,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -1427,12 +1453,13 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
     ProgramasYAplicacionesInformaticas: {
@@ -1443,7 +1470,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -1480,12 +1507,13 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
     LicenciasYFranquicias: {
@@ -1496,7 +1524,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -1533,67 +1561,70 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
-    PropiedadIntelectualPatentesYOtraPropiedadIndustrialServiciosYDerechosOperacion: {
-      DatosContables: {
-        ImporteAlComienzoDelPeriodo: {
-          Costo: 0,
-          EfectoDeConversion: 0,
-          AjustePorRevaluacionesOReExpresiones: 0,
+    PropiedadIntelectualPatentesYOtraPropiedadIndustrialServiciosYDerechosOperacion:
+      {
+        DatosContables: {
+          ImporteAlComienzoDelPeriodo: {
+            Costo: 0,
+            EfectoDeConversion: 0,
+            AjustePorRevaluacionesOReExpresiones: 0,
+          },
+          Incrementos: {
+            TransferenciasAdquisiciones: 0,
+            CambiosEnValorRazonable: 0,
+          },
+          Disminuciones: {
+            TransferenciasEliminaciones: 0,
+            CambiosEnValorRazonable: 0,
+          },
+          Depreciacion: {
+            PorCosto: 0,
+            EfectoDeConversion: 0,
+            AjustePorRevaluacionesOReExpresiones: 0,
+          },
+          DeterioroAcumuladoAlFinalDelPeriodo: 0,
+          ImporteNetoAlFinalDelPeriodo: {
+            Costo: 0,
+            AjustePorRevaluacionesOReExpresiones: 0,
+          },
+          GastoPeriodoPorDepreciacionOAmortizacion: {
+            PorCosto: 0,
+            PorAjustePorRevaluacionesOReExpresiones: 0,
+          },
+          GastoDelPeriodoPorDeterioro: 0,
+          IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+          ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
+          DesmantelamientoRestauracion: 0,
+          MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
         },
-        Incrementos: {
-          "TransferenciasAdquisiciones": 0,
-          CambiosEnValorRazonable: 0,
+        DatosFiscales: {
+          ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+            SaldoAlComienzoDelPeriodo: 0,
+            IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+            DisminucionesPorTransferenciasYOtrosCambios: 0,
+            SubtotalAlFinalPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            TotalNetoAlFinalDelPeriodo: 0,
+            GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+          },
+          DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+            {
+              ValorTotalAlFinalDelPeriodo: 0,
+              DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+              ValorNetoAlFinalDelPeriodo: 0,
+              GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+            },
         },
-        Disminuciones: {
-          TransferenciasEliminaciones: 0,
-          CambiosEnValorRazonable: 0,
-        },
-        Depreciacion: {
-          PorCosto: 0,
-          EfectoDeConversion: 0,
-          AjustePorRevaluacionesOReExpresiones: 0,
-        },
-        DeterioroAcumuladoAlFinalDelPeriodo: 0,
-        ImporteNetoAlFinalDelPeriodo: {
-          Costo: 0,
-          AjustePorRevaluacionesOReExpresiones: 0,
-        },
-        GastoPeriodoPorDepreciacionOAmortizacion: {
-          PorCosto: 0,
-          PorAjustePorRevaluacionesOReExpresiones: 0,
-        },
-        GastoDelPeriodoPorDeterioro: 0,
-        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
-        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
-        DesmantelamientoRestauracion: 0,
-        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
       },
-      DatosFiscales: {
-        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
-          SaldoAlComienzoDelPeriodo: 0,
-          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
-          DisminucionesPorTransferenciasYOtrosCambios: 0,
-          SubtotalAlFinalPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          TotalNetoAlFinalDelPeriodo: 0,
-          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
-        },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
-      },
-    },
     RecetasFormulasModelosDiseñosYPrototipos: {
       DatosContables: {
         ImporteAlComienzoDelPeriodo: {
@@ -1602,7 +1633,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -1639,12 +1670,13 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
     Concesiones: {
@@ -1655,7 +1687,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -1692,12 +1724,13 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
     DesembolsosDeDesarrolloCapitalizados: {
@@ -1708,7 +1741,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -1745,12 +1778,13 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
     ActivosIntangiblesEnDesarrollo: {
@@ -1761,7 +1795,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -1798,12 +1832,13 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
     Plusvalia: {
@@ -1814,7 +1849,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -1851,12 +1886,13 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
     MejorasDeDerechosDeArrendamiento: {
@@ -1867,7 +1903,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -1904,12 +1940,13 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
     SubvencionesDelEstado: {
@@ -1920,7 +1957,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -1957,12 +1994,13 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
     OtrosActivosIntangibles: {
@@ -1973,7 +2011,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -2010,12 +2048,13 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
     TotalActivosIntangibles: {
@@ -2026,7 +2065,7 @@ export const ActivosFijosInput = {
           AjustePorRevaluacionesOReExpresiones: 0,
         },
         Incrementos: {
-          "TransferenciasAdquisiciones": 0,
+          TransferenciasAdquisiciones: 0,
           CambiosEnValorRazonable: 0,
         },
         Disminuciones: {
@@ -2063,66 +2102,68 @@ export const ActivosFijosInput = {
           TotalNetoAlFinalDelPeriodo: 0,
           GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
         },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
-          ValorTotalAlFinalDelPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          ValorNetoAlFinalDelPeriodo: 0,
-          GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
+        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+          {
+            ValorTotalAlFinalDelPeriodo: 0,
+            DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+            ValorNetoAlFinalDelPeriodo: 0,
+            GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
+          },
       },
     },
   },
   TotalPPEPIANCMVYINTANGIBLES: {
-      DatosContables: {
-        ImporteAlComienzoDelPeriodo: {
-          Costo: 0,
-          EfectoDeConversion: 0,
-          AjustePorRevaluacionesOReExpresiones: 0,
-        },
-        Incrementos: {
-          "TransferenciasAdquisiciones": 0,
-          CambiosEnValorRazonable: 0,
-        },
-        Disminuciones: {
-          TransferenciasEliminaciones: 0,
-          CambiosEnValorRazonable: 0,
-        },
-        Depreciacion: {
-          PorCosto: 0,
-          EfectoDeConversion: 0,
-          AjustePorRevaluacionesOReExpresiones: 0,
-        },
-        DeterioroAcumuladoAlFinalDelPeriodo: 0,
-        ImporteNetoAlFinalDelPeriodo: {
-          Costo: 0,
-          AjustePorRevaluacionesOReExpresiones: 0,
-        },
-        GastoPeriodoPorDepreciacionOAmortizacion: {
-          PorCosto: 0,
-          PorAjustePorRevaluacionesOReExpresiones: 0,
-        },
-        GastoDelPeriodoPorDeterioro: 0,
-        IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
-        ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
-        DesmantelamientoRestauracion: 0,
-        MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
+    DatosContables: {
+      ImporteAlComienzoDelPeriodo: {
+        Costo: 0,
+        EfectoDeConversion: 0,
+        AjustePorRevaluacionesOReExpresiones: 0,
       },
-      DatosFiscales: {
-        ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
-          SaldoAlComienzoDelPeriodo: 0,
-          IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
-          DisminucionesPorTransferenciasYOtrosCambios: 0,
-          SubtotalAlFinalPeriodo: 0,
-          DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
-          TotalNetoAlFinalDelPeriodo: 0,
-          GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
-        },
-        DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero: {
+      Incrementos: {
+        TransferenciasAdquisiciones: 0,
+        CambiosEnValorRazonable: 0,
+      },
+      Disminuciones: {
+        TransferenciasEliminaciones: 0,
+        CambiosEnValorRazonable: 0,
+      },
+      Depreciacion: {
+        PorCosto: 0,
+        EfectoDeConversion: 0,
+        AjustePorRevaluacionesOReExpresiones: 0,
+      },
+      DeterioroAcumuladoAlFinalDelPeriodo: 0,
+      ImporteNetoAlFinalDelPeriodo: {
+        Costo: 0,
+        AjustePorRevaluacionesOReExpresiones: 0,
+      },
+      GastoPeriodoPorDepreciacionOAmortizacion: {
+        PorCosto: 0,
+        PorAjustePorRevaluacionesOReExpresiones: 0,
+      },
+      GastoDelPeriodoPorDeterioro: 0,
+      IngresosDelPeriodoPorRecuperacionDelDeterioro: 0,
+      ValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasing: 0,
+      DesmantelamientoRestauracion: 0,
+      MayorValorPorRevaluacionAcumuladoAlFinalDelPeriodo: 0,
+    },
+    DatosFiscales: {
+      ValorTotalIncluyendoArrendamientoFinancieroOLeasingFinanciero: {
+        SaldoAlComienzoDelPeriodo: 0,
+        IncrementosPorTransferenciasAdquisicionesYOtrosCambios: 0,
+        DisminucionesPorTransferenciasYOtrosCambios: 0,
+        SubtotalAlFinalPeriodo: 0,
+        DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
+        TotalNetoAlFinalDelPeriodo: 0,
+        GastoFiscalPorDepresiacionYAmortizacionDelPeriodo: 0,
+      },
+      DatosInformativosValorActivosAdquiridosMedianteArrendamientoFinancieroOLeasingFinanciero:
+        {
           ValorTotalAlFinalDelPeriodo: 0,
           DepreciacionYAmortizacionAcumuladaAlFinalDelPeriodo: 0,
           ValorNetoAlFinalDelPeriodo: 0,
           GastoFiscalDepreciacionYAmortizacionDelPeriodo: 0,
-        }
-      },
+        },
+    },
   },
 };
