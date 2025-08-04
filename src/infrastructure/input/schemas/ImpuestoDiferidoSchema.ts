@@ -163,7 +163,7 @@ export const ImpuestoDiferidoSchema = z.object({
         Variacion: z.number(),
         TasaFiscalAplicada: z.number()
       }),
-      Fiscales: z.object({
+      ActivosReconocidosSolamenteParaFinesFiscales: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
@@ -355,7 +355,7 @@ export const ImpuestoDiferidoSchema = z.object({
         Variacion: z.number(),
         TasaFiscalAplicada: z.number()
       }),
-      Fiscales: z.object({
+      ActivosReconocidosSolamenteParaFinesFiscales: z.object({
         BaseContable: z.number(),
         BaseFiscal: z.number(),
         DiferenciaTemporaria: z.number(),
@@ -464,5 +464,6 @@ export const ImpuestoDiferidoSchema = z.object({
     })
   })
 })
+
 
 
