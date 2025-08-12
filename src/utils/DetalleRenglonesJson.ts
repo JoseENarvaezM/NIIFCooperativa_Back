@@ -2367,7 +2367,6 @@ export const DetalleRenglonesInput = {
       SaldosFiscalesADiciembre31Parciales: 0,
     },
     },
-
     TotalMenosDevolucionesDescuentosRebajasSaldosContablesADiciembre31: 0,
     TotalMenosDevolucionesDescuentosRebajasSaldosFiscalesADiciembre31: 0,
   },
