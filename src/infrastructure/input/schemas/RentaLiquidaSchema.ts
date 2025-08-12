@@ -4764,7 +4764,7 @@ export const RentaLiquidaSchema = z.object({
     Otras: z.number()
   }),
   InformativoClasificacionDiferencias: z.object({
-    IngresosNoConstitutivosDeRentaNiGananciaOcasional: z.object({
+    DiferenciasPermanentesQueDisminuyenLaRentaLiquida: z.object({
       IngresosNoConstitutivosRenta: z.object({
         ValorFiscalAlQueTieneDerecho: z.number(),
         ValorFiscalSolicitado: z.number()
@@ -5286,13 +5286,7 @@ export const RentaLiquidaSchema = z.object({
           ReversionesImponibles: z.number()
         })
       }
-    ),
-    Total: z.object({
-      GeneracionesDeducibles: z.number(),
-      GeneracionesImponibles: z.number(),
-      ReversionesDeducibles: z.number(),
-      ReversionesImponibles: z.number()
-    })
+    )
   }),
   RentaLiquidaOrdinariaDelEjercicioIncluyendeoDividendosYAntesDeLasRentasLiquidasPasivasECE: z.number(),
   OPerdidaLiquidaOrdinariaDelEjercicioIncluyendoDividendosYAntesDeLaRentasLiquidasPasivasECE: z.number(),
