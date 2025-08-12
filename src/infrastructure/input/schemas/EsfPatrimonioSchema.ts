@@ -69,13 +69,6 @@ export const ESFPatrimonioSchema = z.object({
             MenorValorFiscal: z.number(),
             MayorValorFiscal: z.number(),
             ValorFiscal: z.number()
-          }),
-          Total: z.object({
-            ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
-            ValorFiscal: z.number()
           })
         }),
         InstrumentosDeudaCostoAmortizado: z.object({
@@ -159,13 +152,6 @@ export const ESFPatrimonioSchema = z.object({
             ValorFiscal: z.number()
           }),
           Costo: z.object({
-            ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
-            ValorFiscal: z.number()
-          }),
-          Total: z.object({
             ValorContable: z.number(),
             EfectoConversion: z.number(),
             MenorValorFiscal: z.number(),
@@ -601,13 +587,6 @@ export const ESFPatrimonioSchema = z.object({
           MenorValorFiscal: z.number(),
           MayorValorFiscal: z.number(),
           ValorFiscal: z.number()
-        }),
-        Total: z.object({
-          ValorContable: z.number(),
-          EfectoConversion: z.number(),
-          MenorValorFiscal: z.number(),
-          MayorValorFiscal: z.number(),
-          ValorFiscal: z.number()
         })
       }),
       DepreciacionAcumuladaPropiedadesPlantaEquipo: z.object({
@@ -662,13 +641,6 @@ export const ESFPatrimonioSchema = z.object({
             MenorValorFiscal: z.number(),
             MayorValorFiscal: z.number(),
             ValorFiscal: z.number()
-          }),
-          Total: z.object({
-            ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
-            ValorFiscal: z.number()
           })
         }),
         ArrendamientoFinanciero: z.object({
@@ -685,13 +657,6 @@ export const ESFPatrimonioSchema = z.object({
             MenorValorFiscal: z.number(),
             MayorValorFiscal: z.number(),
             ValorFiscal: z.number()
-          }),
-          Total: z.object({
-            ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
-            ValorFiscal: z.number()
           })
         }),
         OtrosActivosIntangibles: z.object({
@@ -703,13 +668,6 @@ export const ESFPatrimonioSchema = z.object({
             ValorFiscal: z.number()
           }),
           AjusteAcumuladoRevaluacionesReexpresiones: z.object({
-            ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
-            ValorFiscal: z.number()
-          }),
-          Total: z.object({
             ValorContable: z.number(),
             EfectoConversion: z.number(),
             MenorValorFiscal: z.number(),
@@ -763,13 +721,6 @@ export const ESFPatrimonioSchema = z.object({
             ValorFiscal: z.number()
           }),
           CompraAcciones: z.object({
-            ValorContable: z.number(),
-            EfectoConversion: z.number(),
-            MenorValorFiscal: z.number(),
-            MayorValorFiscal: z.number(),
-            ValorFiscal: z.number()
-          }),
-          Total: z.object({
             ValorContable: z.number(),
             EfectoConversion: z.number(),
             MenorValorFiscal: z.number(),

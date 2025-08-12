@@ -41,6 +41,24 @@ export class Form110GatewayAdapter implements FormsGatewayIntPort<FormR110> {
         const form110 = await prisma.formr110.findUnique({
             where: { r110ID: report?.r110ID }
         });
+
+        const detalleRenglones = await prisma.formdetallerenglones.findUnique({
+            where: { detID: report?.detID }
+        });
+
+        if (form110 && typeof form110.r110Content === "object" && form110.r110Content !== null) {
+            const content = form110.r110Content as any;
+            const detContent = detalleRenglones?.detContent as any;
+
+            content.DatosResumen.DatosInformativos.TotalCostosGastosDeNomina =
+                detContent?.Renglon33?.TotalCostosYGastosDeNominaSaldosFiscalesADiciembre31 || 0;
+            
+            content.DatosResumen.DatosInformativos.AportesAlSistemaDeSeguridadSocial =
+                detContent?.Renglon34?.TotalAportesAlSistemaDeSeguridadSocialSaldosFiscalesADiciembre31 || 0;
+
+            //TODO: segir con las demas, todo el formulario son puras referencias a reglones
+        }
+
         return form110;
     }
 }
