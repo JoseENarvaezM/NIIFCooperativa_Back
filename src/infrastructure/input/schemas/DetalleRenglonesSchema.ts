@@ -2421,9 +2421,10 @@ export const DetalleRenglonesSchema = z.object({
         AjustesParaLlegarASaldosFiscales3: z.number(),
         SaldosFiscalesADiciembre31Parciales: z.number()
       }),
+    }),
+
       TotalMenosDevolucionesDescuentosRebajasSaldosContablesADiciembre31: z.number(),
       TotalMenosDevolucionesDescuentosRebajasSaldosFiscalesADiciembre31: z.number()
-    })
   }),
   Renglon60: z.object({
     DiviNoGrav: z.object({
