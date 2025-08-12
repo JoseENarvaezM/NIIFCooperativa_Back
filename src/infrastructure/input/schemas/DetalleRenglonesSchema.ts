@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 export const DetalleRenglonesSchema = z.object({
-  Reglon33: z.object({
+  Renglon33: z.object({
     "510506Sueldos": z.object({
       SaldosContablesADiciembre31Parciales: z.number(),
       AjustesParaLlegarASaldosFiscales1: z.number(),
@@ -159,7 +159,7 @@ export const DetalleRenglonesSchema = z.object({
     TotalCostosYGastosDeNominaSaldosContablesADiciembre31: z.number(),
     TotalCostosYGastosDeNominaSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon34: z.object({
+  Renglon34: z.object({
     "510568ARL": z.object({
       SaldosContablesADiciembre31Parciales: z.number(),
       AjustesParaLlegarASaldosFiscales1: z.number(),
@@ -226,7 +226,7 @@ export const DetalleRenglonesSchema = z.object({
     TotalAportesAlSistemaDeSeguridadSocialSaldosContablesADiciembre31: z.number(),
     TotalAportesAlSistemaDeSeguridadSocialSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon35: z.object({
+  Renglon35: z.object({
     "510572CajaComp": z.object({
       SaldosContablesADiciembre31Parciales: z.number(),
       AjustesParaLlegarASaldosFiscales1: z.number(),
@@ -293,7 +293,7 @@ export const DetalleRenglonesSchema = z.object({
     TotalAportesAlSENAICBFCajaCompensacionSaldosContablesADiciembre31: z.number(),
     TotalAportesAlSENAICBFCajaCompensacionSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon36: z.object({
+  Renglon36: z.object({
     "1105CajaGeneral": z.object({
       SaldosContablesADiciembre31Parciales: z.number(),
       AjustesParaLlegarASaldosFiscales1: z.number(),
@@ -348,7 +348,7 @@ export const DetalleRenglonesSchema = z.object({
     TotalEfectivoYEquivalentesDeEfectivoSaldosContablesADiciembre31: z.number(),
     TotalEfectivoYEquivalentesDeEfectivoSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon37: z.object({
+  Renglon37: z.object({
     "1205InversionesEnAsociadasYSubsidiariasAccionesYAportesEnSociedades": z.object(
       {
         MedidasAlCosto: z.object({
@@ -549,7 +549,7 @@ export const DetalleRenglonesSchema = z.object({
     TotalInversionesEInstrumentosFinancierosDerivadosSaldosContablesADiciembre31: z.number(),
     TotalInversionesEInstrumentosFinancierosDerivadosSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon38: z.object({
+  Renglon38: z.object({
     "1305Clientes": z.object({
       SaldosContablesADiciembre31Parciales: z.number(),
       AjustesParaLlegarASaldosFiscales1: z.number(),
@@ -660,7 +660,7 @@ export const DetalleRenglonesSchema = z.object({
     TotalCuentasDocumentosYArrendamientosFinancierosPorCobrarSaldosContablesADiciembre31: z.number(),
     TotalCuentasDocumentosYArrendamientosFinancierosPorCobrarSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon39: z.object({
+  Renglon39: z.object({
     "1405MateriasPrimas": z.object({
       SaldosContablesADiciembre31Parciales: z.number(),
       AjustesParaLlegarASaldosFiscales1: z.number(),
@@ -734,7 +734,7 @@ export const DetalleRenglonesSchema = z.object({
     TotalInventariosSaldosContablesADiciembre31: z.number(),
     TotalInventariosSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon40: z.object({
+  Renglon40: z.object({
     "1505AcuerdosDeConcesionModeloDelActivoIntangible": z.object({
       SaldosContablesADiciembre31Parciales: z.number(),
       AjustesParaLlegarASaldosFiscales1: z.number(),
@@ -833,7 +833,7 @@ export const DetalleRenglonesSchema = z.object({
     TotalActivosIntangiblesSaldosContablesADiciembre31: z.number(),
     TotalActivosIntangiblesSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon41: z.object({
+  Renglon41: z.object({
     "1605AnimalesProductoresMedidosAlCosto": z.object({
       AnimalesProductoresMedidosAlCosto: z.object({
         ValorDelCosto: z.object({
@@ -987,7 +987,7 @@ export const DetalleRenglonesSchema = z.object({
     TotalActivosBiologicosSaldosContablesADiciembre31: z.number(),
     TotalActivosBiologicosSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon42: z.object({
+  Renglon42: z.object({
     "1704Terrenos": z.object({
       SaldosContablesADiciembre31Parciales: z.number(),
       AjustesParaLlegarASaldosFiscales1: z.number(),
@@ -1153,7 +1153,7 @@ export const DetalleRenglonesSchema = z.object({
     TotalPropiedadesPlantaEquipoPropiedadesDeInversionANCMVSaldosContablesADiciembre31: z.number(),
     TotalPropiedadesPlantaEquipoPropiedadesDeInversionANCMVSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon43: z.object({
+  Renglon43: z.object({
     "1805AnticiposPorImpuestosCorrientes": z.object({
       AnticipoDelImpuestoDeRentaYDeSobretasa: z.object({
         SaldosContablesADiciembre31Parciales: z.number(),
@@ -1266,11 +1266,11 @@ export const DetalleRenglonesSchema = z.object({
     TotalOtrosActivosSaldosContablesADiciembre31: z.number(),
     TotalOtrosActivosSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon44TotalPatrimonioBruto: z.object({
+  Renglon44TotalPatrimonioBruto: z.object({
     TotalSaldosContablesADiciembre31: z.number(),
     TotalSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon45: z.object({
+  Renglon45: z.object({
     "2105BancosNacionales": z.object({
       SaldosContablesADiciembre31Parciales: z.number(),
       AjustesParaLlegarASaldosFiscales1: z.number(),
@@ -1520,7 +1520,7 @@ export const DetalleRenglonesSchema = z.object({
     TotalPasivosSaldosContablesADiciembre31: z.number(),
     TotalPasivosSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon46: z.object({
+  Renglon46: z.object({
     TotalPatrimonioLiquidoPositivoSaldosContablesADiciembre31: z.number(),
     TotalPatrimonioLiquidoPositivoSaldosFiscalesADiciembre31: z.number(),
     "3130CapitalDePersonasNaturales": z.object({
@@ -1567,7 +1567,7 @@ export const DetalleRenglonesSchema = z.object({
       })
     })
   }),
-  Reglon47: z.object({
+  Renglon47: z.object({
     VentaDeBienes: z.object({
       AClientesNacionalesPorFueraDeZonaFranca: z.object({
         SaldosContablesADiciembre31Parciales: z.number(),
@@ -1741,7 +1741,7 @@ export const DetalleRenglonesSchema = z.object({
     TotalIngresosBrutosDeActividadesOrdinariasSaldosContablesADiciembre31: z.number(),
     TotalIngresosBrutosDeACtividadesOrdinariasSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon48: z.object({
+  Renglon48: z.object({
     "421005FinancierosIntereses": z.object({
       ArrendamientoFinancieroOMercantilLeasing: z.object({
         SaldosContablesADiciembre31Parciales: z.number(),
@@ -1806,7 +1806,7 @@ export const DetalleRenglonesSchema = z.object({
     TotalIngresosFinancierosSaldosContablesADiciembre31: z.number(),
     TotalIngresosFinancierosSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon49: z.object({
+  Renglon49: z.object({
     RecibidosDeSociedadNacionalDelRegimenOrdinarioQueSiLlevaACaboLasMegainversionesDelArt235: z.object(
       {
         SaldosContablesADiciembre31Parciales: z.number(),
@@ -1844,13 +1844,13 @@ export const DetalleRenglonesSchema = z.object({
     TotalDividentosOParticipacionesGananciaOcasionalSaldosContablesADiciembre31: z.number(),
     TotalDividentosOParticipacionesGananciaOcasionalSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon50DividendosOParticipacionesDistribuidosPorEntidadesResidentesEnColombia: z.object(
+  Renglon50DividendosOParticipacionesDistribuidosPorEntidadesResidentesEnColombia: z.object(
     {
       TotalSaldosContablesADiciembre31Parciales: z.number(),
       TotalSaldosFiscalesADiciembre31Parciales: z.number()
     }
   ),
-  Reglon51DividendosOParticipacionesGravadasAñoRecibidosPorSociedadesExtranjeras: z.object(
+  Renglon51DividendosOParticipacionesGravadasAñoRecibidosPorSociedadesExtranjeras: z.object(
     {
       TotalSaldosContablesADiciembre31Parciales: z.number(),
       TotalSaldosFiscalesADiciembre31Parciales: z.number(),
@@ -1863,7 +1863,7 @@ export const DetalleRenglonesSchema = z.object({
       })
     }
   ),
-  Reglon52: z.object({
+  Renglon52: z.object({
     RecibidosDeSociedadNacionalDelRegimenOrdinarioQueSiLlevaACaboLasMegainversionesDelArt235: z.object(
       {
         SaldosContablesADiciembre31Parciales: z.number(),
@@ -1901,7 +1901,7 @@ export const DetalleRenglonesSchema = z.object({
     TotalDividendosYParticipacionesGravadasPorPersonasNaturalesSaldosContablesADiciembre3152: z.number(),
     TotalDividendosYParticipacionesGravadasPorPersonasNaturalesSaldosFiscalesADiciembre3152: z.number()
   }),
-  Reglon53: z.object({
+  Renglon53: z.object({
     RecibidosDeSociedadNacionalDelRegimenOrdinarioQueNoLlevaACaboLasMegainversionesDelArt235YQueNoEstaAcogidaAlRegimenDeSociedadesCHCDeLosArts894A898DelET: z.object(
       {
         SaldosContablesADiciembre31Parciales: z.number(),
@@ -1930,7 +1930,7 @@ export const DetalleRenglonesSchema = z.object({
     Total53SaldosContablesADiciembre31: z.number(),
     Total53SaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon54: z.object({
+  Renglon54: z.object({
     RecibidosDeSociedadNacionalDelRegimenOrdinarioQueNoLlevaACaboLasMegainversionesDelArt235YQueNoEstaAcogidaAlRegimenDeSociedadesCHCDeLosArts894A898DelET: z.object(
       {
         SaldosContablesADiciembre31Parciales: z.number(),
@@ -1959,11 +1959,11 @@ export const DetalleRenglonesSchema = z.object({
     Total54SaldosContablesADiciembre31: z.number(),
     Total54SaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon55: z.object({
+  Renglon55: z.object({
     TotalSaldosContablesADiciembre31Parciales: z.number(),
     TotalSaldosFiscalesADiciembre31Parciales: z.number()
   }),
-  Reglon56: z.object({
+  Renglon56: z.object({
     Total56SaldosContablesADiciembre31: z.number(),
     Total56SaldosFiscalesADiciembre31: z.number(),
     RecibidosDeSociedadNacionalDelRegimenOrdinarioQueSiLlevaACaboLasMegainversionesDelArt235: z.object(
@@ -1976,7 +1976,7 @@ export const DetalleRenglonesSchema = z.object({
       }
     )
   }),
-  Reglon57: z.object({
+  Renglon57: z.object({
     "4245UtilidadEnVentaDeActivoFijo": z.object({
       PorVentasDeActivosPoseidosMenosDe2Anios: z.object({
         PropiedadesPlantaYEquipo: z.object({
@@ -2394,11 +2394,11 @@ export const DetalleRenglonesSchema = z.object({
     TotalOtrosIngresosSaldosContablesADiciembre31: z.number(),
     TotalOtrosIngresosSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon58: z.object({
+  Renglon58: z.object({
     TotalIngresosBrutosSaldosContablesADiciembre31: z.number(),
     TotalIngresosBrutosSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon59: z.object({
+  Renglon59: z.object({
     "4175DevolucionesYRebajasEnVentas": z.object({
       EnVentaDeBienes: z.object({
         SaldosContablesADiciembre31Parciales: z.number(),
@@ -2425,7 +2425,7 @@ export const DetalleRenglonesSchema = z.object({
       TotalMenosDevolucionesDescuentosRebajasSaldosFiscalesADiciembre31: z.number()
     })
   }),
-  Reglon60: z.object({
+  Renglon60: z.object({
     DiviNoGrav: z.object({
       AjustesParaLlegarASaldosFiscales1: z.number(),
       SaldosFiscalesADiciembre31Parciales: z.number()
@@ -2464,11 +2464,11 @@ export const DetalleRenglonesSchema = z.object({
     }),
     TotalIngresosNoConstituidosDeRentaNiGananciaOcasionalSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon61: z.object({
+  Renglon61: z.object({
     TotalIngresosNetosSaldosContablesADiciembre31: z.number(),
     TotalIngresosNetosSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon62: z.object({
+  Renglon62: z.object({
     "61CostosDeLasMercanciasFabricadasYVendidas": z.object({
       InventarioInicialDeTrabajoEnProceso: z.object({
         SaldosContablesADiciembre31Parciales: z.number(),
@@ -2902,7 +2902,7 @@ export const DetalleRenglonesSchema = z.object({
     TotalCostosSaldosContablesADiciembre31: z.number(),
     TotalCostosSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon63: z.object({
+  Renglon63: z.object({
     "5105BeneficiosAEmpleadosDeCortoPlayzo": z.object({
       SalariosYOtros: z.object({
         SaldosContablesADiciembre31Parciales: z.number(),
@@ -3298,7 +3298,7 @@ export const DetalleRenglonesSchema = z.object({
     TotalGastosDeAdministracionSaldosContablesADiciembre31: z.number(),
     TotalGastosDeAdministracionSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon64: z.object({
+  Renglon64: z.object({
     "5205BeneficiosALosEmpleadosCortoPlayzo": z.object({
       SalariosYOtros: z.object({
         SaldosContablesADiciembre31Parciales: z.number(),
@@ -3740,7 +3740,7 @@ export const DetalleRenglonesSchema = z.object({
     TotalGastosDeDistribucionYVentasSaldosContablesADiciembre31: z.number(),
     TotalGastosDeDistribucionYVentasSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon65: z.object({
+  Renglon65: z.object({
     5305: z.object({
       IntDevSecFin: z.object({
         SaldosContablesADiciembre31Parciales: z.number(),
@@ -3816,7 +3816,7 @@ export const DetalleRenglonesSchema = z.object({
     TotalesSaldosContablesADiciembre31: z.number(),
     TotalesSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon66: z.object({
+  Renglon66: z.object({
     "5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios": z.object({
       PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios: z.object({
         DePropiedadesPlantaYEquipo: z.object({
@@ -4101,19 +4101,19 @@ export const DetalleRenglonesSchema = z.object({
     TotalOtrosGastosYDeduccionesSaldosContablesADiciembre31: z.number(),
     TotalOtrosGastosYDeduccionesSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon67: z.object({
+  Renglon67: z.object({
     TotalCostosYGastosDeduciblesSaldosContablesADiciembre31: z.number(),
     TotalCostosYGastosDeduciblesSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon68: z.object({
+  Renglon68: z.object({
     SaldosContablesADiciembre31Parciales: z.number(),
     SaldosFiscalesADiciembre31Parciales: z.number()
   }),
-  Reglon69: z.object({
+  Renglon69: z.object({
     SaldosContablesADiciembre31Parciales: z.number(),
     SaldosFiscalesADiciembre31Parciales: z.number()
   }),
-  Reglon70: z.object({
+  Renglon70: z.object({
     IndmnCompAseg: z.object({
       SaldosContablesADiciembre31Parciales: z.number(),
       AjustesParaLlegarASaldosFiscales1: z.number(),
@@ -4138,19 +4138,19 @@ export const DetalleRenglonesSchema = z.object({
     TotalRentaPorRecuperacionDeDeduccionesSaldosContablesADiciembre31: z.number(),
     TotalRentaPorRecuperacionDeDeduccionesSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon71ValorIngresosBrutosQueCorresponden: z.object({
+  Renglon71ValorIngresosBrutosQueCorresponden: z.object({
     SaldosContablesADiciembre31Parciales: z.number(),
     SaldosFiscalesADiciembre31Parciales: z.number()
   }),
-  Reglon72: z.object({
+  Renglon72: z.object({
     TotalRentaLiquidaOrdinariaDelEjercicioSaldosContablesADiciembre31: z.number(),
     TotalRentaLiquidaOrdinariaDelEjercicioSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon73: z.object({
+  Renglon73: z.object({
     TotalPerdidaLiquidaDelEjercicioSaldosContablesADiciembre31: z.number(),
     TotalPerdidaLiquidaDelEjercicioSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon74: z.object({
+  Renglon74: z.object({
     CompenPerFisc: z.object({
       SaldosFiscalesADiciembre31Parciales: z.number()
     }),
@@ -4167,11 +4167,11 @@ export const DetalleRenglonesSchema = z.object({
     }),
     TotalCompensacionesSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon75: z.object({
+  Renglon75: z.object({
     TotalRentaLiquidaSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon76: z.object({ SaldosFiscalesADiciembre31Parciales: z.number() }),
-  Reglon77: z.object({
+  Renglon76: z.object({ SaldosFiscalesADiciembre31Parciales: z.number() }),
+  Renglon77: z.object({
     Act235: z.object({ SaldosFiscalesADiciembre31Parciales: z.number() }),
     RentNet: z.object({ SaldosFiscalesADiciembre31Parciales: z.number() }),
     RentHot: z.object({ SaldosFiscalesADiciembre31Parciales: z.number() }),
@@ -4179,7 +4179,7 @@ export const DetalleRenglonesSchema = z.object({
     PensColom: z.object({ SaldosFiscalesADiciembre31Parciales: z.number() }),
     TotalRentasExentasSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon78: z.object({
+  Renglon78: z.object({
     ActOmi: z.object({ SaldosFiscalesADiciembre31Parciales: z.number() }),
     PasivNoReal: z.object({ SaldosFiscalesADiciembre31Parciales: z.number() }),
     RecEsp: z.object({ SaldosFiscalesADiciembre31Parciales: z.number() }),
@@ -4187,8 +4187,8 @@ export const DetalleRenglonesSchema = z.object({
     RentLiq: z.object({ SaldosFiscalesADiciembre31Parciales: z.number() }),
     TotalRentasGravablesSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon79: z.object({ TotalesSaldosFiscalesADiciembre31: z.number() }),
-  Reglon80: z.object({
+  Renglon79: z.object({ TotalesSaldosFiscalesADiciembre31: z.number() }),
+  Renglon80: z.object({
     "429543PremiosRifasYLoterias": z.object({
       PremiosRifasYLoterias: z.object({
         SaldosContablesADiciembre31Parciales: z.number(),
@@ -4219,7 +4219,7 @@ export const DetalleRenglonesSchema = z.object({
     TotalesSaldosContablesADiciembre31: z.number(),
     TotalesSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon81: z.object({
+  Renglon81: z.object({
     ValoresQuitasCap: z.object({
       SaldosContablesADiciembre31Parciales: z.number(),
       AjustesParaLlegarASaldosFiscales1: z.number(),
@@ -4230,13 +4230,13 @@ export const DetalleRenglonesSchema = z.object({
     TotalRentaDeudoresSaldosContablesADiciembre31: z.number(),
     TotalRentaDeudoresSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon82: z.object({
+  Renglon82: z.object({
     VerLasInstruccionesAl: z.object({
       SaldosFiscalesADiciembre31Parciales: z.number()
     }),
     TotalUtilizacionPerdidasFiscalesAcumuladasSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon83: z.object({
+  Renglon83: z.object({
     CostoFiscalDeActivoFijoOBiologicoVendidoYPoseidoPorMasDeDosAños: z.object({
       SaldosContablesADiciembre31Parciales: z.number(),
       AjustesParaLlegarASaldosFiscales1: z.number(),
@@ -4254,7 +4254,7 @@ export const DetalleRenglonesSchema = z.object({
     TotalCostosYDeduccionesPorGananciasOcasionalesSaldosContablesADiciembre31: z.number(),
     TotalCostosYDeduccionesPorGananciasOcasionalesSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon84: z.object({
+  Renglon84: z.object({
     UtilVent: z.object({
       AjustesParaLlegarASaldosFiscales1: z.number(),
       SaldosFiscalesADiciembre31Parciales: z.number()
@@ -4273,25 +4273,25 @@ export const DetalleRenglonesSchema = z.object({
     }),
     TotalGananciasOcasionalesNoGravadasYExentasSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon85: z.object({
+  Renglon85: z.object({
     Esc1: z.object({ SaldosFiscalesADiciembre31Parciales: z.number() }),
     Esc2: z.object({ SaldosFiscalesADiciembre31Parciales: z.number() }),
     Esc3: z.object({ SaldosFiscalesADiciembre31Parciales: z.number() }),
     Esc4: z.object({ SaldosFiscalesADiciembre31Parciales: z.number() }),
     TotalGananciasOcasionalesGravablesSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon86: z.object({
+  Renglon86: z.object({
     TotalImpuestoSobreLaRentaLiquidaSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon87: z.object({
+  Renglon87: z.object({
     TotalDeDividendosYParticipacionesGravadasALaTarifaSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon88: z.object({ Total88SaldosFiscalesADiciembre31: z.number() }),
-  Reglon89: z.object({ Total89SaldosFiscalesADiciembre31: z.number() }),
-  Reglon90: z.object({ Total90SaldosFiscalesADiciembre31: z.number() }),
-  Reglon91: z.object({ Total91SaldosFiscalesADiciembre31: z.number() }),
-  Reglon92: z.object({ Total92SaldosFiscalesADiciembre31: z.number() }),
-  Reglon93: z.object({
+  Renglon88: z.object({ Total88SaldosFiscalesADiciembre31: z.number() }),
+  Renglon89: z.object({ Total89SaldosFiscalesADiciembre31: z.number() }),
+  Renglon90: z.object({ Total90SaldosFiscalesADiciembre31: z.number() }),
+  Renglon91: z.object({ Total91SaldosFiscalesADiciembre31: z.number() }),
+  Renglon92: z.object({ Total92SaldosFiscalesADiciembre31: z.number() }),
+  Renglon93: z.object({
     DescuentosTributarios: z.object({
       AjustesParaLlegarASaldosFiscales1: z.number(),
       SaldosFiscalesADiciembre31Parciales: z.number()
@@ -4328,10 +4328,10 @@ export const DetalleRenglonesSchema = z.object({
     }),
     TotalDescuentosTributariosSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon94: z.object({
+  Renglon94: z.object({
     TotalImpuestoNetoRentaSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon95ImpuestoDeGananciasOcasionales: z.object({
+  Renglon95ImpuestoDeGananciasOcasionales: z.object({
     SobreLoteriasYSimilares: z.object({
       SaldosFiscalesADiciembre31Parciales: z.number()
     }),
@@ -4340,22 +4340,22 @@ export const DetalleRenglonesSchema = z.object({
     }),
     TotalImpuestoDeGananciasOcasionalesSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon96: z.object({ SaldosFiscalesADiciembre31Parciales: z.number() }),
-  Reglon97: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
-  Reglon98: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
-  Reglon99: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
-  Reglon100: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
-  Reglon101MenosAnticipoRentaLiquidadiGravableAnterior: z.object({
+  Renglon96: z.object({ SaldosFiscalesADiciembre31Parciales: z.number() }),
+  Renglon97: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
+  Renglon98: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
+  Renglon99: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
+  Renglon100: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
+  Renglon101MenosAnticipoRentaLiquidadiGravableAnterior: z.object({
     TotalesSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon102MenosSaldoAFavorRentaSinSolicitudDeDevolucionNiCompensacion: z.object(
+  Renglon102MenosSaldoAFavorRentaSinSolicitudDeDevolucionNiCompensacion: z.object(
     { TotalesSaldosFiscalesADiciembre31: z.number() }
   ),
-  Reglon103Autocorretenciones: z.object({
+  Renglon103Autocorretenciones: z.object({
     TotalesSaldosContablesADiciembre31: z.number(),
     TotalesSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon104: z.object({
+  Renglon104: z.object({
     PorVentas: z.object({
       InformacionPorEmpresa: z.array(
         z.object({
@@ -4449,18 +4449,18 @@ export const DetalleRenglonesSchema = z.object({
     TotalOtrasRetencionesSaldosContablesADiciembre31: z.number(),
     TotalOtrasRetencionesSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon105: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
-  Reglon106: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
-  Reglon107: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
-  Reglon108: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
-  Reglon109: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
-  Reglon110: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
-  Reglon111Sanciones: z.object({
+  Renglon105: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
+  Renglon106: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
+  Renglon107: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
+  Renglon108: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
+  Renglon109: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
+  Renglon110: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
+  Renglon111Sanciones: z.object({
     PorExtemporaneidad: z.number(),
     TotalesSaldosFiscalesADiciembre31: z.number()
   }),
-  Reglon112: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
-  Reglon113: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
-  Reglon114: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
-  Reglon115: z.object({ TotalSaldosFiscalesADiciembre31: z.number() })
+  Renglon112: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
+  Renglon113: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
+  Renglon114: z.object({ TotalSaldosFiscalesADiciembre31: z.number() }),
+  Renglon115: z.object({ TotalSaldosFiscalesADiciembre31: z.number() })
 })
