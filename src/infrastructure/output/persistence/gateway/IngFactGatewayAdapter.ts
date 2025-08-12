@@ -55,9 +55,25 @@ export class IngFactGatewayAdapter implements FormsGatewayIntPort<FormIngresosFa
                     detContent.Renglon47.VentaDeBienes.ASociedadesDeComercializacionInternacional.SaldosContablesADiciembre31Parciales +
                     detContent.Renglon47.VentaDeBienes.AClientesEnJurisdiccionesNoCooperantesPeroQueNoSeanVinculadosEconomicos.SaldosContablesADiciembre31Parciales +
                     detContent.Renglon47.VentaDeBienes.AVinculadosEconomicosUbicadosEnZonaFrancaOUbicadosEnCualquierOtroPais.SaldosContablesADiciembre31Parciales;
-            
+                
+                ingContent.PrestacionDeServicios.FacturacionEmitidaEnElPeriodo.DevengadaComoIngresosDelPeriodo =
+                    detContent.Renglon47.ServiciosGeneralesSinIncluirHonorariosProfesionales.AClientesNacionalesPorFueraDeZonaFranca.SaldosContablesADiciembre31Parciales +
+                    detContent.Renglon47.ServiciosGeneralesSinIncluirHonorariosProfesionales.ExportacionesSinIncluirLasExportacionesATerritoriosOPaisesNoCooperantes.SaldosContablesADiciembre31Parciales +
+                    detContent.Renglon47.ServiciosGeneralesSinIncluirHonorariosProfesionales.AClientesEnZonasFrancasQueNoSeanVinculadosEconomicos.SaldosContablesADiciembre31Parciales +
+                    detContent.Renglon47.ServiciosGeneralesSinIncluirHonorariosProfesionales.ASociedadesDeComercializacionInternacional.SaldosContablesADiciembre31Parciales +
+                    detContent.Renglon47.ServiciosGeneralesSinIncluirHonorariosProfesionales.AClientesEnJurisdiccionesNoCooperantesPeroQueNoSeanVinculadosEconomicos.SaldosContablesADiciembre31Parciales +
+                    detContent.Renglon47.ServiciosGeneralesSinIncluirHonorariosProfesionales.AVinculadosEconomicosUbicadosEnZonaFrancaOUbicadosEnCualquierOtroPais.SaldosContablesADiciembre31Parciales +
+                    detContent.Renglon47.ServiciosDeConstruccion.SaldosContablesADiciembre31Parciales +
+                    detContent.Renglon47.AcuerdosDeConcesionDeServicios.SaldosContablesADiciembre31Parciales +
+                    detContent.Renglon47.ArrendamientosOperativos.SaldosContablesADiciembre31Parciales +
+                    detContent.Renglon47.Regalias.SaldosContablesADiciembre31Parciales +
+                    detContent.Renglon47.ComisionesRelacionesDeAgencia.SaldosContablesADiciembre31Parciales +
+                    detContent.Renglon47.HonorariosProfesionales.SaldosContablesADiciembre31Parciales +
+                    detContent.Renglon47.ActividadesDeSegurosYDeCapitalizacion.SaldosContablesADiciembre31Parciales
+                    detContent.Renglon47.LiberacionDeReservasEnContratosDeSegunos.SaldosContablesADiciembre31Parciales +
+                    detContent.Renglon47.ComisionesBancariasCostosDeTransaccionEntreOtros.SaldosContablesADiciembre31Parciales +
+                    detContent.Renglon47.OtrosIngresos.SaldosContablesADiciembre31Parciales;
                 }
-            
             return ingFact;
     }
 
