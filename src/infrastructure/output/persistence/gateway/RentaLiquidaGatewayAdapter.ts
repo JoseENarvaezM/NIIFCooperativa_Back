@@ -33,4 +33,13 @@ export class RentaLiquidaGatewayAdapter implements FormsGatewayIntPort<FormRenta
             }
         });
     }
+    async calculateReference(stuID: string, roomID: string): Promise<FormRentaLiquida | null> {
+        const report = await prisma.report.findFirst({
+            where: { stuID: stuID, roomID: roomID }
+        });
+        const rentaLiquida = await prisma.formrentaliquida.findUnique({
+            where: { renID: report?.renID }
+        });
+        return rentaLiquida;
+    }
 }

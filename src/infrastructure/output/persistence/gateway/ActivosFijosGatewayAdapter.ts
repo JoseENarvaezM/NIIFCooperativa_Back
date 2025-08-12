@@ -34,4 +34,14 @@ export class ActivosFijosGatewayAdapter implements FormsGatewayIntPort<FormActiv
             }
         });
     }
+
+    async calculateReference(stuID: string, roomID: string): Promise<FormActivosFijos | null> {
+        const report = await prisma.report.findFirst({
+            where: { stuID: stuID, roomID: roomID }
+        });
+        const activosfijos = await prisma.formactivosfijos.findUnique({
+            where: { actID: report?.actID }
+        });
+        return activosfijos;
+    }
 }

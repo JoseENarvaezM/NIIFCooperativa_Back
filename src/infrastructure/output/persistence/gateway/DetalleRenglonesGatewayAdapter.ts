@@ -33,4 +33,13 @@ export class DetalleRenglonesGatewayAdapter implements FormsGatewayIntPort<FormD
             }
         });
     }
+    async calculateReference(stuID: string, roomID: string): Promise<FormDetalleRenglones | null> {
+        const report = await prisma.report.findFirst({
+            where: { stuID: stuID, roomID: roomID }
+        });
+        const detalleRenglones = await prisma.formdetallerenglones.findUnique({
+            where: { detID: report?.detID }
+        });
+        return detalleRenglones;
+    }
 }

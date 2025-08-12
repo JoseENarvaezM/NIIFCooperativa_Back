@@ -33,4 +33,13 @@ export class ImpuestoDiferidoGatewayAdapter implements FormsGatewayIntPort<FormI
             }
         });
     }
+    async calculateReference(stuID: string, roomID: string): Promise<FormImpuestoDiferido | null> {
+        const report = await prisma.report.findFirst({
+            where: { stuID: stuID, roomID: roomID }
+        });
+        const impuestoDiferido = await prisma.formimpuestodiferido.findUnique({
+            where: { impID: report?.impID }
+        });
+        return impuestoDiferido;
+    }
 }

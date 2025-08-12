@@ -34,4 +34,13 @@ export class ResumenEsfGatewayAdapter implements FormsGatewayIntPort<FormResumen
             }
         });
     }
+    async calculateReference(stuID: string, roomID: string): Promise<FormResumenEsferi | null> {
+        const report = await prisma.report.findFirst({
+            where: { stuID: stuID, roomID: roomID }
+        });
+        const resumenEsf = await prisma.formresumenesferi.findUnique({
+            where: { resID: report?.resID }
+        });
+        return resumenEsf;
+    }
 }

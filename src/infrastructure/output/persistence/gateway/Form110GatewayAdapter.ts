@@ -34,4 +34,13 @@ export class Form110GatewayAdapter implements FormsGatewayIntPort<FormR110> {
             }
         });
     }
+    async calculateReference(stuID: string, roomID: string): Promise<FormR110 | null> {
+        const report = await prisma.report.findFirst({
+            where: { stuID: stuID, roomID: roomID }
+        });
+        const form110 = await prisma.formr110.findUnique({
+            where: { r110ID: report?.r110ID }
+        });
+        return form110;
+    }
 }

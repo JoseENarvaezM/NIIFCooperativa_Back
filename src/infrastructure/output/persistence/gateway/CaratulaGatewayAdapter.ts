@@ -33,4 +33,14 @@ export class CaratulaGatewayAdapter implements FormsGatewayIntPort<FormCaratula>
             }
         });
     }
+    async calculateReference(stuID: string, roomID: string): Promise<FormCaratula | null> {
+        const report = await prisma.report.findFirst({
+            where: { stuID: stuID, roomID: roomID }
+        });
+        const caratula = await prisma.formcaratula.findUnique({
+            where: { carID: report?.carID }
+        });
+        return caratula;
+    }
+
 }

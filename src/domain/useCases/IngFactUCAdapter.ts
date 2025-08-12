@@ -13,9 +13,11 @@ export class IngFactUCAdapter implements FormsUCIntPort<FormIngresosFancturacion
         if (!formIngresos) {
             this.errorFormatter.errorNotFound(`Formulario con stuID ${stuID} y roomID ${roomID} no se encontró.`);
         }
-        return formIngresos;
+        const formIngresosCalculated = await this.ingFactGateway.calculateReference(stuID, roomID);
+        return formIngresosCalculated || formIngresos;
     }
     async updateForm(stuID: string, roomID: string, ingFact: FormIngresosFancturacion): Promise<FormIngresosFancturacion> {
         return this.ingFactGateway.updateForm(stuID, roomID, ingFact);
     }
+
 }

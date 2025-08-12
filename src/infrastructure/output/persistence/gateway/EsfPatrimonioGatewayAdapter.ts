@@ -33,4 +33,13 @@ export class EsfPatrimonioGatewayAdapter implements FormsGatewayIntPort<FormEsfP
             }
         });
     }
+    async calculateReference(stuID: string, roomID: string): Promise<FormEsfPatrimonio | null> {
+        const report = await prisma.report.findFirst({
+            where: { stuID: stuID, roomID: roomID }
+        });
+        const esfPatrimonio = await prisma.formesfpatrimonio.findUnique({
+            where: { esfID: report?.esfID }
+        });
+        return esfPatrimonio;
+    }
 }
