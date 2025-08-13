@@ -13,7 +13,10 @@ export class ResumenEsfUCAdapter implements FormsUCIntPort<FormResumenEsferi> {
         if (!formResumenEsf) {
             this.errorFormatter.errorNotFound(`Formulario con stuID ${stuID} y roomID ${roomID} no se encontró.`);
         }
-        return formResumenEsf;
+
+        const calculatedForm = this.resumenEsfGateway.calculateReference(stuID, roomID);
+
+        return calculatedForm;
     }
     async updateForm(stuID: string, roomID: string, resumenEsf: FormResumenEsferi): Promise<FormResumenEsferi> {
         return this.resumenEsfGateway.updateForm(stuID, roomID, resumenEsf);

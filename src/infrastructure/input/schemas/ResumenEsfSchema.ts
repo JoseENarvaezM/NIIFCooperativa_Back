@@ -340,11 +340,6 @@ export const ResumenESFSchema = z.object({
         ValorFiscal: z.number(),
         Variacion: z.number()
       }),
-      MenorGastoDeduccionAjustePreciosTransferencia: z.object({
-        ValorContable: z.number(),
-        ValorFiscal: z.number(),
-        Variacion: z.number()
-      }),
       MenorGastoODeduccionAjustePreciosTransferencia: z.object({
         ValorContable: z.number(),
         ValorFiscal: z.number(),

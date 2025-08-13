@@ -13,7 +13,8 @@ export class Form110UCAdapter implements FormsUCIntPort<FormR110> {
         if (!form110) {
             this.errorFormatter.errorNotFound(`Formulario con stuID ${stuID} y roomID ${roomID} no se encontró.`);
         }
-        return form110;
+        const calculatedForm = this.form110Gateway.calculateReference(stuID, roomID);
+        return calculatedForm;
     }
     async updateForm(stuID: string, roomID: string, form110: FormR110): Promise<FormR110> {
         return this.form110Gateway.updateForm(stuID, roomID, form110);
