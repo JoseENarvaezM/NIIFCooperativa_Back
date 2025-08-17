@@ -133,6 +133,6 @@ export class DetalleRenglonesGatewayAdapter implements FormsGatewayIntPort<FormD
                 impDiferidoContent.ImpuestosDiferidosProvenientesDeDiferenciasTemporarias.PasivoDiferidoDiferenciasTemporariasImponibles.ValorTotal.SaldoImpuestoDiferidoActual;
         }
 
-        return null;
+        return detalleRenglones;
     }
 }
