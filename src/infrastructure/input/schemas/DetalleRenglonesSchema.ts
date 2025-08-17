@@ -4299,6 +4299,8 @@ export const DetalleRenglonesSchema = z.object({
     }),
     DescuentosDonacionesEntidades: z.object({
       DonacionHechaAFundacionPor: z.object({
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
         PorcentajeAplicable: z.object({
           SaldosFiscalesADiciembre31Parciales: z.number()
         }),
@@ -4311,7 +4313,6 @@ export const DetalleRenglonesSchema = z.object({
         ValorFinalQuePuedeTomarsePorEsteDescuento: z.object({
           SaldosFiscalesADiciembre31Parciales: z.number()
         })
-      })
     }),
     DescuentosOtros: z.object({
       PorIndustriaYComercioYAvisosYTablerosPagadosDuranteElAño: z.object({
