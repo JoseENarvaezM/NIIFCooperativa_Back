@@ -4363,11 +4363,11 @@ export const DetalleRenglonesSchema = z.object({
         z.object({
           NombreEmpresa: z.string(),
           NitEmpresa: z.string(),
-          SaldosContablesADiciembre31: z.number(),
+          SaldosContablesADiciembre31Parciales: z.number(),
           AjustesParaLlegarASaldosFiscales1: z.number(),
           AjustesParaLlegarASaldosFiscales2: z.string(),
           AjustesParaLlegarASaldosFiscales3: z.number(),
-          SaldosFiscalesADiciembre31: z.number()
+          SaldosFiscalesADiciembre31Parciales: z.number()
         })
       ),
       TotalPorVentasSaldosContablesADiciembre31: z.number(),
@@ -4378,11 +4378,11 @@ export const DetalleRenglonesSchema = z.object({
         z.object({
           NombreEmpresa: z.string(),
           NitEmpresa: z.string(),
-          SaldosContablesADiciembre31: z.number(),
+          SaldosContablesADiciembre31Parciales: z.number(),
           AjustesParaLlegarASaldosFiscales1: z.number(),
           AjustesParaLlegarASaldosFiscales2: z.string(),
           AjustesParaLlegarASaldosFiscales3: z.number(),
-          SaldosFiscalesADiciembre31: z.number()
+          SaldosFiscalesADiciembre31Parciales: z.number()
         })
       ),
       TotalPorServiciosSaldosContablesADiciembre31: z.number(),
@@ -4393,11 +4393,11 @@ export const DetalleRenglonesSchema = z.object({
         z.object({
           NombreEmpresa: z.string(),
           NitEmpresa: z.string(),
-          SaldosContablesADiciembre31: z.number(),
+          SaldosContablesADiciembre31Parciales: z.number(),
           AjustesParaLlegarASaldosFiscales1: z.number(),
           AjustesParaLlegarASaldosFiscales2: z.string(),
           AjustesParaLlegarASaldosFiscales3: z.number(),
-          SaldosFiscalesADiciembre31: z.number()
+          SaldosFiscalesADiciembre31Parciales: z.number()
         })
       ),
       TotalPorHonorariosYComisionesSaldosContablesADiciembre31: z.number(),
@@ -4408,26 +4408,26 @@ export const DetalleRenglonesSchema = z.object({
         z.object({
           NombreEmpresa: z.string(),
           NitEmpresa: z.string(),
-          SaldosContablesADiciembre31: z.number(),
+          SaldosContablesADiciembre31Parciales: z.number(),
           AjustesParaLlegarASaldosFiscales1: z.number(),
           AjustesParaLlegarASaldosFiscales2: z.string(),
           AjustesParaLlegarASaldosFiscales3: z.number(),
-          SaldosFiscalesADiciembre31: z.number()
+          SaldosFiscalesADiciembre31Parciales: z.number()
         })
       ),
       TotalPorRendimientoFinancieroSaldosContablesADiciembre31: z.number(),
       TotalPorRendimientoFinancieroSaldosFiscalesADiciembre31: z.number()
     }),
     PorDividendosYParticipaciones: z.object({
-      InformacionPorEmpresa: z.array(
+     InformacionPorEmpresa: z.array(
         z.object({
           NombreEmpresa: z.string(),
           NitEmpresa: z.string(),
-          SaldosContablesADiciembre31: z.number(),
+          SaldosContablesADiciembre31Parciales: z.number(),
           AjustesParaLlegarASaldosFiscales1: z.number(),
           AjustesParaLlegarASaldosFiscales2: z.string(),
           AjustesParaLlegarASaldosFiscales3: z.number(),
-          SaldosFiscalesADiciembre31: z.number()
+          SaldosFiscalesADiciembre31Parciales: z.number()
         })
       ),
       TotalPorDividendosYParticipacionesSaldosContablesADiciembre31: z.number(),
@@ -4438,11 +4438,11 @@ export const DetalleRenglonesSchema = z.object({
         z.object({
           NombreEmpresa: z.string(),
           NitEmpresa: z.string(),
-          SaldosContablesADiciembre31: z.number(),
+          SaldosContablesADiciembre31Parciales: z.number(),
           AjustesParaLlegarASaldosFiscales1: z.number(),
           AjustesParaLlegarASaldosFiscales2: z.string(),
           AjustesParaLlegarASaldosFiscales3: z.number(),
-          SaldosFiscalesADiciembre31: z.number()
+          SaldosFiscalesADiciembre31Parciales: z.number()
         })
       ),
       TotalPorOtrosConceptosInteresesLoteriasYRifasSaldosContablesADiciembre31: z.number(),

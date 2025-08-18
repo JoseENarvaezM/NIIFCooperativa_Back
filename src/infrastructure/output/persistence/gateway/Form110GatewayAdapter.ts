@@ -92,6 +92,8 @@ export class Form110GatewayAdapter implements FormsGatewayIntPort<FormR110> {
       content.DatosResumen.Patromonio.Inventarios =
         detContent?.Renglon39?.TotalInventariosSaldosFiscalesADiciembre31 || 0;
 
+        console.log(detContent?.Renglon40
+          ?.TotalActivosIntangiblesSaldosFiscalesADiciembre31)
       content.DatosResumen.Patromonio.ActivosIntangibles =
         detContent?.Renglon40
           ?.TotalActivosIntangiblesSaldosFiscalesADiciembre31 || 0;
@@ -259,7 +261,7 @@ export class Form110GatewayAdapter implements FormsGatewayIntPort<FormR110> {
 
         // Total impuesto sobre las rentas liquidas gravables
         content.DatosResumen.LiquidacionPrivada.TotalImpuestoSobreLasRentasLiquidasGravables =
-          detContent?.Renglon92?.TotalImpuestoSobreLasRentasLiquidasGravablesSaldosFiscalesADiciembre31 ||
+          detContent?.Renglon92?.Total92SaldosFiscalesADiciembre31 ||
           0;
 
         // Lo demás campos de liquidación privada
