@@ -1121,26 +1121,26 @@ export const DetalleRenglonesSchema = z.object({
       })
     }),
     "1789PropieDeInversDeterioAcumulado": z.object({
-      REFSaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number()
+      SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
     }),
     "1790ActivosNoCorrientesMantenidosParaLaVenta": z.object({
       ValorDelCosto: z.object({
-        REFSaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        REFSaldFisc: z.number()
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
       MenosDepreciacionesAcumuladas: z.object({
-        REFSaldCont: z.number(),
-        Ajust1: z.number(),
-        Ajust2: z.string(),
-        Ajust3: z.number(),
-        REFSaldFisc: z.number()
+        SaldosContablesADiciembre31Parciales: z.number(),
+        AjustesParaLlegarASaldosFiscales1: z.number(),
+        AjustesParaLlegarASaldosFiscales2: z.string(),
+        AjustesParaLlegarASaldosFiscales3: z.number(),
+        SaldosFiscalesADiciembre31Parciales: z.number()
       }),
       MenosDeteroros: z.object({
         SaldosContablesADiciembre31Parciales: z.number(),
@@ -1243,11 +1243,11 @@ export const DetalleRenglonesSchema = z.object({
       SaldosFiscalesADiciembre31Parciales: z.number()
     }),
     "1860ActivoPorImpuestoDiferido": z.object({
-      REFSaldCont: z.number(),
-      Ajust1: z.number(),
-      Ajust2: z.string(),
-      Ajust3: z.number(),
-      SaldFisc: z.number()
+      SaldosContablesADiciembre31Parciales: z.number(),
+      AjustesParaLlegarASaldosFiscales1: z.number(),
+      AjustesParaLlegarASaldosFiscales2: z.string(),
+      AjustesParaLlegarASaldosFiscales3: z.number(),
+      SaldosFiscalesADiciembre31Parciales: z.number()
     }),
     CargosDiferidosEIntangiblesQueSoloSonFiscales: z.object({
       ValorDelCosto: z.object({
