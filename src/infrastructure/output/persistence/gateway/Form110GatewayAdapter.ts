@@ -92,8 +92,6 @@ export class Form110GatewayAdapter implements FormsGatewayIntPort<FormR110> {
       content.DatosResumen.Patromonio.Inventarios =
         detContent?.Renglon39?.TotalInventariosSaldosFiscalesADiciembre31 || 0;
 
-        console.log(detContent?.Renglon40
-          ?.TotalActivosIntangiblesSaldosFiscalesADiciembre31)
       content.DatosResumen.Patromonio.ActivosIntangibles =
         detContent?.Renglon40
           ?.TotalActivosIntangiblesSaldosFiscalesADiciembre31 || 0;

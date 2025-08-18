@@ -5716,7 +5716,7 @@ export const RentaLiquidaSchema = z.object({
       ValorFiscal: z.number()
     }),
     ImpuestoDeGananciaOcasional: z.object({ ValorFiscal: z.number() }),
-    Total: z.object({ ValorFiscal: z.number() })
+    TotalGananciasOcasionalesGravables: z.object({ ValorFiscal: z.number() })
   }),
   DescuentosTributarios: z.object({ ValorFiscal: z.number() }),
   DescuentosPorImpuestosPagadosEnElExteriorPorGananciasOcasionales: z.object({
@@ -5749,7 +5749,8 @@ export const RentaLiquidaSchema = z.object({
         PorDividendosYParticipaciones: z.object({ ValorFiscal: z.number() }),
         OtrasRetenciones: z.object({ ValorFiscal: z.number() }),
         TotalOtrasRetenciones: z.object({ ValorFiscal: z.number() })
-      })
+      }),
+      ValorFiscal: z.number()
     }
   ),
   TotalRetencionesAnioGravableQueDeclara: z.object({ ValorFiscal: z.number() }),
@@ -5804,7 +5805,13 @@ export const RentaLiquidaSchema = z.object({
           Perdida: z.number(),
           EfectoConversion: z.number()
         }
-      )
+      ),
+      Total: z.object(
+        {
+          Ganancia: z.number(),
+          Perdida: z.number(),
+          EfectoConversion: z.number()
+        })
     }),
     SeReclasificanAlResultado: z.object({
       DiferenciasDeCambioPorConversion: z.object({
@@ -5836,7 +5843,13 @@ export const RentaLiquidaSchema = z.object({
         Ganancia: z.number(),
         Perdida: z.number(),
         EfectoConversion: z.number()
-      })
+      }),
+      Total: z.object(
+        {
+          Ganancia: z.number(),
+          Perdida: z.number(),
+          EfectoConversion: z.number()
+        })
     }),
     OTROResultadoIntegralAntesDeImpuestos: z.object({
       Ganancia: z.number(),
