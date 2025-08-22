@@ -40,18 +40,25 @@ export class EsfPatrimonioGatewayAdapter implements FormsGatewayIntPort<FormEsfP
         const esfPatrimonio = await prisma.formesfpatrimonio.findUnique({
             where: { esfID: report?.esfID }
         });
+
         const detalleRenglones = await prisma.formdetallerenglones.findUnique({
             where: { detID: report?.detID }
         });
 
+        const activosFijos = await prisma.formactivosfijos.findUnique({
+            where: { actID: report?.actID }
+        });
+
         if (
-            detalleRenglones &&
-            typeof detalleRenglones.detContent === 'object' &&
+            detalleRenglones && activosFijos &&
+            typeof detalleRenglones?.detContent === 'object' &&
+            typeof activosFijos?.actContent === 'object' &&
             detalleRenglones.detContent !== null 
-            
+            && activosFijos.actContent !== null            
         ) {
             const detContent = detalleRenglones?.detContent as any;
             const content = esfPatrimonio?.esfContent as any;
+            const actContent = activosFijos?.actContent as any;
 
             // ACtivos - Activos Equivalentes Al Efectivo - Efectivo
             content.Activos.ActivosEquivalentesEfectivo.Efectivo.ValorContable = (detContent?.Renglon36?.TotalEfectivoYEquivalentesDeEfectivoSaldosContablesADiciembre31 || 0) - (detContent?.Renglon36?.["1140CertificadoDeDepositoATermino"]?.SaldosContablesADiciembre31Parciales || 0);
@@ -340,7 +347,76 @@ export class EsfPatrimonioGatewayAdapter implements FormsGatewayIntPort<FormEsfP
 
             content.Activos.Inventarios.DeterioroAcumuladoValorInventarios.MayorValorFiscal = (detContent?.Renglon39?.["1499DeterioroDeInventarios"]?.AjustesParaLlegarASaldosFiscales1 || 0);
 
-            //Quedo en G74
+            // Activos - GastosPagadosPorAnticipado - Publicidad
+
+            content.Activos.GastosPagadosPorAnticipado.Publicidad.ValorContable = (detContent?.Renglon43?.["1810GastosPagadosPorAnticipado"]?.Publicidad?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Activos.GastosPagadosPorAnticipado.Publicidad.MenorValorFiscal = (detContent?.Renglon43?.["1810GastosPagadosPorAnticipado"]?.Publicidad?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Activos.GastosPagadosPorAnticipado.Publicidad.MayorValorFiscal = (detContent?.Renglon43?.["1810GastosPagadosPorAnticipado"]?.Publicidad?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Activos - GastosPagadosPorAnticipado - PrimasSeguros
+
+            content.Activos.GastosPagadosPorAnticipado.PrimasSeguros.ValorContable = (detContent?.Renglon43?.["1810GastosPagadosPorAnticipado"]?.PrimasDeSegunos?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Activos.GastosPagadosPorAnticipado.PrimasSeguros.MenorValorFiscal = (detContent?.Renglon43?.["1810GastosPagadosPorAnticipado"]?.PrimasDeSegunos?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Activos.GastosPagadosPorAnticipado.PrimasSeguros.MayorValorFiscal = (detContent?.Renglon43?.["1810GastosPagadosPorAnticipado"]?.PrimasDeSegunos?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Activos - GastosPagadosPorAnticipado - Arrendamientos
+
+            content.Activos.GastosPagadosPorAnticipado.Arrendamientos.ValorContable = (detContent?.Renglon43?.["1810GastosPagadosPorAnticipado"]?.Arrendamientos?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Activos.GastosPagadosPorAnticipado.Arrendamientos.MenorValorFiscal = (detContent?.Renglon43?.["1810GastosPagadosPorAnticipado"]?.Arrendamientos?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Activos.GastosPagadosPorAnticipado.Arrendamientos.MayorValorFiscal = (detContent?.Renglon43?.["1810GastosPagadosPorAnticipado"]?.Arrendamientos?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Activos - GastosPagadosPorAnticipado - Otros
+
+            content.Activos.GastosPagadosPorAnticipado.Otros.ValorContable = (detContent?.Renglon43?.["1810GastosPagadosPorAnticipado"]?.Otros?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Activos.GastosPagadosPorAnticipado.Otros.MenorValorFiscal = (detContent?.Renglon43?.["1810GastosPagadosPorAnticipado"]?.Otros?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Activos.GastosPagadosPorAnticipado.Otros.MayorValorFiscal = (detContent?.Renglon43?.["1810GastosPagadosPorAnticipado"]?.Otros?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Activos - ActivosImpuestosCorrientes - SaldosaFavor
+
+            content.Activos.ActivosImpuestosCorrientes.SaldosaFavor.ValorContable = (detContent?.Renglon43?.["1805AnticiposPorImpuestosCorrientes"]?.SaldoAFavorRenta?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Activos.ActivosImpuestosCorrientes.SaldosaFavor.MenorValorFiscal = (detContent?.Renglon43?.["1805AnticiposPorImpuestosCorrientes"]?.SaldoAFavorRenta?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Activos.ActivosImpuestosCorrientes.SaldosaFavor.MayorValorFiscal = (detContent?.Renglon43?.["1805AnticiposPorImpuestosCorrientes"]?.SaldoAFavorRenta?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Activos - ActivosImpuestosCorrientes - SaldosaFavorOtrosImpuestos
+
+            content.Activos.ActivosImpuestosCorrientes.SaldosaFavorOtrosImpuestos.ValorContable = (detContent?.Renglon43?.["1805AnticiposPorImpuestosCorrientes"]?.SaldosAFavorIVA?.SaldosContablesADiciembre31Parciales || 0) + (detContent?.Renglon43?.["1805AnticiposPorImpuestosCorrientes"]?.SaldoAFavorICA?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Activos.ActivosImpuestosCorrientes.SaldosaFavorOtrosImpuestos.MenorValorFiscal = (detContent?.Renglon43?.["1805AnticiposPorImpuestosCorrientes"]?.SaldosAFavorIVA?.AjustesParaLlegarASaldosFiscales3 || 0) + (detContent?.Renglon43?.["1805AnticiposPorImpuestosCorrientes"]?.SaldoAFavorICA?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Activos.ActivosImpuestosCorrientes.SaldosaFavorOtrosImpuestos.MayorValorFiscal = (detContent?.Renglon43?.["1805AnticiposPorImpuestosCorrientes"]?.SaldosAFavorIVA?.AjustesParaLlegarASaldosFiscales1 || 0) + (detContent?.Renglon43?.["1805AnticiposPorImpuestosCorrientes"]?.SaldoAFavorICA?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Activos - ActivosImpuestosCorrientes - AnticiposyOtros
+
+            content.Activos.ActivosImpuestosCorrientes.AnticiposyOtros.ValorContable = (detContent?.Renglon43?.["1805AnticiposPorImpuestosCorrientes"]?.AnticipoDelImpuestoDeRentaYDeSobretasa?.SaldosContablesADiciembre31Parciales || 0) + (detContent?.Renglon43?.["1805AnticiposPorImpuestosCorrientes"]?.RetencionesYAutorretencionesEnLaFuente?.SaldosContablesADiciembre31Parciales || 0) + (detContent?.Renglon43?.["1805AnticiposPorImpuestosCorrientes"]?.RetencionesDeIVA?.SaldosContablesADiciembre31Parciales || 0) + (detContent?.Renglon43?.["1805AnticiposPorImpuestosCorrientes"]?.RetencionesDeICA?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Activos.ActivosImpuestosCorrientes.AnticiposyOtros.MenorValorFiscal = (detContent?.Renglon43?.["1805AnticiposPorImpuestosCorrientes"]?.AnticipoDelImpuestoDeRentaYDeSobretasa?.AjustesParaLlegarASaldosFiscales3 || 0) + (detContent?.Renglon43?.["1805AnticiposPorImpuestosCorrientes"]?.RetencionesYAutorretencionesEnLaFuente?.AjustesParaLlegarASaldosFiscales3 || 0) + (detContent?.Renglon43?.["1805AnticiposPorImpuestosCorrientes"]?.RetencionesDeIVA?.AjustesParaLlegarASaldosFiscales3 || 0) + (detContent?.Renglon43?.["1805AnticiposPorImpuestosCorrientes"]?.RetencionesDeICA?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Activos.ActivosImpuestosCorrientes.AnticiposyOtros.MayorValorFiscal = (detContent?.Renglon43?.["1805AnticiposPorImpuestosCorrientes"]?.AnticipoDelImpuestoDeRentaYDeSobretasa?.AjustesParaLlegarASaldosFiscales1 || 0) + (detContent?.Renglon43?.["1805AnticiposPorImpuestosCorrientes"]?.RetencionesYAutorretencionesEnLaFuente?.AjustesParaLlegarASaldosFiscales1 || 0) + (detContent?.Renglon43?.["1805AnticiposPorImpuestosCorrientes"]?.RetencionesDeIVA?.AjustesParaLlegarASaldosFiscales1 || 0) + (detContent?.Renglon43?.["1805AnticiposPorImpuestosCorrientes"]?.RetencionesDeICA?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Activos - ActivosImpuestosDiferidos
+
+            content.Activos.ActivosImpuestosDiferidos.ValorContable = (detContent?.Renglon33?.["720539Vacaciones"]?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Activos - ActivosImpuestosCorrientes - PropiedadesPlantaEquipo - Terrenos
+
+            content.Activos.ActivosImpuestosCorrientes.PropiedadesPlantaEquipo.Terrenos.ValorContable = (actContent?.PropiedadesPlantasYEquipos?.Terrenos?.DatosContables?.ImporteAlComienzoDelPeriodo?.Costo || 0) + (actContent?.PropiedadesPlantasYEquipos?.Terrenos?.DatosContables?.ImporteAlComienzoDelPeriodo?.AjustePorRevaluacionesOReExpresiones || 0) + (actContent?.PropiedadesPlantasYEquipos?.Terrenos?.DatosContables?.Incrementos?.TransferenciasAdquisiciones || 0) + (actContent?.PropiedadesPlantasYEquipos?.Terrenos?.DatosContables?.Incrementos?.o || 0) + (actContent?.PropiedadesPlantasYEquipos?.Terrenos?.DatosContables?.Disminuciones?.TransferenciasEliminaciones || 0) + (actContent?.PropiedadesPlantasYEquipos?.Terrenos?.DatosContables?.Disminuciones?.CambiosEnValorRazonable || 0);
+
+            //TODO: quedo en I85 mirar lo que esta aca debajo ya que eso ya no es activos si no que renglones
+
+            content.Activos.ActivosImpuestosCorrientes.PropiedadesPlantaEquipo.Terrenos.MenorValorFiscal = (detContent?.Renglon43?.["1805AnticiposPorImpuestosCorrientes"]?.SaldoAFavorRenta?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Activos.ActivosImpuestosCorrientes.PropiedadesPlantaEquipo.Terrenos.MayorValorFiscal = (detContent?.Renglon43?.["1805AnticiposPorImpuestosCorrientes"]?.SaldoAFavorRenta?.AjustesParaLlegarASaldosFiscales1 || 0);
+
         }
         return esfPatrimonio;
     }
