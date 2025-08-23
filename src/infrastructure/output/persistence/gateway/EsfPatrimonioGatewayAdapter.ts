@@ -411,11 +411,34 @@ export class EsfPatrimonioGatewayAdapter implements FormsGatewayIntPort<FormEsfP
 
             content.Activos.ActivosImpuestosCorrientes.PropiedadesPlantaEquipo.Terrenos.ValorContable = (actContent?.PropiedadesPlantasYEquipos?.Terrenos?.DatosContables?.ImporteAlComienzoDelPeriodo?.Costo || 0) + (actContent?.PropiedadesPlantasYEquipos?.Terrenos?.DatosContables?.ImporteAlComienzoDelPeriodo?.AjustePorRevaluacionesOReExpresiones || 0) + (actContent?.PropiedadesPlantasYEquipos?.Terrenos?.DatosContables?.Incrementos?.TransferenciasAdquisiciones || 0) + (actContent?.PropiedadesPlantasYEquipos?.Terrenos?.DatosContables?.Incrementos?.o || 0) + (actContent?.PropiedadesPlantasYEquipos?.Terrenos?.DatosContables?.Disminuciones?.TransferenciasEliminaciones || 0) + (actContent?.PropiedadesPlantasYEquipos?.Terrenos?.DatosContables?.Disminuciones?.CambiosEnValorRazonable || 0);
 
-            //TODO: quedo en I85 mirar lo que esta aca debajo ya que eso ya no es activos si no que renglones
+            content.Activos.ActivosImpuestosCorrientes.PropiedadesPlantaEquipo.Terrenos.MenorValorFiscal = (detContent?.Renglon42?.["1704Terrenos"]?.AjustesParaLlegarASaldosFiscales3AjustesParaLlegarASaldosFiscales3 || 0);
 
-            content.Activos.ActivosImpuestosCorrientes.PropiedadesPlantaEquipo.Terrenos.MenorValorFiscal = (detContent?.Renglon43?.["1805AnticiposPorImpuestosCorrientes"]?.SaldoAFavorRenta?.AjustesParaLlegarASaldosFiscales3 || 0);
+            content.Activos.ActivosImpuestosCorrientes.PropiedadesPlantaEquipo.Terrenos.MayorValorFiscal = (detContent?.Renglon42?.["1704Terrenos"]?.AjustesParaLlegarASaldosFiscales1 || 0);
 
-            content.Activos.ActivosImpuestosCorrientes.PropiedadesPlantaEquipo.Terrenos.MayorValorFiscal = (detContent?.Renglon43?.["1805AnticiposPorImpuestosCorrientes"]?.SaldoAFavorRenta?.AjustesParaLlegarASaldosFiscales1 || 0);
+            // Activos - ActivosImpuestosCorrientes - PropiedadesPlantaEquipo - ConstruccionesEnProceso
+
+            content.Activos.ActivosImpuestosCorrientes.PropiedadesPlantaEquipo.ConstruccionesEnProceso.ValorContable = (actContent?.PropiedadesPlantasYEquipos?.ConstruccionesEnProceso?.DatosContables?.ImporteAlComienzoDelPeriodo?.Costo || 0) + (actContent?.PropiedadesPlantasYEquipos?.ConstruccionesEnProceso?.DatosContables?.ImporteAlComienzoDelPeriodo?.AjustePorRevaluacionesOReExpresiones || 0) + (actContent?.PropiedadesPlantasYEquipos?.ConstruccionesEnProceso?.DatosContables?.Incrementos?.TransferenciasAdquisiciones || 0) + (actContent?.PropiedadesPlantasYEquipos?.ConstruccionesEnProceso?.DatosContables?.Incrementos?.o || 0) + (actContent?.PropiedadesPlantasYEquipos?.ConstruccionesEnProceso?.DatosContables?.Disminuciones?.TransferenciasEliminaciones || 0) + (actContent?.PropiedadesPlantasYEquipos?.ConstruccionesEnProceso?.DatosContables?.Disminuciones?.CambiosEnValorRazonable || 0);
+
+            content.Activos.ActivosImpuestosCorrientes.PropiedadesPlantaEquipo.ConstruccionesEnProceso.MenorValorFiscal = (detContent?.Renglon42?.["1708ConstruccionesEnCurso"]?.AjustesParaLlegarASaldosFiscales3AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Activos.ActivosImpuestosCorrientes.PropiedadesPlantaEquipo.ConstruccionesEnProceso.MayorValorFiscal = (detContent?.Renglon42?.["1708ConstruccionesEnCurso"]?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Activos - ActivosImpuestosCorrientes - PropiedadesPlantaEquipo - Edificios - Costo
+
+            content.Activos.ActivosImpuestosCorrientes.PropiedadesPlantaEquipo.Edificios.Costo.ValorContable = (actContent?.PropiedadesPlantasYEquipos?.Edificios?.DatosContables?.ImporteAlComienzoDelPeriodo?.Costo || 0) + (actContent?.PropiedadesPlantasYEquipos?.Edificios?.DatosContables?.Incrementos?.TransferenciasAdquisiciones || 0) - (actContent?.PropiedadesPlantasYEquipos?.Edificios?.DatosContables?.Disminuciones?.TransferenciasEliminaciones || 0);
+
+
+            content.Activos.ActivosImpuestosCorrientes.PropiedadesPlantaEquipo.Edificios.Costo.MayorValorFiscal = (detContent?.Renglon42?.["1716Edificaciones"]?.AjustesParaLlegarASaldosFiscales1 || 0) - content.Activos.ActivosImpuestosCorrientes.PropiedadesPlantaEquipo.Edificios.Costo.ValorContable;
+
+            // Activos - ActivosImpuestosCorrientes - PropiedadesPlantaEquipo - Edificios - AjusteAcumuladoRevaluacionesReexpresiones
+
+            content.Activos.ActivosImpuestosCorrientes.PropiedadesPlantaEquipo.Edificios.AjusteAcumuladoRevaluacionesReexpresiones.ValorContable = (actContent?.PropiedadesPlantasYEquipos?.Edificios?.DatosContables?.ImporteAlComienzoDelPeriodo?.AjustePorRevaluacionesOReExpresiones || 0) + (actContent?.PropiedadesPlantasYEquipos?.Edificios?.DatosContables?.Incrementos?.o || 0) - (actContent?.PropiedadesPlantasYEquipos?.Edificios?.DatosContables?.Disminuciones?.CambiosEnValorRazonable || 0);
+
+             // Activos - ActivosImpuestosCorrientes - PropiedadesPlantaEquipo - ActivosTangiblesExploracionEvaluacionRecursosMinerales
+
+            content.Activos.ActivosImpuestosCorrientes.PropiedadesPlantaEquipo.ActivosTangiblesExploracionEvaluacionRecursosMinerales.ValorContable = (actContent?.PropiedadesPlantasYEquipos?.ActivosTangiblesDeExploracionYEvaluacion?.DatosContables?.ImporteAlComienzoDelPeriodo?.Costo || 0) + (actContent?.PropiedadesPlantasYEquipos?.ActivosTangiblesDeExploracionYEvaluacion?.DatosContables?.ImporteAlComienzoDelPeriodo?.AjustePorRevaluacionesOReExpresiones || 0) + (actContent?.PropiedadesPlantasYEquipos?.ActivosTangiblesDeExploracionYEvaluacion?.DatosContables?.Incrementos?.TransferenciasAdquisiciones || 0) + (actContent?.PropiedadesPlantasYEquipos?.ActivosTangiblesDeExploracionYEvaluacion?.DatosContables?.Incrementos?.o || 0) + (actContent?.PropiedadesPlantasYEquipos?.ActivosTangiblesDeExploracionYEvaluacion?.DatosContables?.Disminuciones?.TransferenciasEliminaciones || 0) + (actContent?.PropiedadesPlantasYEquipos?.ActivosTangiblesDeExploracionYEvaluacion?.DatosContables?.Disminuciones?.CambiosEnValorRazonable || 0);
+
+            //TODO: quedo en G90
 
         }
         return esfPatrimonio;
