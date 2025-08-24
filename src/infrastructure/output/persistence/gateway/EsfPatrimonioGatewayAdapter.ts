@@ -407,37 +407,37 @@ export class EsfPatrimonioGatewayAdapter implements FormsGatewayIntPort<FormEsfP
 
             content.Activos.ActivosImpuestosDiferidos.ValorContable = (detContent?.Renglon33?.["720539Vacaciones"]?.AjustesParaLlegarASaldosFiscales1 || 0);
 
-            // Activos - ActivosImpuestosCorrientes - PropiedadesPlantaEquipo - Terrenos
+            // Activos - PropiedadesPlantaEquipo - Terrenos
 
-            content.Activos.ActivosImpuestosCorrientes.PropiedadesPlantaEquipo.Terrenos.ValorContable = (actContent?.PropiedadesPlantasYEquipos?.Terrenos?.DatosContables?.ImporteAlComienzoDelPeriodo?.Costo || 0) + (actContent?.PropiedadesPlantasYEquipos?.Terrenos?.DatosContables?.ImporteAlComienzoDelPeriodo?.AjustePorRevaluacionesOReExpresiones || 0) + (actContent?.PropiedadesPlantasYEquipos?.Terrenos?.DatosContables?.Incrementos?.TransferenciasAdquisiciones || 0) + (actContent?.PropiedadesPlantasYEquipos?.Terrenos?.DatosContables?.Incrementos?.o || 0) + (actContent?.PropiedadesPlantasYEquipos?.Terrenos?.DatosContables?.Disminuciones?.TransferenciasEliminaciones || 0) + (actContent?.PropiedadesPlantasYEquipos?.Terrenos?.DatosContables?.Disminuciones?.CambiosEnValorRazonable || 0);
+            content.Activos.PropiedadesPlantaEquipo.Terrenos.ValorContable = (actContent?.PropiedadesPlantasYEquipos?.Terrenos?.DatosContables?.ImporteAlComienzoDelPeriodo?.Costo || 0) + (actContent?.PropiedadesPlantasYEquipos?.Terrenos?.DatosContables?.ImporteAlComienzoDelPeriodo?.AjustePorRevaluacionesOReExpresiones || 0) + (actContent?.PropiedadesPlantasYEquipos?.Terrenos?.DatosContables?.Incrementos?.TransferenciasAdquisiciones || 0) + (actContent?.PropiedadesPlantasYEquipos?.Terrenos?.DatosContables?.Incrementos?.o || 0) - (actContent?.PropiedadesPlantasYEquipos?.Terrenos?.DatosContables?.Disminuciones?.TransferenciasEliminaciones || 0) - (actContent?.PropiedadesPlantasYEquipos?.Terrenos?.DatosContables?.Disminuciones?.CambiosEnValorRazonable || 0);
 
-            content.Activos.ActivosImpuestosCorrientes.PropiedadesPlantaEquipo.Terrenos.MenorValorFiscal = (detContent?.Renglon42?.["1704Terrenos"]?.AjustesParaLlegarASaldosFiscales3AjustesParaLlegarASaldosFiscales3 || 0);
+            content.Activos.PropiedadesPlantaEquipo.Terrenos.MenorValorFiscal = (detContent?.Renglon42?.["1704Terrenos"]?.AjustesParaLlegarASaldosFiscales3AjustesParaLlegarASaldosFiscales3 || 0);
 
-            content.Activos.ActivosImpuestosCorrientes.PropiedadesPlantaEquipo.Terrenos.MayorValorFiscal = (detContent?.Renglon42?.["1704Terrenos"]?.AjustesParaLlegarASaldosFiscales1 || 0);
+            content.Activos.PropiedadesPlantaEquipo.Terrenos.MayorValorFiscal = (detContent?.Renglon42?.["1704Terrenos"]?.AjustesParaLlegarASaldosFiscales1 || 0);
 
-            // Activos - ActivosImpuestosCorrientes - PropiedadesPlantaEquipo - ConstruccionesEnProceso
+            // Activos - PropiedadesPlantaEquipo - ConstruccionesEnProceso
 
-            content.Activos.ActivosImpuestosCorrientes.PropiedadesPlantaEquipo.ConstruccionesEnProceso.ValorContable = (actContent?.PropiedadesPlantasYEquipos?.ConstruccionesEnProceso?.DatosContables?.ImporteAlComienzoDelPeriodo?.Costo || 0) + (actContent?.PropiedadesPlantasYEquipos?.ConstruccionesEnProceso?.DatosContables?.ImporteAlComienzoDelPeriodo?.AjustePorRevaluacionesOReExpresiones || 0) + (actContent?.PropiedadesPlantasYEquipos?.ConstruccionesEnProceso?.DatosContables?.Incrementos?.TransferenciasAdquisiciones || 0) + (actContent?.PropiedadesPlantasYEquipos?.ConstruccionesEnProceso?.DatosContables?.Incrementos?.o || 0) + (actContent?.PropiedadesPlantasYEquipos?.ConstruccionesEnProceso?.DatosContables?.Disminuciones?.TransferenciasEliminaciones || 0) + (actContent?.PropiedadesPlantasYEquipos?.ConstruccionesEnProceso?.DatosContables?.Disminuciones?.CambiosEnValorRazonable || 0);
+            content.Activos.PropiedadesPlantaEquipo.ConstruccionesEnProceso.ValorContable = (actContent?.PropiedadesPlantasYEquipos?.ConstruccionesEnProceso?.DatosContables?.ImporteAlComienzoDelPeriodo?.Costo || 0) + (actContent?.PropiedadesPlantasYEquipos?.ConstruccionesEnProceso?.DatosContables?.ImporteAlComienzoDelPeriodo?.AjustePorRevaluacionesOReExpresiones || 0) + (actContent?.PropiedadesPlantasYEquipos?.ConstruccionesEnProceso?.DatosContables?.Incrementos?.TransferenciasAdquisiciones || 0) + (actContent?.PropiedadesPlantasYEquipos?.ConstruccionesEnProceso?.DatosContables?.Incrementos?.o || 0) - (actContent?.PropiedadesPlantasYEquipos?.ConstruccionesEnProceso?.DatosContables?.Disminuciones?.TransferenciasEliminaciones || 0) - (actContent?.PropiedadesPlantasYEquipos?.ConstruccionesEnProceso?.DatosContables?.Disminuciones?.CambiosEnValorRazonable || 0);
 
-            content.Activos.ActivosImpuestosCorrientes.PropiedadesPlantaEquipo.ConstruccionesEnProceso.MenorValorFiscal = (detContent?.Renglon42?.["1708ConstruccionesEnCurso"]?.AjustesParaLlegarASaldosFiscales3AjustesParaLlegarASaldosFiscales3 || 0);
+            content.Activos.PropiedadesPlantaEquipo.ConstruccionesEnProceso.MenorValorFiscal = (detContent?.Renglon42?.["1708ConstruccionesEnCurso"]?.AjustesParaLlegarASaldosFiscales3AjustesParaLlegarASaldosFiscales3 || 0);
 
-            content.Activos.ActivosImpuestosCorrientes.PropiedadesPlantaEquipo.ConstruccionesEnProceso.MayorValorFiscal = (detContent?.Renglon42?.["1708ConstruccionesEnCurso"]?.AjustesParaLlegarASaldosFiscales1 || 0);
+            content.Activos.PropiedadesPlantaEquipo.ConstruccionesEnProceso.MayorValorFiscal = (detContent?.Renglon42?.["1708ConstruccionesEnCurso"]?.AjustesParaLlegarASaldosFiscales1 || 0);
 
-            // Activos - ActivosImpuestosCorrientes - PropiedadesPlantaEquipo - Edificios - Costo
+            // Activos -  PropiedadesPlantaEquipo - Edificios - Costo
 
-            content.Activos.ActivosImpuestosCorrientes.PropiedadesPlantaEquipo.Edificios.Costo.ValorContable = (actContent?.PropiedadesPlantasYEquipos?.Edificios?.DatosContables?.ImporteAlComienzoDelPeriodo?.Costo || 0) + (actContent?.PropiedadesPlantasYEquipos?.Edificios?.DatosContables?.Incrementos?.TransferenciasAdquisiciones || 0) - (actContent?.PropiedadesPlantasYEquipos?.Edificios?.DatosContables?.Disminuciones?.TransferenciasEliminaciones || 0);
+            content.Activos.PropiedadesPlantaEquipo.Edificios.Costo.ValorContable = (actContent?.PropiedadesPlantasYEquipos?.Edificios?.DatosContables?.ImporteAlComienzoDelPeriodo?.Costo || 0) + (actContent?.PropiedadesPlantasYEquipos?.Edificios?.DatosContables?.Incrementos?.TransferenciasAdquisiciones || 0) - (actContent?.PropiedadesPlantasYEquipos?.Edificios?.DatosContables?.Disminuciones?.TransferenciasEliminaciones || 0);
 
-            content.Activos.ActivosImpuestosCorrientes.PropiedadesPlantaEquipo.Edificios.Costo.MayorValorFiscal = (detContent?.Renglon42?.["1716Edificaciones"]?.AjustesParaLlegarASaldosFiscales1 || 0) - content.Activos.ActivosImpuestosCorrientes.PropiedadesPlantaEquipo.Edificios.Costo.ValorContable;
+            content.Activos.PropiedadesPlantaEquipo.Edificios.Costo.MayorValorFiscal = (detContent?.Renglon42?.["1716Edificaciones"]?.AjustesParaLlegarASaldosFiscales1 || 0) - content.Activos.PropiedadesPlantaEquipo.Edificios.Costo.ValorContable;
 
-            // Activos - ActivosImpuestosCorrientes - PropiedadesPlantaEquipo - Edificios - AjusteAcumuladoRevaluacionesReexpresiones
+            // Activos - PropiedadesPlantaEquipo - Edificios - AjusteAcumuladoRevaluacionesReexpresiones
 
-            content.Activos.ActivosImpuestosCorrientes.PropiedadesPlantaEquipo.Edificios.AjusteAcumuladoRevaluacionesReexpresiones.ValorContable = (actContent?.PropiedadesPlantasYEquipos?.Edificios?.DatosContables?.ImporteAlComienzoDelPeriodo?.AjustePorRevaluacionesOReExpresiones || 0) + (actContent?.PropiedadesPlantasYEquipos?.Edificios?.DatosContables?.Incrementos?.o || 0) - (actContent?.PropiedadesPlantasYEquipos?.Edificios?.DatosContables?.Disminuciones?.CambiosEnValorRazonable || 0);
+            content.Activos.PropiedadesPlantaEquipo.Edificios.AjusteAcumuladoRevaluacionesReexpresiones.ValorContable = (actContent?.PropiedadesPlantasYEquipos?.Edificios?.DatosContables?.ImporteAlComienzoDelPeriodo?.AjustePorRevaluacionesOReExpresiones || 0) + (actContent?.PropiedadesPlantasYEquipos?.Edificios?.DatosContables?.Incrementos?.o || 0) - (actContent?.PropiedadesPlantasYEquipos?.Edificios?.DatosContables?.Disminuciones?.CambiosEnValorRazonable || 0);
 
-             // Activos - ActivosImpuestosCorrientes - PropiedadesPlantaEquipo - ActivosTangiblesExploracionEvaluacionRecursosMinerales
+             // Activos - PropiedadesPlantaEquipo - ActivosTangiblesExploracionEvaluacionRecursosMinerales
 
-            content.Activos.ActivosImpuestosCorrientes.PropiedadesPlantaEquipo.ActivosTangiblesExploracionEvaluacionRecursosMinerales.ValorContable = (actContent?.PropiedadesPlantasYEquipos?.ActivosTangiblesDeExploracionYEvaluacion?.DatosContables?.ImporteAlComienzoDelPeriodo?.Costo || 0) + (actContent?.PropiedadesPlantasYEquipos?.ActivosTangiblesDeExploracionYEvaluacion?.DatosContables?.ImporteAlComienzoDelPeriodo?.AjustePorRevaluacionesOReExpresiones || 0) + (actContent?.PropiedadesPlantasYEquipos?.ActivosTangiblesDeExploracionYEvaluacion?.DatosContables?.Incrementos?.TransferenciasAdquisiciones || 0) + (actContent?.PropiedadesPlantasYEquipos?.ActivosTangiblesDeExploracionYEvaluacion?.DatosContables?.Incrementos?.o || 0) + (actContent?.PropiedadesPlantasYEquipos?.ActivosTangiblesDeExploracionYEvaluacion?.DatosContables?.Disminuciones?.TransferenciasEliminaciones || 0) + (actContent?.PropiedadesPlantasYEquipos?.ActivosTangiblesDeExploracionYEvaluacion?.DatosContables?.Disminuciones?.CambiosEnValorRazonable || 0);
+            content.Activos.PropiedadesPlantaEquipo.ActivosTangiblesExploracionEvaluacionRecursosMinerales.ValorContable = (actContent?.PropiedadesPlantasYEquipos?.ActivosTangiblesDeExploracionYEvaluacion?.DatosContables?.ImporteAlComienzoDelPeriodo?.Costo || 0) + (actContent?.PropiedadesPlantasYEquipos?.ActivosTangiblesDeExploracionYEvaluacion?.DatosContables?.ImporteAlComienzoDelPeriodo?.AjustePorRevaluacionesOReExpresiones || 0) + (actContent?.PropiedadesPlantasYEquipos?.ActivosTangiblesDeExploracionYEvaluacion?.DatosContables?.Incrementos?.TransferenciasAdquisiciones || 0) + (actContent?.PropiedadesPlantasYEquipos?.ActivosTangiblesDeExploracionYEvaluacion?.DatosContables?.Incrementos?.o || 0) - (actContent?.PropiedadesPlantasYEquipos?.ActivosTangiblesDeExploracionYEvaluacion?.DatosContables?.Disminuciones?.TransferenciasEliminaciones || 0) - (actContent?.PropiedadesPlantasYEquipos?.ActivosTangiblesDeExploracionYEvaluacion?.DatosContables?.Disminuciones?.CambiosEnValorRazonable || 0);
 
-            // Activos - ActivosImpuestosCorrientes - PropiedadesPlantaEquipo - DepreciacionAcumuladaPropiedadesPlantaEquipo - va antes ya que dependen los iguientes
+            // Activos - PropiedadesPlantaEquipo - DepreciacionAcumuladaPropiedadesPlantaEquipo - va antes ya que dependen los iguientes
 
             content.Activos.PropiedadesPlantaEquipo.DepreciacionAcumuladaPropiedadesPlantaEquipo.ValorContable = (actContent?.PropiedadesPlantasYEquipos?.TotalPropiedadesPlantasEquipo?.Depreciacion?.PorCosto || 0) + (actContent?.PropiedadesPlantasYEquipos?.TotalPropiedadesPlantasEquipo?.Depreciacion?.EfectoDeConversion || 0) + (actContent?.PropiedadesPlantasYEquipos?.TotalPropiedadesPlantasEquipo?.Depreciacion?.AjustePorRevaluacionesOReExpresiones || 0);
 
@@ -445,21 +445,141 @@ export class EsfPatrimonioGatewayAdapter implements FormsGatewayIntPort<FormEsfP
 
             content.Activos.PropiedadesPlantaEquipo.DepreciacionAcumuladaPropiedadesPlantaEquipo.MayorValorFiscal = (detContent?.Renglon42?.["1768DepreciacionAcumulada"]?.AjustesParaLlegarASaldosFiscales1 || 0);
 
-            // Activos - ActivosImpuestosCorrientes - PropiedadesPlantaEquipo - DeterioroAcumuladoPropiedadesPlantaEquipo - va antes ya que dependen los iguientes
+            // Activos - PropiedadesPlantaEquipo - DeterioroAcumuladoPropiedadesPlantaEquipo - va antes ya que dependen los iguientes
 
             content.Activos.PropiedadesPlantaEquipo.DeterioroAcumuladoPropiedadesPlantaEquipo.ValorContable = (actContent?.PropiedadesPlantasYEquipos?.TotalPropiedadesPlantasEquipo?.DeterioroAcumuladoAlFinalDelPeriodo || 0);
 
-            // Activos - ActivosImpuestosCorrientes - PropiedadesPlantaEquipo - OtrasPropiedadesPlantaEquipo - Costo
+            // Activos - PropiedadesPlantaEquipo - OtrasPropiedadesPlantaEquipo - Costo
             content.Activos.PropiedadesPlantaEquipo.OtrasPropiedadesPlantaEquipo.Costo.ValorContable = (actContent?.PropiedadesPlantasYEquipos?.TotalPropiedadesPlantasEquipo?.DatosContables?.ImporteNetoAlFinalDelPeriodo?.Costo || 0) + (actContent?.PropiedadesPlantasYEquipos?.TotalPropiedadesPlantasEquipo?.DatosContables?.ImporteNetoAlFinalDelPeriodo?.AjustePorRevaluacionesOReExpresiones || 0) - (content?.Activos?.PropiedadesPlantaEquipo?.Terrenos?.ValorContable || 0) - (content?.Activos?.PropiedadesPlantaEquipo?.ConstruccionesEnProceso?.ValorContable || 0) - (content?.Activos?.PropiedadesPlantaEquipo?.Edificios?.Costo?.ValorContable || 0) - (content?.Activos?.PropiedadesPlantaEquipo?.Edificios?.AjusteAcumuladoRevaluacionesReexpresiones?.ValorContable || 0) - (content?.Activos?.PropiedadesPlantaEquipo?.ActivosTangiblesExploracionEvaluacionRecursosMinerales?.ValorContable || 0) + (content?.Activos?.PropiedadesPlantaEquipo?.DepreciacionAcumuladaPropiedadesPlantaEquipo?.ValorContable || 0) + (content?.Activos?.PropiedadesPlantaEquipo?.DeterioroAcumuladoPropiedadesPlantaEquipo?.ValorContable || 0);
 
             content.Activos.PropiedadesPlantaEquipo.OtrasPropiedadesPlantaEquipo.Costo.MenorValorFiscal = (detContent?.Renglon42?.["1720MaquinariaYEquipo"]?.AjustesParaLlegarASaldosFiscales3 || 0) - (detContent?.Renglon42?.["1740FlotaYEquipoDeTransporte"]?.AjustesParaLlegarASaldosFiscales3 || 0);
 
             content.Activos.PropiedadesPlantaEquipo.OtrasPropiedadesPlantaEquipo.Costo.MayorValorFiscal = (detContent?.Renglon42?.["1720MaquinariaYEquipo"]?.AjustesParaLlegarASaldosFiscales1 || 0) - (detContent?.Renglon42?.["1740FlotaYEquipoDeTransporte"]?.AjustesParaLlegarASaldosFiscales1 || 0);
 
-            // Activos - ActivosImpuestosCorrientes - PropiedadesPlantaEquipo - OtrasPropiedadesPlantaEquipo - AjusteAcumuladoRevaluacionesReexpresiones
+            // Activos - PropiedadesPlantaEquipo - OtrasPropiedadesPlantaEquipo - AjusteAcumuladoRevaluacionesReexpresiones
             content.Activos.PropiedadesPlantaEquipo.OtrasPropiedadesPlantaEquipo.AjusteAcumuladoRevaluacionesReexpresiones.ValorContable = ((actContent?.PropiedadesPlantasYEquipos?.TotalPropiedadesPlantasEquipo?.DatosContables?.ImporteAlComienzoDelPeriodo?.AjustePorRevaluacionesOReExpresiones || 0) + (actContent?.PropiedadesPlantasYEquipos?.TotalPropiedadesPlantasEquipo?.DatosContables?.Incrementos?.CambiosEnValorRazonable || 0) - (actContent?.PropiedadesPlantasYEquipos?.TotalPropiedadesPlantasEquipo?.DatosContables?.Disminuciones?.CambiosEnValorRazonable || 0)) - (content?.Activos?.PropiedadesPlantaEquipo?.Edificios?.AjusteAcumuladoRevaluacionesReexpresiones?.ValorContable || 0);
 
-            //TODO: quedo en G97
+            // Activos - ActivosIntangibles - ActivosIntangiblesDistintosPlusvalia - ActivosIntangiblesExploracionEvaluacionRecursosMinerales
+
+            content.Activos.ActivosIntangibles.ActivosIntangiblesDistintosPlusvalia.ActivosIntangiblesExploracionEvaluacionRecursosMinerales.ValorContable = (actContent?.ActivosIntangibles?.ActivosIntangiblesDeExploracionYEvaluacion?.DatosContables?.ImporteAlComienzoDelPeriodo?.Costo || 0) + (actContent?.ActivosIntangibles?.ActivosIntangiblesDeExploracionYEvaluacion?.DatosContables?.ImporteAlComienzoDelPeriodo?.AjustePorRevaluacionesOReExpresiones || 0) + (actContent?.ActivosIntangibles?.ActivosIntangiblesDeExploracionYEvaluacion?.DatosContables?.Incrementos?.TransferenciasAdquisiciones || 0) + (actContent?.ActivosIntangibles?.ActivosIntangiblesDeExploracionYEvaluacion?.DatosContables?.Incrementos?.o || 0) - (actContent?.ActivosIntangibles?.ConstruccionesEnProceso?.DatosContables?.Disminuciones?.TransferenciasEliminaciones || 0) - (actContent?.ActivosIntangibles?.ActivosIntangiblesDeExploracionYEvaluacion?.DatosContables?.Disminuciones?.CambiosEnValorRazonable || 0);
+
+            content.Activos.ActivosIntangibles.ActivosIntangiblesDistintosPlusvalia.ActivosIntangiblesExploracionEvaluacionRecursosMinerales.MenorValorFiscal = (detContent?.Renglon40?.["1507ActivosIntangiblesExploracionYEvaluacionDeRecursosMinerales"]?.AjustesParaLlegarASaldosFiscales3AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Activos.ActivosIntangibles.ActivosIntangiblesDistintosPlusvalia.ActivosIntangiblesExploracionEvaluacionRecursosMinerales.MayorValorFiscal = (detContent?.Renglon40?.["1507ActivosIntangiblesExploracionYEvaluacionDeRecursosMinerales"]?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Activos - ActivosIntangibles - ActivosIntangiblesDistintosPlusvalia - MarcasPatentesLicenciasOtrosDerechos - Costo
+
+            content.Activos.ActivosIntangibles.ActivosIntangiblesDistintosPlusvalia.MarcasPatentesLicenciasOtrosDerechos.Costo.ValorContable = (actContent?.ActivosIntangibles?.MarcasComerciales?.DatosContables?.ImporteAlComienzoDelPeriodo?.Costo || 0) + (actContent?.ActivosIntangibles?.LicenciasYFranquicias?.DatosContables?.ImporteAlComienzoDelPeriodo?.Costo || 0) + (actContent?.ActivosIntangibles?.MarcasComerciales?.DatosContables?.Incrementos?.TransferenciasAdquisiciones || 0) + (actContent?.ActivosIntangibles?.LicenciasYFranquicias?.DatosContables?.Incrementos?.TransferenciasAdquisiciones || 0) - (actContent?.ActivosIntangibles?.MarcasComerciales?.DatosContables?.Disminuciones?.TransferenciasEliminaciones || 0) - (actContent?.ActivosIntangibles?.LicenciasYFranquicias?.DatosContables?.Disminuciones?.TransferenciasEliminaciones || 0);
+
+            content.Activos.ActivosIntangibles.ActivosIntangiblesDistintosPlusvalia.MarcasPatentesLicenciasOtrosDerechos.Costo.MenorValorFiscal = (detContent?.Renglon40?.["1510MarcasPatentesYLicencias"]?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Activos.ActivosIntangibles.ActivosIntangiblesDistintosPlusvalia.MarcasPatentesLicenciasOtrosDerechos.Costo.MayorValorFiscal = (detContent?.Renglon40?.["1510MarcasPatentesYLicencias"]?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Activos - ActivosIntangibles - ActivosIntangiblesDistintosPlusvalia - MarcasPatentesLicenciasOtrosDerechos - AjusteAcumuladoRevaluacionesReexpresiones
+
+            content.Activos.ActivosIntangibles.ActivosIntangiblesDistintosPlusvalia.MarcasPatentesLicenciasOtrosDerechos.AjusteAcumuladoRevaluacionesReexpresiones.ValorContable = (actContent?.ActivosIntangibles?.MarcasComerciales?.DatosContables?.ImporteAlComienzoDelPeriodo?.AjustePorRevaluacionesOReExpresiones || 0) + (actContent?.ActivosIntangibles?.LicenciasYFranquicias?.DatosContables?.ImporteAlComienzoDelPeriodo?.AjustePorRevaluacionesOReExpresiones || 0) + (actContent?.ActivosIntangibles?.MarcasComerciales?.DatosContables?.Incrementos?.CambiosEnValorRazonable || 0) + (actContent?.ActivosIntangibles?.LicenciasYFranquicias?.DatosContables?.Incrementos?.CambiosEnValorRazonable || 0) - (actContent?.ActivosIntangibles?.MarcasComerciales?.DatosContables?.Disminuciones?.CambiosEnValorRazonable || 0) - (actContent?.ActivosIntangibles?.LicenciasYFranquicias?.DatosContables?.Disminuciones?.CambiosEnValorRazonable || 0);
+
+            // Activos - ActivosIntangibles - ActivosIntangiblesDistintosPlusvalia - AmortizacionAcumuladaActivosIntangiblesDistintosPlusvalia
+
+            content.Activos.ActivosIntangibles.ActivosIntangiblesDistintosPlusvalia.AmortizacionAcumuladaActivosIntangiblesDistintosPlusvalia.ValorContable = (actContent?.ActivosIntangibles?.TotalActivosIntangibles?.DatosContables?.Depreciacion?.PorCosto || 0) + (actContent?.ActivosIntangibles?.TotalActivosIntangibles?.DatosContables?.Depreciacion?.AjustePorRevaluacionesOReExpresiones || 0);
+
+            content.Activos.ActivosIntangibles.ActivosIntangiblesDistintosPlusvalia.AmortizacionAcumuladaActivosIntangiblesDistintosPlusvalia.MenorValorFiscal = (detContent?.Renglon40?.["1558AmortizacionAcumulada"]?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Activos.ActivosIntangibles.ActivosIntangiblesDistintosPlusvalia.AmortizacionAcumuladaActivosIntangiblesDistintosPlusvalia.MayorValorFiscal = (detContent?.Renglon40?.["1558AmortizacionAcumulada"]?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Activos - ActivosIntangibles - ActivosIntangiblesDistintosPlusvalia - DeterioroAcumuladoActivosIntangiblesDistintosPlusvalia
+
+            content.Activos.ActivosIntangibles.ActivosIntangiblesDistintosPlusvalia.DeterioroAcumuladoActivosIntangiblesDistintosPlusvalia.ValorContable = (actContent?.ActivosIntangibles?.TotalActivosIntangibles?.DatosContables?.DeterioroAcumuladoAlFinalDelPeriodo || 0);
+
+            // Activos - ActivosIntangibles - ActivosIntangiblesDistintosPlusvalia - OtrosActivosIntangibles - AjusteAcumuladoRevaluacionesReexpresiones
+
+            content.Activos.ActivosIntangibles.ActivosIntangiblesDistintosPlusvalia.OtrosActivosIntangibles.AjusteAcumuladoRevaluacionesReexpresiones.ValorContable = ((actContent?.ActivosIntangibles?.TotalActivosIntangibles?.DatosContables?.ImporteAlComienzoDelPeriodo?.AjustePorRevaluacionesOReExpresiones || 0) + (actContent?.ActivosIntangibles?.TotalActivosIntangibles?.DatosContables?.Incrementos?.CambiosEnValorRazonable || 0) - (actContent?.ActivosIntangibles?.TotalActivosIntangibles?.DatosContables?.Disminuciones?.CambiosEnValorRazonable || 0)) - (content?.Activos?.ActivosIntangibles?.ActivosIntangiblesDistintosPlusvalia?.AmortizacionAcumuladaActivosIntangiblesDistintosPlusvalia?.ValorContable || 0) - (content?.Activos?.ActivosIntangibles?.ActivosIntangiblesDistintosPlusvalia?.DeterioroAcumuladoActivosIntangiblesDistintosPlusvalia?.ValorContable || 0); 
+
+            // Activos - ActivosIntangibles - ActivosIntangiblesDistintosPlusvalia - OtrosActivosIntangibles - Costo
+
+            content.Activos.ActivosIntangibles.ActivosIntangiblesDistintosPlusvalia.OtrosActivosIntangibles.Costo.ValorContable = ((actContent?.ActivosIntangibles?.TotalActivosIntangibles?.DatosContables?.ImporteNetoAlFinalDelPeriodo?.Costo || 0) + (actContent?.ActivosIntangibles?.TotalActivosIntangibles?.DatosContables?.ImporteNetoAlFinalDelPeriodo?.AjustePorRevaluacionesOReExpresiones || 0)) - ((content?.Activos?.ActivosIntangibles?.ActivosIntangiblesDistintosPlusvalia?.AcuerdosConcesionActivoIntangible?.ValorContable || 0) + (content?.Activos?.ActivosIntangibles?.ActivosIntangiblesDistintosPlusvalia?.ActivosIntangiblesExploracionEvaluacionRecursosMinerales?.ValorContable || 0) + (content?.Activos?.ActivosIntangibles?.ActivosIntangiblesDistintosPlusvalia?.MarcasPatentesLicenciasOtrosDerechos?.Costo?.ValorContable || 0) + (content?.Activos?.ActivosIntangibles?.ActivosIntangiblesDistintosPlusvalia?.MarcasPatentesLicenciasOtrosDerechos?.AjusteAcumuladoRevaluacionesReexpresiones?.ValorContable || 0) + (content?.Activos?.ActivosIntangibles?.ActivosIntangiblesDistintosPlusvalia?.ArrendamientoFinanciero?.Costo?.ValorContable || 0) + (content?.Activos?.ActivosIntangibles?.ActivosIntangiblesDistintosPlusvalia?.ArrendamientoFinanciero?.Costo?.ValorContable || 0)) - (content?.Activos?.ActivosIntangibles?.ActivosIntangiblesDistintosPlusvalia?.OtrosActivosIntangibles?.AjusteAcumuladoRevaluacionesReexpresiones?.ValorContable || 0) - (content?.Activos?.ActivosIntangibles?.ActivosIntangiblesDistintosPlusvalia?.AmortizacionAcumuladaActivosIntangiblesDistintosPlusvalia?.ValorContable || 0) - (content?.Activos?.ActivosIntangibles?.ActivosIntangiblesDistintosPlusvalia?.DeterioroAcumuladoActivosIntangiblesDistintosPlusvalia?.ValorContable || 0);
+
+            content.Activos.ActivosIntangibles.ActivosIntangiblesDistintosPlusvalia.OtrosActivosIntangibles.Costo.MenorValorFiscal = (detContent?.Renglon40?.["1520OtrosActivosIntangibles"]?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Activos.ActivosIntangibles.ActivosIntangiblesDistintosPlusvalia.OtrosActivosIntangibles.Costo.MayorValorFiscal = (detContent?.Renglon40?.["1520OtrosActivosIntangibles"]?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Activos - ActivosIntangibles - PlusvaliaGoodwill - PlusvaliaGoodwill - AdquisicionEstablecimientoComercio
+
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.PlusvaliaGoodwill.AdquisicionEstablecimientoComercio.ValorContable = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.AdquisicionDeEstablecimientoDeComercio?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.PlusvaliaGoodwill.AdquisicionEstablecimientoComercio.MenorValorFiscal = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.AdquisicionDeEstablecimientoDeComercio?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.PlusvaliaGoodwill.AdquisicionEstablecimientoComercio.MayorValorFiscal = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.AdquisicionDeEstablecimientoDeComercio?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Activos - ActivosIntangibles - PlusvaliaGoodwill - PlusvaliaGoodwill - Fusiones
+
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.PlusvaliaGoodwill.Fusiones.ValorContable = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.Fusiones?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.PlusvaliaGoodwill.Fusiones.MenorValorFiscal = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.Fusiones?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.PlusvaliaGoodwill.Fusiones.MayorValorFiscal = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.Fusiones?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Activos - ActivosIntangibles - PlusvaliaGoodwill - PlusvaliaGoodwill - Escisiones
+
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.PlusvaliaGoodwill.Escisiones.ValorContable = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.Escisiones?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.PlusvaliaGoodwill.Escisiones.MenorValorFiscal = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.Escisiones?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.PlusvaliaGoodwill.Escisiones.MayorValorFiscal = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.Escisiones?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Activos - ActivosIntangibles - PlusvaliaGoodwill - PlusvaliaGoodwill - CompraAcciones
+
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.PlusvaliaGoodwill.CompraAcciones.ValorContable = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.CompraDeAcciones?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.PlusvaliaGoodwill.CompraAcciones.MenorValorFiscal = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.CompraDeAcciones?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.PlusvaliaGoodwill.CompraAcciones.MayorValorFiscal = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.CompraDeAcciones?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Activos - ActivosIntangibles - PlusvaliaGoodwill - AmortizacionAcumuladaPlusvaliaGoodwill
+
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.AmortizacionAcumuladaPlusvaliaGoodwill.ValorContable = (detContent?.Renglon40?.["1578AmortizacionAcumuladaDeLaPlusvaliaOGoodWill"]?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.AmortizacionAcumuladaPlusvaliaGoodwill.MenorValorFiscal = (detContent?.Renglon40?.["1578AmortizacionAcumuladaDeLaPlusvaliaOGoodWill"]?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.AmortizacionAcumuladaPlusvaliaGoodwill.MayorValorFiscal = (detContent?.Renglon40?.["1578AmortizacionAcumuladaDeLaPlusvaliaOGoodWill"]?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Activos - ActivosIntangibles - PlusvaliaGoodwill - DeterioroAcumuladoPlusvaliaGoodwill
+
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.DeterioroAcumuladoPlusvaliaGoodwill.ValorContable = (detContent?.Renglon40?.["1579DeterioroAcumuladoDeLaPlusvaliaOGoodWill"]?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.DeterioroAcumuladoPlusvaliaGoodwill.MenorValorFiscal = (detContent?.Renglon40?.["1579DeterioroAcumuladoDeLaPlusvaliaOGoodWill"]?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.DeterioroAcumuladoPlusvaliaGoodwill.MayorValorFiscal = (detContent?.Renglon40?.["1579DeterioroAcumuladoDeLaPlusvaliaOGoodWill"]?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Activos - PropiedadesInversion - TerrenoEdificios - AlCosto
+
+            content.Activos.PropiedadesInversion.TerrenoEdificios.AlCosto.ValorContable = (detContent?.Renglon42?.["1779PropiedadesDeInversionTerrenos"]?.ValorDelCosto?.SaldosContablesADiciembre31Parciales || 0) + (detContent?.Renglon42?.["1780PropiedadesDeInversionEdificaciones"]?.ValorDelCosto?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Activos.PropiedadesInversion.TerrenoEdificios.AlCosto.MenorValorFiscal = (detContent?.Renglon42?.["1779PropiedadesDeInversionTerrenos"]?.ValorDelCosto?.AjustesParaLlegarASaldosFiscales3 || 0) + (detContent?.Renglon42?.["1780PropiedadesDeInversionEdificaciones"]?.ValorDelCosto?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Activos.PropiedadesInversion.TerrenoEdificios.AlCosto.MayorValorFiscal = (detContent?.Renglon42?.["1779PropiedadesDeInversionTerrenos"]?.ValorDelCosto?.AjustesParaLlegarASaldosFiscales1 || 0) + (detContent?.Renglon42?.["1780PropiedadesDeInversionEdificaciones"]?.ValorDelCosto?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Activos - PropiedadesInversion - TerrenoEdificios - AlValorRazonable
+
+            content.Activos.PropiedadesInversion.TerrenoEdificios.AlValorRazonable.ValorContable = (detContent?.Renglon42?.["1779PropiedadesDeInversionTerrenos"]?.Revaluaciones?.SaldosContablesADiciembre31Parciales || 0) + (detContent?.Renglon42?.["1780PropiedadesDeInversionEdificaciones"]?.Revaluaciones?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Activos.PropiedadesInversion.TerrenoEdificios.AlValorRazonable.MenorValorFiscal = (detContent?.Renglon42?.["1779PropiedadesDeInversionTerrenos"]?.Revaluaciones?.AjustesParaLlegarASaldosFiscales3 || 0) + (detContent?.Renglon42?.["1780PropiedadesDeInversionEdificaciones"]?.Revaluaciones?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Activos.PropiedadesInversion.TerrenoEdificios.AlValorRazonable.MayorValorFiscal = (detContent?.Renglon42?.["1779PropiedadesDeInversionTerrenos"]?.Revaluaciones?.AjustesParaLlegarASaldosFiscales1 || 0) + (detContent?.Renglon42?.["1780PropiedadesDeInversionEdificaciones"]?.Revaluaciones?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Activos - PropiedadesInversion - DepreciacionAcumuladaPropiedadesInversion
+
+            content.Activos.PropiedadesInversion.DepreciacionAcumuladaPropiedadesInversion.ValorContable = (actContent?.PropiedadesDeInversión?.TotalPorpiedadesDeInversion?.DatosContables?.Depreciacion?.PorCosto || 0) + (actContent?.PropiedadesDeInversión?.TotalPorpiedadesDeInversion?.DatosContables?.Depreciacion?.EfectoDeConversion || 0) + (actContent?.PropiedadesDeInversión?.TotalPorpiedadesDeInversion?.DatosContables?.Depreciacion?.AjustePorRevaluacionesOReExpresiones || 0);
+
+            content.Activos.PropiedadesInversion.DepreciacionAcumuladaPropiedadesInversion.MenorValorFiscal = (detContent?.Renglon42?.["1788PropDeInversiDepreciacionAcumulada"]?.DelCosto?.AjustesParaLlegarASaldosFiscales3 || 0) + (detContent?.Renglon42?.["1788PropDeInversiDepreciacionAcumulada"]?.DeLasRevaluaciones?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Activos.PropiedadesInversion.DepreciacionAcumuladaPropiedadesInversion.MayorValorFiscal = (detContent?.Renglon42?.["1788PropDeInversiDepreciacionAcumulada"]?.DelCosto?.AjustesParaLlegarASaldosFiscales1 || 0) + (detContent?.Renglon42?.["1788PropDeInversiDepreciacionAcumulada"]?.DeLasRevaluaciones?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Activos - PropiedadesInversion - DeterioroAcumuladoPropiedadesInversion
+
+            content.Activos.PropiedadesInversion.DeterioroAcumuladoPropiedadesInversion.ValorContable = (actContent?.PropiedadesDeInversión?.TotalPorpiedadesDeInversion?.DatosContables?.DeterioroAcumuladoAlFinalDelPeriodo || 0);
+
+            //TODO: quedo en G119
 
         }
         return esfPatrimonio;
