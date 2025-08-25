@@ -715,7 +715,172 @@ export class EsfPatrimonioGatewayAdapter implements FormsGatewayIntPort<FormEsfP
 
             content.Activos.OtrosActivos.ActivosReconocidosSolamenteFinesFiscales.MenorValorFiscal = (detContent?.Renglon43?.CargosDiferidosEIntangiblesQueSoloSonFiscales?.ValorDelCosto?.SaldosFiscales || 0) + (detContent?.Renglon43?.CargosDiferidosEIntangiblesQueSoloSonFiscales?.AmortizacionAcumulada?.SaldosFiscales || 0);
 
-            //TODO: quedo en G147
+            // Pasivos - ObligacionesFinancierasCuentasPorPagar - ObligacionesFinancierasEnMonedaLocal
+
+            content.Pasivos.ObligacionesFinancierasCuentasPorPagar.ObligacionesFinancierasEnMonedaLocal.ValorContable = (detContent?.Renglon45?.["2105BancosNacionales"]?.SaldosContablesADiciembre31Parciales || 0) - (detContent?.Renglon45?.["2115CorporacionesFinancieras"]?.EnColombia?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            content.Pasivos.ObligacionesFinancierasCuentasPorPagar.ObligacionesFinancierasEnMonedaLocal.MenorValorFiscal = (detContent?.Renglon45?.["2105BancosNacionales"]?.AjustesParaLlegarASaldosFiscales3 || 0) - (detContent?.Renglon45?.["2115CorporacionesFinancieras"]?.EnColombia?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Pasivos.ObligacionesFinancierasCuentasPorPagar.ObligacionesFinancierasEnMonedaLocal.MenorValorFiscal = (detContent?.Renglon45?.["2105BancosNacionales"]?.AjustesParaLlegarASaldosFiscales1 || 0) - (detContent?.Renglon45?.["2115CorporacionesFinancieras"]?.EnColombia?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Pasivos - ObligacionesFinancierasCuentasPorPagar - ObligacionesFinancierasEnMonedaExtranjera
+
+            content.Pasivos.ObligacionesFinancierasCuentasPorPagar.ObligacionesFinancierasEnMonedaExtranjera.ValorContable = (detContent?.Renglon45?.["2110BancosDelExterior"]?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Pasivos.ObligacionesFinancierasCuentasPorPagar.ObligacionesFinancierasEnMonedaExtranjera.MenorValorFiscal = (detContent?.Renglon45?.["2110BancosDelExterior"]?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Pasivos.ObligacionesFinancierasCuentasPorPagar.ObligacionesFinancierasEnMonedaExtranjera.MenorValorFiscal = (detContent?.Renglon45?.["2110BancosDelExterior"]?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Pasivos - ObligacionesFinancierasCuentasPorPagar - CuentasPorPagarASociosAccionistasOParticipes
+
+            content.Pasivos.ObligacionesFinancierasCuentasPorPagar.CuentasPorPagarASociosAccionistasOParticipes.MenorValorFiscal = (detContent?.Renglon45?.["2355DeudasConSociedadesDondeSeSocioOAccionista"]?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Pasivos.ObligacionesFinancierasCuentasPorPagar.CuentasPorPagarASociosAccionistasOParticipes.MenorValorFiscal = (detContent?.Renglon45?.["2355DeudasConSociedadesDondeSeSocioOAccionista"]?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Pasivos - ObligacionesFinancierasCuentasPorPagar - RecaudoAFavorDeTerceros
+
+            content.Pasivos.ObligacionesFinancierasCuentasPorPagar.RecaudoAFavorDeTerceros.ValorContable = (detContent?.Renglon45?.["2815IngresosRecibidosParaTerceros"]?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Pasivos.ObligacionesFinancierasCuentasPorPagar.RecaudoAFavorDeTerceros.MenorValorFiscal = (detContent?.Renglon45?.["2815IngresosRecibidosParaTerceros"]?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Pasivos.ObligacionesFinancierasCuentasPorPagar.RecaudoAFavorDeTerceros.MenorValorFiscal = (detContent?.Renglon45?.["2815IngresosRecibidosParaTerceros"]?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Pasivos - ObligacionesFinancierasCuentasPorPagar - OtrasCuentasYDocumentosPorPagarEnMonedaLocal
+
+            content.Pasivos.ObligacionesFinancierasCuentasPorPagar.OtrasCuentasYDocumentosPorPagarEnMonedaLocal.ValorContable = (detContent?.Renglon45?.["2355DeudasConSociedadesDondeSeSocioOAccionista"]?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Pasivos.ObligacionesFinancierasCuentasPorPagar.OtrasCuentasYDocumentosPorPagarEnMonedaLocal.MenorValorFiscal = (detContent?.Renglon45?.["2355DeudasConSociedadesDondeSeSocioOAccionista"]?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Pasivos.ObligacionesFinancierasCuentasPorPagar.OtrasCuentasYDocumentosPorPagarEnMonedaLocal.MenorValorFiscal = (detContent?.Renglon45?.["2355DeudasConSociedadesDondeSeSocioOAccionista"]?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Pasivos - ImpuestosGravamenesTasasPorPagar - ImpuestoRenta
+
+            content.Pasivos.ImpuestosGravamenesTasasPorPagar.ImpuestoRenta.ValorContable = (detContent?.Renglon45?.["2404ImpuestoPorPagarDeRentaYComplementarios"]?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Pasivos.ImpuestosGravamenesTasasPorPagar.ImpuestoRenta.MenorValorFiscal = (detContent?.Renglon45?.["2404ImpuestoPorPagarDeRentaYComplementarios"]?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Pasivos.ImpuestosGravamenesTasasPorPagar.ImpuestoRenta.MenorValorFiscal = (detContent?.Renglon45?.["2404ImpuestoPorPagarDeRentaYComplementarios"]?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Pasivos - ImpuestosGravamenesTasasPorPagar - IVA
+
+            content.Pasivos.ImpuestosGravamenesTasasPorPagar.IVA.ValorContable = (detContent?.Renglon45?.["2408ImpuestosSobreLasVentas"]?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Pasivos.ImpuestosGravamenesTasasPorPagar.IVA.MenorValorFiscal = (detContent?.Renglon45?.["2408ImpuestosSobreLasVentas"]?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Pasivos.ImpuestosGravamenesTasasPorPagar.IVA.MenorValorFiscal = (detContent?.Renglon45?.["2408ImpuestosSobreLasVentas"]?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Pasivos - ImpuestosGravamenesTasasPorPagar - Otrosimpuestos
+
+            content.Pasivos.ImpuestosGravamenesTasasPorPagar.Otrosimpuestos.ValorContable = (detContent?.Renglon45?.["2412OtrosImpuestosPorPagar"]?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Pasivos.ImpuestosGravamenesTasasPorPagar.Otrosimpuestos.MenorValorFiscal = (detContent?.Renglon45?.["2412OtrosImpuestosPorPagar"]?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Pasivos.ImpuestosGravamenesTasasPorPagar.Otrosimpuestos.MenorValorFiscal = (detContent?.Renglon45?.["2412OtrosImpuestosPorPagar"]?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Pasivos - PasivosImpuestosDiferidos
+
+            content.Pasivos.PasivosImpuestosDiferidos.ValorContable = (detContent?.Renglon35?.["520578SENA"]?.SaldosContablesADiciembre31Parciales || 0);
+
+            // Pasivos - PasivosBeneficiosEmpleados - CortoPlazo
+
+            content.Pasivos.PasivosBeneficiosEmpleados.CortoPlazo.ValorContable = (detContent?.Renglon45?.["2505SalariosPorPagar"]?.SaldosContablesADiciembre31Parciales || 0) + (detContent?.Renglon45?.["2510CesantiasConsolidadas"]?.SaldosContablesADiciembre31Parciales || 0) + (detContent?.Renglon45?.["2515InteresdeCesantias"]?.SaldosContablesADiciembre31Parciales || 0) + (detContent?.Renglon45?.["2525VacacionesConsolidadas"]?.SaldosContablesADiciembre31Parciales || 0) + (detContent?.Renglon45?.["2530PrestacionesExtralegales"]?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Pasivos.PasivosBeneficiosEmpleados.CortoPlazo.MenorValorFiscal = (detContent?.Renglon45?.["2505SalariosPorPagar"]?.AjustesParaLlegarASaldosFiscales3 || 0) + (detContent?.Renglon45?.["2510CesantiasConsolidadas"]?.AjustesParaLlegarASaldosFiscales3 || 0) + (detContent?.Renglon45?.["2515InteresdeCesantias"]?.AjustesParaLlegarASaldosFiscales3 || 0) + (detContent?.Renglon45?.["2525VacacionesConsolidadas"]?.AjustesParaLlegarASaldosFiscales3 || 0) + (detContent?.Renglon45?.["2530PrestacionesExtralegales"]?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Pasivos.PasivosBeneficiosEmpleados.CortoPlazo.MenorValorFiscal = (detContent?.Renglon45?.["2505SalariosPorPagar"]?.AjustesParaLlegarASaldosFiscales1 || 0) + (detContent?.Renglon45?.["2510CesantiasConsolidadas"]?.AjustesParaLlegarASaldosFiscales1 || 0) + (detContent?.Renglon45?.["2515InteresdeCesantias"]?.AjustesParaLlegarASaldosFiscales1 || 0) + (detContent?.Renglon45?.["2525VacacionesConsolidadas"]?.AjustesParaLlegarASaldosFiscales1 || 0) + (detContent?.Renglon45?.["2530PrestacionesExtralegales"]?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Pasivos - Provisiones - mantenimientoYReparaciones
+
+            content.Pasivos.Provisiones.mantenimientoYReparaciones.ValorContable = (detContent?.Renglon45?.["2605ProvisionParaCostosYGastos"]?.SaldosContablesADiciembre31Parciales || 0);
+
+            // Pasivos - PasivosIngresosDiferidos - AnticiposYAvancesRecibidosDeClientes
+
+            content.Pasivos.PasivosIngresosDiferidos.AnticiposYAvancesRecibidosDeClientes.ValorContable = (detContent?.Renglon45?.["2805AnticiposYAvancesRecibidos"]?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Pasivos.PasivosIngresosDiferidos.AnticiposYAvancesRecibidosDeClientes.MenorValorFiscal = (detContent?.Renglon45?.["2805AnticiposYAvancesRecibidos"]?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Pasivos.PasivosIngresosDiferidos.AnticiposYAvancesRecibidosDeClientes.MenorValorFiscal = (detContent?.Renglon45?.["2805AnticiposYAvancesRecibidos"]?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Pasivos - PasivosIngresosDiferidos - OtrosPasivosPorIngresosDiferidos
+
+            content.Pasivos.PasivosIngresosDiferidos.OtrosPasivosPorIngresosDiferidos.MenorValorFiscal = (detContent?.Renglon45?.["2816PasivoPorIngresoDiferido"]?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Pasivos.PasivosIngresosDiferidos.OtrosPasivosPorIngresosDiferidos.MenorValorFiscal = (detContent?.Renglon45?.["2816PasivoPorIngresoDiferido"]?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Pasivos - OtrosPasivos - DepositosRecibidos
+
+            content.Pasivos.OtrosPasivos.DepositosRecibidos.ValorContable = (detContent?.Renglon45?.["2810DepositosRecibidos"]?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Pasivos.OtrosPasivos.DepositosRecibidos.MenorValorFiscal = (detContent?.Renglon45?.["2810DepositosRecibidos"]?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Pasivos.OtrosPasivos.DepositosRecibidos.MenorValorFiscal = (detContent?.Renglon45?.["2810DepositosRecibidos"]?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Pasivos - OtrosPasivos - RetencionesATercerosSobreContratos
+
+            content.Pasivos.OtrosPasivos.RetencionesATercerosSobreContratos.ValorContable = (detContent?.Renglon45?.["2825RetencionesATercerosContratos"]?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Pasivos.OtrosPasivos.RetencionesATercerosSobreContratos.MenorValorFiscal = (detContent?.Renglon45?.["2825RetencionesATercerosContratos"]?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Pasivos.OtrosPasivos.RetencionesATercerosSobreContratos.MenorValorFiscal = (detContent?.Renglon45?.["2825RetencionesATercerosContratos"]?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Pasivos - OtrosPasivos - CuentasEnParticipacion
+
+            content.Pasivos.OtrosPasivos.CuentasEnParticipacion.ValorContable = (detContent?.Renglon45?.["2840CuentasEnParticipacion"]?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Pasivos.OtrosPasivos.CuentasEnParticipacion.MenorValorFiscal = (detContent?.Renglon45?.["2840CuentasEnParticipacion"]?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Pasivos.OtrosPasivos.CuentasEnParticipacion.MenorValorFiscal = (detContent?.Renglon45?.["2840CuentasEnParticipacion"]?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Pasivos - OtrosPasivos - OtrosPasivos
+            //TODO: revisar bien esta despues cuando se pruebe
+
+            content.Pasivos.OtrosPasivos.OtrosPasivos.ValorContable = (detContent?.Renglon45?.TotalPasivosSaldosContablesADiciembre31 || 0) - (content?.Pasivos?.ObligacionesFinancierasCuentasPorPagar?.Total?.ValorContable || 0) - (content?.Pasivos?.ArrendamientosPorPagar?.Total?.ValorContable || 0) - (content?.Pasivos?.OtrosPasivosFinancieros?.Total?.ValorContable || 0) - (content?.Pasivos?.ImpuestosGravamenesTasasPorPagar?.Total?.ValorContable || 0) - (content?.Pasivos?.PasivosImpuestosDiferidos?.Total?.ValorContable || 0) - (content?.Pasivos?.PasivosBeneficiosEmpleados?.Total?.ValorContable || 0) - (content?.Pasivos?.Provisiones?.Total?.ValorContable || 0) - (content?.Pasivos?.PasivosIngresosDiferidos?.Total?.ValorContable || 0) - (content?.Pasivos?.OtrosPasivos?.DepositosRecibidos?.ValorContable || 0) - (content?.Pasivos?.OtrosPasivos?.RetencionesATercerosSobreContratos?.ValorContable || 0) - (content?.Pasivos?.OtrosPasivos?.EmbargosJudiciales?.ValorContable || 0) - (content?.Pasivos?.OtrosPasivos?.CuentasEnParticipacion?.ValorContable || 0) - (content?.Pasivos?.OtrosPasivos?.PasivoParaEjecucionDeExcedentesESAL?.ValorContable || 0) - (content?.Pasivos?.OtrosPasivos?.FondosSocialesMutualesYOtros?.ValorContable || 0);
+
+            content.Pasivos.OtrosPasivos.OtrosPasivos.ValorFiscal = (detContent?.Renglon45?.TotalPasivosSaldosFiscalesADiciembre31 || 0) - (content?.Pasivos?.ObligacionesFinancierasCuentasPorPagar?.Total?.ValorFiscal || 0) - (content?.Pasivos?.ArrendamientosPorPagar?.Total?.ValorFiscal || 0) - (content?.Pasivos?.OtrosPasivosFinancieros?.Total?.ValorFiscal || 0) - (content?.Pasivos?.ImpuestosGravamenesTasasPorPagar?.Total?.ValorFiscal || 0) - (content?.Pasivos?.PasivosImpuestosDiferidos?.Total?.ValorFiscal || 0) - (content?.Pasivos?.PasivosBeneficiosEmpleados?.Total?.ValorFiscal || 0) - (content?.Pasivos?.Provisiones?.Total?.ValorFiscal || 0) - (content?.Pasivos?.PasivosIngresosDiferidos?.Total?.ValorFiscal || 0) - (content?.Pasivos?.OtrosPasivos?.DepositosRecibidos?.ValorFiscal || 0) - (content?.Pasivos?.OtrosPasivos?.RetencionesATercerosSobreContratos?.ValorFiscal || 0) - (content?.Pasivos?.OtrosPasivos?.EmbargosJudiciales?.ValorFiscal || 0) - (content?.Pasivos?.OtrosPasivos?.CuentasEnParticipacion?.ValorFiscal || 0) - (content?.Pasivos?.OtrosPasivos?.PasivoParaEjecucionDeExcedentesESAL?.ValorFiscal || 0) - (content?.Pasivos?.OtrosPasivos?.FondosSocialesMutualesYOtros?.ValorFiscal || 0);
+
+            // PatrimonioContable - CapitalSocialReservas - CapitalPagado
+
+            content.PatrimonioContable.CapitalSocialReservas.CapitalPagado.ValorContable = (detContent?.Renglon46?.["3130CapitalDePersonasNaturales"]?.SaldosContablesADiciembre31Parciales || 0);
+
+            // PatrimonioContable - CapitalSocialReservas - SuperavitRevaluaciones
+
+            content.PatrimonioContable.CapitalSocialReservas.SuperavitRevaluaciones.ValorContable = (detContent?.Renglon46?.["3805Superavit"]?.PorRevaluaciones?.SaldosContablesADiciembre31Parciales || 0);
+
+            // PatrimonioContable - CapitalSocialReservas - SuperavitMetodoParticipacion
+
+            content.PatrimonioContable.CapitalSocialReservas.SuperavitMetodoParticipacion.ValorContable = (detContent?.Renglon46?.["3805Superavit"]?.PorMetodoDeParticipacion?.SaldosContablesADiciembre31Parciales || 0);
+
+            // PatrimonioContable - ResultadoEjercicio - UtilidadOExcedenteDelEjercicioEnOperacionesContinuadas
+
+            content.PatrimonioContable.ResultadoEjercicio.UtilidadOExcedenteDelEjercicioEnOperacionesContinuadas.ValorContable = (detContent?.Renglon46?.["3605ResultadoDelEjercicio"]?.UtilidadDespuesDeImpuestos?.SaldosContablesADiciembre31Parciales || 0);
+
+            // PatrimonioContable - ResultadoEjercicio - PerdidaODeficitDelEjercicioEnOperacionesContinuadas
+
+            content.PatrimonioContable.ResultadoEjercicio.PerdidaODeficitDelEjercicioEnOperacionesContinuadas.ValorContable = (-detContent?.Renglon46?.["3605ResultadoDelEjercicio"]?.PerdidaDespuesDeImpuestos?.SaldosContablesADiciembre31Parciales || 0);
+
+            // PatrimonioContable - ResultadosAcumulados - UtilidadesOExcedentesAcumuladosSusceptiblesDeDistribucionATituloDeNoConstitutivoDeRentaNiGananciaOcasional
+
+            content.PatrimonioContable.ResultadosAcumulados.UtilidadesOExcedentesAcumuladosSusceptiblesDeDistribucionATituloDeNoConstitutivoDeRentaNiGananciaOcasional.ValorContable = (detContent?.Renglon46?.["3705UtilidadesDePeriodosAnteriores"]?.SaldosContablesADiciembre31Parciales || 0);
+
+            // PatrimonioContable - ResultadosAcumulados - PerdidasODeficitAcumulados
+
+            content.PatrimonioContable.ResultadosAcumulados.PerdidasODeficitAcumulados.ValorContable = (-detContent?.Renglon46?.["3710PerdidasDeEjerciciosAnteriores"]?.SaldosContablesADiciembre31Parciales || 0);
+
+            // PatrimonioContable - GananciasPerdidasAcumuladasRetenidasAdopcionPrimera - GananciasPrimeraVez
+
+            content.PatrimonioContable.GananciasPerdidasAcumuladasRetenidasAdopcionPrimera.GananciasPrimeraVez.ValorContable = (detContent?.Renglon46?.["3715GananciasPerdidasAcumuladasORetenidasPorLaAdopcionPorPrimera"]?.GananciasAcumuladas?.SaldosContablesADiciembre31Parciales || 0);
+
+            // PatrimonioContable - GananciasPerdidasAcumuladasRetenidasAdopcionPrimera - PerdidasPrimeraVez
+
+            content.PatrimonioContable.GananciasPerdidasAcumuladasRetenidasAdopcionPrimera.PerdidasPrimeraVez.ValorContable = (detContent?.Renglon46?.["3715GananciasPerdidasAcumuladasORetenidasPorLaAdopcionPorPrimera"]?.PerdidasAcumuladas?.SaldosContablesADiciembre31Parciales || 0);
+
+            // PatrimonioContable - OtroResultadoIntegralAcumulado - GananciasAcomuladasORI
+
+            content.PatrimonioContable.OtroResultadoIntegralAcumulado.GananciasAcomuladasORI.ValorContable = (detContent?.Renglon46?.["3720OtroResultadoIntegralAcumulado"]?.GananciasAcumuladasORI?.SaldosContablesADiciembre31Parciales || 0);
+
+            // PatrimonioContable - OtroResultadoIntegralAcumulado - PerdidasAcumuladasORI
+
+            content.PatrimonioContable.OtroResultadoIntegralAcumulado.PerdidasAcumuladasORI.ValorContable = (-detContent?.Renglon46?.["3720OtroResultadoIntegralAcumulado"]?.PerdidasAcumuladasORI?.SaldosContablesADiciembre31Parciales || 0);
 
         }
         return esfPatrimonio;
