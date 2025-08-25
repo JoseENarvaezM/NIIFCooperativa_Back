@@ -579,7 +579,143 @@ export class EsfPatrimonioGatewayAdapter implements FormsGatewayIntPort<FormEsfP
 
             content.Activos.PropiedadesInversion.DeterioroAcumuladoPropiedadesInversion.ValorContable = (actContent?.PropiedadesDeInversión?.TotalPorpiedadesDeInversion?.DatosContables?.DeterioroAcumuladoAlFinalDelPeriodo || 0);
 
-            //TODO: quedo en G119
+            // Activos - ActivosNoCorrientes - MantenidosParaVenta
+
+            content.Activos.ActivosNoCorrientes.MantenidosParaVenta.ValorContable = (actContent?.ANCMV?.DatosContables?.ImporteNetoAlFinalDelPeriodo?.Costo || 0) + (actContent?.ANCMV?.DatosContables?.DeterioroAcumuladoAlFinalDelPeriodo || 0);
+
+            content.Activos.ActivosNoCorrientes.MantenidosParaVenta.MenorValorFiscal = detContent?.Renglon42?.["1790ActivosNoCorrientesMantenidosParaLaVenta"]?.ValorDelCosto?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            content.Activos.ActivosNoCorrientes.MantenidosParaVenta.MenorValorFiscal = detContent?.Renglon42?.["1790ActivosNoCorrientesMantenidosParaLaVenta"]?.ValorDelCosto?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            // Activos - ActivosNoCorrientes - DeterioroAcumuladoActivosCorrientesMantenidosParaVenta
+
+            content.Activos.ActivosNoCorrientes.DeterioroAcumuladoActivosCorrientesMantenidosParaVenta.ValorContable = (actContent?.ANCMV?.DatosContables?.DeterioroAcumuladoAlFinalDelPeriodo || 0);
+
+            // Activos - ActivosBiologicos - AnimalesVivos - AnimalesProductoresMedidosAlCosto
+
+            content.Activos.ActivosBiologicos.AnimalesVivos.AnimalesProductoresMedidosAlCosto.ValorContable = detContent?.Renglon41?.["1605AnimalesProductoresMedidosAlCosto"]?.AnimalesProductoresMedidosAlCosto?.ValorDelCosto?.SaldosContablesADiciembre31Parciales || 0;
+
+            content.Activos.ActivosBiologicos.AnimalesVivos.AnimalesProductoresMedidosAlCosto.MenorValorFiscal = detContent?.Renglon41?.["1605AnimalesProductoresMedidosAlCosto"]?.AnimalesProductoresMedidosAlCosto?.ValorDelCosto?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            content.Activos.ActivosBiologicos.AnimalesVivos.AnimalesProductoresMedidosAlCosto.MenorValorFiscal = detContent?.Renglon41?.["1605AnimalesProductoresMedidosAlCosto"]?.AnimalesProductoresMedidosAlCosto?.ValorDelCosto?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            // Activos - ActivosBiologicos - AnimalesVivos - DepreciacionAcumuladaDeAnimalesProductoresMedidosAlCosto
+
+            content.Activos.ActivosBiologicos.AnimalesVivos.DepreciacionAcumuladaDeAnimalesProductoresMedidosAlCosto.ValorContable = detContent?.Renglon41?.["1605AnimalesProductoresMedidosAlCosto"]?.AnimalesProductoresMedidosAlCosto?.DepreciacionAcumulada?.SaldosContablesADiciembre31Parciales || 0;
+
+            content.Activos.ActivosBiologicos.AnimalesVivos.DepreciacionAcumuladaDeAnimalesProductoresMedidosAlCosto.MenorValorFiscal = detContent?.Renglon41?.["1605AnimalesProductoresMedidosAlCosto"]?.AnimalesProductoresMedidosAlCosto?.DepreciacionAcumulada?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            content.Activos.ActivosBiologicos.AnimalesVivos.DepreciacionAcumuladaDeAnimalesProductoresMedidosAlCosto.MenorValorFiscal = detContent?.Renglon41?.["1605AnimalesProductoresMedidosAlCosto"]?.AnimalesProductoresMedidosAlCosto?.DepreciacionAcumulada?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            // Activos - ActivosBiologicos - AnimalesVivos - DeterioroAcumuladoDeAnimalesProductoresMedidosAlCosto
+
+            content.Activos.ActivosBiologicos.AnimalesVivos.DeterioroAcumuladoDeAnimalesProductoresMedidosAlCosto.ValorContable = detContent?.Renglon41?.["1605AnimalesProductoresMedidosAlCosto"]?.AnimalesProductoresMedidosAlCosto?.DeterioroAcumulado?.SaldosContablesADiciembre31Parciales || 0;
+
+            content.Activos.ActivosBiologicos.AnimalesVivos.DeterioroAcumuladoDeAnimalesProductoresMedidosAlCosto.MenorValorFiscal = detContent?.Renglon41?.["1605AnimalesProductoresMedidosAlCosto"]?.AnimalesProductoresMedidosAlCosto?.DeterioroAcumulado?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            content.Activos.ActivosBiologicos.AnimalesVivos.DeterioroAcumuladoDeAnimalesProductoresMedidosAlCosto.MenorValorFiscal = detContent?.Renglon41?.["1605AnimalesProductoresMedidosAlCosto"]?.AnimalesProductoresMedidosAlCosto?.DeterioroAcumulado?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            // Activos - ActivosBiologicos - AnimalesVivos - AnimalesProductoresMedidosAlValorRazonableMenosCostosDeVenta
+
+            content.Activos.ActivosBiologicos.AnimalesVivos.AnimalesProductoresMedidosAlValorRazonableMenosCostosDeVenta.ValorContable = (detContent?.Renglon41?.["1605AnimalesProductoresMedidosAlCosto"]?.AnimalesProductoresMedidosAlValorRazonable?.ValorDelCosto?.SaldosContablesADiciembre31Parciales || 0) + (detContent?.Renglon41?.["1605AnimalesProductoresMedidosAlCosto"]?.AnimalesProductoresMedidosAlValorRazonable?.Revaluaciones?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Activos.ActivosBiologicos.AnimalesVivos.AnimalesProductoresMedidosAlValorRazonableMenosCostosDeVenta.MenorValorFiscal = (detContent?.Renglon41?.["1605AnimalesProductoresMedidosAlCosto"]?.AnimalesProductoresMedidosAlValorRazonable?.ValorDelCosto?.AjustesParaLlegarASaldosFiscales3 || 0) + (detContent?.Renglon41?.["1605AnimalesProductoresMedidosAlCosto"]?.AnimalesProductoresMedidosAlValorRazonable?.Revaluaciones?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Activos.ActivosBiologicos.AnimalesVivos.AnimalesProductoresMedidosAlValorRazonableMenosCostosDeVenta.MenorValorFiscal = (detContent?.Renglon41?.["1605AnimalesProductoresMedidosAlCosto"]?.AnimalesProductoresMedidosAlValorRazonable?.ValorDelCosto?.AjustesParaLlegarASaldosFiscales1 || 0) + (detContent?.Renglon41?.["1605AnimalesProductoresMedidosAlCosto"]?.AnimalesProductoresMedidosAlValorRazonable?.Revaluaciones?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Activos - ActivosBiologicos - AnimalesVivos - AnimalesConsumiblesMedidosAlCosto
+
+            content.Activos.ActivosBiologicos.AnimalesVivos.AnimalesConsumiblesMedidosAlCosto.ValorContable = (detContent?.Renglon41?.["1610AnimalesConsumiblesMedidosAlCosto"]?.AnimalesConsumiblesMedidosAlCosto?.ValorDelCosto?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Activos.ActivosBiologicos.AnimalesVivos.AnimalesConsumiblesMedidosAlCosto.MenorValorFiscal = (detContent?.Renglon41?.["1610AnimalesConsumiblesMedidosAlCosto"]?.AnimalesConsumiblesMedidosAlCosto?.ValorDelCosto?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Activos.ActivosBiologicos.AnimalesVivos.AnimalesConsumiblesMedidosAlCosto.MenorValorFiscal = (detContent?.Renglon41?.["1610AnimalesConsumiblesMedidosAlCosto"]?.AnimalesConsumiblesMedidosAlCosto?.ValorDelCosto?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Activos - ActivosBiologicos - AnimalesVivos - DeterioroAcumuladoAnimalesConsumiblesMedidosAlCosto
+
+            content.Activos.ActivosBiologicos.AnimalesVivos.DeterioroAcumuladoAnimalesConsumiblesMedidosAlCosto.ValorContable = (detContent?.Renglon41?.["1610AnimalesConsumiblesMedidosAlCosto"]?.AnimalesConsumiblesMedidosAlCosto?.DeterioroDeAnimalesConsumiblesMedidosAlCosto?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Activos.ActivosBiologicos.AnimalesVivos.DeterioroAcumuladoAnimalesConsumiblesMedidosAlCosto.MenorValorFiscal = (detContent?.Renglon41?.["1610AnimalesConsumiblesMedidosAlCosto"]?.AnimalesConsumiblesMedidosAlCosto?.DeterioroDeAnimalesConsumiblesMedidosAlCosto?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Activos.ActivosBiologicos.AnimalesVivos.DeterioroAcumuladoAnimalesConsumiblesMedidosAlCosto.MenorValorFiscal = (detContent?.Renglon41?.["1610AnimalesConsumiblesMedidosAlCosto"]?.AnimalesConsumiblesMedidosAlCosto?.DeterioroDeAnimalesConsumiblesMedidosAlCosto?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Activos - ActivosBiologicos - AnimalesVivos - AnimalesConsumiblesMedidosAlValorRazonableMenosCostosDeVenta
+
+            content.Activos.ActivosBiologicos.AnimalesVivos.AnimalesConsumiblesMedidosAlValorRazonableMenosCostosDeVenta.ValorContable = (detContent?.Renglon41?.["1610AnimalesConsumiblesMedidosAlCosto"]?.AnimalesConsumiblesMedidosAlValorRazonable?.ValorDelCosto?.SaldosContablesADiciembre31Parciales || 0) + (detContent?.Renglon41?.["1610AnimalesConsumiblesMedidosAlCosto"]?.AnimalesConsumiblesMedidosAlValorRazonable?.Revaluaciones?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Activos.ActivosBiologicos.AnimalesVivos.AnimalesConsumiblesMedidosAlValorRazonableMenosCostosDeVenta.MenorValorFiscal = (detContent?.Renglon41?.["1610AnimalesConsumiblesMedidosAlCosto"]?.AnimalesConsumiblesMedidosAlValorRazonable?.ValorDelCosto?.AjustesParaLlegarASaldosFiscales3 || 0) + (detContent?.Renglon41?.["1610AnimalesConsumiblesMedidosAlCosto"]?.AnimalesConsumiblesMedidosAlValorRazonable?.Revaluaciones?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Activos.ActivosBiologicos.AnimalesVivos.AnimalesConsumiblesMedidosAlValorRazonableMenosCostosDeVenta.MenorValorFiscal = (detContent?.Renglon41?.["1610AnimalesConsumiblesMedidosAlCosto"]?.AnimalesConsumiblesMedidosAlValorRazonable?.ValorDelCosto?.AjustesParaLlegarASaldosFiscales1 || 0) + (detContent?.Renglon41?.["1610AnimalesConsumiblesMedidosAlCosto"]?.AnimalesConsumiblesMedidosAlValorRazonable?.Revaluaciones?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Activos - ActivosBiologicos - PlantasProductorasCultivosConsumibles - PlantasProductorasMedidasAlCosto
+
+            content.Activos.ActivosBiologicos.PlantasProductorasCultivosConsumibles.PlantasProductorasMedidasAlCosto.ValorContable = (detContent?.Renglon41?.["1615PlantasProductorasMedidasAlCosto"]?.PlantasProductorasMedidasAlCosto?.ValorDelCosto?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Activos.ActivosBiologicos.PlantasProductorasCultivosConsumibles.PlantasProductorasMedidasAlCosto.MenorValorFiscal = (detContent?.Renglon41?.["1615PlantasProductorasMedidasAlCosto"]?.PlantasProductorasMedidasAlCosto?.ValorDelCosto?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Activos.ActivosBiologicos.PlantasProductorasCultivosConsumibles.PlantasProductorasMedidasAlCosto.MenorValorFiscal = (detContent?.Renglon41?.["1615PlantasProductorasMedidasAlCosto"]?.PlantasProductorasMedidasAlCosto?.ValorDelCosto?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Activos - ActivosBiologicos - PlantasProductorasCultivosConsumibles - DepreciacionAcumuladaDePlantasProductoras
+
+            content.Activos.ActivosBiologicos.PlantasProductorasCultivosConsumibles.DepreciacionAcumuladaDePlantasProductoras.ValorContable = (detContent?.Renglon41?.["1615PlantasProductorasMedidasAlCosto"]?.PlantasProductorasMedidasAlCosto?.DepreciacionAcumulada?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Activos.ActivosBiologicos.PlantasProductorasCultivosConsumibles.DepreciacionAcumuladaDePlantasProductoras.MenorValorFiscal = (detContent?.Renglon41?.["1615PlantasProductorasMedidasAlCosto"]?.PlantasProductorasMedidasAlCosto?.DepreciacionAcumulada?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Activos.ActivosBiologicos.PlantasProductorasCultivosConsumibles.DepreciacionAcumuladaDePlantasProductoras.MenorValorFiscal = (detContent?.Renglon41?.["1615PlantasProductorasMedidasAlCosto"]?.PlantasProductorasMedidasAlCosto?.DepreciacionAcumulada?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Activos - ActivosBiologicos - PlantasProductorasCultivosConsumibles - DeterioroAcumuladoDePlantasProductoras
+
+            content.Activos.ActivosBiologicos.PlantasProductorasCultivosConsumibles.DeterioroAcumuladoDePlantasProductoras.ValorContable = (detContent?.Renglon41?.["1615PlantasProductorasMedidasAlCosto"]?.PlantasProductorasMedidasAlCosto?.DeterioroAcumulado?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Activos.ActivosBiologicos.PlantasProductorasCultivosConsumibles.DeterioroAcumuladoDePlantasProductoras.MenorValorFiscal = (detContent?.Renglon41?.["1615PlantasProductorasMedidasAlCosto"]?.PlantasProductorasMedidasAlCosto?.DeterioroAcumulado?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Activos.ActivosBiologicos.PlantasProductorasCultivosConsumibles.DeterioroAcumuladoDePlantasProductoras.MenorValorFiscal = (detContent?.Renglon41?.["1615PlantasProductorasMedidasAlCosto"]?.PlantasProductorasMedidasAlCosto?.DeterioroAcumulado?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Activos - ActivosBiologicos - PlantasProductorasCultivosConsumibles - PlantasProductorasMedidasAlValorRazonable
+
+            content.Activos.ActivosBiologicos.PlantasProductorasCultivosConsumibles.PlantasProductorasMedidasAlValorRazonable.ValorContable = (detContent?.Renglon41?.["1615PlantasProductorasMedidasAlCosto"]?.PlantasProductorasMedidasAlValorRazonable?.ValorDelCosto?.SaldosContablesADiciembre31Parciales || 0) + (detContent?.Renglon41?.["1615PlantasProductorasMedidasAlCosto"]?.PlantasProductorasMedidasAlValorRazonable?.Revaluaciones?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Activos.ActivosBiologicos.PlantasProductorasCultivosConsumibles.PlantasProductorasMedidasAlValorRazonable.MenorValorFiscal = (detContent?.Renglon41?.["1615PlantasProductorasMedidasAlCosto"]?.PlantasProductorasMedidasAlValorRazonable?.ValorDelCosto?.AjustesParaLlegarASaldosFiscales3 || 0) + (detContent?.Renglon41?.["1615PlantasProductorasMedidasAlCosto"]?.PlantasProductorasMedidasAlValorRazonable?.Revaluaciones?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Activos.ActivosBiologicos.PlantasProductorasCultivosConsumibles.PlantasProductorasMedidasAlValorRazonable.MenorValorFiscal = (detContent?.Renglon41?.["1615PlantasProductorasMedidasAlCosto"]?.PlantasProductorasMedidasAlValorRazonable?.ValorDelCosto?.AjustesParaLlegarASaldosFiscales1 || 0) + (detContent?.Renglon41?.["1615PlantasProductorasMedidasAlCosto"]?.PlantasProductorasMedidasAlValorRazonable?.Revaluaciones?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Activos - ActivosBiologicos - PlantasProductorasCultivosConsumibles - CultivosConsumiblesMedidosAlCosto
+
+            content.Activos.ActivosBiologicos.PlantasProductorasCultivosConsumibles.CultivosConsumiblesMedidosAlCosto.ValorContable = (detContent?.Renglon41?.["1620PlantasConsumiblesMedidosAlCosto"]?.PlantasConsumiblesMedidosAlCosto?.ValorDelCosto?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Activos.ActivosBiologicos.PlantasProductorasCultivosConsumibles.CultivosConsumiblesMedidosAlCosto.MenorValorFiscal = (detContent?.Renglon41?.["1620PlantasConsumiblesMedidosAlCosto"]?.PlantasConsumiblesMedidosAlCosto?.ValorDelCosto?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Activos.ActivosBiologicos.PlantasProductorasCultivosConsumibles.CultivosConsumiblesMedidosAlCosto.MenorValorFiscal = (detContent?.Renglon41?.["1620PlantasConsumiblesMedidosAlCosto"]?.PlantasConsumiblesMedidosAlCosto?.ValorDelCosto?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Activos - ActivosBiologicos - PlantasProductorasCultivosConsumibles - DeterioroAcumuladoCultivosConsumiblesMedidosAlCosto
+
+            content.Activos.ActivosBiologicos.PlantasProductorasCultivosConsumibles.DeterioroAcumuladoCultivosConsumiblesMedidosAlCosto.ValorContable = (detContent?.Renglon41?.["1620PlantasConsumiblesMedidosAlCosto"]?.PlantasConsumiblesMedidosAlCosto?.DeterioroDeConsumiblesMedidosAlCosto?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Activos.ActivosBiologicos.PlantasProductorasCultivosConsumibles.DeterioroAcumuladoCultivosConsumiblesMedidosAlCosto.MenorValorFiscal = (detContent?.Renglon41?.["1620PlantasConsumiblesMedidosAlCosto"]?.PlantasConsumiblesMedidosAlCosto?.DeterioroDeConsumiblesMedidosAlCosto?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Activos.ActivosBiologicos.PlantasProductorasCultivosConsumibles.DeterioroAcumuladoCultivosConsumiblesMedidosAlCosto.MenorValorFiscal = (detContent?.Renglon41?.["1620PlantasConsumiblesMedidosAlCosto"]?.PlantasConsumiblesMedidosAlCosto?.DeterioroDeConsumiblesMedidosAlCosto?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Activos - ActivosBiologicos - PlantasProductorasCultivosConsumibles - CultivosConsumiblesMedidosAlValorRazonableMenosCostosDeVenta
+
+            content.Activos.ActivosBiologicos.PlantasProductorasCultivosConsumibles.CultivosConsumiblesMedidosAlValorRazonableMenosCostosDeVenta.ValorContable = (detContent?.Renglon41?.["1620PlantasConsumiblesMedidosAlCosto"]?.PlantasConsumiblesMedidosAlValorRazonable?.ValorDelCosto?.SaldosContablesADiciembre31Parciales || 0) + (detContent?.Renglon41?.["1620PlantasConsumiblesMedidosAlCosto"]?.PlantasConsumiblesMedidosAlValorRazonable?.Revaluaciones?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Activos.ActivosBiologicos.PlantasProductorasCultivosConsumibles.CultivosConsumiblesMedidosAlValorRazonableMenosCostosDeVenta.MenorValorFiscal = (detContent?.Renglon41?.["1620PlantasConsumiblesMedidosAlCosto"]?.PlantasConsumiblesMedidosAlValorRazonable?.ValorDelCosto?.AjustesParaLlegarASaldosFiscales3 || 0) + (detContent?.Renglon41?.["1620PlantasConsumiblesMedidosAlCosto"]?.PlantasConsumiblesMedidosAlValorRazonable?.Revaluaciones?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Activos.ActivosBiologicos.PlantasProductorasCultivosConsumibles.CultivosConsumiblesMedidosAlValorRazonableMenosCostosDeVenta.MenorValorFiscal = (detContent?.Renglon41?.["1620PlantasConsumiblesMedidosAlCosto"]?.PlantasConsumiblesMedidosAlValorRazonable?.ValorDelCosto?.AjustesParaLlegarASaldosFiscales1 || 0) + (detContent?.Renglon41?.["1620PlantasConsumiblesMedidosAlCosto"]?.PlantasConsumiblesMedidosAlValorRazonable?.Revaluaciones?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Activos - OtrosActivos - ActivosPlanBeneficiosEmpleados
+
+            content.Activos.OtrosActivos.ActivosPlanBeneficiosEmpleados.ValorContable = (detContent?.Renglon43?.["1850OtrosActivosPlanDeBeneficiosAEmpleados"]?.SaldosContablesADiciembre31Parciales || 0);
+
+            content.Activos.OtrosActivos.ActivosPlanBeneficiosEmpleados.MenorValorFiscal = (detContent?.Renglon43?.["1850OtrosActivosPlanDeBeneficiosAEmpleados"]?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            content.Activos.OtrosActivos.ActivosPlanBeneficiosEmpleados.MenorValorFiscal = (detContent?.Renglon43?.["1850OtrosActivosPlanDeBeneficiosAEmpleados"]?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            // Activos - OtrosActivos - ActivosReconocidosSolamenteFinesFiscales
+
+            content.Activos.OtrosActivos.ActivosReconocidosSolamenteFinesFiscales.MenorValorFiscal = (detContent?.Renglon43?.CargosDiferidosEIntangiblesQueSoloSonFiscales?.ValorDelCosto?.SaldosFiscales || 0) + (detContent?.Renglon43?.CargosDiferidosEIntangiblesQueSoloSonFiscales?.AmortizacionAcumulada?.SaldosFiscales || 0);
+
+            //TODO: quedo en G147
 
         }
         return esfPatrimonio;
