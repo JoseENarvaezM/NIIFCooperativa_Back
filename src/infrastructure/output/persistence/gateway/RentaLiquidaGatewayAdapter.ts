@@ -398,7 +398,182 @@ export class RentaLiquidaGatewayAdapter implements FormsGatewayIntPort<FormRenta
             renContent.Ingresos.GananciasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos.GananciasCambiosEnElValorRazonable.ValorContable =
                 renContent?.Renglon57?.["429501GananciasPorAplicacionMetodoDeParticipacion"]?.GananciasPorCambiosEnElValorRazonableDeActivos?.DeInversionesEnAsociadasSubsidiariasYNegociosConjuntos?.SaldosContablesADiciembre31Parciales || 0;
 
-            //TODO: quedo en H50
+            // Ingresos - GananciasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos - DividendosYOParticipacionesNoConstitutivosDeRentaNiGananciaOcasionalIncluyeCapitalizacionesNoGravadas
+
+            renContent.Ingresos.GananciasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos.DividendosYOParticipacionesNoConstitutivosDeRentaNiGananciaOcasionalIncluyeCapitalizacionesNoGravadas.ValorContable =
+                renContent?.Renglon49?.TotalDividentosOParticipacionesGananciaOcasionalSaldosContablesADiciembre31 || 0;
+            
+            renContent.Ingresos.GananciasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos.DividendosYOParticipacionesNoConstitutivosDeRentaNiGananciaOcasionalIncluyeCapitalizacionesNoGravadas.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                (renContent?.Renglon49?.RecibidosDeSociedadNacionalDelRegimenOrdinarioQueSiLlevaACaboLasMegainversionesDelArt235?.AjustesParaLlegarASaldosFiscales1 || 0) + (renContent?.Renglon49?.RecibidosDeSociedadNacionalDelRegimenOrdinarioQueNoLlevaACaboLasMegainversionesDelArt235YQueNoEstaAcogidaAlRegimenDeSociedadesCHCDeLosArts894A898DelET?.AjustesParaLlegarASaldosFiscales1 || 0) + (renContent?.Renglon49?.RecibidosDeSociedadNacionalDelRegimenOrdinarioQueNoLlevaACaboLasMegainversionesDelArt235PeroQueSiEstaAcogidaAlRegimenDeSociedadesCHCDeLosArts894A898DelET?.AjustesParaLlegarASaldosFiscales1 || 0) + (renContent?.Renglon49?.RecibidosDeUnaSociedadNacionalDelRegimenSimple?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            renContent.Ingresos.GananciasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos.DividendosYOParticipacionesNoConstitutivosDeRentaNiGananciaOcasionalIncluyeCapitalizacionesNoGravadas.MayorValorFiscalPorReconocimientoExencionesLimitaciones = (renContent?.Renglon49?.RecibidosDeSociedadNacionalDelRegimenOrdinarioQueSiLlevaACaboLasMegainversionesDelArt235?.AjustesParaLlegarASaldosFiscales3 || 0) + (renContent?.Renglon49?.RecibidosDeSociedadNacionalDelRegimenOrdinarioQueNoLlevaACaboLasMegainversionesDelArt235YQueNoEstaAcogidaAlRegimenDeSociedadesCHCDeLosArts894A898DelET?.AjustesParaLlegarASaldosFiscales3 || 0) + (renContent?.Renglon49?.RecibidosDeSociedadNacionalDelRegimenOrdinarioQueNoLlevaACaboLasMegainversionesDelArt235PeroQueSiEstaAcogidaAlRegimenDeSociedadesCHCDeLosArts894A898DelET?.AjustesParaLlegarASaldosFiscales3 || 0) + (renContent?.Renglon49?.RecibidosDeUnaSociedadNacionalDelRegimenSimple?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            // Ingresos - GananciasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos - DividendosOParticipacionesDistribuidosPorEntidadesNoResidentesEnColombiaAUnaCHCYPrimaEnColocacionDeAcciones
+
+            renContent.Ingresos.GananciasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos.DividendosOParticipacionesDistribuidosPorEntidadesNoResidentesEnColombiaAUnaCHCYPrimaEnColocacionDeAcciones.ValorContable =
+                renContent?.Renglon50DividendosOParticipacionesDistribuidosPorEntidadesResidentesEnColombia?.TotalSaldosContablesADiciembre31Parciales || 0;
+
+            // Ingresos - GananciasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos - DividendosYOParticipacionesNoConstitutivosDeRentaNiGananciaOcasionalIncluyeCapitalizacionesNoGravadas
+
+            renContent.Ingresos.GananciasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos.DividendosYOParticipacionesGravadasALaTarifaGeneralProvenientesDeSeciedadesYEntidadesExtranjerasODeSociedadesNacionales.ValorContable =
+                renContent?.Renglon51DividendosOParticipacionesGravadasAñoRecibidosPorSociedadesExtranjeras?.TotalSaldosContablesADiciembre31Parciales || 0;
+
+            // Ingresos - GananciasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos - DividendosYOParticipacionesGravadasRecibidasPorPersonasNaturalesSinResidenciaFiscalAnio2016YAnteriores
+
+            renContent.Ingresos.GananciasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos.DividendosYOParticipacionesGravadasRecibidasPorPersonasNaturalesSinResidenciaFiscalAnio2016YAnteriores.ValorContable =
+                renContent?.Renglon52?.TotalDividendosYParticipacionesGravadasPorPersonasNaturalesSaldosContablesADiciembre3152 || 0;
+
+            renContent.Ingresos.GananciasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos.DividendosYOParticipacionesGravadasRecibidasPorPersonasNaturalesSinResidenciaFiscalAnio2016YAnteriores.MenorValorFiscalPorReconocimientoExencionesLimitaciones = (renContent?.Renglon52?.RecibidosDeSociedadNacionalDelRegimenOrdinarioQueSiLlevaACaboLasMegainversionesDelArt235?.AjustesParaLlegarASaldosFiscales1 || 0) + (renContent?.Renglon52?.RecibidosDeSociedadNacionalDelRegimenOrdinarioQueNoLlevaACaboLasMegainversionesDelArt235YQueNoEstaAcogidaAlRegimenDeSociedadesCHCDeLosArts894A898DelET?.AjustesParaLlegarASaldosFiscales1 || 0) + (renContent?.Renglon52?.RecibidosDeSociedadNacionalDelRegimenOrdinarioQueNoLlevaACaboLasMegainversionesDelArt235PeroQueSiEstaAcogidaAlRegimenDeSociedadesCHCDeLosArts894A898DelET?.AjustesParaLlegarASaldosFiscales1 || 0) + (renContent?.Renglon52?.RecibidosDeUnaSociedadNacionalDelRegimenSimple?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            renContent.Ingresos.GananciasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos.DividendosYOParticipacionesGravadasRecibidasPorPersonasNaturalesSinResidenciaFiscalAnio2016YAnteriores.MenorValorFiscalPorReconocimientoExencionesLimitaciones = (renContent?.Renglon52?.RecibidosDeSociedadNacionalDelRegimenOrdinarioQueSiLlevaACaboLasMegainversionesDelArt235?.AjustesParaLlegarASaldosFiscales3 || 0) + (renContent?.Renglon52?.RecibidosDeSociedadNacionalDelRegimenOrdinarioQueNoLlevaACaboLasMegainversionesDelArt235YQueNoEstaAcogidaAlRegimenDeSociedadesCHCDeLosArts894A898DelET?.AjustesParaLlegarASaldosFiscales3 || 0) + (renContent?.Renglon52?.RecibidosDeSociedadNacionalDelRegimenOrdinarioQueNoLlevaACaboLasMegainversionesDelArt235PeroQueSiEstaAcogidaAlRegimenDeSociedadesCHCDeLosArts894A898DelET?.AjustesParaLlegarASaldosFiscales3 || 0) + +(renContent?.Renglon52?.RecibidosDeUnaSociedadNacionalDelRegimenSimple?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            // Ingresos - GananciasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos - DividendosYOParticipacionesGravadasRecibidasPorPersonasNaturalesSinResidenciaFiscalAnio2017YSiguientes
+
+            renContent.Ingresos.GananciasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos.DividendosYOParticipacionesGravadasRecibidasPorPersonasNaturalesSinResidenciaFiscalAnio2017YSiguientes.ValorContable =
+                renContent?.Renglon53?.Total53SaldosContablesADiciembre31 || 0;
+
+            renContent.Ingresos.GananciasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos.DividendosYOParticipacionesGravadasRecibidasPorPersonasNaturalesSinResidenciaFiscalAnio2017YSiguientes.MenorValorFiscalPorReconocimientoExencionesLimitaciones = (renContent?.Renglon53?.RecibidosDeSociedadNacionalDelRegimenOrdinarioQueNoLlevaACaboLasMegainversionesDelArt235YQueNoEstaAcogidaAlRegimenDeSociedadesCHCDeLosArts894A898DelET?.AjustesParaLlegarASaldosFiscales1 || 0) + (renContent?.Renglon53?.RecibidosDeSociedadNacionalDelRegimenOrdinarioQueNoLlevaACaboLasMegainversionesDelArt235PeroQueSiEstaAcogidaAlRegimenDeSociedadesCHCDeLosArts894A898DelET?.AjustesParaLlegarASaldosFiscales1 || 0) + (renContent?.Renglon53?.RecibidosDeUnaSociedadNacionalDelRegimenSimple?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            renContent.Ingresos.GananciasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos.DividendosYOParticipacionesGravadasRecibidasPorPersonasNaturalesSinResidenciaFiscalAnio2017YSiguientes.MayorValorFiscalPorReconocimientoExencionesLimitaciones = (renContent?.Renglon53?.RecibidosDeSociedadNacionalDelRegimenOrdinarioQueNoLlevaACaboLasMegainversionesDelArt235YQueNoEstaAcogidaAlRegimenDeSociedadesCHCDeLosArts894A898DelET?.AjustesParaLlegarASaldosFiscales3 || 0) + (renContent?.Renglon53?.RecibidosDeSociedadNacionalDelRegimenOrdinarioQueNoLlevaACaboLasMegainversionesDelArt235PeroQueSiEstaAcogidaAlRegimenDeSociedadesCHCDeLosArts894A898DelET?.AjustesParaLlegarASaldosFiscales3 || 0) + (renContent?.Renglon53?.RecibidosDeUnaSociedadNacionalDelRegimenSimple?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            // Ingresos - GananciasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos - DividendosYOParticipacionesGravadasAl10Porciento
+
+            renContent.Ingresos.GananciasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos.DividendosYOParticipacionesGravadasAl10Porciento.ValorContable =
+                renContent?.Renglon54?.Total54SaldosContablesADiciembre31 || 0;
+
+            renContent.Ingresos.GananciasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos.DividendosYOParticipacionesGravadasAl10Porciento.MenorValorFiscalPorReconocimientoExencionesLimitaciones = (renContent?.Renglon54?.RecibidosDeSociedadNacionalDelRegimenOrdinarioQueNoLlevaACaboLasMegainversionesDelArt235YQueNoEstaAcogidaAlRegimenDeSociedadesCHCDeLosArts894A898DelET?.AjustesParaLlegarASaldosFiscales1 || 0) + (renContent?.Renglon54?.RecibidosDeSociedadNacionalDelRegimenOrdinarioQueNoLlevaACaboLasMegainversionesDelArt235PeroQueSiEstaAcogidaAlRegimenDeSociedadesCHCDeLosArts894A898DelET?.AjustesParaLlegarASaldosFiscales1 || 0) + (renContent?.Renglon54?.RecSocNacSim54?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            renContent.Ingresos.GananciasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos.DividendosYOParticipacionesGravadasAl10Porciento.MenorValorFiscalPorReconocimientoExencionesLimitaciones = (renContent?.Renglon54?.RecibidosDeSociedadNacionalDelRegimenOrdinarioQueNoLlevaACaboLasMegainversionesDelArt235YQueNoEstaAcogidaAlRegimenDeSociedadesCHCDeLosArts894A898DelET?.AjustesParaLlegarASaldosFiscales3 || 0) + (renContent?.Renglon54?.RecibidosDeSociedadNacionalDelRegimenOrdinarioQueNoLlevaACaboLasMegainversionesDelArt235PeroQueSiEstaAcogidaAlRegimenDeSociedadesCHCDeLosArts894A898DelET?.AjustesParaLlegarASaldosFiscales3 || 0) + (renContent?.Renglon54?.RecSocNacSim54?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            // Ingresos - GananciasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos - DividendosYOParticipacionesGravadasATarifaGeneralEPYSociedadesExtranjerasUtilidadesGeneradasAPartirDelAnio2017
+
+            renContent.Ingresos.GananciasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos.DividendosYOParticipacionesGravadasATarifaGeneralEPYSociedadesExtranjerasUtilidadesGeneradasAPartirDelAnio2017.ValorContable =
+                renContent?.Renglon55?.TotalSaldosContablesADiciembre31Parciales || 0;
+
+            // Ingresos - GananciasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos - DividendosYParticipacionesProvenientesDeProyectosCalificadosComoMegaInversionGravadasAl27Porciento
+
+            renContent.Ingresos.GananciasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos.DividendosYParticipacionesProvenientesDeProyectosCalificadosComoMegaInversionGravadasAl27Porciento.ValorContable =
+                renContent?.Renglon56?.Total56SaldosContablesADiciembre31 || 0;
+
+            renContent.Ingresos.GananciasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos.DividendosYParticipacionesProvenientesDeProyectosCalificadosComoMegaInversionGravadasAl27Porciento.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon56?.RecibidosDeSociedadNacionalDelRegimenOrdinarioQueSiLlevaACaboLasMegainversionesDelArt235?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            renContent.Ingresos.GananciasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos.DividendosYParticipacionesProvenientesDeProyectosCalificadosComoMegaInversionGravadasAl27Porciento.MayorValorFiscalPorReconocimientoExencionesLimitaciones = renContent?.Renglon56?.RecibidosDeSociedadNacionalDelRegimenOrdinarioQueSiLlevaACaboLasMegainversionesDelArt235?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            // Ingresos - IngresosPorMedicionesAValorRazonable - ActivosBiologicos
+
+            renContent.Ingresos.IngresosPorMedicionesAValorRazonable.ActivosBiologicos.ValorContable =
+                renContent?.Renglon57?.["429501GananciasPorAplicacionMetodoDeParticipacion"]?.GananciasPorCambiosEnElValorRazonableDeActivos?.DeActivosBiologicos?.SaldosContablesADiciembre31Parciales || 0;
+
+            // Ingresos - IngresosPorMedicionesAValorRazonable - PropiedadesDeInversion
+
+            renContent.Ingresos.IngresosPorMedicionesAValorRazonable.PropiedadesDeInversion.ValorContable =
+                renContent?.Renglon57?.["429501GananciasPorAplicacionMetodoDeParticipacion"]?.GananciasPorCambiosEnElValorRazonableDeActivos?.DePropiedadesDeInversion?.SaldosContablesADiciembre31Parciales || 0;
+
+            // Ingresos - IngresosPorMedicionesAValorRazonable - PropiedadesDeInversion
+
+            renContent.Ingresos.IngresosPorMedicionesAValorRazonable.InstrumentosFinancierosDistintoAInversionesEnSubsidiariasAsociadasYONegociosConjuntos.ValorContable =
+                renContent?.Renglon57?.["429501GananciasPorAplicacionMetodoDeParticipacion"]?.GananciasPorCambiosEnElValorRazonableDeActivos?.DeInstrumentosFinancierosDiferenteAInversiones?.SaldosContablesADiciembre31Parciales || 0;
+
+            // Ingresos - IngresosPorMedicionesAValorRazonable - InstrumentosDerivados
+
+            renContent.Ingresos.IngresosPorMedicionesAValorRazonable.InstrumentosDerivados.ValorContable =
+                renContent?.Renglon57?.["429501GananciasPorAplicacionMetodoDeParticipacion"]?.GananciasPorCambiosEnElValorRazonableDeActivos?.DeInstrumentosDerivados?.SaldosContablesADiciembre31Parciales || 0;
+
+            // Ingresos - IngresosPorMedicionesAValorRazonable - Otros
+
+            renContent.Ingresos.IngresosPorMedicionesAValorRazonable.Otros.ValorContable =
+                renContent?.Renglon57?.["429501GananciasPorAplicacionMetodoDeParticipacion"]?.GananciasPorCambiosEnElValorRazonableDeActivos?.DeOtrosActivos?.SaldosContablesADiciembre31Parciales || 0;
+
+            // Ingresos - UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios - PropiedadesPlantaYEquipo
+
+            renContent.Ingresos.UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios.PropiedadesPlantaYEquipo.ValorContable =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMenosDe2Anios?.PropiedadesPlantaYEquipo?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Ingresos.UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios.PropiedadesPlantaYEquipo.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMenosDe2Anios?.PropiedadesPlantaYEquipo?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            renContent.Ingresos.UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios.PropiedadesPlantaYEquipo.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMenosDe2Anios?.PropiedadesPlantaYEquipo?.AjustesParaLlegarASaldosFiscales3 || 0;
+            
+            // Ingresos - UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios - PropiedadesDeInversion
+
+            renContent.Ingresos.UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios.PropiedadesDeInversion.ValorContable =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMenosDe2Anios?.PropiedadesDeInversion?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Ingresos.UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios.PropiedadesDeInversion.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMenosDe2Anios?.PropiedadesDeInversion?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            renContent.Ingresos.UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios.PropiedadesDeInversion.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMenosDe2Anios?.PropiedadesDeInversion?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            // Ingresos - UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios - ActivosBiologicosSinPlantasProductoras
+
+            renContent.Ingresos.UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios.ActivosBiologicosSinPlantasProductoras.ValorContable =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMenosDe2Anios?.ActivosBiologicosSinPlantasProductoras?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Ingresos.UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios.ActivosBiologicosSinPlantasProductoras.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMenosDe2Anios?.ActivosBiologicosSinPlantasProductoras?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            renContent.Ingresos.UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios.ActivosBiologicosSinPlantasProductoras.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMenosDe2Anios?.ActivosBiologicosSinPlantasProductoras?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            // Ingresos - UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios - ActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios
+
+            renContent.Ingresos.UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios.ActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios.ValorContable =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMenosDe2Anios?.ActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Ingresos.UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios.ActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMenosDe2Anios?.ActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            renContent.Ingresos.UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios.ActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMenosDe2Anios?.ActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            // Ingresos - UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios - ActivosIntangibles
+
+            renContent.Ingresos.UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios.ActivosIntangibles.ValorContable =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMenosDe2Anios?.ActivosIntangibles?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Ingresos.UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios.ActivosIntangibles.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMenosDe2Anios?.ActivosIntangibles?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            renContent.Ingresos.UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios.ActivosIntangibles.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMenosDe2Anios?.ActivosIntangibles?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            // Ingresos - UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios - InversionesEnAccionesYOtrasParticipaciones
+
+            renContent.Ingresos.UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios.InversionesEnAccionesYOtrasParticipaciones.ValorContable =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMenosDe2Anios?.InversionesEnAccionesYOtrasParticipaciones?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Ingresos.UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios.InversionesEnAccionesYOtrasParticipaciones.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMenosDe2Anios?.InversionesEnAccionesYOtrasParticipaciones?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            renContent.Ingresos.UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios.InversionesEnAccionesYOtrasParticipaciones.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMenosDe2Anios?.InversionesEnAccionesYOtrasParticipaciones?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            // Ingresos - UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios - PorDisposicionDeOtrosInstrumentosFinancieros
+
+            renContent.Ingresos.UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios.PorDisposicionDeOtrosInstrumentosFinancieros.ValorContable =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMenosDe2Anios?.PorDisposicionDeOtrosInstrumentosFinancieros?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Ingresos.UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios.PorDisposicionDeOtrosInstrumentosFinancieros.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMenosDe2Anios?.PorDisposicionDeOtrosInstrumentosFinancieros?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            renContent.Ingresos.UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios.PorDisposicionDeOtrosInstrumentosFinancieros.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMenosDe2Anios?.PorDisposicionDeOtrosInstrumentosFinancieros?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            // Ingresos - UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios - Otros
+
+            renContent.Ingresos.UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios.Otros.ValorContable =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMenosDe2Anios?.Otros?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Ingresos.UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios.Otros.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMenosDe2Anios?.Otros?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            renContent.Ingresos.UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios.Otros.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMenosDe2Anios?.Otros?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            //TODO: quedo en H74
 
         }
 
