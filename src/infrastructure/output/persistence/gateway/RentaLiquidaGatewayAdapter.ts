@@ -800,7 +800,86 @@ export class RentaLiquidaGatewayAdapter implements FormsGatewayIntPort<FormRenta
             renContent.Ingresos.IngresosPorReversionDePasivosPorBeneficiosALosEmpleados.BeneficiosAEmpleadosPostEmpleo.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
                 renContent?.Renglon57?.["425037ReversionDePasivosPorBeneficiosALosEmpleados"]?.BeneficiosAEmpleadosPostEmpleo?.AjustesParaLlegarASaldosFiscales3 || 0;
 
-            //TODO: quedo en H109
+            // Ingresos - OtrosIngresos - TransferenciasSubvencionesYAyudasGubernamentales
+
+            renContent.Ingresos.OtrosIngresos.TransferenciasSubvencionesYAyudasGubernamentales.ValorContable =
+                renContent?.Renglon57?.["429502TransferenciasSubvencionesYAyudasGubernamentales"]?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Ingresos.OtrosIngresos.TransferenciasSubvencionesYAyudasGubernamentales.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["429502TransferenciasSubvencionesYAyudasGubernamentales"]?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            renContent.Ingresos.OtrosIngresos.TransferenciasSubvencionesYAyudasGubernamentales.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["429502TransferenciasSubvencionesYAyudasGubernamentales"]?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            // Ingresos - OtrosIngresos - DonacionesAportacionesYSimilares
+
+            renContent.Ingresos.OtrosIngresos.DonacionesAportacionesYSimilares.ValorContable =
+                renContent?.Renglon57?.["429503DonacionesAportacionesYSimilares"]?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Ingresos.OtrosIngresos.DonacionesAportacionesYSimilares.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["429503DonacionesAportacionesYSimilares"]?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            renContent.Ingresos.OtrosIngresos.DonacionesAportacionesYSimilares.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["429503DonacionesAportacionesYSimilares"]?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            // Ingresos - OtrosIngresos - ReembolsosDeCompaniasDeSeguroIndemnizaciones
+
+            renContent.Ingresos.OtrosIngresos.ReembolsosDeCompaniasDeSeguroIndemnizaciones.ValorContable =
+                renContent?.Renglon57?.["4255Indemnizaciones"]?.ReembolsosDeCompaniasDeSegros?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Ingresos.OtrosIngresos.ReembolsosDeCompaniasDeSeguroIndemnizaciones.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4255Indemnizaciones"]?.ReembolsosDeCompaniasDeSegros?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            renContent.Ingresos.OtrosIngresos.ReembolsosDeCompaniasDeSeguroIndemnizaciones.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4255Indemnizaciones"]?.ReembolsosDeCompaniasDeSegros?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            // Ingresos - OtrosIngresos - OtrasIndemnizaciones
+
+            renContent.Ingresos.OtrosIngresos.OtrasIndemnizaciones.ValorContable =
+                renContent?.Renglon57?.["4255Indemnizaciones"]?.OtrasIndemnizaciones?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Ingresos.OtrosIngresos.OtrasIndemnizaciones.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4255Indemnizaciones"]?.OtrasIndemnizaciones?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            renContent.Ingresos.OtrosIngresos.OtrasIndemnizaciones.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4255Indemnizaciones"]?.OtrasIndemnizaciones?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            // Ingresos - OtrosIngresos - OtrasReversionesORecuperaciones
+
+            renContent.Ingresos.OtrosIngresos.OtrasReversionesORecuperaciones.ValorContable =
+                renContent?.Renglon57?.["429506OtrasReversionesORecuperaciones"]?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Ingresos.OtrosIngresos.OtrasReversionesORecuperaciones.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["429506OtrasReversionesORecuperaciones"]?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            renContent.Ingresos.OtrosIngresos.OtrasReversionesORecuperaciones.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["429506OtrasReversionesORecuperaciones"]?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            // Ingresos - OtrosIngresos - Otros
+
+            renContent.Ingresos.OtrosIngresos.Otros.ValorContable =
+                (renContent?.Renglon57?.["429507Otros"]?.SaldosContablesADiciembre31Parciales || 0) + (renContent?.Renglon57?.["4265IngresosDeEjerciciosAnteriores"]?.SaldosContablesADiciembre31Parciales || 0) + (renContent?.Renglon57?.["425050ReintegrodeOtrosCostosYGastos"]?.SaldosContablesADiciembre31Parciales || 0) + (renContent?.Renglon57?.["429543LoteriasRifasYSimilares"]?.SaldosContablesADiciembre31Parciales || 0);
+
+            renContent.Ingresos.OtrosIngresos.Otros.MenorValorFiscalPorReconocimientoExencionesLimitaciones = (renContent?.Renglon57?.["429507Otros"]?.AjustesParaLlegarASaldosFiscales1 || 0) + (renContent?.Renglon57?.["4265IngresosDeEjerciciosAnteriores"]?.AjustesParaLlegarASaldosFiscales1 || 0) + (renContent?.Renglon57?.["425050ReintegrodeOtrosCostosYGastos"]?.AjustesParaLlegarASaldosFiscales1 || 0) + (renContent?.Renglon57?.["429543LoteriasRifasYSimilares"]?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            renContent.Ingresos.OtrosIngresos.Otros.MayorValorFiscalPorReconocimientoExencionesLimitaciones = (renContent?.Renglon57?.["429507Otros"]?.AjustesParaLlegarASaldosFiscales3 || 0) + (renContent?.Renglon57?.["4265IngresosDeEjerciciosAnteriores"]?.AjustesParaLlegarASaldosFiscales3 || 0) + (renContent?.Renglon57?.["425050ReintegrodeOtrosCostosYGastos"]?.AjustesParaLlegarASaldosFiscales3 || 0) + (renContent?.Renglon57?.["429543LoteriasRifasYSimilares"]?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            // Ingresos - AjustesFiscales - AdicionDeIngresos - InteresesPresuntos
+
+            renContent.Ingresos.AjustesFiscales.AdicionDeIngresos.InteresesPresuntos.MayorValorFiscalPorReconocimientoExencionesLimitaciones = (renContent?.Renglon48?.["InteresesPresuntivosPorHacerPrestamosEnDineroALosSociosDeEstaSociedad"]?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            // Costos - MateriasPrimasReventaDeBienesTerminadosYServicios - CostosDeVentasCalculadoPorElSistemaPermanente
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.CostosDeVentasCalculadoPorElSistemaPermanente.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciantesQueUtilizanSistemaPermanente?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.CostosDeVentasCalculadoPorElSistemaPermanente.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciantesQueUtilizanSistemaPermanente?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.CostosDeVentasCalculadoPorElSistemaPermanente.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciantesQueUtilizanSistemaPermanente?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            //TODO: quedo en H127
 
         }
 
