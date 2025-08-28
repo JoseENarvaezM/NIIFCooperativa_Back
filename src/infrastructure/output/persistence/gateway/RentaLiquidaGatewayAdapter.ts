@@ -573,7 +573,234 @@ export class RentaLiquidaGatewayAdapter implements FormsGatewayIntPort<FormRenta
             renContent.Ingresos.UtilidadEnLaVentaOEnajenacionDeActivosBienesPoseidosPorMenosDeDoAnios.Otros.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
                 renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMenosDe2Anios?.Otros?.AjustesParaLlegarASaldosFiscales3 || 0;
 
-            //TODO: quedo en H74
+            // Ingresos - UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional - PropiedadesPlantaYEquipo
+
+            renContent.Ingresos.UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional.PropiedadesPlantaYEquipo.ValorContable =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMasDe2Anios?.PropiedadesPlantaYEquipo?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Ingresos.UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional.PropiedadesPlantaYEquipo.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMasDe2Anios?.PropiedadesPlantaYEquipo?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            renContent.Ingresos.UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional.PropiedadesPlantaYEquipo.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMasDe2Anios?.PropiedadesPlantaYEquipo?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            // Ingresos - UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional - PropiedadesDeInversion
+
+            renContent.Ingresos.UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional.PropiedadesDeInversion.ValorContable =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMasDe2Anios?.PropiedadesDeInversion?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Ingresos.UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional.PropiedadesDeInversion.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMasDe2Anios?.PropiedadesDeInversion?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            renContent.Ingresos.UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional.PropiedadesDeInversion.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMasDe2Anios?.PropiedadesDeInversion?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            // Ingresos - UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional - ActivosBiologicosSinPlantasProductoras
+
+            renContent.Ingresos.UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional.ActivosBiologicosSinPlantasProductoras.ValorContable =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMasDe2Anios?.ActivosBiologicosSinPlantasProductoras?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Ingresos.UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional.ActivosBiologicosSinPlantasProductoras.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMasDe2Anios?.ActivosBiologicosSinPlantasProductoras?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            renContent.Ingresos.UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional.ActivosBiologicosSinPlantasProductoras.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMasDe2Anios?.ActivosBiologicosSinPlantasProductoras?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            // Ingresos - UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional - ActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios
+
+            renContent.Ingresos.UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional.ActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios.ValorContable =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMasDe2Anios?.ActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Ingresos.UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional.ActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMasDe2Anios?.ActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            renContent.Ingresos.UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional.ActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMasDe2Anios?.ActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            // Ingresos - UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional - ActivosIntangibles
+
+            renContent.Ingresos.UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional.ActivosIntangibles.ValorContable =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMasDe2Anios?.ActivosIntangibles?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Ingresos.UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional.ActivosIntangibles.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMasDe2Anios?.ActivosIntangibles?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            renContent.Ingresos.UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional.ActivosIntangibles.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMasDe2Anios?.ActivosIntangibles?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            // Ingresos - UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional - InversionesEnAccionesYOtrasParticipaciones
+
+            renContent.Ingresos.UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional.InversionesEnAccionesYOtrasParticipaciones.ValorContable =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMasDe2Anios?.InversionesEnAccionesYOtrasParticipaciones?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Ingresos.UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional.InversionesEnAccionesYOtrasParticipaciones.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMasDe2Anios?.InversionesEnAccionesYOtrasParticipaciones?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            renContent.Ingresos.UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional.InversionesEnAccionesYOtrasParticipaciones.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMasDe2Anios?.InversionesEnAccionesYOtrasParticipaciones?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            // Ingresos - UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional - PorDisposicionDeOtrosInstrumentosFinancieros
+
+            renContent.Ingresos.UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional.PorDisposicionDeOtrosInstrumentosFinancieros.ValorContable =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMasDe2Anios?.PorDisposicionDeOtrosInstrumentosFinancieros?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Ingresos.UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional.PorDisposicionDeOtrosInstrumentosFinancieros.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMasDe2Anios?.PorDisposicionDeOtrosInstrumentosFinancieros?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            renContent.Ingresos.UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional.PorDisposicionDeOtrosInstrumentosFinancieros.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMasDe2Anios?.PorDisposicionDeOtrosInstrumentosFinancieros?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            // Ingresos - UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional - Otros
+
+            renContent.Ingresos.UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional.Otros.ValorContable =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMasDe2Anios?.Otros?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Ingresos.UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional.Otros.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMasDe2Anios?.Otros?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            renContent.Ingresos.UtilidadPorVentaOEnajenacionDeActivosBienesPoseidosPorDosAniosOMasGananciaOcasional.Otros.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["4245UtilidadEnVentaDeActivoFijo"]?.PorVentasDeActivosPoseidosMasDe2Anios?.Otros?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            // Ingresos - IngresosPorReversionDeDeterioroDelValor - Inventarios
+
+            renContent.Ingresos.IngresosPorReversionDeDeterioroDelValor.Inventarios.ValorContable =
+                renContent?.Renglon57?.["425035ReversionDeDeterioroDeValor"]?.Inventarios?.SaldosContablesADiciembre31Parciales || 0;
+
+            // Ingresos - IngresosPorReversionDeDeterioroDelValor - PropiedadesPlantaYEquipo
+
+            renContent.Ingresos.IngresosPorReversionDeDeterioroDelValor.PropiedadesPlantaYEquipo.ValorContable =
+                renContent?.Renglon57?.["425035ReversionDeDeterioroDeValor"]?.PropiedadesPlantaYEquipo?.SaldosContablesADiciembre31Parciales || 0;
+
+            // Ingresos - IngresosPorReversionDeDeterioroDelValor - ActivosIntangibles
+
+            renContent.Ingresos.IngresosPorReversionDeDeterioroDelValor.ActivosIntangibles.ValorContable =
+                renContent?.Renglon57?.["425035ReversionDeDeterioroDeValor"]?.ActivosIntangibles?.SaldosContablesADiciembre31Parciales || 0;
+
+            // Ingresos - IngresosPorReversionDeDeterioroDelValor - ActivosDeExploracionYEvaluacionDeRecursosMinerales
+
+            renContent.Ingresos.IngresosPorReversionDeDeterioroDelValor.ActivosDeExploracionYEvaluacionDeRecursosMinerales.ValorContable =
+                renContent?.Renglon57?.["425035ReversionDeDeterioroDeValor"]?.ActivosDeExploracionYEvaluacionDeRecursosMinerales?.SaldosContablesADiciembre31Parciales || 0;
+
+            // Ingresos - IngresosPorReversionDeDeterioroDelValor - PropiedadesDeInversionMedidasAlModeloDeCosto
+
+            renContent.Ingresos.IngresosPorReversionDeDeterioroDelValor.PropiedadesDeInversionMedidasAlModeloDeCosto.ValorContable =
+                renContent?.Renglon57?.["425035ReversionDeDeterioroDeValor"]?.PropiedadesDeInversionMedidasAlModeloDeCosto?.SaldosContablesADiciembre31Parciales || 0;
+
+            // Ingresos - IngresosPorReversionDeDeterioroDelValor - ActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios
+
+            renContent.Ingresos.IngresosPorReversionDeDeterioroDelValor.ActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios.ValorContable =
+                renContent?.Renglon57?.["425035ReversionDeDeterioroDeValor"]?.ActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios?.SaldosContablesADiciembre31Parciales || 0;
+
+            // Ingresos - IngresosPorReversionDeDeterioroDelValor - ActivosBiologicosMedidosAlModeloDeCosto
+
+            renContent.Ingresos.IngresosPorReversionDeDeterioroDelValor.ActivosBiologicosMedidosAlModeloDeCosto.ValorContable =
+                renContent?.Renglon57?.["425035ReversionDeDeterioroDeValor"]?.ActivosBiologicosMedidosAlModeloDeCosto?.SaldosContablesADiciembre31Parciales || 0;
+
+            // Ingresos - IngresosPorReversionDeDeterioroDelValor - BienesDeArteYCultura
+
+            renContent.Ingresos.IngresosPorReversionDeDeterioroDelValor.BienesDeArteYCultura.ValorContable =
+                renContent?.Renglon57?.["425035ReversionDeDeterioroDeValor"]?.BienesDeArteYCultura?.SaldosContablesADiciembre31Parciales || 0;
+
+            // Ingresos - IngresosPorReversionDeDeterioroDelValor - ActivosFinancierosDistintosACarteraDeCrediroYOperacionesDeLeasing
+
+            renContent.Ingresos.IngresosPorReversionDeDeterioroDelValor.ActivosFinancierosDistintosACarteraDeCrediroYOperacionesDeLeasing.ValorContable =
+                renContent?.Renglon57?.["425035ReversionDeDeterioroDeValor"]?.ActivosFinancierosDiferentesACarteraDeCredito?.SaldosContablesADiciembre31Parciales || 0;
+
+            // Ingresos - IngresosPorReversionDeDeterioroDelValor - CarteraDeCreditoYOperacionesDeLeasing
+
+            renContent.Ingresos.IngresosPorReversionDeDeterioroDelValor.CarteraDeCreditoYOperacionesDeLeasing.ValorContable =
+                renContent?.Renglon57?.["425035ReversionDeDeterioroDeValor"]?.CarteraDeCreditoYOperacionesDeLeasing?.SaldosContablesADiciembre31Parciales || 0;
+
+            // Ingresos - IngresosPorReversionDeDeterioroDelValor - OtrasInversionesMedidasAlCostoOElMetodoDeLaParticipacion
+
+            renContent.Ingresos.IngresosPorReversionDeDeterioroDelValor.OtrasInversionesMedidasAlCostoOElMetodoDeLaParticipacion.ValorContable =
+                renContent?.Renglon57?.["425035ReversionDeDeterioroDeValor"]?.OtrasInversionesMedidasAlCostoOElMetodoDeLaParticipacion?.SaldosContablesADiciembre31Parciales || 0;
+
+            // Ingresos - IngresosPorReversionDeDeterioroDelValor - OtrosDeterior
+
+            renContent.Ingresos.IngresosPorReversionDeDeterioroDelValor.OtrosDeterior.ValorContable =
+                renContent?.Renglon57?.["425035ReversionDeDeterioroDeValor"]?.OtrosDeterioros?.SaldosContablesADiciembre31Parciales || 0;
+
+            // Ingresos - IngresosPorReversionDeProvisionesPasivosDeMontoOFechaInciertos - Garantias
+
+            renContent.Ingresos.IngresosPorReversionDeProvisionesPasivosDeMontoOFechaInciertos.Garantias.ValorContable =
+                renContent?.Renglon57?.["425036ReversionDeProvisionesMontoOFechaInciertos"]?.Garantias?.SaldosContablesADiciembre31Parciales || 0;
+
+            // Ingresos - IngresosPorReversionDeProvisionesPasivosDeMontoOFechaInciertos - ContratosOnerosos
+
+            renContent.Ingresos.IngresosPorReversionDeProvisionesPasivosDeMontoOFechaInciertos.ContratosOnerosos.ValorContable =
+                renContent?.Renglon57?.["425036ReversionDeProvisionesMontoOFechaInciertos"]?.ContratosOnerosos?.SaldosContablesADiciembre31Parciales || 0;
+
+            // Ingresos - IngresosPorReversionDeProvisionesPasivosDeMontoOFechaInciertos - Litigios
+
+            renContent.Ingresos.IngresosPorReversionDeProvisionesPasivosDeMontoOFechaInciertos.Litigios.ValorContable =
+                renContent?.Renglon57?.["425036ReversionDeProvisionesMontoOFechaInciertos"]?.Litigios?.SaldosContablesADiciembre31Parciales || 0;
+
+            // Ingresos - IngresosPorReversionDeProvisionesPasivosDeMontoOFechaInciertos - ReembolsosAClientes
+
+            renContent.Ingresos.IngresosPorReversionDeProvisionesPasivosDeMontoOFechaInciertos.ReembolsosAClientes.ValorContable =
+                renContent?.Renglon57?.["425036ReversionDeProvisionesMontoOFechaInciertos"]?.ReembolsosAClientes?.SaldosContablesADiciembre31Parciales || 0;
+
+            // Ingresos - IngresosPorReversionDeProvisionesPasivosDeMontoOFechaInciertos - ReestructuracionesDeNegocios
+
+            renContent.Ingresos.IngresosPorReversionDeProvisionesPasivosDeMontoOFechaInciertos.ReestructuracionesDeNegocios.ValorContable =
+                renContent?.Renglon57?.["425036ReversionDeProvisionesMontoOFechaInciertos"]?.ReestructuracionesDeNegocios?.SaldosContablesADiciembre31Parciales || 0;
+
+            // Ingresos - IngresosPorReversionDeProvisionesPasivosDeMontoOFechaInciertos - PasivosContingentesAsumidosEnUnaCombinacionDeNegocios
+
+            renContent.Ingresos.IngresosPorReversionDeProvisionesPasivosDeMontoOFechaInciertos.PasivosContingentesAsumidosEnUnaCombinacionDeNegocios.ValorContable =
+                renContent?.Renglon57?.["425036ReversionDeProvisionesMontoOFechaInciertos"]?.PasivosContingentesAsumidosEnUnaCombinacionDeNegocios?.SaldosContablesADiciembre31Parciales || 0;
+
+            // Ingresos - IngresosPorReversionDeProvisionesPasivosDeMontoOFechaInciertos - Otros
+
+            renContent.Ingresos.IngresosPorReversionDeProvisionesPasivosDeMontoOFechaInciertos.Otros.ValorContable =
+                renContent?.Renglon57?.["425036ReversionDeProvisionesMontoOFechaInciertos"]?.Otros?.SaldosContablesADiciembre31Parciales || 0;
+
+            // Ingresos - IngresosPorReversionDePasivosPorBeneficiosALosEmpleados - BeneficiosDeCortoplazo
+
+            renContent.Ingresos.IngresosPorReversionDePasivosPorBeneficiosALosEmpleados.BeneficiosDeCortoplazo.ValorContable =
+                renContent?.Renglon57?.["425037ReversionDePasivosPorBeneficiosALosEmpleados"]?.BeneficiosDeCortoPlayaz?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Ingresos.IngresosPorReversionDePasivosPorBeneficiosALosEmpleados.BeneficiosDeCortoplazo.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["425037ReversionDePasivosPorBeneficiosALosEmpleados"]?.BeneficiosDeCortoPlayaz?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            renContent.Ingresos.IngresosPorReversionDePasivosPorBeneficiosALosEmpleados.BeneficiosDeCortoplazo.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["425037ReversionDePasivosPorBeneficiosALosEmpleados"]?.BeneficiosDeCortoPlayaz?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            // Ingresos - IngresosPorReversionDePasivosPorBeneficiosALosEmpleados - BeneficiosDeLargoPlazo
+
+            renContent.Ingresos.IngresosPorReversionDePasivosPorBeneficiosALosEmpleados.BeneficiosDeLargoPlazo.ValorContable =
+                renContent?.Renglon57?.["425037ReversionDePasivosPorBeneficiosALosEmpleados"]?.BeneficiosDeLargoPlaazo?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Ingresos.IngresosPorReversionDePasivosPorBeneficiosALosEmpleados.BeneficiosDeLargoPlazo.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["425037ReversionDePasivosPorBeneficiosALosEmpleados"]?.BeneficiosDeLargoPlaazo?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            renContent.Ingresos.IngresosPorReversionDePasivosPorBeneficiosALosEmpleados.BeneficiosDeLargoPlazo.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["425037ReversionDePasivosPorBeneficiosALosEmpleados"]?.BeneficiosDeLargoPlaazo?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            // Ingresos - IngresosPorReversionDePasivosPorBeneficiosALosEmpleados - BeneficiosAEmpleadosPorTerminacionDelVinculoLaboral
+
+            renContent.Ingresos.IngresosPorReversionDePasivosPorBeneficiosALosEmpleados.BeneficiosAEmpleadosPorTerminacionDelVinculoLaboral.ValorContable =
+                renContent?.Renglon57?.["425037ReversionDePasivosPorBeneficiosALosEmpleados"]?.BeneficiosAEmpleadosPorTerminacionDelVinculoLaboral?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Ingresos.IngresosPorReversionDePasivosPorBeneficiosALosEmpleados.BeneficiosAEmpleadosPorTerminacionDelVinculoLaboral.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["425037ReversionDePasivosPorBeneficiosALosEmpleados"]?.BeneficiosAEmpleadosPorTerminacionDelVinculoLaboral?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            renContent.Ingresos.IngresosPorReversionDePasivosPorBeneficiosALosEmpleados.BeneficiosAEmpleadosPorTerminacionDelVinculoLaboral.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["425037ReversionDePasivosPorBeneficiosALosEmpleados"]?.BeneficiosAEmpleadosPorTerminacionDelVinculoLaboral?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            // Ingresos - IngresosPorReversionDePasivosPorBeneficiosALosEmpleados - BeneficiosAEmpleadosPostEmpleo
+
+            renContent.Ingresos.IngresosPorReversionDePasivosPorBeneficiosALosEmpleados.BeneficiosAEmpleadosPostEmpleo.ValorContable =
+                renContent?.Renglon57?.["425037ReversionDePasivosPorBeneficiosALosEmpleados"]?.BeneficiosAEmpleadosPostEmpleo?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Ingresos.IngresosPorReversionDePasivosPorBeneficiosALosEmpleados.BeneficiosAEmpleadosPostEmpleo.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["425037ReversionDePasivosPorBeneficiosALosEmpleados"]?.BeneficiosAEmpleadosPostEmpleo?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            renContent.Ingresos.IngresosPorReversionDePasivosPorBeneficiosALosEmpleados.BeneficiosAEmpleadosPostEmpleo.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon57?.["425037ReversionDePasivosPorBeneficiosALosEmpleados"]?.BeneficiosAEmpleadosPostEmpleo?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            //TODO: quedo en H109
 
         }
 
