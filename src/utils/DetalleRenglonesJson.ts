@@ -2423,6 +2423,13 @@ export const DetalleRenglonesInput = {
       SaldosFiscalesADiciembre31Parciales: 0,
     },
       InventarioInicialDeMateriaPrimas: {
+        InventarioInicialDeMateriaPrimas: {
+        SaldosContablesADiciembre31Parciales: 0,
+        AjustesParaLlegarASaldosFiscales1: 0,
+        AjustesParaLlegarASaldosFiscales2: "",
+        AjustesParaLlegarASaldosFiscales3: 0,
+        SaldosFiscalesADiciembre31Parciales: 0,
+      },
         MasComprasLocales: {
         SaldosContablesADiciembre31Parciales: 0,
         AjustesParaLlegarASaldosFiscales1: 0,

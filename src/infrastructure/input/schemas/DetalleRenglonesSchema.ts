@@ -2479,6 +2479,13 @@ export const DetalleRenglonesSchema = z.object({
         SaldosFiscalesADiciembre31Parciales: z.number()
       }),
       InventarioInicialDeMateriaPrimas: z.object({
+        InventarioInicialDeMateriaPrimas: z.object({
+          SaldosContablesADiciembre31Parciales: z.number(),
+          AjustesParaLlegarASaldosFiscales1: z.number(),
+          AjustesParaLlegarASaldosFiscales2: z.string(),
+          AjustesParaLlegarASaldosFiscales3: z.number(),
+          SaldosFiscalesADiciembre31Parciales: z.number()
+        }),
         MasComprasLocales: z.object({
           SaldosContablesADiciembre31Parciales: z.number(),
           AjustesParaLlegarASaldosFiscales1: z.number(),

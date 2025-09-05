@@ -868,6 +868,10 @@ export class RentaLiquidaGatewayAdapter implements FormsGatewayIntPort<FormRenta
 
             renContent.Ingresos.AjustesFiscales.AdicionDeIngresos.InteresesPresuntos.MayorValorFiscalPorReconocimientoExencionesLimitaciones = (renContent?.Renglon48?.["InteresesPresuntivosPorHacerPrestamosEnDineroALosSociosDeEstaSociedad"]?.AjustesParaLlegarASaldosFiscales3 || 0);
 
+            // Ingresos - AjustesFiscales - AdicionDeIngresos - InteresesPresuntos
+
+            renContent.Ingresos.AjustesFiscales.AdicionDeIngresos.OtrosIngresosFiscalesYNoIncluidosContablemente.ValorFiscal = (renContent?.Renglon60?.["TotalIngresosNoConstituidosDeRentaNiGananciaOcasionalSaldosFiscalesADiciembre31"] || 0);
+
             // Costos - MateriasPrimasReventaDeBienesTerminadosYServicios - CostosDeVentasCalculadoPorElSistemaPermanente
 
             renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.CostosDeVentasCalculadoPorElSistemaPermanente.ValorContable =
@@ -877,10 +881,153 @@ export class RentaLiquidaGatewayAdapter implements FormsGatewayIntPort<FormRenta
                 renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciantesQueUtilizanSistemaPermanente?.AjustesParaLlegarASaldosFiscales1 || 0;
 
             renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.CostosDeVentasCalculadoPorElSistemaPermanente.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
-                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciantesQueUtilizanSistemaPermanente?.AjustesParaLlegarASaldosFiscales3 || 0;
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciantesQueUtilizanSistemaPermanente?.SaldosFiscalesADiciembre31Parciales || 0;
 
-            //TODO: quedo en H127
+            //Costos - MateriasPrimasReventaDeBienesTerminadosYServicios - Materias primas (para procesos de producción) - Inventario inicial
 
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.MateriasPrimasProduccion.InventarioInicial.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.InventarioInicialDeMateriaPrimas?.InventarioInicialDeMateriaPrimas?.SaldosContablesADiciembre31Parciales || 0;
+                
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.MateriasPrimasProduccion.InventarioInicial.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.InventarioInicialDeMateriaPrimas?.InventarioInicialDeMateriaPrimas?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.MateriasPrimasProduccion.InventarioInicial.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.InventarioInicialDeMateriaPrimas?.InventarioInicialDeMateriaPrimas?.SaldosFiscalesADiciembre31Parciales || 0;    
+                
+            //Costos - MateriasPrimasReventaDeBienesTerminadosYServicios - Materias primas (para procesos de producción) - compras locales
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.MateriasPrimasProduccion.ComprasLocales.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.InventarioInicialDeMateriaPrimas?.MasComprasLocales?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.MateriasPrimasProduccion.ComprasLocales.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.InventarioInicialDeMateriaPrimas?.MasComprasLocales?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.MateriasPrimasProduccion.ComprasLocales.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.InventarioInicialDeMateriaPrimas?.MasComprasLocales?.SaldosFiscalesADiciembre31Parciales || 0;
+
+            //Costos - MateriasPrimasReventaDeBienesTerminadosYServicios - Materias primas (para procesos de producción) - Importaciones
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.MateriasPrimasProduccion.Importaciones.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.InventarioInicialDeMateriaPrimas?.MasImportaciones?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.MateriasPrimasProduccion.Importaciones.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.InventarioInicialDeMateriaPrimas?.MasImportaciones?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.MateriasPrimasProduccion.Importaciones.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.InventarioInicialDeMateriaPrimas?.MasImportaciones?.SaldosFiscalesADiciembre31Parciales || 0;
+
+            //Costos - MateriasPrimasReventaDeBienesTerminadosYServicios - Materias primas (para procesos de producción) - Inventario final
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.MateriasPrimasProduccion.InventarioFinal.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.InventarioInicialDeMateriaPrimas?.MenosInventarioFinalMateriasPrimas?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.MateriasPrimasProduccion.InventarioFinal.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.InventarioInicialDeMateriaPrimas?.MenosInventarioFinalMateriasPrimas?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.MateriasPrimasProduccion.InventarioFinal.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.InventarioInicialDeMateriaPrimas?.MenosInventarioFinalMateriasPrimas?.SaldosFiscalesADiciembre31Parciales || 0;
+
+            //Costos - MateriasPrimasReventaDeBienesTerminadosYServicios - Costos de los bienes vendidos (para comerciantes por reventa de bienes terminados) - Inventario inicial
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.CostoBienesVendidos.InventarioInicial.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciasntesQueUtilizanJuegoDeInventarios?.InventarioInicial?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.CostoBienesVendidos.InventarioInicial.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciasntesQueUtilizanJuegoDeInventarios?.InventarioInicial?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.CostoBienesVendidos.InventarioInicial.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciasntesQueUtilizanJuegoDeInventarios?.InventarioInicial?.SaldosFiscalesADiciembre31Parciales || 0;
+            
+            //Costos - MateriasPrimasReventaDeBienesTerminadosYServicios - Costos de los bienes vendidos (para comerciantes por reventa de bienes terminados) - Compras locales 
+            
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.CostoBienesVendidos.ComprasLocales.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciasntesQueUtilizanJuegoDeInventarios?.MasComprasLocales?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.CostoBienesVendidos.ComprasLocales.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciasntesQueUtilizanJuegoDeInventarios?.MasComprasLocales?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.CostoBienesVendidos.ComprasLocales.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciasntesQueUtilizanJuegoDeInventarios?.MasComprasLocales?.SaldosFiscalesADiciembre31Parciales || 0;
+
+            //Costos - MateriasPrimasReventaDeBienesTerminadosYServicios - Costos de los bienes vendidos (para comerciantes por reventa de bienes terminados) - Importaciones
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.CostoBienesVendidos.Importaciones.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciasntesQueUtilizanJuegoDeInventarios?.MasImportaciones?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.CostoBienesVendidos.Importaciones.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciasntesQueUtilizanJuegoDeInventarios?.MasImportaciones?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.CostoBienesVendidos.Importaciones.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciasntesQueUtilizanJuegoDeInventarios?.MasImportaciones?.SaldosFiscalesADiciembre31Parciales || 0;
+
+            //Costos - MateriasPrimasReventaDeBienesTerminadosYServicios - Costos de los bienes vendidos (para comerciantes por reventa de bienes terminados) - Inventario Final
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.CostoBienesVendidos.InventarioFinal.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciasntesQueUtilizanJuegoDeInventarios?.MenosInventarioFinal?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.CostoBienesVendidos.InventarioFinal.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciasntesQueUtilizanJuegoDeInventarios?.MenosInventarioFinal?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.CostoBienesVendidos.InventarioFinal.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciasntesQueUtilizanJuegoDeInventarios?.MenosInventarioFinal?.SaldosFiscalesADiciembre31Parciales || 0;
+
+            // Costos - MateriasPrimasReventaDeBienesTerminadosYServicios - Productos en proceso - Inventario inicial
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.ProductosEnProceso.InventarioInicial.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.InventarioInicialDeTrabajoEnProceso?.SaldosContablesADiciembre31Parciales || 0;
+
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.ProductosEnProceso.InventarioInicial.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.InventarioInicialDeTrabajoEnProceso?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.ProductosEnProceso.InventarioInicial.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.InventarioInicialDeTrabajoEnProceso?.SaldosFiscalesADiciembre31Parciales || 0;
+
+            // Costos - MateriasPrimasReventaDeBienesTerminadosYServicios - Productos en proceso - Inventario final
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.ProductosEnProceso.InventarioFinal.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.AsistenciaTecnica?.MenosInventarioFinalDeTrabajoEnProceso?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.ProductosEnProceso.InventarioFinal.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.AsistenciaTecnica?.MenosInventarioFinalDeTrabajoEnProceso?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.ProductosEnProceso.InventarioFinal.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.AsistenciaTecnica?.MenosInventarioFinalDeTrabajoEnProceso?.SaldosFiscalesADiciembre31Parciales || 0;
+            
+            // Costos - MateriasPrimasReventaDeBienesTerminadosYServicios - Producto terminado - Inventario inicial
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.ProductosEnProceso.InventarioInicial.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.AsistenciaTecnica?.MasInventarioInicialDeProductoTerminado?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.ProductosEnProceso.InventarioInicial.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.AsistenciaTecnica?.MasInventarioInicialDeProductoTerminado?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.ProductosEnProceso.InventarioInicial.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.AsistenciaTecnica?.MasInventarioInicialDeProductoTerminado?.SaldosFiscalesADiciembre31Parciales || 0;
+
+            // Costos - MateriasPrimasReventaDeBienesTerminadosYServicios - Producto terminado - Inventario final
+            
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.ProductosEnProceso.InventarioFinal.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.AsistenciaTecnica?.MenosInventarioFinalDeProductoTerminado?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.ProductosEnProceso.InventarioFinal.MenorValorFiscalPorReconocimientoExencionesLimitaciones =    
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.AsistenciaTecnica?.MenosInventarioFinalDeProductoTerminado?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.ProductosEnProceso.InventarioFinal.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.AsistenciaTecnica?.MenosInventarioFinalDeProductoTerminado?.SaldosFiscalesADiciembre31Parciales || 0;
+
+            //Costos - MateriasPrimasReventaDeBienesTerminadosYServicios - Costos en la prestación de servicios (para prestadores de servicios)
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.CostosEnLaPrestacionDeServicios.ValorContable =
+                renContent?.Renglon62?.["6140CostoDeLasActividadesQueFormanLasRentasExentas"]?.CostoDeLasActividadesQueFormanLasRentasExentas?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.CostosEnLaPrestacionDeServicios.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["6140CostoDeLasActividadesQueFormanLasRentasExentas"]?.CostoDeLasActividadesQueFormanLasRentasExentas?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.CostosEnLaPrestacionDeServicios.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["6140CostoDeLasActividadesQueFormanLasRentasExentas"]?.CostoDeLasActividadesQueFormanLasRentasExentas?.SaldosFiscalesADiciembre31Parciales || 0;
+
+            //TODO: H143
         }
 
 
