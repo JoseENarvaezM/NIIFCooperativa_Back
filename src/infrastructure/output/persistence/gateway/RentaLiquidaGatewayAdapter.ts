@@ -1027,7 +1027,209 @@ export class RentaLiquidaGatewayAdapter implements FormsGatewayIntPort<FormRenta
             renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.CostosEnLaPrestacionDeServicios.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
                 renContent?.Renglon62?.["6140CostoDeLasActividadesQueFormanLasRentasExentas"]?.CostoDeLasActividadesQueFormanLasRentasExentas?.SaldosFiscalesADiciembre31Parciales || 0;
 
-            //TODO: H143
+            //Costos - ManoObra - DeCortoPlazo
+
+            renContent.Costos.ManoObra.DeCortoPlazo.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostoDeManoDeObra?.DeCortoPlayzo?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Costos.ManoObra.DeCortoPlazo.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostoDeManoDeObra?.DeCortoPlayzo?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.ManoObra.DeCortoPlazo.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostoDeManoDeObra?.DeCortoPlayzo?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Costos - ManoObra - DeLargoPlazo
+
+            renContent.Costos.ManoObra.DeLargoPlazo.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostoDeManoDeObra?.DeLargoPlayzo?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Costos.ManoObra.DeLargoPlazo.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostoDeManoDeObra?.DeLargoPlayzo?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.ManoObra.DeLargoPlazo.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostoDeManoDeObra?.DeLargoPlayzo?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Costos - ManoObra - PorTerminacionDeVinculoLaboral
+
+            renContent.Costos.ManoObra.PorTerminacionDeVinculoLaboral.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostoDeManoDeObra?.PorTerminacionDelVinculoLaboral?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Costos.ManoObra.PorTerminacionDeVinculoLaboral.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostoDeManoDeObra?.PorTerminacionDelVinculoLaboral?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.ManoObra.PorTerminacionDeVinculoLaboral.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostoDeManoDeObra?.PorTerminacionDelVinculoLaboral?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Costos - ManoObra - PostEmpleo
+
+            renContent.Costos.ManoObra.PostEmpleo.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostoDeManoDeObra?.PostEmpleo?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Costos.ManoObra.PostEmpleo.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostoDeManoDeObra?.PostEmpleo?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.ManoObra.PostEmpleo.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostoDeManoDeObra?.PostEmpleo?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Costos - DepresionacionesAmortizacionesYDeterioros - DepreciacionPropiedadesPlantaYEquipo - DelCosto
+
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DepreciacionPropiedadesPlantaYEquipo.DelCosto.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostosIndirectosDeFabricacion?.DepreciacionPropiedadesPlantaYEquipo?.DelCosto?.SaldosContablesADiciembre31Parciales || 0;
+            
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DepreciacionPropiedadesPlantaYEquipo.DelCosto.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostosIndirectosDeFabricacion?.DepreciacionPropiedadesPlantaYEquipo?.DelCosto?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DepreciacionPropiedadesPlantaYEquipo.DelCosto.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostosIndirectosDeFabricacion?.DepreciacionPropiedadesPlantaYEquipo?.DelCosto?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Costos - DepresionacionesAmortizacionesYDeterioros - DepreciacionPropiedadesPlantaYEquipo - DelAjusteAcumunladoPorAjusteAculudadoPorRevaluacionesOReExpresiones
+
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DepreciacionPropiedadesPlantaYEquipo.DelAjusteAcumunladoPorAjusteAculudadoPorRevaluacionesOReExpresiones.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostosIndirectosDeFabricacion?.DepreciacionPropiedadesPlantaYEquipo?.DelAjusteAcumuladoPorRevaluacionesOReExpresiones?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Costos - DepresionacionesAmortizacionesYDeterioros - DepreciacionPropiedadesDeInversion - DelCosto
+
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DepreciacionPropiedadesDeInversion.DelCosto.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostosIndirectosDeFabricacion?.DepreciacionDePropiedadesDeInversion?.Cost?.SaldosContablesADiciembre31Parciales || 0;
+            
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DepreciacionPropiedadesDeInversion.DelCosto.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostosIndirectosDeFabricacion?.DepreciacionDePropiedadesDeInversion?.Cost?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DepreciacionPropiedadesDeInversion.DelCosto.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostosIndirectosDeFabricacion?.DepreciacionDePropiedadesDeInversion?.Cost?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Costos - DepresionacionesAmortizacionesYDeterioros - DepreciacionPropiedadesDeInversion - DelAjusteAcumunladoPorAjusteAculudadoPorRevaluacionesOReExpresiones
+
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DepreciacionPropiedadesDeInversion.DelAjusteAcumunladoPorAjusteAculudadoPorRevaluacionesOReExpresiones.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostosIndirectosDeFabricacion?.DepreciacionDePropiedadesDeInversion?.AjusAcum?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Costos - DepresionacionesAmortizacionesYDeterioros - DepreciacionActivosBiologicos - DelCosto
+
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DepreciacionActivosBiologicos.DelCosto.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostosIndirectosDeFabricacion?.DeprActBio?.DelCosto?.SaldosContablesADiciembre31Parciales || 0;
+            
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DepreciacionActivosBiologicos.Cost.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostosIndirectosDeFabricacion?.DeprActBio?.DelCosto?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DepreciacionActivosBiologicos.Cost.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostosIndirectosDeFabricacion?.DeprActBio?.DelCosto?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Costos - DepresionacionesAmortizacionesYDeterioros - DepreciacionActivosBiologicos - DelAjusteAcumunladoPorAjusteAculudadoPorRevaluacionesOReExpresiones
+
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DepreciacionActivosBiologicos.DelAjusteAcumunladoPorAjusteAculudadoPorRevaluacionesOReExpresiones.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostosIndirectosDeFabricacion?.DeprActBio?.DelAjusteAcumuladoPorRevaluacionesOReExpresiones?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Costos - DepresionacionesAmortizacionesYDeterioros - AmortizacionActivosIntangibles - DelCosto
+
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.AmortizacionActivosIntangibles.DelCosto.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostosIndirectosDeFabricacion?.AmortizacionDeActivosIntangibles?.DelCosto?.SaldosContablesADiciembre31Parciales || 0;
+            
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.AmortizacionActivosIntangibles.DelCosto.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostosIndirectosDeFabricacion?.AmortizacionDeActivosIntangibles?.DelCosto?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.AmortizacionActivosIntangibles.DelCosto.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostosIndirectosDeFabricacion?.AmortizacionDeActivosIntangibles?.DelCosto?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Costos - DepresionacionesAmortizacionesYDeterioros - AmortizacionActivosIntangibles - DelAjusteAcumunladoPorAjusteAculudadoPorRevaluacionesOReExpresiones
+
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.AmortizacionActivosIntangibles.DelAjusteAcumunladoPorAjusteAculudadoPorRevaluacionesOReExpresiones.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostosIndirectosDeFabricacion?.AmortizacionDeActivosIntangibles?.DelAjusteAcumuladoPorRevaluacionesOReExpresiones?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Costos - DepresionacionesAmortizacionesYDeterioros - OtrasDepreciacionesYAmortizaciones - DelCosto
+
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.OtrasDepreciacionesYAmortizaciones.DelCosto.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostosIndirectosDeFabricacion?.OtrasDepreciacionesYAmortizaciones?.DelCosto?.SaldosContablesADiciembre31Parciales || 0;
+            
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.OtrasDepreciacionesYAmortizaciones.DelCosto.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostosIndirectosDeFabricacion?.OtrasDepreciacionesYAmortizaciones?.DelCosto?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.OtrasDepreciacionesYAmortizaciones.DelCosto.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostosIndirectosDeFabricacion?.OtrasDepreciacionesYAmortizaciones?.DelCosto?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Costos - DepresionacionesAmortizacionesYDeterioros - OtrasDepreciacionesYAmortizaciones - DelAjusteAcumunladoPorAjusteAculudadoPorRevaluacionesOReExpresiones
+
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.OtrasDepreciacionesYAmortizaciones.DelAjusteAcumunladoPorAjusteAculudadoPorRevaluacionesOReExpresiones.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostosIndirectosDeFabricacion?.OtrasDepreciacionesYAmortizaciones?.DelAjusteAcumuladoPorRevaluacionesOReExpresiones?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Costos - DepresionacionesAmortizacionesYDeterioros - DeterioroDelValorDeLosActivos - Inventarios
+
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DeterioroDelValorDeLosActivos.Inventarios.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.Deterioros?.DeInventarios?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Costos - DepresionacionesAmortizacionesYDeterioros - DeterioroDelValorDeLosActivos - PropiedadesPlantaYEquipo
+
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DeterioroDelValorDeLosActivos.PropiedadesPlantaYEquipo.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.Deterioros?.DePropiedadesPlantaYEquipo?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Costos - DepresionacionesAmortizacionesYDeterioros - DeterioroDelValorDeLosActivos - ActivosIntangibles
+
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DeterioroDelValorDeLosActivos.ActivosIntangibles.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.Deterioros?.DeActivosIntangibles?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Costos - DepresionacionesAmortizacionesYDeterioros - DeterioroDelValorDeLosActivos - ActivosDeExploracionYEvaluacionDeRecursosMinerales
+
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DeterioroDelValorDeLosActivos.ActivosDeExploracionYEvaluacionDeRecursosMinerales.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.Deterioros?.DeActivosDeExploracionYEvaluacionDeRecursosMinerales?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Costos - DepresionacionesAmortizacionesYDeterioros - DeterioroDelValorDeLosActivos - PropiedadesDeInversionMedidasAlModeloDeCosto
+
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DeterioroDelValorDeLosActivos.PropiedadesDeInversionMedidasAlModeloDeCosto.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.Deterioros?.DePropiedadesDeInversionMedidasAlModeloDeCosto?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Costos - DepresionacionesAmortizacionesYDeterioros - DeterioroDelValorDeLosActivos - ActivosNoCorrientesMantenidosParaLaVentaDistribuirALosPropietarios
+
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DeterioroDelValorDeLosActivos.ActivosNoCorrientesMantenidosParaLaVentaDistribuirALosPropietarios.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.Deterioros?.DeActivosNoCorrientesMantenidosParaLaVentaDistribuirALosPropietarios?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Costos - DepresionacionesAmortizacionesYDeterioros - DeterioroDelValorDeLosActivos - ActivosBiologicosMedidosAlModeloDeCosto
+
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DeterioroDelValorDeLosActivos.ActivosBiologicosMedidosAlModeloDeCosto.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.Deterioros?.DeActivosBiologicosMedidosAlModeloDeCosto?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Costos - DepresionacionesAmortizacionesYDeterioros - DeterioroDelValorDeLosActivos - BienesDeArteYCulturaMedidosAlModeloDeCosto
+
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DeterioroDelValorDeLosActivos.BienesDeArteYCulturaMedidosAlModeloDeCosto.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.Deterioros?.DeBienesDeArteYCulturaMedidosAlModeloDeCosto?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Costos - DepresionacionesAmortizacionesYDeterioros - DeterioroDelValorDeLosActivos - ActivosFinancierosDistintosACarteraDeCreditoYOperacionesDeLeasing
+
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DeterioroDelValorDeLosActivos.ActivosFinancierosDistintosACarteraDeCreditoYOperacionesDeLeasing.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.Deterioros?.DeActivosFinancierosDiferentesACarteraDeCredito?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Costos - DepresionacionesAmortizacionesYDeterioros - DeterioroDelValorDeLosActivos - CarteraDeCreditoYOperacionesDeLeasing
+
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DeterioroDelValorDeLosActivos.CarteraDeCreditoYOperacionesDeLeasing.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.Deterioros?.DeCarteraDeCreditoYOperacionesDeLeasing?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DeterioroDelValorDeLosActivos.CarteraDeCreditoYOperacionesDeLeasing.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.Deterioros?.DeCarteraDeCreditoYOperacionesDeLeasing?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DeterioroDelValorDeLosActivos.CarteraDeCreditoYOperacionesDeLeasing.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.Deterioros?.DeCarteraDeCreditoYOperacionesDeLeasing?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Costos - DepresionacionesAmortizacionesYDeterioros - DeterioroDelValorDeLosActivos - OtrasInversionesMedidasAlCostoOPorElMetodoDeLaParticipacion
+
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DeterioroDelValorDeLosActivos.OtrasInversionesMedidasAlCostoOPorElMetodoDeLaParticipacion.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.Deterioros?.DeOtrasInversionesMedidasAlCostoOPorElMetodoDeLaParticipacion?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Costos - DepresionacionesAmortizacionesYDeterioros - DeterioroDelValorDeLosActivos - DerechosDeUsoEnArrendamientosOperativosNIIF16
+
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DeterioroDelValorDeLosActivos.DerechosDeUsoEnArrendamientosOperativosNIIF16.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.Deterioros?.DeDerechosDeUsoEnArrendamientosOperativos?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Costos - DepresionacionesAmortizacionesYDeterioros - DeterioroDelValorDeLosActivos - OtrosDeteriroros
+
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DeterioroDelValorDeLosActivos.OtrosDeteriroros.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.Deterioros?.DeOtrosActivos?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DeterioroDelValorDeLosActivos.OtrosDeteriroros.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.Deterioros?.DeOtrosActivos?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DeterioroDelValorDeLosActivos.OtrosDeteriroros.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.Deterioros?.DeOtrosActivos?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //TODO: quedo en la H173
+
         }
 
 
