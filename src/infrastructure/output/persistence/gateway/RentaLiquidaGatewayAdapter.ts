@@ -1352,9 +1352,431 @@ export class RentaLiquidaGatewayAdapter implements FormsGatewayIntPort<FormRenta
             //Costos - OtrosCostos - OtrosCostosFiscalesNoReconocidosContablemente
 
             renContent.Costos.OtrosCostos.OtrosCostosFiscalesNoReconocidosContablemente.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
-                renContent?.Renglon62?.["6140CostoDeLasActividadesQueFormanLasRentasExentas"]?.CostoFiscalDeActivosFijosOBiologicosVendidosYPoseidosMenosDeDosAnios?.SaldosContablesADiciembre31Parciales || 0;
+                renContent?.Renglon62?.["6140CostoDeLasActividadesQueFormanLasRentasExentas"]?.CostoFiscalDeActivosFijosOBiologicosVendidosYPoseidosMenosDeDosAnios?.SaldosFiscalesADiciembre31Parciales || 0;
 
-            //TODO: quedo en el H190
+            //Gastos - DeAdministracion - ManoDeObra - DeCortoPlazo
+
+            renContent.Gastos.DeAdministracion.ManoDeObra.DeCortoPlazo.ValorContable =
+                (renContent?.Renglon63?.["5105BeneficiosAEmpleadosDeCortoPlayzo"]?.SalariosYOtros?.SaldosContablesADiciembre31Parciales || 0) + (renContent?.Renglon63?.["5105BeneficiosAEmpleadosDeCortoPlayzo"]?.AportesAEPS?.SaldosContablesADiciembre31Parciales || 0) + (renContent?.Renglon63?.["5105BeneficiosAEmpleadosDeCortoPlayzo"]?.AportesAARL?.SaldosContablesADiciembre31Parciales || 0) + (renContent?.Renglon63?.["5105BeneficiosAEmpleadosDeCortoPlayzo"]?.AportesAFondosDePensiones?.SaldosContablesADiciembre31Parciales || 0) + (renContent?.Renglon63?.["5105BeneficiosAEmpleadosDeCortoPlayzo"]?.AportesAlSENA?.SaldosContablesADiciembre31Parciales || 0) + (renContent?.Renglon63?.["5105BeneficiosAEmpleadosDeCortoPlayzo"]?.AportesAlICBF?.SaldosContablesADiciembre31Parciales || 0) + (renContent?.Renglon63?.["5105BeneficiosAEmpleadosDeCortoPlayzo"]?.AportesACajasDeCompensacion?.SaldosContablesADiciembre31Parciales || 0);
+
+            renContent.Gastos.DeAdministracion.ManoDeObra.DeCortoPlazo.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                (renContent?.Renglon63?.["5105BeneficiosAEmpleadosDeCortoPlayzo"]?.SalariosYOtros?.AjustesParaLlegarASaldosFiscales3 || 0) + (renContent?.Renglon63?.["5105BeneficiosAEmpleadosDeCortoPlayzo"]?.AportesAEPS?.AjustesParaLlegarASaldosFiscales3 || 0) + (renContent?.Renglon63?.["5105BeneficiosAEmpleadosDeCortoPlayzo"]?.AportesAARL?.AjustesParaLlegarASaldosFiscales3 || 0) + (renContent?.Renglon63?.["5105BeneficiosAEmpleadosDeCortoPlayzo"]?.AportesAFondosDePensiones?.AjustesParaLlegarASaldosFiscales3 || 0) + (renContent?.Renglon63?.["5105BeneficiosAEmpleadosDeCortoPlayzo"]?.AportesAlSENA?.AjustesParaLlegarASaldosFiscales3 || 0) + (renContent?.Renglon63?.["5105BeneficiosAEmpleadosDeCortoPlayzo"]?.AportesAlICBF?.AjustesParaLlegarASaldosFiscales3 || 0) + (renContent?.Renglon63?.["5105BeneficiosAEmpleadosDeCortoPlayzo"]?.AportesACajasDeCompensacion?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            renContent.Gastos.DeAdministracion.ManoDeObra.DeCortoPlazo.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                (renContent?.Renglon63?.["5105BeneficiosAEmpleadosDeCortoPlayzo"]?.SalariosYOtros?.AjustesParaLlegarASaldosFiscales1 || 0) + (renContent?.Renglon63?.["5105BeneficiosAEmpleadosDeCortoPlayzo"]?.AportesAEPS?.AjustesParaLlegarASaldosFiscales1 || 0) + (renContent?.Renglon63?.["5105BeneficiosAEmpleadosDeCortoPlayzo"]?.AportesAARL?.AjustesParaLlegarASaldosFiscales1 || 0) + (renContent?.Renglon63?.["5105BeneficiosAEmpleadosDeCortoPlayzo"]?.AportesAFondosDePensiones?.AjustesParaLlegarASaldosFiscales1 || 0) + (renContent?.Renglon63?.["5105BeneficiosAEmpleadosDeCortoPlayzo"]?.AportesAlSENA?.AjustesParaLlegarASaldosFiscales1 || 0) + (renContent?.Renglon63?.["5105BeneficiosAEmpleadosDeCortoPlayzo"]?.AportesAlICBF?.AjustesParaLlegarASaldosFiscales1 || 0) + (renContent?.Renglon63?.["5105BeneficiosAEmpleadosDeCortoPlayzo"]?.AportesACajasDeCompensacion?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            //Gastos - DeAdministracion - OtrosGastosDeAdministracion - ImpuestosDistintosAlImpuestosDeRentaYComplementarios
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.ImpuestosDistintosAlImpuestosDeRentaYComplementarios.ValorContable =
+                renContent?.Renglon63?.["5115ImpuestosAlPatrimonioIndustriaYComercio"]?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.ImpuestosDistintosAlImpuestosDeRentaYComplementarios.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5115ImpuestosAlPatrimonioIndustriaYComercio"]?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.ImpuestosDistintosAlImpuestosDeRentaYComplementarios.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5115ImpuestosAlPatrimonioIndustriaYComercio"]?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - DeAdministracion - OtrosGastosDeAdministracion - ArrendamientosOperativos
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.ArrendamientosOperativos.ValorContable =
+                renContent?.Renglon63?.["5120Arrendamientos"]?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.ArrendamientosOperativos.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5120Arrendamientos"]?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.ArrendamientosOperativos.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5120Arrendamientos"]?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - DeAdministracion - OtrosGastosDeAdministracion - ContribucionesYAfiliaciones
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.ContribucionesYAfiliaciones.ValorContable =
+                renContent?.Renglon63?.["5125Contribuciones"]?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.ContribucionesYAfiliaciones.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5125Contribuciones"]?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.ContribucionesYAfiliaciones.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5125Contribuciones"]?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - DeAdministracion - OtrosGastosDeAdministracion - Honorarios
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.Honorarios.ValorContable =
+                renContent?.Renglon63?.["5110Honorarios"]?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.Honorarios.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5110Honorarios"]?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.Honorarios.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5110Honorarios"]?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - DeAdministracion - OtrosGastosDeAdministracion - Seguros
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.Seguros.ValorContable =
+                renContent?.Renglon63?.["5130Seguros"]?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.Seguros.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5130Seguros"]?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.Seguros.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5130Seguros"]?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - DeAdministracion - OtrosGastosDeAdministracion - ServiciosAdministrativos - VinculadosEconomicos
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.ServiciosAdministrativos.VinculadosEconomicos.ValorContable =
+                renContent?.Renglon63?.["5135Servicios"]?.ServiciosAdministrativosConVinculadosEconomicos?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.ServiciosAdministrativos.VinculadosEconomicos.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5135Servicios"]?.ServiciosAdministrativosConVinculadosEconomicos?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.ServiciosAdministrativos.VinculadosEconomicos.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5135Servicios"]?.ServiciosAdministrativosConVinculadosEconomicos?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - DeAdministracion - OtrosGastosDeAdministracion - ServiciosAdministrativos - VinculadosEconomicos
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.ServiciosAdministrativos.VinculadosEconomicos.ValorContable =
+                renContent?.Renglon63?.["5135Servicios"]?.ServiciosAdministrativosConVinculadosEconomicos?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.ServiciosAdministrativos.VinculadosEconomicos.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5135Servicios"]?.ServiciosAdministrativosConVinculadosEconomicos?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.ServiciosAdministrativos.VinculadosEconomicos.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5135Servicios"]?.ServiciosAdministrativosConVinculadosEconomicos?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - DeAdministracion - OtrosGastosDeAdministracion - ServiciosAdministrativos - JurisdiccionesNoCooperantesBajaNulaImposicionDeBajaONulaImposicionYRegimenesTributariosPreferenciales
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.ServiciosAdministrativos.JurisdiccionesNoCooperantesBajaNulaImposicionDeBajaONulaImposicionYRegimenesTributariosPreferenciales.ValorContable =
+                renContent?.Renglon63?.["5135Servicios"]?.ServiciosAdministrativosConTercerosUbicadosEnJurisdiccionesNoCooperantes?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.ServiciosAdministrativos.JurisdiccionesNoCooperantesBajaNulaImposicionDeBajaONulaImposicionYRegimenesTributariosPreferenciales.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5135Servicios"]?.ServiciosAdministrativosConTercerosUbicadosEnJurisdiccionesNoCooperantes?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.ServiciosAdministrativos.JurisdiccionesNoCooperantesBajaNulaImposicionDeBajaONulaImposicionYRegimenesTributariosPreferenciales.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5135Servicios"]?.ServiciosAdministrativosConTercerosUbicadosEnJurisdiccionesNoCooperantes?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - DeAdministracion - OtrosGastosDeAdministracion - ServiciosAdministrativos - NoVinculados
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.ServiciosAdministrativos.NoVinculados.ValorContable =
+                renContent?.Renglon63?.["5135Servicios"]?.ServiciosAdministrativosConNoVinculados?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.ServiciosAdministrativos.NoVinculados.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5135Servicios"]?.ServiciosAdministrativosConNoVinculados?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.ServiciosAdministrativos.NoVinculados.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5135Servicios"]?.ServiciosAdministrativosConNoVinculados?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - DeAdministracion - OtrosGastosDeAdministracion - Regalias - VinculadosEconomicos
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.Regalias.VinculadosEconomicos.ValorContable =
+                renContent?.Renglon63?.["5136Regalias"]?.ConVinculadosEconomicos?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.Regalias.VinculadosEconomicos.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5136Regalias"]?.ConVinculadosEconomicos?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.Regalias.VinculadosEconomicos.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5136Regalias"]?.ConVinculadosEconomicos?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - DeAdministracion - OtrosGastosDeAdministracion - Regalias - JurisdiccionesNoCooperantesBajaNulaImposicionDeBajaONulaImposicionYRegimenesTributariosPreferenciales
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.Regalias.JurisdiccionesNoCooperantesBajaNulaImposicionDeBajaONulaImposicionYRegimenesTributariosPreferenciales.ValorContable =
+                renContent?.Renglon63?.["5136Regalias"]?.ConTercerosUbicadosEnJurisdiccionesNoCooperantes?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.Regalias.JurisdiccionesNoCooperantesBajaNulaImposicionDeBajaONulaImposicionYRegimenesTributariosPreferenciales.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5136Regalias"]?.ConTercerosUbicadosEnJurisdiccionesNoCooperantes?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.Regalias.JurisdiccionesNoCooperantesBajaNulaImposicionDeBajaONulaImposicionYRegimenesTributariosPreferenciales.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5136Regalias"]?.ConTercerosUbicadosEnJurisdiccionesNoCooperantes?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - DeAdministracion - OtrosGastosDeAdministracion - Regalias - NoVinculados
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.Regalias.NoVinculados.ValorContable =
+                renContent?.Renglon63?.["5136Regalias"]?.ConNoVinculados?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.Regalias.NoVinculados.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5136Regalias"]?.ConNoVinculados?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.Regalias.NoVinculados.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5136Regalias"]?.ConNoVinculados?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - DeAdministracion - OtrosGastosDeAdministracion - AsistenciaTecnica - VinculadosEconomicos
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.AsistenciaTecnica.VinculadosEconomicos.ValorContable =
+                renContent?.Renglon63?.["5135Servicios"]?.AsistenciaTecnicaConVinculadosEconomicos?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.AsistenciaTecnica.VinculadosEconomicos.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5135Servicios"]?.AsistenciaTecnicaConVinculadosEconomicos?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.AsistenciaTecnica.VinculadosEconomicos.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5135Servicios"]?.AsistenciaTecnicaConVinculadosEconomicos?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - DeAdministracion - OtrosGastosDeAdministracion - AsistenciaTecnica - JurisdiccionesNoCooperantesBajaNulaImposicionDeBajaONulaImposicionYRegimenesTributariosPreferenciales
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.AsistenciaTecnica.JurisdiccionesNoCooperantesBajaNulaImposicionDeBajaONulaImposicionYRegimenesTributariosPreferenciales.ValorContable =
+                renContent?.Renglon63?.["5135Servicios"]?.AsistenciaTecnicaConTercerosUbicadosEnJurisdiccionesNoCooperantes?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.AsistenciaTecnica.JurisdiccionesNoCooperantesBajaNulaImposicionDeBajaONulaImposicionYRegimenesTributariosPreferenciales.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5135Servicios"]?.AsistenciaTecnicaConTercerosUbicadosEnJurisdiccionesNoCooperantes?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.AsistenciaTecnica.JurisdiccionesNoCooperantesBajaNulaImposicionDeBajaONulaImposicionYRegimenesTributariosPreferenciales.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5135Servicios"]?.AsistenciaTecnicaConTercerosUbicadosEnJurisdiccionesNoCooperantes?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - DeAdministracion - OtrosGastosDeAdministracion - AsistenciaTecnica - NoVinculados
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.AsistenciaTecnica.NoVinculados.ValorContable =
+                renContent?.Renglon63?.["5135Servicios"]?.AsistenciaTecnicaConNoVinculados?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.AsistenciaTecnica.NoVinculados.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5135Servicios"]?.AsistenciaTecnicaConNoVinculados?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.AsistenciaTecnica.NoVinculados.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5135Servicios"]?.AsistenciaTecnicaConNoVinculados?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - DeAdministracion - OtrosGastosDeAdministracion - OtrosServicios
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.OtrosServicios.ValorContable =
+                renContent?.Renglon63?.["5135Servicios"]?.OtrosServicios?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.OtrosServicios.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5135Servicios"]?.OtrosServicios?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.OtrosServicios.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5135Servicios"]?.OtrosServicios?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - DeAdministracion - OtrosGastosDeAdministracion - InvestigacionYDesarrollo
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.InvestigacionYDesarrollo.ValorContable =
+                renContent?.Renglon63?.["5137GastosDeInvestigacion"]?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.InvestigacionYDesarrollo.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5137GastosDeInvestigacion"]?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.InvestigacionYDesarrollo.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5137GastosDeInvestigacion"]?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - DeAdministracion - OtrosGastosDeAdministracion - GastosLegales
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.GastosLegales.ValorContable =
+                renContent?.Renglon63?.["5140GastosLegales"]?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.GastosLegales.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5140GastosLegales"]?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.GastosLegales.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5140GastosLegales"]?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - DeAdministracion - OtrosGastosDeAdministracion - ReparacionMantenimientoAdecuacionEInstalaciones
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.ReparacionMantenimientoAdecuacionEInstalaciones.ValorContable =
+                (renContent?.Renglon63?.["5145MantenimientoYReparacion"]?.SaldosContablesADiciembre31Parciales || 0) + (renContent?.Renglon63?.["5150AdecuacionesEInstalaciones"]?.SaldosContablesADiciembre31Parciales || 0);
+            
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.ReparacionMantenimientoAdecuacionEInstalaciones.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                (renContent?.Renglon63?.["5145MantenimientoYReparacion"]?.AjustesParaLlegarASaldosFiscales3 || 0) + (renContent?.Renglon63?.["5150AdecuacionesEInstalaciones"]?.AjustesParaLlegarASaldosFiscales3 || 0);
+                
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.ReparacionMantenimientoAdecuacionEInstalaciones.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                (renContent?.Renglon63?.["5145MantenimientoYReparacion"]?.AjustesParaLlegarASaldosFiscales1 || 0) + (renContent?.Renglon63?.["5150AdecuacionesEInstalaciones"]?.AjustesParaLlegarASaldosFiscales1 || 0);
+            
+            //Gastos - DeAdministracion - OtrosGastosDeAdministracion - Transporte
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.Transporte.ValorContable =
+                renContent?.Renglon63?.["5155GastosDeTransportes"]?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.Transporte.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5155GastosDeTransportes"]?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.Transporte.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5155GastosDeTransportes"]?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - DeAdministracion - OtrosGastosDeAdministracion - OtrosGastos
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.OtrosGastos.ValorContable =
+                renContent?.Renglon63?.["5195Diversos"]?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.OtrosGastos.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5195Diversos"]?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.DeAdministracion.OtrosGastosDeAdministracion.OtrosGastos.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5195Diversos"]?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - DeAdministracion - DepreciacionesAmortizacionesDeterioros - DepreciacionPropiedadesPlantaYEquipo - DelCosto
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.DepreciacionPropiedadesPlantaYEquipo.DelCosto.ValorContable =
+                renContent?.Renglon63?.["5160Depreciaciones"]?.DepreciacionPropiedadesPlantaYEquipo?.DelCosto?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.DepreciacionPropiedadesPlantaYEquipo.DelCosto.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5160Depreciaciones"]?.DepreciacionPropiedadesPlantaYEquipo?.DelCosto?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.DepreciacionPropiedadesPlantaYEquipo.DelCosto.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5160Depreciaciones"]?.DepreciacionPropiedadesPlantaYEquipo?.DelCosto?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - DeAdministracion - DepreciacionesAmortizacionesDeterioros - DepreciacionPropiedadesPlantaYEquipo - DelAjusteAcumuladoPorRevaliacionesOReExpresiones
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.DepreciacionPropiedadesPlantaYEquipo.DelAjusteAcumuladoPorRevaliacionesOReExpresiones.ValorContable =
+                renContent?.Renglon63?.["5160Depreciaciones"]?.DepreciacionPropiedadesPlantaYEquipo?.DelAjusteAcumuladoPorRevaluacionesOReExpresiones?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.DepreciacionPropiedadesPlantaYEquipo.DelAjusteAcumuladoPorRevaliacionesOReExpresiones.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5160Depreciaciones"]?.DepreciacionPropiedadesPlantaYEquipo?.DelAjusteAcumuladoPorRevaluacionesOReExpresiones?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.DepreciacionPropiedadesPlantaYEquipo.DelAjusteAcumuladoPorRevaliacionesOReExpresiones.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5160Depreciaciones"]?.DepreciacionPropiedadesPlantaYEquipo?.DelAjusteAcumuladoPorRevaluacionesOReExpresiones?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - DeAdministracion - DepreciacionesAmortizacionesDeterioros - DepreciacionPropiedadesDeInversion - DelCosto
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.DepreciacionPropiedadesDeInversion.DelCosto.ValorContable =
+                renContent?.Renglon63?.["5160Depreciaciones"]?.DepreciacionDePropiedadesDeInversion?.DelCosto?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.DepreciacionPropiedadesDeInversion.DelCosto.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5160Depreciaciones"]?.DepreciacionDePropiedadesDeInversion?.DelCosto?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.DepreciacionPropiedadesDeInversion.DelCosto.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5160Depreciaciones"]?.DepreciacionDePropiedadesDeInversion?.DelCosto?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - DeAdministracion - DepreciacionesAmortizacionesDeterioros - DepreciacionPropiedadesDeInversion - DelAjusteAcumuladoPorRevaliacionesOReExpresiones
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.DepreciacionPropiedadesDeInversion.DelAjusteAcumuladoPorRevaliacionesOReExpresiones.ValorContable =
+                renContent?.Renglon63?.["5160Depreciaciones"]?.DepreciacionDePropiedadesDeInversion?.DelAjusteAcumuladoPorRevaluacionesOReExpresiones?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.DepreciacionPropiedadesDeInversion.DelAjusteAcumuladoPorRevaliacionesOReExpresiones.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5160Depreciaciones"]?.DepreciacionDePropiedadesDeInversion?.DelAjusteAcumuladoPorRevaluacionesOReExpresiones?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.DepreciacionPropiedadesDeInversion.DelAjusteAcumuladoPorRevaliacionesOReExpresiones.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5160Depreciaciones"]?.DepreciacionDePropiedadesDeInversion?.DelAjusteAcumuladoPorRevaluacionesOReExpresiones?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - DeAdministracion - DepreciacionesAmortizacionesDeterioros - OtrasDepreciaciones - DelCosto
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.OtrasDepreciaciones.DelCosto.ValorContable =
+                renContent?.Renglon63?.["5160Depreciaciones"]?.DepreciacionDeOtrosActivos?.DelCosto?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.OtrasDepreciaciones.DelCosto.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5160Depreciaciones"]?.DepreciacionDeOtrosActivos?.DelCosto?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.OtrasDepreciaciones.DelCosto.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5160Depreciaciones"]?.DepreciacionDeOtrosActivos?.DelCosto?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - DeAdministracion - DepreciacionesAmortizacionesDeterioros - OtrasDepreciaciones - DelAjusteAcumuladoPorRevaliacionesOReExpresiones
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.OtrasDepreciaciones.DelAjusteAcumuladoPorRevaliacionesOReExpresiones.ValorContable =
+                renContent?.Renglon63?.["5160Depreciaciones"]?.DepreciacionDeOtrosActivos?.DelAjusteAcumuladoPorRevaluacionesOReExpresiones?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.OtrasDepreciaciones.DelAjusteAcumuladoPorRevaliacionesOReExpresiones.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5160Depreciaciones"]?.DepreciacionDeOtrosActivos?.DelAjusteAcumuladoPorRevaluacionesOReExpresiones?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.OtrasDepreciaciones.DelAjusteAcumuladoPorRevaliacionesOReExpresiones.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5160Depreciaciones"]?.DepreciacionDeOtrosActivos?.DelAjusteAcumuladoPorRevaluacionesOReExpresiones?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - DeAdministracion - DepreciacionesAmortizacionesDeterioros - AmortizacionActivosIntangibles - DelCosto
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.AmortizacionActivosIntangibles.DelCosto.ValorContable =
+                renContent?.Renglon63?.["5166AmortizacionDeActivosIntangibles"]?.AmortizacionDeActivosIntangibles?.DelCosto?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.AmortizacionActivosIntangibles.DelCosto.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5166AmortizacionDeActivosIntangibles"]?.AmortizacionDeActivosIntangibles?.DelCosto?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.AmortizacionActivosIntangibles.DelCosto.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5166AmortizacionDeActivosIntangibles"]?.AmortizacionDeActivosIntangibles?.DelCosto?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - DeAdministracion - DepreciacionesAmortizacionesDeterioros - AmortizacionActivosIntangibles - DelAjusteAcumuladoPorRevaliacionesOReExpresiones
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.AmortizacionActivosIntangibles.DelAjusteAcumuladoPorRevaliacionesOReExpresiones.ValorContable =
+                renContent?.Renglon63?.["5166AmortizacionDeActivosIntangibles"]?.AmortizacionDeActivosIntangibles?.DelAjusteAcumuladoPorRevaluacionesOReExpresiones?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.AmortizacionActivosIntangibles.DelAjusteAcumuladoPorRevaliacionesOReExpresiones.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5166AmortizacionDeActivosIntangibles"]?.AmortizacionDeActivosIntangibles?.DelAjusteAcumuladoPorRevaluacionesOReExpresiones?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.AmortizacionActivosIntangibles.DelAjusteAcumuladoPorRevaliacionesOReExpresiones.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5166AmortizacionDeActivosIntangibles"]?.AmortizacionDeActivosIntangibles?.DelAjusteAcumuladoPorRevaluacionesOReExpresiones?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - DeAdministracion - DepreciacionesAmortizacionesDeterioros - OtrasAmortizaciones - DelCosto
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.OtrasAmortizaciones.DelCosto.ValorContable =
+                renContent?.Renglon63?.["5166AmortizacionDeActivosIntangibles"]?.OtrasAmortizaciones?.DelCosto?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.OtrasAmortizaciones.DelCosto.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5166AmortizacionDeActivosIntangibles"]?.OtrasAmortizaciones?.DelCosto?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.OtrasAmortizaciones.DelCosto.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5166AmortizacionDeActivosIntangibles"]?.OtrasAmortizaciones?.DelCosto?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - DeAdministracion - DepreciacionesAmortizacionesDeterioros - OtrasAmortizaciones - DelAjusteAcumuladoPorRevaliacionesOReExpresiones
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.OtrasAmortizaciones.DelAjusteAcumuladoPorRevaliacionesOReExpresiones.ValorContable =
+                renContent?.Renglon63?.["5166AmortizacionDeActivosIntangibles"]?.OtrasAmortizaciones?.DelAjusteAcumuladoPorRevaluacionesOReExpresiones?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.OtrasAmortizaciones.DelAjusteAcumuladoPorRevaliacionesOReExpresiones.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5166AmortizacionDeActivosIntangibles"]?.OtrasAmortizaciones?.DelAjusteAcumuladoPorRevaluacionesOReExpresiones?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.OtrasAmortizaciones.DelAjusteAcumuladoPorRevaliacionesOReExpresiones.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5166AmortizacionDeActivosIntangibles"]?.OtrasAmortizaciones?.DelAjusteAcumuladoPorRevaluacionesOReExpresiones?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - DeAdministracion - DepreciacionesAmortizacionesDeterioros - DeterioroDelValorDeLosActivos - Inventarios
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.DeterioroDelValorDeLosActivos.Inventarios.ValorContable =
+                renContent?.Renglon63?.["5199Deterioros"]?.Inventarios?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Gastos - DeAdministracion - DepreciacionesAmortizacionesDeterioros - DeterioroDelValorDeLosActivos - PropiedadesPlantaYEquipo
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.DeterioroDelValorDeLosActivos.PropiedadesPlantaYEquipo.ValorContable =
+                renContent?.Renglon63?.["5199Deterioros"]?.PropiedadesPlantaYEquipo?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Gastos - DeAdministracion - DepreciacionesAmortizacionesDeterioros - DeterioroDelValorDeLosActivos - ActivosIntangibles
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.DeterioroDelValorDeLosActivos.ActivosIntangibles.ValorContable =
+                renContent?.Renglon63?.["5199Deterioros"]?.ActivosIntangibles?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Gastos - DeAdministracion - DepreciacionesAmortizacionesDeterioros - DeterioroDelValorDeLosActivos - ActivosDeExploracionYEvaluacionDeRecursosMinerales
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.DeterioroDelValorDeLosActivos.ActivosDeExploracionYEvaluacionDeRecursosMinerales.ValorContable =
+                renContent?.Renglon63?.["5199Deterioros"]?.ActivosDeExploracionYEvaluacionDeRecursosMinerales?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Gastos - DeAdministracion - DepreciacionesAmortizacionesDeterioros - DeterioroDelValorDeLosActivos - PropiedadesDeInversionMedidasAlModeloDeCosto
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.DeterioroDelValorDeLosActivos.PropiedadesDeInversionMedidasAlModeloDeCosto.ValorContable =
+                renContent?.Renglon63?.["5199Deterioros"]?.PropiedadesDeInversionMedidasAlModeloDeCosto?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Gastos - DeAdministracion - DepreciacionesAmortizacionesDeterioros - DeterioroDelValorDeLosActivos - ActivosNoCorrientesMantenidosParaLaVentaDistribuirALosPropietarios
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.DeterioroDelValorDeLosActivos.ActivosNoCorrientesMantenidosParaLaVentaDistribuirALosPropietarios.ValorContable =
+                renContent?.Renglon63?.["5199Deterioros"]?.ActivosNoCorrientesMantenidosParaLaVentaDistribuirALosPropietarios?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Gastos - DeAdministracion - DepreciacionesAmortizacionesDeterioros - DeterioroDelValorDeLosActivos - BienesDeArteYCulturaMedidosAlModeloDeCosto
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.DeterioroDelValorDeLosActivos.BienesDeArteYCulturaMedidosAlModeloDeCosto.ValorContable =
+                renContent?.Renglon63?.["5199Deterioros"]?.BienesDeArteYCulturaMedidosAlModeloDeCosto?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Gastos - DeAdministracion - DepreciacionesAmortizacionesDeterioros - DeterioroDelValorDeLosActivos - ActivosBiologicosMedidosAlModeloDeCosto
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.DeterioroDelValorDeLosActivos.ActivosBiologicosMedidosAlModeloDeCosto.ValorContable =
+                renContent?.Renglon63?.["5199Deterioros"]?.ActivosBiologicosMedidosAlModeloDeCosto?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Gastos - DeAdministracion - DepreciacionesAmortizacionesDeterioros - DeterioroDelValorDeLosActivos - ActivosFinancierosDistintosACarteraDeCreditoYOperacionesDeLeasing
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.DeterioroDelValorDeLosActivos.ActivosFinancierosDistintosACarteraDeCreditoYOperacionesDeLeasing.ValorContable =
+                renContent?.Renglon63?.["5199Deterioros"]?.ActivosFinancierosDiferentesACarteraDeCredito?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Gastos - DeAdministracion - DepreciacionesAmortizacionesDeterioros - DeterioroDelValorDeLosActivos - CarteraDeCreditoYOperacionesDeLeasing
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.DeterioroDelValorDeLosActivos.CarteraDeCreditoYOperacionesDeLeasing.ValorContable =
+                renContent?.Renglon63?.["5199Deterioros"]?.CarteraDeCreditoYOperacionesDeLeasing?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.DeterioroDelValorDeLosActivos.CarteraDeCreditoYOperacionesDeLeasing.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5199Deterioros"]?.CarteraDeCreditoYOperacionesDeLeasing?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.DeterioroDelValorDeLosActivos.CarteraDeCreditoYOperacionesDeLeasing.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon63?.["5199Deterioros"]?.CarteraDeCreditoYOperacionesDeLeasing?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - DeAdministracion - DepreciacionesAmortizacionesDeterioros - DeterioroDelValorDeLosActivos - OtrasInversionesMedidasAlCostoOPorElMetodoDeLaParticipacion
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.DeterioroDelValorDeLosActivos.OtrasInversionesMedidasAlCostoOPorElMetodoDeLaParticipacion.ValorContable =
+                renContent?.Renglon63?.["5199Deterioros"]?.OtrasInversionesMedidasAlCostoOPorElMetodoDeLaParticipacion?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Gastos - DeAdministracion - DepreciacionesAmortizacionesDeterioros - DeterioroDelValorDeLosActivos - DerechosDeUsoEnArrendamientosOperativosNIIF16
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.DeterioroDelValorDeLosActivos.DerechosDeUsoEnArrendamientosOperativosNIIF16.ValorContable =
+                renContent?.Renglon63?.["5199Deterioros"]?.DerechosDeUsoEnArrendamientosOperativos?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Gastos - DeAdministracion - DepreciacionesAmortizacionesDeterioros - DeterioroDelValorDeLosActivos - OtrosDeterioros
+
+            renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.DeterioroDelValorDeLosActivos.OtrosDeterioros.ValorContable =
+                renContent?.Renglon63?.["5199Deterioros"]?.OtrosDeteriors?.SaldosContablesADiciembre31Parciales || 0;
+
 
         }
 
