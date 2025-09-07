@@ -1228,7 +1228,133 @@ export class RentaLiquidaGatewayAdapter implements FormsGatewayIntPort<FormRenta
             renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DeterioroDelValorDeLosActivos.OtrosDeteriroros.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
                 renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.Deterioros?.DeOtrosActivos?.AjustesParaLlegarASaldosFiscales1 || 0;
 
-            //TODO: quedo en la H173
+            //Costos - OtrosCostos - Arrendamientos
+
+            renContent.Costos.OtrosCostos.Arrendamientos.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.OtrosCostos?.Arrendamientos?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Costos.OtrosCostos.Arrendamientos.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.OtrosCostos?.Arrendamientos?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.OtrosCostos.Arrendamientos.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.OtrosCostos?.Arrendamientos?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Costos - OtrosCostos - Seguros
+
+            renContent.Costos.OtrosCostos.Seguros.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.OtrosCostos?.Seguros?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Costos.OtrosCostos.Seguros.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.OtrosCostos?.Seguros?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.OtrosCostos.Seguros.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.OtrosCostos?.Seguros?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Costos - OtrosCostos - Servicios
+
+            renContent.Costos.OtrosCostos.Servicios.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.OtrosCostos?.Servicios?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Costos.OtrosCostos.Servicios.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.OtrosCostos?.Servicios?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.OtrosCostos.Servicios.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.OtrosCostos?.Servicios?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Costos - OtrosCostos - Honorarios
+
+            renContent.Costos.OtrosCostos.Honorarios.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.OtrosCostos?.Honorarios?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Costos.OtrosCostos.Honorarios.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.OtrosCostos?.Honorarios?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.OtrosCostos.Honorarios.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.OtrosCostos?.Honorarios?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Costos - OtrosCostos - ServiciosTecnicos - VinculadosEconomicos
+
+            renContent.Costos.OtrosCostos.ServiciosTecnicos.VinculadosEconomicos.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.ServiciosTecnicos?.ConVinculadosEconomicos?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Costos.OtrosCostos.ServiciosTecnicos.VinculadosEconomicos.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.ServiciosTecnicos?.ConVinculadosEconomicos?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.OtrosCostos.ServiciosTecnicos.VinculadosEconomicos.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.ServiciosTecnicos?.ConVinculadosEconomicos?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Costos - OtrosCostos - ServiciosTecnicos - JurisdiccionesNoCooperantesDeBajaONulaImposicionYRegimenesTributariosPreferenciales
+
+            renContent.Costos.OtrosCostos.ServiciosTecnicos.JurisdiccionesNoCooperantesDeBajaONulaImposicionYRegimenesTributariosPreferenciales.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.ServiciosTecnicos?.ConJurisdiccionesNoCooperantesDeBajaONulaImposicion?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Costos.OtrosCostos.ServiciosTecnicos.JurisdiccionesNoCooperantesDeBajaONulaImposicionYRegimenesTributariosPreferenciales.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.ServiciosTecnicos?.ConJurisdiccionesNoCooperantesDeBajaONulaImposicion?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.OtrosCostos.ServiciosTecnicos.JurisdiccionesNoCooperantesDeBajaONulaImposicionYRegimenesTributariosPreferenciales.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.ServiciosTecnicos?.ConJurisdiccionesNoCooperantesDeBajaONulaImposicion?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Costos - OtrosCostos - ServiciosTecnicos - NoVinculados
+
+            renContent.Costos.OtrosCostos.ServiciosTecnicos.NoVinculados.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.ServiciosTecnicos?.ConNoVinculados?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Costos.OtrosCostos.ServiciosTecnicos.NoVinculados.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.ServiciosTecnicos?.ConNoVinculados?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.OtrosCostos.ServiciosTecnicos.NoVinculados.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.ServiciosTecnicos?.ConNoVinculados?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Costos - OtrosCostos - AsistenciaTecnica - VinculadosEconomicos
+
+            renContent.Costos.OtrosCostos.AsistenciaTecnica.VinculadosEconomicos.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.AsistenciaTecnica?.ConVinculadosEconomicos?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Costos.OtrosCostos.AsistenciaTecnica.VinculadosEconomicos.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.AsistenciaTecnica?.ConVinculadosEconomicos?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.OtrosCostos.AsistenciaTecnica.VinculadosEconomicos.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.AsistenciaTecnica?.ConVinculadosEconomicos?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Costos - OtrosCostos - AsistenciaTecnica - JurisdiccionesNoCooperantesDeBajaONulaImposicionYRegimenesTributariosPreferenciales
+
+            renContent.Costos.OtrosCostos.AsistenciaTecnica.JurisdiccionesNoCooperantesDeBajaONulaImposicionYRegimenesTributariosPreferenciales.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.AsistenciaTecnica?.ConJurisdiccionesNoCooperantesDeBajaONulaImposicion?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Costos.OtrosCostos.AsistenciaTecnica.JurisdiccionesNoCooperantesDeBajaONulaImposicionYRegimenesTributariosPreferenciales.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.AsistenciaTecnica?.ConJurisdiccionesNoCooperantesDeBajaONulaImposicion?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.OtrosCostos.AsistenciaTecnica.JurisdiccionesNoCooperantesDeBajaONulaImposicionYRegimenesTributariosPreferenciales.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.AsistenciaTecnica?.ConJurisdiccionesNoCooperantesDeBajaONulaImposicion?.AjustesParaLlegarASaldosFiscales1 || 0;
+            
+            //Costos - OtrosCostos - AsistenciaTecnica - NoVinculados
+
+            renContent.Costos.OtrosCostos.AsistenciaTecnica.NoVinculados.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.AsistenciaTecnica?.ConNoVinculados?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Costos.OtrosCostos.AsistenciaTecnica.NoVinculados.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.AsistenciaTecnica?.ConNoVinculados?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.OtrosCostos.AsistenciaTecnica.NoVinculados.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.AsistenciaTecnica?.ConNoVinculados?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Costos - OtrosCostos - OtrosConceptosReconocidosComoCostosEnElEstadoDeResultados
+
+            renContent.Costos.OtrosCostos.OtrosConceptosReconocidosComoCostosEnElEstadoDeResultados.ValorContable =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.AsistenciaTecnica?.Otros?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Costos.OtrosCostos.OtrosConceptosReconocidosComoCostosEnElEstadoDeResultados.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.AsistenciaTecnica?.Otros?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Costos.OtrosCostos.OtrosConceptosReconocidosComoCostosEnElEstadoDeResultados.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.AsistenciaTecnica?.Otros?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Costos - OtrosCostos - OtrosCostosFiscalesNoReconocidosContablemente
+
+            renContent.Costos.OtrosCostos.OtrosCostosFiscalesNoReconocidosContablemente.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon62?.["6140CostoDeLasActividadesQueFormanLasRentasExentas"]?.CostoFiscalDeActivosFijosOBiologicosVendidosYPoseidosMenosDeDosAnios?.SaldosContablesADiciembre31Parciales || 0;
+
+            //TODO: quedo en el H190
 
         }
 
