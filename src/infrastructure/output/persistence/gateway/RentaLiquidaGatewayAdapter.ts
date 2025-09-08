@@ -1,6 +1,7 @@
 import prisma from "../../../../config/database";
 import { FormRentaLiquida } from "../../../../domain/models/FormRentaLiquidaModel";
 import { FormsGatewayIntPort } from "../../../../application/output/FormsGatewayIntPort";
+import { RentaLiquidaController } from "../../../input/controllers/RentaLiquida.controller";
 
 export class RentaLiquidaGatewayAdapter implements FormsGatewayIntPort<FormRentaLiquida> {
 
@@ -864,6 +865,10 @@ export class RentaLiquidaGatewayAdapter implements FormsGatewayIntPort<FormRenta
 
             renContent.Ingresos.OtrosIngresos.Otros.MayorValorFiscalPorReconocimientoExencionesLimitaciones = (renContent?.Renglon57?.["429507Otros"]?.AjustesParaLlegarASaldosFiscales3 || 0) + (renContent?.Renglon57?.["4265IngresosDeEjerciciosAnteriores"]?.AjustesParaLlegarASaldosFiscales3 || 0) + (renContent?.Renglon57?.["425050ReintegrodeOtrosCostosYGastos"]?.AjustesParaLlegarASaldosFiscales3 || 0) + (renContent?.Renglon57?.["429543LoteriasRifasYSimilares"]?.AjustesParaLlegarASaldosFiscales3 || 0);
 
+            
+            //aqui inicia lo que se sabe esta bien 
+
+
             // Ingresos - AjustesFiscales - AdicionDeIngresos - InteresesPresuntos
 
             renContent.Ingresos.AjustesFiscales.AdicionDeIngresos.InteresesPresuntos.MayorValorFiscalPorReconocimientoExencionesLimitaciones = (renContent?.Renglon48?.["InteresesPresuntivosPorHacerPrestamosEnDineroALosSociosDeEstaSociedad"]?.AjustesParaLlegarASaldosFiscales3 || 0);
@@ -878,10 +883,10 @@ export class RentaLiquidaGatewayAdapter implements FormsGatewayIntPort<FormRenta
                 renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciantesQueUtilizanSistemaPermanente?.SaldosContablesADiciembre31Parciales || 0;
 
             renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.CostosDeVentasCalculadoPorElSistemaPermanente.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
-                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciantesQueUtilizanSistemaPermanente?.AjustesParaLlegarASaldosFiscales1 || 0;
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciantesQueUtilizanSistemaPermanente?.AjustesParaLlegarASaldosFiscales3 || 0;
 
             renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.CostosDeVentasCalculadoPorElSistemaPermanente.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
-                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciantesQueUtilizanSistemaPermanente?.SaldosFiscalesADiciembre31Parciales || 0;
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciantesQueUtilizanSistemaPermanente?.AjustesParaLlegarASaldosFiscales1 || 0;
 
             //Costos - MateriasPrimasReventaDeBienesTerminadosYServicios - Materias primas (para procesos de producción) - Inventario inicial
 
@@ -892,7 +897,7 @@ export class RentaLiquidaGatewayAdapter implements FormsGatewayIntPort<FormRenta
                 renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.InventarioInicialDeMateriaPrimas?.InventarioInicialDeMateriaPrimas?.AjustesParaLlegarASaldosFiscales3 || 0;
 
             renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.MateriasPrimasProduccion.InventarioInicial.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
-                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.InventarioInicialDeMateriaPrimas?.InventarioInicialDeMateriaPrimas?.SaldosFiscalesADiciembre31Parciales || 0;    
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.InventarioInicialDeMateriaPrimas?.InventarioInicialDeMateriaPrimas?.AjustesParaLlegarASaldosFiscales1 || 0;    
                 
             //Costos - MateriasPrimasReventaDeBienesTerminadosYServicios - Materias primas (para procesos de producción) - compras locales
 
@@ -903,7 +908,7 @@ export class RentaLiquidaGatewayAdapter implements FormsGatewayIntPort<FormRenta
                 renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.InventarioInicialDeMateriaPrimas?.MasComprasLocales?.AjustesParaLlegarASaldosFiscales3 || 0;
 
             renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.MateriasPrimasProduccion.ComprasLocales.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
-                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.InventarioInicialDeMateriaPrimas?.MasComprasLocales?.SaldosFiscalesADiciembre31Parciales || 0;
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.InventarioInicialDeMateriaPrimas?.MasComprasLocales?.AjustesParaLlegarASaldosFiscales1 || 0;
 
             //Costos - MateriasPrimasReventaDeBienesTerminadosYServicios - Materias primas (para procesos de producción) - Importaciones
 
@@ -914,7 +919,7 @@ export class RentaLiquidaGatewayAdapter implements FormsGatewayIntPort<FormRenta
                 renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.InventarioInicialDeMateriaPrimas?.MasImportaciones?.AjustesParaLlegarASaldosFiscales3 || 0;
 
             renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.MateriasPrimasProduccion.Importaciones.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
-                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.InventarioInicialDeMateriaPrimas?.MasImportaciones?.SaldosFiscalesADiciembre31Parciales || 0;
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.InventarioInicialDeMateriaPrimas?.MasImportaciones?.AjustesParaLlegarASaldosFiscales1 || 0;
 
             //Costos - MateriasPrimasReventaDeBienesTerminadosYServicios - Materias primas (para procesos de producción) - Inventario final
 
@@ -925,7 +930,7 @@ export class RentaLiquidaGatewayAdapter implements FormsGatewayIntPort<FormRenta
                 renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.InventarioInicialDeMateriaPrimas?.MenosInventarioFinalMateriasPrimas?.AjustesParaLlegarASaldosFiscales3 || 0;
 
             renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.MateriasPrimasProduccion.InventarioFinal.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
-                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.InventarioInicialDeMateriaPrimas?.MenosInventarioFinalMateriasPrimas?.SaldosFiscalesADiciembre31Parciales || 0;
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.InventarioInicialDeMateriaPrimas?.MenosInventarioFinalMateriasPrimas?.AjustesParaLlegarASaldosFiscales1 || 0;
 
             //Costos - MateriasPrimasReventaDeBienesTerminadosYServicios - Costos de los bienes vendidos (para comerciantes por reventa de bienes terminados) - Inventario inicial
 
@@ -936,7 +941,7 @@ export class RentaLiquidaGatewayAdapter implements FormsGatewayIntPort<FormRenta
                 renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciasntesQueUtilizanJuegoDeInventarios?.InventarioInicial?.AjustesParaLlegarASaldosFiscales3 || 0;
 
             renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.CostoBienesVendidos.InventarioInicial.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
-                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciasntesQueUtilizanJuegoDeInventarios?.InventarioInicial?.SaldosFiscalesADiciembre31Parciales || 0;
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciasntesQueUtilizanJuegoDeInventarios?.InventarioInicial?.AjustesParaLlegarASaldosFiscales1 || 0;
             
             //Costos - MateriasPrimasReventaDeBienesTerminadosYServicios - Costos de los bienes vendidos (para comerciantes por reventa de bienes terminados) - Compras locales 
             
@@ -947,7 +952,7 @@ export class RentaLiquidaGatewayAdapter implements FormsGatewayIntPort<FormRenta
                 renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciasntesQueUtilizanJuegoDeInventarios?.MasComprasLocales?.AjustesParaLlegarASaldosFiscales3 || 0;
 
             renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.CostoBienesVendidos.ComprasLocales.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
-                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciasntesQueUtilizanJuegoDeInventarios?.MasComprasLocales?.SaldosFiscalesADiciembre31Parciales || 0;
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciasntesQueUtilizanJuegoDeInventarios?.MasComprasLocales?.AjustesParaLlegarASaldosFiscales1 || 0;
 
             //Costos - MateriasPrimasReventaDeBienesTerminadosYServicios - Costos de los bienes vendidos (para comerciantes por reventa de bienes terminados) - Importaciones
 
@@ -958,7 +963,7 @@ export class RentaLiquidaGatewayAdapter implements FormsGatewayIntPort<FormRenta
                 renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciasntesQueUtilizanJuegoDeInventarios?.MasImportaciones?.AjustesParaLlegarASaldosFiscales3 || 0;
 
             renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.CostoBienesVendidos.Importaciones.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
-                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciasntesQueUtilizanJuegoDeInventarios?.MasImportaciones?.SaldosFiscalesADiciembre31Parciales || 0;
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciasntesQueUtilizanJuegoDeInventarios?.MasImportaciones?.AjustesParaLlegarASaldosFiscales1 || 0;
 
             //Costos - MateriasPrimasReventaDeBienesTerminadosYServicios - Costos de los bienes vendidos (para comerciantes por reventa de bienes terminados) - Inventario Final
 
@@ -969,7 +974,7 @@ export class RentaLiquidaGatewayAdapter implements FormsGatewayIntPort<FormRenta
                 renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciasntesQueUtilizanJuegoDeInventarios?.MenosInventarioFinal?.AjustesParaLlegarASaldosFiscales3 || 0;
 
             renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.CostoBienesVendidos.InventarioFinal.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
-                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciasntesQueUtilizanJuegoDeInventarios?.MenosInventarioFinal?.SaldosFiscalesADiciembre31Parciales || 0;
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.CostoDeVentasParaComerciasntesQueUtilizanJuegoDeInventarios?.MenosInventarioFinal?.AjustesParaLlegarASaldosFiscales1 || 0;
 
             // Costos - MateriasPrimasReventaDeBienesTerminadosYServicios - Productos en proceso - Inventario inicial
 
@@ -981,7 +986,7 @@ export class RentaLiquidaGatewayAdapter implements FormsGatewayIntPort<FormRenta
                 renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.InventarioInicialDeTrabajoEnProceso?.AjustesParaLlegarASaldosFiscales3 || 0;
 
             renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.ProductosEnProceso.InventarioInicial.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
-                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.InventarioInicialDeTrabajoEnProceso?.SaldosFiscalesADiciembre31Parciales || 0;
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.InventarioInicialDeTrabajoEnProceso?.AjustesParaLlegarASaldosFiscales1 || 0;
 
             // Costos - MateriasPrimasReventaDeBienesTerminadosYServicios - Productos en proceso - Inventario final
 
@@ -992,7 +997,7 @@ export class RentaLiquidaGatewayAdapter implements FormsGatewayIntPort<FormRenta
                 renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.AsistenciaTecnica?.MenosInventarioFinalDeTrabajoEnProceso?.AjustesParaLlegarASaldosFiscales3 || 0;
 
             renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.ProductosEnProceso.InventarioFinal.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
-                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.AsistenciaTecnica?.MenosInventarioFinalDeTrabajoEnProceso?.SaldosFiscalesADiciembre31Parciales || 0;
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.AsistenciaTecnica?.MenosInventarioFinalDeTrabajoEnProceso?.AjustesParaLlegarASaldosFiscales1 || 0;
             
             // Costos - MateriasPrimasReventaDeBienesTerminadosYServicios - Producto terminado - Inventario inicial
 
@@ -1003,7 +1008,7 @@ export class RentaLiquidaGatewayAdapter implements FormsGatewayIntPort<FormRenta
                 renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.AsistenciaTecnica?.MasInventarioInicialDeProductoTerminado?.AjustesParaLlegarASaldosFiscales3 || 0;
 
             renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.ProductosEnProceso.InventarioInicial.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
-                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.AsistenciaTecnica?.MasInventarioInicialDeProductoTerminado?.SaldosFiscalesADiciembre31Parciales || 0;
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.AsistenciaTecnica?.MasInventarioInicialDeProductoTerminado?.AjustesParaLlegarASaldosFiscales1 || 0;
 
             // Costos - MateriasPrimasReventaDeBienesTerminadosYServicios - Producto terminado - Inventario final
             
@@ -1014,7 +1019,7 @@ export class RentaLiquidaGatewayAdapter implements FormsGatewayIntPort<FormRenta
                 renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.AsistenciaTecnica?.MenosInventarioFinalDeProductoTerminado?.AjustesParaLlegarASaldosFiscales3 || 0;
 
             renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.ProductosEnProceso.InventarioFinal.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
-                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.AsistenciaTecnica?.MenosInventarioFinalDeProductoTerminado?.SaldosFiscalesADiciembre31Parciales || 0;
+                renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.AsistenciaTecnica?.MenosInventarioFinalDeProductoTerminado?.AjustesParaLlegarASaldosFiscales1 || 0;
 
             //Costos - MateriasPrimasReventaDeBienesTerminadosYServicios - Costos en la prestación de servicios (para prestadores de servicios)
 
@@ -1025,8 +1030,8 @@ export class RentaLiquidaGatewayAdapter implements FormsGatewayIntPort<FormRenta
                 renContent?.Renglon62?.["6140CostoDeLasActividadesQueFormanLasRentasExentas"]?.CostoDeLasActividadesQueFormanLasRentasExentas?.AjustesParaLlegarASaldosFiscales3 || 0;
 
             renContent.Costos.MateriasPrimasReventaDeBienesTerminadosYServicios.CostosEnLaPrestacionDeServicios.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
-                renContent?.Renglon62?.["6140CostoDeLasActividadesQueFormanLasRentasExentas"]?.CostoDeLasActividadesQueFormanLasRentasExentas?.SaldosFiscalesADiciembre31Parciales || 0;
-
+                renContent?.Renglon62?.["6140CostoDeLasActividadesQueFormanLasRentasExentas"]?.CostoDeLasActividadesQueFormanLasRentasExentas?.AjustesParaLlegarASaldosFiscales1 || 0;
+ 
             //Costos - ManoObra - DeCortoPlazo
 
             renContent.Costos.ManoObra.DeCortoPlazo.ValorContable =
@@ -1776,9 +1781,1052 @@ export class RentaLiquidaGatewayAdapter implements FormsGatewayIntPort<FormRenta
 
             renContent.Gastos.DeAdministracion.DepreciacionesAmortizacionesDeterioros.DeterioroDelValorDeLosActivos.OtrosDeterioros.ValorContable =
                 renContent?.Renglon63?.["5199Deterioros"]?.OtrosDeteriors?.SaldosContablesADiciembre31Parciales || 0;
+            
+            //Gastos - Gastos de distribución y ventas - Mano de Obra - De corto plazo
+            renContent.Gastos.GastosDeDistribucionYVentas.ManoDeObra.DeCortoPlazo.ValorContable = 
+                (renContent?.Renglon64?.["5205BeneficiosALosEmpleadosCortoPlayzo"]?.SalariosYOtros.SaldosContablesADiciembre31Parciales || 0) +
+                (renContent?.Renglon64?.["5205BeneficiosALosEmpleadosCortoPlayzo"]?.AportesAEPS.SaldosContablesADiciembre31Parciales || 0) +
+                (renContent?.Renglon64?.["5205BeneficiosALosEmpleadosCortoPlayzo"]?.AportesAARL.SaldosContablesADiciembre31Parciales || 0) +
+                (renContent?.Renglon64?.["5205BeneficiosALosEmpleadosCortoPlayzo"]?.AportesAFondosDePensiones.SaldosContablesADiciembre31Parciales || 0) +
+                (renContent?.Renglon64?.["5205BeneficiosALosEmpleadosCortoPlayzo"]?.AportesAlSENA.SaldosContablesADiciembre31Parciales || 0) +
+                (renContent?.Renglon64?.["5205BeneficiosALosEmpleadosCortoPlayzo"]?.AportesAlICBF.SaldosContablesADiciembre31Parciales || 0) +
+                (renContent?.Renglon64?.["5205BeneficiosALosEmpleadosCortoPlayzo"]?.AportesACajasDeCompensacion.SaldosContablesADiciembre31Parciales || 0);
+            
+            renContent.Gastos.GastosDeDistribucionYVentas.ManoDeObra.DeCortoPlazo.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                (renContent?.Renglon64?.["5205BeneficiosALosEmpleadosCortoPlayzo"]?.SalariosYOtros.AjustesParaLlegarASaldosFiscales3 || 0) +
+                (renContent?.Renglon64?.["5205BeneficiosALosEmpleadosCortoPlayzo"]?.AportesAEPS.AjustesParaLlegarASaldosFiscales3 || 0) +
+                (renContent?.Renglon64?.["5205BeneficiosALosEmpleadosCortoPlayzo"]?.AportesAARL.AjustesParaLlegarASaldosFiscales3 || 0) +
+                (renContent?.Renglon64?.["5205BeneficiosALosEmpleadosCortoPlayzo"]?.AportesAFondosDePensiones.AjustesParaLlegarASaldosFiscales3 || 0) +
+                (renContent?.Renglon64?.["5205BeneficiosALosEmpleadosCortoPlayzo"]?.AportesAlSENA.AjustesParaLlegarASaldosFiscales3 || 0) +
+                (renContent?.Renglon64?.["5205BeneficiosALosEmpleadosCortoPlayzo"]?.AportesAlICBF.AjustesParaLlegarASaldosFiscales3 || 0) +
+                (renContent?.Renglon64?.["5205BeneficiosALosEmpleadosCortoPlayzo"]?.AportesACajasDeCompensacion.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            renContent.Gastos.GastosDeDistribucionYVentas.ManoDeObra.DeCortoPlazo.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                (renContent?.Renglon64?.["5205BeneficiosALosEmpleadosCortoPlayzo"]?.SalariosYOtros.AjustesParaLlegarASaldosFiscales1 || 0) +
+                (renContent?.Renglon64?.["5205BeneficiosALosEmpleadosCortoPlayzo"]?.AportesAEPS.AjustesParaLlegarASaldosFiscales1 || 0) +
+                (renContent?.Renglon64?.["5205BeneficiosALosEmpleadosCortoPlayzo"]?.AportesAARL.AjustesParaLlegarASaldosFiscales1 || 0) +
+                (renContent?.Renglon64?.["5205BeneficiosALosEmpleadosCortoPlayzo"]?.AportesAFondosDePensiones.AjustesParaLlegarASaldosFiscales1 || 0) +
+                (renContent?.Renglon64?.["5205BeneficiosALosEmpleadosCortoPlayzo"]?.AportesAlSENA.AjustesParaLlegarASaldosFiscales1 || 0) +
+                (renContent?.Renglon64?.["5205BeneficiosALosEmpleadosCortoPlayzo"]?.AportesAlICBF.AjustesParaLlegarASaldosFiscales1 || 0) +
+                (renContent?.Renglon64?.["5205BeneficiosALosEmpleadosCortoPlayzo"]?.AportesACajasDeCompensacion.AjustesParaLlegarASaldosFiscales1 || 0);
+            
+            //Gastos - Gastos de distribución y ventas - Otros gastos de distribución y ventas - Impuestos distintos al impuestos de renta y complementarios
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.ImpuestosDistintosAlImpuestosDeRentaYComplementarios.ValorContable =
+                renContent?.Renglon64?.["5215ImpuestosAlPatrimonioIndustriaYComercio"]?.SaldosContablesADiciembre31Parciales || 0;
 
 
-        }
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.ImpuestosDistintosAlImpuestosDeRentaYComplementarios.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5215ImpuestosAlPatrimonioIndustriaYComercio"]?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.ImpuestosDistintosAlImpuestosDeRentaYComplementarios.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5215ImpuestosAlPatrimonioIndustriaYComercio"]?.AjustesParaLlegarASaldosFiscales1 || 0;
+            
+            //Gastos - Gastos de distribución y ventas - Otros gastos de distribución y ventas - Arrendamientos operativos
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.ArrendamientosOperativos.ValorContable =
+                renContent?.Renglon64?.["5220Arrendamientos"]?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.ArrendamientosOperativos.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5220Arrendamientos"]?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.ArrendamientosOperativos.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5220Arrendamientos"]?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - Gastos de distribución y ventas - Otros gastos de distribución y ventas - Contribuciones y afiliaciones
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.ContribucionesYAfiliaciones.ValorContable =
+                renContent?.Renglon64?.["5225Contribuciones"]?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.ContribucionesYAfiliaciones.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5225Contribuciones"]?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.ContribucionesYAfiliaciones.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5225Contribuciones"]?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - Gastos de distribución y ventas - Otros gastos de distribución y ventas - Honorarios
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.Honorarios.ValorContable =
+                renContent?.Renglon64?.["5210Honorarios"]?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.Honorarios.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5210Honorarios"]?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.Honorarios.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5210Honorarios"]?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - Gastos de distribución y ventas - Otros gastos de distribución y ventas - Seguros
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.Seguros.ValorContable =
+                renContent?.Renglon64?.["5230Seguros"]?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.Seguros.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5230Seguros"]?.AjustesParaLlegarASaldosFiscales3 || 0;
+            
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.Seguros.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5230Seguros"]?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - Gastos de distribución y ventas - Otros gastos de distribución y ventas - Servicios administrativos - Vinculados económicos
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.ServiciosAdministrativos.VinculadosEconomicos.ValorContable =
+                renContent?.Renglon64?.["5235Servicios"]?.ServiciosAdministrativosConVinculadosEconomicos?.SaldosContablesADiciembre31Parciales || 0;
+            
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.ServiciosAdministrativos.VinculadosEconomicos.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5235Servicios"]?.ServiciosAdministrativosConVinculadosEconomicos?.AjustesParaLlegarASaldosFiscales3 || 0;
+            
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.ServiciosAdministrativos.VinculadosEconomicos.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5235Servicios"]?.ServiciosAdministrativosConVinculadosEconomicos?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - Gastos de distribución y ventas - Otros gastos de distribución y ventas - Servicios administrativos - Jurisdicciones no cooperantes
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.ServiciosAdministrativos.JurisdiccionesNoCooperantesDeBajaONulaImposicionYRegimenesTributariosPreferenciales.ValorContable =
+                renContent?.Renglon64?.["5235Servicios"]?.ServiciosAdministrativosConTercerosUbicadosEnJurisdiccionesNoCooperantes?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.ServiciosAdministrativos.JurisdiccionesNoCooperantesDeBajaONulaImposicionYRegimenesTributariosPreferenciales.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5235Servicios"]?.ServiciosAdministrativosConTercerosUbicadosEnJurisdiccionesNoCooperantes?.AjustesParaLlegarASaldosFiscales3 || 0;
+            
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.ServiciosAdministrativos.JurisdiccionesNoCooperantesDeBajaONulaImposicionYRegimenesTributariosPreferenciales.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5235Servicios"]?.ServiciosAdministrativosConTercerosUbicadosEnJurisdiccionesNoCooperantes?.AjustesParaLlegarASaldosFiscales1 || 0;
+        
+            //Gastos - Gastos de distribución y ventas - Otros gastos de distribución y ventas - Servicios administrativos - No vinculados
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.ServiciosAdministrativos.NoVinculados.ValorContable =
+                renContent?.Renglon64?.["5235Servicios"]?.ServiciosAdministrativosConNoVinculados?.SaldosContablesADiciembre31Parciales || 0;
+            
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.ServiciosAdministrativos.NoVinculados.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5235Servicios"]?.ServiciosAdministrativosConNoVinculados?.AjustesParaLlegarASaldosFiscales3 || 0;
+            
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.ServiciosAdministrativos.NoVinculados.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5235Servicios"]?.ServiciosAdministrativosConNoVinculados?.AjustesParaLlegarASaldosFiscales1 || 0;
+            
+            //Gastos - Gastos de distribución y ventas - Otros gastos de distribución y ventas - Regalías - Vinculados económicos
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.Regalias.VinculadosEconomicos.ValorContable =
+                renContent?.Renglon64?.["5236Regalias"]?.ConVinculadosEconomicos?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.Regalias.VinculadosEconomicos.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5236Regalias"]?.ConVinculadosEconomicos?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.Regalias.VinculadosEconomicos.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5236Regalias"]?.ConVinculadosEconomicos?.AjustesParaLlegarASaldosFiscales1 || 0;
+            
+            //Gastos - Gastos de distribución y ventas - Otros gastos de distribución y ventas - Regalías - Jurisdicciones no cooperantes
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.Regalias.JurisdiccionesNoCooperantesDeBajaONulaImposicionYRegimenesTributariosPreferenciales.ValorContable =
+                renContent?.Renglon64?.["5236Regalias"]?.ConTercerosUbicadosEnJurisdiccionesNoCooperantes?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.Regalias.JurisdiccionesNoCooperantesDeBajaONulaImposicionYRegimenesTributariosPreferenciales.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5236Regalias"]?.ConTercerosUbicadosEnJurisdiccionesNoCooperantes?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.Regalias.JurisdiccionesNoCooperantesDeBajaONulaImposicionYRegimenesTributariosPreferenciales.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5236Regalias"]?.ConTercerosUbicadosEnJurisdiccionesNoCooperantes?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - Gastos de distribución y ventas - Otros gastos de distribución y ventas - Regalías - No vinculados
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.Regalias.NoVinculados.ValorContable =
+                renContent?.Renglon64?.["5236Regalias"]?.ConNoVinculados?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.Regalias.NoVinculados.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5236Regalias"]?.ConNoVinculados?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.Regalias.NoVinculados.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5236Regalias"]?.ConNoVinculados?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - Gastos de distribución y ventas - Otros gastos de distribución y ventas - Asistencia técnica - Vinculados económicos
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.AsistenciaTecnica.VinculadosEconomicos.ValorContable =
+                renContent?.Renglon64?.["5235Servicios"]?.AsistenciaTecnicaConVinculadosEconomicos?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.AsistenciaTecnica.VinculadosEconomicos.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5235Servicios"]?.AsistenciaTecnicaConVinculadosEconomicos?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.AsistenciaTecnica.VinculadosEconomicos.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5235Servicios"]?.AsistenciaTecnicaConVinculadosEconomicos?.AjustesParaLlegarASaldosFiscales1 || 0;
+            
+            //Gastos - Gastos de distribución y ventas - Otros gastos de distribución y ventas - Asistencia técnica - Jurisdicciones no cooperantes
+            
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.AsistenciaTecnica.JurisdiccionesNoCooperantesDeBajaONulaImposicionYRegimenesTributariosPreferenciales.ValorContable =
+                renContent?.Renglon64?.["5235Servicios"]?.AsistenciaTecnicaConTercerosUbicadosEnJurisdiccionesNoCooperantes?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.AsistenciaTecnica.JurisdiccionesNoCooperantesDeBajaONulaImposicionYRegimenesTributariosPreferenciales.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5235Servicios"]?.AsistenciaTecnicaConTercerosUbicadosEnJurisdiccionesNoCooperantes?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.AsistenciaTecnica.JurisdiccionesNoCooperantesDeBajaONulaImposicionYRegimenesTributariosPreferenciales.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5235Servicios"]?.AsistenciaTecnicaConTercerosUbicadosEnJurisdiccionesNoCooperantes?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - Gastos de distribución y ventas - Otros gastos de distribución y ventas - Asistencia técnica - No vinculados
+            
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.AsistenciaTecnica.NoVinculados.ValorContable =
+                renContent?.Renglon64?.["5235Servicios"]?.AsistenciaTecnicaConNoVinculados?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.AsistenciaTecnica.NoVinculados.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5235Servicios"]?.AsistenciaTecnicaConNoVinculados?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.AsistenciaTecnica.NoVinculados.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5235Servicios"]?.AsistenciaTecnicaConNoVinculados?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - Gastos de distribución y ventas - Otros gastos de distribución y ventas - Otros servicios
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.OtrosServicios.ValorContable =
+                renContent?.Renglon64?.["5235Servicios"]?.OtrosServicios?.SaldosContablesADiciembre31Parciales || 0;
+            
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.OtrosServicios.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5235Servicios"]?.OtrosServicios?.AjustesParaLlegarASaldosFiscales3 || 0;
+            
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.OtrosServicios.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5235Servicios"]?.OtrosServicios?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - Gastos de distribución y ventas - Otros gastos de distribución y ventas - Investigación y desarrollo
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.InvestigacionYDesarrollo.ValorContable =
+                renContent?.Renglon64?.["5241InvestigacionYDesarrollo"]?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.InvestigacionYDesarrollo.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5241InvestigacionYDesarrollo"]?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.InvestigacionYDesarrollo.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5241InvestigacionYDesarrollo"]?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - Gastos de distribución y ventas - Otros gastos de distribución y ventas - Gastos legales
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.GastosLegales.ValorContable =
+                renContent?.Renglon64?.["5240GastosLegales"]?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.GastosLegales.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5240GastosLegales"]?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.GastosLegales.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5240GastosLegales"]?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - Gastos de distribución y ventas - Otros gastos de distribución y ventas - Reparación, mantenimiento, adecuación e instalaciones
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.ReparacionMantenimientoAdecuacionEInstalaciones.ValorContable =
+                (renContent?.Renglon64?.["5245MantenimientoYReparacion"]?.SaldosContablesADiciembre31Parciales || 0) + 
+                (renContent?.Renglon64?.["5250AdecuacionesEInstalaciones"]?.SaldosContablesADiciembre31Parciales || 0);
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.ReparacionMantenimientoAdecuacionEInstalaciones.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                (renContent?.Renglon64?.["5245MantenimientoYReparacion"]?.AjustesParaLlegarASaldosFiscales3 || 0) + 
+                (renContent?.Renglon64?.["5250AdecuacionesEInstalaciones"]?.AjustesParaLlegarASaldosFiscales3 || 0 );
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.ReparacionMantenimientoAdecuacionEInstalaciones.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                (renContent?.Renglon64?.["5245MantenimientoYReparacion"]?.AjustesParaLlegarASaldosFiscales1 || 0) + 
+                (renContent?.Renglon64?.["5250AdecuacionesEInstalaciones"]?.AjustesParaLlegarASaldosFiscales1 || 0 );
+
+            //Gastos - Gastos de distribución y ventas - Otros gastos de distribución y ventas - Transporte
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.Transporte.ValorContable =
+                renContent?.Renglon64?.["5255GastosDeTransportes"]?.SaldosContablesADiciembre31Parciales || 0;
+            
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.Transporte.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5255GastosDeTransportes"]?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.Transporte.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5255GastosDeTransportes"]?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - Gastos de distribución y ventas - Otros gastos de distribución y ventas - Constitución de reservas
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.ConstitucionReservasEmpresasAseguradoras.ValorContable =
+                renContent?.Renglon64?.["5237ConstitucionDeReservasEmpresasAseguradoras"]?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.ConstitucionReservasEmpresasAseguradoras.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5237ConstitucionDeReservasEmpresasAseguradoras"]?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.ConstitucionReservasEmpresasAseguradoras.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5237ConstitucionDeReservasEmpresasAseguradoras"]?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - Gastos de distribución y ventas - Otros gastos de distribución y ventas - Liquidación de siniestros
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.LiquidacionDeSiniestros.ValorContable =
+                renContent?.Renglon64?.["5238LiquidacionDeSiniestros"]?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.LiquidacionDeSiniestros.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5238LiquidacionDeSiniestros"]?.AjustesParaLlegarASaldosFiscales3 || 0;
+            
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.LiquidacionDeSiniestros.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5238LiquidacionDeSiniestros"]?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - Gastos de distribución y ventas - Otros gastos de distribución y ventas - Primas de reaseguros
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.PrimasDeReaseguros.ValorContable =
+                renContent?.Renglon64?.["5239PrimasDeReaseguros"]?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.PrimasDeReaseguros.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5239PrimasDeReaseguros"]?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.PrimasDeReaseguros.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5239PrimasDeReaseguros"]?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - Gastos de distribución y ventas - Otros gastos de distribución y ventas - Otros gastos  
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.OtrosGastos.ValorContable =
+                renContent?.Renglon64?.["5295Diversos"]?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.OtrosGastos.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5295Diversos"]?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.OtrosGastosDeDistribucionYVentas.OtrosGastos.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5295Diversos"]?.AjustesParaLlegarASaldosFiscales1 || 0;
+            
+            //Gastos - Gastos de distribución y ventas - Depreciaciones, amortizaciones y deterioros - Depreciación propiedades, planta y equipo - Del costo  
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DepreciacionPropiedadesPlantaYEquipo.DelCosto.ValorContable =
+                renContent?.Renglon64?.["5260Depreciaciones"]?.DepreciacionPropiedadesPlantaYEquipo?.DelCosto?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DepreciacionPropiedadesPlantaYEquipo.DelCosto.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5260Depreciaciones"]?.DepreciacionPropiedadesPlantaYEquipo?.DelCosto?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DepreciacionPropiedadesPlantaYEquipo.DelCosto.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5260Depreciaciones"]?.DepreciacionPropiedadesPlantaYEquipo?.DelCosto?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - Gastos de distribución y ventas - Depreciaciones, amortizaciones y deterioros - Depreciación propiedades, planta y equipo - Del ajuste acumulado por revaluaciones o re expresiones
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DepreciacionPropiedadesPlantaYEquipo.DelAjusteAcumunladoPorRevaluacionesOReExpresiones.ValorContable =
+                renContent?.Renglon64?.["5260Depreciaciones"]?.DepreciacionPropiedadesPlantaYEquipo?.DelAjusteAcumuladoPorRevaluacionesOReExpresiones?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Gastos - Gastos de distribución y ventas - Depreciaciones, amortizaciones y deterioros - Depreciación propiedades de inversión - Del costo
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DepreciacionPropiedadesDeInversion.DelCosto.ValorContable =
+                renContent?.Renglon64?.["5260Depreciaciones"]?.DepreciacionDePropiedadesDeInversion?.DelCosto?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DepreciacionPropiedadesDeInversion.DelCosto.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5260Depreciaciones"]?.DepreciacionDePropiedadesDeInversion?.DelCosto?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DepreciacionPropiedadesDeInversion.DelCosto.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5260Depreciaciones"]?.DepreciacionDePropiedadesDeInversion?.DelCosto?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - Gastos de distribución y ventas - Depreciaciones, amortizaciones y deterioros - Depreciación propiedades de inversión - Del ajuste acumulado por revaluaciones o re expresiones
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DepreciacionPropiedadesDeInversion.DelAjusteAcumunladoPorRevaluacionesOReExpresiones.ValorContable =
+                renContent?.Renglon64?.["5260Depreciaciones"]?.DepreciacionDePropiedadesDeInversion?.DelAjusteAcumuladoPorRevaluacionesOReExpresiones?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Gastos - Gastos de distribución y ventas - Depreciaciones, amortizaciones y deterioros - Depreciación activos biológicos - Del costo
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DepreciacionActivosBiologicos.DelCosto.ValorContable =
+                renContent?.Renglon64?.["5260Depreciaciones"]?.DepreciacionDeActivosBiologicos?.DelCosto?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DepreciacionActivosBiologicos.DelCosto.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5260Depreciaciones"]?.DepreciacionDeActivosBiologicos?.DelCosto?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DepreciacionActivosBiologicos.DelCosto.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5260Depreciaciones"]?.DepreciacionDeActivosBiologicos?.DelCosto?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - Gastos de distribución y ventas - Depreciaciones, amortizaciones y deterioros - Depreciación activos biológicos - Del ajuste acumulado por revaluaciones o re expresiones
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DepreciacionActivosBiologicos.DelAjusteAcumunladoPorRevaluacionesOReExpresiones.ValorContable =
+                renContent?.Renglon64?.["5260Depreciaciones"]?.DepreciacionDeActivosBiologicos?.DelAjusteAcumuladoPorRevaluacionesOReExpresiones?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Gastos - Gastos de distribución y ventas - Depreciaciones, amortizaciones y deterioros - Amortización activos intangibles - Del costo
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.AmortizacionActivosIntangibles.DelCosto.ValorContable =
+                renContent?.Renglon64?.["5266AmortizacionDeActivosIntangibles"]?.AmortizacionDeActivosIntangibles?.DelCosto?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.AmortizacionActivosIntangibles.DelCosto.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5266AmortizacionDeActivosIntangibles"]?.AmortizacionDeActivosIntangibles?.DelCosto?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.AmortizacionActivosIntangibles.DelCosto.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5266AmortizacionDeActivosIntangibles"]?.AmortizacionDeActivosIntangibles?.DelCosto?.AjustesParaLlegarASaldosFiscales1 || 0;
+            
+            //Gastos - Gastos de distribución y ventas - Depreciaciones, amortizaciones y deterioros - Amortización activos intangibles - Del ajuste acumulado por revaluaciones o re expresiones
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.AmortizacionActivosIntangibles.DelAjusteAcumunladoPorRevaluacionesOReExpresiones.ValorContable =
+                renContent?.Renglon64?.["5266AmortizacionDeActivosIntangibles"]?.AmortizacionDeActivosIntangibles?.DelAjusteAcumuladoPorRevaluacionesOReExpresiones?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Gastos - Gastos de distribución y ventas - Depreciaciones, amortizaciones y deterioros - Otras depreciaciones y amortizaciones - Del costo
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.OtrasDepreciacionesYAmortizaciones.DelCosto.ValorContable =
+                (renContent?.Renglon64?.["5260Depreciaciones"]?.DepreciacionDeOtrosActivos?.DelCosto?.SaldosContablesADiciembre31Parciales || 0) +
+                (renContent?.Renglon64?.["5266AmortizacionDeActivosIntangibles"]?.OtrasAmortizaciones?.DelCosto?.SaldosContablesADiciembre31Parciales || 0);
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.OtrasDepreciacionesYAmortizaciones.DelCosto.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                (renContent?.Renglon64?.["5260Depreciaciones"]?.DepreciacionDeOtrosActivos?.DelCosto?.AjustesParaLlegarASaldosFiscales3 || 0) +
+                (renContent?.Renglon64?.["5266AmortizacionDeActivosIntangibles"]?.OtrasAmortizaciones?.DelCosto?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.OtrasDepreciacionesYAmortizaciones.DelCosto.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                (renContent?.Renglon64?.["5260Depreciaciones"]?.DepreciacionDeOtrosActivos?.DelCosto?.AjustesParaLlegarASaldosFiscales1 || 0) +
+                (renContent?.Renglon64?.["5266AmortizacionDeActivosIntangibles"]?.OtrasAmortizaciones?.DelCosto?.AjustesParaLlegarASaldosFiscales1 || 0);
+            
+            //Gastos - Gastos de distribución y ventas - Depreciaciones, amortizaciones y deterioros - Otras depreciaciones y amortizaciones - Del ajuste acumulado por revaluaciones o re expresiones
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.OtrasDepreciacionesYAmortizaciones.DelAjusteAcumunladoPorRevaluacionesOReExpresiones.ValorContable =
+                (renContent?.Renglon64?.["5260Depreciaciones"]?.DepreciacionDeOtrosActivos?.DelAjusteAcumuladoPorRevaluacionesOReExpresiones?.SaldosContablesADiciembre31Parciales || 0) +
+                (renContent?.Renglon64?.["5266AmortizacionDeActivosIntangibles"]?.OtrasAmortizaciones?.DelAjusteAcumuladoPorRevaluacionesOReExpresiones?.SaldosContablesADiciembre31Parciales || 0);
+
+            //Gastos - Gastos de distribución y ventas - Depreciaciones, amortizaciones y deterioros - Deterioro del valor de los activos - Inventarios 
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.Inventarios.ValorContable =
+                renContent?.Renglon64?.["5299Deterioros"]?.Inventarios?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.Inventarios.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5299Deterioros"]?.Inventarios?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.Inventarios.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5299Deterioros"]?.Inventarios?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - Gastos de distribución y ventas - Depreciaciones, amortizaciones y deterioros - Deterioro del valor de los activos - Propiedades, planta y equipo
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.PropiedadesPlantaYEquipo.ValorContable =
+                renContent?.Renglon64?.["5299Deterioros"]?.PropiedadesPlantaYEquipo?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.PropiedadesPlantaYEquipo.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5299Deterioros"]?.PropiedadesPlantaYEquipo?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.PropiedadesPlantaYEquipo.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5299Deterioros"]?.PropiedadesPlantaYEquipo?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - Gastos de distribución y ventas - Depreciaciones, amortizaciones y deterioros - Deterioro del valor de los activos - Activos intangibles
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.ActivosIntangibles.ValorContable =
+                renContent?.Renglon64?.["5299Deterioros"]?.ActivosIntangibles?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.ActivosIntangibles.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5299Deterioros"]?.ActivosIntangibles?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.ActivosIntangibles.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5299Deterioros"]?.ActivosIntangibles?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - Gastos de distribución y ventas - Depreciaciones, amortizaciones y deterioros - Deterioro del valor de los activos - Activos de exploración y evaluación de recursos minerales
+            
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.ActivosDeExploracionYEvaluacionDeRecursosMinerales.ValorContable =
+                renContent?.Renglon64?.["5299Deterioros"]?.ActivosDeExploracionYEvaluacionDeRecursosMinerales?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.ActivosDeExploracionYEvaluacionDeRecursosMinerales.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5299Deterioros"]?.ActivosDeExploracionYEvaluacionDeRecursosMinerales?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.ActivosDeExploracionYEvaluacionDeRecursosMinerales.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5299Deterioros"]?.ActivosDeExploracionYEvaluacionDeRecursosMinerales?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - Gastos de distribución y ventas - Depreciaciones, amortizaciones y deterioros - Deterioro del valor de los activos - Propiedades de inversión medidas al modelo de costo
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.PropiedadesDeInversionMedidasAlModeloDeCosto.ValorContable =
+                renContent?.Renglon64?.["5299Deterioros"]?.PropiedadesDeInversionMedidasAlModeloDeCosto?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.PropiedadesDeInversionMedidasAlModeloDeCosto.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5299Deterioros"]?.PropiedadesDeInversionMedidasAlModeloDeCosto?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.PropiedadesDeInversionMedidasAlModeloDeCosto.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5299Deterioros"]?.PropiedadesDeInversionMedidasAlModeloDeCosto?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - Gastos de distribución y ventas - Depreciaciones, amortizaciones y deterioros - Deterioro del valor de los activos - Activos no corrientes mantenidos...
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.ActivosNoCorrientesMantenidosParaLaVentaDistribuirALosPropietarios.ValorContable =
+                renContent?.Renglon64?.["5299Deterioros"]?.ActivosNoCorrientesMantenidosParaLaVentaDistribuirALosPropietarios?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.ActivosNoCorrientesMantenidosParaLaVentaDistribuirALosPropietarios.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5299Deterioros"]?.ActivosNoCorrientesMantenidosParaLaVentaDistribuirALosPropietarios?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.ActivosNoCorrientesMantenidosParaLaVentaDistribuirALosPropietarios.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5299Deterioros"]?.ActivosNoCorrientesMantenidosParaLaVentaDistribuirALosPropietarios?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - Gastos de distribución y ventas - Depreciaciones, amortizaciones y deterioros - Deterioro del valor de los activos - Bienes de arte y cultura medidos al modelo de costo
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.BienesDeArteYCulturaMedidosAlModeloDeCosto.ValorContable =
+                renContent?.Renglon64?.["5299Deterioros"]?.BienesDeArteYCulturaMedidosAlModeloDeCosto?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.BienesDeArteYCulturaMedidosAlModeloDeCosto.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5299Deterioros"]?.BienesDeArteYCulturaMedidosAlModeloDeCosto?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.BienesDeArteYCulturaMedidosAlModeloDeCosto.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5299Deterioros"]?.BienesDeArteYCulturaMedidosAlModeloDeCosto?.AjustesParaLlegarASaldosFiscales1 || 0;
+            
+            //Gastos - Gastos de distribución y ventas - Depreciaciones, amortizaciones y deterioros - Deterioro del valor de los activos - Activos biológicos medidos al modelo de costo
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.ActivosBiologicosMedidosAlModeloDeCosto.ValorContable =
+                renContent?.Renglon64?.["5299Deterioros"]?.ActivosBiologicosMedidosAlModeloDeCosto?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.ActivosBiologicosMedidosAlModeloDeCosto.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5299Deterioros"]?.ActivosBiologicosMedidosAlModeloDeCosto?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.ActivosBiologicosMedidosAlModeloDeCosto.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5299Deterioros"]?.ActivosBiologicosMedidosAlModeloDeCosto?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - Gastos de distribución y ventas - Depreciaciones, amortizaciones y deterioros - Deterioro del valor de los activos - Activos financieros 
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.ActivosFinancierosDistintosACarteraDeCreditoYOperacionesDeLeasing.ValorContable =
+                renContent?.Renglon64?.["5299Deterioros"]?.ActivosFinancierosDiferentesACarteraDeCredito?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.ActivosFinancierosDistintosACarteraDeCreditoYOperacionesDeLeasing.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5299Deterioros"]?.ActivosFinancierosDiferentesACarteraDeCredito?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.ActivosFinancierosDistintosACarteraDeCreditoYOperacionesDeLeasing.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5299Deterioros"]?.ActivosFinancierosDiferentesACarteraDeCredito?.AjustesParaLlegarASaldosFiscales1 || 0;
+            
+            //Gastos - Gastos de distribución y ventas - Depreciaciones, amortizaciones y deterioros - Deterioro del valor de los activos - Cartera de crédito y operaciones de leasing
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.CarteraDeCreditoYOperacionesDeLeasing.ValorContable =
+                renContent?.Renglon64?.["5299Deterioros"]?.CarteraDeCreditoYOperacionesDeLeasing?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.CarteraDeCreditoYOperacionesDeLeasing.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5299Deterioros"]?.CarteraDeCreditoYOperacionesDeLeasing?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.CarteraDeCreditoYOperacionesDeLeasing.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5299Deterioros"]?.CarteraDeCreditoYOperacionesDeLeasing?.AjustesParaLlegarASaldosFiscales1 || 0;
+            
+            //Gastos - Gastos de distribución y ventas - Depreciaciones, amortizaciones y deterioros - Deterioro del valor de los activos - Otras inversiones medidas al costo o el método de la participación
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.OtrasInversionesMedidasAlCostoOPorElMetodoDeLaParticipacion.ValorContable =
+                renContent?.Renglon64?.["5299Deterioros"]?.OtrasInversionesMedidasAlCostoOPorElMetodoDeLaParticipacion?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.OtrasInversionesMedidasAlCostoOPorElMetodoDeLaParticipacion.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5299Deterioros"]?.OtrasInversionesMedidasAlCostoOPorElMetodoDeLaParticipacion?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.OtrasInversionesMedidasAlCostoOPorElMetodoDeLaParticipacion.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5299Deterioros"]?.OtrasInversionesMedidasAlCostoOPorElMetodoDeLaParticipacion?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - Gastos de distribución y ventas - Depreciaciones, amortizaciones y deterioros - Deterioro del valor de los activos - Derechos de uso en arrendamientos operativos (NIIF 16)
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DerechosDeUsoEnArrendamientosOperativosNIIF16.ValorContable =
+                renContent?.Renglon64?.["5299Deterioros"]?.DerechosDeUsoEnArrendamientosOperativos?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DerechosDeUsoEnArrendamientosOperativosNIIF16.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5299Deterioros"]?.DerechosDeUsoEnArrendamientosOperativos?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DerechosDeUsoEnArrendamientosOperativosNIIF16.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5299Deterioros"]?.DerechosDeUsoEnArrendamientosOperativos?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - Gastos de distribución y ventas - Depreciaciones, amortizaciones y deterioros - Deterioro del valor de los activos - Otros deterioros
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.OtrosDeterioros.ValorContable =
+                renContent?.Renglon64?.["5299Deterioros"]?.OtrosDeteriors?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.OtrosDeterioros.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5299Deterioros"]?.OtrosDeteriors?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.OtrosDeterioros.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["5299Deterioros"]?.OtrosDeteriors?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - Gastos financieros - Intereses  devengados - sector financiero
+
+            renContent.Gastos.GastosFinancieros.InteresesDevengadosSectorFinanciero.ValorContable =
+                renContent?.Renglon65?.["5305"]?.IntDevSecFin?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosFinancieros.InteresesDevengadosSectorFinanciero.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon65?.["5305"]?.IntDevSecFin?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosFinancieros.InteresesDevengadosSectorFinanciero.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon65?.["5305"]?.IntDevSecFin?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - Gastos financieros - Intereses devengados por préstamos de terceros
+
+            renContent.Gastos.GastosFinancieros.InteresesDevengadosPorPrestamosDeDistintoAlSectorFinanciero.ValorContable =
+                renContent?.Renglon65?.["5305"]?.IntDevPrestTer?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosFinancieros.InteresesDevengadosPorPrestamosDeDistintoAlSectorFinanciero.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon65?.["5305"]?.IntDevPrestTer?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosFinancieros.InteresesDevengadosPorPrestamosDeDistintoAlSectorFinanciero.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon65?.["5305"]?.IntDevPrestTer?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - Gastos financieros - Por instrumentos financieros medidos a costo amortizado distinto a préstamos
+
+            renContent.Gastos.GastosFinancieros.PorInstrumentosFinancierosMedidosACostoAmortizadoDistintoAPrestamos.ValorContable =
+                renContent?.Renglon65?.["5305"]?.InstFin?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Gastos - Gastos financieros - Costos de transacción
+
+            renContent.Gastos.GastosFinancieros.CostosDeTransaccionComisionesBancariasTasasEntreOtros.ValorContable =
+                renContent?.Renglon65?.["5305"]?.CstTrans?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosFinancieros.CostosDeTransaccionComisionesBancariasTasasEntreOtros.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon65?.["5305"]?.CstTrans?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosFinancieros.CostosDeTransaccionComisionesBancariasTasasEntreOtros.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon65?.["5305"]?.CstTrans?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - Gastos financieros - Diferencia en cambio
+
+            renContent.Gastos.GastosFinancieros.DiferenciaEnCambio.ValorContable =
+                renContent?.Renglon65?.["5305"]?.DifCamb?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosFinancieros.DiferenciaEnCambio.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon65?.["5305"]?.DifCamb?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosFinancieros.DiferenciaEnCambio.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon65?.["5305"]?.DifCamb?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - Gastos financieros - Intereses implícitos (transacciones de financiación)
+
+            renContent.Gastos.GastosFinancieros.InteresesImplicitosTransaccionesDeFinanciacion.ValorContable =
+                renContent?.Renglon65?.["5305"]?.IntImpl?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Gastos - Gastos financieros - Actualización de provisiones reconocidas a valor presente
+
+            renContent.Gastos.GastosFinancieros.ActualizacionDeProvisionesReconocidasAValorPresente.ValorContable =
+                renContent?.Renglon65?.["5305"]?.ActProvRecValPres?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Gastos - Gastos financieros - Intereses por acciones preferenciales
+
+            renContent.Gastos.GastosFinancieros.InteresesPorAccionesPreferenciales.ValorContable =
+                renContent?.Renglon65?.["5305"]?.IntAccPref?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.GastosFinancieros.InteresesPorAccionesPreferenciales.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon65?.["5305"]?.IntAccPref?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.GastosFinancieros.InteresesPorAccionesPreferenciales.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon65?.["5305"]?.IntAccPref?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+
+            //Gastos - Gastos financieros - Otros gastos financieros reconocidos como gasto en el estado de resultados
+
+            renContent.Gastos.GastosFinancieros.OtrosGastosFinancierosReconocidosComoGastoEnElEstadoDeResultados.ValorContable =
+                (renContent?.Renglon65?.["5305"]?.Otro?.SaldosContablesADiciembre31Parciales || 0) +
+                (renContent?.Renglon65?.["5305"]?.IntDIANSegSoc?.SaldosContablesADiciembre31Parciales || 0);
+
+            renContent.Gastos.GastosFinancieros.OtrosGastosFinancierosReconocidosComoGastoEnElEstadoDeResultados.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                (renContent?.Renglon65?.["5305"]?.Otro?.AjustesParaLlegarASaldosFiscales3 || 0) +
+                (renContent?.Renglon65?.["5305"]?.IntDIANSegSoc?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            renContent.Gastos.GastosFinancieros.OtrosGastosFinancierosReconocidosComoGastoEnElEstadoDeResultados.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                (renContent?.Renglon65?.["5305"]?.Otro?.AjustesParaLlegarASaldosFiscales1 || 0) +
+                (renContent?.Renglon65?.["5305"]?.IntDIANSegSoc?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            //Gastos - Pérdidas por inversiones en subsidiarias, asociadas y/o negocios conjuntos - Pérdidas por el método de participación
+
+            renContent.Gastos.PerdidasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos.PerdidasPorElMetodoDeParticipacion.ValorContable =
+                renContent?.Renglon66?.["5313PerdidaPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos"]?.PerdidasPorElMetodoDeParticipacion?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Gastos - Pérdidas por inversiones en subsidiarias, asociadas y/o negocios conjuntos - Pérdidas por mediciones a valor razonable
+
+            renContent.Gastos.PerdidasPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos.PerdidasPorMedicionesAValorRazonable.ValorContable =
+                renContent?.Renglon66?.["5313PerdidaPorInversionesEnSubsidiariasAsociadasYONegociosConjuntos"]?.PerdidasPorMedicionAValorRazonable?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Gastos - Pérdidas por mediciones a valor razonable - Activos biológicos
+
+            renContent.Gastos.PerdidasPorMedicionesAValorRazonable.ActivosBiologicos.ValorContable =
+                renContent?.Renglon66?.["5314PerdidasPorMedicionesAValorRazonable"]?.DeActivosBiologicos?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Gastos - Pérdidas por mediciones a valor razonable - Propiedades de inversión
+
+            renContent.Gastos.PerdidasPorMedicionesAValorRazonable.PropiedadesDeInversion.ValorContable =
+                renContent?.Renglon66?.["5314PerdidasPorMedicionesAValorRazonable"]?.DePropiedadesDeInversion?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Gastos - Pérdidas por mediciones a valor razonable - Instrumentos financieros
+
+            renContent.Gastos.PerdidasPorMedicionesAValorRazonable.InstrumentosFinancieros.ValorContable =
+                renContent?.Renglon66?.["5314PerdidasPorMedicionesAValorRazonable"]?.DeInstrumentosFinancieros?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Gastos - Pérdidas por mediciones a valor razonable - Instrumentos derivados
+
+            renContent.Gastos.PerdidasPorMedicionesAValorRazonable.InstrumentosDerivados.ValorContable =
+                renContent?.Renglon66?.["5314PerdidasPorMedicionesAValorRazonable"]?.DeInstrumentosDerivados?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Gastos - Pérdidas por mediciones a valor razonable - Otras 
+
+            renContent.Gastos.PerdidasPorMedicionesAValorRazonable.Otras.ValorContable =
+                renContent?.Renglon66?.["5314PerdidasPorMedicionesAValorRazonable"]?.DeOtrasActivos?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Gastos - Pérdida en la venta o enajenación de activos fijos - Propiedades, planta y equipo
+
+            renContent.Gastos.PerdidaEnLaVentaOEnajenacionDeActivosFijos.PropiedadesPlantaYEquipo.ValorContable =
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios?.DePropiedadesPlantaYEquipo?.SaldosContablesADiciembre31Parciales || 0) +
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMasDeDosAnios?.DePropiedadesPlantaYEquipo?.SaldosContablesADiciembre31Parciales || 0);
+
+            renContent.Gastos.PerdidaEnLaVentaOEnajenacionDeActivosFijos.PropiedadesPlantaYEquipo.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios?.DePropiedadesPlantaYEquipo?.AjustesParaLlegarASaldosFiscales3 || 0) +
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMasDeDosAnios?.DePropiedadesPlantaYEquipo?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            renContent.Gastos.PerdidaEnLaVentaOEnajenacionDeActivosFijos.PropiedadesPlantaYEquipo.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios?.DePropiedadesPlantaYEquipo?.AjustesParaLlegarASaldosFiscales1 || 0) +
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMasDeDosAnios?.DePropiedadesPlantaYEquipo?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            //Gastos - Pérdida en la venta o enajenación de activos fijos - propiedades de inversión
+
+            renContent.Gastos.PerdidaEnLaVentaOEnajenacionDeActivosFijos.PropiedadesDeInversion.ValorContable =
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios?.DePropiedadesDeInversion?.SaldosContablesADiciembre31Parciales || 0) +
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMasDeDosAnios?.DePropiedadesDeInversion?.SaldosContablesADiciembre31Parciales || 0);
+
+            renContent.Gastos.PerdidaEnLaVentaOEnajenacionDeActivosFijos.PropiedadesDeInversion.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios?.DePropiedadesDeInversion?.AjustesParaLlegarASaldosFiscales3 || 0) +
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMasDeDosAnios?.DePropiedadesDeInversion?.AjustesParaLlegarASaldosFiscales3 || 0);
+            
+            renContent.Gastos.PerdidaEnLaVentaOEnajenacionDeActivosFijos.PropiedadesDeInversion.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios?.DePropiedadesDeInversion?.AjustesParaLlegarASaldosFiscales1 || 0) +
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMasDeDosAnios?.DePropiedadesDeInversion?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            //Gastos - Pérdida en la venta o enajenación de activos fijos - Activos no corrientes mantenidos para la venta / entregar a propietarios
+
+            renContent.Gastos.PerdidaEnLaVentaOEnajenacionDeActivosFijos.ActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios.ValorContable =
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios?.DeActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios?.SaldosContablesADiciembre31Parciales || 0) +
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMasDeDosAnios?.DeActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios?.SaldosContablesADiciembre31Parciales || 0);
+
+            renContent.Gastos.PerdidaEnLaVentaOEnajenacionDeActivosFijos.ActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios?.DeActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios?.AjustesParaLlegarASaldosFiscales3 || 0) +
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMasDeDosAnios?.DeActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios?.AjustesParaLlegarASaldosFiscales3 || 0);
+            
+            renContent.Gastos.PerdidaEnLaVentaOEnajenacionDeActivosFijos.ActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios?.DeActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios?.AjustesParaLlegarASaldosFiscales1 || 0) +
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMasDeDosAnios?.DeActivosNoCorrientesMantenidosParaLaVentaEntregarAPropietarios?.AjustesParaLlegarASaldosFiscales1 || 0);
+            
+            //Gastos - Pérdida en la venta o enajenación de activos fijos - Valoración y venta de inversiones fondo de liquidez y títulos participativos, entre otros
+            
+            renContent.Gastos.PerdidaEnLaVentaOEnajenacionDeActivosFijos.ValoracionYVentaDeInversionesFondoDeLiquidezYTitulosParticipativos.ValorContable =
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios?.DeValoracionYVentaDeInversionesFondoDeLiquidezYTitulosParticipativos?.SaldosContablesADiciembre31Parciales || 0) +
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMasDeDosAnios?.DeValoracionYVentaDeInversionesFondoDeLiquidezYTitulosParticipativos?.SaldosContablesADiciembre31Parciales || 0);
+
+            renContent.Gastos.PerdidaEnLaVentaOEnajenacionDeActivosFijos.ValoracionYVentaDeInversionesFondoDeLiquidezYTitulosParticipativos.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios?.DeValoracionYVentaDeInversionesFondoDeLiquidezYTitulosParticipativos?.AjustesParaLlegarASaldosFiscales3 || 0) +
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMasDeDosAnios?.DeValoracionYVentaDeInversionesFondoDeLiquidezYTitulosParticipativos?.AjustesParaLlegarASaldosFiscales3 || 0);
+            
+            renContent.Gastos.PerdidaEnLaVentaOEnajenacionDeActivosFijos.ValoracionYVentaDeInversionesFondoDeLiquidezYTitulosParticipativos.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios?.DeValoracionYVentaDeInversionesFondoDeLiquidezYTitulosParticipativos?.AjustesParaLlegarASaldosFiscales1 || 0) +
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMasDeDosAnios?.DeValoracionYVentaDeInversionesFondoDeLiquidezYTitulosParticipativos?.AjustesParaLlegarASaldosFiscales1 || 0);
+        
+            //Gastos - Pérdida en la venta o enajenación de activos fijos - Por disposición de otros instrumentos financieros
+
+            renContent.Gastos.PerdidaEnLaVentaOEnajenacionDeActivosFijos.PorDisposicionDeOtrosInstrumentosFinancieros.ValorContable =
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios?.DePorDisposicionDeOtrosInstrumentosFinancieros?.SaldosContablesADiciembre31Parciales || 0) +
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMasDeDosAnios?.DePorDisposicionDeOtrosInstrumentosFinancieros?.SaldosContablesADiciembre31Parciales || 0);
+
+            renContent.Gastos.PerdidaEnLaVentaOEnajenacionDeActivosFijos.PorDisposicionDeOtrosInstrumentosFinancieros.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios?.DePorDisposicionDeOtrosInstrumentosFinancieros?.AjustesParaLlegarASaldosFiscales3 || 0) +
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMasDeDosAnios?.DePorDisposicionDeOtrosInstrumentosFinancieros?.AjustesParaLlegarASaldosFiscales3 || 0);
+            
+            renContent.Gastos.PerdidaEnLaVentaOEnajenacionDeActivosFijos.PorDisposicionDeOtrosInstrumentosFinancieros.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios?.DePorDisposicionDeOtrosInstrumentosFinancieros?.AjustesParaLlegarASaldosFiscales1 || 0) +
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMasDeDosAnios?.DePorDisposicionDeOtrosInstrumentosFinancieros?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            //Gastos - Pérdida en la venta o enajenación de activos fijos - Activos Intangibles
+
+            renContent.Gastos.PerdidaEnLaVentaOEnajenacionDeActivosFijos.ActivosIntangibles.ValorContable =
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios?.DeActivosIntangibles?.SaldosContablesADiciembre31Parciales || 0) +
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMasDeDosAnios?.DeActivosIntangibles?.SaldosContablesADiciembre31Parciales || 0);
+            
+            renContent.Gastos.PerdidaEnLaVentaOEnajenacionDeActivosFijos.ActivosIntangibles.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios?.DeActivosIntangibles?.AjustesParaLlegarASaldosFiscales3 || 0) +
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMasDeDosAnios?.DeActivosIntangibles?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            renContent.Gastos.PerdidaEnLaVentaOEnajenacionDeActivosFijos.ActivosIntangibles.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios?.DeActivosIntangibles?.AjustesParaLlegarASaldosFiscales1 || 0) +
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMasDeDosAnios?.DeActivosIntangibles?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            //Gastos - Pérdida en la venta o enajenación de activos fijos - Descuento en operaciones de factoring
+
+            renContent.Gastos.PerdidaEnLaVentaOEnajenacionDeActivosFijos.DescuentoEnOperacionesDeFactoring.ValorContable =
+                renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMasDeDosAnios?.DescuentoEnOperacionesDeFactoring?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.PerdidaEnLaVentaOEnajenacionDeActivosFijos.DescuentoEnOperacionesDeFactoring.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMasDeDosAnios?.DescuentoEnOperacionesDeFactoring?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.PerdidaEnLaVentaOEnajenacionDeActivosFijos.DescuentoEnOperacionesDeFactoring.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMasDeDosAnios?.DescuentoEnOperacionesDeFactoring?.AjustesParaLlegarASaldosFiscales1 || 0;
+    
+            //Gastos - Pérdida en la venta o enajenación de activos fijos - Inversiones en acciones y otras participaciones
+
+            renContent.Gastos.PerdidaEnLaVentaOEnajenacionDeActivosFijos.InversionesEnAccionesYOtrasParticipaciones.ValorContable =
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios?.DeInversionesEnAccionesYOtrasParticipaciones?.SaldosContablesADiciembre31Parciales || 0) +
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMasDeDosAnios?.DeInversionesEnAccionesYOtrasParticipaciones?.SaldosContablesADiciembre31Parciales || 0);
+
+            renContent.Gastos.PerdidaEnLaVentaOEnajenacionDeActivosFijos.InversionesEnAccionesYOtrasParticipaciones.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios?.DeInversionesEnAccionesYOtrasParticipaciones?.AjustesParaLlegarASaldosFiscales3 || 0) +
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMasDeDosAnios?.DeInversionesEnAccionesYOtrasParticipaciones?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            renContent.Gastos.PerdidaEnLaVentaOEnajenacionDeActivosFijos.InversionesEnAccionesYOtrasParticipaciones.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios?.DeInversionesEnAccionesYOtrasParticipaciones?.AjustesParaLlegarASaldosFiscales1 || 0) +
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMasDeDosAnios?.DeInversionesEnAccionesYOtrasParticipaciones?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            //Gastos - Pérdida en la venta o enajenación de activos fijos - Otros
+
+            renContent.Gastos.PerdidaEnLaVentaOEnajenacionDeActivosFijos.Otros.ValorContable =
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios?.DeOtrosActivos?.SaldosContablesADiciembre31Parciales || 0) +
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMasDeDosAnios?.DeOtrosActivos?.SaldosContablesADiciembre31Parciales || 0);
+
+            renContent.Gastos.PerdidaEnLaVentaOEnajenacionDeActivosFijos.Otros.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios?.DeOtrosActivos?.AjustesParaLlegarASaldosFiscales3 || 0) +
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMasDeDosAnios?.DeOtrosActivos?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            renContent.Gastos.PerdidaEnLaVentaOEnajenacionDeActivosFijos.Otros.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios?.DeOtrosActivos?.AjustesParaLlegarASaldosFiscales1 || 0) +
+                (renContent?.Renglon66?.["5310PerdidaEnVentaYRetiroDeBienesPoseidosMenosDeDosAnios"]?.PerdidaEnVentaYRetiroDeBienesPoseidosMasDeDosAnios?.DeOtrosActivos?.AjustesParaLlegarASaldosFiscales1 || 0);
+            
+            //Gastos - Gastos por provisiones (pasivos de monto o fecha inciertos) - Garantías
+
+            renContent.Gastos.GastosPorProvisionesPasivosDeMontoOFechaInciertos.Garantias.ValorContable =
+                renContent?.Renglon66?.["5315GastosPorProvisionesPasivosDeMontoOFechaInciertos"]?.Garantias?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Gastos - Gastos por provisiones (pasivos de monto o fecha inciertos) - Contratos onerosos
+
+            renContent.Gastos.GastosPorProvisionesPasivosDeMontoOFechaInciertos.ContratosOnerosos.ValorContable =
+                renContent?.Renglon66?.["5315GastosPorProvisionesPasivosDeMontoOFechaInciertos"]?.ContratosOnerosos?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Gastos - Gastos por provisiones (pasivos de monto o fecha inciertos) - Litigios
+
+            renContent.Gastos.GastosPorProvisionesPasivosDeMontoOFechaInciertos.Litigios.ValorContable =
+                renContent?.Renglon66?.["5315GastosPorProvisionesPasivosDeMontoOFechaInciertos"]?.Litigios?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Gastos - Gastos por provisiones (pasivos de monto o fecha inciertos) - Reembolsos a clientes
+
+            renContent.Gastos.GastosPorProvisionesPasivosDeMontoOFechaInciertos.ReembolsosAClientes.ValorContable =
+                renContent?.Renglon66?.["5315GastosPorProvisionesPasivosDeMontoOFechaInciertos"]?.ReembolsosAClientes?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Gastos - Gastos por provisiones (pasivos de monto o fecha inciertos) - Reestructuraciones de negocios
+
+            renContent.Gastos.GastosPorProvisionesPasivosDeMontoOFechaInciertos.ReestructuracionesDeNegocios.ValorContable =
+                renContent?.Renglon66?.["5315GastosPorProvisionesPasivosDeMontoOFechaInciertos"]?.ReestNeg?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Gastos - Gastos por provisiones (pasivos de monto o fecha inciertos) - Pasivos contingentes asumidos en una combinación de negocios
+
+            renContent.Gastos.GastosPorProvisionesPasivosDeMontoOFechaInciertos.PasivosContingentesAsumidosEnUnaCombinacionDeNegocios.ValorContable =
+                renContent?.Renglon66?.["5315GastosPorProvisionesPasivosDeMontoOFechaInciertos"]?.PasivosContingentesAsumidosEnUnaCombinacionDeNegocios?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Gastos - Gastos por provisiones (pasivos de monto o fecha inciertos) - Otros
+
+            renContent.Gastos.GastosPorProvisionesPasivosDeMontoOFechaInciertos.Otros.ValorContable =
+                renContent?.Renglon66?.["5315GastosPorProvisionesPasivosDeMontoOFechaInciertos"]?.Otros?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Gastos - Otros gastos - Transferencias, subvenciones y ayudas gubernamentales
+
+            renContent.Gastos.OtrosGastos.TransferenciasSubvencionesYAyudasGubernamentales.ValorContable =
+                renContent?.Renglon66?.["5395GastosDiversos"]?.TransferenciasSubvencionesYAyudasGubernamentales?.SaldosContablesADiciembre31Parciales || 0;
+
+            renContent.Gastos.OtrosGastos.TransferenciasSubvencionesYAyudasGubernamentales.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon66?.["5395GastosDiversos"]?.TransferenciasSubvencionesYAyudasGubernamentales?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.OtrosGastos.TransferenciasSubvencionesYAyudasGubernamentales.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon66?.["5395GastosDiversos"]?.TransferenciasSubvencionesYAyudasGubernamentales?.AjustesParaLlegarASaldosFiscales1 || 0;
+            
+            //Gastos - Otros gastos - Donaciones, aportaciones y similares
+
+            renContent.Gastos.OtrosGastos.DonacionesAportacionesYSimilares.ValorContable =
+                renContent?.Renglon66?.["5395GastosDiversos"]?.Donaciones?.SaldosContablesADiciembre31Parciales || 0;
+
+            //Gastos - Otros gastos - Contribuciones a educación de los empleados (art.107-2 del ET)
+
+            renContent.Gastos.OtrosGastos.ContribucionesAEducacionDeLosEmpleadosArt1072DelET.ValorContable =
+                renContent?.Renglon64?.["521501IVAEnLaAdquisicionOImportacionDeBienesDeCapitalMedianteLeasing"]?.SaldosContablesADiciembre31Parciales || 0;
+            
+            renContent.Gastos.OtrosGastos.ContribucionesAEducacionDeLosEmpleadosArt1072DelET.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["521501IVAEnLaAdquisicionOImportacionDeBienesDeCapitalMedianteLeasing"]?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            renContent.Gastos.OtrosGastos.ContribucionesAEducacionDeLosEmpleadosArt1072DelET.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                renContent?.Renglon64?.["521501IVAEnLaAdquisicionOImportacionDeBienesDeCapitalMedianteLeasing"]?.AjustesParaLlegarASaldosFiscales1 || 0;
+
+            //Gastos - Otros gastos - 
+            
+            renContent.Gastos.OtrosGastos.Otros.ValorContable =
+                (renContent?.Renglon66?.["5316GastosExtraordinarios"]?.SaldosContablesADiciembre31Parciales || 0) +
+                (renContent?.Renglon66?.["5395GastosDiversos"]?.Otros?.SaldosContablesADiciembre31Parciales || 0);
+
+            renContent.Gastos.OtrosGastos.Otros.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+                (renContent?.Renglon66?.["5316GastosExtraordinarios"]?.AjustesParaLlegarASaldosFiscales3 || 0) +
+                (renContent?.Renglon66?.["5395GastosDiversos"]?.Otros?.AjustesParaLlegarASaldosFiscales3 || 0);
+
+            renContent.Gastos.OtrosGastos.Otros.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+                (renContent?.Renglon66?.["5316GastosExtraordinarios"]?.AjustesParaLlegarASaldosFiscales1 || 0) +
+                (renContent?.Renglon66?.["5395GastosDiversos"]?.Otros?.AjustesParaLlegarASaldosFiscales1 || 0);
+
+            //INFORMATIVO-CLASIFICACIÓN DE DIFERENCIAS - Diferencias permanentes que disminuyen la Renta Liquida (-) - Ingresos no constitutivos de renta ni ganancia ocasional
+
+            renContent.InformativoClasificacionDiferencias.DiferenciasPermanentesQueDisminuyenLaRentaLiquida.IngresosNoConstitutivosRenta.ValorFiscalAlQueTieneDerecho =
+                renContent?.Gastos?.DeAdministracion?.DepreciacionesAmortizacionesDeterioros?.OtrasDepreciaciones?.DelCosto?.ValorFiscal || 0;
+
+            //AJUSTES PARA LIQUIDACIÓN - Menos: Valor inversiones realizadas en el periodo
+
+            renContent.AjustesParaLiquidacion.MenosValorInversionesRealizadasEnElPeriodo =
+                renContent?.Renglon68?.SaldosFiscalesADiciembre31Totales || 0;
+
+            //AJUSTES PARA LIQUIDACIÓN - Más: Valor inversiones liquidadas en el periodo
+
+            renContent.AjustesParaLiquidacion.MasValorInversionesLiquidasEnElPeriodo =
+                renContent?.Renglon69?.SaldosFiscalesADiciembre31Totales || 0;
+
+            //Renta líquida por recuperación de deducciones
+            renContent.RentaLiquidaPorRecuperacionDeDeducciones.ValorFiscal =
+                renContent?.Renglon70?.TotalRentaPorRecuperacionDeDeduccionesSaldosFiscalesADiciembre31 || 0;
+
+            //Compensaciones - De pérdidas fiscales
+
+            renContent.Compensaciones.DePerdidasFiscales.ValorFiscal =
+                renContent?.Renglon74?.CompenPerFisc?.SaldosFiscalesADiciembre31Parciales || 0;
+
+            //Compensaciones - Del exceso de renta presuntiva sobre renta ordinaria
+
+            renContent.Compensaciones.DelExcesoDeRentaPresuntivaSobreRentaOrdinaria.ValorFiscal = 
+                renContent?.Renglon74?.CompensacionesDeExcesosDeRentaPresuntiva?.SubRentPres?.SaldosFiscalesADiciembre31Parciales || 0;
+
+            //Renta Exenta
+
+            renContent.RentaExenta.ValorFiscal =
+                renContent?.Renglon77?.TotalRentasExentasSaldosFiscalesADiciembre31 || 0;
+
+            //Rentas gravables (renta líquida) - Pérdidas compensadas modificadas por Liquidación Oficial
+
+            renContent.RentasGravablesRentaLiquida.PerdidasCompensadasModificadasPorLiquidacionOficial.ValorFiscal =
+                renContent?.Renglon78?.RentLiq?.SaldosFiscalesADiciembre31Parciales || 0;
+
+            //Rentas gravables (renta líquida) - Pasivos inexistentes
+            
+            renContent.RentasGravablesRentaLiquida.PasivosInexistentes.ValorFiscal =
+                renContent?.Renglon78?.PasivNoReal?.SaldosFiscalesADiciembre31Parciales || 0;
+
+            //Rentas gravables (renta líquida) - Omisión de activos
+
+            renContent.RentasGravablesRentaLiquida.OmisionDeActivos.ValorFiscal =
+                renContent?.Renglon78?.ActOmi?.SaldosFiscalesADiciembre31Parciales || 0;
+
+            //Rentas gravables (renta líquida) - Comparación patrimonial
+
+            renContent.RentasGravablesRentaLiquida.ComparacionPatrimonial.ValorFiscal =
+                renContent?.Renglon78?.RentComp?.SaldosFiscalesADiciembre31Parciales || 0;
+
+            //Impuesto sobre la renta líquida gravable
+
+            renContent.ImpuestoSobreLaRentaLiquidaGravable.ValorFiscal =
+                renContent?.Renglon92?.Total92SaldosFiscalesADiciembre31 || 0;
+
+            //Ganancias Ocasionales gravables
+            renContent.GananciasOcasionalesGravables.TotalGananciasOcasionalesGravables.ValorFiscal =
+                renContent?.Renglon85?.TotalGananciasOcasionalesGravablesSaldosFiscalesADiciembre31 || 0;
+
+            //Ganancias Ocasionales gravables - Ingresos por ganancia ocasional en venta de activos fijos
+
+            renContent.GananciasOcasionalesGravables.IngresosPorGananciaOcasionalEnVentaDeActivosFijos.ValorFiscal =
+                renContent?.Renglon80?.["429543PremiosRifasYLoterias"]?.PrecioDeVentaActivosFijosPoseidosMasDeDosAnios?.AjustesParaLlegarASaldosFiscales3 || 0;
+
+            //Ganancias Ocasionales gravables - Otros ingresos por ganancia ocasional
+
+            //renContent.GananciasOcasionalesGravables.OtrosIngresosPorGananciaOcasional.ValorFiscal =
+                //(renContent?.Renglon80?.TotalesSaldosFiscalesADiciembre31 || 0) -
+                //(renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.InventarioInicialDeTrabajoEnProceso?. || 0); 
+
+            //Ganancias Ocasionales gravables - Costos por ganancia ocasional en venta de activos fijos
+
+            renContent.GananciasOcasionalesGravables.CostosPorGananciaOcasionalEnVentaDeActivosFijos.ValorFiscal =
+                renContent?.Renglon83?.CostoFiscalDeActivoFijoOBiologicoVendidoYPoseidoPorMasDeDosAños?.SaldosFiscalesADiciembre31Parciales || 0;
+
+            //Ganancias Ocasionales gravables - Otras ganancias ocasionales no gravadas y exentas
+
+            renContent.GananciasOcasionalesGravables.OtrasGananciasOcasionalesNoGravadasYExentas.ValorFiscal =
+                renContent?.Renglon84?.TotalGananciasOcasionalesNoGravadasYExentasSaldosFiscalesADiciembre31 || 0;
+
+
+            //Ganancias Ocasionales gravables - Rentas deudores régimen Ley 1116 de 2006, Decretos 560 y 772
+
+            renContent.GananciasOcasionalesGravables.RentasDeudoresRegimenLey1116De2006Decretos560Y772De2020.ValorFiscal =
+                renContent?.Renglon81?.TotalRentaDeudoresSaldosFiscalesADiciembre31 || 0;
+
+            //Ganancias Ocasionales gravables - Utilización pérdidas fiscales acumuladas (Inc. 2, Art 15 Decreto
+
+            renContent.GananciasOcasionalesGravables.UtilizacionPerdidasFiscalesAcumuladasInc2Art15Decreto772De2020.ValorFiscal =
+                renContent?.Renglon82?.TotalUtilizacionPerdidasFiscalesAcumuladasSaldosFiscalesADiciembre31 || 0;
+
+            //Ganancias Ocasionales gravables - Impuesto de ganancia ocasional
+
+            renContent.GananciasOcasionalesGravables.ImpuestoDeGananciaOcasional.ValorFiscal =
+                renContent?.Renglon95ImpuestoDeGananciasOcasionales?.TotalImpuestoDeGananciasOcasionalesSaldosFiscalesADiciembre31 || 0;
+
+            //Descuentos tributarios
+
+            renContent.DescuentosTributarios.ValorFiscal =
+                renContent?.Renglon93?.TotalDescuentosTributariosSaldosFiscalesADiciembre31 || 0;
+
+            //Descuentos por impuestos pagados en el exterior por ganancias ocasionales
+
+            renContent.DescuentosPorImpuestosPagadosEnElExteriorPorGananciasOcasionales.ValorFiscal =
+                renContent?.Renglon96?.SaldosFiscalesADiciembre31Totales || 0;
+
+            //Valor inversión obras por impuestos hasta del 50% del valor del impuesto a cargo (Modalidad de pago 1)
+
+            renContent.ValorInversionObrasPorImpuestosHastaEl50PorcientoDelValorDelImpuestoACargoModalidadDePago1.ValorFiscal =
+                renContent?.Renglon98?.TotalSaldosFiscalesADiciembre31 || 0;
+
+            //Descuento efectivo inversión obras por impuestos (Modalidad de pago 2)
+
+            renContent.DescuentoEfectivoInversionObrasPorImpuestosModalidadDePago2.ValorFiscal =
+                renContent?.Renglon99?.TotalSaldosFiscalesADiciembre31 || 0;
+
+            //Anticipo renta liquidado año anterior
+            
+            renContent.AnticipoRentaLiquidadoAnioAnterior.ValorFiscal =
+                renContent?.Renglon101MenosAnticipoRentaLiquidadiGravableAnterior?.TotalesSaldosFiscalesADiciembre31 || 0;
+
+            //Anticipo sobretasa liquidado año gravable anterior
+
+            renContent.AnticipoSobretasaLiquidadoAnioGravableAnterior.ValorFiscal =
+                renContent?.Renglon107?.TotalSaldosFiscalesADiciembre31 || 0;
+
+            //Saldo a favor año gravable anterior sin solicitud de devolución o compensación - Otras retenciones - Por ventas
+
+            renContent.SaldoAFavorAnioGravableAnteriorSinSolicitudDeDevolucionOCompensacion.OtrasRetenciones.PorVentas.ValorFiscal =
+                renContent?.Renglon104?.PorVentas?.TotalPorVentasSaldosFiscalesADiciembre31 || 0;
+
+            //Saldo a favor año gravable anterior sin solicitud de devolución o compensación - Otras retenciones - Por servicios
+
+            renContent.SaldoAFavorAnioGravableAnteriorSinSolicitudDeDevolucionOCompensacion.OtrasRetenciones.PorServicios.ValorFiscal =
+                renContent?.Renglon104?.PorServicios?.TotalPorServiciosSaldosFiscalesADiciembre31 || 0;
+            //Saldo a favor año gravable anterior sin solicitud de devolución o compensación - Otras retenciones - Por honorarios y comisiones
+
+            renContent.SaldoAFavorAnioGravableAnteriorSinSolicitudDeDevolucionOCompensacion.OtrasRetenciones.PorHonorariosYComisiones.ValorFiscal =
+                renContent?.Renglon104?.PorHonorariosYComisiones?.TotalPorHonorariosYComisionesSaldosFiscalesADiciembre31 || 0;
+
+            //Saldo a favor año gravable anterior sin solicitud de devolución o compensación - Otras retenciones - Por rendimientos financieros
+
+            renContent.SaldoAFavorAnioGravableAnteriorSinSolicitudDeDevolucionOCompensacion.OtrasRetenciones.PorRendimientosFinancieros.ValorFiscal =
+                renContent?.Renglon104?.PorRendimientoFinanciero?.TotalPorRendimientoFinancieroSaldosFiscalesADiciembre31 || 0;
+
+            //Saldo a favor año gravable anterior sin solicitud de devolución o compensación - Otras retenciones - Por dividendos y participaciones
+
+            renContent.SaldoAFavorAnioGravableAnteriorSinSolicitudDeDevolucionOCompensacion.OtrasRetenciones.PorDividendosYParticipaciones.ValorFiscal =
+                renContent?.Renglon104?.PorDividendosYParticipaciones?.TotalPorDividendosYParticipacionesSaldosFiscalesADiciembre31 || 0;
+
+            //Saldo a favor año gravable anterior sin solicitud de devolución o compensación - Otras retenciones - Otras retenciones
+            //TODO: Verificar este campo
+
+            renContent.SaldoAFavorAnioGravableAnteriorSinSolicitudDeDevolucionOCompensacion.OtrasRetenciones.OtrasRetenciones.ValorFiscal =
+                (renContent?.Renglon104?.PorOtrosConceptosInteresesLoteriasYRifas?.TotalPorOtrosConceptosInteresesLoteriasYRifasSaldosFiscalesADiciembre31 || 0)
+
+
+            //Anticipo renta por el año gravable siguiente
+
+            renContent.AnticipoRentaPorElAnioGravableSiguiente.ValorFiscal =
+                renContent?.Renglon106?.TotalSaldosFiscalesADiciembre31 || 0;
+
+            //Anticipo sobretasa instituciones financieras año gravable anterior
+
+            renContent.AnticipoSobretasaInstitucionesFinancierasAnioGravableAnterior.ValorFiscal =
+                renContent?.Renglon107?.TotalSaldosFiscalesADiciembre31 || 0;
+
+            //Sobretasa instituciones financieras
+
+            renContent.SobretasaInstitucionesFinancieras.ValorFiscal =
+                renContent?.Renglon108?.TotalSaldosFiscalesADiciembre31 || 0;
+
+            //Anticipo sobretasa instituciones financieras año gravable siguiente
+
+            renContent.AnticipoSobretasaInstitucionesFinancierasAnioGravableSiguiente.ValorFiscal =
+                renContent?.Renglon109?.TotalSaldosFiscalesADiciembre31 || 0;
+
+            //Crédito fiscal para inversiones en proyectos de investigación, desarrollo tecnológico
+
+            renContent.CreditoFiscalParaInversionesEnProyectosDeInvestigacionDesarrolloTecnologicoEInnovacionOVinculacionDeCapitalHumanoDeAltoNivelArt2561DelETCreadoConArt168Ley1955MayoDe2019.ValorFiscal =
+                renContent?.Renglon100?.TotalSaldosFiscalesADiciembre31 || 0;
+
+            //Sanciones
+            renContent.Sanciones.ValorFiscal =
+                renContent?.Renglon111Sanciones?.TotalesSaldosFiscalesADiciembre31 || 0;
+
+            //DatosInformativosConcepto - OTROS DATOS INFORMATIVOS - Total costos y gastos de nómina
+
+            renContent.DatosInformativosConcepto.OtrosDatosInformativos.TotalCostosYGastosDeNomina.ValorContable =
+                renContent?.Renglon33?.TotalCostosYGastosDeNominaSaldosContablesADiciembre31 || 0;
+
+            renContent.DatosInformativosConcepto.OtrosDatosInformativos.TotalCostosYGastosDeNomina.ValorFiscal =
+                renContent?.Renglon33?.TotalCostosYGastosDeNominaSaldosFiscalesADiciembre31 || 0;
+
+            //DatosInformativosConcepto - OTROS DATOS INFORMATIVOS - Aportes al sistema de seguridad social
+
+            renContent.DatosInformativosConcepto.OtrosDatosInformativos.AportesAlSistemaDeSecuridadSocial.ValorContable =
+                renContent?.Renglon34?.TotalAportesAlSistemaDeSeguridadSocialSaldosContablesADiciembre31 || 0;
+
+            renContent.DatosInformativosConcepto.OtrosDatosInformativos.AportesAlSistemaDeSecuridadSocial.ValorFiscal =
+                renContent?.Renglon34?.TotalAportesAlSistemaDeSeguridadSocialSaldosFiscalesADiciembre31 || 0;
+
+            //DatosInformativosConcepto - OTROS DATOS INFORMATIVOS - Aportes al SENA, ICBF, cajas de compensación
+
+            renContent.DatosInformativosConcepto.OtrosDatosInformativos.AportesAlSENAICBFCajasDeCompensacion.ValorContable =
+                renContent?.Renglon35?.TotalAportesAlSENAICBFCajaCompensacionSaldosContablesADiciembre31 || 0;
+            
+            renContent.DatosInformativosConcepto.OtrosDatosInformativos.AportesAlSENAICBFCajasDeCompensacion.ValorFiscal =
+                renContent?.Renglon35?.TotalAportesAlSENAICBFCajaCompensacionSaldosFiscalesADiciembre31 || 0;
+
+        }   
+
 
 
         return rentaLiquida;
