@@ -2587,22 +2587,6 @@ export const DetalleRenglonesSchema = z.object({
             SaldosFiscalesADiciembre31Parciales: z.number()
           })
         }),
-        DepreciacionDeActivosBiologicos: z.object({
-          DelCosto: z.object({
-            SaldosContablesADiciembre31Parciales: z.number(),
-            AjustesParaLlegarASaldosFiscales1: z.number(),
-            AjustesParaLlegarASaldosFiscales2: z.string(),
-            AjustesParaLlegarASaldosFiscales3: z.number(),
-            SaldosFiscalesADiciembre31Parciales: z.number()
-          }),
-          DelAjusteAcumuladoPorRevaluacionesOReExpresiones: z.object({
-            SaldosContablesADiciembre31Parciales: z.number(),
-            AjustesParaLlegarASaldosFiscales1: z.number(),
-            AjustesParaLlegarASaldosFiscales2: z.string(),
-            AjustesParaLlegarASaldosFiscales3: z.number(),
-            SaldosFiscalesADiciembre31Parciales: z.number()
-          })
-        }),
         AmortizacionDeActivosIntangibles: z.object({
           DelCosto: z.object({
             SaldosContablesADiciembre31Parciales: z.number(),
