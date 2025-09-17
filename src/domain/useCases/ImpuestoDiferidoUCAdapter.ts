@@ -13,7 +13,10 @@ export class ImpuestoDiferidoUCAdapter implements FormsUCIntPort<FormImpuestoDif
         if (!formImpuestoDiferido) {
             this.errorFormatter.errorNotFound(`Formulario con stuID ${stuID} y roomID ${roomID} no se encontró.`);
         }
-        return formImpuestoDiferido;
+
+        const formImpuestoDiferidoCalculated = this.impuestoDiferidoGateway.calculateReference(stuID, roomID);
+
+        return formImpuestoDiferidoCalculated || formImpuestoDiferido;
     }
     async updateForm(stuID: string, roomID: string, impuestoDiferido: FormImpuestoDiferido): Promise<FormImpuestoDiferido> {
         return this.impuestoDiferidoGateway.updateForm(stuID, roomID, impuestoDiferido);

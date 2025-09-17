@@ -14,7 +14,10 @@ export class EsfPatrimonioUCAdapter implements FormsUCIntPort<FormEsfPatrimonio>
         if (!formEsfPatrimonio) {
             this.errorFormatter.errorNotFound(`Formulario con stuID ${stuID} y roomID ${roomID} no se encontró.`);
         }
-        return formEsfPatrimonio;
+
+        const formEsfPatrimonioCalculated = this.esfPatrimonioGateway.calculateReference(stuID, roomID);
+
+        return formEsfPatrimonioCalculated || formEsfPatrimonio;
     }
     async updateForm(stuID: string, roomID: string, esfPatrimonio: FormEsfPatrimonio): Promise<FormEsfPatrimonio> {
         return this.esfPatrimonioGateway.updateForm(stuID, roomID, esfPatrimonio);

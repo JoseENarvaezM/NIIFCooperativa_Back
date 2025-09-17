@@ -13,7 +13,10 @@ export class RentaLiquidaUCAdapter implements FormsUCIntPort<FormRentaLiquida> {
         if (!formRentaLiquida) {
             this.errorFormatter.errorNotFound(`Formulario con stuID ${stuID} y roomID ${roomID} no se encontró.`);
         }
-        return formRentaLiquida;
+
+        const formRentaLiquidaCalculated = this.rentaLiquidaGateway.calculateReference(stuID, roomID);
+
+        return formRentaLiquidaCalculated || formRentaLiquida;
     }
     async updateForm(stuID: string, roomID: string, rentaLiquida: FormRentaLiquida): Promise<FormRentaLiquida> {
         return this.rentaLiquidaGateway.updateForm(stuID, roomID, rentaLiquida);

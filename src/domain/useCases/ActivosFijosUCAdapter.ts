@@ -13,7 +13,10 @@ export class ActivosFijosUCAdapter implements FormsUCIntPort <FormActivosFijos> 
         if (!formAF) {
             this.errorFormatter.errorNotFound(`Formulario con stuID ${stuID} y roomID ${roomID} no se encontró.`);
         }
-        return formAF;
+
+        const formAFCalculated = this.activosFijosGateway.calculateReference(stuID, roomID);
+
+        return formAFCalculated || formAF;
     }
     async updateForm(stuID: string, roomID: string, activo: FormActivosFijos): Promise<FormActivosFijos> {
         return this.activosFijosGateway.updateForm(stuID, roomID, activo);
