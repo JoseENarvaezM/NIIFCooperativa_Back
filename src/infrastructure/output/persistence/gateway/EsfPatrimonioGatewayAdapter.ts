@@ -166,41 +166,41 @@ export class EsfPatrimonioGatewayAdapter implements FormsGatewayIntPort<FormEsfP
 
             content.Activos.InversionesInstrumentosFinancierosDerivadosVN.DeterioroAcumuladoInversiones.InversionesSubsidiariasAsociadasNegociosConjuntos.Metodo.ValorContable = (detContent?.Renglon37?.["1205InversionesEnAsociadasYSubsidiariasAccionesYAportesEnSociedades"]?.MedidasConMetodoDeParticipacion?.DetrioroDelValor?.SaldosContablesADiciembre31Parciales || 0);
 
-            content.Activos.InversionesInstrumentosFinancierosDerivadosVN.InversionesInstrumentosFinancierosDerivados.InversionesSubsidiariasAsociadasNegociosConjuntos.Metodo.MenorValorFiscal = (detContent?.Renglon37?.["1205InversionesEnAsociadasYSubsidiariasAccionesYAportesEnSociedades"]?.MedidasConMetodoDeParticipacion?.DetrioroDelValor?.AjustesParaLlegarASaldosFiscales3 || 0);
+            content.Activos.InversionesInstrumentosFinancierosDerivadosVN.DeterioroAcumuladoInversiones.InversionesSubsidiariasAsociadasNegociosConjuntos.Metodo.MenorValorFiscal = (detContent?.Renglon37?.["1205InversionesEnAsociadasYSubsidiariasAccionesYAportesEnSociedades"]?.MedidasConMetodoDeParticipacion?.DetrioroDelValor?.AjustesParaLlegarASaldosFiscales3 || 0);
 
-            content.Activos.InversionesInstrumentosFinancierosDerivadosVN.InversionesInstrumentosFinancierosDerivados.InversionesSubsidiariasAsociadasNegociosConjuntos.Metodo.MayorValorFiscal = (detContent?.Renglon37?.["1205InversionesEnAsociadasYSubsidiariasAccionesYAportesEnSociedades"]?.MedidasConMetodoDeParticipacion?.DetrioroDelValor?.AjustesParaLlegarASaldosFiscales1 || 0);
+            content.Activos.InversionesInstrumentosFinancierosDerivadosVN.DeterioroAcumuladoInversiones.InversionesSubsidiariasAsociadasNegociosConjuntos.Metodo.MayorValorFiscal = (detContent?.Renglon37?.["1205InversionesEnAsociadasYSubsidiariasAccionesYAportesEnSociedades"]?.MedidasConMetodoDeParticipacion?.DetrioroDelValor?.AjustesParaLlegarASaldosFiscales1 || 0);
 
             // Activos - Inversiones Instrumentos Financieros Derivados - DeterioroAcumuladoInversiones - InversionesSubsidiariasAsociadasNegociosConjuntos - Costo
 
             content.Activos.InversionesInstrumentosFinancierosDerivadosVN.DeterioroAcumuladoInversiones.InversionesSubsidiariasAsociadasNegociosConjuntos.Costo.ValorContable = (detContent?.Renglon37?.["1205InversionesEnAsociadasYSubsidiariasAccionesYAportesEnSociedades"]?.MedidasAlCosto?.DetrioroDelValor?.SaldosContablesADiciembre31Parciales || 0);
 
-            content.Activos.InversionesInstrumentosFinancierosDerivadosVN.InversionesInstrumentosFinancierosDerivados.InversionesSubsidiariasAsociadasNegociosConjuntos.Costo.MenorValorFiscal = (detContent?.Renglon37?.["1205InversionesEnAsociadasYSubsidiariasAccionesYAportesEnSociedades"]?.MedidasAlCosto?.DetrioroDelValor?.AjustesParaLlegarASaldosFiscales3 || 0);
+            content.Activos.InversionesInstrumentosFinancierosDerivadosVN.DeterioroAcumuladoInversiones.InversionesSubsidiariasAsociadasNegociosConjuntos.Costo.MenorValorFiscal = (detContent?.Renglon37?.["1205InversionesEnAsociadasYSubsidiariasAccionesYAportesEnSociedades"]?.MedidasAlCosto?.DetrioroDelValor?.AjustesParaLlegarASaldosFiscales3 || 0);
 
-            content.Activos.InversionesInstrumentosFinancierosDerivadosVN.InversionesInstrumentosFinancierosDerivados.InversionesSubsidiariasAsociadasNegociosConjuntos.Costo.MayorValorFiscal = (detContent?.Renglon37?.["1205InversionesEnAsociadasYSubsidiariasAccionesYAportesEnSociedades"]?.MedidasAlCosto?.DetrioroDelValor?.AjustesParaLlegarASaldosFiscales1 || 0);
+            content.Activos.InversionesInstrumentosFinancierosDerivadosVN.DeterioroAcumuladoInversiones.InversionesSubsidiariasAsociadasNegociosConjuntos.Costo.MayorValorFiscal = (detContent?.Renglon37?.["1205InversionesEnAsociadasYSubsidiariasAccionesYAportesEnSociedades"]?.MedidasAlCosto?.DetrioroDelValor?.AjustesParaLlegarASaldosFiscales1 || 0);
 
             // Activos - Inversiones Instrumentos Financieros Derivados - DeterioroAcumuladoInversiones - InstrumentosDeudaPatrimoniooCosto
 
             content.Activos.InversionesInstrumentosFinancierosDerivadosVN.DeterioroAcumuladoInversiones.InstrumentosDeudaPatrimoniooCosto.ValorContable = (detContent?.Renglon37?.["1210BonosYOtrosInstrumentosDeDeudaOPatrimonio"]?.MedidasAlCosto?.DetrioroDelValor?.SaldosContablesADiciembre31Parciales || 0);
 
-            content.Activos.InversionesInstrumentosFinancierosDerivadosVN.InversionesInstrumentosFinancierosDerivados.InstrumentosDeudaPatrimoniooCosto.MenorValorFiscal = (detContent?.Renglon37?.["1210BonosYOtrosInstrumentosDeDeudaOPatrimonio"]?.MedidasAlCosto?.DetrioroDelValor?.AjustesParaLlegarASaldosFiscales3 || 0);
+            content.Activos.InversionesInstrumentosFinancierosDerivadosVN.DeterioroAcumuladoInversiones.InstrumentosDeudaPatrimoniooCosto.MenorValorFiscal = (detContent?.Renglon37?.["1210BonosYOtrosInstrumentosDeDeudaOPatrimonio"]?.MedidasAlCosto?.DetrioroDelValor?.AjustesParaLlegarASaldosFiscales3 || 0);
 
-            content.Activos.InversionesInstrumentosFinancierosDerivadosVN.InversionesInstrumentosFinancierosDerivados.InstrumentosDeudaPatrimoniooCosto.MayorValorFiscal = (detContent?.Renglon37?.["1210BonosYOtrosInstrumentosDeDeudaOPatrimonio"]?.MedidasAlCosto?.DetrioroDelValor?.AjustesParaLlegarASaldosFiscales1 || 0);
+            content.Activos.InversionesInstrumentosFinancierosDerivadosVN.DeterioroAcumuladoInversiones.InstrumentosDeudaPatrimoniooCosto.MayorValorFiscal = (detContent?.Renglon37?.["1210BonosYOtrosInstrumentosDeDeudaOPatrimonio"]?.MedidasAlCosto?.DetrioroDelValor?.AjustesParaLlegarASaldosFiscales1 || 0);
 
             // Activos - Inversiones Instrumentos Financieros Derivados - DeterioroAcumuladoInversiones - DerechosFiduciarios
 
             content.Activos.InversionesInstrumentosFinancierosDerivadosVN.DeterioroAcumuladoInversiones.DerechosFiduciarios.ValorContable = (detContent?.Renglon37?.["1210BonosYOtrosInstrumentosDeDeudaOPatrimonio"]?.MedidasAlCosto?.DetrioroDelValor?.SaldosContablesADiciembre31Parciales || 0);
 
-            content.Activos.InversionesInstrumentosFinancierosDerivadosVN.InversionesInstrumentosFinancierosDerivados.DerechosFiduciarios.MenorValorFiscal = (detContent?.Renglon37?.["1210BonosYOtrosInstrumentosDeDeudaOPatrimonio"]?.MedidasAlCosto?.DetrioroDelValor?.AjustesParaLlegarASaldosFiscales3 || 0);
+            content.Activos.InversionesInstrumentosFinancierosDerivadosVN.DeterioroAcumuladoInversiones.DerechosFiduciarios.MenorValorFiscal = (detContent?.Renglon37?.["1210BonosYOtrosInstrumentosDeDeudaOPatrimonio"]?.MedidasAlCosto?.DetrioroDelValor?.AjustesParaLlegarASaldosFiscales3 || 0);
 
-            content.Activos.InversionesInstrumentosFinancierosDerivadosVN.InversionesInstrumentosFinancierosDerivados.DerechosFiduciarios.MayorValorFiscal = (detContent?.Renglon37?.["1210BonosYOtrosInstrumentosDeDeudaOPatrimonio"]?.MedidasAlCosto?.DetrioroDelValor?.AjustesParaLlegarASaldosFiscales1 || 0);
+            content.Activos.InversionesInstrumentosFinancierosDerivadosVN.DeterioroAcumuladoInversiones.DerechosFiduciarios.MayorValorFiscal = (detContent?.Renglon37?.["1210BonosYOtrosInstrumentosDeDeudaOPatrimonio"]?.MedidasAlCosto?.DetrioroDelValor?.AjustesParaLlegarASaldosFiscales1 || 0);
 
             // Activos - Inversiones Instrumentos Financieros Derivados - DeterioroAcumuladoInversiones - Otros
 
             content.Activos.InversionesInstrumentosFinancierosDerivadosVN.DeterioroAcumuladoInversiones.Otros.ValorContable = (detContent?.Renglon37?.["1215InstrumentosFinancierosDerivadosConFinesDeNegociacion"]?.MedidasAlCosto?.DetrioroDelValor?.SaldosContablesADiciembre31Parciales || 0) - (detContent?.Renglon37?.["1215InstrumentosFinancierosDerivadosConFinesDeNegociacion"]?.InstrumentosFinancierosDerivadosConFinesDeCobertura?.DetrioroDelValor?.SaldosContablesADiciembre31Parciales || 0);
 
-            content.Activos.InversionesInstrumentosFinancierosDerivadosVN.InversionesInstrumentosFinancierosDerivados.Otros.MenorValorFiscal = (detContent?.Renglon37?.["1215InstrumentosFinancierosDerivadosConFinesDeNegociacion"]?.MedidasAlCosto?.DetrioroDelValor?.AjustesParaLlegarASaldosFiscales3 || 0) - (detContent?.Renglon37?.["1215InstrumentosFinancierosDerivadosConFinesDeNegociacion"]?.InstrumentosFinancierosDerivadosConFinesDeCobertura?.DetrioroDelValor?.AjustesParaLlegarASaldosFiscales3 || 0);
+            content.Activos.InversionesInstrumentosFinancierosDerivadosVN.DeterioroAcumuladoInversiones.Otros.MenorValorFiscal = (detContent?.Renglon37?.["1215InstrumentosFinancierosDerivadosConFinesDeNegociacion"]?.MedidasAlCosto?.DetrioroDelValor?.AjustesParaLlegarASaldosFiscales3 || 0) - (detContent?.Renglon37?.["1215InstrumentosFinancierosDerivadosConFinesDeNegociacion"]?.InstrumentosFinancierosDerivadosConFinesDeCobertura?.DetrioroDelValor?.AjustesParaLlegarASaldosFiscales3 || 0);
 
-            content.Activos.InversionesInstrumentosFinancierosDerivadosVN.InversionesInstrumentosFinancierosDerivados.Otros.MayorValorFiscal = (detContent?.Renglon37?.["1215InstrumentosFinancierosDerivadosConFinesDeNegociacion"]?.MedidasAlCosto?.DetrioroDelValor?.AjustesParaLlegarASaldosFiscales1 || 0) - (detContent?.Renglon37?.["1215InstrumentosFinancierosDerivadosConFinesDeNegociacion"]?.InstrumentosFinancierosDerivadosConFinesDeCobertura?.DetrioroDelValor?.AjustesParaLlegarASaldosFiscales1 || 0);
+            content.Activos.InversionesInstrumentosFinancierosDerivadosVN.DeterioroAcumuladoInversiones.Otros.MayorValorFiscal = (detContent?.Renglon37?.["1215InstrumentosFinancierosDerivadosConFinesDeNegociacion"]?.MedidasAlCosto?.DetrioroDelValor?.AjustesParaLlegarASaldosFiscales1 || 0) - (detContent?.Renglon37?.["1215InstrumentosFinancierosDerivadosConFinesDeNegociacion"]?.InstrumentosFinancierosDerivadosConFinesDeCobertura?.DetrioroDelValor?.AjustesParaLlegarASaldosFiscales1 || 0);
 
             // Activos - CuentasComercialesCobrarOtrasPorCobrar - CuentasDocumentosPorCobrar - CuentasComercialesPorCobrar
 
@@ -505,51 +505,51 @@ export class EsfPatrimonioGatewayAdapter implements FormsGatewayIntPort<FormEsfP
 
             // Activos - ActivosIntangibles - PlusvaliaGoodwill - PlusvaliaGoodwill - AdquisicionEstablecimientoComercio
 
-            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.PlusvaliaGoodwill.AdquisicionEstablecimientoComercio.ValorContable = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.AdquisicionDeEstablecimientoDeComercio?.SaldosContablesADiciembre31Parciales || 0);
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.AdquisicionEstablecimientoComercio.ValorContable = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.AdquisicionDeEstablecimientoDeComercio?.SaldosContablesADiciembre31Parciales || 0);
 
-            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.PlusvaliaGoodwill.AdquisicionEstablecimientoComercio.MenorValorFiscal = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.AdquisicionDeEstablecimientoDeComercio?.AjustesParaLlegarASaldosFiscales3 || 0);
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.AdquisicionEstablecimientoComercio.MenorValorFiscal = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.AdquisicionDeEstablecimientoDeComercio?.AjustesParaLlegarASaldosFiscales3 || 0);
 
-            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.PlusvaliaGoodwill.AdquisicionEstablecimientoComercio.MayorValorFiscal = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.AdquisicionDeEstablecimientoDeComercio?.AjustesParaLlegarASaldosFiscales1 || 0);
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.AdquisicionEstablecimientoComercio.MayorValorFiscal = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.AdquisicionDeEstablecimientoDeComercio?.AjustesParaLlegarASaldosFiscales1 || 0);
 
             // Activos - ActivosIntangibles - PlusvaliaGoodwill - PlusvaliaGoodwill - Fusiones
 
-            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.PlusvaliaGoodwill.Fusiones.ValorContable = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.Fusiones?.SaldosContablesADiciembre31Parciales || 0);
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.Fusiones.ValorContable = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.Fusiones?.SaldosContablesADiciembre31Parciales || 0);
 
-            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.PlusvaliaGoodwill.Fusiones.MenorValorFiscal = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.Fusiones?.AjustesParaLlegarASaldosFiscales3 || 0);
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.Fusiones.MenorValorFiscal = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.Fusiones?.AjustesParaLlegarASaldosFiscales3 || 0);
 
-            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.PlusvaliaGoodwill.Fusiones.MayorValorFiscal = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.Fusiones?.AjustesParaLlegarASaldosFiscales1 || 0);
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.Fusiones.MayorValorFiscal = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.Fusiones?.AjustesParaLlegarASaldosFiscales1 || 0);
 
             // Activos - ActivosIntangibles - PlusvaliaGoodwill - PlusvaliaGoodwill - Escisiones
 
-            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.PlusvaliaGoodwill.Escisiones.ValorContable = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.Escisiones?.SaldosContablesADiciembre31Parciales || 0);
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.Escisiones.ValorContable = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.Escisiones?.SaldosContablesADiciembre31Parciales || 0);
 
-            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.PlusvaliaGoodwill.Escisiones.MenorValorFiscal = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.Escisiones?.AjustesParaLlegarASaldosFiscales3 || 0);
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.Escisiones.MenorValorFiscal = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.Escisiones?.AjustesParaLlegarASaldosFiscales3 || 0);
 
-            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.PlusvaliaGoodwill.Escisiones.MayorValorFiscal = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.Escisiones?.AjustesParaLlegarASaldosFiscales1 || 0);
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.Escisiones.MayorValorFiscal = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.Escisiones?.AjustesParaLlegarASaldosFiscales1 || 0);
 
             // Activos - ActivosIntangibles - PlusvaliaGoodwill - PlusvaliaGoodwill - CompraAcciones
 
-            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.PlusvaliaGoodwill.CompraAcciones.ValorContable = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.CompraDeAcciones?.SaldosContablesADiciembre31Parciales || 0);
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.CompraAcciones.ValorContable = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.CompraDeAcciones?.SaldosContablesADiciembre31Parciales || 0);
 
-            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.PlusvaliaGoodwill.CompraAcciones.MenorValorFiscal = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.CompraDeAcciones?.AjustesParaLlegarASaldosFiscales3 || 0);
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.CompraAcciones.MenorValorFiscal = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.CompraDeAcciones?.AjustesParaLlegarASaldosFiscales3 || 0);
 
-            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.PlusvaliaGoodwill.CompraAcciones.MayorValorFiscal = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.CompraDeAcciones?.AjustesParaLlegarASaldosFiscales1 || 0);
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.CompraAcciones.MayorValorFiscal = (detContent?.Renglon40?.["1570PlusvaliaOGoodWill"]?.CompraDeAcciones?.AjustesParaLlegarASaldosFiscales1 || 0);
 
             // Activos - ActivosIntangibles - PlusvaliaGoodwill - AmortizacionAcumuladaPlusvaliaGoodwill
 
-            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.AmortizacionAcumuladaPlusvaliaGoodwill.ValorContable = (detContent?.Renglon40?.["1578AmortizacionAcumuladaDeLaPlusvaliaOGoodWill"]?.SaldosContablesADiciembre31Parciales || 0);
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.AmortizacionAcumuladaPlusvaliaGoodwill.ValorContable = (detContent?.Renglon40?.["1578AmortizacionAcumuladaDeLaPlusvaliaOGoodWill"]?.SaldosContablesADiciembre31Parciales || 0);
 
-            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.AmortizacionAcumuladaPlusvaliaGoodwill.MenorValorFiscal = (detContent?.Renglon40?.["1578AmortizacionAcumuladaDeLaPlusvaliaOGoodWill"]?.AjustesParaLlegarASaldosFiscales3 || 0);
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.AmortizacionAcumuladaPlusvaliaGoodwill.MenorValorFiscal = (detContent?.Renglon40?.["1578AmortizacionAcumuladaDeLaPlusvaliaOGoodWill"]?.AjustesParaLlegarASaldosFiscales3 || 0);
 
-            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.AmortizacionAcumuladaPlusvaliaGoodwill.MayorValorFiscal = (detContent?.Renglon40?.["1578AmortizacionAcumuladaDeLaPlusvaliaOGoodWill"]?.AjustesParaLlegarASaldosFiscales1 || 0);
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.AmortizacionAcumuladaPlusvaliaGoodwill.MayorValorFiscal = (detContent?.Renglon40?.["1578AmortizacionAcumuladaDeLaPlusvaliaOGoodWill"]?.AjustesParaLlegarASaldosFiscales1 || 0);
 
             // Activos - ActivosIntangibles - PlusvaliaGoodwill - DeterioroAcumuladoPlusvaliaGoodwill
 
-            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.DeterioroAcumuladoPlusvaliaGoodwill.ValorContable = (detContent?.Renglon40?.["1579DeterioroAcumuladoDeLaPlusvaliaOGoodWill"]?.SaldosContablesADiciembre31Parciales || 0);
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.DeterioroAcumuladoPlusvaliaGoodwill.ValorContable = (detContent?.Renglon40?.["1579DeterioroAcumuladoDeLaPlusvaliaOGoodWill"]?.SaldosContablesADiciembre31Parciales || 0);
 
-            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.DeterioroAcumuladoPlusvaliaGoodwill.MenorValorFiscal = (detContent?.Renglon40?.["1579DeterioroAcumuladoDeLaPlusvaliaOGoodWill"]?.AjustesParaLlegarASaldosFiscales3 || 0);
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.DeterioroAcumuladoPlusvaliaGoodwill.MenorValorFiscal = (detContent?.Renglon40?.["1579DeterioroAcumuladoDeLaPlusvaliaOGoodWill"]?.AjustesParaLlegarASaldosFiscales3 || 0);
 
-            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.PlusvaliaGoodwill.DeterioroAcumuladoPlusvaliaGoodwill.MayorValorFiscal = (detContent?.Renglon40?.["1579DeterioroAcumuladoDeLaPlusvaliaOGoodWill"]?.AjustesParaLlegarASaldosFiscales1 || 0);
+            content.Activos.ActivosIntangibles.PlusvaliaGoodwill.DeterioroAcumuladoPlusvaliaGoodwill.MayorValorFiscal = (detContent?.Renglon40?.["1579DeterioroAcumuladoDeLaPlusvaliaOGoodWill"]?.AjustesParaLlegarASaldosFiscales1 || 0);
 
             // Activos - PropiedadesInversion - TerrenoEdificios - AlCosto
 

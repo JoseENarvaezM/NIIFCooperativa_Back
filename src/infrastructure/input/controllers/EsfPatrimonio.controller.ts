@@ -10,6 +10,7 @@ export class EsfPatrimonioController {
             const result = await this.esfPatrimonioUseCases.getIDForm(stuID, roomID);
             res.status(200).json(result);
         } catch (error) {
+            console.log(error)
             next(error);
         }
     };
@@ -30,6 +31,7 @@ export class EsfPatrimonioController {
             const result = await this.esfPatrimonioUseCases.getIDForm(stuID, roomID);
             res.status(200).json(result);
         } catch (error) {
+            console.log(error)
             next(error);
         }
     };

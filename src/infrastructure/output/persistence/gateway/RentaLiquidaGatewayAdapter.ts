@@ -230,13 +230,13 @@ export class RentaLiquidaGatewayAdapter implements FormsGatewayIntPort<FormRenta
 
             // Ingresos - IngresosNetosActividadIndustrialComercialYServicios - IngresosNetosActividadIndustrialComercialYServicios - ComisionesRelacionalesDeAgencia
 
-            renContent.Ingresos.IngresosNetosActividadIndustrialComercialYServicios.IngresosNetosActividadIndustrialComercialYServicios.ComisionesRelacionesDeAgencia.ValorContable =
-                detContent?.Renglon47?.ComisionesRelacionesDeAgencia?.SaldosContablesADiciembre31Parciales || 0;
+            renContent.Ingresos.IngresosNetosActividadIndustrialComercialYServicios.IngresosNetosActividadIndustrialComercialYServicios.ComisionesRelacionalesDeAgencia.ValorContable =
+                detContent.Renglon47.ComisionesRelacionesDeAgencia.SaldosContablesADiciembre31Parciales || 0;
 
-            renContent.Ingresos.IngresosNetosActividadIndustrialComercialYServicios.IngresosNetosActividadIndustrialComercialYServicios.ComisionesRelacionesDeAgencia.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+            renContent.Ingresos.IngresosNetosActividadIndustrialComercialYServicios.IngresosNetosActividadIndustrialComercialYServicios.ComisionesRelacionalesDeAgencia.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
                 detContent?.Renglon47?.ComisionesRelacionesDeAgencia?.AjustesParaLlegarASaldosFiscales1 || 0;
 
-            renContent.Ingresos.IngresosNetosActividadIndustrialComercialYServicios.IngresosNetosActividadIndustrialComercialYServicios.ComisionesRelacionesDeAgencia.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+            renContent.Ingresos.IngresosNetosActividadIndustrialComercialYServicios.IngresosNetosActividadIndustrialComercialYServicios.ComisionesRelacionalesDeAgencia.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
                 detContent?.Renglon47?.ComisionesRelacionesDeAgencia?.AjustesParaLlegarASaldosFiscales3 || 0;
 
             // Ingresos - IngresosNetosActividadIndustrialComercialYServicios - IngresosNetosActividadIndustrialComercialYServicios - HonorariosProfesionales
@@ -277,10 +277,10 @@ export class RentaLiquidaGatewayAdapter implements FormsGatewayIntPort<FormRenta
             renContent.Ingresos.IngresosNetosActividadIndustrialComercialYServicios.IngresosNetosActividadIndustrialComercialYServicios.ComisionesBancariasCostosDeTransaccionEntroOtros.ValorContable =
                 detContent?.Renglon47?.ComisionesBancariasCostosDeTransaccionEntreOtros?.SaldosContablesADiciembre31Parciales || 0;
 
-            renContent.Ingresos.IngresosNetosActividadIndustrialComercialYServicios.IngresosNetosActividadIndustrialComercialYServicios.ComisionesBancariasCostosDeTransaccionEntreOtros.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+            renContent.Ingresos.IngresosNetosActividadIndustrialComercialYServicios.IngresosNetosActividadIndustrialComercialYServicios.ComisionesBancariasCostosDeTransaccionEntroOtros.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
                 detContent?.Renglon47?.ComisionesBancariasCostosDeTransaccionEntreOtros?.AjustesParaLlegarASaldosFiscales1 || 0;
 
-            renContent.Ingresos.IngresosNetosActividadIndustrialComercialYServicios.IngresosNetosActividadIndustrialComercialYServicios.ComisionesBancariasCostosDeTransaccionEntreOtros.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+            renContent.Ingresos.IngresosNetosActividadIndustrialComercialYServicios.IngresosNetosActividadIndustrialComercialYServicios.ComisionesBancariasCostosDeTransaccionEntroOtros.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
                 detContent?.Renglon47?.ComisionesBancariasCostosDeTransaccionEntreOtros?.AjustesParaLlegarASaldosFiscales3 || 0;
 
             // Ingresos - IngresosNetosActividadIndustrialComercialYServicios - IngresosNetosActividadIndustrialComercialYServicios - OtrosIngresos
@@ -1113,10 +1113,10 @@ export class RentaLiquidaGatewayAdapter implements FormsGatewayIntPort<FormRenta
             renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DepreciacionActivosBiologicos.DelCosto.ValorContable =
                 renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostosIndirectosDeFabricacion?.DeprActBio?.DelCosto?.SaldosContablesADiciembre31Parciales || 0;
             
-            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DepreciacionActivosBiologicos.Cost.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DepreciacionActivosBiologicos.DelCosto.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
                 renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostosIndirectosDeFabricacion?.DeprActBio?.DelCosto?.AjustesParaLlegarASaldosFiscales3 || 0;
 
-            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DepreciacionActivosBiologicos.Cost.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+            renContent.Costos.DepresionacionesAmortizacionesYDeterioros.DepreciacionActivosBiologicos.DelCosto.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
                 renContent?.Renglon62?.["61CostosDeLasMercanciasFabricadasYVendidas"]?.MasCostosIndirectosDeFabricacion?.DeprActBio?.DelCosto?.AjustesParaLlegarASaldosFiscales1 || 0;
 
             //Costos - DepresionacionesAmortizacionesYDeterioros - DepreciacionActivosBiologicos - DelAjusteAcumunladoPorAjusteAculudadoPorRevaluacionesOReExpresiones
@@ -2184,112 +2184,112 @@ export class RentaLiquidaGatewayAdapter implements FormsGatewayIntPort<FormRenta
 
             //Gastos - Gastos de distribución y ventas - Depreciaciones, amortizaciones y deterioros - Deterioro del valor de los activos - Activos de exploración y evaluación de recursos minerales
             
-            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.ActivosDeExploracionYEvaluacionDeRecursosMinerales.ValorContable =
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.ActivosDeExploracionYEvaluacionDeRecursosMinerales.ValorContable =
                 renContent?.Renglon64?.["5299Deterioros"]?.ActivosDeExploracionYEvaluacionDeRecursosMinerales?.SaldosContablesADiciembre31Parciales || 0;
 
-            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.ActivosDeExploracionYEvaluacionDeRecursosMinerales.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.ActivosDeExploracionYEvaluacionDeRecursosMinerales.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
                 renContent?.Renglon64?.["5299Deterioros"]?.ActivosDeExploracionYEvaluacionDeRecursosMinerales?.AjustesParaLlegarASaldosFiscales3 || 0;
 
-            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.ActivosDeExploracionYEvaluacionDeRecursosMinerales.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.ActivosDeExploracionYEvaluacionDeRecursosMinerales.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
                 renContent?.Renglon64?.["5299Deterioros"]?.ActivosDeExploracionYEvaluacionDeRecursosMinerales?.AjustesParaLlegarASaldosFiscales1 || 0;
 
             //Gastos - Gastos de distribución y ventas - Depreciaciones, amortizaciones y deterioros - Deterioro del valor de los activos - Propiedades de inversión medidas al modelo de costo
 
-            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.PropiedadesDeInversionMedidasAlModeloDeCosto.ValorContable =
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.PropiedadesDeInversionMedidasAlModeloDeCosto.ValorContable =
                 renContent?.Renglon64?.["5299Deterioros"]?.PropiedadesDeInversionMedidasAlModeloDeCosto?.SaldosContablesADiciembre31Parciales || 0;
 
-            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.PropiedadesDeInversionMedidasAlModeloDeCosto.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.PropiedadesDeInversionMedidasAlModeloDeCosto.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
                 renContent?.Renglon64?.["5299Deterioros"]?.PropiedadesDeInversionMedidasAlModeloDeCosto?.AjustesParaLlegarASaldosFiscales3 || 0;
 
-            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.PropiedadesDeInversionMedidasAlModeloDeCosto.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.PropiedadesDeInversionMedidasAlModeloDeCosto.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
                 renContent?.Renglon64?.["5299Deterioros"]?.PropiedadesDeInversionMedidasAlModeloDeCosto?.AjustesParaLlegarASaldosFiscales1 || 0;
 
             //Gastos - Gastos de distribución y ventas - Depreciaciones, amortizaciones y deterioros - Deterioro del valor de los activos - Activos no corrientes mantenidos...
 
-            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.ActivosNoCorrientesMantenidosParaLaVentaDistribuirALosPropietarios.ValorContable =
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.ActivosNoCorrientesMantenidosParaLaVentaDistribuirALosPropietarios.ValorContable =
                 renContent?.Renglon64?.["5299Deterioros"]?.ActivosNoCorrientesMantenidosParaLaVentaDistribuirALosPropietarios?.SaldosContablesADiciembre31Parciales || 0;
 
-            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.ActivosNoCorrientesMantenidosParaLaVentaDistribuirALosPropietarios.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.ActivosNoCorrientesMantenidosParaLaVentaDistribuirALosPropietarios.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
                 renContent?.Renglon64?.["5299Deterioros"]?.ActivosNoCorrientesMantenidosParaLaVentaDistribuirALosPropietarios?.AjustesParaLlegarASaldosFiscales3 || 0;
 
-            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.ActivosNoCorrientesMantenidosParaLaVentaDistribuirALosPropietarios.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.ActivosNoCorrientesMantenidosParaLaVentaDistribuirALosPropietarios.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
                 renContent?.Renglon64?.["5299Deterioros"]?.ActivosNoCorrientesMantenidosParaLaVentaDistribuirALosPropietarios?.AjustesParaLlegarASaldosFiscales1 || 0;
 
             //Gastos - Gastos de distribución y ventas - Depreciaciones, amortizaciones y deterioros - Deterioro del valor de los activos - Bienes de arte y cultura medidos al modelo de costo
 
-            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.BienesDeArteYCulturaMedidosAlModeloDeCosto.ValorContable =
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.BienesDeArteYCulturaMedidosAlModeloDeCosto.ValorContable =
                 renContent?.Renglon64?.["5299Deterioros"]?.BienesDeArteYCulturaMedidosAlModeloDeCosto?.SaldosContablesADiciembre31Parciales || 0;
 
-            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.BienesDeArteYCulturaMedidosAlModeloDeCosto.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.BienesDeArteYCulturaMedidosAlModeloDeCosto.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
                 renContent?.Renglon64?.["5299Deterioros"]?.BienesDeArteYCulturaMedidosAlModeloDeCosto?.AjustesParaLlegarASaldosFiscales3 || 0;
 
-            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.BienesDeArteYCulturaMedidosAlModeloDeCosto.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.BienesDeArteYCulturaMedidosAlModeloDeCosto.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
                 renContent?.Renglon64?.["5299Deterioros"]?.BienesDeArteYCulturaMedidosAlModeloDeCosto?.AjustesParaLlegarASaldosFiscales1 || 0;
             
             //Gastos - Gastos de distribución y ventas - Depreciaciones, amortizaciones y deterioros - Deterioro del valor de los activos - Activos biológicos medidos al modelo de costo
 
-            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.ActivosBiologicosMedidosAlModeloDeCosto.ValorContable =
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.ActivosBiologicosMedidosAlModeloDeCosto.ValorContable =
                 renContent?.Renglon64?.["5299Deterioros"]?.ActivosBiologicosMedidosAlModeloDeCosto?.SaldosContablesADiciembre31Parciales || 0;
 
-            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.ActivosBiologicosMedidosAlModeloDeCosto.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.ActivosBiologicosMedidosAlModeloDeCosto.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
                 renContent?.Renglon64?.["5299Deterioros"]?.ActivosBiologicosMedidosAlModeloDeCosto?.AjustesParaLlegarASaldosFiscales3 || 0;
 
-            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.ActivosBiologicosMedidosAlModeloDeCosto.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.ActivosBiologicosMedidosAlModeloDeCosto.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
                 renContent?.Renglon64?.["5299Deterioros"]?.ActivosBiologicosMedidosAlModeloDeCosto?.AjustesParaLlegarASaldosFiscales1 || 0;
 
             //Gastos - Gastos de distribución y ventas - Depreciaciones, amortizaciones y deterioros - Deterioro del valor de los activos - Activos financieros 
 
-            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.ActivosFinancierosDistintosACarteraDeCreditoYOperacionesDeLeasing.ValorContable =
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.ActivosFinancierosDistintosACarteraDeCreditoYOperacionesDeLeasing.ValorContable =
                 renContent?.Renglon64?.["5299Deterioros"]?.ActivosFinancierosDiferentesACarteraDeCredito?.SaldosContablesADiciembre31Parciales || 0;
 
-            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.ActivosFinancierosDistintosACarteraDeCreditoYOperacionesDeLeasing.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.ActivosFinancierosDistintosACarteraDeCreditoYOperacionesDeLeasing.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
                 renContent?.Renglon64?.["5299Deterioros"]?.ActivosFinancierosDiferentesACarteraDeCredito?.AjustesParaLlegarASaldosFiscales3 || 0;
 
-            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.ActivosFinancierosDistintosACarteraDeCreditoYOperacionesDeLeasing.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.ActivosFinancierosDistintosACarteraDeCreditoYOperacionesDeLeasing.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
                 renContent?.Renglon64?.["5299Deterioros"]?.ActivosFinancierosDiferentesACarteraDeCredito?.AjustesParaLlegarASaldosFiscales1 || 0;
             
             //Gastos - Gastos de distribución y ventas - Depreciaciones, amortizaciones y deterioros - Deterioro del valor de los activos - Cartera de crédito y operaciones de leasing
 
-            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.CarteraDeCreditoYOperacionesDeLeasing.ValorContable =
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.CarteraDeCreditoYOperacionesDeLeasing.ValorContable =
                 renContent?.Renglon64?.["5299Deterioros"]?.CarteraDeCreditoYOperacionesDeLeasing?.SaldosContablesADiciembre31Parciales || 0;
 
-            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.CarteraDeCreditoYOperacionesDeLeasing.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.CarteraDeCreditoYOperacionesDeLeasing.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
                 renContent?.Renglon64?.["5299Deterioros"]?.CarteraDeCreditoYOperacionesDeLeasing?.AjustesParaLlegarASaldosFiscales3 || 0;
 
-            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.CarteraDeCreditoYOperacionesDeLeasing.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.CarteraDeCreditoYOperacionesDeLeasing.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
                 renContent?.Renglon64?.["5299Deterioros"]?.CarteraDeCreditoYOperacionesDeLeasing?.AjustesParaLlegarASaldosFiscales1 || 0;
             
             //Gastos - Gastos de distribución y ventas - Depreciaciones, amortizaciones y deterioros - Deterioro del valor de los activos - Otras inversiones medidas al costo o el método de la participación
 
-            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.OtrasInversionesMedidasAlCostoOPorElMetodoDeLaParticipacion.ValorContable =
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.OtrasInversionesMedidasAlCostoOPorElMetodoDeLaParticipacion.ValorContable =
                 renContent?.Renglon64?.["5299Deterioros"]?.OtrasInversionesMedidasAlCostoOPorElMetodoDeLaParticipacion?.SaldosContablesADiciembre31Parciales || 0;
 
-            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.OtrasInversionesMedidasAlCostoOPorElMetodoDeLaParticipacion.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.OtrasInversionesMedidasAlCostoOPorElMetodoDeLaParticipacion.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
                 renContent?.Renglon64?.["5299Deterioros"]?.OtrasInversionesMedidasAlCostoOPorElMetodoDeLaParticipacion?.AjustesParaLlegarASaldosFiscales3 || 0;
 
-            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.OtrasInversionesMedidasAlCostoOPorElMetodoDeLaParticipacion.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.OtrasInversionesMedidasAlCostoOPorElMetodoDeLaParticipacion.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
                 renContent?.Renglon64?.["5299Deterioros"]?.OtrasInversionesMedidasAlCostoOPorElMetodoDeLaParticipacion?.AjustesParaLlegarASaldosFiscales1 || 0;
 
             //Gastos - Gastos de distribución y ventas - Depreciaciones, amortizaciones y deterioros - Deterioro del valor de los activos - Derechos de uso en arrendamientos operativos (NIIF 16)
 
-            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DerechosDeUsoEnArrendamientosOperativosNIIF16.ValorContable =
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.DerechosDeUsoEnArrendamientosOperativosNIIF16.ValorContable =
                 renContent?.Renglon64?.["5299Deterioros"]?.DerechosDeUsoEnArrendamientosOperativos?.SaldosContablesADiciembre31Parciales || 0;
 
-            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DerechosDeUsoEnArrendamientosOperativosNIIF16.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.DerechosDeUsoEnArrendamientosOperativosNIIF16.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
                 renContent?.Renglon64?.["5299Deterioros"]?.DerechosDeUsoEnArrendamientosOperativos?.AjustesParaLlegarASaldosFiscales3 || 0;
 
-            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DerechosDeUsoEnArrendamientosOperativosNIIF16.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.DerechosDeUsoEnArrendamientosOperativosNIIF16.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
                 renContent?.Renglon64?.["5299Deterioros"]?.DerechosDeUsoEnArrendamientosOperativos?.AjustesParaLlegarASaldosFiscales1 || 0;
 
             //Gastos - Gastos de distribución y ventas - Depreciaciones, amortizaciones y deterioros - Deterioro del valor de los activos - Otros deterioros
 
-            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.OtrosDeterioros.ValorContable =
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.OtrosDeterioros.ValorContable =
                 renContent?.Renglon64?.["5299Deterioros"]?.OtrosDeteriors?.SaldosContablesADiciembre31Parciales || 0;
 
-            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.OtrosDeterioros.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.OtrosDeterioros.MenorValorFiscalPorReconocimientoExencionesLimitaciones =
                 renContent?.Renglon64?.["5299Deterioros"]?.OtrosDeteriors?.AjustesParaLlegarASaldosFiscales3 || 0;
 
-            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.OtrosDeterioros.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
+            renContent.Gastos.GastosDeDistribucionYVentas.DepreciacionesAmortizacionesYDeterioros.DeterioroDelValorActivos.OtrosDeterioros.MayorValorFiscalPorReconocimientoExencionesLimitaciones =
                 renContent?.Renglon64?.["5299Deterioros"]?.OtrosDeteriors?.AjustesParaLlegarASaldosFiscales1 || 0;
 
             //Gastos - Gastos financieros - Intereses  devengados - sector financiero
