@@ -1,7 +1,7 @@
 export const CaratulaInput = {
   "Año": 0,
   DatosDelDeclante: {
-    NumeroDeIdentificacionTributariaNIT: 1,
+    NumeroDeIdentificacionTributariaNIT: 0,
     DV: 0,
     PrimerApellido: "",
     SegundoApellido: "",

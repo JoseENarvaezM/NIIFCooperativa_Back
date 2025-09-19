@@ -51,6 +51,10 @@ export class Form110GatewayAdapter implements FormsGatewayIntPort<FormR110> {
       where: { detID: report?.detID },
     });
 
+    const caratula = await prisma.formcaratula.findUnique({
+      where: { carID: report?.carID },
+    });
+
     if (
       form110 &&
       typeof form110.r110Content === "object" &&
@@ -58,6 +62,34 @@ export class Form110GatewayAdapter implements FormsGatewayIntPort<FormR110> {
     ) {
       const content = form110?.r110Content as any;
       const detContent = detalleRenglones?.detContent as any;
+      const carContent = caratula?.carContent as any;
+
+      //Datos declarante
+      content.DeclaracionDeRentaYComplementarioParaPersonasJuridicasYAsimiladas["Año"] = carContent?.["Año"] || 0;
+
+      content.DeclaracionDeRentaYComplementarioParaPersonasJuridicasYAsimiladas.DatosDelDeclarante.NIT = carContent?.DatosDelDeclante?.NumeroDeIdentificacionTributariaNIT || 0;
+
+      content.DeclaracionDeRentaYComplementarioParaPersonasJuridicasYAsimiladas.DatosDelDeclarante.DV = carContent?.DatosDelDeclante?.DV || 0;
+
+      content.DeclaracionDeRentaYComplementarioParaPersonasJuridicasYAsimiladas.DatosDelDeclarante.PrimerApellido = carContent?.DatosDelDeclante?.PrimerApellido || "";
+
+      content.DeclaracionDeRentaYComplementarioParaPersonasJuridicasYAsimiladas.DatosDelDeclarante.SegundoApellido = carContent?.DatosDelDeclante?.SegundoApellido || "";
+
+      content.DeclaracionDeRentaYComplementarioParaPersonasJuridicasYAsimiladas.DatosDelDeclarante.PrimerNombre = carContent?.DatosDelDeclante?.PrimerNombre || "";
+
+      content.DeclaracionDeRentaYComplementarioParaPersonasJuridicasYAsimiladas.DatosDelDeclarante.OtrosNombres = carContent?.DatosDelDeclante?.OtrosNombres || "";
+
+      content.DeclaracionDeRentaYComplementarioParaPersonasJuridicasYAsimiladas.DatosDelDeclarante.RazonSocial = carContent?.DatosDelDeclante?.RazonSocial || "";
+      
+      content.DeclaracionDeRentaYComplementarioParaPersonasJuridicasYAsimiladas.DatosDelDeclarante.CodigoDireccionSeccional = carContent?.DatosDelDeclante?.CodigoDireccion || "";
+
+      content.Totales.CodigoRepresentacion = carContent?.CodigoRepresentacion || 0;
+
+      content.Totales.CodigoContratadorORevisorFiscal = carContent?.CodigoContadorORevisorFiscal || 0;
+
+      content.Totales.ConSalvedades = carContent?.ConSalvedad || false;
+
+      content.Totales.NumeroDeTarjetaProfesional = carContent?.NumeroDeTarjetaProfesional || 0;
 
       //Datos informativos
       content.DatosResumen.DatosInformativos.TotalCostosGastosDeNomina =
