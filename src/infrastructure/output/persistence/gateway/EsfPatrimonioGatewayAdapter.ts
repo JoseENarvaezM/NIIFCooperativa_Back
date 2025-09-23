@@ -108,11 +108,11 @@ export class EsfPatrimonioGatewayAdapter implements FormsGatewayIntPort<FormEsfP
 
             // Activos - Inversiones Instrumentos Financieros Derivados - Inversiones Instrumentos Financieros Derivados - Al Costo
 
-            content.Activos.InversionesInstrumentosFinancierosDerivadosVN.InversionesInstrumentosFinancierosDerivados.InversionesSubsidiariasAsociadasNegociosConjuntos.AlCosto.ValorContable = (detContent?.Renglon37?.["1205InversionesEnAsociadasYSubsidiariasAccionesYAportesEnSociedades"]?.MedidasConMetodoDeParticipacion?.ValorDeAdquisicion?.SaldosContablesADiciembre31Parciales || 0);
+            content.Activos.InversionesInstrumentosFinancierosDerivadosVN.InversionesInstrumentosFinancierosDerivados.InversionesSubsidiariasAsociadasNegociosConjuntos.AlCosto.ValorContable = (detContent?.Renglon37?.["1205InversionesEnAsociadasYSubsidiariasAccionesYAportesEnSociedades"]?.MedidasAlCosto?.ValorDelCosto?.SaldosContablesADiciembre31Parciales || 0);
 
-            content.Activos.InversionesInstrumentosFinancierosDerivadosVN.InversionesInstrumentosFinancierosDerivados.InversionesSubsidiariasAsociadasNegociosConjuntos.AlCosto.MenorValorFiscal = (detContent?.Renglon37?.["1205InversionesEnAsociadasYSubsidiariasAccionesYAportesEnSociedades"]?.MedidasConMetodoDeParticipacion?.ValorDeAdquisicion?.AjustesParaLlegarASaldosFiscales3 || 0);
+            content.Activos.InversionesInstrumentosFinancierosDerivadosVN.InversionesInstrumentosFinancierosDerivados.InversionesSubsidiariasAsociadasNegociosConjuntos.AlCosto.MenorValorFiscal = (detContent?.Renglon37?.["1205InversionesEnAsociadasYSubsidiariasAccionesYAportesEnSociedades"]?.MedidasAlCosto?.ValorDelCosto?.AjustesParaLlegarASaldosFiscales3 || 0);
 
-            content.Activos.InversionesInstrumentosFinancierosDerivadosVN.InversionesInstrumentosFinancierosDerivados.InversionesSubsidiariasAsociadasNegociosConjuntos.AlCosto.MayorValorFiscal = (detContent?.Renglon37?.["1205InversionesEnAsociadasYSubsidiariasAccionesYAportesEnSociedades"]?.MedidasConMetodoDeParticipacion?.ValorDeAdquisicion?.AjustesParaLlegarASaldosFiscales1 || 0);
+            content.Activos.InversionesInstrumentosFinancierosDerivadosVN.InversionesInstrumentosFinancierosDerivados.InversionesSubsidiariasAsociadasNegociosConjuntos.AlCosto.MayorValorFiscal = (detContent?.Renglon37?.["1205InversionesEnAsociadasYSubsidiariasAccionesYAportesEnSociedades"]?.MedidasAlCosto?.ValorDelCosto?.AjustesParaLlegarASaldosFiscales1 || 0);
 
             // Activos - Inversiones Instrumentos Financieros Derivados - Inversiones Instrumentos Financieros Derivados - Instrumentos de deuda o patrimonio al costo
 
