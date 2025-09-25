@@ -73,6 +73,8 @@ export class ImpuestoDiferidoGatewayAdapter implements FormsGatewayIntPort<FormI
             const content = impuestoDiferido?.impContent as any;
             const detContent = detalleRenglones?.detContent as any;
 
+            console.log(esfContent?.Activos?.InversionesInstrumentosFinancierosDerivadosVN)
+
             //Aactivo Diferido
             this.mapEsfToImpContentCaseOne(content?.ImpuestosDiferidosProvenientesDeDiferenciasTemporarias?.ActivoDiferidoDiferenciasTemporariasDeducibles?.EfectivoYEquivalentesAlEfectivo, esfContent?.Activos?.ActivosEquivalentesEfectivo?.Total?.ValorContable, esfContent?.Activos?.ActivosEquivalentesEfectivo?.Total?.ValorFiscal);
 

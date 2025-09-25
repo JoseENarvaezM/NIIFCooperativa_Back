@@ -60,6 +60,7 @@ export class DetalleRenglonesGatewayAdapter implements FormsGatewayIntPort<FormD
             const actFijosContent = activosFijos?.actContent as any;
             const impDiferidoContent = impuestoDiferido?.impContent as any;
             const ingresoyfacContent = ingresoyFac?.ingContent as any;
+            
             //Calculos 
             detContent.Renglon40["1510MarcasPatentesYLicencias"].REFSaldCont = 
                 actFijosContent.ActivosIntangibles.MarcasComerciales.DatosContables.ImporteAlComienzoDelPeriodo.Costo + 
