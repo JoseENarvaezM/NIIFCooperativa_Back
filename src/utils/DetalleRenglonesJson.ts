@@ -4030,12 +4030,12 @@ export const DetalleRenglonesInput = {
   Renglon68: {
     SaldosContablesADiciembre31Parciales: 0,
     SaldosFiscalesADiciembre31Parciales: 0,
-    SaldosFiscalesADiciembre31Totales: 0,//se implento por falta de dato fix
+    SaldosFiscalesADiciembre31Totales: 0, //se implento por falta de dato fix
   },
   Renglon69: {
     SaldosContablesADiciembre31Parciales: 0,
     SaldosFiscalesADiciembre31Parciales: 0,
-    SaldosFiscalesADiciembre31Totales: 0,//se implento por falta de dato fix
+    SaldosFiscalesADiciembre31Totales: 0, //se implento por falta de dato fix
   },
   Renglon70: {
     IndmnCompAseg: {
@@ -4147,7 +4147,7 @@ export const DetalleRenglonesInput = {
       PrecioDeVentaActivosFijosPoseidosMasDeDosAnios: {
         SaldosContablesADiciembre31Parciales: 0,
         AjustesParaLlegarASaldosFiscales1: 0,
-        AjustesParaLlegarASaldosFiscales3: 0,//fix
+        AjustesParaLlegarASaldosFiscales3: 0, //fix
         SaldosFiscalesADiciembre31Parciales: 0,
       },
       IngresosPorHerenciasLegadosYDonaciones: {
@@ -4301,7 +4301,7 @@ export const DetalleRenglonesInput = {
   },
   Renglon96: {
     SaldosFiscalesADiciembre31Parciales: 0,
-    SaldosFiscalesADiciembre31Totales: 0,//fix
+    SaldosFiscalesADiciembre31Totales: 0, //fix
   },
   Renglon97: {
     TotalSaldosFiscalesADiciembre31: 0,
@@ -4327,92 +4327,80 @@ export const DetalleRenglonesInput = {
   },
   Renglon104: {
     PorVentas: {
-      InformacionPorEmpresa: [
-        {
-          NombreEmpresa: "",
-          NitEmpresa: "",
-          SaldosContablesADiciembre31Parciales: 0,
-          AjustesParaLlegarASaldosFiscales1: 0,
-          AjustesParaLlegarASaldosFiscales2: "",
-          AjustesParaLlegarASaldosFiscales3: 0,
-          SaldosFiscalesADiciembre31Parciales: 0,
-        },
-      ],
+      InformacionPorEmpresa: {
+        NombreEmpresa: "",
+        NitEmpresa: "",
+        SaldosContablesADiciembre31Parciales: 0,
+        AjustesParaLlegarASaldosFiscales1: 0,
+        AjustesParaLlegarASaldosFiscales2: "",
+        AjustesParaLlegarASaldosFiscales3: 0,
+        SaldosFiscalesADiciembre31Parciales: 0,
+      },
       TotalPorVentasSaldosContablesADiciembre31: 0,
       TotalPorVentasSaldosFiscalesADiciembre31: 0,
     },
     PorServicios: {
-      InformacionPorEmpresa: [
-        {
-          NombreEmpresa: "",
-          NitEmpresa: "",
-          SaldosContablesADiciembre31Parciales: 0,
-          AjustesParaLlegarASaldosFiscales1: 0,
-          AjustesParaLlegarASaldosFiscales2: "",
-          AjustesParaLlegarASaldosFiscales3: 0,
-          SaldosFiscalesADiciembre31Parciales: 0,
-        },
-      ],
+      InformacionPorEmpresa: {
+        NombreEmpresa: "",
+        NitEmpresa: "",
+        SaldosContablesADiciembre31Parciales: 0,
+        AjustesParaLlegarASaldosFiscales1: 0,
+        AjustesParaLlegarASaldosFiscales2: "",
+        AjustesParaLlegarASaldosFiscales3: 0,
+        SaldosFiscalesADiciembre31Parciales: 0,
+      },
       TotalPorServiciosSaldosContablesADiciembre31: 0,
       TotalPorServiciosSaldosFiscalesADiciembre31: 0,
     },
     PorHonorariosYComisiones: {
-      InformacionPorEmpresa: [
-        {
-          NombreEmpresa: "",
-          NitEmpresa: "",
-          SaldosContablesADiciembre31Parciales: 0,
-          AjustesParaLlegarASaldosFiscales1: 0,
-          AjustesParaLlegarASaldosFiscales2: "",
-          AjustesParaLlegarASaldosFiscales3: 0,
-          SaldosFiscalesADiciembre31Parciales: 0,
-        },
-      ],
+      InformacionPorEmpresa: {
+        NombreEmpresa: "",
+        NitEmpresa: "",
+        SaldosContablesADiciembre31Parciales: 0,
+        AjustesParaLlegarASaldosFiscales1: 0,
+        AjustesParaLlegarASaldosFiscales2: "",
+        AjustesParaLlegarASaldosFiscales3: 0,
+        SaldosFiscalesADiciembre31Parciales: 0,
+      },
       TotalPorHonorariosYComisionesSaldosContablesADiciembre31: 0,
       TotalPorHonorariosYComisionesSaldosFiscalesADiciembre31: 0,
     },
     PorRendimientoFinanciero: {
-      InformacionPorEmpresa: [
-        {
-          NombreEmpresa: "",
-          NitEmpresa: "",
-          SaldosContablesADiciembre31Parciales: 0,
-          AjustesParaLlegarASaldosFiscales1: 0,
-          AjustesParaLlegarASaldosFiscales2: "",
-          AjustesParaLlegarASaldosFiscales3: 0,
-          SaldosFiscalesADiciembre31Parciales: 0,
-        },
-      ],
+      InformacionPorEmpresa: {
+        NombreEmpresa: "",
+        NitEmpresa: "",
+        SaldosContablesADiciembre31Parciales: 0,
+        AjustesParaLlegarASaldosFiscales1: 0,
+        AjustesParaLlegarASaldosFiscales2: "",
+        AjustesParaLlegarASaldosFiscales3: 0,
+        SaldosFiscalesADiciembre31Parciales: 0,
+      },
       TotalPorRendimientoFinancieroSaldosContablesADiciembre31: 0,
       TotalPorRendimientoFinancieroSaldosFiscalesADiciembre31: 0,
     },
     PorDividendosYParticipaciones: {
-      InformacionPorEmpresa: [
-        {
-          NombreEmpresa: "",
-          NitEmpresa: "",
-          SaldosContablesADiciembre31Parciales: 0,
-          AjustesParaLlegarASaldosFiscales1: 0,
-          AjustesParaLlegarASaldosFiscales2: "",
-          AjustesParaLlegarASaldosFiscales3: 0,
-          SaldosFiscalesADiciembre31Parciales: 0,
-        },
-      ],
+      InformacionPorEmpresa: {
+        NombreEmpresa: "",
+        NitEmpresa: "",
+        SaldosContablesADiciembre31Parciales: 0,
+        AjustesParaLlegarASaldosFiscales1: 0,
+        AjustesParaLlegarASaldosFiscales2: "",
+        AjustesParaLlegarASaldosFiscales3: 0,
+        SaldosFiscalesADiciembre31Parciales: 0,
+      },
       TotalPorDividendosYParticipacionesSaldosContablesADiciembre31: 0,
       TotalPorDividendosYParticipacionesSaldosFiscalesADiciembre31: 0,
     },
     PorOtrosConceptosInteresesLoteriasYRifas: {
-      InformacionPorEmpresa: [
-        {
-          NombreEmpresa: "",
-          NitEmpresa: "",
-          SaldosContablesADiciembre31Parciales: 0,
-          AjustesParaLlegarASaldosFiscales1: 0,
-          AjustesParaLlegarASaldosFiscales2: "",
-          AjustesParaLlegarASaldosFiscales3: 0,
-          SaldosFiscalesADiciembre31Parciales: 0,
-        },
-      ],
+      InformacionPorEmpresa: {
+        NombreEmpresa: "",
+        NitEmpresa: "",
+        SaldosContablesADiciembre31Parciales: 0,
+        AjustesParaLlegarASaldosFiscales1: 0,
+        AjustesParaLlegarASaldosFiscales2: "",
+        AjustesParaLlegarASaldosFiscales3: 0,
+        SaldosFiscalesADiciembre31Parciales: 0,
+      },
       TotalPorOtrosConceptosInteresesLoteriasYRifasSaldosContablesADiciembre31: 0,
       TotalPorOtrosConceptosInteresesLoteriasYRifasSaldosFiscalesADiciembre31: 0,
     },
