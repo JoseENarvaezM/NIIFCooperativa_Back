@@ -25,7 +25,7 @@ export class Server {
     this.app.use(cookieParse());
     this.app.use(
       cors({
-        origin: "http://localhost:5173",
+        origin: "https://pruebasjaycom.shop",
         credentials: true,
       })
     );
