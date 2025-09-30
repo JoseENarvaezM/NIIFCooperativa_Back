@@ -3,9 +3,8 @@ services:
     image: mysql:8.0
     container_name: backend-db
     restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: admin123
-      MYSQL_DATABASE: cooperativadb
+    env_file:
+      - .env.db
     volumes:
       - db_data:/var/lib/mysql
     networks:
@@ -19,14 +18,8 @@ services:
       - "3000"
     depends_on:
       - db
-    environment:
-      - DATABASE_URL=mysql://root:admin123@db:3306/cooperativadb
-      - JWT_SECRET=4583ba44ec4b73a1339fb9612f9c4adc9be2eaa1e406dc59a89c5b3347642765
-      - ADMIN_EMAIL=admin@admin.com
-      - ADMIN_PASSWORD=Admin123@
-      - VIRTUAL_HOST=api.pruebasjaycom.shop
-      - LETSENCRYPT_HOST=api.pruebasjaycom.shop
-      - LETSENCRYPT_EMAIL=juanorejuela499@gmail.com
+    env_file:
+      - .env
     command: >
       sh -c "
         until nc -z db 3306;
