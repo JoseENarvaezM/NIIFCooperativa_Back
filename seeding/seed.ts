@@ -16,7 +16,7 @@ async function main() {
 
   console.log("email:", process.env.ADMIN_EMAIL);
   console.log("password:", bcrypt.hashSync(process.env.ADMIN_PASSWORD, 10));
-/*
+
   const adminEmail = process.env.ADMIN_EMAIL;
   const adminPassword = process.env.ADMIN_PASSWORD;
 
@@ -38,7 +38,7 @@ async function main() {
   } else {
     console.log("ℹ️ Admin user already exists");
   }
-    */
+    
 }
 
 main()

@@ -1,29 +1,49 @@
-version: '3.8'
-
 services:
   db:
     image: mysql:8.0
+    container_name: backend-db
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: admin123
       MYSQL_DATABASE: cooperativadb
-    ports:
-      - "3307:3306"
     volumes:
       - db_data:/var/lib/mysql
+    networks:
+      - backend-net
 
-  web:
+  backend:
     build: .
-    ports:
-      - "3000:3000"
+    container_name: backend
+    restart: always
+    expose:
+      - "3000"
     depends_on:
       - db
     environment:
       - DATABASE_URL=mysql://root:admin123@db:3306/cooperativadb
-      - JWT_SECRET="4583ba44ec4b73a1339fb9612f9c4adc9be2eaa1e406dc59a89c5b3347642765"
-      - ADMIN_EMAIL="admin@admin.com"
-      - ADMIN_PASSWORD="Admin123@"
-    command: sh -c "until nc -z db 3306; do echo 'Esperando MySQL...'; sleep 2; done && npx prisma migrate deploy && npm run start && npm run seed"
+      - JWT_SECRET=4583ba44ec4b73a1339fb9612f9c4adc9be2eaa1e406dc59a89c5b3347642765
+      - ADMIN_EMAIL=admin@admin.com
+      - ADMIN_PASSWORD=Admin123@
+      - VIRTUAL_HOST=api.pruebasjaycom.shop
+      - LETSENCRYPT_HOST=api.pruebasjaycom.shop
+      - LETSENCRYPT_EMAIL=juanorejuela499@gmail.com
+    command: >
+      sh -c "
+        until nc -z db 3306;
+        do echo 'Esperando MySQL...'; sleep 2;
+        done &&
+        npx prisma migrate deploy &&
+        npm run seed &&
+        npm run start
+      "
+    networks:
+      - backend-net
+      - proxy-tier
 
 volumes:
   db_data:
+
+networks:
+  backend-net:
+  proxy-tier:
+    external: true
