@@ -2,3 +2,4 @@
 node_modules/
 mongo/
 /src/generated/prisma
+dist/
