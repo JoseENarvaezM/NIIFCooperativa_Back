@@ -38,7 +38,12 @@ export class UserUCAdapter implements UserUCIntPort {
             this.errorFormatter.errorNotFound(`Usuario con id ${id} no existe.`);
             return;
         }
-        if (await Encrypt.comparePassword(usuOldPassword, user.usuPassword)) {
+
+        const passwordsMatch = await Encrypt.comparePassword(usuOldPassword, user.usuPassword);
+
+        console.log("Passwords match:", passwordsMatch); 
+
+        if (passwordsMatch) {
             user.usuPassword = await Encrypt.hashPassword(newPassword);
             await this.userGateway.updateUser(id, user);
             return;
