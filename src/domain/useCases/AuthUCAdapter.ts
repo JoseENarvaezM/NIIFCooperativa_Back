@@ -1,15 +1,16 @@
 import { AuthUCIntPort } from "../../application/input/AuthUCIntPort";
 import { ErrorFormatterIntPort } from "../../application/output/ErrorFormaterIntPort";
-import { TokenService } from "./SecurityUtils/TokenService";
 import { UserGatewayIntPort } from "../../application/output/UserGatewayIntPort";
-import { Encrypt } from "./SecurityUtils/Encrypt";
-
+import { EncryptIntPort } from "../../application/output/EncryptIntPort";
+import { AuthIntPort } from "../../application/output/AuthIntPort";
 import { User } from "../models/UserModel";
 
 export class AuthUCAdapter implements AuthUCIntPort {
     constructor(
         private userGateway: UserGatewayIntPort,
-        private errorFormatter: ErrorFormatterIntPort
+        private errorFormatter: ErrorFormatterIntPort,
+        private Encrypt: EncryptIntPort,
+        private TokenService: AuthIntPort
     ) { }
 
     async login(email: string, password: string): Promise<(Pick<User, "usuID" | "usuRole"> & { token: string }) | null> {
@@ -19,12 +20,12 @@ export class AuthUCAdapter implements AuthUCIntPort {
             return null;
         }
 
-        if (await Encrypt.comparePassword(password, user.usuPassword) === false) {
+        if (await this.Encrypt.comparePassword(password, user.usuPassword) === false) {
             this.errorFormatter.genericError("Credenciales incorrectas");
             return null;
         }
 
-        const token = await TokenService.createAccessToken({usuID: user.usuID, usuRole: user.usuRole});
+        const token = await this.TokenService.createAccessToken({usuID: user.usuID, usuRole: user.usuRole});
         
         return {
             usuID: user.usuID,
@@ -34,6 +35,6 @@ export class AuthUCAdapter implements AuthUCIntPort {
     }
 
     async verifyToken(token: string): Promise<any | null> {
-        return TokenService.verifyAccessToken(token);
+        return this.TokenService.verifyAccessToken(token);
     }
 }

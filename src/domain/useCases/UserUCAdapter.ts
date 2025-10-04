@@ -2,12 +2,12 @@ import { UserUCIntPort } from "../../application/input/UserUCIntPort";
 import { UserGatewayIntPort } from "../../application/output/UserGatewayIntPort";
 import { ErrorFormatterIntPort } from "../../application/output/ErrorFormaterIntPort";
 import { User } from "../../domain/models/UserModel";
-import { Encrypt } from "./SecurityUtils/Encrypt";
-
+import { EncryptIntPort } from "../../application/output/EncryptIntPort";
 export class UserUCAdapter implements UserUCIntPort {
     constructor(
         private userGateway: UserGatewayIntPort,
-        private errorFormatter: ErrorFormatterIntPort
+        private errorFormatter: ErrorFormatterIntPort,
+        private Encrypt: EncryptIntPort
 
     ) { }
     
@@ -38,13 +38,8 @@ export class UserUCAdapter implements UserUCIntPort {
             this.errorFormatter.errorNotFound(`Usuario con id ${id} no existe.`);
             return;
         }
-
-        const passwordsMatch = await Encrypt.comparePassword(usuOldPassword, user.usuPassword);
-
-        console.log("Passwords match:", passwordsMatch); 
-
-        if (passwordsMatch) {
-            user.usuPassword = await Encrypt.hashPassword(newPassword);
+        if (await this.Encrypt.comparePassword(usuOldPassword, user.usuPassword)) {
+            user.usuPassword = await this.Encrypt.hashPassword(newPassword);
             await this.userGateway.updateUser(id, user);
             return;
         }
@@ -54,7 +49,7 @@ export class UserUCAdapter implements UserUCIntPort {
     async createUser(user: User): Promise<User| null> {
         const exists = await this.userGateway.existByEmail(user.usuEmail);
         if (exists === false) {
-            user.usuPassword = await Encrypt.hashPassword(user.usuPassword);
+            user.usuPassword = await this.Encrypt.hashPassword(user.usuPassword);
             return this.userGateway.createUser(user);
         }
         this.errorFormatter.errorExistsEntity(`Usuario con email ${user.usuEmail} ya existe.`);
@@ -74,7 +69,7 @@ export class UserUCAdapter implements UserUCIntPort {
             }
         }
         if (user.usuPassword) {
-            user.usuPassword = await Encrypt.hashPassword(user.usuPassword);
+            user.usuPassword = await this.Encrypt.hashPassword(user.usuPassword);
         }else {
             user.usuPassword = data.usuPassword;
         }

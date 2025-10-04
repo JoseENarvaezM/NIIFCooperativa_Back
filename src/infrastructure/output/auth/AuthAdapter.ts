@@ -1,8 +1,9 @@
 import jwt from 'jsonwebtoken';
 import { env } from '../../../config/env';
+import { AuthIntPort } from '../../../application/output/AuthIntPort';
 
-export class TokenService {
-  static createAccessToken(data: any): Promise<string> {
+export class  AuthAdapter implements AuthIntPort {
+   createAccessToken(data: any): Promise<string> {
     return new Promise((resolve, reject) => {
       jwt.sign(data, env.jwtSecret, { expiresIn: "1d" }, (err, token) => {
         if (err || !token) {
@@ -12,7 +13,7 @@ export class TokenService {
       });
     });
   }
-  static verifyAccessToken(token: string): Promise<any | null> {
+   verifyAccessToken(token: string): Promise<any | null> {
     return new Promise((resolve, reject) => {
       jwt.verify(token, env.jwtSecret, (err, decoded) => {
         if (err) {
