@@ -16,6 +16,9 @@ import { AuthMiddleware } from "../middlewares/AuthMiddleware";
 import { UserGatewayAdapter } from "../../output/persistence/gateway/UserGatewayAdapter";
 import { AuthUCAdapter } from "../../../domain/useCases/AuthUCAdapter";
 
+import { EncryptAdapter } from "../../output/auth/EncryptAdapter";
+import { AuthAdapter } from "../../output/auth/AuthAdapter";
+
 export class ActivosFijosRoutes{
     static get routes(): Router {
         const router = Router();
@@ -25,7 +28,7 @@ export class ActivosFijosRoutes{
         const activosFijosUseCases = new ActivosFijosUCAdapter(activosFijosGateway,exceptionHandler);
         const activosFijosController: ActivosFijosController = new ActivosFijosController(activosFijosUseCases);
         const validatorMiddleware = new ValidatorMiddleware(ActivosFijosSchema);
-        const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler));
+        const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler, new EncryptAdapter(), new AuthAdapter()));
 
 
         router.get("/id", authMiddleware.authenticate("student"), activosFijosController.getIDActivoFijo);
