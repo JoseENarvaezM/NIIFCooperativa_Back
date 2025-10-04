@@ -11,16 +11,19 @@ import { AuthMiddleware } from "../middlewares/AuthMiddleware";
 import { AuthUCAdapter } from "../../../domain/useCases/AuthUCAdapter";
 import { ChangePasswordSchema } from "../schemas/ChangePasswordSchema";
 
+import { EncryptAdapter } from "../../output/auth/EncryptAdapter";
+import { AuthAdapter } from "../../output/auth/AuthAdapter";
+
 export class UserRoutes {
     static get routes(): Router {
         const router = Router();
 
         const userGateway: UserGatewayIntPort = new UserGatewayAdapter();
         const exceptionHandler: ErrorFormatterIntPort = new ExceptionHandler();
-        const userUseCases = new UserUCAdapter(userGateway, exceptionHandler);
+        const userUseCases = new UserUCAdapter(userGateway, exceptionHandler, new EncryptAdapter());
         const userController: UserController = new UserController(userUseCases);
         const validatorMiddleware = new ValidatorMiddleware(userSchema);
-        const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler));
+        const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler, new EncryptAdapter(), new AuthAdapter()));
         const userEditValidatorMiddleware = new ValidatorMiddleware(UserEditSchema);
         const changePasswordValidatorMiddleware = new ValidatorMiddleware(ChangePasswordSchema);
 

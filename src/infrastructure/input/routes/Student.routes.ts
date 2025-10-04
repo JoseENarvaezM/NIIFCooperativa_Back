@@ -26,6 +26,9 @@ import { UserGatewayAdapter } from "../../output/persistence/gateway/UserGateway
 import { RoomGatewayIntPort } from "../../../application/output/RoomGatewayIntPort";
 import { RoomGatewayAdapter } from "../../output/persistence/gateway/RoomGatewayAdapter";
 
+import { AuthAdapter } from "../../output/auth/AuthAdapter";
+import { EncryptAdapter } from "../../output/auth/EncryptAdapter";
+
 export class StudentRoutes {
     static get routes(): Router {
         const router = Router();
@@ -46,11 +49,13 @@ export class StudentRoutes {
             new IngFactGatewayAdapter(),
             new RentaLiquidaGatewayAdapter(),
             new ResumenEsfGatewayAdapter(),
-            exceptionHandler);
+            exceptionHandler,
+            new AuthAdapter()
+            );
 
         const studentController: StudentController = new StudentController(studentUseCases);
         const validatorMiddleware = new ValidatorMiddleware(StudentSchema);
-        const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler));
+        const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler, new EncryptAdapter(), new AuthAdapter()));
 
         router.post("/", validatorMiddleware.validate, studentController.postStudent);
         router.get("/", authMiddleware.authenticate("professor"),studentController.getStudents);

@@ -14,9 +14,9 @@ import { FormIngresosFancturacion } from "../models/FormIngresosFancturacionMode
 import { FormRentaLiquida } from "../models/FormRentaLiquidaModel";
 import { FormResumenEsferi } from "../models/FormResumenEsferiModel";
 import { Report } from "../models/ReportModel";
-import { TokenService } from "./SecurityUtils/TokenService";
 import { RoomGatewayIntPort } from "../../application/output/RoomGatewayIntPort";
 import  * as formsinput from "../../utils/index";
+import { AuthIntPort } from "../../application/output/AuthIntPort";
 
 
 export class StudentUCAdapter implements StudentUCIntPort {
@@ -33,7 +33,8 @@ export class StudentUCAdapter implements StudentUCIntPort {
         private formsIngresosFancturacionGateway: FormsGatewayIntPort<FormIngresosFancturacion>,
         private formsRentaLiquidaGateway: FormsGatewayIntPort<FormRentaLiquida>,
         private formsResumenEsferiGateway: FormsGatewayIntPort<FormResumenEsferi>,
-        private errorFormatter: ErrorFormatterIntPort
+        private errorFormatter: ErrorFormatterIntPort,
+        private TokenService: AuthIntPort
     ) { }
 
     async createStudent(student: Student): Promise<Student & { token: string, usuRole: string } | null> {
@@ -78,7 +79,7 @@ export class StudentUCAdapter implements StudentUCIntPort {
             resumenEsferi.resID!,
             r110.r110ID!))
 
-        const token = await TokenService.createAccessToken({stuID: studentCreated.stuID, roomID: studentCreated.roomID, usuRole: "student"});
+        const token = await this.TokenService.createAccessToken({stuID: studentCreated.stuID, roomID: studentCreated.roomID, usuRole: "student"});
 
         return {
             ...studentCreated,
@@ -134,7 +135,7 @@ export class StudentUCAdapter implements StudentUCIntPort {
             return null;
         }
 
-        const token = await TokenService.createAccessToken({stuID: student.stuID, roomID: student.roomID, usuRole: "student"});
+        const token = await this.TokenService.createAccessToken({stuID: student.stuID, roomID: student.roomID, usuRole: "student"});
         console.log(token,student);
         return {
             ...student,

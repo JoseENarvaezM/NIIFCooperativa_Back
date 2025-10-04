@@ -9,6 +9,9 @@ import { AuthUCAdapter } from "../../../domain/useCases/AuthUCAdapter";
 import { AuthController } from "../controllers/Auth.controller";
 import { AuthSchema } from "../schemas/AuthSchema";
 
+import { AuthAdapter } from "../../output/auth/AuthAdapter";
+import { EncryptAdapter } from "../../output/auth/EncryptAdapter";
+
 import { AuthMiddleware } from "../middlewares/AuthMiddleware";
 
 
@@ -18,11 +21,12 @@ export class AuthRoutes {
 
         const userGateway: UserGatewayIntPort = new UserGatewayAdapter();
         const exceptionHandler: ErrorFormatterIntPort = new ExceptionHandler();
-        const authUseCases = new AuthUCAdapter(userGateway, exceptionHandler);
+        const encrypt = new EncryptAdapter();
+        const authService = new AuthAdapter();
+        const authUseCases = new AuthUCAdapter(userGateway, exceptionHandler,encrypt,authService);
         const authController: AuthController = new AuthController(authUseCases);
         const validatorMiddleware = new ValidatorMiddleware(AuthSchema);
-        const authMiddleware = new AuthMiddleware(new AuthUCAdapter(userGateway, exceptionHandler));
-
+        const authMiddleware = new AuthMiddleware(new AuthUCAdapter(userGateway, exceptionHandler,encrypt,authService));
         router.post("/login", validatorMiddleware.validate, authController.login);
         router.post("/logout", authMiddleware.authenticate("professor", "admin", "student"), authController.logout);
         router.get("/profile",authMiddleware.authenticate("professor", "admin"), authController.profile);
