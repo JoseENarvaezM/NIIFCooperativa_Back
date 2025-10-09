@@ -38,7 +38,7 @@ export class StudentRoutes {
         const roomGateway: RoomGatewayIntPort = new RoomGatewayAdapter();
         const studentUseCases = new StudentUCAdapter(
             roomGateway,
-            studentGateway, 
+            studentGateway,
             new ReportGatewayAdapter(),
             new ActivosFijosGatewayAdapter(),
             new CaratulaGatewayAdapter(),
@@ -51,15 +51,15 @@ export class StudentRoutes {
             new ResumenEsfGatewayAdapter(),
             exceptionHandler,
             new AuthAdapter()
-            );
+        );
 
         const studentController: StudentController = new StudentController(studentUseCases);
         const validatorMiddleware = new ValidatorMiddleware(StudentSchema);
         const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler, new EncryptAdapter(), new AuthAdapter()));
 
         router.post("/", validatorMiddleware.validate, studentController.postStudent);
-        router.get("/", authMiddleware.authenticate("professor"),studentController.getStudents);
-        router.get("/:stuID", authMiddleware.authenticate("professor"),studentController.getStudentById);
+        router.get("/", authMiddleware.authenticate("professor"), studentController.getStudents);
+        router.get("/:stuID", authMiddleware.authenticate("professor"), studentController.getStudentById);
         router.put("/:stuID", validatorMiddleware.validate, studentController.putStudent);
         router.delete("/:stuID", studentController.deleteStudent);
         router.get("/search/:cedula/:roomID", studentController.searchStudentsByCedula);

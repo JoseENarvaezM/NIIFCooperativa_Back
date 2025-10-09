@@ -15,6 +15,9 @@ import { AuthMiddleware } from "../middlewares/AuthMiddleware";
 import { UserGatewayAdapter } from "../../output/persistence/gateway/UserGatewayAdapter";
 import { AuthUCAdapter } from "../../../domain/useCases/AuthUCAdapter";
 
+import { EncryptAdapter } from "../../output/auth/EncryptAdapter";
+import { AuthAdapter } from "../../output/auth/AuthAdapter";
+
 export class CaratulaRoutes {
     static get routes(): Router {
         const router = Router();
@@ -24,7 +27,7 @@ export class CaratulaRoutes {
         const caratulaUseCases = new CaratulaUCAdapter(caratulaGateway,exceptionHandler);
         const caratulaController: CaratulaController = new CaratulaController(caratulaUseCases);
         const validatorMiddleware = new ValidatorMiddleware(CaratulaSchema);
-        const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler));
+        const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler, new EncryptAdapter(), new AuthAdapter()));
 
 
         router.get("/id", authMiddleware.authenticate("student"), caratulaController.getIDCaratula);

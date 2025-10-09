@@ -15,6 +15,9 @@ import { AuthMiddleware } from "../middlewares/AuthMiddleware";
 import { UserGatewayAdapter } from "../../output/persistence/gateway/UserGatewayAdapter";
 import { AuthUCAdapter } from "../../../domain/useCases/AuthUCAdapter";
 
+import { EncryptAdapter } from "../../output/auth/EncryptAdapter";
+import { AuthAdapter } from "../../output/auth/AuthAdapter";
+
 export class DetalleRenglonesRoutes {
     static get routes(): Router {
         const router = Router();
@@ -24,7 +27,7 @@ export class DetalleRenglonesRoutes {
         const detalleRenglonesUseCases = new DetalleRenglonesUCAdapter(detalleRenglonesGateway,exceptionHandler);
         const detalleRenglonesController: DetalleRenglonesController = new DetalleRenglonesController(detalleRenglonesUseCases);
         const validatorMiddleware = new ValidatorMiddleware(DetalleRenglonesSchema);
-        const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler));
+        const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler, new EncryptAdapter(), new AuthAdapter()));
 
 
         router.get("/id", authMiddleware.authenticate("student"), detalleRenglonesController.getIDDetalleRenglones);

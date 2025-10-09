@@ -10,7 +10,8 @@ import { AuthMiddleware } from "../middlewares/AuthMiddleware";
 import { AuthUCAdapter } from "../../../domain/useCases/AuthUCAdapter";
 import { UserGatewayAdapter } from "../../output/persistence/gateway/UserGatewayAdapter";
 
-
+import { EncryptAdapter } from "../../output/auth/EncryptAdapter";
+import { AuthAdapter } from "../../output/auth/AuthAdapter";
 
 export class ReportRoutes {
     static get routes(): Router {
@@ -20,7 +21,7 @@ export class ReportRoutes {
         const reportUseCases = new ReportUCAdapter(reportGateway);
         const reportController: ReportController = new ReportController(reportUseCases);
         const exceptionHandler: ErrorFormatterIntPort = new ExceptionHandler();
-        const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler));
+        const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler, new EncryptAdapter(), new AuthAdapter()));
 
 
         router.get("/:id", authMiddleware.authenticate("professor"), reportController.getReportByID);

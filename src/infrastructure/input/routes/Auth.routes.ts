@@ -23,13 +23,13 @@ export class AuthRoutes {
         const exceptionHandler: ErrorFormatterIntPort = new ExceptionHandler();
         const encrypt = new EncryptAdapter();
         const authService = new AuthAdapter();
-        const authUseCases = new AuthUCAdapter(userGateway, exceptionHandler,encrypt,authService);
+        const authUseCases = new AuthUCAdapter(userGateway, exceptionHandler, encrypt, authService);
         const authController: AuthController = new AuthController(authUseCases);
         const validatorMiddleware = new ValidatorMiddleware(AuthSchema);
-        const authMiddleware = new AuthMiddleware(new AuthUCAdapter(userGateway, exceptionHandler,encrypt,authService));
+        const authMiddleware = new AuthMiddleware(new AuthUCAdapter(userGateway, exceptionHandler, encrypt, authService));
         router.post("/login", validatorMiddleware.validate, authController.login);
         router.post("/logout", authMiddleware.authenticate("professor", "admin", "student"), authController.logout);
-        router.get("/profile",authMiddleware.authenticate("professor", "admin"), authController.profile);
+        router.get("/profile", authMiddleware.authenticate("professor", "admin"), authController.profile);
         router.get("/studentProfile", authMiddleware.authenticate("student"), authController.studentProfile);
         return router;
     }
