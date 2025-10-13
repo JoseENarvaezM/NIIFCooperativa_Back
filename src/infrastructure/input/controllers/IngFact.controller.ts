@@ -10,7 +10,6 @@ export class IngFactController {
             const result = await this.ingresosFacturacionUseCases.getIDForm(stuID, roomID);
             res.status(200).json(result);
         } catch (error) {
-            console.log(error);
             next(error);
         }
     };
@@ -31,7 +30,6 @@ export class IngFactController {
             const result = await this.ingresosFacturacionUseCases.getIDForm(stuID, roomID);
             res.status(200).json(result);
         } catch (error) {
-            console.log(error);
             next(error);
         }
     };
