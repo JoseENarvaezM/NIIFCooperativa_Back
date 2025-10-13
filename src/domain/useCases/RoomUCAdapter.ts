@@ -42,8 +42,9 @@ export class RoomUCAdapter implements RoomUCIntPort {
         }
 
         const existRoomByPassword = await this.roomGateway.validateRoomPassword(room.roomPassword);
-        if (!existRoomByPassword) {
-            this.errorFormatter.genericError(`Room con contraseña ${room.roomPassword} no existe.`);
+
+        if (existRoomByPassword) {
+            this.errorFormatter.genericError(`Room con contraseña ${room.roomPassword} ya existe.`);
             return null;
         }
 
