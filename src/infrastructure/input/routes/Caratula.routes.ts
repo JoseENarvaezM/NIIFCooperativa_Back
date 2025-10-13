@@ -18,12 +18,19 @@ import { AuthUCAdapter } from "../../../domain/useCases/AuthUCAdapter";
 import { EncryptAdapter } from "../../output/auth/EncryptAdapter";
 import { AuthAdapter } from "../../output/auth/AuthAdapter";
 
+import { StudentRoomMiddleware } from "../middlewares/StudentRoomMiddleware";
+import { RoomUCAdapter } from "../../../domain/useCases/RoomUCAdapter";
+import { RoomGatewayAdapter } from "../../output/persistence/gateway/RoomGatewayAdapter";
+
 export class CaratulaRoutes {
     static get routes(): Router {
         const router = Router();
 
         const caratulaGateway: FormsGatewayIntPort<FormCaratula> = new CaratulaGatewayAdapter();
         const exceptionHandler: ErrorFormatterIntPort = new ExceptionHandler();
+
+        const studentRoomMiddleware = new StudentRoomMiddleware(new RoomUCAdapter(new RoomGatewayAdapter(), exceptionHandler));
+
         const caratulaUseCases = new CaratulaUCAdapter(caratulaGateway,exceptionHandler);
         const caratulaController: CaratulaController = new CaratulaController(caratulaUseCases);
         const validatorMiddleware = new ValidatorMiddleware(CaratulaSchema);
@@ -31,7 +38,7 @@ export class CaratulaRoutes {
 
 
         router.get("/id", authMiddleware.authenticate("student"), caratulaController.getIDCaratula);
-        router.put("/id", validatorMiddleware.validate, authMiddleware.authenticate("student"), caratulaController.putCaratula);
+        router.put("/id", validatorMiddleware.validate, authMiddleware.authenticate("student"), studentRoomMiddleware.verifyRoom(), caratulaController.putCaratula);
         router.get("/student/:stuID/room/:roomID", authMiddleware.authenticate("professor"), caratulaController.getCaratulaByStudentAndRoom);
         return router;
     }

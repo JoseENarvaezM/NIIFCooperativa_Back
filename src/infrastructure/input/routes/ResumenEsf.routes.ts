@@ -18,12 +18,19 @@ import { AuthUCAdapter } from "../../../domain/useCases/AuthUCAdapter";
 import { EncryptAdapter } from "../../output/auth/EncryptAdapter";
 import { AuthAdapter } from "../../output/auth/AuthAdapter";
 
+import { StudentRoomMiddleware } from "../middlewares/StudentRoomMiddleware";
+import { RoomUCAdapter } from "../../../domain/useCases/RoomUCAdapter";
+import { RoomGatewayAdapter } from "../../output/persistence/gateway/RoomGatewayAdapter";
+
 export class ResumenEsfRoutes {
     static get routes(): Router {
         const router = Router();
 
         const resumenEsfGateway: FormsGatewayIntPort<FormResumenEsferi> = new ResumenEsfGatewayAdapter();
         const exceptionHandler: ErrorFormatterIntPort = new ExceptionHandler();
+
+        const studentRoomMiddleware = new StudentRoomMiddleware(new RoomUCAdapter(new RoomGatewayAdapter(), exceptionHandler));
+        
         const resumenEsfUseCases = new ResumenEsfUCAdapter(resumenEsfGateway,exceptionHandler);
         const resumenEsfController: ResumenEsfController = new ResumenEsfController(resumenEsfUseCases);
         const validatorMiddleware = new ValidatorMiddleware(ResumenESFSchema);
@@ -31,7 +38,7 @@ export class ResumenEsfRoutes {
 
 
         router.get("/id", authMiddleware.authenticate("student"), resumenEsfController.getIDResumenEsferi);
-        router.put("/id", validatorMiddleware.validate, authMiddleware.authenticate("student"), resumenEsfController.updateResumenEsferi);
+        router.put("/id", validatorMiddleware.validate, authMiddleware.authenticate("student"), studentRoomMiddleware.verifyRoom(), resumenEsfController.updateResumenEsferi);
         router.get("/student/:stuID/room/:roomID", authMiddleware.authenticate("professor"), resumenEsfController.getResumenEsferiByStudentAndRoom);
         return router;
     }

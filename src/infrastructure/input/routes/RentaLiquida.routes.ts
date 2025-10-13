@@ -18,12 +18,19 @@ import { AuthUCAdapter } from "../../../domain/useCases/AuthUCAdapter";
 import { EncryptAdapter } from "../../output/auth/EncryptAdapter";
 import { AuthAdapter } from "../../output/auth/AuthAdapter";
 
+import { StudentRoomMiddleware } from "../middlewares/StudentRoomMiddleware";
+import { RoomUCAdapter } from "../../../domain/useCases/RoomUCAdapter";
+import { RoomGatewayAdapter } from "../../output/persistence/gateway/RoomGatewayAdapter";
+
 export class RentaLiquidaRoutes {
     static get routes(): Router {
         const router = Router();
 
         const rentaLiquidaGateway: FormsGatewayIntPort<FormRentaLiquida> = new RentaLiquidaGatewayAdapter();
         const exceptionHandler: ErrorFormatterIntPort = new ExceptionHandler();
+
+        const studentRoomMiddleware = new StudentRoomMiddleware(new RoomUCAdapter(new RoomGatewayAdapter(), exceptionHandler));
+        
         const rentaLiquidaUseCases = new RentaLiquidaUCAdapter(rentaLiquidaGateway,exceptionHandler);
         const rentaLiquidaController: RentaLiquidaController = new RentaLiquidaController(rentaLiquidaUseCases);
         const validatorMiddleware = new ValidatorMiddleware(RentaLiquidaSchema);
@@ -31,7 +38,7 @@ export class RentaLiquidaRoutes {
 
 
         router.get("/id", authMiddleware.authenticate("student"), rentaLiquidaController.getIDRentaLiquida);
-        router.put("/id", validatorMiddleware.validate, authMiddleware.authenticate("student"), rentaLiquidaController.updateRentaLiquida);
+        router.put("/id", validatorMiddleware.validate, authMiddleware.authenticate("student"), studentRoomMiddleware.verifyRoom(), rentaLiquidaController.updateRentaLiquida);
         router.get("/student/:stuID/room/:roomID", authMiddleware.authenticate("professor"), rentaLiquidaController.getRentaLiquidaByStudentAndRoom);
         return router;
     }

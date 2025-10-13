@@ -18,12 +18,19 @@ import { AuthUCAdapter } from "../../../domain/useCases/AuthUCAdapter";
 import { EncryptAdapter } from "../../output/auth/EncryptAdapter";
 import { AuthAdapter } from "../../output/auth/AuthAdapter";
 
+import { StudentRoomMiddleware } from "../middlewares/StudentRoomMiddleware";
+import { RoomUCAdapter } from "../../../domain/useCases/RoomUCAdapter";
+import { RoomGatewayAdapter } from "../../output/persistence/gateway/RoomGatewayAdapter";
+
 export class Form110Routes {
     static get routes(): Router {
         const router = Router();
 
         const form110Gateway: FormsGatewayIntPort<FormR110> = new Form110GatewayAdapter();
         const exceptionHandler: ErrorFormatterIntPort = new ExceptionHandler();
+
+        const studentRoomMiddleware = new StudentRoomMiddleware(new RoomUCAdapter(new RoomGatewayAdapter(), exceptionHandler));
+        
         const form110UseCases = new Form110UCAdapter(form110Gateway,exceptionHandler);
         const form110Controller: Form110Controller = new Form110Controller(form110UseCases);
         const validatorMiddleware = new ValidatorMiddleware(Formulario110Schema);
@@ -31,7 +38,7 @@ export class Form110Routes {
 
 
         router.get("/id", authMiddleware.authenticate("student"), form110Controller.getIDForm110);
-        router.put("/id", validatorMiddleware.validate, authMiddleware.authenticate("student"), form110Controller.putForm110);
+        router.put("/id", validatorMiddleware.validate, authMiddleware.authenticate("student"), studentRoomMiddleware.verifyRoom(), form110Controller.putForm110);
         router.get("/student/:stuID/room/:roomID", authMiddleware.authenticate("professor"), form110Controller.getForm110ByStudentAndRoom);
         return router;
     }
