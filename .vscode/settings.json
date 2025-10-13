@@ -1,3 +1,12 @@
 {
-    "postman.settings.dotenv-detection-notification-visibility": false
+    "postman.settings.dotenv-detection-notification-visibility": false,
+    "jest.runMode": "on-demand",
+    "jest.outputConfig": {
+        "revealOn": "run",
+        "revealWithFocus": "test-results",
+        "clearOnRun": "terminal"
+    },
+    "testing.automaticallyOpenPeekView": "failureInVisibleDocument",
+    "testing.openTesting": "neverOpen",
+    "testing.automaticallyOpenTestResults": "neverOpen"
 }
