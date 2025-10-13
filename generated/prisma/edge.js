@@ -302,7 +302,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "D:\\Universidad\\TrabajoGrado\\NuevoCodigo\\NIIFCooperativa_Back\\generated\\prisma",
+      "value": "/home/jaycom/Universidad/TrabajoGrado/nuevo_codigo/NIIFCooperativa_Back/generated/prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -311,12 +311,12 @@ const config = {
     "binaryTargets": [
       {
         "fromEnvVar": null,
-        "value": "windows",
+        "value": "debian-openssl-3.0.x",
         "native": true
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "D:\\Universidad\\TrabajoGrado\\NuevoCodigo\\NIIFCooperativa_Back\\prisma\\schema.prisma",
+    "sourceFilePath": "/home/jaycom/Universidad/TrabajoGrado/nuevo_codigo/NIIFCooperativa_Back/prisma/schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
@@ -330,7 +330,7 @@ const config = {
     "db"
   ],
   "activeProvider": "mysql",
-  "postinstall": false,
+  "postinstall": true,
   "inlineDatasources": {
     "db": {
       "url": {
