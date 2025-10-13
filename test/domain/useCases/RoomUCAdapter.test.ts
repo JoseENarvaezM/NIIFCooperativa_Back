@@ -218,7 +218,7 @@ describe("RoomUCAdapter", () => {
       await roomUCAdapter.deleteRoomByID("room999");
 
       // Assert
-      expect(mockErrorFormatter.errorNotFound).toHaveBeenCalledWith("Room con ID room999 no existe.");
+      expect(mockErrorFormatter.errorNotFound).toHaveBeenCalledWith("La sala no existe.");
     });
   });
 
