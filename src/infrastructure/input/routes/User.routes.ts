@@ -10,6 +10,8 @@ import { userSchema, UserEditSchema } from "../schemas/UserSchema";
 import { AuthMiddleware } from "../middlewares/AuthMiddleware";
 import { AuthUCAdapter } from "../../../domain/useCases/AuthUCAdapter";
 import { ChangePasswordSchema } from "../schemas/ChangePasswordSchema";
+import { RoomGatewayIntPort } from "../../../application/output/RoomGatewayIntPort";
+import { RoomGatewayAdapter } from "../../output/persistence/gateway/RoomGatewayAdapter";
 
 import { EncryptAdapter } from "../../output/auth/EncryptAdapter";
 import { AuthAdapter } from "../../output/auth/AuthAdapter";
@@ -19,8 +21,9 @@ export class UserRoutes {
         const router = Router();
 
         const userGateway: UserGatewayIntPort = new UserGatewayAdapter();
+        const roomGateway: RoomGatewayIntPort = new RoomGatewayAdapter();
         const exceptionHandler: ErrorFormatterIntPort = new ExceptionHandler();
-        const userUseCases = new UserUCAdapter(userGateway, exceptionHandler, new EncryptAdapter());
+        const userUseCases = new UserUCAdapter(userGateway, roomGateway, exceptionHandler, new EncryptAdapter());
         const userController: UserController = new UserController(userUseCases);
         const validatorMiddleware = new ValidatorMiddleware(userSchema);
         const authMiddleware = new AuthMiddleware(new AuthUCAdapter(new UserGatewayAdapter(), exceptionHandler, new EncryptAdapter(), new AuthAdapter()));

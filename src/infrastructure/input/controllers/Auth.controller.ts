@@ -18,7 +18,6 @@ export class AuthController {
                 res.status(401).json({ message: "Invalid credentials" });
             }
         } catch (error) {
-            console.error("Login error:", error);
             next(error);
         }
     };

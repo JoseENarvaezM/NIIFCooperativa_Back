@@ -156,7 +156,7 @@ describe("RoomUCAdapter", () => {
         roomPassword: "pass123",
       } as Room;
       mockRoomGateway.obtainRoomByID.mockResolvedValue(existingRoom);
-      mockRoomGateway.validateRoomPassword.mockResolvedValue(existingRoom);
+      mockRoomGateway.validateRoomPassword.mockResolvedValue(null); // null = contraseña no existe en otra sala
       mockRoomGateway.uptdateRoom.mockResolvedValue(updatedRoom);
 
       // Act
@@ -179,12 +179,14 @@ describe("RoomUCAdapter", () => {
       expect(mockErrorFormatter.errorNotFound).toHaveBeenCalledWith("Room con ID room999 no existe.");
     });
 
-    it("debería lanzar error cuando la contraseña no es válida", async () => {
+    it("debería lanzar error cuando la contraseña ya existe", async () => {
       // Arrange
-      const existingRoom: Room = { roomID: "room1" } as Room;
-      const updatedRoom: Room = { roomPassword: "wrong-pass" } as Room;
+      const existingRoom: Room = { roomID: "room1", roomPassword: "old-pass" } as Room;
+      const updatedRoom: Room = { roomPassword: "existing-pass" } as Room;
+      const roomWithExistingPassword: Room = { roomID: "room2", roomPassword: "existing-pass" } as Room;
+      
       mockRoomGateway.obtainRoomByID.mockResolvedValue(existingRoom);
-      mockRoomGateway.validateRoomPassword.mockResolvedValue(null);
+      mockRoomGateway.validateRoomPassword.mockResolvedValue(roomWithExistingPassword); // Retorna una sala indicando que la contraseña ya existe
 
       // Act
       const result = await roomUCAdapter.uptdateRoom("room1", updatedRoom);
@@ -192,7 +194,7 @@ describe("RoomUCAdapter", () => {
       // Assert
       expect(result).toBeNull();
       expect(mockErrorFormatter.genericError).toHaveBeenCalledWith(
-        "Room con contraseña wrong-pass no existe."
+        "Room con contraseña existing-pass ya existe."
       );
     });
   });
@@ -218,7 +220,7 @@ describe("RoomUCAdapter", () => {
       await roomUCAdapter.deleteRoomByID("room999");
 
       // Assert
-      expect(mockErrorFormatter.errorNotFound).toHaveBeenCalledWith("Room con ID room999 no existe.");
+      expect(mockErrorFormatter.errorNotFound).toHaveBeenCalledWith("La sala no existe.");
     });
   });
 

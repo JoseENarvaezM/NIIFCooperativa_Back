@@ -17,7 +17,6 @@ export class StudentController {
                 usuRole: result!.usuRole
             });
         } catch (error) {
-            console.error(error);
             next(error);
         }
     };

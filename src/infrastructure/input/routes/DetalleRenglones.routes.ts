@@ -18,12 +18,19 @@ import { AuthUCAdapter } from "../../../domain/useCases/AuthUCAdapter";
 import { EncryptAdapter } from "../../output/auth/EncryptAdapter";
 import { AuthAdapter } from "../../output/auth/AuthAdapter";
 
+import { StudentRoomMiddleware } from "../middlewares/StudentRoomMiddleware";
+import { RoomUCAdapter } from "../../../domain/useCases/RoomUCAdapter";
+import { RoomGatewayAdapter } from "../../output/persistence/gateway/RoomGatewayAdapter";
+
 export class DetalleRenglonesRoutes {
     static get routes(): Router {
         const router = Router();
 
         const detalleRenglonesGateway: FormsGatewayIntPort<FormDetalleRenglones> = new DetalleRenglonesGatewayAdapter();
         const exceptionHandler: ErrorFormatterIntPort = new ExceptionHandler();
+
+        const studentRoomMiddleware = new StudentRoomMiddleware(new RoomUCAdapter(new RoomGatewayAdapter(), exceptionHandler));
+
         const detalleRenglonesUseCases = new DetalleRenglonesUCAdapter(detalleRenglonesGateway,exceptionHandler);
         const detalleRenglonesController: DetalleRenglonesController = new DetalleRenglonesController(detalleRenglonesUseCases);
         const validatorMiddleware = new ValidatorMiddleware(DetalleRenglonesSchema);
@@ -31,7 +38,7 @@ export class DetalleRenglonesRoutes {
 
 
         router.get("/id", authMiddleware.authenticate("student"), detalleRenglonesController.getIDDetalleRenglones);
-        router.put("/id", validatorMiddleware.validate, authMiddleware.authenticate("student"), detalleRenglonesController.putDetalleRenglones);
+        router.put("/id", validatorMiddleware.validate, authMiddleware.authenticate("student"), studentRoomMiddleware.verifyRoom(), detalleRenglonesController.putDetalleRenglones);
         router.get("/student/:stuID/room/:roomID", authMiddleware.authenticate("professor"), detalleRenglonesController.getDetalleRenglonesByStudentAndRoom);
         return router;
     }

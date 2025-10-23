@@ -32,8 +32,7 @@ export class UserController {
       res.status(200).json(result);
     }
     catch (error) {
-      console.error("Error fetching professors:", error);
-      res.status(500).json({ error: "Internal Server Error" });
+      next(error);
     }
   };
 
@@ -102,7 +101,6 @@ export class UserController {
       res.status(204).json(result);
     }
     catch (error) {
-      console.log("Error deleting user:", error);
       next(error);
     }
   };
@@ -115,7 +113,6 @@ export class UserController {
 
       res.status(200).json(result);
     } catch (error) {
-      console.log("Error changing user password:", error);
       next(error);
     }
   }

@@ -18,12 +18,19 @@ import { AuthUCAdapter } from "../../../domain/useCases/AuthUCAdapter";
 import { EncryptAdapter } from "../../output/auth/EncryptAdapter";
 import { AuthAdapter } from "../../output/auth/AuthAdapter";
 
+import { StudentRoomMiddleware } from "../middlewares/StudentRoomMiddleware";
+import { RoomUCAdapter } from "../../../domain/useCases/RoomUCAdapter";
+import { RoomGatewayAdapter } from "../../output/persistence/gateway/RoomGatewayAdapter";
+
 export class IngFactRoutes {
     static get routes(): Router {
         const router = Router();
 
         const ingFactGateway: FormsGatewayIntPort<FormIngresosFancturacion> = new IngFactGatewayAdapter();
         const exceptionHandler: ErrorFormatterIntPort = new ExceptionHandler();
+
+        const studentRoomMiddleware = new StudentRoomMiddleware(new RoomUCAdapter(new RoomGatewayAdapter(), exceptionHandler));
+        
         const ingFactUseCases = new IngFactUCAdapter(ingFactGateway,exceptionHandler);
         const ingFactController: IngFactController = new IngFactController(ingFactUseCases);
         const validatorMiddleware = new ValidatorMiddleware(IngresosFacturacionSchema);
@@ -31,7 +38,7 @@ export class IngFactRoutes {
 
 
         router.get("/id", authMiddleware.authenticate("student"), ingFactController.getIDIngresosFacturacion);
-        router.put("/id", validatorMiddleware.validate, authMiddleware.authenticate("student"), ingFactController.putIngresosFacturacion);
+        router.put("/id", validatorMiddleware.validate, authMiddleware.authenticate("student"), studentRoomMiddleware.verifyRoom(), ingFactController.putIngresosFacturacion);
         router.get("/student/:stuID/room/:roomID", authMiddleware.authenticate("professor"), ingFactController.getFormByStudentAndRoom);
         return router;
     }

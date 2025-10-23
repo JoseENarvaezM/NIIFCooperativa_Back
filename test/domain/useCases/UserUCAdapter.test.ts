@@ -1,5 +1,6 @@
 import { UserUCAdapter } from "../../../src/domain/useCases/UserUCAdapter";
 import { UserGatewayIntPort } from "../../../src/application/output/UserGatewayIntPort";
+import { RoomGatewayIntPort } from "../../../src/application/output/RoomGatewayIntPort";
 import { ErrorFormatterIntPort } from "../../../src/application/output/ErrorFormaterIntPort";
 import { EncryptIntPort } from "../../../src/application/output/EncryptIntPort";
 import { User } from "../../../src/domain/models/UserModel";
@@ -7,6 +8,7 @@ import { User } from "../../../src/domain/models/UserModel";
 describe("UserUCAdapter", () => {
   let userUCAdapter: UserUCAdapter;
   let mockUserGateway: jest.Mocked<UserGatewayIntPort>;
+  let mockRoomGateway: jest.Mocked<RoomGatewayIntPort>;
   let mockErrorFormatter: jest.Mocked<ErrorFormatterIntPort>;
   let mockEncrypt: jest.Mocked<EncryptIntPort>;
 
@@ -22,6 +24,15 @@ describe("UserUCAdapter", () => {
       listProfessorUsers: jest.fn(),
     } as jest.Mocked<UserGatewayIntPort>;
 
+    mockRoomGateway = {
+      createRoom: jest.fn(),
+      obtainRoomByID: jest.fn(),
+      obtainRoomsByTeacher: jest.fn(),
+      uptdateRoom: jest.fn(),
+      deleteRoomByID: jest.fn(),
+      validateRoomPassword: jest.fn(),
+    } as jest.Mocked<RoomGatewayIntPort>;
+
     mockErrorFormatter = {
       errorNotFound: jest.fn(),
       errorExistsEntity: jest.fn(),
@@ -33,7 +44,12 @@ describe("UserUCAdapter", () => {
       comparePassword: jest.fn(),
     } as jest.Mocked<EncryptIntPort>;
 
-    userUCAdapter = new UserUCAdapter(mockUserGateway, mockErrorFormatter, mockEncrypt);
+    userUCAdapter = new UserUCAdapter(
+      mockUserGateway,
+      mockRoomGateway,
+      mockErrorFormatter,
+      mockEncrypt
+    );
   });
 
   describe("getUserById", () => {
@@ -66,7 +82,9 @@ describe("UserUCAdapter", () => {
 
       // Assert
       expect(result).toBeNull();
-      expect(mockErrorFormatter.errorNotFound).toHaveBeenCalledWith("Usuario con id user999 no existe.");
+      expect(mockErrorFormatter.errorNotFound).toHaveBeenCalledWith(
+        "Usuario con id user999 no existe."
+      );
     });
   });
 
@@ -91,7 +109,9 @@ describe("UserUCAdapter", () => {
       await userUCAdapter.deleteUserById("user999");
 
       // Assert
-      expect(mockErrorFormatter.errorNotFound).toHaveBeenCalledWith("Usuario con id user999 no existe.");
+      expect(mockErrorFormatter.errorNotFound).toHaveBeenCalledWith(
+        "Usuario con id user999 no existe."
+      );
     });
   });
 
@@ -107,10 +127,17 @@ describe("UserUCAdapter", () => {
       mockEncrypt.hashPassword.mockResolvedValue("newHashedPassword");
 
       // Act
-      await userUCAdapter.changeUserPassword("user1", "newPassword", "oldPassword");
+      await userUCAdapter.changeUserPassword(
+        "user1",
+        "newPassword",
+        "oldPassword"
+      );
 
       // Assert
-      expect(mockEncrypt.comparePassword).toHaveBeenCalledWith("oldPassword", "oldHashedPassword");
+      expect(mockEncrypt.comparePassword).toHaveBeenCalledWith(
+        "oldPassword",
+        "oldHashedPassword"
+      );
       expect(mockEncrypt.hashPassword).toHaveBeenCalledWith("newPassword");
       expect(mockUserGateway.updateUser).toHaveBeenCalled();
     });
@@ -125,10 +152,16 @@ describe("UserUCAdapter", () => {
       mockEncrypt.comparePassword.mockResolvedValue(false);
 
       // Act
-      await userUCAdapter.changeUserPassword("user1", "newPassword", "wrongPassword");
+      await userUCAdapter.changeUserPassword(
+        "user1",
+        "newPassword",
+        "wrongPassword"
+      );
 
       // Assert
-      expect(mockErrorFormatter.genericError).toHaveBeenCalledWith("La contraseña vieja es incorrecta.");
+      expect(mockErrorFormatter.genericError).toHaveBeenCalledWith(
+        "La contraseña vieja es incorrecta."
+      );
     });
 
     it("debería lanzar error cuando el usuario no existe", async () => {
@@ -136,10 +169,16 @@ describe("UserUCAdapter", () => {
       mockUserGateway.getUserById.mockResolvedValue(null);
 
       // Act
-      await userUCAdapter.changeUserPassword("user999", "newPassword", "oldPassword");
+      await userUCAdapter.changeUserPassword(
+        "user999",
+        "newPassword",
+        "oldPassword"
+      );
 
       // Assert
-      expect(mockErrorFormatter.errorNotFound).toHaveBeenCalledWith("Usuario con id user999 no existe.");
+      expect(mockErrorFormatter.errorNotFound).toHaveBeenCalledWith(
+        "Usuario con id user999 no existe."
+      );
     });
   });
 
@@ -156,7 +195,10 @@ describe("UserUCAdapter", () => {
       };
       mockUserGateway.existByEmail.mockResolvedValue(false);
       mockEncrypt.hashPassword.mockResolvedValue("hashedPassword");
-      mockUserGateway.createUser.mockResolvedValue({ ...mockUser, usuPassword: "hashedPassword" });
+      mockUserGateway.createUser.mockResolvedValue({
+        ...mockUser,
+        usuPassword: "hashedPassword",
+      });
 
       // Act
       const result = await userUCAdapter.createUser(mockUser);
@@ -200,7 +242,10 @@ describe("UserUCAdapter", () => {
       } as User;
       mockUserGateway.getUserById.mockResolvedValue(existingUser);
       mockEncrypt.hashPassword.mockResolvedValue("hashedNewPassword");
-      mockUserGateway.updateUser.mockResolvedValue({ ...updatedUser, usuPassword: "hashedNewPassword" });
+      mockUserGateway.updateUser.mockResolvedValue({
+        ...updatedUser,
+        usuPassword: "hashedNewPassword",
+      });
 
       // Act
       const result = await userUCAdapter.updateUser("user1", updatedUser);
@@ -243,7 +288,9 @@ describe("UserUCAdapter", () => {
 
       // Assert
       expect(result).toBeNull();
-      expect(mockErrorFormatter.errorNotFound).toHaveBeenCalledWith("Usuario con id user999 no existe.");
+      expect(mockErrorFormatter.errorNotFound).toHaveBeenCalledWith(
+        "Usuario con id user999 no existe."
+      );
     });
 
     it("debería lanzar error cuando el nuevo email ya existe", async () => {
@@ -284,7 +331,9 @@ describe("UserUCAdapter", () => {
 
       // Assert
       expect(result).toEqual(mockProfessors);
-      expect(mockUserGateway.listProfessorUsers).toHaveBeenCalledWith("professor");
+      expect(mockUserGateway.listProfessorUsers).toHaveBeenCalledWith(
+        "professor"
+      );
     });
 
     it("debería lanzar error cuando el rol no es professor", () => {

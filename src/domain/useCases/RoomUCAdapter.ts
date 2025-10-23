@@ -42,8 +42,9 @@ export class RoomUCAdapter implements RoomUCIntPort {
         }
 
         const existRoomByPassword = await this.roomGateway.validateRoomPassword(room.roomPassword);
-        if (!existRoomByPassword) {
-            this.errorFormatter.genericError(`Room con contraseña ${room.roomPassword} no existe.`);
+
+        if (existRoomByPassword) {
+            this.errorFormatter.genericError(`Room con contraseña ${room.roomPassword} ya existe.`);
             return null;
         }
 
@@ -51,11 +52,19 @@ export class RoomUCAdapter implements RoomUCIntPort {
     }
     async deleteRoomByID(roomID: string): Promise<void> {
         const room = await this.roomGateway.obtainRoomByID(roomID);
-        if (room != null) {
-            await this.roomGateway.deleteRoomByID(roomID);
+
+        if (room === null) {
+            this.errorFormatter.errorNotFound("La sala no existe.");
             return;
         }
-        this.errorFormatter.errorNotFound(`Room con ID ${roomID} no existe.`);
+
+        if (room.roomStatus === "open") {
+            this.errorFormatter.genericError("La sala esta abierta, no se puede eliminar.");
+            return;
+        }
+
+        await this.roomGateway.deleteRoomByID(roomID);
+        return;
     }
     async validateRoomPassword(roomPassword: string): Promise<string | null> {
         const result = await this.roomGateway.validateRoomPassword(roomPassword);

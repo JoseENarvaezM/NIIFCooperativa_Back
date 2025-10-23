@@ -18,12 +18,20 @@ import { AuthUCAdapter } from "../../../domain/useCases/AuthUCAdapter";
 import { EncryptAdapter } from "../../output/auth/EncryptAdapter";
 import { AuthAdapter } from "../../output/auth/AuthAdapter";
 
+import { StudentRoomMiddleware } from "../middlewares/StudentRoomMiddleware";
+import { RoomUCAdapter } from "../../../domain/useCases/RoomUCAdapter";
+import { RoomGatewayAdapter } from "../../output/persistence/gateway/RoomGatewayAdapter";
+
 export class ImpuestoDiferidoRoutes {
     static get routes(): Router {
         const router = Router();
 
         const impuestoDiferidoGateway: FormsGatewayIntPort<FormImpuestoDiferido> = new ImpuestoDiferidoGatewayAdapter();
         const exceptionHandler: ErrorFormatterIntPort = new ExceptionHandler();
+
+        const studentRoomMiddleware = new StudentRoomMiddleware(new RoomUCAdapter(new RoomGatewayAdapter(), exceptionHandler));
+        
+
         const impuestoDiferidoUseCases = new ImpuestoDiferidoUCAdapter(impuestoDiferidoGateway,exceptionHandler);
         const impuestoDiferidoController: ImpuestoDiferidoController = new ImpuestoDiferidoController(impuestoDiferidoUseCases);
         const validatorMiddleware = new ValidatorMiddleware(ImpuestoDiferidoSchema);
@@ -31,7 +39,7 @@ export class ImpuestoDiferidoRoutes {
 
 
         router.get("/id", authMiddleware.authenticate("student"), impuestoDiferidoController.getIDImpuestoDiferido);
-        router.put("/id", validatorMiddleware.validate, authMiddleware.authenticate("student"), impuestoDiferidoController.updateImpuestoDiferido);
+        router.put("/id", validatorMiddleware.validate, authMiddleware.authenticate("student"), studentRoomMiddleware.verifyRoom(), impuestoDiferidoController.updateImpuestoDiferido);
         router.get("/student/:stuID/room/:roomID", authMiddleware.authenticate("professor"), impuestoDiferidoController.getImpuestoDiferidoByStudentAndRoom);
         return router;
     }
