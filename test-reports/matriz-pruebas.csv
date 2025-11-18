@@ -1,0 +1,298 @@
+ID,Archivo,Módulo,Categoría,Clase/Componente,Método/Función,Descripción de la Prueba,Tipo de Prueba,Estado,Prioridad
+TC001,"ActivosFijosUCAdapter.test.ts","ActivosFijosUCAdapter","Dominio","ActivosFijosUCAdapter","getIDForm","debería retornar el formulario calculado cuando existe","Normal","Implementada",Normal
+TC002,"ActivosFijosUCAdapter.test.ts","ActivosFijosUCAdapter","Dominio","ActivosFijosUCAdapter","General","debería lanzar error cuando el formulario no existe","Error/Excepción","Implementada",Alta
+TC003,"ActivosFijosUCAdapter.test.ts","ActivosFijosUCAdapter","Dominio","ActivosFijosUCAdapter","updateForm","debería actualizar el formulario correctamente","Exitoso","Implementada",Normal
+TC004,"AuthUCAdapter.test.ts","AuthUCAdapter","Dominio","AuthUCAdapter","login","debería retornar token y datos del usuario cuando las credenciales son correctas","Normal","Implementada",Normal
+TC005,"AuthUCAdapter.test.ts","AuthUCAdapter","Dominio","AuthUCAdapter","General","debería lanzar error cuando el usuario no existe","Error/Excepción","Implementada",Alta
+TC006,"AuthUCAdapter.test.ts","AuthUCAdapter","Dominio","AuthUCAdapter","General","debería lanzar error cuando la contraseña es incorrecta","Error/Excepción","Implementada",Alta
+TC007,"AuthUCAdapter.test.ts","AuthUCAdapter","Dominio","AuthUCAdapter","verifyToken","debería retornar los datos del token cuando es válido","Normal","Implementada",Normal
+TC008,"AuthUCAdapter.test.ts","AuthUCAdapter","Dominio","AuthUCAdapter","General","debería retornar null cuando el token es inválido","Límite","Implementada",Media
+TC009,"CaratulaUCAdapter.test.ts","CaratulaUCAdapter","Dominio","CaratulaUCAdapter","getIDForm","debería retornar el formulario cuando existe","Normal","Implementada",Normal
+TC010,"CaratulaUCAdapter.test.ts","CaratulaUCAdapter","Dominio","CaratulaUCAdapter","General","debería lanzar error cuando el formulario no existe","Error/Excepción","Implementada",Alta
+TC011,"CaratulaUCAdapter.test.ts","CaratulaUCAdapter","Dominio","CaratulaUCAdapter","updateForm","debería actualizar el formulario correctamente","Exitoso","Implementada",Normal
+TC012,"DetalleRenglonesUCAdapter.test.ts","DetalleRenglonesUCAdapter","Dominio","DetalleRenglonesUCAdapter","getIDForm","debería retornar el formulario cuando existe","Normal","Implementada",Normal
+TC013,"DetalleRenglonesUCAdapter.test.ts","DetalleRenglonesUCAdapter","Dominio","DetalleRenglonesUCAdapter","General","debería lanzar error cuando el formulario no existe","Error/Excepción","Implementada",Alta
+TC014,"DetalleRenglonesUCAdapter.test.ts","DetalleRenglonesUCAdapter","Dominio","DetalleRenglonesUCAdapter","updateForm","debería actualizar el formulario correctamente","Exitoso","Implementada",Normal
+TC015,"EsfPatrimonioUCAdapter.test.ts","EsfPatrimonioUCAdapter","Dominio","EsfPatrimonioUCAdapter","getIDForm","debería retornar el formulario calculado cuando existe","Normal","Implementada",Normal
+TC016,"EsfPatrimonioUCAdapter.test.ts","EsfPatrimonioUCAdapter","Dominio","EsfPatrimonioUCAdapter","General","debería lanzar error cuando el formulario no existe","Error/Excepción","Implementada",Alta
+TC017,"EsfPatrimonioUCAdapter.test.ts","EsfPatrimonioUCAdapter","Dominio","EsfPatrimonioUCAdapter","updateForm","debería actualizar el formulario correctamente","Exitoso","Implementada",Normal
+TC018,"Form110UCAdapter.test.ts","Form110UCAdapter","Dominio","Form110UCAdapter","getIDForm","debería retornar el formulario calculado cuando existe","Normal","Implementada",Normal
+TC019,"Form110UCAdapter.test.ts","Form110UCAdapter","Dominio","Form110UCAdapter","General","debería retornar el formulario calculado (Promise) incluso cuando se resuelve a null","Límite","Implementada",Media
+TC020,"Form110UCAdapter.test.ts","Form110UCAdapter","Dominio","Form110UCAdapter","General","debería lanzar error cuando el formulario no existe","Error/Excepción","Implementada",Alta
+TC021,"Form110UCAdapter.test.ts","Form110UCAdapter","Dominio","Form110UCAdapter","updateForm","debería actualizar el formulario correctamente","Exitoso","Implementada",Normal
+TC022,"ImpuestoDiferidoUCAdapter.test.ts","ImpuestoDiferidoUCAdapter","Dominio","ImpuestoDiferidoUCAdapter","getIDForm","debería retornar el formulario calculado cuando existe","Normal","Implementada",Normal
+TC023,"ImpuestoDiferidoUCAdapter.test.ts","ImpuestoDiferidoUCAdapter","Dominio","ImpuestoDiferidoUCAdapter","General","debería lanzar error cuando el formulario no existe","Error/Excepción","Implementada",Alta
+TC024,"ImpuestoDiferidoUCAdapter.test.ts","ImpuestoDiferidoUCAdapter","Dominio","ImpuestoDiferidoUCAdapter","updateForm","debería actualizar el formulario correctamente","Exitoso","Implementada",Normal
+TC025,"IngFactUCAdapter.test.ts","IngFactUCAdapter","Dominio","IngFactUCAdapter","getIDForm","debería retornar el formulario calculado cuando existe","Normal","Implementada",Normal
+TC026,"IngFactUCAdapter.test.ts","IngFactUCAdapter","Dominio","IngFactUCAdapter","General","debería lanzar error cuando el formulario no existe","Error/Excepción","Implementada",Alta
+TC027,"IngFactUCAdapter.test.ts","IngFactUCAdapter","Dominio","IngFactUCAdapter","updateForm","debería actualizar el formulario correctamente","Exitoso","Implementada",Normal
+TC028,"RentaLiquidaUCAdapter.test.ts","RentaLiquidaUCAdapter","Dominio","RentaLiquidaUCAdapter","getIDForm","debería retornar el formulario calculado cuando existe","Normal","Implementada",Normal
+TC029,"RentaLiquidaUCAdapter.test.ts","RentaLiquidaUCAdapter","Dominio","RentaLiquidaUCAdapter","General","debería lanzar error cuando el formulario no existe","Error/Excepción","Implementada",Alta
+TC030,"RentaLiquidaUCAdapter.test.ts","RentaLiquidaUCAdapter","Dominio","RentaLiquidaUCAdapter","updateForm","debería actualizar el formulario correctamente","Exitoso","Implementada",Normal
+TC031,"ReportUCAdapter.test.ts","ReportUCAdapter","Dominio","ReportUCAdapter","getReportByID","debería retornar el reporte cuando existe","Normal","Implementada",Normal
+TC032,"ReportUCAdapter.test.ts","ReportUCAdapter","Dominio","ReportUCAdapter","General","debería lanzar error cuando el reporte no existe","Error/Excepción","Implementada",Alta
+TC033,"ResumenEsfUCAdapter.test.ts","ResumenEsfUCAdapter","Dominio","ResumenEsfUCAdapter","getIDForm","debería retornar el formulario calculado cuando existe","Normal","Implementada",Normal
+TC034,"ResumenEsfUCAdapter.test.ts","ResumenEsfUCAdapter","Dominio","ResumenEsfUCAdapter","General","debería lanzar error cuando el formulario no existe","Error/Excepción","Implementada",Alta
+TC035,"ResumenEsfUCAdapter.test.ts","ResumenEsfUCAdapter","Dominio","ResumenEsfUCAdapter","updateForm","debería actualizar el formulario correctamente","Exitoso","Implementada",Normal
+TC036,"RoomUCAdapter.test.ts","RoomUCAdapter","Dominio","RoomUCAdapter","createRoom","debería crear una sala cuando la contraseña no existe","Normal","Implementada",Normal
+TC037,"RoomUCAdapter.test.ts","RoomUCAdapter","Dominio","RoomUCAdapter","General","debería lanzar error cuando la contraseña ya existe","Error/Excepción","Implementada",Alta
+TC038,"RoomUCAdapter.test.ts","RoomUCAdapter","Dominio","RoomUCAdapter","obtainRoomByID","debería retornar la sala cuando existe","Normal","Implementada",Normal
+TC039,"RoomUCAdapter.test.ts","RoomUCAdapter","Dominio","RoomUCAdapter","General","debería lanzar error cuando la sala no existe","Error/Excepción","Implementada",Alta
+TC040,"RoomUCAdapter.test.ts","RoomUCAdapter","Dominio","RoomUCAdapter","obtainRoomsByTeacher","debería retornar las salas del profesor","Normal","Implementada",Normal
+TC041,"RoomUCAdapter.test.ts","RoomUCAdapter","Dominio","RoomUCAdapter","uptdateRoom","debería actualizar la sala cuando existe y la contraseña es válida","Normal","Implementada",Normal
+TC042,"RoomUCAdapter.test.ts","RoomUCAdapter","Dominio","RoomUCAdapter","General","debería lanzar error cuando la sala no existe","Error/Excepción","Implementada",Alta
+TC043,"RoomUCAdapter.test.ts","RoomUCAdapter","Dominio","RoomUCAdapter","General","debería lanzar error cuando la contraseña ya existe","Error/Excepción","Implementada",Alta
+TC044,"RoomUCAdapter.test.ts","RoomUCAdapter","Dominio","RoomUCAdapter","deleteRoomByID","debería eliminar la sala cuando existe","Normal","Implementada",Normal
+TC045,"RoomUCAdapter.test.ts","RoomUCAdapter","Dominio","RoomUCAdapter","General","debería lanzar error cuando la sala no existe","Error/Excepción","Implementada",Alta
+TC046,"RoomUCAdapter.test.ts","RoomUCAdapter","Dominio","RoomUCAdapter","validateRoomPassword","debería retornar el roomID cuando la contraseña es válida y la sala está abierta","Normal","Implementada",Normal
+TC047,"RoomUCAdapter.test.ts","RoomUCAdapter","Dominio","RoomUCAdapter","General","debería lanzar error cuando la contraseña no existe","Error/Excepción","Implementada",Alta
+TC048,"RoomUCAdapter.test.ts","RoomUCAdapter","Dominio","RoomUCAdapter","General","debería lanzar error cuando la sala está cerrada","Error/Excepción","Implementada",Alta
+TC049,"RoomUCAdapter.test.ts","RoomUCAdapter","Dominio","RoomUCAdapter","changeRoomState","debería cambiar el estado de la sala cuando existe","Normal","Implementada",Normal
+TC050,"RoomUCAdapter.test.ts","RoomUCAdapter","Dominio","RoomUCAdapter","General","debería lanzar error cuando la sala no existe","Error/Excepción","Implementada",Alta
+TC051,"StudentUCAdapter.test.ts","StudentUCAdapter","Dominio","StudentUCAdapter","createStudent","debería crear un estudiante con todos los formularios y retornar token","Normal","Implementada",Normal
+TC052,"StudentUCAdapter.test.ts","StudentUCAdapter","Dominio","StudentUCAdapter","General","debería lanzar error cuando el room no existe","Error/Excepción","Implementada",Alta
+TC053,"StudentUCAdapter.test.ts","StudentUCAdapter","Dominio","StudentUCAdapter","General","debería lanzar error cuando el estudiante ya existe en el room","Error/Excepción","Implementada",Alta
+TC054,"StudentUCAdapter.test.ts","StudentUCAdapter","Dominio","StudentUCAdapter","getStudents","debería retornar todos los estudiantes","Normal","Implementada",Normal
+TC055,"StudentUCAdapter.test.ts","StudentUCAdapter","Dominio","StudentUCAdapter","getStudentById","debería retornar el estudiante cuando existe","Normal","Implementada",Normal
+TC056,"StudentUCAdapter.test.ts","StudentUCAdapter","Dominio","StudentUCAdapter","General","debería lanzar error cuando el estudiante no existe","Error/Excepción","Implementada",Alta
+TC057,"StudentUCAdapter.test.ts","StudentUCAdapter","Dominio","StudentUCAdapter","updateStudent","debería actualizar el estudiante cuando existe","Normal","Implementada",Normal
+TC058,"StudentUCAdapter.test.ts","StudentUCAdapter","Dominio","StudentUCAdapter","General","debería lanzar error cuando el estudiante no existe","Error/Excepción","Implementada",Alta
+TC059,"StudentUCAdapter.test.ts","StudentUCAdapter","Dominio","StudentUCAdapter","deleteStudent","debería eliminar el estudiante cuando existe","Normal","Implementada",Normal
+TC060,"StudentUCAdapter.test.ts","StudentUCAdapter","Dominio","StudentUCAdapter","General","debería lanzar error cuando el estudiante no existe","Error/Excepción","Implementada",Alta
+TC061,"StudentUCAdapter.test.ts","StudentUCAdapter","Dominio","StudentUCAdapter","getStudentByCedulaRoom","debería retornar el estudiante con token cuando existe","Normal","Implementada",Normal
+TC062,"StudentUCAdapter.test.ts","StudentUCAdapter","Dominio","StudentUCAdapter","General","debería lanzar error cuando el room no existe","Error/Excepción","Implementada",Alta
+TC063,"StudentUCAdapter.test.ts","StudentUCAdapter","Dominio","StudentUCAdapter","General","debería lanzar error cuando el estudiante no existe en el room","Error/Excepción","Implementada",Alta
+TC064,"StudentUCAdapter.test.ts","StudentUCAdapter","Dominio","StudentUCAdapter","searchStudentsByRoom","debería retornar los estudiantes del room","Normal","Implementada",Normal
+TC065,"UserUCAdapter.test.ts","UserUCAdapter","Dominio","UserUCAdapter","getUserById","debería retornar el usuario sin contraseña cuando existe","Normal","Implementada",Normal
+TC066,"UserUCAdapter.test.ts","UserUCAdapter","Dominio","UserUCAdapter","General","debería lanzar error cuando el usuario no existe","Error/Excepción","Implementada",Alta
+TC067,"UserUCAdapter.test.ts","UserUCAdapter","Dominio","UserUCAdapter","deleteUserById","debería eliminar el usuario cuando existe","Normal","Implementada",Normal
+TC068,"UserUCAdapter.test.ts","UserUCAdapter","Dominio","UserUCAdapter","General","debería lanzar error cuando el usuario no existe","Error/Excepción","Implementada",Alta
+TC069,"UserUCAdapter.test.ts","UserUCAdapter","Dominio","UserUCAdapter","changeUserPassword","debería cambiar la contraseña cuando la contraseña vieja es correcta","Normal","Implementada",Normal
+TC070,"UserUCAdapter.test.ts","UserUCAdapter","Dominio","UserUCAdapter","General","debería lanzar error cuando la contraseña vieja es incorrecta","Error/Excepción","Implementada",Alta
+TC071,"UserUCAdapter.test.ts","UserUCAdapter","Dominio","UserUCAdapter","General","debería lanzar error cuando el usuario no existe","Error/Excepción","Implementada",Alta
+TC072,"UserUCAdapter.test.ts","UserUCAdapter","Dominio","UserUCAdapter","createUser","debería crear un usuario cuando el email no existe","Normal","Implementada",Normal
+TC073,"UserUCAdapter.test.ts","UserUCAdapter","Dominio","UserUCAdapter","General","debería lanzar error cuando el email ya existe","Error/Excepción","Implementada",Alta
+TC074,"UserUCAdapter.test.ts","UserUCAdapter","Dominio","UserUCAdapter","updateUser","debería actualizar el usuario cuando existe y el email no cambia","Normal","Implementada",Normal
+TC075,"UserUCAdapter.test.ts","UserUCAdapter","Dominio","UserUCAdapter","General","debería validar el nuevo email cuando cambia","Normal","Implementada",Normal
+TC076,"UserUCAdapter.test.ts","UserUCAdapter","Dominio","UserUCAdapter","General","debería lanzar error cuando el usuario no existe","Error/Excepción","Implementada",Alta
+TC077,"UserUCAdapter.test.ts","UserUCAdapter","Dominio","UserUCAdapter","General","debería lanzar error cuando el nuevo email ya existe","Error/Excepción","Implementada",Alta
+TC078,"UserUCAdapter.test.ts","UserUCAdapter","Dominio","UserUCAdapter","listProfessorUsers","debería retornar la lista de profesores cuando el rol es professor","Normal","Implementada",Normal
+TC079,"UserUCAdapter.test.ts","UserUCAdapter","Dominio","UserUCAdapter","General","debería lanzar error cuando el rol no es professor","Error/Excepción","Implementada",Alta
+TC080,"Auth.controller.test.ts","Auth.controller","Infraestructura","AuthController","login","debe iniciar sesión exitosamente con credenciales válidas","Exitoso","Implementada",Normal
+TC081,"Auth.controller.test.ts","Auth.controller","Infraestructura","AuthController","General","debe retornar 401 cuando las credenciales son inválidas","Normal","Implementada",Normal
+TC082,"Auth.controller.test.ts","Auth.controller","Infraestructura","AuthController","General","debe manejar errores y llamar a next","Error/Excepción","Implementada",Alta
+TC083,"Auth.controller.test.ts","Auth.controller","Infraestructura","AuthController","General","debe manejar login de usuario admin","Normal","Implementada",Normal
+TC084,"Auth.controller.test.ts","Auth.controller","Infraestructura","AuthController","logout","debe cerrar sesión exitosamente","Exitoso","Implementada",Normal
+TC085,"Auth.controller.test.ts","Auth.controller","Infraestructura","AuthController","General","debe manejar errores durante logout","Error/Excepción","Implementada",Alta
+TC086,"Auth.controller.test.ts","Auth.controller","Infraestructura","AuthController","profile","debe retornar el perfil del usuario autenticado","Normal","Implementada",Normal
+TC087,"Auth.controller.test.ts","Auth.controller","Infraestructura","AuthController","General","debe manejar errores al obtener el perfil","Error/Excepción","Implementada",Alta
+TC088,"Auth.controller.test.ts","Auth.controller","Infraestructura","AuthController","studentProfile","debe retornar el perfil del estudiante autenticado","Normal","Implementada",Normal
+TC089,"Auth.controller.test.ts","Auth.controller","Infraestructura","AuthController","General","debe manejar errores al obtener el perfil del estudiante","Error/Excepción","Implementada",Alta
+TC090,"ResumenEsf.controller.test.ts","ResumenEsf.controller","Infraestructura","ResumenEsfController","getIDResumenEsferi","debe retornar el resumen esf del usuario autenticado","Normal","Implementada",Normal
+TC091,"ResumenEsf.controller.test.ts","ResumenEsf.controller","Infraestructura","ResumenEsfController","General","debe manejar cuando no existe el resumen esf","Normal","Implementada",Normal
+TC092,"ResumenEsf.controller.test.ts","ResumenEsf.controller","Infraestructura","ResumenEsfController","General","debe manejar errores y llamar a next","Error/Excepción","Implementada",Alta
+TC093,"ResumenEsf.controller.test.ts","ResumenEsf.controller","Infraestructura","ResumenEsfController","updateResumenEsferi","debe actualizar el resumen esf exitosamente","Exitoso","Implementada",Normal
+TC094,"ResumenEsf.controller.test.ts","ResumenEsf.controller","Infraestructura","ResumenEsfController","General","debe manejar errores durante la actualización","Error/Excepción","Implementada",Alta
+TC095,"ResumenEsf.controller.test.ts","ResumenEsf.controller","Infraestructura","ResumenEsfController","getResumenEsferiByStudentAndRoom","debe retornar el resumen esf por stuID y roomID desde params","Normal","Implementada",Normal
+TC096,"ResumenEsf.controller.test.ts","ResumenEsf.controller","Infraestructura","ResumenEsfController","General","debe retornar null cuando no existe el resumen","Límite","Implementada",Media
+TC097,"ResumenEsf.controller.test.ts","ResumenEsf.controller","Infraestructura","ResumenEsfController","General","debe manejar errores","Error/Excepción","Implementada",Alta
+TC098,"AuthMiddleware.test.ts","AuthMiddleware","Infraestructura","AuthMiddleware","authenticate","debe autenticar exitosamente con token válido y sin restricción de roles","Exitoso","Implementada",Normal
+TC099,"AuthMiddleware.test.ts","AuthMiddleware","Infraestructura","AuthMiddleware","General","debe autenticar exitosamente con rol permitido","Exitoso","Implementada",Normal
+TC100,"AuthMiddleware.test.ts","AuthMiddleware","Infraestructura","AuthMiddleware","General","debe rechazar cuando no hay token","Normal","Implementada",Normal
+TC101,"AuthMiddleware.test.ts","AuthMiddleware","Infraestructura","AuthMiddleware","General","debe rechazar cuando el token es inválido","Normal","Implementada",Normal
+TC102,"AuthMiddleware.test.ts","AuthMiddleware","Infraestructura","AuthMiddleware","General","debe rechazar cuando el rol del usuario no está permitido","Normal","Implementada",Normal
+TC103,"AuthMiddleware.test.ts","AuthMiddleware","Infraestructura","AuthMiddleware","General","debe permitir acceso cuando el usuario tiene uno de los roles permitidos","Normal","Implementada",Normal
+TC104,"AuthMiddleware.test.ts","AuthMiddleware","Infraestructura","AuthMiddleware","General","debe manejar errores durante la verificación del token","Error/Excepción","Implementada",Alta
+TC105,"AuthMiddleware.test.ts","AuthMiddleware","Infraestructura","AuthMiddleware","General","debe manejar múltiples roles permitidos correctamente","Exitoso","Implementada",Normal
+TC106,"ValidatorMiddleware.test.ts","ValidatorMiddleware","Infraestructura","ValidatorMiddleware","validate","debe validar exitosamente datos correctos","Exitoso","Implementada",Normal
+TC107,"ValidatorMiddleware.test.ts","ValidatorMiddleware","Infraestructura","ValidatorMiddleware","General","debe rechazar datos con email inválido","Normal","Implementada",Normal
+TC108,"ValidatorMiddleware.test.ts","ValidatorMiddleware","Infraestructura","ValidatorMiddleware","General","debe rechazar datos con password corta","Normal","Implementada",Normal
+TC109,"ValidatorMiddleware.test.ts","ValidatorMiddleware","Infraestructura","ValidatorMiddleware","General","debe rechazar cuando faltan campos requeridos","Normal","Implementada",Normal
+TC110,"ValidatorMiddleware.test.ts","ValidatorMiddleware","Infraestructura","ValidatorMiddleware","General","debe manejar múltiples errores de validación","Error/Excepción","Implementada",Alta
+TC111,"ValidatorMiddleware.test.ts","ValidatorMiddleware","Infraestructura","ValidatorMiddleware","General","debe validar objetos anidados correctamente","Exitoso","Implementada",Normal
+TC112,"ValidatorMiddleware.test.ts","ValidatorMiddleware","Infraestructura","ValidatorMiddleware","General","debe rechazar objetos anidados con errores","Error/Excepción","Implementada",Alta
+TC113,"ValidatorMiddleware.test.ts","ValidatorMiddleware","Infraestructura","ValidatorMiddleware","General","debe transformar datos cuando el schema tiene transformaciones","Normal","Implementada",Normal
+TC114,"ActivosFijosGatewayAdapter.test.ts","ActivosFijosGatewayAdapter","Infraestructura","ActivosFijosGatewayAdapter","getIDForm","debe retornar el formulario de activos fijos cuando existe","Normal","Implementada",Normal
+TC115,"ActivosFijosGatewayAdapter.test.ts","ActivosFijosGatewayAdapter","Infraestructura","ActivosFijosGatewayAdapter","General","debe retornar null cuando no existe el formulario","Límite","Implementada",Media
+TC116,"ActivosFijosGatewayAdapter.test.ts","ActivosFijosGatewayAdapter","Infraestructura","ActivosFijosGatewayAdapter","General","debe manejar IDs vacíos correctamente","Límite","Implementada",Media
+TC117,"ActivosFijosGatewayAdapter.test.ts","ActivosFijosGatewayAdapter","Infraestructura","ActivosFijosGatewayAdapter","createForm","debe crear un formulario de activos fijos exitosamente","Exitoso","Implementada",Normal
+TC118,"ActivosFijosGatewayAdapter.test.ts","ActivosFijosGatewayAdapter","Infraestructura","ActivosFijosGatewayAdapter","General","debe crear un formulario con contenido vacío","Límite","Implementada",Media
+TC119,"ActivosFijosGatewayAdapter.test.ts","ActivosFijosGatewayAdapter","Infraestructura","ActivosFijosGatewayAdapter","General","debe crear un formulario con datos completos","Normal","Implementada",Normal
+TC120,"ActivosFijosGatewayAdapter.test.ts","ActivosFijosGatewayAdapter","Infraestructura","ActivosFijosGatewayAdapter","updateForm","debe actualizar un formulario de activos fijos exitosamente","Exitoso","Implementada",Normal
+TC121,"ActivosFijosGatewayAdapter.test.ts","ActivosFijosGatewayAdapter","Infraestructura","ActivosFijosGatewayAdapter","General","debe manejar actualización cuando no existe reporte","Normal","Implementada",Normal
+TC122,"ActivosFijosGatewayAdapter.test.ts","ActivosFijosGatewayAdapter","Infraestructura","ActivosFijosGatewayAdapter","General","debe actualizar parcialmente el contenido","Normal","Implementada",Normal
+TC123,"ActivosFijosGatewayAdapter.test.ts","ActivosFijosGatewayAdapter","Infraestructura","ActivosFijosGatewayAdapter","calculateReference","debe retornar el formulario sin cambios (no hay cálculo)","Normal","Implementada",Normal
+TC124,"ActivosFijosGatewayAdapter.test.ts","ActivosFijosGatewayAdapter","Infraestructura","ActivosFijosGatewayAdapter","General","debe retornar null cuando no existe el reporte","Límite","Implementada",Media
+TC125,"ActivosFijosGatewayAdapter.test.ts","ActivosFijosGatewayAdapter","Infraestructura","ActivosFijosGatewayAdapter","General","debe retornar el formulario completo sin transformaciones","Normal","Implementada",Normal
+TC126,"AuthAdapter.test.ts","AuthAdapter","Infraestructura","AuthAdapter","createAccessToken","debería crear un token exitosamente con datos válidos (caso normal)","Exitoso","Implementada",Normal
+TC127,"AuthAdapter.test.ts","AuthAdapter","Infraestructura","AuthAdapter","General","debería crear un token para un usuario administrador (caso normal)","Normal","Implementada",Normal
+TC128,"AuthAdapter.test.ts","AuthAdapter","Infraestructura","AuthAdapter","General","debería crear un token con datos mínimos (caso límite)","Límite","Implementada",Media
+TC129,"AuthAdapter.test.ts","AuthAdapter","Infraestructura","AuthAdapter","General","debería crear un token con datos complejos (caso normal)","Normal","Implementada",Normal
+TC130,"AuthAdapter.test.ts","AuthAdapter","Infraestructura","AuthAdapter","General","debería rechazar cuando jwt.sign falla (caso límite)","Error/Excepción","Implementada",Alta
+TC131,"AuthAdapter.test.ts","AuthAdapter","Infraestructura","AuthAdapter","General","debería rechazar cuando el token es undefined (caso límite)","Error/Excepción","Implementada",Alta
+TC132,"AuthAdapter.test.ts","AuthAdapter","Infraestructura","AuthAdapter","General","debería crear un token con objeto vacío (caso límite)","Límite","Implementada",Media
+TC133,"AuthAdapter.test.ts","AuthAdapter","Infraestructura","AuthAdapter","General","debería crear un token con datos muy grandes (caso límite)","Límite","Implementada",Media
+TC134,"AuthAdapter.test.ts","AuthAdapter","Infraestructura","AuthAdapter","verifyAccessToken","debería verificar y decodificar un token válido (caso normal)","Normal","Implementada",Normal
+TC135,"AuthAdapter.test.ts","AuthAdapter","Infraestructura","AuthAdapter","General","debería verificar un token de administrador (caso normal)","Normal","Implementada",Normal
+TC136,"AuthAdapter.test.ts","AuthAdapter","Infraestructura","AuthAdapter","General","debería retornar null cuando el token es inválido (caso límite)","Límite","Implementada",Media
+TC137,"AuthAdapter.test.ts","AuthAdapter","Infraestructura","AuthAdapter","General","debería retornar null cuando el token está expirado (caso límite)","Límite","Implementada",Media
+TC138,"AuthAdapter.test.ts","AuthAdapter","Infraestructura","AuthAdapter","General","debería retornar null cuando el token tiene firma inválida (caso límite)","Límite","Implementada",Media
+TC139,"AuthAdapter.test.ts","AuthAdapter","Infraestructura","AuthAdapter","General","debería manejar token vacío (caso límite)","Límite","Implementada",Media
+TC140,"AuthAdapter.test.ts","AuthAdapter","Infraestructura","AuthAdapter","General","debería manejar token muy largo (caso límite)","Límite","Implementada",Media
+TC141,"AuthAdapter.test.ts","AuthAdapter","Infraestructura","AuthAdapter","General","debería manejar token malformado sin puntos (caso límite)","Límite","Implementada",Media
+TC142,"AuthAdapter.test.ts","AuthAdapter","Infraestructura","AuthAdapter","General","debería decodificar token con datos complejos (caso normal)","Normal","Implementada",Normal
+TC143,"AuthAdapter.test.ts","AuthAdapter","Infraestructura","AuthAdapter","General","debería manejar error genérico de verificación (caso límite)","Error/Excepción","Implementada",Alta
+TC144,"AuthAdapter.test.ts","AuthAdapter","Infraestructura","AuthAdapter","Integración createAccessToken y verifyAccessToken","debería crear y verificar un token correctamente (caso de integración)","Exitoso","Implementada",Normal
+TC145,"AuthAdapter.test.ts","AuthAdapter","Infraestructura","AuthAdapter","General","debería rechazar token modificado (caso de seguridad)","Error/Excepción","Implementada",Alta
+TC146,"CaratulaGatewayAdapter.test.ts","CaratulaGatewayAdapter","Infraestructura","CaratulaGatewayAdapter","getIDForm","debería retornar el formulario de carátula cuando existe","Normal","Implementada",Normal
+TC147,"CaratulaGatewayAdapter.test.ts","CaratulaGatewayAdapter","Infraestructura","CaratulaGatewayAdapter","General","debería retornar null cuando no existe el reporte","Límite","Implementada",Media
+TC148,"CaratulaGatewayAdapter.test.ts","CaratulaGatewayAdapter","Infraestructura","CaratulaGatewayAdapter","createForm","debería crear un nuevo formulario de carátula","Normal","Implementada",Normal
+TC149,"CaratulaGatewayAdapter.test.ts","CaratulaGatewayAdapter","Infraestructura","CaratulaGatewayAdapter","updateForm","debería actualizar el formulario existente","Normal","Implementada",Normal
+TC150,"CaratulaGatewayAdapter.test.ts","CaratulaGatewayAdapter","Infraestructura","CaratulaGatewayAdapter","calculateReference","debería retornar el formulario sin modificaciones","Normal","Implementada",Normal
+TC151,"CaratulaGatewayAdapter.test.ts","CaratulaGatewayAdapter","Infraestructura","CaratulaGatewayAdapter","General","debería retornar null cuando no existe el formulario","Límite","Implementada",Media
+TC152,"DetalleRenglonesGatewayAdapter.test.ts","DetalleRenglonesGatewayAdapter","Infraestructura","DetalleRenglonesGatewayAdapter","getIDForm","debería retornar el formulario de detalle renglones cuando existe","Normal","Implementada",Normal
+TC153,"DetalleRenglonesGatewayAdapter.test.ts","DetalleRenglonesGatewayAdapter","Infraestructura","DetalleRenglonesGatewayAdapter","General","debería retornar null cuando no existe el reporte","Límite","Implementada",Media
+TC154,"DetalleRenglonesGatewayAdapter.test.ts","DetalleRenglonesGatewayAdapter","Infraestructura","DetalleRenglonesGatewayAdapter","createForm","debería crear un nuevo formulario de detalle renglones","Normal","Implementada",Normal
+TC155,"DetalleRenglonesGatewayAdapter.test.ts","DetalleRenglonesGatewayAdapter","Infraestructura","DetalleRenglonesGatewayAdapter","updateForm","debería actualizar el formulario existente","Normal","Implementada",Normal
+TC156,"DetalleRenglonesGatewayAdapter.test.ts","DetalleRenglonesGatewayAdapter","Infraestructura","DetalleRenglonesGatewayAdapter","calculateReference","debería retornar null cuando no existe el formulario","Límite","Implementada",Media
+TC157,"EsfPatrimonioGatewayAdapter.test.ts","EsfPatrimonioGatewayAdapter","Infraestructura","EsfPatrimonioGatewayAdapter","getIDForm","debería retornar el formulario de patrimonio cuando existe","Normal","Implementada",Normal
+TC158,"EsfPatrimonioGatewayAdapter.test.ts","EsfPatrimonioGatewayAdapter","Infraestructura","EsfPatrimonioGatewayAdapter","General","debería retornar null cuando no existe el formulario","Límite","Implementada",Media
+TC159,"EsfPatrimonioGatewayAdapter.test.ts","EsfPatrimonioGatewayAdapter","Infraestructura","EsfPatrimonioGatewayAdapter","createForm","debería crear un formulario de patrimonio exitosamente","Exitoso","Implementada",Normal
+TC160,"EsfPatrimonioGatewayAdapter.test.ts","EsfPatrimonioGatewayAdapter","Infraestructura","EsfPatrimonioGatewayAdapter","General","debería crear un formulario con contenido vacío","Límite","Implementada",Media
+TC161,"EsfPatrimonioGatewayAdapter.test.ts","EsfPatrimonioGatewayAdapter","Infraestructura","EsfPatrimonioGatewayAdapter","General","debería crear un formulario con valores límite grandes","Límite","Implementada",Media
+TC162,"EsfPatrimonioGatewayAdapter.test.ts","EsfPatrimonioGatewayAdapter","Infraestructura","EsfPatrimonioGatewayAdapter","updateForm","debería actualizar el formulario exitosamente","Exitoso","Implementada",Normal
+TC163,"EsfPatrimonioGatewayAdapter.test.ts","EsfPatrimonioGatewayAdapter","Infraestructura","EsfPatrimonioGatewayAdapter","General","debería manejar actualización cuando el reporte no existe","Normal","Implementada",Normal
+TC164,"EsfPatrimonioGatewayAdapter.test.ts","EsfPatrimonioGatewayAdapter","Infraestructura","EsfPatrimonioGatewayAdapter","General","debería actualizar formulario con cambios parciales","Normal","Implementada",Normal
+TC165,"EsfPatrimonioGatewayAdapter.test.ts","EsfPatrimonioGatewayAdapter","Infraestructura","EsfPatrimonioGatewayAdapter","calculateReference","debería retornar null cuando faltan datos requeridos","Límite","Implementada",Media
+TC166,"EsfPatrimonioGatewayAdapter.test.ts","EsfPatrimonioGatewayAdapter","Infraestructura","EsfPatrimonioGatewayAdapter","General","debería manejar contenido null en detalle renglones","Límite","Implementada",Media
+TC167,"Form110GatewayAdapter.test.ts","Form110GatewayAdapter","Infraestructura","Form110GatewayAdapter","getIDForm","debería retornar el formulario 110 cuando existe","Normal","Implementada",Normal
+TC168,"Form110GatewayAdapter.test.ts","Form110GatewayAdapter","Infraestructura","Form110GatewayAdapter","General","debería retornar null cuando no existe el formulario 110","Límite","Implementada",Media
+TC169,"Form110GatewayAdapter.test.ts","Form110GatewayAdapter","Infraestructura","Form110GatewayAdapter","createForm","debería crear un formulario 110 exitosamente","Exitoso","Implementada",Normal
+TC170,"Form110GatewayAdapter.test.ts","Form110GatewayAdapter","Infraestructura","Form110GatewayAdapter","General","debería crear un formulario con contenido vacío","Límite","Implementada",Media
+TC171,"Form110GatewayAdapter.test.ts","Form110GatewayAdapter","Infraestructura","Form110GatewayAdapter","General","debería crear formulario con todos los datos informativos","Normal","Implementada",Normal
+TC172,"Form110GatewayAdapter.test.ts","Form110GatewayAdapter","Infraestructura","Form110GatewayAdapter","updateForm","debería actualizar el formulario 110 exitosamente","Exitoso","Implementada",Normal
+TC173,"Form110GatewayAdapter.test.ts","Form110GatewayAdapter","Infraestructura","Form110GatewayAdapter","General","debería manejar actualización cuando el reporte no existe","Normal","Implementada",Normal
+TC174,"Form110GatewayAdapter.test.ts","Form110GatewayAdapter","Infraestructura","Form110GatewayAdapter","General","debería actualizar formulario con cambios parciales en liquidación","Normal","Implementada",Normal
+TC175,"Form110GatewayAdapter.test.ts","Form110GatewayAdapter","Infraestructura","Form110GatewayAdapter","calculateReference","debería retornar el formulario sin cambios cuando no hay contenido","Normal","Implementada",Normal
+TC176,"Form110GatewayAdapter.test.ts","Form110GatewayAdapter","Infraestructura","Form110GatewayAdapter","General","debería retornar null cuando no existe el formulario","Límite","Implementada",Media
+TC177,"ImpuestoDiferidoGatewayAdapter.test.ts","ImpuestoDiferidoGatewayAdapter","Infraestructura","ImpuestoDiferidoGatewayAdapter","getIDForm","debería retornar el formulario cuando existe","Normal","Implementada",Normal
+TC178,"ImpuestoDiferidoGatewayAdapter.test.ts","ImpuestoDiferidoGatewayAdapter","Infraestructura","ImpuestoDiferidoGatewayAdapter","General","debería retornar null cuando no existe el reporte","Límite","Implementada",Media
+TC179,"ImpuestoDiferidoGatewayAdapter.test.ts","ImpuestoDiferidoGatewayAdapter","Infraestructura","ImpuestoDiferidoGatewayAdapter","createForm","debería crear un nuevo formulario","Normal","Implementada",Normal
+TC180,"ImpuestoDiferidoGatewayAdapter.test.ts","ImpuestoDiferidoGatewayAdapter","Infraestructura","ImpuestoDiferidoGatewayAdapter","updateForm","debería actualizar el formulario existente","Normal","Implementada",Normal
+TC181,"IngFactGatewayAdapter.test.ts","IngFactGatewayAdapter","Infraestructura","IngFactGatewayAdapter","getIDForm","debería retornar el formulario cuando existe","Normal","Implementada",Normal
+TC182,"IngFactGatewayAdapter.test.ts","IngFactGatewayAdapter","Infraestructura","IngFactGatewayAdapter","General","debería retornar null cuando no existe el reporte","Límite","Implementada",Media
+TC183,"IngFactGatewayAdapter.test.ts","IngFactGatewayAdapter","Infraestructura","IngFactGatewayAdapter","createForm","debería crear un nuevo formulario","Normal","Implementada",Normal
+TC184,"IngFactGatewayAdapter.test.ts","IngFactGatewayAdapter","Infraestructura","IngFactGatewayAdapter","updateForm","debería actualizar el formulario existente","Normal","Implementada",Normal
+TC185,"IngFactGatewayAdapter.test.ts","IngFactGatewayAdapter","Infraestructura","IngFactGatewayAdapter","calculateReference","debería retornar null cuando no existe el formulario","Límite","Implementada",Media
+TC186,"RentaLiquidaGatewayAdapter.test.ts","RentaLiquidaGatewayAdapter","Infraestructura","RentaLiquidaGatewayAdapter","getIDForm","debería retornar el formulario de renta líquida cuando existe","Normal","Implementada",Normal
+TC187,"RentaLiquidaGatewayAdapter.test.ts","RentaLiquidaGatewayAdapter","Infraestructura","RentaLiquidaGatewayAdapter","General","debería retornar null cuando no existe el reporte","Límite","Implementada",Media
+TC188,"RentaLiquidaGatewayAdapter.test.ts","RentaLiquidaGatewayAdapter","Infraestructura","RentaLiquidaGatewayAdapter","createForm","debería crear un nuevo formulario de renta líquida","Normal","Implementada",Normal
+TC189,"RentaLiquidaGatewayAdapter.test.ts","RentaLiquidaGatewayAdapter","Infraestructura","RentaLiquidaGatewayAdapter","updateForm","debería actualizar el formulario existente","Normal","Implementada",Normal
+TC190,"RentaLiquidaGatewayAdapter.test.ts","RentaLiquidaGatewayAdapter","Infraestructura","RentaLiquidaGatewayAdapter","calculateReference","debería retornar null cuando no existe el formulario","Límite","Implementada",Media
+TC191,"ReportGatewayAdapter.test.ts","ReportGatewayAdapter","Infraestructura","ReportGatewayAdapter","getIDReport","debería retornar el reporte cuando existe","Normal","Implementada",Normal
+TC192,"ReportGatewayAdapter.test.ts","ReportGatewayAdapter","Infraestructura","ReportGatewayAdapter","General","debería retornar null cuando el reporte no existe","Límite","Implementada",Media
+TC193,"ReportGatewayAdapter.test.ts","ReportGatewayAdapter","Infraestructura","ReportGatewayAdapter","createReport","debería crear un reporte correctamente","Exitoso","Implementada",Normal
+TC194,"ReportGatewayAdapter.test.ts","ReportGatewayAdapter","Infraestructura","ReportGatewayAdapter","General","debería crear un reporte con todos los IDs de formularios","Normal","Implementada",Normal
+TC195,"ResumenEsfGatewayAdapter.test.ts","ResumenEsfGatewayAdapter","Infraestructura","ResumenEsfGatewayAdapter","getIDForm","debe retornar el formulario de resumen esf cuando existe","Normal","Implementada",Normal
+TC196,"ResumenEsfGatewayAdapter.test.ts","ResumenEsfGatewayAdapter","Infraestructura","ResumenEsfGatewayAdapter","General","debe retornar null cuando no existe el formulario","Límite","Implementada",Media
+TC197,"ResumenEsfGatewayAdapter.test.ts","ResumenEsfGatewayAdapter","Infraestructura","ResumenEsfGatewayAdapter","General","debe manejar IDs vacíos correctamente","Límite","Implementada",Media
+TC198,"ResumenEsfGatewayAdapter.test.ts","ResumenEsfGatewayAdapter","Infraestructura","ResumenEsfGatewayAdapter","createForm","debe crear un formulario de resumen esf exitosamente","Exitoso","Implementada",Normal
+TC199,"ResumenEsfGatewayAdapter.test.ts","ResumenEsfGatewayAdapter","Infraestructura","ResumenEsfGatewayAdapter","General","debe crear un formulario con contenido vacío","Límite","Implementada",Media
+TC200,"ResumenEsfGatewayAdapter.test.ts","ResumenEsfGatewayAdapter","Infraestructura","ResumenEsfGatewayAdapter","General","debe crear un formulario con datos completos","Normal","Implementada",Normal
+TC201,"ResumenEsfGatewayAdapter.test.ts","ResumenEsfGatewayAdapter","Infraestructura","ResumenEsfGatewayAdapter","updateForm","debe actualizar un formulario de resumen esf exitosamente","Exitoso","Implementada",Normal
+TC202,"ResumenEsfGatewayAdapter.test.ts","ResumenEsfGatewayAdapter","Infraestructura","ResumenEsfGatewayAdapter","General","debe manejar actualización cuando no existe reporte","Normal","Implementada",Normal
+TC203,"ResumenEsfGatewayAdapter.test.ts","ResumenEsfGatewayAdapter","Infraestructura","ResumenEsfGatewayAdapter","General","debe actualizar parcialmente el contenido","Normal","Implementada",Normal
+TC204,"ResumenEsfGatewayAdapter.test.ts","ResumenEsfGatewayAdapter","Infraestructura","ResumenEsfGatewayAdapter","calculateReference","debe calcular referencias del resumen esf cuando existen los datos","Normal","Implementada",Normal
+TC205,"ResumenEsfGatewayAdapter.test.ts","ResumenEsfGatewayAdapter","Infraestructura","ResumenEsfGatewayAdapter","General","debe retornar null cuando no existe el reporte","Límite","Implementada",Media
+TC206,"ResumenEsfGatewayAdapter.test.ts","ResumenEsfGatewayAdapter","Infraestructura","ResumenEsfGatewayAdapter","General","debe manejar contenido no válido correctamente","Exitoso","Implementada",Normal
+TC207,"ResumenEsfGatewayAdapter.test.ts","ResumenEsfGatewayAdapter","Infraestructura","ResumenEsfGatewayAdapter","General","debe retornar el formulario sin cambios cuando el contenido no es un objeto válido","Normal","Implementada",Normal
+TC208,"RoomGatewayAdapter.test.ts","RoomGatewayAdapter","Infraestructura","RoomGatewayAdapter","createRoom","debería crear una sala exitosamente con datos válidos (caso normal)","Exitoso","Implementada",Normal
+TC209,"RoomGatewayAdapter.test.ts","RoomGatewayAdapter","Infraestructura","RoomGatewayAdapter","General","debería crear una sala con estado cerrado (caso normal)","Normal","Implementada",Normal
+TC210,"RoomGatewayAdapter.test.ts","RoomGatewayAdapter","Infraestructura","RoomGatewayAdapter","General","debería manejar una sala con nombre vacío (caso límite)","Límite","Implementada",Media
+TC211,"RoomGatewayAdapter.test.ts","RoomGatewayAdapter","Infraestructura","RoomGatewayAdapter","General","debería manejar una sala con nombre muy largo (caso límite)","Límite","Implementada",Media
+TC212,"RoomGatewayAdapter.test.ts","RoomGatewayAdapter","Infraestructura","RoomGatewayAdapter","obtainRoomByID","debería retornar una sala cuando se proporciona un ID válido (caso normal)","Normal","Implementada",Normal
+TC213,"RoomGatewayAdapter.test.ts","RoomGatewayAdapter","Infraestructura","RoomGatewayAdapter","General","debería retornar null cuando la sala no existe (caso límite)","Límite","Implementada",Media
+TC214,"RoomGatewayAdapter.test.ts","RoomGatewayAdapter","Infraestructura","RoomGatewayAdapter","General","debería manejar un ID vacío (caso límite)","Límite","Implementada",Media
+TC215,"RoomGatewayAdapter.test.ts","RoomGatewayAdapter","Infraestructura","RoomGatewayAdapter","General","debería manejar un ID muy largo (caso límite)","Límite","Implementada",Media
+TC216,"RoomGatewayAdapter.test.ts","RoomGatewayAdapter","Infraestructura","RoomGatewayAdapter","obtainRoomsByTeacher","debería retornar una lista de salas de un profesor (caso normal)","Normal","Implementada",Normal
+TC217,"RoomGatewayAdapter.test.ts","RoomGatewayAdapter","Infraestructura","RoomGatewayAdapter","General","debería retornar un array vacío cuando el profesor no tiene salas (caso límite)","Límite","Implementada",Media
+TC218,"RoomGatewayAdapter.test.ts","RoomGatewayAdapter","Infraestructura","RoomGatewayAdapter","General","debería retornar una única sala cuando el profesor tiene solo una (caso límite)","Límite","Implementada",Media
+TC219,"RoomGatewayAdapter.test.ts","RoomGatewayAdapter","Infraestructura","RoomGatewayAdapter","General","debería manejar un gran número de salas (caso límite)","Límite","Implementada",Media
+TC220,"RoomGatewayAdapter.test.ts","RoomGatewayAdapter","Infraestructura","RoomGatewayAdapter","uptdateRoom","debería actualizar una sala exitosamente con datos válidos (caso normal)","Exitoso","Implementada",Normal
+TC221,"RoomGatewayAdapter.test.ts","RoomGatewayAdapter","Infraestructura","RoomGatewayAdapter","General","debería cambiar el estado de la sala de abierta a cerrada (caso normal)","Normal","Implementada",Normal
+TC222,"RoomGatewayAdapter.test.ts","RoomGatewayAdapter","Infraestructura","RoomGatewayAdapter","General","debería manejar actualización con campos vacíos (caso límite)","Límite","Implementada",Media
+TC223,"RoomGatewayAdapter.test.ts","RoomGatewayAdapter","Infraestructura","RoomGatewayAdapter","General","debería manejar errores de base de datos durante la actualización (caso límite)","Error/Excepción","Implementada",Alta
+TC224,"RoomGatewayAdapter.test.ts","RoomGatewayAdapter","Infraestructura","RoomGatewayAdapter","deleteRoomByID","debería eliminar una sala exitosamente cuando existe (caso normal)","Exitoso","Implementada",Normal
+TC225,"RoomGatewayAdapter.test.ts","RoomGatewayAdapter","Infraestructura","RoomGatewayAdapter","General","debería intentar eliminar con ID vacío (caso límite)","Límite","Implementada",Media
+TC226,"RoomGatewayAdapter.test.ts","RoomGatewayAdapter","Infraestructura","RoomGatewayAdapter","General","debería manejar errores de base de datos al eliminar (caso límite)","Error/Excepción","Implementada",Alta
+TC227,"RoomGatewayAdapter.test.ts","RoomGatewayAdapter","Infraestructura","RoomGatewayAdapter","General","debería manejar eliminación de sala inexistente (caso límite)","Límite","Implementada",Media
+TC228,"RoomGatewayAdapter.test.ts","RoomGatewayAdapter","Infraestructura","RoomGatewayAdapter","validateRoomPassword","debería retornar datos de la sala cuando la contraseña es correcta (caso normal)","Normal","Implementada",Normal
+TC229,"RoomGatewayAdapter.test.ts","RoomGatewayAdapter","Infraestructura","RoomGatewayAdapter","General","debería retornar datos de sala cerrada con contraseña válida (caso normal)","Normal","Implementada",Normal
+TC230,"RoomGatewayAdapter.test.ts","RoomGatewayAdapter","Infraestructura","RoomGatewayAdapter","General","debería retornar null cuando la contraseña es incorrecta (caso límite)","Límite","Implementada",Media
+TC231,"RoomGatewayAdapter.test.ts","RoomGatewayAdapter","Infraestructura","RoomGatewayAdapter","General","debería manejar contraseña vacía (caso límite)","Límite","Implementada",Media
+TC232,"RoomGatewayAdapter.test.ts","RoomGatewayAdapter","Infraestructura","RoomGatewayAdapter","General","debería manejar contraseña muy larga (caso límite)","Límite","Implementada",Media
+TC233,"RoomGatewayAdapter.test.ts","RoomGatewayAdapter","Infraestructura","RoomGatewayAdapter","General","debería retornar solo roomID y roomStatus, no toda la sala (caso normal)","Normal","Implementada",Normal
+TC234,"StudentGatewayAdapter.test.ts","StudentGatewayAdapter","Infraestructura","StudentGatewayAdapter","createStudent","debería crear un estudiante exitosamente con datos válidos (caso normal)","Exitoso","Implementada",Normal
+TC235,"StudentGatewayAdapter.test.ts","StudentGatewayAdapter","Infraestructura","StudentGatewayAdapter","General","debería crear un estudiante con cédula de longitud mínima (caso límite)","Límite","Implementada",Media
+TC236,"StudentGatewayAdapter.test.ts","StudentGatewayAdapter","Infraestructura","StudentGatewayAdapter","General","debería crear un estudiante con cédula muy larga (caso límite)","Límite","Implementada",Media
+TC237,"StudentGatewayAdapter.test.ts","StudentGatewayAdapter","Infraestructura","StudentGatewayAdapter","General","debería crear un estudiante con cédula vacía (caso límite)","Límite","Implementada",Media
+TC238,"StudentGatewayAdapter.test.ts","StudentGatewayAdapter","Infraestructura","StudentGatewayAdapter","getStudents","debería retornar una lista de estudiantes (caso normal)","Normal","Implementada",Normal
+TC239,"StudentGatewayAdapter.test.ts","StudentGatewayAdapter","Infraestructura","StudentGatewayAdapter","General","debería retornar un array vacío cuando no hay estudiantes (caso límite)","Límite","Implementada",Media
+TC240,"StudentGatewayAdapter.test.ts","StudentGatewayAdapter","Infraestructura","StudentGatewayAdapter","General","debería retornar un único estudiante cuando solo existe uno (caso límite)","Límite","Implementada",Media
+TC241,"StudentGatewayAdapter.test.ts","StudentGatewayAdapter","Infraestructura","StudentGatewayAdapter","General","debería manejar un gran número de estudiantes (caso límite)","Límite","Implementada",Media
+TC242,"StudentGatewayAdapter.test.ts","StudentGatewayAdapter","Infraestructura","StudentGatewayAdapter","getStudentById","debería retornar un estudiante cuando se proporciona un ID válido (caso normal)","Normal","Implementada",Normal
+TC243,"StudentGatewayAdapter.test.ts","StudentGatewayAdapter","Infraestructura","StudentGatewayAdapter","General","debería retornar null cuando el estudiante no existe (caso límite)","Límite","Implementada",Media
+TC244,"StudentGatewayAdapter.test.ts","StudentGatewayAdapter","Infraestructura","StudentGatewayAdapter","General","debería manejar un ID vacío (caso límite)","Límite","Implementada",Media
+TC245,"StudentGatewayAdapter.test.ts","StudentGatewayAdapter","Infraestructura","StudentGatewayAdapter","General","debería manejar un ID muy largo (caso límite)","Límite","Implementada",Media
+TC246,"StudentGatewayAdapter.test.ts","StudentGatewayAdapter","Infraestructura","StudentGatewayAdapter","updateStudent","debería actualizar un estudiante exitosamente con datos válidos (caso normal)","Exitoso","Implementada",Normal
+TC247,"StudentGatewayAdapter.test.ts","StudentGatewayAdapter","Infraestructura","StudentGatewayAdapter","General","debería cambiar la sala del estudiante (caso normal)","Normal","Implementada",Normal
+TC248,"StudentGatewayAdapter.test.ts","StudentGatewayAdapter","Infraestructura","StudentGatewayAdapter","General","debería manejar actualización con cédula vacía (caso límite)","Límite","Implementada",Media
+TC249,"StudentGatewayAdapter.test.ts","StudentGatewayAdapter","Infraestructura","StudentGatewayAdapter","General","debería manejar errores de base de datos durante la actualización (caso límite)","Error/Excepción","Implementada",Alta
+TC250,"StudentGatewayAdapter.test.ts","StudentGatewayAdapter","Infraestructura","StudentGatewayAdapter","deleteStudent","debería eliminar un estudiante exitosamente cuando existe (caso normal)","Exitoso","Implementada",Normal
+TC251,"StudentGatewayAdapter.test.ts","StudentGatewayAdapter","Infraestructura","StudentGatewayAdapter","General","debería intentar eliminar con ID vacío (caso límite)","Límite","Implementada",Media
+TC252,"StudentGatewayAdapter.test.ts","StudentGatewayAdapter","Infraestructura","StudentGatewayAdapter","General","debería manejar errores de base de datos al eliminar (caso límite)","Error/Excepción","Implementada",Alta
+TC253,"StudentGatewayAdapter.test.ts","StudentGatewayAdapter","Infraestructura","StudentGatewayAdapter","General","debería manejar eliminación de estudiante inexistente (caso límite)","Límite","Implementada",Media
+TC254,"StudentGatewayAdapter.test.ts","StudentGatewayAdapter","Infraestructura","StudentGatewayAdapter","searchStudentByCedulaRoom","debería retornar un estudiante cuando cédula y sala coinciden (caso normal)","Normal","Implementada",Normal
+TC255,"StudentGatewayAdapter.test.ts","StudentGatewayAdapter","Infraestructura","StudentGatewayAdapter","General","debería retornar null cuando no existe estudiante con esa cédula en esa sala (caso límite)","Límite","Implementada",Media
+TC256,"StudentGatewayAdapter.test.ts","StudentGatewayAdapter","Infraestructura","StudentGatewayAdapter","General","debería manejar cédula vacía (caso límite)","Límite","Implementada",Media
+TC257,"StudentGatewayAdapter.test.ts","StudentGatewayAdapter","Infraestructura","StudentGatewayAdapter","General","debería manejar roomID vacío (caso límite)","Límite","Implementada",Media
+TC258,"StudentGatewayAdapter.test.ts","StudentGatewayAdapter","Infraestructura","StudentGatewayAdapter","General","debería manejar cédula y roomID muy largos (caso límite)","Límite","Implementada",Media
+TC259,"StudentGatewayAdapter.test.ts","StudentGatewayAdapter","Infraestructura","StudentGatewayAdapter","searchStudentsByRoom","debería retornar una lista de estudiantes de una sala (caso normal)","Normal","Implementada",Normal
+TC260,"StudentGatewayAdapter.test.ts","StudentGatewayAdapter","Infraestructura","StudentGatewayAdapter","General","debería retornar un array vacío cuando la sala no tiene estudiantes (caso límite)","Límite","Implementada",Media
+TC261,"StudentGatewayAdapter.test.ts","StudentGatewayAdapter","Infraestructura","StudentGatewayAdapter","General","debería retornar un único estudiante cuando la sala tiene solo uno (caso límite)","Límite","Implementada",Media
+TC262,"StudentGatewayAdapter.test.ts","StudentGatewayAdapter","Infraestructura","StudentGatewayAdapter","General","debería manejar un gran número de estudiantes en una sala (caso límite)","Límite","Implementada",Media
+TC263,"StudentGatewayAdapter.test.ts","StudentGatewayAdapter","Infraestructura","StudentGatewayAdapter","General","debería manejar roomID vacío (caso límite)","Límite","Implementada",Media
+TC264,"StudentGatewayAdapter.test.ts","StudentGatewayAdapter","Infraestructura","StudentGatewayAdapter","General","debería manejar roomID muy largo (caso límite)","Límite","Implementada",Media
+TC265,"UserGatewayAdapter.test.ts","UserGatewayAdapter","Infraestructura","UserGatewayAdapter","getUserById","debería retornar un usuario cuando se proporciona un ID válido (caso normal)","Normal","Implementada",Normal
+TC266,"UserGatewayAdapter.test.ts","UserGatewayAdapter","Infraestructura","UserGatewayAdapter","General","debería retornar null cuando el usuario no existe (caso límite)","Límite","Implementada",Media
+TC267,"UserGatewayAdapter.test.ts","UserGatewayAdapter","Infraestructura","UserGatewayAdapter","General","debería manejar un ID con string vacío (caso límite)","Límite","Implementada",Media
+TC268,"UserGatewayAdapter.test.ts","UserGatewayAdapter","Infraestructura","UserGatewayAdapter","General","debería manejar un ID con string muy largo (caso límite)","Límite","Implementada",Media
+TC269,"UserGatewayAdapter.test.ts","UserGatewayAdapter","Infraestructura","UserGatewayAdapter","existByEmail","debería retornar true cuando el email existe (caso normal)","Normal","Implementada",Normal
+TC270,"UserGatewayAdapter.test.ts","UserGatewayAdapter","Infraestructura","UserGatewayAdapter","General","debería retornar false cuando el email no existe (caso normal)","Normal","Implementada",Normal
+TC271,"UserGatewayAdapter.test.ts","UserGatewayAdapter","Infraestructura","UserGatewayAdapter","General","debería manejar un email con string vacío (caso límite)","Límite","Implementada",Media
+TC272,"UserGatewayAdapter.test.ts","UserGatewayAdapter","Infraestructura","UserGatewayAdapter","General","debería manejar un email con caracteres especiales (caso límite)","Límite","Implementada",Media
+TC273,"UserGatewayAdapter.test.ts","UserGatewayAdapter","Infraestructura","UserGatewayAdapter","getUserByEmail","debería retornar un usuario cuando se proporciona un email válido (caso normal)","Normal","Implementada",Normal
+TC274,"UserGatewayAdapter.test.ts","UserGatewayAdapter","Infraestructura","UserGatewayAdapter","General","debería retornar null cuando el email no existe (caso límite)","Límite","Implementada",Media
+TC275,"UserGatewayAdapter.test.ts","UserGatewayAdapter","Infraestructura","UserGatewayAdapter","General","debería manejar un email sensible a mayúsculas (caso límite)","Límite","Implementada",Media
+TC276,"UserGatewayAdapter.test.ts","UserGatewayAdapter","Infraestructura","UserGatewayAdapter","General","debería manejar un email muy largo (caso límite)","Límite","Implementada",Media
+TC277,"UserGatewayAdapter.test.ts","UserGatewayAdapter","Infraestructura","UserGatewayAdapter","deleteUserById","debería eliminar un usuario exitosamente cuando el usuario existe (caso normal)","Exitoso","Implementada",Normal
+TC278,"UserGatewayAdapter.test.ts","UserGatewayAdapter","Infraestructura","UserGatewayAdapter","General","debería lanzar un error cuando el usuario no existe (caso límite)","Error/Excepción","Implementada",Alta
+TC279,"UserGatewayAdapter.test.ts","UserGatewayAdapter","Infraestructura","UserGatewayAdapter","General","debería lanzar un error con ID vacío (caso límite)","Error/Excepción","Implementada",Alta
+TC280,"UserGatewayAdapter.test.ts","UserGatewayAdapter","Infraestructura","UserGatewayAdapter","General","debería manejar errores de base de datos apropiadamente","Error/Excepción","Implementada",Alta
+TC281,"UserGatewayAdapter.test.ts","UserGatewayAdapter","Infraestructura","UserGatewayAdapter","changeUserPassword","debería actualizar la contraseña exitosamente cuando el usuario existe (caso normal)","Exitoso","Implementada",Normal
+TC282,"UserGatewayAdapter.test.ts","UserGatewayAdapter","Infraestructura","UserGatewayAdapter","General","debería lanzar un error cuando el usuario no existe (caso límite)","Error/Excepción","Implementada",Alta
+TC283,"UserGatewayAdapter.test.ts","UserGatewayAdapter","Infraestructura","UserGatewayAdapter","General","debería manejar una contraseña vacía (caso límite)","Límite","Implementada",Media
+TC284,"UserGatewayAdapter.test.ts","UserGatewayAdapter","Infraestructura","UserGatewayAdapter","General","debería manejar una contraseña muy larga (caso límite)","Límite","Implementada",Media
+TC285,"UserGatewayAdapter.test.ts","UserGatewayAdapter","Infraestructura","UserGatewayAdapter","createUser","debería crear un usuario exitosamente con datos válidos (caso normal)","Exitoso","Implementada",Normal
+TC286,"UserGatewayAdapter.test.ts","UserGatewayAdapter","Infraestructura","UserGatewayAdapter","General","debería crear un usuario admin exitosamente (caso normal)","Exitoso","Implementada",Normal
+TC287,"UserGatewayAdapter.test.ts","UserGatewayAdapter","Infraestructura","UserGatewayAdapter","General","debería manejar un usuario con nombre mínimo (caso límite)","Límite","Implementada",Media
+TC288,"UserGatewayAdapter.test.ts","UserGatewayAdapter","Infraestructura","UserGatewayAdapter","General","debería manejar un usuario con nombre muy largo (caso límite)","Límite","Implementada",Media
+TC289,"UserGatewayAdapter.test.ts","UserGatewayAdapter","Infraestructura","UserGatewayAdapter","updateUser","debería actualizar un usuario exitosamente con datos válidos (caso normal)","Exitoso","Implementada",Normal
+TC290,"UserGatewayAdapter.test.ts","UserGatewayAdapter","Infraestructura","UserGatewayAdapter","General","debería actualizar el rol de usuario de profesor a admin (caso normal)","Normal","Implementada",Normal
+TC291,"UserGatewayAdapter.test.ts","UserGatewayAdapter","Infraestructura","UserGatewayAdapter","General","debería manejar actualización con strings vacíos en los campos (caso límite)","Límite","Implementada",Media
+TC292,"UserGatewayAdapter.test.ts","UserGatewayAdapter","Infraestructura","UserGatewayAdapter","General","debería manejar errores de base de datos durante la actualización (caso límite)","Error/Excepción","Implementada",Alta
+TC293,"UserGatewayAdapter.test.ts","UserGatewayAdapter","Infraestructura","UserGatewayAdapter","listProfessorUsers","debería retornar una lista de usuarios profesores (caso normal)","Normal","Implementada",Normal
+TC294,"UserGatewayAdapter.test.ts","UserGatewayAdapter","Infraestructura","UserGatewayAdapter","General","debería retornar una lista de usuarios administradores (caso normal)","Normal","Implementada",Normal
+TC295,"UserGatewayAdapter.test.ts","UserGatewayAdapter","Infraestructura","UserGatewayAdapter","General","debería retornar un array vacío cuando no se encuentran usuarios (caso límite)","Límite","Implementada",Media
+TC296,"UserGatewayAdapter.test.ts","UserGatewayAdapter","Infraestructura","UserGatewayAdapter","General","debería retornar un único usuario cuando solo existe uno (caso límite)","Límite","Implementada",Media
+TC297,"UserGatewayAdapter.test.ts","UserGatewayAdapter","Infraestructura","UserGatewayAdapter","General","debería manejar un gran número de usuarios (caso límite)","Límite","Implementada",Media

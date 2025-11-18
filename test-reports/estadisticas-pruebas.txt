@@ -1,0 +1,48 @@
+
+=== ESTADÍSTICAS DE PRUEBAS ===
+
+Total de pruebas: 297
+
+Por Categoría:
+  Dominio: 79 (26.6%)
+  Infraestructura: 218 (73.4%)
+
+Por Tipo de Prueba:
+  Normal: 110 (37.0%)
+  Error/Excepción: 58 (19.5%)
+  Exitoso: 40 (13.5%)
+  Límite: 89 (30.0%)
+
+Por Módulo:
+  UserGatewayAdapter: 33
+  StudentGatewayAdapter: 31
+  RoomGatewayAdapter: 26
+  AuthAdapter: 20
+  RoomUCAdapter: 15
+  UserUCAdapter: 15
+  StudentUCAdapter: 14
+  ResumenEsfGatewayAdapter: 13
+  ActivosFijosGatewayAdapter: 12
+  Auth.controller: 10
+  EsfPatrimonioGatewayAdapter: 10
+  Form110GatewayAdapter: 10
+  ResumenEsf.controller: 8
+  AuthMiddleware: 8
+  ValidatorMiddleware: 8
+  CaratulaGatewayAdapter: 6
+  AuthUCAdapter: 5
+  DetalleRenglonesGatewayAdapter: 5
+  IngFactGatewayAdapter: 5
+  RentaLiquidaGatewayAdapter: 5
+  Form110UCAdapter: 4
+  ImpuestoDiferidoGatewayAdapter: 4
+  ReportGatewayAdapter: 4
+  ActivosFijosUCAdapter: 3
+  CaratulaUCAdapter: 3
+  DetalleRenglonesUCAdapter: 3
+  EsfPatrimonioUCAdapter: 3
+  ImpuestoDiferidoUCAdapter: 3
+  IngFactUCAdapter: 3
+  RentaLiquidaUCAdapter: 3
+  ResumenEsfUCAdapter: 3
+  ReportUCAdapter: 2

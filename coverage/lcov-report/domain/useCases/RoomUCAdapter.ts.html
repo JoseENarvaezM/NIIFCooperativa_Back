@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">95.91% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>45/45</span>
+                <span class='fraction'>47/49</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">94.44% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>16/16</span>
+                <span class='fraction'>17/18</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">95.91% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>45/45</span>
+                <span class='fraction'>47/49</span>
             </div>
         
             
@@ -143,7 +143,16 @@
 <a name='L78'></a><a href='#L78'>78</a>
 <a name='L79'></a><a href='#L79'>79</a>
 <a name='L80'></a><a href='#L80'>80</a>
-<a name='L81'></a><a href='#L81'>81</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -187,19 +196,28 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -267,8 +285,9 @@ export class RoomUCAdapter implements RoomUCIntPort {
         }
 &nbsp;
         const existRoomByPassword = await this.roomGateway.validateRoomPassword(room.roomPassword);
-        if (!existRoomByPassword) {
-            this.errorFormatter.genericError(`Room con contraseña ${room.roomPassword} no existe.`);
+&nbsp;
+        if (existRoomByPassword) {
+            this.errorFormatter.genericError(`Room con contraseña ${room.roomPassword} ya existe.`);
             return null;
         }
 &nbsp;
@@ -276,11 +295,19 @@ export class RoomUCAdapter implements RoomUCIntPort {
     }
     async deleteRoomByID(roomID: string): Promise&lt;void&gt; {
         const room = await this.roomGateway.obtainRoomByID(roomID);
-        if (room != null) {
-            await this.roomGateway.deleteRoomByID(roomID);
+&nbsp;
+        if (room === null) {
+            this.errorFormatter.errorNotFound("La sala no existe.");
             return;
         }
-        this.errorFormatter.errorNotFound(`Room con ID ${roomID} no existe.`);
+&nbsp;
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (room.roomStatus === "open") {
+<span class="cstat-no" title="statement not covered" >            this.errorFormatter.genericError("La sala esta abierta, no se puede eliminar.");</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
+        }
+&nbsp;
+        await this.roomGateway.deleteRoomByID(roomID);
+        return;
     }
     async validateRoomPassword(roomPassword: string): Promise&lt;string | null&gt; {
         const result = await this.roomGateway.validateRoomPassword(roomPassword);
@@ -310,7 +337,7 @@ export class RoomUCAdapter implements RoomUCIntPort {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-10-09T22:39:54.299Z
+                at 2025-11-18T01:11:55.300Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

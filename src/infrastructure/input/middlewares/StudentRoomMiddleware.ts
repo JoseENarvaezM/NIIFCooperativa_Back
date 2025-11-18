@@ -1,15 +1,12 @@
 import { Request, Response, NextFunction } from "express";
 import { RoomUCIntPort } from "../../../application/input/RoomUCIntPort";
 
-
 export class StudentRoomMiddleware {
   constructor(private readonly roomUseCases: RoomUCIntPort) {}
-
   verifyRoom = () => {
     return async (req: Request, res: Response, next: NextFunction): Promise<void> => {
       try {
         const user = req.user;
-
         if (user.usuRole === "student") {
             const roomID = user.roomID;
 
@@ -25,7 +22,6 @@ export class StudentRoomMiddleware {
                 return;
             }
           }
-
         next();
       } catch (error) {
         console.error("Authentication error:", error);
